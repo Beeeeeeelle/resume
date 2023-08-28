@@ -71,9 +71,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:li4808@purdue.edu"
-    - label: "ORCID"
-      icon: "fa fa-orcid"
-      url: "https://orcid.org/0009-0000-5750-4793"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/tic_typeinchinese/"
     - label: "Google Scholar"
       icon: "fa fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=OjrrBnYAAAAJ&hl=en&oi=ao"
@@ -83,15 +83,21 @@ author:
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+    - label: "West Lafayette, IN"
+      icon: "fas fa-fw fa-map-marker-alt"
+      url: "https://www.google.com/maps/place/Purdue+University/@40.4237094,-86.9260655,17z/data=!3m1!4b1!4m6!3m5!1s0x8812fd37423e0507:0x8eccb2cf8b1a7c8e!8m2!3d40.4237054!4d-86.9211946!16zL20vMDV4XzU?entry=ttu"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:li4808@purdue.edu"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://www.instagram.com/tic_typeinchinese/"
+    - label: "Google Scholar"
+      icon: "fa fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=OjrrBnYAAAAJ&hl=en&oi=ao"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/belle-li-198a72180/"
 
 defaults:
   # _posts
