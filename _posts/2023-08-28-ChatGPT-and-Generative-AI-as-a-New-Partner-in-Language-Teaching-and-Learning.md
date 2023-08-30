@@ -1,6 +1,6 @@
----
-# ChatGPT and Generative AI as a New Partner in Language Teaching and Learning
-
+title: "ChatGPT and Generative AI as a New Partner in Language Teaching and Learning"
+date: 2023-08-28T15:34:30-04:00
+content: 
 # Team
 
 ![Screen Shot 2023-08-30 at 1.20.26 PM.png](ChatGPT%20and%20Generative%20AI%20as%20a%20New%20Partner%20in%20Lang%20b3ca80051e484412af405416f6813fd4/Screen_Shot_2023-08-30_at_1.20.26_PM.png)
@@ -22,4 +22,8 @@
 ***Li, B**., Wang, C., Bonk, C. J., & Kou, X. (Proposal accepted). Exploring inventions in self-directed language learning with generative AI: implementations and perspectives of YouTube content creators. *TechTrends*.
 
 ***Li, B**., Bonk, C. J., Wang, C., & Kou, X. (Under review). Reconceptualizing the self-directed language learning in the era of generative AI: an exploratory analysis. *IEEE*.
----
+categories:
+  - blog
+tags:
+  - Jekyll
+  - update
