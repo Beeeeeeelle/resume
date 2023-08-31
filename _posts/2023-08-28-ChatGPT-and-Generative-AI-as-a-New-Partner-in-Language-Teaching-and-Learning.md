@@ -1,3 +1,9 @@
+---
+layout: post
+title: Your Post Title
+date: 2023-08-31
+cover: /assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—1.png
+---
 # Team
 
 ![Screen Shot 2023-08-30 at 1.20.26 PM.png](/assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—1.png)
