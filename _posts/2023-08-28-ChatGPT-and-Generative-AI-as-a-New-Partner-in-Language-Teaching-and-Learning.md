@@ -1,6 +1,8 @@
 ---
 title: "ChatGPT and Generative AI as a New Partner in Language Teaching and Learning"
 excerpt_separator: "<!--more-->"
+header:
+  image: /assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—2.jpg
 categories:
   - Blog
 tags:
