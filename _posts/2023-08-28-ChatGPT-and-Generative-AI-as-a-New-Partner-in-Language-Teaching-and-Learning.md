@@ -3,6 +3,7 @@ title: "ChatGPT and Generative AI as a New Partner in Language Teaching and Lear
 excerpt_separator: "<!--more-->"
 header:
   overlay_image: /assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—1.png
+  overlay_filter: 0.5 # Adjust the overlay intensity (0.0 to 1.0)
 categories:
   - Blog
 tags:
