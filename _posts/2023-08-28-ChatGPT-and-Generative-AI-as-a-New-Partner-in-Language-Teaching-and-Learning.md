@@ -1,6 +1,6 @@
 # Team
 
-![Screen Shot 2023-08-30 at 1.20.26 PM.png](ChatGPT%20and%20Generative%20AI%20as%20a%20New%20Partner%20in%20Lang%20b3ca80051e484412af405416f6813fd4/Screen_Shot_2023-08-30_at_1.20.26_PM.png)
+![Screen Shot 2023-08-30 at 1.20.26 PM.png](/assets/images//Screen_Shot_2023-08-30_at_1.20.26_PM.png)
 
 # Publication
 
