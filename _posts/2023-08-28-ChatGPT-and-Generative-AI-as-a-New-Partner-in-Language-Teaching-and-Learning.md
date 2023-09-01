@@ -11,7 +11,7 @@ categories:
 
 # Publication
 
-**`*Li, B*`**., Kou, X., & Bonk, C. J. (2023). Embracing the disrupted language teaching and learning field: Analyzing YouTube content creation related to ChatGPT. *Languages, 8*, 197. [https://doi.org/10.3390/languages8030197](https://doi.org/10.3390/languages8030197)
+**`*Li, B`**., Kou, X., & Bonk, C. J. (2023). Embracing the disrupted language teaching and learning field: Analyzing YouTube content creation related to ChatGPT. *Languages, 8*, 197. [https://doi.org/10.3390/languages8030197](https://doi.org/10.3390/languages8030197)
 
 > Since late 2022, dozens of YouTube channels focusing on a diverse array of topics related to language learning with generative AI tools such as ChatGPT have rapidly emerged. This study explores the implementations and perspectives of YouTube content creators who now constitute an increasingly important segment of the ecosystem of language teaching and learning. A mixed methods netnographic approach was employed, combining qualitative and quantitative techniques. A total of 140 videos were identified and analyzed, and an in-depth content analysis was conducted to uncover underlying themes. Four main categories of creators were identified: educators, learners, technology professionals, and e-learning providers. Educators, especially English and Japanese teachers, were the majority, followed by learners and technology field professionals. This study highlights the benefits, drawbacks, and concerns associated with the integration of AI tools in language learning. By examining this rapidly evolving phenomenon, the study contributes towards an understanding of the role and impact of generative AI tools in language education.
 > 
