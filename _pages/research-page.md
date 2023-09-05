@@ -1,5 +1,5 @@
 ---
-title: "Publication"
+title: "Research"
 layout: splash
 permalink: /research/
 date: 2016-03-23T11:48:41-04:00
@@ -7,19 +7,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—2.png
-excerpt: "I am carrying out research in several intersecting areas bridging psychology, education, and human-computer interaction."
-feature_row:
-  - image_path: assets/images/avatar.jpg
-    alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/avatar.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+excerpt: "I'm passionate about how people today are learning, advanced digital technology and authoring tools, as well as various cultures. My research focuses on AI in language education, self-directed learning on YouTube, and learning experience design."
 feature_row2:
   - image_path: /assets/images/avatar.jpg
     alt: "placeholder image 2"
