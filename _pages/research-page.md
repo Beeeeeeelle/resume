@@ -11,8 +11,8 @@ excerpt: "I'm passionate about how people today are learning, advanced digital t
 feature_row2:
   - image_path: /assets/images/avatar.jpg
     alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
+    title: "Learn Chinese Characters with Next-Gen Typing App"
+    excerpt: 'TIC is an innovative app that provides a unique approach to learning Chinese. It was designed to address the challenges of the heavy cognitive load of retrieving and retaining Chinese characters due to their orthographic nature.'
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
@@ -21,7 +21,7 @@ feature_row3:
     alt: "placeholder image 2"
     title: "Placeholder Image Right Aligned"
     excerpt: 'This is some sample content that goes here with **Markdown** formatting. Right aligned with `type="right"`'
-    url: "#test-link"
+    url: "blog/APP/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 feature_row4:
