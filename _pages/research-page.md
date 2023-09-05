@@ -9,7 +9,7 @@ header:
   overlay_image: /assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—2.png
 excerpt: "I'm passionate about how people today are learning, advanced digital technology and authoring tools, as well as various cultures. My research focuses on AI in language education, self-directed learning on YouTube, and learning experience design."
 feature_row2:
-  - image_path: /assets/images/avatar.jpg
+  - image_path: /assets/images/ezgif.com-video-to-gif.gif
     alt: "Learn Chinese Characters with Next-Gen Typing App"
     title: "Learn Chinese Characters with Next-Gen Typing App"
     excerpt: 'TIC is an innovative app that provides a unique approach to learning Chinese. It was designed to address the challenges of the heavy cognitive load of retrieving and retaining Chinese characters due to their orthographic nature.'
