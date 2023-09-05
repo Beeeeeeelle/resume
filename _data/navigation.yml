@@ -1,8 +1,8 @@
 main:
   - title: "Research"
-    url: /posts/
+    url: /research/
   - title: "Publication"
-    url: /publication/
+    url: /posts/
   - title: "Teaching"
     url: /tags/
   - title: "News"
