@@ -17,7 +17,7 @@ feature_row2:
     btn_label: "Read More"
     btn_class: "btn--primary"
 feature_row3:
-  - image_path: /assets/images/avatar.jpg
+  - image_path: /assets/images/WechatIMG229.jpg
     alt: "ChatGPT and Generative AI as a New Partner in Language Teaching and Learning"
     title: "ChatGPT and Generative AI as a New Partner in Language Teaching and Learning"
     excerpt: 'Since late 2022, dozens of YouTube channels focusing on a diverse array of topics related to language learning with generative AI tools such as ChatGPT have rapidly emerged. This study explores the implementations and perspectives of YouTube content creators who now constitute an increasingly important segment of the ecosystem of language teaching and learning.'
