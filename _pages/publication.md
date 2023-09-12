@@ -3,7 +3,6 @@ permalink: /publication/
 title: "Publication"
 ---
 
-# Publication
 
 **PUBLICATIONS**
 
