@@ -1,8 +1,8 @@
+---
+permalink: /about/
+title: "About"
+---
 
----
-permalink: /publication/
-title: "Publication"
----
 # Publication
 
 **PUBLICATIONS**
