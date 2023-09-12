@@ -3,3 +3,5 @@ main:
     url: /research/
   - title: "News"
     url: /posts/
+  - title: "Publication"
+    url: /publication/
