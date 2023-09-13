@@ -44,7 +44,8 @@ title: "Publication"
 - Wang, H., et al. (final review) Management model design and market economics analysis of artificial intelligence learning platform based on emotional neuroscience and medical pedagogy, *The Journal of Educational Research*.
     
     > 2022 IF 1.67
-    > 
+    >
+    
 **BOOK CHAPTERS**
 
 - **Li, B**., Ma, Y., & Lyu, X. (2023). Bring together native speakers around the world: A foreign language flagship program’s online experience during COVID. In Chen R. (Ed.), *The Future of Remote and Hybrid Work in Global Higher Education: Perceptions, Policies, and Practices during COVID-19. essay*, Palgrave Macmillan/Springer.
