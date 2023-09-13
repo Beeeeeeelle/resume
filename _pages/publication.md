@@ -4,7 +4,7 @@ title: "Publication"
 ---
 
 
-**PUBLICATIONS**
+**JORENAL ARTICLES**
 
 - **∗Li, B**., Wang, C., Bonk, C. J., & Kou, X. (Proposal accepted). Exploring inventions in self-directed language learning with generative AI: implementations and perspectives of YouTube content creators. *TechTrends*.
     
@@ -30,7 +30,7 @@ title: "Publication"
     
     > 2022 IF 0.9
     > 
-- *Pawan, F., **Li, B**., Nijiati, S., Dopwell. B. M., Harris, A., & Iruoje, T. (2nd round revision). Culturally- and Linguistically-Responsive Online Teacher Learning Professional Development. *Online Learning.*
+- *Pawan, F., **Li, B**., Nijiati, S., Dopwell. B. M., Harris, A., & Iruoje, T. (accpeted). Culturally- and Linguistically-Responsive Online Teacher Learning Professional Development. *Online Learning.*
     
     > 2022 IF 1.83
     > 
@@ -41,11 +41,13 @@ title: "Publication"
     
     > Adopted by Zhejiang Ocean University as its official textbook
     > 
-- **Li, B**., Ma, Y., & Lyu, X. (2023). Bring together native speakers around the world: A foreign language flagship program’s online experience during COVID. In Chen R. (Ed.), *The Future of Remote and Hybrid Work in Global Higher Education: Perceptions, Policies, and Practices during COVID-19. essay*, Palgrave Macmillan/Springer.
 - Wang, H., et al. (final review) Management model design and market economics analysis of artificial intelligence learning platform based on emotional neuroscience and medical pedagogy, *The Journal of Educational Research*.
     
     > 2022 IF 1.67
     > 
+**BOOK CHAPTERS**
+
+- **Li, B**., Ma, Y., & Lyu, X. (2023). Bring together native speakers around the world: A foreign language flagship program’s online experience during COVID. In Chen R. (Ed.), *The Future of Remote and Hybrid Work in Global Higher Education: Perceptions, Policies, and Practices during COVID-19. essay*, Palgrave Macmillan/Springer.
 
 **RESEARCH FUNDING/GRANTS** 
 
