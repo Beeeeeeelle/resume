@@ -4,7 +4,7 @@ title: "Publication"
 ---
 
 
-**JORENAL ARTICLES**
+**JOURNAL ARTICLES**
 
 - **∗Li, B**., Wang, C., Bonk, C. J., & Kou, X. (Proposal accepted). Exploring inventions in self-directed language learning with generative AI: implementations and perspectives of YouTube content creators. *TechTrends*.
     
@@ -26,7 +26,7 @@ title: "Publication"
     
     > 2022 IF 0.9
     > 
-- **∗**Li, X., ***Li, B**., & Cho, S. (accept after minor revision). Empowering Chinese Language Learners from Low-Income Families to Improve Chinese Writing with ChatGPT’s Assistance. *Languages*.
+- **∗**Li, X., ***Li, B**., & Cho, S. (accept). Empowering Chinese Language Learners from Low-Income Families to Improve Chinese Writing with ChatGPT’s Assistance. *Languages*.
     
     > 2022 IF 0.9
     > 
