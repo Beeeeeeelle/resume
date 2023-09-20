@@ -1,7 +1,6 @@
-
 ---
-permalink: /publication/
-title: "Publication"
+permalink: /presentation/
+title: "Presentation"
 ---
 
 
