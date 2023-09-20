@@ -5,3 +5,5 @@ main:
     url: /posts/
   - title: "Publication"
     url: /publication/
+  - title: "Presentation"
+    url: /presentation/
