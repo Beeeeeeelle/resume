@@ -18,7 +18,7 @@ title: "Publication"
     
     > 2022 IF 1.4
     > 
-- Bao, Y., & ***Li, B** (major revision). A Preliminary Study on Graduate Student Instructors’ Exploration, Perception, and Use of ChatGPT. *International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT).*
+- Bao, Y., & ***Li, B** (Accepted). A Preliminary Study on Graduate Student Instructors’ Exploration, Perception, and Use of ChatGPT. *International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT).*
     
     > 2022 IF 1.4
     > 
@@ -26,7 +26,7 @@ title: "Publication"
     
     > 2022 IF 0.9
     > 
-- **∗**Li, X., ***Li, B**., & Cho, S. (accept). Empowering Chinese Language Learners from Low-Income Families to Improve Chinese Writing with ChatGPT’s Assistance. *Languages*.
+- **∗**Li, X., ***Li, B**., & Cho, S. (Accepted). Empowering Chinese Language Learners from Low-Income Families to Improve Chinese Writing with ChatGPT’s Assistance. *Languages*.
     
     > 2022 IF 0.9
     > 
