@@ -30,7 +30,7 @@ title: "Publication"
     
     > 2022 IF 0.9
     > 
-- *Pawan, F., **Li, B**., Nijiati, S., Dopwell. B. M., Harris, A., & Iruoje, T. (accpeted). Culturally- and Linguistically-Responsive Online Teacher Learning Professional Development. *Online Learning.*
+- *Pawan, F., **Li, B**., Nijiati, S., Dopwell. B. M., Harris, A., & Iruoje, T. (Accpeted). Culturally- and Linguistically-Responsive Online Teacher Learning Professional Development. *Online Learning.*
     
     > 2022 IF 1.83
     > 
