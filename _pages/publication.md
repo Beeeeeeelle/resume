@@ -48,7 +48,7 @@ title: "Publication"
     
 **BOOK CHAPTERS**
 
-- **Li, B**., Ma, Y., & Lyu, X. (2023). Bring together native speakers around the world: A foreign language flagship program’s online experience during COVID. In Chen R. (Ed.), *The Future of Remote and Hybrid Work in Global Higher Education: Perceptions, Policies, and Practices during COVID-19. essay*, Palgrave Macmillan/Springer.
+- **Li, B**., Patterson, Y., & Lyu, X. (2023). Building, Bonding, and Growing During the COVID-19 Pandemic: A Case Study of Indiana University’s Chinese Flagship Program. In Rethinking Hybrid and Remote Work in Higher Education: Global Perspectives, Policies, and Practices after COVID-19 (pp. 127-152). Cham: Springer International Publishing. https://link.springer.com/book/10.1007/978-3-031-36632-1
 
 **RESEARCH FUNDING/GRANTS** 
 
