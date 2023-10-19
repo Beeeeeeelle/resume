@@ -26,7 +26,7 @@ title: "Publication"
     
     > 2022 IF 0.9
     > 
-- **∗**Li, X., ***Li, B**., & Cho, S. (Accepted). Empowering Chinese Language Learners from Low-Income Families to Improve Chinese Writing with ChatGPT’s Assistance. *Languages*.
+- **∗**Li, X., ***Li, B**., & Cho, S. (Accepted). Empowering Chinese Language Learners from Low-Income Families to Improve Their Chinese Writing with ChatGPT’s Assistance Afterschool. *Languages 2023, 8*, 238. https://doi.org/10.3390/languages8040238
     
     > 2022 IF 0.9
     > 
