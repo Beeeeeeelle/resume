@@ -9,8 +9,6 @@ title: "Presentation"
 
 ∗ **Li, S**, Bonk, C. J.,Wang, W., & Kou, Z. (2023, Oct 15) ***Exploring Inventions in Self-Directed Language Learning With Generative AI: Implementations and Perspectives of YouTube Content Creators.*** AERA 2024, Philadelphia, Pennsylvania
 
-∗ **Li, S**, Bonk, C. J., & Kou, Z. (2023, Oct 15) ***Exploring Inventions in Self-Directed Language Learning With Generative AI: Implementations and Perspectives of YouTube Content Creators.*** AERA 2024, Philadelphia, Pennsylvania
-
 ∗ **Li, S**, Bonk, C. J.,Wang, W., & Kou, Z. (2023, Oct 15) ***Reconceptualizing the Self-directed Language Learning in the Era of Generative AI: An Exploratory Analysis.*** AERA 2024, Philadelphia, Pennsylvania
 
 **Li, S**. (2023, Oct 15) ***Making Sense of EduTubers: Investigating the Co-Construction and Reinvention of Identities through EduTubers’ Digital Literacy Practices.*** ACET 2023, Orlando, FL
