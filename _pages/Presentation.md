@@ -2,14 +2,20 @@
 permalink: /presentation/
 title: "Presentation"
 ---
-
-
 **PRESESTATION**
 ∗ Denotes upcoming presentation
 
-∗ **Li, S**. (2023, Oct 15) ***Making Sense of EduTubers: Investigating the Co-Construction and Reinvention of Identities through EduTubers’ Digital Literacy Practices.*** ACET 2023, Orlando, FL
+∗ **Li, S**, Bonk, C. J.,Wang, W., & Kou, Z. (2023, Oct 15) ***Embracing the Disrupted Language Teaching and Learning Field: Analyzing YouTube Content Creation Related to ChatGPT.*** AERA 2024, Philadelphia, Pennsylvania
 
-∗ **Li, S**. (2023, Oct 17) ***Designing Authentically and Structurally: Design-Based Research as An Innovative Approach to Promote Chinese Typing Learning***. ACET 2023, Orlando, FL
+∗ **Li, S**, Bonk, C. J.,Wang, W., & Kou, Z. (2023, Oct 15) ***Exploring Inventions in Self-Directed Language Learning With Generative AI: Implementations and Perspectives of YouTube Content Creators.*** AERA 2024, Philadelphia, Pennsylvania
+
+∗ **Li, S**, Bonk, C. J., & Kou, Z. (2023, Oct 15) ***Exploring Inventions in Self-Directed Language Learning With Generative AI: Implementations and Perspectives of YouTube Content Creators.*** AERA 2024, Philadelphia, Pennsylvania
+
+∗ **Li, S**, Bonk, C. J.,Wang, W., & Kou, Z. (2023, Oct 15) ***Reconceptualizing the Self-directed Language Learning in the Era of Generative AI: An Exploratory Analysis.*** AERA 2024, Philadelphia, Pennsylvania
+
+**Li, S**. (2023, Oct 15) ***Making Sense of EduTubers: Investigating the Co-Construction and Reinvention of Identities through EduTubers’ Digital Literacy Practices.*** ACET 2023, Orlando, FL
+
+**Li, S**. (2023, Oct 17) ***Designing Authentically and Structurally: Design-Based Research as An Innovative Approach to Promote Chinese Typing Learning***. ACET 2023, Orlando, FL
 
 Bonk, C. J., **Li, B**., Kou, Z., & Wang, W. (2023, September 20). ***Embracing the Disrupted Language Teaching and Learning Field: Analyzing YouTube Content Creation Related to ChatGPT***. Invited talk to graduate students and faculty at Boise State University. Available: [https://youtu.be/ZIsvnSNP6nI](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fyoutu.be%2FZIsvnSNP6nI&data=05%7C01%7Csiyli%40iu.edu%7C271ff83da54c4e3fa54e08dbb9ef0254%7C1113be34aed14d00ab4bcdd02510be91%7C0%7C0%7C638308208410461849%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=CKKK71hFr%2Bn94eN7s%2F6F9MiKOocdXA1acP7eW6IfgAk%3D&reserved=0) (1:37:43)
 
