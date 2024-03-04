@@ -7,7 +7,7 @@ title: "Teaching & Mentoring"
 
 ---
 
-![Screen Shot 2024-03-03 at 4.32.59 PM.png](asses/Service/Screen_Shot_2024-03-03_at_4.32.59_PM.png)
+![Screen Shot 2024-03-03 at 4.32.59 PM.png](/asses/Service/Screen_Shot_2024-03-03_at_4.32.59_PM.png)
 
 I have been engaged in a Chinese academic community, ConnectEd, since 2022. It aims to share research resources and findings, conduct online academic exchange lectures, and create a community for academics to connect and collaborate.
 
