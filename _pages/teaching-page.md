@@ -2,8 +2,7 @@
 permalink: /teaching/
 title: "Teaching & Mentoring"
 ---
-
-# **Mentoring**
+**Mentoring**
 
 ---
 
@@ -16,7 +15,7 @@ I actively participate in
 - Sharing my experience with the PhD application process.
 - Serving as a teaching assistant for a Meta-Analysis Online Course for 250 Chinese students
 
-# **Teaching**
+ **Teaching**
 
 ---
 
