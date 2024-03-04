@@ -1,13 +1,7 @@
 ---
 title: "Service"
-layout: splash
 permalink: /service/
 date: 2016-03-23T11:48:41-04:00
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—2.png
-excerpt: "I'm passionate about how people today are learning, advanced digital technology and authoring tools, as well as various cultures. My research focuses on AI in language education, self-directed learning on YouTube, and learning experience design."
 ---
 
 <html>
