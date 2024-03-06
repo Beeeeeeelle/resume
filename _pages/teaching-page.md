@@ -2,11 +2,6 @@
 permalink: /teaching/
 title: "Teaching & Mentoring"
 ---
-**Mentoring**
-
-
-∗ Denotes upcoming presentation
-
 ## **Mentoring**
 
 ---
