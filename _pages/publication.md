@@ -33,7 +33,7 @@ title: "Publication"
     
     > 2022 IF 1.4
     > 
-- Bao, Y., & ***Li, B** (Accepted). A Preliminary Study on Graduate Student Instructors’ Exploration, Perception, and Use of ChatGPT. *International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT).*
+- Bao, Y., & ***Li, B** (2023). A Preliminary Study on Graduate Student Instructors’ Exploration, Perception, and Use of ChatGPT. *International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT), 13*(1), 1-23. [https://doi.org/10.4018/IJCALLT.332873](https://doi.org/10.4018/IJCALLT.332873)
     
     > 2022 IF 1.4
     > 
@@ -45,7 +45,7 @@ title: "Publication"
     
     > 2022 IF 0.9
     > 
-- *Pawan, F., **Li, B**., Nijiati, S., Dopwell. B. M., Harris, A., & Iruoje, T. (Accpeted). Culturally- and Linguistically-Responsive Online Teacher Learning Professional Development. *Online Learning.*
+- *Pawan, F., **Li, B**., Nijiati, S., Dopwell. B. M., Harris, A., & Iruoje, T. (2023). Culturally- and Linguistically-Responsive Online Teacher Learning Professional Development. *Online Learning, 27*(4). [https://doi.org/10.24059/olj.v27i4.4003](https://doi.org/10.24059/olj.v27i4.4003)
     
     > 2022 IF 1.83
     > 
