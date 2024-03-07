@@ -5,10 +5,22 @@ title: "Publication"
 
 
 **JOURNAL ARTICLES**
+- Yang, M., Luo, T., **∗Li, B**., Herman, K., Jiang, S., & Kim, J. (Proposal accepted). Examining Non-traditional Online Learners’ Ownership of Learning in the Context of ChatGPT-facilitated Design. *Journal of Computing in Higher Education*.
+    
+    > 2022 IF 5.6
+    > 
+- **∗Li, B**., Lowell, V., Watson, & Hou, Z. (Proposal accepted). Design precedents to design innovation: Developing an Advanced AI Monitoring for Writing Assessment. *Journal of Computing in Higher Education*.
+    
+    > 2022 IF 5.6
+    > 
+- **∗Li, B**., Lowell, V., Watson, & Zhang, Z. (Proposal accepted). Development of an Instrument to Measure AI-integrated SDL Personal Attributes for Global Language Learners. *Journal of Computing in Higher Education*.
+    
+    > 2022 IF 5.6
+    > 
 - **∗Li, B**., Lowell, V., Watson, & Wang, C. (Under reivew). A Systematic Review of the First Year of Publications on ChatGPT and Language Learning: Examining ChatGPT's Use in Language Learning, Teaching, and Research. *Computers & Education: Artificial Intelligence*.
     
     > 2022 IF 7.7
-
+    > 
 - **∗Li, B**., Wang, C., Bonk, C. J., & Kou, X. (Under major revision reivew). Exploring inventions in self-directed language learning with generative AI: implementations and perspectives of YouTube content creators. *TechTrends*.
     
     > 2022 IF 2.5
