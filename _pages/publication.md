@@ -5,12 +5,15 @@ title: "Publication"
 
 
 **JOURNAL ARTICLES**
+- **∗Li, B**., Lowell, V., Watson, & Wang, C. (Under reivew). A Systematic Review of the First Year of Publications on ChatGPT and Language Learning: Examining ChatGPT's Use in Language Learning, Teaching, and Research. *Computers & Education: Artificial Intelligence*.
+    
+    > 2022 IF 7.7
 
-- **∗Li, B**., Wang, C., Bonk, C. J., & Kou, X. (Proposal accepted). Exploring inventions in self-directed language learning with generative AI: implementations and perspectives of YouTube content creators. *TechTrends*.
+- **∗Li, B**., Wang, C., Bonk, C. J., & Kou, X. (Under major revision reivew). Exploring inventions in self-directed language learning with generative AI: implementations and perspectives of YouTube content creators. *TechTrends*.
     
     > 2022 IF 2.5
     > 
-- **∗Li, B**., Bonk, C. J., Wang, C., & Kou, X. (Under review). Reconceptualizing the self-directed language learning in the era of generative AI: an exploratory analysis. *IEEE Transactions on Education*.
+- **∗Li, B**., Bonk, C. J., Wang, C., & Kou, X. (Under minor revision review). Reconceptualizing the self-directed language learning in the era of generative AI: an exploratory analysis. *IEEE Transactions on Education*.
     
     > 2022 IF 2.6
     > 
