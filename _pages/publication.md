@@ -33,7 +33,7 @@ title: "Publication"
     
     > 2022 IF 1.4
     > 
-- Bao, Y., & ***Li, B** (2023). A Preliminary Study on Graduate Student Instructors’ Exploration, Perception, and Use of ChatGPT. *International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT), 13*(1), 1-23. [https://doi.org/10.4018/IJCALLT.332873](https://doi.org/10.4018/IJCALLT.332873)
+- Bao, Y., & **∗Li, B** (2023). A Preliminary Study on Graduate Student Instructors’ Exploration, Perception, and Use of ChatGPT. *International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT), 13*(1), 1-23. [https://doi.org/10.4018/IJCALLT.332873](https://doi.org/10.4018/IJCALLT.332873)
     
     > 2022 IF 1.4
     > 
@@ -45,11 +45,11 @@ title: "Publication"
     
     > 2022 IF 0.9
     > 
-- *Pawan, F., **Li, B**., Nijiati, S., Dopwell. B. M., Harris, A., & Iruoje, T. (2023). Culturally- and Linguistically-Responsive Online Teacher Learning Professional Development. *Online Learning, 27*(4). [https://doi.org/10.24059/olj.v27i4.4003](https://doi.org/10.24059/olj.v27i4.4003)
+- Pawan, F., **∗Li, B**., Nijiati, S., Dopwell. B. M., Harris, A., & Iruoje, T. (2023). Culturally- and Linguistically-Responsive Online Teacher Learning Professional Development. *Online Learning, 27*(4). [https://doi.org/10.24059/olj.v27i4.4003](https://doi.org/10.24059/olj.v27i4.4003)
     
     > 2022 IF 1.83
     > 
-- **Li, B**., & Li, H. (2021). [Techniques of Teaching English](https://www.amazon.com/-/es/%E5%8C%BF%E5%90%8D/dp/7308199096). Zhejiang University Press.
+- **∗Li, B**., & Li, H. (2021). [Techniques of Teaching English](https://www.amazon.com/-/es/%E5%8C%BF%E5%90%8D/dp/7308199096). Zhejiang University Press.
     
     > Circulation: 1000+
     > 
@@ -63,7 +63,7 @@ title: "Publication"
     
 **BOOK CHAPTERS**
 
-- **Li, B**., Patterson, Y., & Lyu, X. (2023). Building, Bonding, and Growing During the COVID-19 Pandemic: A Case Study of Indiana University’s Chinese Flagship Program. In Rethinking Hybrid and Remote Work in Higher Education: Global Perspectives, Policies, and Practices after COVID-19 (pp. 127-152). Cham: Springer International Publishing. https://link.springer.com/book/10.1007/978-3-031-36632-1
+- **∗Li, B**., Patterson, Y., & Lyu, X. (2023). Building, Bonding, and Growing During the COVID-19 Pandemic: A Case Study of Indiana University’s Chinese Flagship Program. In Rethinking Hybrid and Remote Work in Higher Education: Global Perspectives, Policies, and Practices after COVID-19 (pp. 127-152). Cham: Springer International Publishing. https://link.springer.com/book/10.1007/978-3-031-36632-1
 
 **RESEARCH FUNDING/GRANTS** 
 
