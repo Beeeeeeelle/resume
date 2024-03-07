@@ -13,7 +13,7 @@ title: "Publication"
     
     > 2022 IF 5.6
     > 
-- **∗Li, B**., Lowell, V., Watson, & Zhang, Z. (Proposal accepted). Development of an Instrument to Measure AI-integrated SDL Personal Attributes for Global Language Learners. *Journal of Computing in Higher Education*.
+- **∗Li, B**., Zhang, Z.，Lowell, V., Watson, Wang, C., & Bonk, C. J. (Proposal accepted). Development of an Instrument to Measure AI-integrated SDL Personal Attributes for Global Language Learners. *Journal of Computing in Higher Education*.
     
     > 2022 IF 5.6
     > 
