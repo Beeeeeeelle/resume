@@ -62,7 +62,8 @@ title: "Publication"
     >
     
 **BOOK CHAPTERS**
-
+- **∗Li, B**.& Lowell, V., Watson. (Accepted, aiming to be published in November 2024). Implementing Design Thinking: A Mobile Application for Heritage Chinese Learners to Overcome Challenges in Learning Chinese Characters. In Transdisciplinary Learning Experience Design: Futures, Synergies, and Innovation.
+  
 - **∗Li, B**., Patterson, Y., & Lyu, X. (2023). Building, Bonding, and Growing During the COVID-19 Pandemic: A Case Study of Indiana University’s Chinese Flagship Program. In Rethinking Hybrid and Remote Work in Higher Education: Global Perspectives, Policies, and Practices after COVID-19 (pp. 127-152). Cham: Springer International Publishing. https://link.springer.com/book/10.1007/978-3-031-36632-1
 
 **RESEARCH FUNDING/GRANTS** 
