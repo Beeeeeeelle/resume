@@ -26,6 +26,6 @@ categories:
 
 # Research in Progress
 
-**∗Li, B**., Wang, C., Bonk, C. J., & Kou, X. (Proposal accepted). Exploring inventions in self-directed language learning with generative AI: implementations and perspectives of YouTube content creators. *TechTrends*.
+**∗Li, B**., Wang, C., Bonk, C. J., & Kou, X. (accepted). Exploring inventions in self-directed language learning with generative AI: implementations and perspectives of YouTube content creators. *TechTrends*.
 
-**∗Li, B**., Bonk, C. J., Wang, C., & Kou, X. (Under review). Reconceptualizing the self-directed language learning in the era of generative AI: an exploratory analysis. *IEEE*.
+**∗Li, B**., Bonk, C. J., Wang, C., & Kou, X. (accepted). Reconceptualizing the self-directed language learning in the era of generative AI: an exploratory analysis. *IEEE*.
