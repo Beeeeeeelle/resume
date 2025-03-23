@@ -1,6 +1,5 @@
-
 ---
-permalink: /Grant/
+permalink: /grant/
 title: "Grant"
 ---
 
