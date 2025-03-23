@@ -3,6 +3,8 @@ main:
     url: /research/
   - title: "Publication"
     url: /publication/
+  - title: "Grant"
+    url: /Grant/
   - title: "Presentation"
     url: /presentation/
   - title: "Service"
