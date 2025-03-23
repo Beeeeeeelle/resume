@@ -3,8 +3,6 @@ permalink: /grant/
 title: "Grant"
 ---
 
-# Grant
-
 **RESEARCH FUNDING/GRANTS RECEIVED OR IN REVIEW**
 
 - **2025-2026 Spencer Vision Grant, Transforming Online Learning Through AI Presence:**
