@@ -23,6 +23,10 @@ As an instructional designer and language teacher. I'm passionate about how peop
 
 **Teaching Evidence**
 
+> Purdue University 	West lafayette, IN
+>
+
+- Co-Instructor: EDCI 676 Writing Literature Review in Learning Design and Technology
 > CONNETED 	Irvine, CA
 >
 
