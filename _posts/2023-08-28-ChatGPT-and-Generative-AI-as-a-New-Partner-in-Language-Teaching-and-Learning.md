@@ -7,11 +7,19 @@ categories:
 
 # Team
 
-![Screen Shot 2023-08-30 at 1.20.26 PM.png](/assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—1.png)
+![Screen Shot 2023-08-30 at 1.20.26 PM.png](assets/images/Screenshot_2025-03-25_at_11.21.48_AM.png)
 
 # Publication
 
-**∗Li, B**., Lowell, V., Watson, & Wang, C. (2024). A systematic review of the first year of publications on ChatGPT and language education: Examining research on ChatGPT’s use in language learning and teaching. *Computers and Education: Artificial Intelligence*, 100, 100266. [https://doi.org/10.1016/j.caeai.2024.100266](https://doi.org/10.1016/j.caeai.2024.100266) 
+**∗Li, B**., Lowell, V., Watson, & Wang, C. (2024). A systematic review of the first year of publications on ChatGPT and language education: Examining research on ChatGPT’s use in language learning and teaching. *Computers and Education: Artificial Intelligence*, 100, 100266. [https://doi.org/10.1016/j.caeai.2024.100266
+        
+        
+        
+        ](https://doi.org/10.1016/j.caeai.2024.100266
+        
+        
+        
+        ) 
 
 - Abstract
     
@@ -19,14 +27,30 @@ categories:
     > 
     
 
-**∗Li, B**., Bonk, C. J., Wang, C., & Kou, X. (2024). Reconceptualizing self-directed learning in the era of generative AI: An exploratory analysis of language learning*. IEEE Transactions on Learning Technologies, 17*(3), 1515-1529. [https://doi.org/10.1109/TLT.2024.3386098](https://doi.org/10.1109/TLT.2024.3386098) 
+**∗Li, B**., Bonk, C. J., Wang, C., & Kou, X. (2024). Reconceptualizing self-directed learning in the era of generative AI: An exploratory analysis of language learning*. IEEE Transactions on Learning Technologies, 17*(3), 1515-1529. [https://doi.org/10.1109/TLT.2024.3386098
+        
+        
+        
+        ](https://doi.org/10.1109/TLT.2024.3386098
+        
+        
+        
+        ) 
 
 - Abstract
     
     > This exploratory analysis investigates the integration of ChatGPT in self-directed learning (SDL). Specifically, this study examines YouTube content creators’ language-learning experiences and the role of ChatGPT in their SDL, building upon Song and Hill's conceptual model of SDL in online contexts. Thematic analysis of interviews with 19 YouTubers and relevant video contents reveals distinct constructs of ChatGPT-integrated SDL, suggesting a reconceptualization and refinement of the SDL framework in the consideration of generative artificial intelligence (AI). This framework emphasizes critical aspects of utilizing ChatGPT as an SDL tool on two distinct levels: 1) the interactive relationships and interplay between learners’ personal traits and their ongoing learning processes (local) and 2) the evolving nature of SDL in the rapidly advancing landscape of generative AI, with socio-political-cultural foundations of AI constantly shaping the learning environment where SDL occurs (global). The study highlights the potential of ChatGPT as a tool for promoting self-directed language learning (SDLL) and provides implications for the development of learning technologies and research on AI-facilitated SDL.
     > 
 
-**∗Li, B**., Wang, C., Bonk, C. J., & Kou, X. (2024). Exploring inventions in self-directed language learning with generative AI: Implementations and perspectives of YouTube content creators. *TechTrends*. [https://doi.org/10.1007/s11528-024-00960-3](https://doi.org/10.1007/s11528-024-00960-3)  
+**∗Li, B**., Wang, C., Bonk, C. J., & Kou, X. (2024). Exploring inventions in self-directed language learning with generative AI: Implementations and perspectives of YouTube content creators. *TechTrends*. [https://doi.org/10.1007/s11528-024-00960-3
+        
+        
+        
+        ](https://doi.org/10.1007/s11528-024-00960-3
+        
+        
+        
+        )  
 
 - Abstract
     
