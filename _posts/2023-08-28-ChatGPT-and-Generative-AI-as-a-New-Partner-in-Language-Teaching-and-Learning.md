@@ -7,7 +7,7 @@ categories:
 
 # Team
 
-![Screenshot 2025-03-25 at 11.21.48 AM.png](assets/images/Screenshot_2025-03-25_at_11.21.48_AM.png)
+![Screenshot 2025-03-25 at 11.21.48 AM.png](assets/images/ChatGPT%20and%20Generative%20AI%20as%20a%20New%20Partner%20in%20Lang%20b3ca80051e484412af405416f6813fd4/Screenshot_2025-03-25_at_11.21.48_AM.png)
 
 # Publication
 
