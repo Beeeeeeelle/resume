@@ -7,9 +7,7 @@ categories:
 
 # Team
 
-![Screenshot 2025-03-25 at 11.21.48 AM.png](assets/images/Screenshot_2025-03-25_at_11.21.48_AM.png)
-
-![Screen Shot 2024-03-03 at 4.40.14 PM.png](/assets/Service/Screen_Shot_2024-03-03_at_4.40.14_PM.png)
+![Screenshot 2025-03-25 at 11.21.48 AM.png](assets/images/Screen%shot%2025-03-25%at%11.21.48%AM.png)
 
 # Publication
 
