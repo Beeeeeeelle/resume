@@ -7,19 +7,11 @@ categories:
 
 # Team
 
-![Screen Shot 2023-08-30 at 1.20.26 PM.png](assets/images/Screenshot_2025-03-25_at_11.21.48_AM.png)
+![Screenshot 2025-03-25 at 11.21.48 AM.png](assets/images/Screenshot_2025-03-25_at_11.21.48_AM.png)
 
 # Publication
 
-**∗Li, B**., Lowell, V., Watson, & Wang, C. (2024). A systematic review of the first year of publications on ChatGPT and language education: Examining research on ChatGPT’s use in language learning and teaching. *Computers and Education: Artificial Intelligence*, 100, 100266. [https://doi.org/10.1016/j.caeai.2024.100266
-        
-        
-        
-        ](https://doi.org/10.1016/j.caeai.2024.100266
-        
-        
-        
-        ) 
+**∗Li, B**., Lowell, V., Watson, & Wang, C. (2024). A systematic review of the first year of publications on ChatGPT and language education: Examining research on ChatGPT’s use in language learning and teaching. *Computers and Education: Artificial Intelligence*, 100, 100266. [https://doi.org/10.1016/j.caeai.2024.100266](https://doi.org/10.1016/j.caeai.2024.100266) 
 
 - Abstract
     
@@ -27,15 +19,7 @@ categories:
     > 
     
 
-**∗Li, B**., Bonk, C. J., Wang, C., & Kou, X. (2024). Reconceptualizing self-directed learning in the era of generative AI: An exploratory analysis of language learning*. IEEE Transactions on Learning Technologies, 17*(3), 1515-1529. [https://doi.org/10.1109/TLT.2024.3386098
-        
-        
-        
-        ](https://doi.org/10.1109/TLT.2024.3386098
-        
-        
-        
-        ) 
+**∗Li, B**., Bonk, C. J., Wang, C., & Kou, X. (2024). Reconceptualizing self-directed learning in the era of generative AI: An exploratory analysis of language learning*. IEEE Transactions on Learning Technologies, 17*(3), 1515-1529. [https://doi.org/10.1109/TLT.2024.3386098](https://doi.org/10.1109/TLT.2024.3386098) 
 
 - Abstract
     
@@ -43,14 +27,7 @@ categories:
     > 
 
 **∗Li, B**., Wang, C., Bonk, C. J., & Kou, X. (2024). Exploring inventions in self-directed language learning with generative AI: Implementations and perspectives of YouTube content creators. *TechTrends*. [https://doi.org/10.1007/s11528-024-00960-3
-        
-        
-        
-        ](https://doi.org/10.1007/s11528-024-00960-3
-        
-        
-        
-        )  
+](https://doi.org/10.1007/s11528-024-00960-3)  
 
 - Abstract
     
