@@ -6,8 +6,7 @@ categories:
 ---
 
 # Team
-
-![Screenshot 2025-03-25 at 11.21.48 AM.png](assets/images/Screen%shot%2025-03-25%at%11.21.48%AM.png)
+![Screenshot 2025-03-25 at 11.21.48 AM.png](/assets/images/assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—3.png)
 
 # Publication
 
