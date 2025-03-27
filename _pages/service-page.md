@@ -61,7 +61,7 @@
   <!-- Second image added below -->
   <figure class="image">
     <a href="/assets/Service/your_new_image_path.png">
-      <img style="width:288px" src="/assets/Service/your_new_image_path.png"/>
+      <img style="width:288px" src="/assets/Service/WechatIMG15798.jpg"/>
     </a>
   </figure>
   <p class=""></p>
