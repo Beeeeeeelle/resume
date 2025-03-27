@@ -1,8 +1,8 @@
-
+---
  title: "Service"
  permalink: /service/
  date: 2016-03-23T11:48:41-04:00
-
+---
 <div class="page-body"><p id="6c56cb72-7963-436d-b438-a0eb0f9ba142" ><strong>Reviewer</strong></p><div id="c08eef8a-7c4a-4621-a73d-f7a0bd20cfcf" style="display: flex;margin-top: -30px;" class="column-list"><div id="536631ff-2c33-4c1b-aa80-e207ac7893e4" style="width:50%" class="column"><ul id="27364f8e-efd7-4718-8c7d-0efa829322fc" class="bulleted-list"><li style="list-style-type:disc">Reviewer of Learning and Instruction</li></ul><ul id="9edb80bb-eb21-42d2-b4ea-c05f578306ef" class="bulleted-list"><li style="list-style-type:disc">Reviewer of Online Learning Journal (OLJ)</li></ul><ul id="302eec1a-97d0-41d7-9fd4-306f6658dab3" class="bulleted-list"><li style="list-style-type:disc">Reviewer of Language Teaching Research</li></ul><ul id="6e1f287e-3a1a-49ed-a1ed-ed71a5939d7b" class="bulleted-list"><li style="list-style-type:disc">Reviewer of AECT Summer Research Symposium</li></ul></div><div id="0c37ff93-8403-46b5-a85e-f0b5361b625d" style="width:50%" class="column"><figure id="874a4585-4153-4533-b27d-23cab962b067" class="image"><a href="/assets/Service/Screen_Shot_2024-03-03_at_4.40.14_PM.png"><img style="width:288px" src="/assets/Service/Screen_Shot_2024-03-03_at_4.40.14_PM.png"/></a></figure><p id="745ee36b-1057-43cd-8652-c9ea1ccf6c60" class="">
  </p></div></div><p id="c72c7a1e-8815-487b-ab51-8e9dca35bf31" class=""><strong>Professional Organizations Membership</strong> </p><ul id="8d5bb3f5-459b-4559-8b48-98f4e27fd563" class="bulleted-list"><li style="list-style-type:disc">Association for Educational Communications and Technology (AECT)</li></ul><ul id="548d20f0-2786-47e4-838f-4d33a57c8a8e" class="bulleted-list"><li style="list-style-type:disc">American Educational Research Association (AERA)</li></ul><p id="9899f152-5de8-499a-bcd3-147e7e413259" class="">
  </p><p id="c0cd4b61-45c4-4e8d-ba55-d8a041bca3ca" class=""><strong>Academic Service</strong></p><p id="6ff6c471-c32b-4ce9-8459-f640d1d6c464" class="">
@@ -16,5 +16,6 @@
 {% include feature_row id="feature_row2" type="left" %}
 {% include feature_row id="feature_row3" type="right" %}
 {% include feature_row id="feature_row4" type="center" %}
+
 
 
