@@ -5,6 +5,7 @@ title: "Presentation"
 **PRESESTATION**
 **Denotes upcoming presentation*
 
+- Chi, Z., Cai, H.,**∗Li, B**., & Song, X. (2025). ***Country and gender differences in the humorous leadership-employee innovation relationship***.85th Annual Meeting of the Academy of Management (AoM), Copenhagen, Denmark.
 - **∗Li, B**., Tan, L.Y., Wang, C., & Lowell, V. (2025, April 24). ***Two Years of Innovation: A Systematic Review of Empirical Generative AI Research in Language Learning and Teaching***. AERA 2025, Denver, Colorado
 - **∗Li, B**., Zhang, Z., Lowell, V., Wang, C., & Bonk, C. J. (2025, April 24). ***Development of an Instrument to Measure AI-integrated SDL Personal Attributes for Global Language Learners***. AERA 2025, Denver, Colorado
 - **Li, S**, Bonk, C. J.,Wang, W., & Kou, Z. (2024, Oct 22) ***Embracing the Disrupted Language Teaching and Learning Field: Analyzing YouTube Content Creation Related to ChatGPT.*** AERA 2024, Philadelphia, Pennsylvania
