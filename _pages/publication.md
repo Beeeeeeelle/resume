@@ -1,6 +1,6 @@
 ---
-permalink: /publication/
-title: "Publication"
+permalink: /publications/
+title: "Publications"
 ---
 
 ***Peer-Reviewed Journal Publications***
