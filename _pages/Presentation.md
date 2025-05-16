@@ -1,6 +1,6 @@
 ---
-permalink: /presentation/
-title: "Presentation"
+permalink: /presentations/
+title: "Presentations"
 ---
 **Denotes upcoming presentation*
 
