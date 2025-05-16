@@ -2,7 +2,6 @@
 permalink: /presentation/
 title: "Presentation"
 ---
-**PRESESTATION**
 **Denotes upcoming presentation*
 
 - Chi, Z., Cai, H.,**∗Li, B**., & Song, X. (2025). ***Country and gender differences in the humorous leadership-employee innovation relationship***.85th Annual Meeting of the Academy of Management (AoM), Copenhagen, Denmark.
