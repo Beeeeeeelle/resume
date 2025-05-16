@@ -1,6 +1,6 @@
 ---
-permalink: /grant/
-title: "Grant"
+permalink: /grants/
+title: "Grants"
 ---
 **RESEARCH FUNDING/GRANTS RECEIVED OR IN REVIEW**
 
