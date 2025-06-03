@@ -75,6 +75,14 @@
     <li style="list-style-type:disc">American Educational Research Association (AERA)</li>
   </ul>
   <p id="9899f152-5de8-499a-bcd3-147e7e413259" class=""></p>
+  
+  <p id="12345678-1234-1234-1234-123456789abc" class="">
+  <strong>Student Professional Organizations Experience</strong>
+</p>
+<ul id="abcd1234-abcd-1234-abcd-1234abcd5678" class="bulleted-list">
+  <li style="list-style-type:disc">PALDT (Market Lead, 2023–2024)</li>
+</ul>
+
   <p id="c0cd4b61-45c4-4e8d-ba55-d8a041bca3ca" class=""><strong>Academic Service</strong></p>
   <p id="6ff6c471-c32b-4ce9-8459-f640d1d6c464" class=""></p>
   <div id="29e0b937-abae-4f39-a466-f4a9a81b188f" style="display: flex;margin-top: -30px;" class="column-list">
