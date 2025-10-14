@@ -81,7 +81,7 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/belle-li-198a72180/"
     - label: "CV"
-      icon: "fas fa-fw fa-linkedin"
+      icon: "far fa-fw fa-file-alt"
       url: "https://app.box.com/s/vx3gcs4kxpwvp69nazq7376l397ncmh1"
 
 footer:
@@ -102,7 +102,7 @@ footer:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/belle-li-198a72180/"
     - label: "CV"
-      icon: "fas fa-fw fa-linkedin"
+      icon: "far fa-fw fa-file-alt"
       url: "https://app.box.com/s/vx3gcs4kxpwvp69nazq7376l397ncmh1"
 
 
