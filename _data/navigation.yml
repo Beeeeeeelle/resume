@@ -4,8 +4,8 @@ main:
     children:
       - title: "Publications"
         url: /publications/
-  - title: "Grants"
-    url: /grants/
+      - title: "Grants"
+        url: /grants/
   # - title: "Presentations"
   #   url: /presentations/
   - title: "Service"
