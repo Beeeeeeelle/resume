@@ -1,12 +1,13 @@
 main:
   - title: "Research"
     url: /research/
-  - title: "Publications"
-    url: /publications/
+    children:
+      - title: "Publications"
+        url: /publications/
   - title: "Grants"
     url: /grants/
-  - #title: "Presentations"
-    #url: /presentations/
+  # - title: "Presentations"
+  #   url: /presentations/
   - title: "Service"
     url: /service/
   - title: "Teaching"
