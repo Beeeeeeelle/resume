@@ -242,6 +242,133 @@
   }
 }
 
+.teaching-photo-grid {
+  display: grid;
+  gap: clamp(1rem, 3vw, 1.75rem);
+  margin: clamp(1.5rem, 4vw, 2.5rem) 0;
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  .teaching-photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    align-items: start;
+  }
+}
+
+.teaching-photo-grid--wide {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.teaching-photo {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.teaching-photo-grid--triple {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+}
+
+@media (max-width: 48em) {
+  .teaching-photo-grid--triple {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+}
+
+.teaching-photo__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 1.25rem 3rem rgba(15, 23, 42, 0.12);
+  width: 100%;
+  padding-bottom: 75%;
+}
+
+.teaching-photo__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.teaching-photo figcaption {
+  text-align: left;
+  color: var(--global-muted-text-color, #4a5568);
+}
+
+.teaching-photo figcaption h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--global-text-color, #2d3748);
+}
+
+.teaching-photo figcaption p {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--global-muted-text-color, #4a5568);
+}
+
+.teaching-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin: clamp(1.5rem, 4vw, 2.5rem) 0;
+}
+
+@media (min-width: 56em) {
+  .teaching-highlight {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.teaching-highlight__content {
+  flex: 1 1 0;
+}
+
+.teaching-highlight__list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.teaching-highlight__list li {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.teaching-highlight__media {
+  flex: 0 0 clamp(16rem, 28vw, 20rem);
+  margin: 0;
+  display: grid;
+  gap: 0.65rem;
+  text-align: left;
+  color: var(--global-muted-text-color, #4a5568);
+}
+
+.teaching-highlight__media img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 1.25rem 3rem rgba(15, 23, 42, 0.12);
+  display: block;
+}
+
+.teaching-highlight__media figcaption {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .methodology-pill span {
   font-size: 0.9rem;
   color: var(--global-muted-text-color, #4a5568);

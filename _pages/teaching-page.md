@@ -2,49 +2,95 @@
 permalink: /teaching/
 title: "Teaching & Mentoring"
 ---
-**MENTORING**
+## Teaching Philosophy
+
+My teaching centers on authentic, inclusive learning design. Whether I am working with doctoral students in instructional design or heritage learners of Chinese, I focus on helping learners build agency, reflect on their identities, and transfer knowledge into complex, real-world contexts. I integrate artificial intelligence, extended reality (XR), and learning analytics to scaffold self-directed learning, while grounding every course in culturally responsive pedagogy, formative assessment, and community building.
+
 ---
 
-![Screen Shot 2024-03-03 at 4.32.59 PM.png](/assets/Service/Screen_Shot_2024-03-03_at_4.32.59_PM.png)
+## Courses & Instructional Leadership
 
-I have been engaged in a Chinese academic community, ConnectEd, since 2022. It aims to share research resources and findings, conduct online academic exchange lectures, and create a community for academics to connect and collaborate.
+### Purdue University · Department of Curriculum and Instruction *(2024–present)*
+<div class="teaching-highlight">
+  <div class="teaching-highlight__content">
+    <ul class="teaching-highlight__list">
+      <li><strong>EDCI 557 Strategic Assessment &amp; Evaluation (Graduate, asynchronous online)</strong> — Redesigned the fully online format with multimedia onboarding, weekly overview videos, and scaffolded Brightspace activities. Co-teach two sections of 16 working professionals each semester, mentoring them to deploy Kirkpatrick &amp; Kirkpatrick’s evaluation model across PK–12 and workforce settings.</li>
+      <li><strong>EDCI 676 Writing a Literature Review (Graduate, face-to-face)</strong> — Co-instructor for the spring seminar; guide doctoral students through synthesis mapping, citation management, and AI-supported search strategies while modeling ethical GenAI use.</li>
+      <li><strong>Graduate advising and mentoring</strong> — Provide formative feedback on dissertation proposals, systematic reviews, and AI-integrated design projects; facilitate peer-review routines to normalize scholarly critique.</li>
+    </ul>
+  </div>
+  <figure class="teaching-highlight__media">
+    <img src="/assets/images/teaching/edci-557-course.png" alt="Brightspace welcome message for Belle Li's EDCI 557 Strategic Assessment and Evaluation course">
+    <figcaption>EDCI 557 course welcome message.</figcaption>
+    <img src="/assets/images/teaching/edci-557-weekly-overview.png" alt="Weekly overview video playlist for EDCI 557">
+    <figcaption>EDCI 557 weekly overview videos that scaffold each module.</figcaption>
+  </figure>
+</div>
 
-I actively participate in 
+### ConnectEd · Global Chinese Research Community *(2022–present)*
+- **MET 201 Meta-analysis (Synchronous online)**  
+  Associate instructor for a 250-learner cohort; demonstrate NVivo, R, and JASP workflows, and host bilingual troubleshooting labs tailored to early-career researchers.
+- **Scholarly mentoring**  
+  Lead monthly clinics on Ph.D. application strategy, English-language publishing, and data visualization for scholars across China, Singapore, and the U.S.
 
-- Sharing my experience with the PhD application process.
-- Serving as a teaching assistant for a Meta-Analysis Online Course for 250 Chinese students
+### Beijing Normal University · College of Education *(May–June 2022)*
+- Co-taught *English Language Teacher Professionalism* (hybrid) for pre- and in-service teachers, emphasizing reflective practice and culturally responsive digital pedagogy.
+- Designed practicum protocols that helped participants integrate AI-enabled feedback tools into their lesson study projects.
 
-**TEACHING**
+### Indiana University Bloomington · Hamilton Lugar School *(2020–2023)*
+- Full-time visiting faculty and assessment coordinator for the **Chinese Flagship Program**.  
+  - Led courses from elementary to capstone levels, including *Advanced Academic Chinese Writing (SGIS-S 300)*, *Chinese in Humanities (EALC-C 457)*, and *Fourth-Year Chinese (EALC-C 101)*.  
+  - Developed immersive community-based projects and genre-driven writing workshops that raised oral proficiency interview (OPI) pass rates.  
+  - Recruited, trained, and supervised 200+ tutors; co-designed a blended “double-loop” tutoring model that sustained post-pandemic retention gains.
+- Mentored capstone cohorts through internship preparation, needs assessment, and intercultural reflection sessions in partnership with overseas host institutions.
+
+<div class="teaching-photo-grid teaching-photo-grid--triple">
+  <figure class="teaching-photo">
+    <div class="teaching-photo__media">
+      <img src="/assets/images/teaching/purdue-ai-lecture.jpg" alt="Belle Li facilitating an AI-supported workshop for Purdue graduate students" loading="lazy">
+    </div>
+    <figcaption>
+      <h4>AI teacher PD</h4>
+      <p>Leading design studios that help educators experiment with inclusive, AI-enabled assessment practices.</p>
+    </figcaption>
+  </figure>
+  <figure class="teaching-photo">
+    <div class="teaching-photo__media">
+      <img src="/assets/images/teaching/flagship-faculty-team.jpg" alt="Belle Li with Chinese Flagship faculty mentors celebrating capstone placements" loading="lazy">
+    </div>
+    <figcaption>
+      <h4>Capstone success</h4>
+      <p>Collaborating with faculty mentors to guide learners through internships, needs assessments, and OPI benchmarks.</p>
+    </figcaption>
+  </figure>
+  <figure class="teaching-photo">
+    <div class="teaching-photo__media">
+      <img src="/assets/images/teaching/flagship-cohort.jpg" alt="Belle Li with Chinese Flagship students and tutors after an immersive community project" loading="lazy">
+    </div>
+    <figcaption>
+      <h4>Culture activities with students</h4>
+      <p>Building community-based projects that connect language proficiency with cultural identity work.</p>
+    </figcaption>
+  </figure>
+</div>
+
 ---
 
-**Teaching Philosophy**
+## Mentoring & Community Building
 
-As an instructional designer and language teacher. I'm passionate about how people today are learning, about advanced digital technology and authoring tools, as well as various cultures. My view of teaching Chinese aims not just to master the traditional “four skills” through accuracy and fluency, but to develop students' intercultural competence and critical thinking. Except for language itself, my success depends on whether my students are equipped to speak their minds with confidence and to ask critical questions about their own and other cultures.
+- **AI & Learning Innovation Studios.** Facilitate design charrettes for Purdue graduate students exploring GenAI for assessment, accessibility, and workforce upskilling.  
+- **ConnectEd Community of Practice.** Curate open-access resource banks, moderate cross-institutional reading groups, and coach emerging scholars on IRB, grant writing, and conference proposals.  
+- **Tutor Leadership Pipeline.** At Indiana University, built competency-based workshops, observation rubrics, and feedback loops that prepared tutors to become course instructors and graduate students in LDT and Applied Linguistics programs.  
+- **Equity-focused teacher PD.** Co-led online institutes examining culturally and linguistically responsive professional development; findings inform the design of statewide PD ecosystems and now serve as case studies in my graduate courses.
 
-**Teaching Evidence**
+---
 
-> Purdue University 	West lafayette, IN
->
+## Highlights & Recognitions
 
-- Co-Instructor: EDCI 676 Writing Literature Review in Learning Design and Technology (Graduate Level)
-> CONNETED 	Irvine, CA
->
+- **Course design impact**: Strategic Assessment & Evaluation redesign cited in departmental evaluations for clarity, accessibility, and learner satisfaction.  
+- **Community leadership**: Invited speaker for instructional design seminars at Old Dominion University, Boise State University, and Purdue’s P-12 Conference.  
+- **Award-winning collaborations**: Intel Labs partnership on collaborative problem solving in conversational AI earned the AECT Outstanding Publication Award and informs K–12 teacher preparation modules.
 
-- MET201 Associate Instructor: Meta-analysis (ConnectEd) (Jan 2023 - May 2023)
+---
 
-> BEIJING NORMAL UNIVERSITY 	Beijing, CHINA
-College of Education (May 2022 – June 2022)
->
-
-- Co-teacher with Dr. Pawan: English Language Teacher Professionalism (Graduate Level)
-
-> INDIANA UNIVERSITY	Bloomington, IN
-Department of East Asian Language and Cultures	(June 2020 - May 2023)
->
-
-- SGIS-S 300 Instructor: Advanced Academic Chinese Essay Writing
-- EALC-X 490 Instructor: Independent Study for Capstone students
-- EALC-C 409 Instructor: Chinese Language Practice
-- EALC-C 401 Associate Instructor: Elementary Chinese
-- EALC-C 101 Associate Instructor: Fourth-Year Chinese
-- EALC-C 457 Guest Instructor: Chinese in Humanities
+*Interested in visuals from recent workshops or community events? Let me know which stories resonate and I can add the corresponding photo essays to this page.*
