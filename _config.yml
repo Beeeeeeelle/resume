@@ -1,133 +1,92 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Belle Li
 email: li4808@purdue.edu
-description: >-
-  "This is a multi-line description that will be folded.
-  The greater than symbol (>) preserves line breaks
-  but removes leading spaces."
+description: '"This is a multi-line description that will be folded. The greater than
+  symbol (>) preserves line breaks but removes leading spaces."'
 twitter_username: username
 github_username: username
 minimal_mistakes_skin: default
 search: true
-
-# Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
-# Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 5
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
+timezone: null
 include:
-  - _pages
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
+- _pages
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-gist
+- jekyll-feed
+- jemoji
+- jekyll-include-cache
 author:
-  name   : "Belle Li"
-  avatar : "/assets/images/avatar.jpg"
-  bio    : "Ph.D. candidate<br>
-  Learning Design & Technology<br>
-  Purdue University
-  "
+  name: Belle Li
+  avatar: /assets/images/avatar.jpg
+  bio: 'Ph.D. candidate<br> Learning Design & Technology<br> Purdue University '
   links:
-    - label: "West Lafayette, IN"
-      icon: "fas fa-fw fa-map-marker-alt"
-      url: "https://www.google.com/maps/place/Purdue+University/@40.4237094,-86.9260655,17z/data=!3m1!4b1!4m6!3m5!1s0x8812fd37423e0507:0x8eccb2cf8b1a7c8e!8m2!3d40.4237054!4d-86.9211946!16zL20vMDV4XzU?entry=ttu"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:li4808@purdue.edu"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/tic_typeinchinese/"
-    - label: "Google Scholar"
-      icon: "fa fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=82kWgvMAAAAJ&hl=en&authuser=1"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/belle-li-198a72180/"
-    - label: "CV"
-      icon: "far fa-fw fa-file-alt"
-      url: "https://app.box.com/s/vx3gcs4kxpwvp69nazq7376l397ncmh1"
-
+  - label: West Lafayette, IN
+    icon: fas fa-fw fa-map-marker-alt
+    url: https://www.google.com/maps/place/Purdue+University/@40.4237094,-86.9260655,17z/data=!3m1!4b1!4m6!3m5!1s0x8812fd37423e0507:0x8eccb2cf8b1a7c8e!8m2!3d40.4237054!4d-86.9211946!16zL20vMDV4XzU?entry=ttu
+  - label: Email
+    icon: fas fa-fw fa-envelope-square
+    url: mailto:li4808@purdue.edu
+  - label: Instagram
+    icon: fab fa-fw fa-instagram
+    url: https://www.instagram.com/tic_typeinchinese/
+  - label: Google Scholar
+    icon: fa fa-graduation-cap
+    url: https://scholar.google.com/citations?user=82kWgvMAAAAJ&hl=en&authuser=1
+  - label: LinkedIn
+    icon: fab fa-fw fa-linkedin
+    url: https://www.linkedin.com/in/belle-li-198a72180/
+  - label: CV
+    icon: far fa-fw fa-file-alt
+    url: https://app.box.com/s/vx3gcs4kxpwvp69nazq7376l397ncmh1
 footer:
   links:
-    - label: "West Lafayette, IN"
-      icon: "fas fa-fw fa-map-marker-alt"
-      url: "https://www.google.com/maps/place/Purdue+University/@40.4237094,-86.9260655,17z/data=!3m1!4b1!4m6!3m5!1s0x8812fd37423e0507:0x8eccb2cf8b1a7c8e!8m2!3d40.4237054!4d-86.9211946!16zL20vMDV4XzU?entry=ttu"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:li4808@purdue.edu"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/tic_typeinchinese/"
-    - label: "Google Scholar"
-      icon: "fa fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=82kWgvMAAAAJ&hl=en&authuser=1"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/belle-li-198a72180/"
-    - label: "CV"
-      icon: "far fa-fw fa-file-alt"
-      url: "https://app.box.com/s/vx3gcs4kxpwvp69nazq7376l397ncmh1"
-
-
+  - label: West Lafayette, IN
+    icon: fas fa-fw fa-map-marker-alt
+    url: https://www.google.com/maps/place/Purdue+University/@40.4237094,-86.9260655,17z/data=!3m1!4b1!4m6!3m5!1s0x8812fd37423e0507:0x8eccb2cf8b1a7c8e!8m2!3d40.4237054!4d-86.9211946!16zL20vMDV4XzU?entry=ttu
+  - label: Email
+    icon: fas fa-fw fa-envelope-square
+    url: mailto:li4808@purdue.edu
+  - label: Instagram
+    icon: fab fa-fw fa-instagram
+    url: https://www.instagram.com/tic_typeinchinese/
+  - label: Google Scholar
+    icon: fa fa-graduation-cap
+    url: https://scholar.google.com/citations?user=82kWgvMAAAAJ&hl=en&authuser=1
+  - label: LinkedIn
+    icon: fab fa-fw fa-linkedin
+    url: https://www.linkedin.com/in/belle-li-198a72180/
+  - label: CV
+    icon: far fa-fw fa-file-alt
+    url: https://app.box.com/s/vx3gcs4kxpwvp69nazq7376l397ncmh1
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-      classes: wide
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      classes: wide
-      author_profile: true
-
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: single
+    author_profile: true
+    read_time: true
+    comments: true
+    share: true
+    related: true
+    classes: wide
+    custom_js:
+      - /assets/js/lightbox.js
+- scope:
+    path: _pages
+    type: pages
+  values:
+    layout: single
+    classes: wide
+    author_profile: true
+    custom_js:
+      - /assets/js/lightbox.js
 category_archive:
   type: liquid
   path: /categories/

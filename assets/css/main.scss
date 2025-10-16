@@ -553,6 +553,68 @@
   gap: clamp(1.4rem, 3.5vw, 2.2rem);
 }
 
+.img-lightbox-target {
+  cursor: zoom-in;
+}
+
+.img-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  z-index: 9999;
+  animation: img-lightbox-fade-in 0.15s ease;
+}
+
+.img-lightbox-overlay.closing {
+  animation: img-lightbox-fade-out 0.15s ease forwards;
+}
+
+.img-lightbox-figure {
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+  max-width: min(90vw, 1100px);
+  max-height: 90vh;
+}
+
+.img-lightbox-img {
+  width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.35);
+  background: #fff;
+}
+
+.img-lightbox-caption {
+  text-align: center;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@keyframes img-lightbox-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes img-lightbox-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .pub-meta {
   margin: clamp(1rem, 3vw, 1.75rem) 0 clamp(1.5rem, 4vw, 2.5rem);
   padding: 1rem clamp(1rem, 3vw, 1.75rem);
