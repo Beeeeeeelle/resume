@@ -15,7 +15,7 @@ title: "Grants"
 
 ### NSF Collaborative Research: T3-CIDERS (2023–2027)  
 **Funder:** National Science Foundation · **Amount:** $1,000,000  
-**Role:** Research evaluation and instructional design lead – co-developing capacity-building curriculum, instrumentation, and training materials for the CI- and Data-Enabled Research in Cybersecurity initiative.  
+**Role:** Student collaborator supporting research evaluation and instructional design — co-developing capacity-building curriculum, instrumentation, and training materials for the CI- and Data-Enabled Research in Cybersecurity initiative.  
 **Collaborators:** Arizona State University (Lead), Purdue University, multiple institutional partners.
 
 ---
