@@ -369,6 +369,109 @@
   line-height: 1.45;
 }
 
+.service-grid {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin: clamp(1.5rem, 4vw, 2.5rem) 0;
+}
+
+@media (min-width: 52em) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+.service-grid--reviews {
+  align-items: stretch;
+}
+
+@media (min-width: 64em) {
+  .service-grid--reviews {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(14rem, 0.9fr);
+    gap: clamp(1.5rem, 4vw, 2.6rem);
+  }
+}
+
+.service-grid__media {
+  display: grid;
+  gap: 1rem;
+}
+
+.service-grid__media img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 1.25rem 3rem rgba(15, 23, 42, 0.12);
+  display: block;
+}
+
+.service-grid__column h4 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  color: var(--global-text-color, #2d3748);
+}
+
+.service-grid__column ul {
+  margin: 0 0 1.1rem 1.1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.service-photo-grid {
+  display: grid;
+  gap: clamp(1rem, 3vw, 1.75rem);
+  margin: clamp(1.5rem, 4vw, 2.5rem) 0;
+}
+
+@media (min-width: 48em) {
+  .service-photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.service-photo {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+  color: var(--global-muted-text-color, #4a5568);
+  height: 100%;
+}
+
+.service-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 1.25rem 3rem rgba(15, 23, 42, 0.12);
+  display: block;
+}
+
+.service-photo figcaption {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: auto;
+}
+
+.service-highlight__media {
+  flex: 0 0 clamp(16rem, 28vw, 20rem);
+}
+
+.service-highlight__media img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 1.25rem 3rem rgba(15, 23, 42, 0.12);
+  display: block;
+}
+
+.service-highlight__media--poster img {
+  object-fit: cover;
+}
+
 .methodology-pill span {
   font-size: 0.9rem;
   color: var(--global-muted-text-color, #4a5568);
