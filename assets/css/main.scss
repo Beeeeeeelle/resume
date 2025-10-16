@@ -472,6 +472,21 @@
   object-fit: cover;
 }
 
+.pub-meta {
+  margin: clamp(1rem, 3vw, 1.75rem) 0 clamp(1.5rem, 4vw, 2.5rem);
+  padding: 1rem clamp(1rem, 3vw, 1.75rem);
+  background: rgba(42, 122, 226, 0.08);
+  border-radius: 0.9rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  color: var(--global-muted-text-color, #4a5568);
+}
+
+.pub-meta strong {
+  color: var(--global-text-color, #2d3748);
+}
+
 .methodology-pill span {
   font-size: 0.9rem;
   color: var(--global-muted-text-color, #4a5568);
