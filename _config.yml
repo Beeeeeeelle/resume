@@ -77,7 +77,8 @@ defaults:
     related: true
     classes: wide
     custom_js:
-      - /assets/js/lightbox.js
+    - /assets/js/lightbox.js
+    - /assets/js/mobile-nav.js
 - scope:
     path: _pages
     type: pages
@@ -86,7 +87,8 @@ defaults:
     classes: wide
     author_profile: true
     custom_js:
-      - /assets/js/lightbox.js
+    - /assets/js/lightbox.js
+    - /assets/js/mobile-nav.js
 category_archive:
   type: liquid
   path: /categories/
