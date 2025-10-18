@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!nav || !toggle || !visible) return;
 
+  toggle.classList.remove('hidden');
+  toggle.removeAttribute('aria-hidden');
   toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
