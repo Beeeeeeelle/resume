@@ -665,6 +665,51 @@
   }
 }
 
+.greedy-nav__toggle {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .greedy-nav {
+    flex-wrap: wrap;
+  }
+
+  .greedy-nav__toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: auto;
+    border-radius: 50%;
+    border: 1px solid rgba(15, 23, 42, 0.15);
+    background: rgba(42, 122, 226, 0.1);
+    color: var(--global-link-color, #2a7ae2);
+  }
+
+  .greedy-nav .visible-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.75rem 0;
+    gap: 0.5rem;
+  }
+
+  .greedy-nav.is-open .visible-links {
+    display: flex;
+  }
+
+  .greedy-nav .visible-links li {
+    width: 100%;
+  }
+
+  .greedy-nav .visible-links li a {
+    display: block;
+    width: 100%;
+    padding: 0.65rem 0;
+  }
+}
+
 
 .research-card:target, .research-card:is(:focus, :focus-within)::before {
   content: "Linked target";
