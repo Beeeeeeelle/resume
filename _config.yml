@@ -32,9 +32,6 @@ author:
   - label: Email
     icon: fas fa-fw fa-envelope-square
     url: mailto:li4808@purdue.edu
-  - label: Instagram
-    icon: fab fa-fw fa-instagram
-    url: https://www.instagram.com/tic_typeinchinese/
   - label: Google Scholar
     icon: fa fa-graduation-cap
     url: https://scholar.google.com/citations?user=82kWgvMAAAAJ&hl=en&authuser=1
@@ -52,9 +49,6 @@ footer:
   - label: Email
     icon: fas fa-fw fa-envelope-square
     url: mailto:li4808@purdue.edu
-  - label: Instagram
-    icon: fab fa-fw fa-instagram
-    url: https://www.instagram.com/tic_typeinchinese/
   - label: Google Scholar
     icon: fa fa-graduation-cap
     url: https://scholar.google.com/citations?user=82kWgvMAAAAJ&hl=en&authuser=1

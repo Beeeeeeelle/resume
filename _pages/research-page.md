@@ -7,7 +7,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—2.png
-excerpt: "I'm passionate about how people today are learning, advanced digital technology and authoring tools, as well as various cultures. My research focuses on AI in language education, self-directed learning on YouTube, and learning experience design."
+excerpt: "I'm passionate about how people learn with and through technology. My research focuses on generative AI in education, self-directed learning, instrument development, and learner-centered design."
 feature_row2:
   - image_path: /assets/images/ezgif.com-video-to-gif.gif
     alt: "Learn Chinese Characters with Next-Gen Typing App"
@@ -18,9 +18,9 @@ feature_row2:
     btn_class: "btn--primary"
 feature_row3:
   - image_path: /assets/images/WechatIMG229.jpg
-    alt: "ChatGPT and Generative AI as a New Partner in Language Teaching and Learning"
-    title: "ChatGPT and Generative AI as a New Partner in Language Teaching and Learning"
-    excerpt: 'Since late 2022, dozens of YouTube channels focusing on a diverse array of topics related to language learning with generative AI tools such as ChatGPT have rapidly emerged. This study explores the implementations and perspectives of YouTube content creators who now constitute an increasingly important segment of the ecosystem of language teaching and learning.'
+    alt: "ChatGPT and Generative AI as a New Partner in Teaching and Learning"
+    title: "ChatGPT and Generative AI as a New Partner in Teaching and Learning"
+    excerpt: 'Since late 2022, educators and learners have rapidly integrated generative AI tools like ChatGPT into their practice. This study explores how content creators on YouTube perceive and implement these tools, surfacing key design and pedagogical implications for the broader education field.'
     url: "blog/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning/"
     btn_label: "Read More"
     btn_class: "btn--primary"
