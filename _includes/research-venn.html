@@ -1,0 +1,220 @@
+<style>
+.rv-section { margin: 40px 0 0; }
+.rv-section > h2 {
+  font-size: 20px; font-weight: 700; color: #111;
+  margin-bottom: 24px; padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+.rv-wrapper { position: relative; width: 100%; max-width: 900px; margin: 0 auto; }
+.rv-svg { width: 100%; height: auto; display: block; }
+.blob-path { mix-blend-mode: multiply; }
+.paper-tag { cursor: pointer; }
+.tag-bg { fill: rgba(255,255,255,0.78); }
+.tag-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11.5px; font-weight: 700; fill: #222;
+}
+.paper-tag:hover .tag-text { fill: #2a52a0; }
+.paper-tag:hover .tag-bg { fill: rgba(232,237,248,0.96); }
+.rv-tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px 14px;
+  max-width: 300px;
+  font-size: 13px;
+  line-height: 1.55;
+  pointer-events: none;
+  display: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  z-index: 20;
+}
+</style>
+
+<section class="rv-section">
+  <h2>Research Area</h2>
+  <div class="rv-wrapper">
+    <svg class="rv-svg" viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- ── BLOBS ─────────────────────────────── -->
+
+      <!-- A: Self-Directed Learning & AI Frameworks (blue) -->
+      <path class="blob-path"
+        d="M 280,50 C 405,40 495,118 488,228 C 481,335 410,410 280,414
+           C 150,418 64,338 60,228 C 56,108 155,60 280,50 Z"
+        fill="#b8d4f5" opacity="0.68"/>
+
+      <!-- B: GenAI in Education (rose) -->
+      <path class="blob-path"
+        d="M 572,50 C 697,40 787,118 780,228 C 773,335 702,410 572,414
+           C 442,418 356,338 352,228 C 348,108 447,60 572,50 Z"
+        fill="#f5b8c8" opacity="0.68"/>
+
+      <!-- C: Equity & Learner-Centered Design (green) -->
+      <path class="blob-path"
+        d="M 426,260 C 550,252 648,296 646,402 C 644,494 550,550 426,550
+           C 302,550 206,494 204,402 C 202,304 302,268 426,260 Z"
+        fill="#b8f0ce" opacity="0.68"/>
+
+      <!-- ── REGION LABELS ───────────────────── -->
+
+      <!-- A label (exclusive top-left) -->
+      <text x="148" y="100" text-anchor="middle"
+        font-family="Lora,serif" font-size="14" font-weight="700" fill="#1a3a6a">Self-Directed Learning</text>
+      <text x="148" y="118" text-anchor="middle"
+        font-family="Lora,serif" font-size="14" font-weight="700" fill="#1a3a6a">&amp; AI Frameworks</text>
+      <text x="148" y="139" text-anchor="middle"
+        font-family="Lora,serif" font-size="11" font-style="italic" fill="#3a5a8a">How do personal attributes</text>
+      <text x="148" y="153" text-anchor="middle"
+        font-family="Lora,serif" font-size="11" font-style="italic" fill="#3a5a8a">shape AI-integrated SDL?</text>
+
+      <!-- B label (exclusive top-right) -->
+      <text x="700" y="100" text-anchor="middle"
+        font-family="Lora,serif" font-size="14" font-weight="700" fill="#6a1a2a">GenAI in Education</text>
+      <text x="700" y="120" text-anchor="middle"
+        font-family="Lora,serif" font-size="11" font-style="italic" fill="#9a3a5a">How do learners &amp; educators</text>
+      <text x="700" y="134" text-anchor="middle"
+        font-family="Lora,serif" font-size="11" font-style="italic" fill="#9a3a5a">engage with generative AI?</text>
+
+      <!-- C label (exclusive bottom) -->
+      <text x="426" y="502" text-anchor="middle"
+        font-family="Lora,serif" font-size="14" font-weight="700" fill="#1a5a3a">Equity &amp; Learner-Centered Design</text>
+      <text x="426" y="522" text-anchor="middle"
+        font-family="Lora,serif" font-size="11" font-style="italic" fill="#2a7a4a">How can design serve diverse &amp; underrepresented learners?</text>
+
+      <!-- ── PAPER TAGS ───────────────────────── -->
+
+      <!-- A only (in A, not B, not C) -->
+      <a href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" class="paper-tag"
+         data-title="Reconceptualizing Self-Directed Learning in the Era of Generative AI"
+         data-venue="IEEE Transactions on Learning Technologies, 2024">
+        <rect x="88" y="208" width="148" height="18" rx="3" class="tag-bg"/>
+        <text x="162" y="221" text-anchor="middle" class="tag-text">[SDL·TLT·24]</text>
+      </a>
+
+      <!-- A∩B (in A and B, not C) -->
+      <a href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" class="paper-tag"
+         data-title="Development and Validation of the PA-SDA Scale: Measuring Personal Attributes in AI-Integrated Self-Directed Learning"
+         data-venue="System, 2025">
+        <rect x="333" y="108" width="174" height="18" rx="3" class="tag-bg"/>
+        <text x="420" y="121" text-anchor="middle" class="tag-text">[PA-SDA·System·25]</text>
+      </a>
+      <a href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" class="paper-tag"
+         data-title="Exploring Inventions in Self-Directed Learning with Generative AI"
+         data-venue="TechTrends, 2024">
+        <rect x="318" y="132" width="204" height="18" rx="3" class="tag-bg"/>
+        <text x="420" y="145" text-anchor="middle" class="tag-text">[SDL-GenAI·TechTrends·24]</text>
+      </a>
+      <a href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" class="paper-tag"
+         data-title="AI-Generation Literacy"
+         data-venue="Palgrave Encyclopedia of Computer-Assisted Language Learning, 2026">
+        <rect x="329" y="156" width="182" height="18" rx="3" class="tag-bg"/>
+        <text x="420" y="169" text-anchor="middle" class="tag-text">[AI-Literacy·Palgrave·26]</text>
+      </a>
+
+      <!-- B only (in B, not A, not C) -->
+      <a href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" class="paper-tag"
+         data-title="A Systematic Review of the First Year of Publications on ChatGPT and Education"
+         data-venue="Computers and Education: Artificial Intelligence, 2024">
+        <rect x="505" y="165" width="196" height="18" rx="3" class="tag-bg"/>
+        <text x="603" y="178" text-anchor="middle" class="tag-text">[ChatGPT-Review·CAEAI·24]</text>
+      </a>
+      <a href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" class="paper-tag"
+         data-title="Two Years of Innovation: A Systematic Review of Empirical GenAI Research in Learning and Teaching"
+         data-venue="Computers and Education: Artificial Intelligence, 2025">
+        <rect x="510" y="190" width="186" height="18" rx="3" class="tag-bg"/>
+        <text x="603" y="203" text-anchor="middle" class="tag-text">[2yr-GenAI·CAEAI·25]</text>
+      </a>
+      <a href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" class="paper-tag"
+         data-title="Getting Viral on Social Media: Exploring EduTubers' Perceptions and Practices"
+         data-venue="Innovation in Language Learning and Teaching, 2025">
+        <rect x="514" y="215" width="178" height="18" rx="3" class="tag-bg"/>
+        <text x="603" y="228" text-anchor="middle" class="tag-text">[EduTubers·ILLT·25]</text>
+      </a>
+      <a href="https://doi.org/10.1080/17501229.2025.2598587" target="_blank" class="paper-tag"
+         data-title="Beyond Scores: A Systematic Review of Game-Based Learning Outcomes (2010–2025)"
+         data-venue="Innovation in Language Learning and Teaching, 2025">
+        <rect x="514" y="240" width="178" height="18" rx="3" class="tag-bg"/>
+        <text x="603" y="253" text-anchor="middle" class="tag-text">[GBLL-Review·ILLT·25]</text>
+      </a>
+
+      <!-- A∩C (in A and C, not B) -->
+      <a href="https://doi.org/10.24059/olj.v27i4.4003" target="_blank" class="paper-tag"
+         data-title="Culturally- and Linguistically-Responsive Online Teacher Professional Development"
+         data-venue="Online Learning Journal, 2023">
+        <rect x="114" y="342" width="202" height="18" rx="3" class="tag-bg"/>
+        <text x="215" y="355" text-anchor="middle" class="tag-text">[TeacherPD·OLJ·23]</text>
+      </a>
+
+      <!-- B∩C (in B and C, not A) -->
+      <a href="https://doi.org/10.1111/bjet.13588" target="_blank" class="paper-tag"
+         data-title="Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy and Performance"
+         data-venue="British Journal of Educational Technology, 2025">
+        <rect x="494" y="295" width="174" height="18" rx="3" class="tag-bg"/>
+        <text x="581" y="308" text-anchor="middle" class="tag-text">[NonTrad·BJET·25]</text>
+      </a>
+      <a href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" class="paper-tag"
+         data-title="An Early Investigation of Collaborative Problem Solving in Conversational AI-Mediated Learning Environments"
+         data-venue="Computers and Education: Artificial Intelligence, 2025">
+        <rect x="497" y="320" width="168" height="18" rx="3" class="tag-bg"/>
+        <text x="581" y="333" text-anchor="middle" class="tag-text">[CPS·CAEAI·25]</text>
+      </a>
+      <a href="https://doi.org/10.3390/languages8040238" target="_blank" class="paper-tag"
+         data-title="Empowering Students from Low-Income Families to Improve Writing with ChatGPT"
+         data-venue="Languages, 2023">
+        <rect x="491" y="345" width="180" height="18" rx="3" class="tag-bg"/>
+        <text x="581" y="358" text-anchor="middle" class="tag-text">[LowIncome·Languages·23]</text>
+      </a>
+
+      <!-- C only -->
+      <a href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" class="paper-tag"
+         data-title="Implementing Design Thinking: A Mobile Application for Diverse Learners"
+         data-venue="Transdisciplinary Learning Experience Design, Springer 2024">
+        <rect x="220" y="464" width="180" height="18" rx="3" class="tag-bg"/>
+        <text x="310" y="477" text-anchor="middle" class="tag-text">[TicApp·Springer·24]</text>
+      </a>
+
+      <!-- A∩B∩C center: dissertation -->
+      <rect x="356" y="308" width="128" height="52" rx="5"
+        fill="white" fill-opacity="0.60"/>
+      <text x="420" y="324" text-anchor="middle"
+        font-family="Lora,serif" font-size="10.5" font-style="italic" fill="#333">Dissertation</text>
+      <text x="420" y="339" text-anchor="middle"
+        font-family="Inter,sans-serif" font-size="9" fill="#666">Global Learners &amp; GenAI</text>
+      <text x="420" y="352" text-anchor="middle"
+        font-family="Inter,sans-serif" font-size="9" fill="#666">Longitudinal Mixed-Methods</text>
+
+    </svg>
+    <div class="rv-tooltip" id="rv-tooltip"></div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var tip = document.getElementById('rv-tooltip');
+  var wrap = document.querySelector('.rv-wrapper');
+  if (!tip || !wrap) return;
+  document.querySelectorAll('.paper-tag').forEach(function (el) {
+    el.addEventListener('mouseenter', function () {
+      var t = el.getAttribute('data-title');
+      var v = el.getAttribute('data-venue');
+      if (!t) return;
+      tip.innerHTML = '<strong>' + t + '</strong><br><span style="color:#888;font-size:11.5px">' + v + '</span>';
+      tip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', function (e) {
+      var r = wrap.getBoundingClientRect();
+      var x = e.clientX - r.left + 14;
+      var y = e.clientY - r.top + 14;
+      if (x + 315 > r.width) x = e.clientX - r.left - 322;
+      if (y + 90 > r.height) y = e.clientY - r.top - 98;
+      tip.style.left = x + 'px';
+      tip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', function () {
+      tip.style.display = 'none';
+    });
+  });
+}());
+</script>
