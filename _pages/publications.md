@@ -4,7 +4,7 @@ title: "Publications"
 ---
 
 <div class="pub-meta">
-  <p><strong>Citations:</strong> 425 · <strong>h-index:</strong> 7 (Google Scholar, Oct 2025)</p>
+  <p><strong>Citations:</strong> 641+ · <strong>h-index:</strong> 12 · <strong>First-author papers:</strong> 13 (Google Scholar, 2026)</p>
 </div>
 
 ## Peer-Reviewed Journal Articles

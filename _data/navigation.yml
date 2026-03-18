@@ -1,16 +1,17 @@
 main:
   - title: "Research"
     url: /research/
-    children:
-      - title: "Publications"
-        url: /publications/
-      - title: "Grants"
-        url: /grants/
-  # - title: "Presentations"
-  #   url: /presentations/
-  - title: "Service"
-    url: /service/
+  - title: "Publications"
+    url: /publications/
   - title: "Teaching"
     url: /teaching/
-  - title: "Learning & Development"
-    url: /learning/
+  - title: "Service"
+    url: /service/
+  # - title: "CV"
+  #   url: /assets/Belle_Li_CV.pdf
+  # - title: "Grants"
+  #   url: /grants/
+  # - title: "Presentations"
+  #   url: /presentations/
+  # - title: "Learning & Development"
+  #   url: /learning/

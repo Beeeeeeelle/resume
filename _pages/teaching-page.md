@@ -4,7 +4,7 @@ title: "Teaching & Mentoring"
 ---
 ## Teaching Philosophy
 
-My teaching centers on authentic, inclusive learning design. Whether I am working with doctoral students in instructional design or heritage learners of Chinese, I focus on helping learners build agency, reflect on their identities, and transfer knowledge into complex, real-world contexts. I integrate artificial intelligence, extended reality (XR), and learning analytics to scaffold self-directed learning, while grounding every course in culturally responsive pedagogy, formative assessment, and community building.
+My teaching centers on authentic, inclusive learning design. Whether I am working with doctoral students in instructional design or learners from diverse linguistic and cultural backgrounds, I focus on helping learners build agency, reflect on their identities, and transfer knowledge into complex, real-world contexts. I integrate artificial intelligence, extended reality (XR), and learning analytics to scaffold self-directed learning, while grounding every course in culturally responsive pedagogy, formative assessment, and community building.
 
 ---
 
