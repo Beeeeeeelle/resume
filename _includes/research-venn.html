@@ -2,13 +2,45 @@
 .rv-section { margin: 40px 0 0; }
 .rv-wrapper { position: relative; width: 100%; max-width: 900px; margin: 0 auto; }
 .rv-svg { width: 100%; height: auto; display: block; }
-.blob-path { mix-blend-mode: multiply; }
-.paper-tag { cursor: pointer; }
+
+/* ── Blob scale on zone hover ── */
+.blob-g {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.45s cubic-bezier(0.34,1.40,0.64,1);
+}
+[data-hover="a"] .blob-g.blob-a { transform: scale(1.08); }
+[data-hover="b"] .blob-g.blob-b { transform: scale(1.08); }
+[data-hover="c"] .blob-g.blob-c { transform: scale(1.08); }
+
+/* ── Research questions (hidden → visible on hover) ── */
+.zone-rq {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.05s;
+  pointer-events: none;
+}
+[data-hover="a"] .zone-rq-a { opacity: 1; }
+[data-hover="b"] .zone-rq-b { opacity: 1; }
+[data-hover="c"] .zone-rq-c { opacity: 1; }
+
+/* ── Zone label dimming (non-hovered zones) ── */
+.rv-label {
+  transition: opacity 0.3s ease;
+}
+[data-hover="a"] .rv-label:not(.rv-label-a),
+[data-hover="b"] .rv-label:not(.rv-label-b),
+[data-hover="c"] .rv-label:not(.rv-label-c) {
+  opacity: 0.35;
+}
 
 /* ── Base tag style ── */
+.paper-tag {
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
 .tag-bg {
   fill: rgba(255,255,255,0.82);
-  stroke: rgba(180,180,180,0.45);
+  stroke: rgba(180,180,180,0.40);
   stroke-width: 0.8;
 }
 .tag-text {
@@ -18,30 +50,50 @@
   fill: #333;
 }
 
-/* ── Zone-tinted tags ── */
-.tag-a  .tag-bg { fill: rgba(80,130,220,0.14); stroke: rgba(80,130,220,0.50); }
-.tag-a  .tag-text { fill: #1a428a; }
-.tag-a:hover .tag-bg { fill: rgba(80,130,220,0.28); }
+/* ── Zone-tinted tags (muted palette) ── */
+.tag-a  .tag-bg { fill: rgba(123,156,200,0.15); stroke: rgba(123,156,200,0.55); }
+.tag-a  .tag-text { fill: #2c4a6e; }
+.tag-a:hover .tag-bg { fill: rgba(123,156,200,0.28); }
 
-.tag-b  .tag-bg { fill: rgba(205,70,100,0.13); stroke: rgba(205,70,100,0.45); }
-.tag-b  .tag-text { fill: #861830; }
-.tag-b:hover .tag-bg { fill: rgba(205,70,100,0.27); }
+.tag-b  .tag-bg { fill: rgba(200,134,142,0.14); stroke: rgba(200,134,142,0.55); }
+.tag-b  .tag-text { fill: #6e2c38; }
+.tag-b:hover .tag-bg { fill: rgba(200,134,142,0.28); }
 
-.tag-c  .tag-bg { fill: rgba(45,155,85,0.13); stroke: rgba(45,155,85,0.45); }
-.tag-c  .tag-text { fill: #1a5428; }
-.tag-c:hover .tag-bg { fill: rgba(45,155,85,0.27); }
+.tag-c  .tag-bg { fill: rgba(130,184,150,0.14); stroke: rgba(130,184,150,0.55); }
+.tag-c  .tag-text { fill: #2a5a3a; }
+.tag-c:hover .tag-bg { fill: rgba(130,184,150,0.28); }
 
-.tag-ab .tag-bg { fill: rgba(135,85,210,0.13); stroke: rgba(135,85,210,0.45); }
-.tag-ab .tag-text { fill: #521880; }
-.tag-ab:hover .tag-bg { fill: rgba(135,85,210,0.27); }
+.tag-ab .tag-bg { fill: rgba(165,115,180,0.14); stroke: rgba(165,115,180,0.50); }
+.tag-ab .tag-text { fill: #522866; }
+.tag-ab:hover .tag-bg { fill: rgba(165,115,180,0.28); }
 
-.tag-ac .tag-bg { fill: rgba(40,148,158,0.13); stroke: rgba(40,148,158,0.45); }
-.tag-ac .tag-text { fill: #1a545a; }
-.tag-ac:hover .tag-bg { fill: rgba(40,148,158,0.27); }
+.tag-ac .tag-bg { fill: rgba(105,165,160,0.14); stroke: rgba(105,165,160,0.50); }
+.tag-ac .tag-text { fill: #1e5050; }
+.tag-ac:hover .tag-bg { fill: rgba(105,165,160,0.28); }
 
-.tag-bc .tag-bg { fill: rgba(198,118,48,0.13); stroke: rgba(198,118,48,0.45); }
-.tag-bc .tag-text { fill: #703810; }
-.tag-bc:hover .tag-bg { fill: rgba(198,118,48,0.27); }
+.tag-bc .tag-bg { fill: rgba(185,150,90,0.14); stroke: rgba(185,150,90,0.50); }
+.tag-bc .tag-text { fill: #5a3a0a; }
+.tag-bc:hover .tag-bg { fill: rgba(185,150,90,0.28); }
+
+/* ── Tags float on zone hover ── */
+[data-hover="a"] .tag-a,
+[data-hover="a"] .tag-ab,
+[data-hover="a"] .tag-ac {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.14));
+}
+[data-hover="b"] .tag-b,
+[data-hover="b"] .tag-ab,
+[data-hover="b"] .tag-bc {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.14));
+}
+[data-hover="c"] .tag-c,
+[data-hover="c"] .tag-ac,
+[data-hover="c"] .tag-bc {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.14));
+}
 
 /* ── Tooltip ── */
 .rv-tooltip {
@@ -62,46 +114,75 @@
 
 <section class="rv-section">
   <div class="rv-wrapper">
-    <svg class="rv-svg" viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg">
+    <svg class="rv-svg" viewBox="0 0 900 580" id="rv-svg" xmlns="http://www.w3.org/2000/svg">
 
-      <!-- ── BLOBS ─────────────────────────────── -->
+      <defs>
+        <!-- Gradient A: muted slate-blue (from Option C palette) -->
+        <radialGradient id="rg-a" cx="42%" cy="40%" r="60%" gradientUnits="objectBoundingBox">
+          <stop offset="0%"   stop-color="#7B9CC8" stop-opacity="0.82"/>
+          <stop offset="100%" stop-color="#7B9CC8" stop-opacity="0.08"/>
+        </radialGradient>
+        <!-- Gradient B: dusty rose -->
+        <radialGradient id="rg-b" cx="58%" cy="40%" r="60%" gradientUnits="objectBoundingBox">
+          <stop offset="0%"   stop-color="#C8868E" stop-opacity="0.80"/>
+          <stop offset="100%" stop-color="#C8868E" stop-opacity="0.08"/>
+        </radialGradient>
+        <!-- Gradient C: sage green -->
+        <radialGradient id="rg-c" cx="50%" cy="42%" r="60%" gradientUnits="objectBoundingBox">
+          <stop offset="0%"   stop-color="#82B896" stop-opacity="0.78"/>
+          <stop offset="100%" stop-color="#82B896" stop-opacity="0.08"/>
+        </radialGradient>
+      </defs>
 
-      <!-- A: Self-Directed Learning & AI Frameworks (blue) -->
-      <path class="blob-path"
-        d="M 280,50 C 405,40 495,118 488,228 C 481,335 410,410 280,414
-           C 150,418 64,338 60,228 C 56,108 155,60 280,50 Z"
-        fill="#b8d4f5" opacity="0.68"/>
+      <!-- ── BLOBS (gradient, each in own <g> for scale transform) ── -->
+      <g class="blob-g blob-a">
+        <path style="mix-blend-mode:multiply"
+          d="M 280,50 C 405,40 495,118 488,228 C 481,335 410,410 280,414
+             C 150,418 64,338 60,228 C 56,108 155,60 280,50 Z"
+          fill="url(#rg-a)"/>
+      </g>
+      <g class="blob-g blob-b">
+        <path style="mix-blend-mode:multiply"
+          d="M 572,50 C 697,40 787,118 780,228 C 773,335 702,410 572,414
+             C 442,418 356,338 352,228 C 348,108 447,60 572,50 Z"
+          fill="url(#rg-b)"/>
+      </g>
+      <g class="blob-g blob-c">
+        <path style="mix-blend-mode:multiply"
+          d="M 426,260 C 550,252 648,296 646,402 C 644,494 550,550 426,550
+             C 302,550 206,494 204,402 C 202,304 302,268 426,260 Z"
+          fill="url(#rg-c)"/>
+      </g>
 
-      <!-- B: GenAI in Education (rose) -->
-      <path class="blob-path"
-        d="M 572,50 C 697,40 787,118 780,228 C 773,335 702,410 572,414
-           C 442,418 356,338 352,228 C 348,108 447,60 572,50 Z"
-        fill="#f5b8c8" opacity="0.68"/>
+      <!-- ── ZONE LABELS ── -->
+      <text class="rv-label rv-label-a" x="148" y="100" text-anchor="middle"
+        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#2c4a6e">Self-Directed Learning</text>
+      <text class="rv-label rv-label-a" x="148" y="118" text-anchor="middle"
+        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#2c4a6e">&amp; AI Frameworks</text>
 
-      <!-- C: Equity & Learner-Centered Design (green) -->
-      <path class="blob-path"
-        d="M 426,260 C 550,252 648,296 646,402 C 644,494 550,550 426,550
-           C 302,550 206,494 204,402 C 202,304 302,268 426,260 Z"
-        fill="#b8f0ce" opacity="0.68"/>
+      <text class="rv-label rv-label-b" x="704" y="100" text-anchor="middle"
+        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#6e2c38">GenAI in Education</text>
 
-      <!-- ── REGION LABELS ───────────────────── -->
+      <text class="rv-label rv-label-c" x="426" y="504" text-anchor="middle"
+        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#2a5a3a">Equity &amp; Learner-Centered Design</text>
 
-      <!-- A label -->
-      <text x="148" y="102" text-anchor="middle"
-        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#1a3a6a">Self-Directed Learning</text>
-      <text x="148" y="120" text-anchor="middle"
-        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#1a3a6a">&amp; AI Frameworks</text>
+      <!-- ── RESEARCH QUESTIONS (appear on zone hover) ── -->
+      <text class="zone-rq zone-rq-a" x="148" y="162" text-anchor="middle"
+        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#2c4a6e">How do learners self-direct their</text>
+      <text class="zone-rq zone-rq-a" x="148" y="180" text-anchor="middle"
+        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#2c4a6e">learning journeys with AI tools?</text>
 
-      <!-- B label -->
-      <text x="704" y="102" text-anchor="middle"
-        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#6a1a2a">GenAI in Education</text>
+      <text class="zone-rq zone-rq-b" x="710" y="152" text-anchor="middle"
+        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#6e2c38">How is GenAI reshaping</text>
+      <text class="zone-rq zone-rq-b" x="710" y="170" text-anchor="middle"
+        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#6e2c38">language teaching practice?</text>
 
-      <!-- C label -->
-      <text x="426" y="506" text-anchor="middle"
-        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#1a5a3a">Equity &amp; Learner-Centered Design</text>
+      <text class="zone-rq zone-rq-c" x="316" y="476" text-anchor="middle"
+        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#2a5a3a">How do we design equitable</text>
+      <text class="zone-rq zone-rq-c" x="316" y="493" text-anchor="middle"
+        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#2a5a3a">experiences for all learners?</text>
 
-      <!-- ── PAPER TAGS ──────────────────────────────────────────── -->
-      <!-- rx=11 pill shape · font: system-ui · zone-tinted bg colors -->
+      <!-- ── PAPER TAGS ── -->
 
       <!-- ─ A only ─ -->
       <a href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" class="paper-tag tag-a"
@@ -196,13 +277,24 @@
       <!-- ─ A∩B∩C center: dissertation ─ -->
       <rect x="350" y="298" width="140" height="62" rx="10"
         fill="white" fill-opacity="0.72"
-        stroke="#bbb" stroke-width="1"/>
+        stroke="#c8c0b4" stroke-width="1"/>
       <text x="420" y="317" text-anchor="middle"
         font-family="Lora,serif" font-size="11" font-style="italic" fill="#444">Dissertation</text>
       <text x="420" y="333" text-anchor="middle"
         font-family="system-ui,sans-serif" font-size="9.5" fill="#555">Global Learners &amp; GenAI</text>
       <text x="420" y="348" text-anchor="middle"
         font-family="system-ui,sans-serif" font-size="9.5" fill="#555">Longitudinal Mixed-Methods</text>
+
+      <!-- ── INVISIBLE HIT ZONES (on top, for zone hover detection) ── -->
+      <!-- Zone C hit area (bottom, placed first so A and B override intersections) -->
+      <rect class="rv-hit" data-zone="c" fill="transparent" cursor="default"
+            x="204" y="400" width="440" height="150"/>
+      <!-- Zone A hit area (left) -->
+      <rect class="rv-hit" data-zone="a" fill="transparent" cursor="default"
+            x="50"  y="50"  width="280" height="370"/>
+      <!-- Zone B hit area (right) -->
+      <rect class="rv-hit" data-zone="b" fill="transparent" cursor="default"
+            x="520" y="50"  width="280" height="370"/>
 
     </svg>
     <div class="rv-tooltip" id="rv-tooltip"></div>
@@ -211,8 +303,22 @@
 
 <script>
 (function () {
-  var tip = document.getElementById('rv-tooltip');
+  var svg  = document.getElementById('rv-svg');
+  var tip  = document.getElementById('rv-tooltip');
   var wrap = document.querySelector('.rv-wrapper');
+  if (!svg) return;
+
+  /* ── Zone hover ── */
+  document.querySelectorAll('.rv-hit').forEach(function (el) {
+    el.addEventListener('mouseenter', function () {
+      svg.setAttribute('data-hover', el.getAttribute('data-zone'));
+    });
+    el.addEventListener('mouseleave', function () {
+      svg.removeAttribute('data-hover');
+    });
+  });
+
+  /* ── Paper tag tooltip ── */
   if (!tip || !wrap) return;
   document.querySelectorAll('.paper-tag').forEach(function (el) {
     el.addEventListener('mouseenter', function () {
@@ -225,11 +331,11 @@
     el.addEventListener('mousemove', function (e) {
       var r = wrap.getBoundingClientRect();
       var x = e.clientX - r.left + 14;
-      var y = e.clientY - r.top + 14;
-      if (x + 315 > r.width) x = e.clientX - r.left - 322;
-      if (y + 90 > r.height) y = e.clientY - r.top - 98;
+      var y = e.clientY - r.top  + 14;
+      if (x + 315 > r.width)  x = e.clientX - r.left - 322;
+      if (y + 90  > r.height) y = e.clientY - r.top  - 98;
       tip.style.left = x + 'px';
-      tip.style.top = y + 'px';
+      tip.style.top  = y + 'px';
     });
     el.addEventListener('mouseleave', function () {
       tip.style.display = 'none';
