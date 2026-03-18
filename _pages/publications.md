@@ -24,11 +24,11 @@ title: "Publications"
 }
 .pub-first-note span {
   display: inline-block;
-  width: 9px;
-  height: 9px;
-  background: #e05a2b;
-  border-radius: 50%;
-  margin-right: 4px;
+  width: 2.5px;
+  height: 13px;
+  background: rgba(224,90,43,0.52);
+  border-radius: 1px;
+  margin-right: 8px;
   vertical-align: middle;
 }
 .pub-year {
@@ -101,23 +101,27 @@ title: "Publications"
 /* ── Plain list entry (no thumbnail) ── */
 .pub-entry {
   display: flex;
-  gap: 10px;
+  gap: 0;
   margin-bottom: 16px;
   align-items: flex-start;
 }
+/* Dot element is now invisible — just used as CSS hook for sibling selector */
 .pub-entry__dot {
+  width: 0;
   flex-shrink: 0;
-  width: 9px;
-  height: 9px;
-  background: #e05a2b;
-  border-radius: 50%;
-  margin-top: 6px;
 }
 .pub-entry__dot--empty {
-  width: 9px;
-  height: 9px;
+  width: 0;
   flex-shrink: 0;
-  margin-top: 6px;
+}
+/* First / corresponding author: subtle left accent line */
+.pub-entry__dot + .pub-entry__body {
+  border-left: 2.5px solid rgba(224,90,43,0.42);
+  padding-left: 12px;
+}
+/* Co-authored: matching indent, no border */
+.pub-entry__dot--empty + .pub-entry__body {
+  padding-left: 14.5px;
 }
 .pub-entry__body {
   font-size: 14px;
