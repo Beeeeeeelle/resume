@@ -1,6 +1,6 @@
 ---
 permalink: /learning/
-title: "Learning & Development"
+title: "Design & Development"
 ---
 
 Learning and development work is where I build, test, and refine inclusive learning ecosystems. Below is a curated portfolio of recent design, facilitation, and evaluation projects. Every artifact is drawn from multi-phase initiatives described in my CV and grant proposals; please reach out if you would like deeper documentation or assets.
