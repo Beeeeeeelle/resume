@@ -40,7 +40,7 @@ author:
     url: https://www.linkedin.com/in/belle-li-198a72180/
   - label: CV
     icon: far fa-fw fa-file-alt
-    url: https://app.box.com/s/kznt93wqhrjds70erwqu8d9rohy7m50z
+    url: https://app.box.com/s/ao2hzfhxe97p9vgzv6lvahm6794xd0vx
 footer:
   links:
   - label: West Lafayette, IN
@@ -57,7 +57,7 @@ footer:
     url: https://www.linkedin.com/in/belle-li-198a72180/
   - label: CV
     icon: far fa-fw fa-file-alt
-    url: https://app.box.com/s/kznt93wqhrjds70erwqu8d9rohy7m50z
+    url: https://app.box.com/s/ao2hzfhxe97p9vgzv6lvahm6794xd0vx
 defaults:
 - scope:
     path: ''

@@ -278,6 +278,7 @@ title: "Publications"
 .v-edusci  { background: #607060; }
 .v-jche    { background: #905050; }
 .v-book    { background: #4a3a20; }
+.v-ijaied  { background: #3a7a60; }
 
 /* Legend */
 .ptl-legend {
@@ -355,6 +356,8 @@ title: "Publications"
       <a class="ptl-pub v-system" href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" data-tip="Li et al. (2025) · PA-SDA Scale development & validation · System">Sy</a>
       <a class="ptl-pub v-caeai"  href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" data-tip="Li et al. (2025) · Two years of GenAI in education: Systematic review · CAEAI">CA</a>
       <a class="ptl-pub v-illt"   href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" data-tip="Li & Hikmatilla (2025) · EduTubers on social media · ILLT">IL</a>
+      <a class="ptl-pub v-illt"   href="https://doi.org/10.1080/17501229.2025.2598587" target="_blank" data-tip="Li, Luo, Bahari et al. (2025) · GBLL outcomes systematic review · ILLT">IL</a>
+      <span class="ptl-pub v-ijaied" data-tip="Li, Exter, Feng et al. (Accepted) · Language educators & GenAI: Systematic review · IJAIED">IJ</span>
     </div>
     <div class="ptl-cell ptl-cell--first">
       <a class="ptl-pub v-book" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" data-tip="Li & Lowell (2026) · AI-generation literacy · Palgrave Encyclopedia of CALL">Pa</a>
@@ -394,6 +397,7 @@ title: "Publications"
     <div class="ptl-legend-item"><div class="ptl-legend-dot v-springer"></div>Springer</div>
     <div class="ptl-legend-item"><div class="ptl-legend-dot v-edusci"></div>Edu. Sciences</div>
     <div class="ptl-legend-item"><div class="ptl-legend-dot v-book"></div>Book / Chapter</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-ijaied"></div>IJAIED</div>
   </div>
 </div>
 
@@ -422,6 +426,14 @@ title: "Publications"
 
 <div class="pub-year">2025</div>
 
+<!-- IJAIED Accepted — plain list -->
+<div class="pub-entry">
+  <span class="pub-entry__dot"></span>
+  <div class="pub-entry__body">
+    <strong>Li, B.</strong>, Exter, M., Feng, W., Tang, G., &amp; Xu, K. (Accepted). A systematic review of language educators' practices and development with GenAI. <em>International Journal of Artificial Intelligence in Education</em>. <span class="pub-status">Accepted</span>
+  </div>
+</div>
+
 <!-- PA-SDA Scale — with thumbnail -->
 <div class="bl-pcard">
   <img class="bl-pcard__thumb" src="/assets/images/publications/PA-SDA Scale.png" alt="PA-SDA Scale validation figure">
@@ -439,7 +451,7 @@ title: "Publications"
 <div class="bl-pcard">
   <img class="bl-pcard__thumb" src="/assets/images/publications/CAEAI 2025_1.png" alt="Two years of generative AI research systematic review">
   <div class="bl-pcard__body">
-    <div class="bl-pcard__title">Two Years of Innovation: A Systematic Review of Empirical Generative AI Research in Education</div>
+    <div class="bl-pcard__title">Two Years of Innovation: A Systematic Review of Empirical Generative AI Research in Language Learning and Teaching</div>
     <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Tan, L. Y., Wang, C., &amp; Lowell, V.</div>
     <div class="bl-pcard__venue">Computers &amp; Education: Artificial Intelligence, 9, 100445 · 2025</div>
     <div class="pub-tags">
@@ -478,7 +490,20 @@ title: "Publications"
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    <strong>Yang, M.</strong>, Luo, T., Herman, K., <strong>Li, B.</strong>, Jiang, S., &amp; Kim, J. (In press). Examining non-traditional online learners' ownership of learning in the context of ChatGPT-facilitated design. <em>Journal of Computing in Higher Education</em>.
+    <strong>Yang, M.</strong>, Luo, T., Herman, K., <strong>Li, B.</strong>, Jiang, S., &amp; Kim, J. (2025). Examining non-traditional online learners' ownership of learning in the context of ChatGPT-facilitated design. <em>Journal of Computing in Higher Education</em>.
+    <div class="pub-tags">
+      <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/s12528-025-09476-y" target="_blank" rel="noopener">DOI</a>
+    </div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <span class="pub-entry__dot"></span>
+  <div class="pub-entry__body">
+    <strong>Li, B.</strong>, Luo, T., Bahari, A., Yang, M., &amp; Chan, W. S. (2025). Beyond scores: A systematic review of learning and psychological outcomes of digital game-based language learning (2010–2025). <em>Innovation in Language Learning and Teaching</em>, 1–37.
+    <div class="pub-tags">
+      <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1080/17501229.2025.2598587" target="_blank" rel="noopener">DOI</a>
+    </div>
   </div>
 </div>
 
@@ -515,7 +540,7 @@ title: "Publications"
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Lovett, N., <strong>Li, B.</strong>, Yang, M., Herman, K., Sosonkina, M., Purwanto, W., Jiang, P., &amp; Wu, M. H. (2025). Leveraging large language models to create learner personas for training design. <em>Journal of Applied Instructional Design, 14</em>(3).
+    Lovett, N., Yang, M., Herman, K., <strong>Li, B.</strong>, Sosonkina, M., Purwanto, W., Jiang, P., &amp; Wu, M. H. (2025). Leveraging large language models to create learner personas for training design. <em>Journal of Applied Instructional Design, 14</em>(3).
     <div class="pub-tags">
       <a class="pub-tag pub-tag--web" href="https://jaid.edtechbooks.org/jaid_14_3/fkuqikevdr" target="_blank" rel="noopener">Web</a>
     </div>
@@ -699,7 +724,28 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
+    <strong>Li, B.</strong> Learning in the loop: Moments, mindsets, and meaning with generative AI. <em>Computers &amp; Education</em>. <span class="pub-status">Under review</span>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-entry__dot--empty"></div>
+  <div class="pub-entry__body">
+    <strong>Yang, M.</strong>, Harbor, J., <strong>Li, B.</strong>, &amp; Nikiema, J. Infusing authenticity into a service-learning program. <em>Education + Training</em>. <span class="pub-status">Major revision</span>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <span class="pub-entry__dot"></span>
+  <div class="pub-entry__body">
     Mao, Y., &amp; <strong>Li, B.</strong> Choosing the future of learning: Assessing preferences for educational GPTs through a discrete choice experiment. <em>International Journal of Artificial Intelligence in Education</em>. <span class="pub-status">Under review</span>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <span class="pub-entry__dot"></span>
+  <div class="pub-entry__body">
+    Li, X., Zhang, Y., &amp; <strong>Li, B.</strong> The emotional equation: Affective factors shaping AI-assisted ESL writing. <em>Education and Information Technologies</em>. <span class="pub-status">Under review</span>
   </div>
 </div>
 
@@ -717,17 +763,11 @@ title: "Publications"
   </div>
 </div>
 
-<div class="pub-entry">
-  <span class="pub-entry__dot"></span>
-  <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Exter, M., Tang, G., Xu, K., &amp; Feng, W. A systematic review of language educators' perspectives, practices, and professional development in the GenAI era. <em>International Journal of Artificial Intelligence in Education</em>. <span class="pub-status">Major revision</span>
-  </div>
-</div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Ye, J., Yang, X., <strong>Li, B.</strong>, Nong, W., &amp; Wang, L. Factors associated with AI-assisted learning satisfaction and acceptance among vocational college students. <em>European Journal of Education</em>. <span class="pub-status">Under review</span>
+    Ye, J., Yang, X., <strong>Li, B.</strong>, Nong, W., &amp; Wang, L. Factors associated with AI-assisted learning satisfaction and acceptance among vocational college students. <em>International Journal of Information and Education Technology</em>. <span class="pub-status">In press</span>
   </div>
 </div>
 
