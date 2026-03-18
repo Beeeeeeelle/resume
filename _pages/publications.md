@@ -4,33 +4,6 @@ title: "Publications"
 ---
 
 <style>
-/* ── Metrics bar ── */
-.pub-metrics {
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  padding: 18px 0 28px;
-  margin-bottom: 36px;
-}
-.pub-metric {
-  text-align: center;
-}
-.pub-metric__number {
-  display: block;
-  font-size: 28px;
-  font-weight: 800;
-  color: #2a52a0;
-  line-height: 1;
-}
-.pub-metric__label {
-  display: block;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: #888;
-  margin-top: 4px;
-}
-
 /* ── Section headings ── */
 .pub-section {
   margin-bottom: 48px;
@@ -184,6 +157,82 @@ title: "Publications"
   color: #999;
   margin-left: 6px;
 }
+
+/* ── Multi-image slideshow ── */
+.bl-pcard__slides {
+  flex: 0 0 180px;
+  width: 180px;
+  max-width: 180px;
+  position: relative;
+}
+.bl-pcard__slide { display: none; }
+.bl-pcard__slide.active { display: block; }
+.bl-pcard__slide img {
+  width: 180px;
+  border-radius: 5px;
+  object-fit: contain;
+  border: 1px solid #e8e8e8;
+  display: block;
+  background: #fafafa;
+  cursor: zoom-in;
+  max-height: 220px;
+}
+.bl-pcard__thumb { cursor: zoom-in; }
+.bl-pslide-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 6px;
+}
+.bl-pslide-btn {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 20px; height: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0; flex-shrink: 0; line-height: 1;
+}
+.bl-pslide-btn:hover { background: #f0f0f0; border-color: #aaa; }
+.bl-pslide-dots { display: flex; gap: 4px; align-items: center; }
+.bl-pslide-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.bl-pslide-dot.active { background: #2a52a0; }
+
+/* ── Lightbox ── */
+.bl-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.bl-lightbox.open { display: flex; }
+.bl-lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+.bl-lightbox__close {
+  position: absolute;
+  top: 16px; right: 22px;
+  color: #fff; font-size: 30px;
+  cursor: pointer; line-height: 1; opacity: 0.7;
+}
+.bl-lightbox__close:hover { opacity: 1; }
 </style>
 
 <!-- ── TIMELINE ── -->
@@ -401,21 +450,6 @@ title: "Publications"
   </div>
 </div>
 
-<!-- ── METRICS ── -->
-<div class="pub-metrics">
-  <div class="pub-metric">
-    <span class="pub-metric__number">641+</span>
-    <span class="pub-metric__label">Citations</span>
-  </div>
-  <div class="pub-metric">
-    <span class="pub-metric__number">12</span>
-    <span class="pub-metric__label">h-index</span>
-  </div>
-  <div class="pub-metric">
-    <span class="pub-metric__number">13</span>
-    <span class="pub-metric__label">First-author papers</span>
-  </div>
-</div>
 
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--  PEER-REVIEWED JOURNAL ARTICLES                          -->
@@ -447,9 +481,17 @@ title: "Publications"
   </div>
 </div>
 
-<!-- Two years of innovation — with thumbnail -->
+<!-- Two years of innovation — carousel -->
 <div class="bl-pcard">
-  <img class="bl-pcard__thumb" src="/assets/images/publications/CAEAI 2025_1.png" alt="Two years of generative AI research systematic review">
+  <div class="bl-pcard__slides">
+    <div class="bl-pcard__slide active"><img src="/assets/images/publications/CAEAI 2025_1.png" alt="Two Years – figure 1"></div>
+    <div class="bl-pcard__slide"><img src="/assets/images/publications/CAEAI 2025_2.png" alt="Two Years – figure 2"></div>
+    <div class="bl-pslide-nav">
+      <button class="bl-pslide-btn bl-pslide-prev">‹</button>
+      <div class="bl-pslide-dots"><span class="bl-pslide-dot active"></span><span class="bl-pslide-dot"></span></div>
+      <button class="bl-pslide-btn bl-pslide-next">›</button>
+    </div>
+  </div>
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">Two Years of Innovation: A Systematic Review of Empirical Generative AI Research in Language Learning and Teaching</div>
     <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Tan, L. Y., Wang, C., &amp; Lowell, V.</div>
@@ -460,9 +502,22 @@ title: "Publications"
   </div>
 </div>
 
-<!-- CPS × Intel — with thumbnail -->
+<!-- CPS × Intel — carousel -->
 <div class="bl-pcard">
-  <img class="bl-pcard__thumb" src="/assets/images/publications/cps-intel_1.jpg" alt="Collaborative problem solving in AI-mediated environments">
+  <div class="bl-pcard__slides">
+    <div class="bl-pcard__slide active"><img src="/assets/images/publications/cps-intel_1.jpg" alt="CPS study – fig 1"></div>
+    <div class="bl-pcard__slide"><img src="/assets/images/publications/cps-intel_2.jpg" alt="CPS study – fig 2"></div>
+    <div class="bl-pcard__slide"><img src="/assets/images/publications/cps-intel_3.jpg" alt="CPS study – fig 3"></div>
+    <div class="bl-pcard__slide"><img src="/assets/images/publications/cps-intel_4.jpg" alt="CPS study – fig 4"></div>
+    <div class="bl-pslide-nav">
+      <button class="bl-pslide-btn bl-pslide-prev">‹</button>
+      <div class="bl-pslide-dots">
+        <span class="bl-pslide-dot active"></span><span class="bl-pslide-dot"></span>
+        <span class="bl-pslide-dot"></span><span class="bl-pslide-dot"></span>
+      </div>
+      <button class="bl-pslide-btn bl-pslide-next">›</button>
+    </div>
+  </div>
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">An Early Investigation of Collaborative Problem Solving in Conversational AI-Mediated Learning Environments</div>
     <div class="bl-pcard__authors">Aslan, S., Alyuz, N., <span class="bl-pcard__me">Li, B.</span>, Durham, L. M., Shi, M., Sharma, S., &amp; Nachman, L.</div>
@@ -486,21 +541,34 @@ title: "Publications"
   </div>
 </div>
 
-<!-- Remaining 2025 — plain list -->
-<div class="pub-entry">
-  <div class="pub-entry__dot--empty"></div>
-  <div class="pub-entry__body">
-    <strong>Yang, M.</strong>, Luo, T., Herman, K., <strong>Li, B.</strong>, Jiang, S., &amp; Kim, J. (2025). Examining non-traditional online learners' ownership of learning in the context of ChatGPT-facilitated design. <em>Journal of Computing in Higher Education</em>.
+<!-- Yang JCHE — with thumbnail -->
+<div class="bl-pcard">
+  <img class="bl-pcard__thumb" src="/assets/images/publications/Non-tradition_JCHE.png" alt="Non-traditional learners ChatGPT JCHE 2025">
+  <div class="bl-pcard__body">
+    <div class="bl-pcard__title">Examining Non-Traditional Online Learners' Ownership of Learning in the Context of ChatGPT-Facilitated Design</div>
+    <div class="bl-pcard__authors">Yang, M., Luo, T., Herman, K., <span class="bl-pcard__me">Li, B.</span>, Jiang, S., &amp; Kim, J.</div>
+    <div class="bl-pcard__venue">Journal of Computing in Higher Education · 2025</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/s12528-025-09476-y" target="_blank" rel="noopener">DOI</a>
     </div>
   </div>
 </div>
 
-<div class="pub-entry">
-  <span class="pub-entry__dot"></span>
-  <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Luo, T., Bahari, A., Yang, M., &amp; Chan, W. S. (2025). Beyond scores: A systematic review of learning and psychological outcomes of digital game-based language learning (2010–2025). <em>Innovation in Language Learning and Teaching</em>, 1–37.
+<!-- GBLL Review — carousel -->
+<div class="bl-pcard">
+  <div class="bl-pcard__slides">
+    <div class="bl-pcard__slide active"><img src="/assets/images/publications/game-based_1.png" alt="GBLL Review – figure 1"></div>
+    <div class="bl-pcard__slide"><img src="/assets/images/publications/game-based_2.png" alt="GBLL Review – figure 2"></div>
+    <div class="bl-pslide-nav">
+      <button class="bl-pslide-btn bl-pslide-prev">‹</button>
+      <div class="bl-pslide-dots"><span class="bl-pslide-dot active"></span><span class="bl-pslide-dot"></span></div>
+      <button class="bl-pslide-btn bl-pslide-next">›</button>
+    </div>
+  </div>
+  <div class="bl-pcard__body">
+    <div class="bl-pcard__title">Beyond Scores: A Systematic Review of Learning and Psychological Outcomes of Digital Game-Based Language Learning (2010–2025)</div>
+    <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Luo, T., Bahari, A., Yang, M., &amp; Chan, W. S.</div>
+    <div class="bl-pcard__venue">Innovation in Language Learning and Teaching, 1–37 · 2025</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1080/17501229.2025.2598587" target="_blank" rel="noopener">DOI</a>
     </div>
@@ -530,7 +598,7 @@ title: "Publications"
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    <strong>Yang, M.</strong>, Lovett, N., <strong>Li, B.</strong>, &amp; Hou, Z. (2025). Towards dynamic learner state: Orchestrating AI agents and workplace performance via the Model Context Protocol. <em>Education Sciences, 15</em>(8), 1004.
+    Yang, M., Lovett, N., <strong>Li, B.</strong>, &amp; Hou, Z. (2025). Towards dynamic learner state: Orchestrating AI agents and workplace performance via the Model Context Protocol. <em>Education Sciences, 15</em>(8), 1004.
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.3390/educsci15081004" target="_blank" rel="noopener">DOI</a>
     </div>
@@ -668,11 +736,13 @@ title: "Publications"
 <section class="pub-section">
 <h2>Book Chapters</h2>
 
-<!-- AI-generation literacy — Palgrave 2026 -->
-<div class="pub-entry">
-  <span class="pub-entry__dot"></span>
-  <div class="pub-entry__body">
-    <strong>Li, B.</strong>, &amp; Lowell, V. (2026). AI-generation literacy. In L. McCallum &amp; D. Tafazoli (Eds.), <em>The Palgrave Encyclopedia of Computer-Assisted Language Learning</em>. Palgrave Macmillan.
+<!-- AI-generation literacy — Palgrave 2026 — with thumbnail -->
+<div class="bl-pcard">
+  <img class="bl-pcard__thumb" src="/assets/images/publications/AI-generation Literacy.png" alt="AI-Generation Literacy – Palgrave Encyclopedia">
+  <div class="bl-pcard__body">
+    <div class="bl-pcard__title">AI-Generation Literacy</div>
+    <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, &amp; Lowell, V.</div>
+    <div class="bl-pcard__venue">In L. McCallum &amp; D. Tafazoli (Eds.), <em>The Palgrave Encyclopedia of Computer-Assisted Language Learning</em>. Palgrave Macmillan · 2026</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" rel="noopener">DOI</a>
     </div>
@@ -731,7 +801,7 @@ title: "Publications"
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    <strong>Yang, M.</strong>, Harbor, J., <strong>Li, B.</strong>, &amp; Nikiema, J. Infusing authenticity into a service-learning program. <em>Education + Training</em>. <span class="pub-status">Major revision</span>
+    Yang, M., Harbor, J., <strong>Li, B.</strong>, &amp; Nikiema, J. Infusing authenticity into a service-learning program. <em>Education + Training</em>. <span class="pub-status">Major revision</span>
   </div>
 </div>
 
@@ -785,3 +855,51 @@ title: "Publications"
   </div>
 </div>
 </section>
+
+<!-- ── LIGHTBOX OVERLAY ── -->
+<div class="bl-lightbox" id="bl-lightbox">
+  <span class="bl-lightbox__close" id="bl-lightbox-close">✕</span>
+  <img id="bl-lightbox-img" src="" alt="">
+</div>
+
+<script>
+(function () {
+  /* ── Carousel ── */
+  document.querySelectorAll('.bl-pcard__slides').forEach(function (slides) {
+    var items  = slides.querySelectorAll('.bl-pcard__slide');
+    var dots   = slides.querySelectorAll('.bl-pslide-dot');
+    var prev   = slides.querySelector('.bl-pslide-prev');
+    var next   = slides.querySelector('.bl-pslide-next');
+    if (!items.length) return;
+    var cur = 0;
+    function show(n) {
+      items[cur].classList.remove('active');
+      dots[cur] && dots[cur].classList.remove('active');
+      cur = (n + items.length) % items.length;
+      items[cur].classList.add('active');
+      dots[cur] && dots[cur].classList.add('active');
+    }
+    prev && prev.addEventListener('click', function (e) { e.preventDefault(); show(cur - 1); });
+    next && next.addEventListener('click', function (e) { e.preventDefault(); show(cur + 1); });
+    dots.forEach(function (d, i) {
+      d.addEventListener('click', function () { show(i); });
+    });
+  });
+
+  /* ── Lightbox ── */
+  var lb    = document.getElementById('bl-lightbox');
+  var lbImg = document.getElementById('bl-lightbox-img');
+  var lbX   = document.getElementById('bl-lightbox-close');
+  function openLB(src, alt) {
+    lbImg.src = src; lbImg.alt = alt || '';
+    lb.classList.add('open');
+  }
+  function closeLB() { lb.classList.remove('open'); lbImg.src = ''; }
+  document.querySelectorAll('.bl-pcard__slide img, .bl-pcard__thumb').forEach(function (img) {
+    img.addEventListener('click', function () { openLB(img.src, img.alt); });
+  });
+  lbX  && lbX.addEventListener('click', closeLB);
+  lb   && lb.addEventListener('click', function (e) { if (e.target === lb) closeLB(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLB(); });
+}());
+</script>
