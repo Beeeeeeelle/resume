@@ -1,6 +1,6 @@
 ---
 title: "Research"
-layout: splash
+layout: single
 permalink: /research/
 header:
   overlay_color: "#000"
@@ -12,9 +12,7 @@ header:
 <style>
 /* ── Research Narrative ── */
 .research-narrative {
-  max-width: 900px;
-  margin: 56px auto 0;
-  padding: 0 20px;
+  margin: 40px 0 0;
 }
 .research-narrative h2 {
   font-size: 22px;
@@ -76,9 +74,7 @@ header:
 
 /* ── Featured Publications ── */
 .featured-pubs {
-  max-width: 900px;
-  margin: 60px auto 0;
-  padding: 0 20px;
+  margin: 56px 0 0;
 }
 .featured-pubs h2 {
   font-size: 22px;
@@ -146,9 +142,7 @@ header:
 
 /* ── Projects & Collaborations ── */
 .projects-section {
-  max-width: 900px;
-  margin: 60px auto 60px;
-  padding: 0 20px;
+  margin: 56px 0 40px;
 }
 .projects-section h2 {
   font-size: 22px;
