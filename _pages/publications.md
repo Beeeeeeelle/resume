@@ -474,7 +474,7 @@ title: "Publications"
 
 <!-- PA-SDA Scale — with thumbnail -->
 <div class="bl-pcard">
-  <img class="bl-pcard__thumb" src="/assets/images/publications/PA-SDA Scale.png" alt="PA-SDA Scale validation figure">
+  <img class="bl-pcard__thumb" src="/assets/images/publications/PA-SDA Scale.png" alt="PA-SDA Scale validation figure" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">Development and Validation of the PA-SDA Scale: Measuring Personal Attributes in AI-Integrated Self-Directed Learning</div>
     <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Zhang, Z., Lowell, V., Wang, C., &amp; Bonk, C. J.</div>
@@ -488,8 +488,8 @@ title: "Publications"
 <!-- Two years of innovation — carousel -->
 <div class="bl-pcard">
   <div class="bl-pcard__slides">
-    <div class="bl-pcard__slide active"><img src="/assets/images/publications/CAEAI 2025_1.png" alt="Two Years – figure 1"></div>
-    <div class="bl-pcard__slide"><img src="/assets/images/publications/CAEAI 2025_2.png" alt="Two Years – figure 2"></div>
+    <div class="bl-pcard__slide active"><img src="/assets/images/publications/CAEAI 2025_1.png" alt="Two Years – figure 1" data-lightbox-bound="true"></div>
+    <div class="bl-pcard__slide"><img src="/assets/images/publications/CAEAI 2025_2.png" alt="Two Years – figure 2" data-lightbox-bound="true"></div>
     <div class="bl-pslide-nav">
       <button class="bl-pslide-btn bl-pslide-prev">‹</button>
       <div class="bl-pslide-dots"><span class="bl-pslide-dot active"></span><span class="bl-pslide-dot"></span></div>
@@ -509,10 +509,10 @@ title: "Publications"
 <!-- CPS × Intel — carousel -->
 <div class="bl-pcard">
   <div class="bl-pcard__slides">
-    <div class="bl-pcard__slide active"><img src="/assets/images/publications/cps-intel_1.jpg" alt="CPS study – fig 1"></div>
-    <div class="bl-pcard__slide"><img src="/assets/images/publications/cps-intel_2.jpg" alt="CPS study – fig 2"></div>
-    <div class="bl-pcard__slide"><img src="/assets/images/publications/cps-intel_3.jpg" alt="CPS study – fig 3"></div>
-    <div class="bl-pcard__slide"><img src="/assets/images/publications/cps-intel_4.jpg" alt="CPS study – fig 4"></div>
+    <div class="bl-pcard__slide active"><img src="/assets/images/publications/cps-intel_1.jpg" alt="CPS study – fig 1" data-lightbox-bound="true"></div>
+    <div class="bl-pcard__slide"><img src="/assets/images/publications/cps-intel_2.jpg" alt="CPS study – fig 2" data-lightbox-bound="true"></div>
+    <div class="bl-pcard__slide"><img src="/assets/images/publications/cps-intel_3.jpg" alt="CPS study – fig 3" data-lightbox-bound="true"></div>
+    <div class="bl-pcard__slide"><img src="/assets/images/publications/cps-intel_4.jpg" alt="CPS study – fig 4" data-lightbox-bound="true"></div>
     <div class="bl-pslide-nav">
       <button class="bl-pslide-btn bl-pslide-prev">‹</button>
       <div class="bl-pslide-dots">
@@ -534,7 +534,7 @@ title: "Publications"
 
 <!-- BJET 2025 — with thumbnail -->
 <div class="bl-pcard">
-  <img class="bl-pcard__thumb" src="/assets/images/publications/BJET 2025_1.png" alt="Nontraditional students ChatGPT BJET 2025">
+  <img class="bl-pcard__thumb" src="/assets/images/publications/BJET 2025_1.png" alt="Nontraditional students ChatGPT BJET 2025" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy, and Performance: A Mixed-Methods Approach</div>
     <div class="bl-pcard__authors">Yang, M., Jiang, S., <span class="bl-pcard__me">Li, B.</span>, Herman, K., Luo, T., Moots, S. C., &amp; Lovett, N.</div>
@@ -547,7 +547,7 @@ title: "Publications"
 
 <!-- Yang JCHE — with thumbnail -->
 <div class="bl-pcard">
-  <img class="bl-pcard__thumb" src="/assets/images/publications/Non-tradition_JCHE.png" alt="Non-traditional learners ChatGPT JCHE 2025">
+  <img class="bl-pcard__thumb" src="/assets/images/publications/Non-tradition_JCHE.png" alt="Non-traditional learners ChatGPT JCHE 2025" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">Examining Non-Traditional Online Learners' Ownership of Learning in the Context of ChatGPT-Facilitated Design</div>
     <div class="bl-pcard__authors">Yang, M., Luo, T., Herman, K., <span class="bl-pcard__me">Li, B.</span>, Jiang, S., &amp; Kim, J.</div>
@@ -561,8 +561,8 @@ title: "Publications"
 <!-- GBLL Review — carousel -->
 <div class="bl-pcard">
   <div class="bl-pcard__slides">
-    <div class="bl-pcard__slide active"><img src="/assets/images/publications/game-based_1.png" alt="GBLL Review – figure 1"></div>
-    <div class="bl-pcard__slide"><img src="/assets/images/publications/game-based_2.png" alt="GBLL Review – figure 2"></div>
+    <div class="bl-pcard__slide active"><img src="/assets/images/publications/game-based_1.png" alt="GBLL Review – figure 1" data-lightbox-bound="true"></div>
+    <div class="bl-pcard__slide"><img src="/assets/images/publications/game-based_2.png" alt="GBLL Review – figure 2" data-lightbox-bound="true"></div>
     <div class="bl-pslide-nav">
       <button class="bl-pslide-btn bl-pslide-prev">‹</button>
       <div class="bl-pslide-dots"><span class="bl-pslide-dot active"></span><span class="bl-pslide-dot"></span></div>
@@ -633,7 +633,7 @@ title: "Publications"
 
 <!-- IEEE TLT 2024 — with thumbnail -->
 <div class="bl-pcard">
-  <img class="bl-pcard__thumb" src="/assets/images/publications/IEEE TLT 2024.png" alt="AI-Integrated SDL Framework (IEEE TLT 2024)">
+  <img class="bl-pcard__thumb" src="/assets/images/publications/IEEE TLT 2024.png" alt="AI-Integrated SDL Framework (IEEE TLT 2024)" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">Reconceptualizing Self-Directed Learning in the Era of Generative AI: An Exploratory Analysis</div>
     <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Bonk, C. J., Wang, C., &amp; Kou, X.</div>
@@ -742,7 +742,7 @@ title: "Publications"
 
 <!-- AI-generation literacy — Palgrave 2026 — with thumbnail -->
 <div class="bl-pcard">
-  <img class="bl-pcard__thumb" src="/assets/images/publications/AI-generation Literacy.png" alt="AI-Generation Literacy – Palgrave Encyclopedia">
+  <img class="bl-pcard__thumb" src="/assets/images/publications/AI-generation Literacy.png" alt="AI-Generation Literacy – Palgrave Encyclopedia" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">AI-Generation Literacy</div>
     <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, &amp; Lowell, V.</div>
@@ -755,7 +755,7 @@ title: "Publications"
 
 <!-- TicApp — with animated gif thumbnail + project page link -->
 <div class="bl-pcard">
-  <img class="bl-pcard__thumb bl-pcard__thumb--gif" src="/assets/images/publications/ticapp.gif" alt="TicApp mobile app demo">
+  <img class="bl-pcard__thumb bl-pcard__thumb--gif" src="/assets/images/publications/ticapp.gif" alt="TicApp mobile app demo" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">Implementing Design Thinking: A Mobile Application for Diverse Learners to Overcome Challenges in Character Learning</div>
     <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, &amp; Lowell, V. L.</div>
