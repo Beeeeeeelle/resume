@@ -1,6 +1,6 @@
 <style>
 .rv-section { margin: 40px 0 0; }
-.rv-wrapper { position: relative; width: 100%; max-width: 900px; margin: 0 auto; }
+.rv-wrapper { position: relative; width: 100%; max-width: 920px; margin: 0 auto; }
 .rv-svg { width: 100%; height: auto; display: block; }
 
 /* ── Blob scale on zone hover ── */
@@ -9,9 +9,9 @@
   transform-origin: center;
   transition: transform 0.45s cubic-bezier(0.34,1.40,0.64,1);
 }
-[data-hover="a"] .blob-g.blob-a { transform: scale(1.08); }
-[data-hover="b"] .blob-g.blob-b { transform: scale(1.08); }
-[data-hover="c"] .blob-g.blob-c { transform: scale(1.08); }
+[data-hover="a"] .blob-g.blob-a { transform: scale(1.07); }
+[data-hover="b"] .blob-g.blob-b { transform: scale(1.07); }
+[data-hover="c"] .blob-g.blob-c { transform: scale(1.07); }
 
 /* ── Research questions (hidden → visible on hover) ── */
 .zone-rq {
@@ -23,17 +23,13 @@
 [data-hover="b"] .zone-rq-b { opacity: 1; }
 [data-hover="c"] .zone-rq-c { opacity: 1; }
 
-/* ── Zone label dimming (non-hovered zones) ── */
-.rv-label {
-  transition: opacity 0.3s ease;
-}
+/* ── Zone label dimming ── */
+.rv-label { transition: opacity 0.3s ease; }
 [data-hover="a"] .rv-label:not(.rv-label-a),
 [data-hover="b"] .rv-label:not(.rv-label-b),
-[data-hover="c"] .rv-label:not(.rv-label-c) {
-  opacity: 0.35;
-}
+[data-hover="c"] .rv-label:not(.rv-label-c) { opacity: 0.32; }
 
-/* ── Base tag style ── */
+/* ── Base tag styles ── */
 .paper-tag {
   cursor: pointer;
   transition: transform 0.25s ease, filter 0.25s ease;
@@ -114,187 +110,188 @@
 
 <section class="rv-section">
   <div class="rv-wrapper">
-    <svg class="rv-svg" viewBox="0 0 900 580" id="rv-svg" xmlns="http://www.w3.org/2000/svg">
+    <!--
+      Blobs scaled ~1.10× from original (centers: A=280,232 · B=572,232 · C=426,405)
+      ViewBox extended to 900×600 for extra room at top and bottom.
+      DOM order: hit-zones → blobs → labels/questions → tags
+      (tags are LAST so they sit on top and receive click events)
+    -->
+    <svg class="rv-svg" viewBox="0 0 900 600" id="rv-svg" xmlns="http://www.w3.org/2000/svg">
 
       <defs>
-        <!-- Gradient A: muted slate-blue (from Option C palette) -->
         <radialGradient id="rg-a" cx="42%" cy="40%" r="60%" gradientUnits="objectBoundingBox">
           <stop offset="0%"   stop-color="#7B9CC8" stop-opacity="0.82"/>
           <stop offset="100%" stop-color="#7B9CC8" stop-opacity="0.08"/>
         </radialGradient>
-        <!-- Gradient B: dusty rose -->
         <radialGradient id="rg-b" cx="58%" cy="40%" r="60%" gradientUnits="objectBoundingBox">
           <stop offset="0%"   stop-color="#C8868E" stop-opacity="0.80"/>
           <stop offset="100%" stop-color="#C8868E" stop-opacity="0.08"/>
         </radialGradient>
-        <!-- Gradient C: sage green -->
         <radialGradient id="rg-c" cx="50%" cy="42%" r="60%" gradientUnits="objectBoundingBox">
           <stop offset="0%"   stop-color="#82B896" stop-opacity="0.78"/>
           <stop offset="100%" stop-color="#82B896" stop-opacity="0.08"/>
         </radialGradient>
       </defs>
 
-      <!-- ── BLOBS (gradient, each in own <g> for scale transform) ── -->
+      <!-- ══ 1. HIT ZONES (first in DOM = lowest z-order, tags above receive clicks) ══ -->
+      <rect class="rv-hit" data-zone="c" fill="transparent" cursor="default"
+            x="182" y="432" width="486" height="140"/>
+      <rect class="rv-hit" data-zone="a" fill="transparent" cursor="default"
+            x="38"  y="32"  width="292" height="400"/>
+      <rect class="rv-hit" data-zone="b" fill="transparent" cursor="default"
+            x="570" y="32"  width="232" height="400"/>
+
+      <!-- ══ 2. BLOBS ══ -->
       <g class="blob-g blob-a">
-        <path style="mix-blend-mode:multiply"
-          d="M 280,50 C 405,40 495,118 488,228 C 481,335 410,410 280,414
-             C 150,418 64,338 60,228 C 56,108 155,60 280,50 Z"
-          fill="url(#rg-a)"/>
+        <path style="mix-blend-mode:multiply" fill="url(#rg-a)"
+          d="M 280,32 C 418,21 517,107 509,228 C 501,345 423,428 280,432
+             C 137,437 42,349 38,228 C 34,96 143,43 280,32 Z"/>
       </g>
       <g class="blob-g blob-b">
-        <path style="mix-blend-mode:multiply"
-          d="M 572,50 C 697,40 787,118 780,228 C 773,335 702,410 572,414
-             C 442,418 356,338 352,228 C 348,108 447,60 572,50 Z"
-          fill="url(#rg-b)"/>
+        <path style="mix-blend-mode:multiply" fill="url(#rg-b)"
+          d="M 572,32 C 710,21 809,107 801,228 C 793,345 715,428 572,432
+             C 429,437 334,349 330,228 C 326,96 435,43 572,32 Z"/>
       </g>
       <g class="blob-g blob-c">
-        <path style="mix-blend-mode:multiply"
-          d="M 426,260 C 550,252 648,296 646,402 C 644,494 550,550 426,550
-             C 302,550 206,494 204,402 C 202,304 302,268 426,260 Z"
-          fill="url(#rg-c)"/>
+        <path style="mix-blend-mode:multiply" fill="url(#rg-c)"
+          d="M 426,246 C 562,237 670,285 668,402 C 666,503 562,565 426,565
+             C 290,565 184,503 182,402 C 180,294 290,254 426,246 Z"/>
       </g>
 
-      <!-- ── ZONE LABELS ── -->
-      <text class="rv-label rv-label-a" x="148" y="100" text-anchor="middle"
-        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#2c4a6e">Self-Directed Learning</text>
-      <text class="rv-label rv-label-a" x="148" y="118" text-anchor="middle"
-        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#2c4a6e">&amp; AI Frameworks</text>
+      <!-- ══ 3. ZONE LABELS ══ -->
+      <text class="rv-label rv-label-a" x="148" y="86" text-anchor="middle"
+        font-family="Lora,serif" font-size="15" font-weight="700" fill="#2c4a6e">Self-Directed Learning</text>
+      <text class="rv-label rv-label-a" x="148" y="104" text-anchor="middle"
+        font-family="Lora,serif" font-size="15" font-weight="700" fill="#2c4a6e">&amp; AI Frameworks</text>
 
-      <text class="rv-label rv-label-b" x="704" y="100" text-anchor="middle"
-        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#6e2c38">GenAI in Education</text>
+      <text class="rv-label rv-label-b" x="706" y="86" text-anchor="middle"
+        font-family="Lora,serif" font-size="15" font-weight="700" fill="#6e2c38">GenAI in Education</text>
 
-      <text class="rv-label rv-label-c" x="426" y="504" text-anchor="middle"
-        font-family="Lora,serif" font-size="15.5" font-weight="700" fill="#2a5a3a">Equity &amp; Learner-Centered Design</text>
+      <text class="rv-label rv-label-c" x="310" y="525" text-anchor="middle"
+        font-family="Lora,serif" font-size="14.5" font-weight="700" fill="#2a5a3a">Equity &amp;</text>
+      <text class="rv-label rv-label-c" x="310" y="543" text-anchor="middle"
+        font-family="Lora,serif" font-size="14.5" font-weight="700" fill="#2a5a3a">Learner-Centered Design</text>
 
-      <!-- ── RESEARCH QUESTIONS (appear on zone hover) ── -->
-      <text class="zone-rq zone-rq-a" x="148" y="162" text-anchor="middle"
-        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#2c4a6e">How do learners self-direct their</text>
-      <text class="zone-rq zone-rq-a" x="148" y="180" text-anchor="middle"
-        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#2c4a6e">learning journeys with AI tools?</text>
+      <!-- ══ 4. RESEARCH QUESTIONS (fade in on zone hover) ══ -->
+      <!-- Zone A: space between label (y≈104) and first tag (y=206) -->
+      <text class="zone-rq zone-rq-a" x="148" y="136" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2c4a6e">How do learners self-direct their</text>
+      <text class="zone-rq zone-rq-a" x="148" y="153" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2c4a6e">learning journeys with AI tools?</text>
 
-      <text class="zone-rq zone-rq-b" x="710" y="152" text-anchor="middle"
-        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#6e2c38">How is GenAI reshaping</text>
-      <text class="zone-rq zone-rq-b" x="710" y="170" text-anchor="middle"
-        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#6e2c38">language teaching practice?</text>
+      <!-- Zone B: space between label (y≈86) and first tag (y=163) -->
+      <text class="zone-rq zone-rq-b" x="706" y="116" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#6e2c38">How is GenAI reshaping</text>
+      <text class="zone-rq zone-rq-b" x="706" y="133" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#6e2c38">language teaching practice?</text>
 
-      <text class="zone-rq zone-rq-c" x="316" y="476" text-anchor="middle"
-        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#2a5a3a">How do we design equitable</text>
-      <text class="zone-rq zone-rq-c" x="316" y="493" text-anchor="middle"
-        font-family="Lora,serif" font-size="12.5" font-style="italic" fill="#2a5a3a">experiences for all learners?</text>
+      <!-- Zone C: below all tags (y≈371) and above label (y≈525), right of TicApp tag -->
+      <text class="zone-rq zone-rq-c" x="456" y="456" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2a5a3a">How do we design equitable</text>
+      <text class="zone-rq zone-rq-c" x="456" y="472" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2a5a3a">experiences for all learners?</text>
 
-      <!-- ── PAPER TAGS ── -->
+      <!-- ══ 5. PAPER TAGS (last in DOM = highest z-order → receives clicks) ══ -->
 
       <!-- ─ A only ─ -->
       <a href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" class="paper-tag tag-a"
          data-title="Reconceptualizing Self-Directed Learning in the Era of Generative AI"
          data-venue="IEEE Transactions on Learning Technologies, 2024">
-        <rect x="84" y="206" width="162" height="22" rx="11" class="tag-bg"/>
-        <text x="165" y="221" text-anchor="middle" class="tag-text">SDL × GenAI Era · TLT '24</text>
+        <rect x="72" y="206" width="162" height="22" rx="11" class="tag-bg"/>
+        <text x="153" y="221" text-anchor="middle" class="tag-text">SDL × GenAI Era · TLT '24</text>
       </a>
 
       <!-- ─ A∩B ─ -->
       <a href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" class="paper-tag tag-ab"
-         data-title="Development and Validation of the PA-SDA Scale: Measuring Personal Attributes in AI-Integrated Self-Directed Learning"
+         data-title="Development and Validation of the PA-SDA Scale"
          data-venue="System, 2025">
-        <rect x="320" y="108" width="198" height="22" rx="11" class="tag-bg"/>
-        <text x="419" y="123" text-anchor="middle" class="tag-text">PA-SDA Scale · System '25</text>
+        <rect x="320" y="108" width="200" height="22" rx="11" class="tag-bg"/>
+        <text x="420" y="123" text-anchor="middle" class="tag-text">PA-SDA Scale · System '25</text>
       </a>
       <a href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" class="paper-tag tag-ab"
          data-title="Exploring Inventions in Self-Directed Learning with Generative AI"
          data-venue="TechTrends, 2024">
-        <rect x="305" y="136" width="228" height="22" rx="11" class="tag-bg"/>
-        <text x="419" y="151" text-anchor="middle" class="tag-text">SDL with GenAI · TechTrends '24</text>
+        <rect x="305" y="136" width="230" height="22" rx="11" class="tag-bg"/>
+        <text x="420" y="151" text-anchor="middle" class="tag-text">SDL with GenAI · TechTrends '24</text>
       </a>
       <a href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" class="paper-tag tag-ab"
          data-title="AI-Generation Literacy"
-         data-venue="Palgrave Encyclopedia of Computer-Assisted Language Learning, 2026">
-        <rect x="312" y="164" width="214" height="22" rx="11" class="tag-bg"/>
-        <text x="419" y="179" text-anchor="middle" class="tag-text">AI-Gen Literacy · Palgrave '26</text>
+         data-venue="Palgrave Encyclopedia of CALL, 2026">
+        <rect x="312" y="164" width="216" height="22" rx="11" class="tag-bg"/>
+        <text x="420" y="179" text-anchor="middle" class="tag-text">AI-Gen Literacy · Palgrave '26</text>
       </a>
 
       <!-- ─ B only ─ -->
       <a href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" class="paper-tag tag-b"
          data-title="A Systematic Review of the First Year of Publications on ChatGPT and Education"
-         data-venue="Computers and Education: Artificial Intelligence, 2024">
-        <rect x="497" y="163" width="212" height="22" rx="11" class="tag-bg"/>
-        <text x="603" y="178" text-anchor="middle" class="tag-text">ChatGPT Review · CAEAI '24</text>
+         data-venue="Computers and Education: AI, 2024">
+        <rect x="499" y="163" width="210" height="22" rx="11" class="tag-bg"/>
+        <text x="604" y="178" text-anchor="middle" class="tag-text">ChatGPT Review · CAEAI '24</text>
       </a>
       <a href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" class="paper-tag tag-b"
-         data-title="Two Years of Innovation: A Systematic Review of Empirical Generative AI Research in Language Learning and Teaching"
-         data-venue="Computers and Education: Artificial Intelligence, 2025">
-        <rect x="500" y="191" width="206" height="22" rx="11" class="tag-bg"/>
-        <text x="603" y="206" text-anchor="middle" class="tag-text">2yr GenAI Review · CAEAI '25</text>
+         data-title="Two Years of Innovation: Systematic Review of GenAI Research in Language Learning and Teaching"
+         data-venue="Computers and Education: AI, 2025">
+        <rect x="502" y="191" width="204" height="22" rx="11" class="tag-bg"/>
+        <text x="604" y="206" text-anchor="middle" class="tag-text">2yr GenAI Review · CAEAI '25</text>
       </a>
       <a href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" class="paper-tag tag-b"
          data-title="Getting Viral on Social Media: Exploring EduTubers' Perceptions and Practices"
          data-venue="Innovation in Language Learning and Teaching, 2025">
-        <rect x="508" y="219" width="190" height="22" rx="11" class="tag-bg"/>
-        <text x="603" y="234" text-anchor="middle" class="tag-text">EduTubers · ILLT '25</text>
+        <rect x="510" y="219" width="188" height="22" rx="11" class="tag-bg"/>
+        <text x="604" y="234" text-anchor="middle" class="tag-text">EduTubers · ILLT '25</text>
       </a>
       <a href="https://doi.org/10.1080/17501229.2025.2598587" target="_blank" class="paper-tag tag-b"
-         data-title="Beyond Scores: A Systematic Review of Learning and Psychological Outcomes of Digital Game-Based Language Learning (2010–2025)"
+         data-title="Beyond Scores: Systematic Review of Game-Based Language Learning (2010–2025)"
          data-venue="Innovation in Language Learning and Teaching, 2025">
-        <rect x="508" y="247" width="190" height="22" rx="11" class="tag-bg"/>
-        <text x="603" y="262" text-anchor="middle" class="tag-text">GBLL Review · ILLT '25</text>
+        <rect x="510" y="247" width="188" height="22" rx="11" class="tag-bg"/>
+        <text x="604" y="262" text-anchor="middle" class="tag-text">GBLL Review · ILLT '25</text>
       </a>
 
       <!-- ─ A∩C ─ -->
       <a href="https://doi.org/10.24059/olj.v27i4.4003" target="_blank" class="paper-tag tag-ac"
          data-title="Culturally- and Linguistically-Responsive Online Teacher Professional Development"
          data-venue="Online Learning Journal, 2023">
-        <rect x="104" y="340" width="218" height="22" rx="11" class="tag-bg"/>
-        <text x="213" y="355" text-anchor="middle" class="tag-text">Teacher PD · OLJ '23</text>
+        <rect x="104" y="340" width="216" height="22" rx="11" class="tag-bg"/>
+        <text x="212" y="355" text-anchor="middle" class="tag-text">Teacher PD · OLJ '23</text>
       </a>
 
       <!-- ─ B∩C ─ -->
       <a href="https://doi.org/10.1111/bjet.13588" target="_blank" class="paper-tag tag-bc"
          data-title="Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy and Performance"
          data-venue="British Journal of Educational Technology, 2025">
-        <rect x="487" y="293" width="194" height="22" rx="11" class="tag-bg"/>
-        <text x="584" y="308" text-anchor="middle" class="tag-text">NonTrad × ChatGPT · BJET '25</text>
+        <rect x="487" y="293" width="196" height="22" rx="11" class="tag-bg"/>
+        <text x="585" y="308" text-anchor="middle" class="tag-text">NonTrad × ChatGPT · BJET '25</text>
       </a>
       <a href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" class="paper-tag tag-bc"
          data-title="An Early Investigation of Collaborative Problem Solving in Conversational AI-Mediated Learning Environments"
-         data-venue="Computers and Education: Artificial Intelligence, 2025">
-        <rect x="493" y="321" width="182" height="22" rx="11" class="tag-bg"/>
-        <text x="584" y="336" text-anchor="middle" class="tag-text">CPS in AI Env · CAEAI '25</text>
+         data-venue="Computers and Education: AI, 2025">
+        <rect x="493" y="321" width="184" height="22" rx="11" class="tag-bg"/>
+        <text x="585" y="336" text-anchor="middle" class="tag-text">CPS in AI Env · CAEAI '25</text>
       </a>
       <a href="https://doi.org/10.3390/languages8040238" target="_blank" class="paper-tag tag-bc"
          data-title="Empowering Students from Low-Income Families to Improve Writing with ChatGPT"
          data-venue="Languages, 2023">
-        <rect x="487" y="349" width="194" height="22" rx="11" class="tag-bg"/>
-        <text x="584" y="364" text-anchor="middle" class="tag-text">Low-Income &amp; ChatGPT · Lang. '23</text>
+        <rect x="487" y="349" width="196" height="22" rx="11" class="tag-bg"/>
+        <text x="585" y="364" text-anchor="middle" class="tag-text">Low-Income &amp; ChatGPT · Lang. '23</text>
       </a>
 
       <!-- ─ C only ─ -->
       <a href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" class="paper-tag tag-c"
          data-title="Implementing Design Thinking: A Mobile Application for Diverse Learners"
          data-venue="Transdisciplinary Learning Experience Design, Springer 2024">
-        <rect x="210" y="462" width="212" height="22" rx="11" class="tag-bg"/>
-        <text x="316" y="477" text-anchor="middle" class="tag-text">TicApp Design Thinking · Springer '24</text>
+        <rect x="208" y="462" width="214" height="22" rx="11" class="tag-bg"/>
+        <text x="315" y="477" text-anchor="middle" class="tag-text">TicApp Design Thinking · Springer '24</text>
       </a>
 
       <!-- ─ A∩B∩C center: dissertation ─ -->
-      <rect x="350" y="298" width="140" height="62" rx="10"
-        fill="white" fill-opacity="0.72"
-        stroke="#c8c0b4" stroke-width="1"/>
-      <text x="420" y="317" text-anchor="middle"
+      <rect x="350" y="300" width="140" height="62" rx="10"
+        fill="white" fill-opacity="0.72" stroke="#c8c0b4" stroke-width="1"/>
+      <text x="420" y="319" text-anchor="middle"
         font-family="Lora,serif" font-size="11" font-style="italic" fill="#444">Dissertation</text>
-      <text x="420" y="333" text-anchor="middle"
+      <text x="420" y="335" text-anchor="middle"
         font-family="system-ui,sans-serif" font-size="9.5" fill="#555">Global Learners &amp; GenAI</text>
-      <text x="420" y="348" text-anchor="middle"
+      <text x="420" y="350" text-anchor="middle"
         font-family="system-ui,sans-serif" font-size="9.5" fill="#555">Longitudinal Mixed-Methods</text>
-
-      <!-- ── INVISIBLE HIT ZONES (on top, for zone hover detection) ── -->
-      <!-- Zone C hit area (bottom, placed first so A and B override intersections) -->
-      <rect class="rv-hit" data-zone="c" fill="transparent" cursor="default"
-            x="204" y="400" width="440" height="150"/>
-      <!-- Zone A hit area (left) -->
-      <rect class="rv-hit" data-zone="a" fill="transparent" cursor="default"
-            x="50"  y="50"  width="280" height="370"/>
-      <!-- Zone B hit area (right) -->
-      <rect class="rv-hit" data-zone="b" fill="transparent" cursor="default"
-            x="520" y="50"  width="280" height="370"/>
 
     </svg>
     <div class="rv-tooltip" id="rv-tooltip"></div>
