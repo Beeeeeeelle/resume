@@ -10,9 +10,6 @@ header:
 ---
 
 <style>
-/* ── Venn diagram ── */
-.rv-section { margin: 40px 0 0; }
-
 /* ── Research Strands heading ── */
 .rn-heading {
   font-size: 13px;
@@ -174,8 +171,6 @@ header:
   font-style: italic;
 }
 </style>
-
-{% include research-venn.html %}
 
 <!-- ── RESEARCH STRANDS ── -->
 <p class="rn-heading">Research Strands</p>
