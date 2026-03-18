@@ -1161,9 +1161,10 @@ html.mobile-nav-lock {
   color: var(--global-muted-text-color, #4a5568);
   line-height: 1.5;
 }
-.greedy-nav { display: flex; align-items: center; gap: clamp(1rem, 2vw, 1.5rem); flex-wrap: nowrap; }
-.greedy-nav .visible-links { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; gap: clamp(1.25rem, 3vw, 2rem); overflow: visible; }
+.greedy-nav { display: flex; align-items: center; gap: clamp(0.5rem, 1.5vw, 1rem); flex-wrap: nowrap; }
+.greedy-nav .visible-links { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; gap: clamp(0.4rem, 1.2vw, 0.9rem); overflow: visible; }
 .greedy-nav .visible-links li { margin: 0; }
+.greedy-nav .visible-links a { font-size: 0.875em; white-space: nowrap; }
 .greedy-nav__toggle { display: none !important; }
 .learning-feature {
   display: flex;

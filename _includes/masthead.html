@@ -117,3 +117,23 @@
     </div>
   </div>
 </div>
+<script>
+/* Keep all nav items visible — counteract greedy-nav overflow hiding */
+(function () {
+  var interval = setInterval(function () {
+    var nav = document.querySelector('.greedy-nav');
+    if (!nav) return;
+    var hidden  = nav.querySelector('.hidden-links');
+    var visible = nav.querySelector('.visible-links');
+    if (!hidden || !visible) return;
+    function restore() {
+      while (hidden.children.length > 0) {
+        visible.appendChild(hidden.children[0]);
+      }
+    }
+    restore();
+    new MutationObserver(restore).observe(hidden, { childList: true });
+    clearInterval(interval);
+  }, 50);
+})();
+</script>
