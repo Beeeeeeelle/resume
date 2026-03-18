@@ -6,8 +6,6 @@ title: "Teaching & Mentoring"
 
 My teaching centers on authentic, inclusive learning design. Whether I am working with doctoral students in instructional design or learners from diverse linguistic and cultural backgrounds, I focus on helping learners build agency, reflect on their identities, and transfer knowledge into complex, real-world contexts. I integrate artificial intelligence, extended reality (XR), and learning analytics to scaffold self-directed learning, while grounding every course in culturally responsive pedagogy, formative assessment, and community building.
 
----
-
 ## Courses & Instructional Leadership
 
 ### Purdue University · Department of Curriculum and Instruction *(2024–present)*
@@ -74,8 +72,6 @@ My teaching centers on authentic, inclusive learning design. Whether I am workin
   </figure>
 </div>
 
----
-
 ## Mentoring & Community Building
 
 - **AI & Learning Innovation Studios.** Facilitate design charrettes for Purdue graduate students exploring GenAI for assessment, accessibility, and workforce upskilling.  
@@ -83,14 +79,10 @@ My teaching centers on authentic, inclusive learning design. Whether I am workin
 - **Tutor Leadership Pipeline.** At Indiana University, built competency-based workshops, observation rubrics, and feedback loops that prepared tutors to become course instructors and graduate students in LDT and Applied Linguistics programs.  
 - **Equity-focused teacher PD.** Co-led online institutes examining culturally and linguistically responsive professional development; findings inform the design of statewide PD ecosystems and now serve as case studies in my graduate courses.
 
----
-
 ## Highlights & Recognitions
 
 - **Course design impact**: Strategic Assessment & Evaluation redesign cited in departmental evaluations for clarity, accessibility, and learner satisfaction.  
 - **Community leadership**: Invited speaker for instructional design seminars at Old Dominion University, Boise State University, and Purdue’s P-12 Conference.  
 - **Award-winning collaborations**: Intel Labs partnership on collaborative problem solving in conversational AI earned the AECT Outstanding Publication Award and informs K–12 teacher preparation modules.
-
----
 
 *Interested in visuals from recent workshops or community events? Let me know which stories resonate and I can add the corresponding photo essays to this page.*

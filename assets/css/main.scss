@@ -1256,3 +1256,50 @@ html.mobile-nav-lock {
     padding: 0.6rem 0;
   }
 }
+
+/* ── Consistent h2 section headings across all content pages ──────────────
+   Applies to teaching, service, grants, presentations, etc. (plain markdown ##)
+   Publications overrides via .pub-section h2; Research uses .rn-heading (<p>).
+   ─────────────────────────────────────────────────────────────────────────── */
+.page__content h2 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #999;
+  border-bottom: none;
+  margin: 48px 0 16px;
+  padding: 0;
+}
+
+/* h3 sub-headings (e.g. institution names in teaching page) */
+.page__content h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  margin: 28px 0 8px;
+  border-bottom: none;
+}
+
+/* Restore publications' own h2 style (more specific than .page__content h2) */
+.pub-section h2 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #111 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  padding-bottom: 8px !important;
+  border-bottom: 2px solid #eee !important;
+  margin: 0 0 10px !important;
+}
+
+/* Pub timeline heading */
+.pub-timeline h2 {
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+  color: #aaa !important;
+  border-bottom: none !important;
+  margin: 44px 0 14px !important;
+  padding: 0 !important;
+}

@@ -144,7 +144,7 @@ title: "Publications"
   font-size: 11px;
   font-weight: 700;
   padding: 2px 8px;
-  border-radius: 3px;
+  border-radius: 10px;
   text-decoration: none;
   letter-spacing: 0.02em;
 }

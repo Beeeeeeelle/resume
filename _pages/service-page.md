@@ -7,8 +7,6 @@ permalink: /service/
 
 I view service as a chance to translate research into shared capacity. Whether I am reviewing scholarship, facilitating workshops, or building student leadership pipelines, I focus on advancing equitable, evidence-based learning experiences and strengthening communities of practice across institutions.
 
----
-
 ## Invited Talks & Workshops
 
 <div class="teaching-highlight service-highlight">
@@ -24,8 +22,6 @@ I view service as a chance to translate research into shared capacity. Whether I
     <img src="/assets/Service/invite talk poster.png" alt="Poster for Belle Li's invited talk at Old Dominion University's Instructional Design and Technology program" loading="lazy">
   </figure>
 </div>
-
----
 
 ## Editorial & Peer Review
 
@@ -63,16 +59,12 @@ I view service as a chance to translate research into shared capacity. Whether I
   </div>
 </div>
 
----
-
 ## Professional Leadership & Membership
 
 - **Marketing &amp; Communications Lead**, Purdue Association of Learning Design &amp; Technology (PALDT), 2024–2025.  
 - **Member**, Association for Educational Communications &amp; Technology (AECT).  
 - **Member**, American Educational Research Association (AERA).  
 - **Community mentor**, ConnectEd research collective (global Chinese academic network).  
-
----
 
 ## Service Highlights
 
@@ -91,4 +83,3 @@ I view service as a chance to translate research into shared capacity. Whether I
   </figure>
 </div>
 
----
