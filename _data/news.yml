@@ -1,0 +1,36 @@
+# News & Activity feed
+# Add new items at the TOP of this list (newest first)
+# Fields:
+#   date:    "Mar 2025"
+#   type:    award | paper | talk | event | grant | media
+#   text:    Main description (HTML allowed for links/bold)
+#   image:   /assets/images/news/filename.jpg   (optional)
+#   url:     https://...   (optional — makes the card clickable)
+
+- date: "Mar 2025"
+  type: paper
+  text: "New paper out in <em>System</em>: <strong>Development and Validation of the PA-SDA Scale</strong> — measuring personal attributes in AI-integrated self-directed learning."
+  url: https://doi.org/10.1016/j.system.2025.103793
+
+- date: "Feb 2025"
+  type: paper
+  text: "Systematic review published in <em>Computers & Education: AI</em>: <strong>Two Years of Innovation</strong> — synthesizing empirical GenAI research in education (2022–2024)."
+  url: https://doi.org/10.1016/j.caeai.2025.100445
+
+- date: "Jan 2025"
+  type: paper
+  text: "Paper accepted at <em>British Journal of Educational Technology</em>: nontraditional students' ChatGPT interaction, engagement, self-efficacy, and performance."
+  url: https://doi.org/10.1111/bjet.13588
+
+- date: "Oct 2024"
+  type: award
+  text: "Honored to receive the <strong>AECT Outstanding Publication Award</strong> for the Intel Labs collaborative problem-solving study."
+
+- date: "Aug 2024"
+  type: paper
+  text: "Paper published in <em>IEEE Transactions on Learning Technologies</em>: <strong>Reconceptualizing SDL in the Era of Generative AI</strong>."
+  url: https://doi.org/10.1109/TLT.2024.3386098
+
+- date: "2024"
+  type: grant
+  text: "Awarded <strong>Dean's Fellowship</strong> ($61,463) by Purdue's College of Education."

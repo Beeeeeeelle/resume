@@ -1,0 +1,134 @@
+<style>
+.news-section {
+  margin: 52px 0 0;
+}
+.news-section__heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.news-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.news-item:last-child {
+  border-bottom: none;
+}
+.news-item__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  width: 52px;
+}
+.news-item__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.news-icon--award  { background: #fff3cd; }
+.news-icon--paper  { background: #dce8fb; }
+.news-icon--talk   { background: #e8f5e9; }
+.news-icon--event  { background: #fce4ec; }
+.news-icon--grant  { background: #f3e5f5; }
+.news-icon--media  { background: #e0f7fa; }
+
+.news-item__date {
+  font-size: 10.5px;
+  color: #aaa;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+.news-item__body {
+  flex: 1;
+  min-width: 0;
+}
+.news-item__text {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #333;
+  margin: 0;
+}
+.news-item__text a {
+  color: #2a52a0;
+  text-decoration: none;
+}
+.news-item__text a:hover {
+  text-decoration: underline;
+}
+.news-item__img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+.news-item--linked {
+  cursor: pointer;
+  transition: background 0.15s;
+  border-radius: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: -6px;
+  margin-right: -6px;
+}
+.news-item--linked:hover {
+  background: #f7f9fd;
+}
+</style>
+
+{% assign icon_map_award = "🏆" %}
+{% assign icon_map_paper = "📄" %}
+{% assign icon_map_talk  = "🎤" %}
+{% assign icon_map_event = "🎉" %}
+{% assign icon_map_grant = "💰" %}
+{% assign icon_map_media = "📰" %}
+
+<section class="news-section">
+  <h2 class="news-section__heading">News &amp; Activity</h2>
+  <ul class="news-list">
+    {% for item in site.data.news %}
+    <li class="news-item{% if item.url %} news-item--linked{% endif %}"
+      {% if item.url %}onclick="window.open('{{ item.url }}','_blank')"{% endif %}>
+      <div class="news-item__left">
+        <div class="news-item__icon news-icon--{{ item.type }}">
+          {% if item.type == "award"  %}🏆
+          {% elsif item.type == "paper"  %}📄
+          {% elsif item.type == "talk"   %}🎤
+          {% elsif item.type == "event"  %}🎉
+          {% elsif item.type == "grant"  %}🎓
+          {% elsif item.type == "media"  %}📰
+          {% else %}📌{% endif %}
+        </div>
+        <span class="news-item__date">{{ item.date }}</span>
+      </div>
+      <div class="news-item__body">
+        <p class="news-item__text">{{ item.text }}</p>
+      </div>
+      {% if item.image %}
+      <img class="news-item__img" src="{{ item.image }}" alt="">
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
