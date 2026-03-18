@@ -30,75 +30,91 @@ header:
   .rn-grid { grid-template-columns: 1fr; }
 }
 
+/* ── Strand card — new style ── */
 .rn-card {
-  border: 1px solid #e8e8e8;
-  border-top-width: 3px;
-  border-radius: 8px;
-  padding: 20px 18px 16px;
-  background: #fff;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+  border-radius: 18px;
+  padding: 28px 28px 22px;
+  overflow: hidden;
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
 }
 .rn-card:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  transform: translateY(-3px);
 }
 
-/* Accent colours per strand */
-.rn-card--1 { border-top-color: #3d6cb5; }
-.rn-card--2 { border-top-color: #b04468; }
-.rn-card--3 { border-top-color: #2e7a5a; }
-.rn-card--4 { border-top-color: #8a6020; }
+/* Per-strand tinted backgrounds */
+.rn-card--1 { background: #eaeff9; }
+.rn-card--2 { background: #faecf2; }
+.rn-card--3 { background: #e8f4ee; }
+.rn-card--4 { background: #f8f0e4; }
 
-.rn-card__num {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #bbb;
-  margin: 0 0 7px;
-}
-.rn-card--1 .rn-card__num { color: #3d6cb5; }
-.rn-card--2 .rn-card__num { color: #b04468; }
-.rn-card--3 .rn-card__num { color: #2e7a5a; }
-.rn-card--4 .rn-card__num { color: #8a6020; }
-
-.rn-card h3 {
+/* Circle accent — top-right decorative number */
+.rn-card__circle {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Lora, serif;
   font-size: 15px;
   font-weight: 700;
-  color: #111;
-  margin: 0 0 9px;
-  line-height: 1.35;
+  line-height: 1;
 }
+.rn-card--1 .rn-card__circle { background: rgba(61,108,181,0.14); color: #3d6cb5; }
+.rn-card--2 .rn-card__circle { background: rgba(176,68,104,0.14); color: #b04468; }
+.rn-card--3 .rn-card__circle { background: rgba(46,122,90,0.14);  color: #2e7a5a; }
+.rn-card--4 .rn-card__circle { background: rgba(138,96,32,0.14);  color: #8a6020; }
+
+/* Large serif title */
+.rn-card h3 {
+  font-family: Lora, serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 12px;
+  padding-right: 60px; /* clear the circle */
+}
+.rn-card--1 h3 { color: #1a3262; }
+.rn-card--2 h3 { color: #5c1a32; }
+.rn-card--3 h3 { color: #1a4a30; }
+.rn-card--4 h3 { color: #4a2c08; }
+
 .rn-card p {
   font-size: 13.5px;
-  line-height: 1.65;
+  line-height: 1.68;
   color: #555;
-  margin: 0 0 13px;
+  margin: 0 0 16px;
 }
 
 /* ── Pill-style paper links ── */
 .rn-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 6px;
 }
 .rn-pill {
   display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 9px;
-  border-radius: 10px;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: 20px;
   text-decoration: none;
   letter-spacing: 0.01em;
-  transition: opacity 0.15s;
+  transition: opacity 0.15s, transform 0.15s;
+  background: rgba(255,255,255,0.72);
 }
-.rn-pill:hover { opacity: 0.75; }
+.rn-pill:hover { opacity: 0.85; transform: translateY(-1px); }
 
-/* Pill tints matching strand accent */
-.rn-card--1 .rn-pill { background: #eaf0fb; color: #2a52a0; }
-.rn-card--2 .rn-pill { background: #fce8f0; color: #902040; }
-.rn-card--3 .rn-pill { background: #e6f4ee; color: #1e6040; }
-.rn-card--4 .rn-pill { background: #faf0e0; color: #6a4010; }
+/* Pill text colors per strand */
+.rn-card--1 .rn-pill { color: #2a52a0; }
+.rn-card--2 .rn-pill { color: #902040; }
+.rn-card--3 .rn-pill { color: #1e6040; }
+.rn-card--4 .rn-pill { color: #6a4010; }
 
 /* ── Projects section ── */
 .projects-section {
@@ -177,7 +193,7 @@ header:
 <div class="rn-grid">
 
   <div class="rn-card rn-card--1">
-    <div class="rn-card__num">01</div>
+    <div class="rn-card__circle">01</div>
     <h3>Generative AI Systems</h3>
     <p>I map the landscape of AI tools in education through large-scale systematic reviews, tracking how ChatGPT and allied models have been studied from 2022 to the present. My reviews synthesize design implications, methodological gaps, and emerging pedagogical theories across more than 200 primary studies.</p>
     <div class="rn-pills">
@@ -188,7 +204,7 @@ header:
   </div>
 
   <div class="rn-card rn-card--2">
-    <div class="rn-card__num">02</div>
+    <div class="rn-card__circle">02</div>
     <h3>Learner–AI Interaction</h3>
     <p>I examine how learners actively engage with, adapt to, and make meaning from generative AI tools — through netnography of YouTube educators, collaborative problem-solving studies, and longitudinal interaction data. I pay particular attention to how social and motivational dynamics shift when an AI becomes a learning partner.</p>
     <div class="rn-pills">
@@ -199,7 +215,7 @@ header:
   </div>
 
   <div class="rn-card rn-card--3">
-    <div class="rn-card__num">03</div>
+    <div class="rn-card__circle">03</div>
     <h3>Learning Processes</h3>
     <p>My instrument development work operationalizes the cognitive and affective processes underlying AI-integrated self-directed learning. I developed and validated the PA-SDA scale — measuring personal attributes that predict effective SDL with AI — and proposed a reconceptualized SDL framework for the GenAI era.</p>
     <div class="rn-pills">
@@ -210,7 +226,7 @@ header:
   </div>
 
   <div class="rn-card rn-card--4">
-    <div class="rn-card__num">04</div>
+    <div class="rn-card__circle">04</div>
     <h3>Outcomes &amp; Equity</h3>
     <p>I investigate whether AI tools produce equitable learning outcomes — and for whom. Studies in this strand track academic writing gains for learners from low-income backgrounds, examine performance and self-efficacy for nontraditional college students, and evaluate culturally-responsive professional development designs.</p>
     <div class="rn-pills">
