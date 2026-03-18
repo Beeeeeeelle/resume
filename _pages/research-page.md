@@ -30,26 +30,46 @@ header:
   .rn-grid { grid-template-columns: 1fr; }
 }
 
-/* ── Strand card — new style ── */
+/* ── Strand card — dark premium + gradient blob ── */
 .rn-card {
   position: relative;
-  border-radius: 18px;
-  padding: 28px 28px 22px;
+  border-radius: 20px;
+  padding: 30px 28px 24px;
   overflow: hidden;
-  transition: box-shadow 0.22s ease, transform 0.22s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .rn-card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.38);
+  transform: translateY(-4px);
 }
 
-/* Per-strand tinted backgrounds */
-.rn-card--1 { background: #eaeff9; }
-.rn-card--2 { background: #faecf2; }
-.rn-card--3 { background: #e8f4ee; }
-.rn-card--4 { background: #f8f0e4; }
+/* Dark + radial blob gradient per strand */
+.rn-card--1 {
+  background:
+    radial-gradient(ellipse at 15% 25%, rgba(123,156,200,0.60) 0%, transparent 52%),
+    radial-gradient(ellipse at 80% 75%, rgba(61,108,181,0.28) 0%, transparent 48%),
+    #0c1b3a;
+}
+.rn-card--2 {
+  background:
+    radial-gradient(ellipse at 15% 25%, rgba(200,134,142,0.60) 0%, transparent 52%),
+    radial-gradient(ellipse at 80% 75%, rgba(176,68,104,0.28) 0%, transparent 48%),
+    #280c18;
+}
+.rn-card--3 {
+  background:
+    radial-gradient(ellipse at 15% 25%, rgba(130,184,150,0.60) 0%, transparent 52%),
+    radial-gradient(ellipse at 80% 75%, rgba(46,122,90,0.28) 0%, transparent 48%),
+    #091b0e;
+}
+.rn-card--4 {
+  background:
+    radial-gradient(ellipse at 15% 25%, rgba(220,178,90,0.55) 0%, transparent 52%),
+    radial-gradient(ellipse at 80% 75%, rgba(138,96,32,0.28) 0%, transparent 48%),
+    #1a0e04;
+}
 
-/* Circle accent — top-right decorative number */
+/* Circle accent — frosted glass */
 .rn-card__circle {
   position: absolute;
   top: 18px;
@@ -64,30 +84,30 @@ header:
   font-size: 15px;
   font-weight: 700;
   line-height: 1;
+  background: rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.14);
 }
-.rn-card--1 .rn-card__circle { background: rgba(61,108,181,0.14); color: #3d6cb5; }
-.rn-card--2 .rn-card__circle { background: rgba(176,68,104,0.14); color: #b04468; }
-.rn-card--3 .rn-card__circle { background: rgba(46,122,90,0.14);  color: #2e7a5a; }
-.rn-card--4 .rn-card__circle { background: rgba(138,96,32,0.14);  color: #8a6020; }
 
-/* Large serif title */
+/* Large serif title — white */
 .rn-card h3 {
   font-family: Lora, serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 1.25;
   margin: 0 0 12px;
-  padding-right: 60px; /* clear the circle */
+  padding-right: 60px;
+  color: #ffffff;
 }
-.rn-card--1 h3 { color: #1a3262; }
-.rn-card--2 h3 { color: #5c1a32; }
-.rn-card--3 h3 { color: #1a4a30; }
-.rn-card--4 h3 { color: #4a2c08; }
+
+/* Override per-strand colors (all white on dark bg) */
+.rn-card--1 h3, .rn-card--2 h3,
+.rn-card--3 h3, .rn-card--4 h3 { color: #ffffff; }
 
 .rn-card p {
   font-size: 13.5px;
   line-height: 1.68;
-  color: #555;
+  color: rgba(255,255,255,0.68);
   margin: 0 0 16px;
 }
 
@@ -101,20 +121,24 @@ header:
   display: inline-block;
   font-size: 11.5px;
   font-weight: 600;
-  padding: 4px 11px;
+  padding: 4px 12px;
   border-radius: 20px;
   text-decoration: none;
   letter-spacing: 0.01em;
-  transition: opacity 0.15s, transform 0.15s;
-  background: rgba(255,255,255,0.72);
+  transition: background 0.18s, transform 0.18s;
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.88);
+  border: 1px solid rgba(255,255,255,0.18);
 }
-.rn-pill:hover { opacity: 0.85; transform: translateY(-1px); }
-
-/* Pill text colors per strand */
-.rn-card--1 .rn-pill { color: #2a52a0; }
-.rn-card--2 .rn-pill { color: #902040; }
-.rn-card--3 .rn-pill { color: #1e6040; }
-.rn-card--4 .rn-pill { color: #6a4010; }
+.rn-pill:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateY(-1px);
+}
+/* Override per-strand pill colors */
+.rn-card--1 .rn-pill, .rn-card--2 .rn-pill,
+.rn-card--3 .rn-pill, .rn-card--4 .rn-pill {
+  color: rgba(255,255,255,0.88);
+}
 
 /* ── Projects section ── */
 .projects-section {
