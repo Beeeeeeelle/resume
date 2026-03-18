@@ -177,6 +177,220 @@ title: "Publications"
 }
 </style>
 
+<!-- ── TIMELINE ── -->
+<style>
+.pub-timeline {
+  margin-bottom: 40px;
+}
+.pub-timeline h3 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #aaa;
+  margin: 0 0 16px;
+}
+.ptl-wrap {
+  overflow-x: auto;
+}
+.ptl-grid {
+  display: grid;
+  grid-template-columns: 110px repeat(5, 1fr);
+  gap: 0;
+  min-width: 480px;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.ptl-header {
+  background: #f5f6f8;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #666;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+.ptl-header:not(:last-child) { border-right: 1px solid #e8e8e8; }
+.ptl-label {
+  padding: 10px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #555;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #e8e8e8;
+}
+.ptl-label--first { border-bottom: 1px solid #e8e8e8; }
+.ptl-cell {
+  padding: 8px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  border-right: 1px solid #e8e8e8;
+}
+.ptl-cell:last-child { border-right: none; }
+.ptl-cell--first { border-bottom: 1px solid #e8e8e8; }
+
+/* Publication squares */
+.ptl-pub {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 800;
+  color: #fff;
+  cursor: default;
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: center;
+}
+.ptl-pub:hover { transform: scale(1.15); z-index: 10; }
+
+/* Venue colours */
+.v-tlt     { background: #2a52a0; }
+.v-caeai   { background: #7a52a0; }
+.v-system  { background: #2a7aa0; }
+.v-bjet    { background: #2a7a4a; }
+.v-illt    { background: #c05020; }
+.v-tech    { background: #a05020; }
+.v-olj     { background: #20607a; }
+.v-lang    { background: #5a7a20; }
+.v-ijcallt { background: #7a7a20; }
+.v-springer{ background: #5a2080; }
+.v-jaid    { background: #808080; }
+.v-edusci  { background: #607060; }
+.v-jche    { background: #905050; }
+.v-book    { background: #4a3a20; }
+
+/* Legend */
+.ptl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 12px;
+}
+.ptl-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #555;
+}
+.ptl-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Tooltip */
+.ptl-pub::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 9px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 100;
+  max-width: 260px;
+  white-space: normal;
+  text-align: center;
+  font-family: sans-serif;
+  letter-spacing: 0;
+}
+.ptl-pub:hover::after { opacity: 1; }
+</style>
+
+<div class="pub-timeline">
+  <h3>Publications at a glance</h3>
+  <div class="ptl-wrap">
+  <div class="ptl-grid">
+    <!-- Header row -->
+    <div class="ptl-header" style="text-align:left"></div>
+    <div class="ptl-header">2021</div>
+    <div class="ptl-header">2022</div>
+    <div class="ptl-header">2023</div>
+    <div class="ptl-header">2024</div>
+    <div class="ptl-header">2025</div>
+
+    <!-- Row 1: First / corresponding author -->
+    <div class="ptl-label ptl-label--first">First / corresp.</div>
+    <div class="ptl-cell ptl-cell--first">
+      <span class="ptl-pub v-book" data-tip="Li & Li (2021) · Techniques of Teaching English · Zhejiang Univ. Press">BK</span>
+    </div>
+    <div class="ptl-cell ptl-cell--first"></div>
+    <div class="ptl-cell ptl-cell--first">
+      <span class="ptl-pub v-ijcallt" data-tip="Li et al. (2023) · ChatGPT affordances in YouTuber videos · IJCALLT">IJ</span>
+      <span class="ptl-pub v-lang"    data-tip="Li et al. (2023) · YouTube content creation & ChatGPT · Languages">La</span>
+      <a class="ptl-pub v-olj"    href="https://doi.org/10.24059/olj.v27i4.4003" target="_blank" data-tip="Pawan, Li et al. (2023) · Culturally responsive online teacher PD · Online Learning Journal">OL</a>
+    </div>
+    <div class="ptl-cell ptl-cell--first">
+      <a class="ptl-pub v-tlt"   href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" data-tip="Li et al. (2024) · Reconceptualizing SDL in the GenAI era · IEEE TLT">TL</a>
+      <a class="ptl-pub v-caeai" href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" data-tip="Li et al. (2024) · First year of ChatGPT in education · CAEAI">CA</a>
+      <a class="ptl-pub v-tech"  href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" data-tip="Li et al. (2024) · SDL with GenAI: YouTube creators · TechTrends">TT</a>
+      <a class="ptl-pub v-springer" href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" data-tip="Li & Lowell (2024) · TicApp: Design thinking for diverse learners · Springer">Sp</a>
+    </div>
+    <div class="ptl-cell ptl-cell--first">
+      <a class="ptl-pub v-system" href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" data-tip="Li et al. (2025) · PA-SDA Scale development & validation · System">Sy</a>
+      <a class="ptl-pub v-caeai"  href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" data-tip="Li et al. (2025) · Two years of GenAI in education: Systematic review · CAEAI">CA</a>
+      <a class="ptl-pub v-illt"   href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" data-tip="Li & Hikmatilla (2025) · EduTubers on social media · ILLT">IL</a>
+    </div>
+
+    <!-- Row 2: Co-authored -->
+    <div class="ptl-label">Co-authored</div>
+    <div class="ptl-cell"></div>
+    <div class="ptl-cell"></div>
+    <div class="ptl-cell">
+      <span class="ptl-pub v-ijcallt" data-tip="Bao & Li (2023) · Graduate instructors' use of ChatGPT · IJCALLT">IJ</span>
+      <span class="ptl-pub v-lang"    data-tip="Li X., Li B., & Cho (2023) · Low-income learners & ChatGPT writing · Languages">La</span>
+    </div>
+    <div class="ptl-cell">
+      <span class="ptl-pub v-springer" data-tip="Crum, Li, & Kou (2024) · GenAI & vocabulary acquisition · HCI International / Springer">Sp</span>
+    </div>
+    <div class="ptl-cell">
+      <a class="ptl-pub v-bjet"    href="https://doi.org/10.1111/bjet.13588" target="_blank" data-tip="Yang, Li et al. (2025) · Nontraditional students & ChatGPT · BJET">BJ</a>
+      <a class="ptl-pub v-caeai"   href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" data-tip="Aslan, Li et al. (2025) · Collaborative problem solving in AI environments · CAEAI">CA</a>
+      <span class="ptl-pub v-edusci"  data-tip="Yan, Li, & Lowell (2025) · AI & XR in education: SLR · Education Sciences">ES</span>
+      <span class="ptl-pub v-edusci"  data-tip="Yang, Lovett, Li, & Hou (2025) · AI agents & workplace performance · Education Sciences">ES</span>
+      <span class="ptl-pub v-jaid"    data-tip="Lovett, Li et al. (2025) · LLMs for learner personas · JAID">JA</span>
+      <span class="ptl-pub v-edusci"  data-tip="Li X., Li B., Li J., & Cho (2025) · Magic School AI review · Education Sciences">ES</span>
+      <span class="ptl-pub v-jche"    data-tip="Yang, Luo, Herman, Li et al. (in press) · Non-traditional learners & ChatGPT design · JCHE">JC</span>
+    </div>
+  </div>
+  </div>
+
+  <div class="ptl-legend">
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-tlt"></div>IEEE TLT</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-caeai"></div>CAEAI</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-system"></div>System</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-bjet"></div>BJET</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-illt"></div>ILLT</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-tech"></div>TechTrends</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-olj"></div>OLJ</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-lang"></div>Languages</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-springer"></div>Springer</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-edusci"></div>Edu. Sciences</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-book"></div>Book</div>
+  </div>
+</div>
+
 <!-- ── METRICS ── -->
 <div class="pub-metrics">
   <div class="pub-metric">
