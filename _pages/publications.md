@@ -10,7 +10,6 @@ title: "Publications"
   gap: 28px;
   flex-wrap: wrap;
   padding: 18px 0 28px;
-  border-bottom: 2px solid #eee;
   margin-bottom: 36px;
 }
 .pub-metric {
@@ -31,21 +30,6 @@ title: "Publications"
   color: #888;
   margin-top: 4px;
 }
-.pub-first-note {
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 0;
-  align-self: center;
-}
-.pub-first-note span {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #e05a2b;
-  border-radius: 50%;
-  margin-right: 5px;
-  vertical-align: middle;
-}
 
 /* ── Section headings ── */
 .pub-section {
@@ -57,7 +41,22 @@ title: "Publications"
   color: #111;
   padding-bottom: 8px;
   border-bottom: 2px solid #eee;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
+}
+.pub-first-note {
+  font-size: 12.5px;
+  color: #777;
+  margin: 0 0 22px;
+  font-style: italic;
+}
+.pub-first-note span {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #e05a2b;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
 }
 .pub-year {
   font-size: 13px;
@@ -80,36 +79,38 @@ title: "Publications"
   .bl-pcard__thumb { width: 100% !important; max-height: 200px; object-fit: cover; }
 }
 .bl-pcard__thumb {
-  flex: 0 0 160px;
-  width: 160px;
-  max-width: 160px;
+  flex: 0 0 180px;
+  width: 180px;
+  max-width: 180px;
   border-radius: 5px;
-  object-fit: cover;
+  object-fit: contain;
   border: 1px solid #e8e8e8;
   display: block;
+  background: #fafafa;
 }
 .bl-pcard__thumb--gif {
-  flex: 0 0 160px;
-  width: 160px;
-  max-width: 160px;
+  flex: 0 0 180px;
+  width: 180px;
+  max-width: 180px;
   border-radius: 5px;
   border: 1px solid #e8e8e8;
+  background: #fafafa;
 }
 .bl-pcard__body { flex: 1; min-width: 0; }
 .bl-pcard__title {
-  font-size: 15px;
-  font-weight: 700;
-  color: #111;
-  margin: 0 0 5px;
-  line-height: 1.45;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #111 !important;
+  margin: 0 0 5px !important;
+  line-height: 1.45 !important;
 }
 .bl-pcard__authors {
-  font-size: 13px;
+  font-size: 13.5px;
   color: #555;
   margin: 0 0 4px;
 }
 .bl-pcard__venue {
-  font-size: 12.5px;
+  font-size: 13px;
   color: #777;
   font-style: italic;
   margin: 0 0 10px;
@@ -128,20 +129,20 @@ title: "Publications"
 }
 .pub-entry__dot {
   flex-shrink: 0;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   background: #e05a2b;
   border-radius: 50%;
-  margin-top: 5px;
+  margin-top: 6px;
 }
 .pub-entry__dot--empty {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   flex-shrink: 0;
-  margin-top: 5px;
+  margin-top: 6px;
 }
 .pub-entry__body {
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.7;
   color: #333;
 }
@@ -198,9 +199,9 @@ title: "Publications"
 }
 .ptl-grid {
   display: grid;
-  grid-template-columns: 110px repeat(5, 1fr);
+  grid-template-columns: 110px repeat(4, 1fr);
   gap: 0;
-  min-width: 480px;
+  min-width: 420px;
   border: 1px solid #e8e8e8;
   border-radius: 6px;
   overflow: hidden;
@@ -325,20 +326,15 @@ title: "Publications"
   <h3>Publications at a glance</h3>
   <div class="ptl-wrap">
   <div class="ptl-grid">
-    <!-- Header row -->
+    <!-- Header row: 2023–2026 -->
     <div class="ptl-header" style="text-align:left"></div>
-    <div class="ptl-header">2021</div>
-    <div class="ptl-header">2022</div>
     <div class="ptl-header">2023</div>
     <div class="ptl-header">2024</div>
     <div class="ptl-header">2025</div>
+    <div class="ptl-header">2026</div>
 
     <!-- Row 1: First / corresponding author -->
     <div class="ptl-label ptl-label--first">First / corresp.</div>
-    <div class="ptl-cell ptl-cell--first">
-      <span class="ptl-pub v-book" data-tip="Li & Li (2021) · Techniques of Teaching English · Zhejiang Univ. Press">BK</span>
-    </div>
-    <div class="ptl-cell ptl-cell--first"></div>
     <div class="ptl-cell ptl-cell--first">
       <span class="ptl-pub v-ijcallt" data-tip="Li et al. (2023) · ChatGPT affordances in YouTuber videos · IJCALLT">IJ</span>
       <span class="ptl-pub v-lang"    data-tip="Li et al. (2023) · YouTube content creation & ChatGPT · Languages">La</span>
@@ -355,11 +351,12 @@ title: "Publications"
       <a class="ptl-pub v-caeai"  href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" data-tip="Li et al. (2025) · Two years of GenAI in education: Systematic review · CAEAI">CA</a>
       <a class="ptl-pub v-illt"   href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" data-tip="Li & Hikmatilla (2025) · EduTubers on social media · ILLT">IL</a>
     </div>
+    <div class="ptl-cell ptl-cell--first">
+      <a class="ptl-pub v-book" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" data-tip="Li & Lowell (2026) · AI-generation literacy · Palgrave Encyclopedia of CALL">Pa</a>
+    </div>
 
     <!-- Row 2: Co-authored -->
     <div class="ptl-label">Co-authored</div>
-    <div class="ptl-cell"></div>
-    <div class="ptl-cell"></div>
     <div class="ptl-cell">
       <span class="ptl-pub v-ijcallt" data-tip="Bao & Li (2023) · Graduate instructors' use of ChatGPT · IJCALLT">IJ</span>
       <span class="ptl-pub v-lang"    data-tip="Li X., Li B., & Cho (2023) · Low-income learners & ChatGPT writing · Languages">La</span>
@@ -376,6 +373,7 @@ title: "Publications"
       <span class="ptl-pub v-edusci"  data-tip="Li X., Li B., Li J., & Cho (2025) · Magic School AI review · Education Sciences">ES</span>
       <span class="ptl-pub v-jche"    data-tip="Yang, Luo, Herman, Li et al. (in press) · Non-traditional learners & ChatGPT design · JCHE">JC</span>
     </div>
+    <div class="ptl-cell"></div>
   </div>
   </div>
 
@@ -390,7 +388,7 @@ title: "Publications"
     <div class="ptl-legend-item"><div class="ptl-legend-dot v-lang"></div>Languages</div>
     <div class="ptl-legend-item"><div class="ptl-legend-dot v-springer"></div>Springer</div>
     <div class="ptl-legend-item"><div class="ptl-legend-dot v-edusci"></div>Edu. Sciences</div>
-    <div class="ptl-legend-item"><div class="ptl-legend-dot v-book"></div>Book</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-book"></div>Book / Chapter</div>
   </div>
 </div>
 
@@ -408,7 +406,6 @@ title: "Publications"
     <span class="pub-metric__number">13</span>
     <span class="pub-metric__label">First-author papers</span>
   </div>
-  <p class="pub-first-note"><span></span> First / corresponding author</p>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════ -->
@@ -416,6 +413,7 @@ title: "Publications"
 <!-- ══════════════════════════════════════════════════════════ -->
 <section class="pub-section">
 <h2>Peer-Reviewed Journal Articles</h2>
+<p class="pub-first-note"><span></span> First / corresponding author</p>
 
 <p class="pub-year">2025</p>
 
@@ -640,6 +638,17 @@ title: "Publications"
 <section class="pub-section">
 <h2>Book Chapters</h2>
 
+<!-- AI-generation literacy — Palgrave 2026 -->
+<div class="pub-entry">
+  <span class="pub-entry__dot"></span>
+  <div class="pub-entry__body">
+    <strong>Li, B.</strong>, &amp; Lowell, V. (2026). AI-generation literacy. In L. McCallum &amp; D. Tafazoli (Eds.), <em>The Palgrave Encyclopedia of Computer-Assisted Language Learning</em>. Palgrave Macmillan.
+    <div class="pub-tags">
+      <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" rel="noopener">DOI</a>
+    </div>
+  </div>
+</div>
+
 <!-- TicApp — with animated gif thumbnail + project page link -->
 <div class="bl-pcard">
   <img class="bl-pcard__thumb bl-pcard__thumb--gif" src="/assets/images/publications/ticapp.gif" alt="TicApp mobile app demo">
@@ -721,16 +730,6 @@ title: "Publications"
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
     Li, X., Cho, S., &amp; <strong>Li, B.</strong> Impact of AI on language teaching pedagogy: A participatory action research study. In S. Wyatt (Ed.), <em>Emerging Technologies in Second Language Teaching and Learning</em>. Vernon Press. <span class="pub-status">Minor revision</span>
-  </div>
-</div>
-
-<div class="pub-entry">
-  <span class="pub-entry__dot"></span>
-  <div class="pub-entry__body">
-    <strong>Li, B.</strong>, &amp; Lowell, V. (2026). AI-generation literacy. In L. McCallum &amp; D. Tafazoli (Eds.), <em>The Palgrave Encyclopedia of Computer-Assisted Language Learning</em>. Palgrave Macmillan.
-    <div class="pub-tags">
-      <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" rel="noopener">DOI</a>
-    </div>
   </div>
 </div>
 
