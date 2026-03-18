@@ -120,27 +120,37 @@
         </radialGradient>
       </defs>
 
-      <!-- ══ 1. HIT ZONES — lowest z-order so tags above receive clicks ══ -->
-      <rect class="rv-hit" data-zone="c" fill="transparent" cursor="default"
-            x="182" y="432" width="486" height="140"/>
-      <rect class="rv-hit" data-zone="a" fill="transparent" cursor="default"
-            x="38"  y="32"  width="292" height="400"/>
-      <rect class="rv-hit" data-zone="b" fill="transparent" cursor="default"
-            x="570" y="32"  width="232" height="400"/>
+      <!-- ══ 1. HIT ZONES — full blob-shaped paths, lowest z-order ══
+           Using fill="rgba(0,0,0,0.001)" (not "transparent" or "none")
+           guarantees the painted region is hit-testable in all browsers.
+           Order: C first, B second, A last — so in overlaps, A > B > C wins.
+      ══ -->
+      <path class="rv-hit" data-zone="c" cursor="default"
+            fill="rgba(0,0,0,0.001)" stroke="none"
+            d="M 426,246 C 562,237 670,285 668,402 C 666,503 562,565 426,565
+               C 290,565 184,503 182,402 C 180,294 290,254 426,246 Z"/>
+      <path class="rv-hit" data-zone="b" cursor="default"
+            fill="rgba(0,0,0,0.001)" stroke="none"
+            d="M 572,32 C 710,21 809,107 801,228 C 793,345 715,428 572,432
+               C 429,437 334,349 330,228 C 326,96 435,43 572,32 Z"/>
+      <path class="rv-hit" data-zone="a" cursor="default"
+            fill="rgba(0,0,0,0.001)" stroke="none"
+            d="M 280,32 C 418,21 517,107 509,228 C 501,345 423,428 280,432
+               C 137,437 42,349 38,228 C 34,96 143,43 280,32 Z"/>
 
       <!-- ══ 2. BLOBS — JS animates 'transform' attr; no CSS transform ══ -->
       <!-- blob-a center (280,232) · blob-b center (572,232) · blob-c center (426,405) -->
-      <g class="blob-a">
+      <g class="blob-a" pointer-events="none">
         <path style="mix-blend-mode:multiply" fill="url(#rg-a)"
           d="M 280,32 C 418,21 517,107 509,228 C 501,345 423,428 280,432
              C 137,437 42,349 38,228 C 34,96 143,43 280,32 Z"/>
       </g>
-      <g class="blob-b">
+      <g class="blob-b" pointer-events="none">
         <path style="mix-blend-mode:multiply" fill="url(#rg-b)"
           d="M 572,32 C 710,21 809,107 801,228 C 793,345 715,428 572,432
              C 429,437 334,349 330,228 C 326,96 435,43 572,32 Z"/>
       </g>
-      <g class="blob-c">
+      <g class="blob-c" pointer-events="none">
         <path style="mix-blend-mode:multiply" fill="url(#rg-c)"
           d="M 426,246 C 562,237 670,285 668,402 C 666,503 562,565 426,565
              C 290,565 184,503 182,402 C 180,294 290,254 426,246 Z"/>
