@@ -1,11 +1,18 @@
-# News & Activity feed
-# Add new items at the TOP of this list (newest first)
-# Fields:
-#   date:    "Mar 2025"
-#   type:    award | paper | talk | event | grant | media
-#   text:    Main description (HTML allowed for links/bold)
-#   image:   /assets/images/news/filename.jpg   (optional)
-#   url:     https://...   (optional — makes the card clickable)
+# News & Activity feed — newest first
+# Types: award | paper | talk | event | grant | media
+
+- date: "Mar 2026"
+  type: paper
+  text: "Our chapter <strong>\"AI-Generation Literacy\"</strong> is now published in <em>The Palgrave Encyclopedia of Computer-Assisted Language Learning</em>. We introduce a 4I framework (Identify, Interact, Interpret, Integrate) for building AI-generation literacy competencies."
+  url: https://doi.org/10.1007/978-3-031-51447-0_260-1
+
+- date: "Feb 2026"
+  type: talk
+  text: "Invited to speak at two venues on <strong>Conducting Systematic Reviews</strong>: Purdue's Psychometric Investigation Lab (PUPIL) workshop and the GIST Professional Development Series at Indiana University (Feb 19, online). Presented practical strategies, workflow insights, and tools for rigorous systematic review research."
+
+- date: "Feb 2026"
+  type: talk
+  text: "Guest lecture at IU's <em>R678: Emerging Learning Environments</em> alongside Dr. Xiaojing Kou and Dr. Curtis Bonk. Shared findings from multiple studies on GenAI and self-directed learning — from multilingual affordances to the PA-SDA Scale."
 
 - date: "Mar 2025"
   type: paper
@@ -14,7 +21,7 @@
 
 - date: "Feb 2025"
   type: paper
-  text: "Systematic review published in <em>Computers & Education: AI</em>: <strong>Two Years of Innovation</strong> — synthesizing empirical GenAI research in education (2022–2024)."
+  text: "Systematic review published in <em>Computers &amp; Education: AI</em>: <strong>Two Years of Innovation</strong> — synthesizing empirical GenAI research in education (2022–2024)."
   url: https://doi.org/10.1016/j.caeai.2025.100445
 
 - date: "Jan 2025"
@@ -24,7 +31,7 @@
 
 - date: "Oct 2024"
   type: award
-  text: "Honored to receive the <strong>AECT Outstanding Publication Award</strong> for the Intel Labs collaborative problem-solving study."
+  text: "Honored to receive the <strong>AECT Outstanding Publication Award</strong> for the Intel Labs collaborative problem-solving study (<em>Computers &amp; Education: AI</em>)."
 
 - date: "Aug 2024"
   type: paper
@@ -33,4 +40,4 @@
 
 - date: "2024"
   type: grant
-  text: "Awarded <strong>Dean's Fellowship</strong> ($61,463) by Purdue's College of Education."
+  text: "Awarded <strong>Dean's Fellowship</strong> ($61,463) by Purdue's College of Education in recognition of academic achievement and research potential."

@@ -727,7 +727,10 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, &amp; Lowell, V. AI-generation literacy. In L. McCallum &amp; D. Tafazoli (Eds.), <em>The Palgrave Encyclopedia of Computer-Assisted Language Learning</em>. <span class="pub-status">Third-round revision</span>
+    <strong>Li, B.</strong>, &amp; Lowell, V. (2026). AI-generation literacy. In L. McCallum &amp; D. Tafazoli (Eds.), <em>The Palgrave Encyclopedia of Computer-Assisted Language Learning</em>. Palgrave Macmillan.
+    <div class="pub-tags">
+      <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" rel="noopener">DOI</a>
+    </div>
   </div>
 </div>
 
