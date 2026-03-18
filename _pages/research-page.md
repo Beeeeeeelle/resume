@@ -163,12 +163,48 @@ header:
 .project-card {
   background: #f9fafb;
   border-radius: 8px;
-  padding: 18px 18px 14px;
   border: 1px solid #e8eaf0;
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 .project-card:hover {
   box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+}
+.project-card[open] {
+  background: #fff;
+  border-color: #d7deea;
+  box-shadow: 0 8px 24px rgba(17,24,39,0.08);
+}
+.project-card summary {
+  list-style: none;
+  cursor: pointer;
+}
+.project-card summary::-webkit-details-marker {
+  display: none;
+}
+.project-card__summary {
+  position: relative;
+  padding: 18px 48px 14px 18px;
+}
+.project-card__summary::after {
+  content: "+";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #d9deea;
+  color: #50627f;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+.project-card[open] .project-card__summary::after {
+  content: "-";
 }
 .project-card__tag {
   display: inline-block;
@@ -198,6 +234,21 @@ header:
   color: #555;
   margin: 0 0 10px;
 }
+.project-card__title {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.4;
+  margin-bottom: 7px;
+}
+.project-card__teaser {
+  display: block;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+}
 .project-card a.proj-link {
   font-size: 12px;
   color: #2a52a0;
@@ -209,6 +260,57 @@ header:
   font-size: 11.5px;
   color: #999;
   font-style: italic;
+}
+.project-card__hint {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7a879a;
+}
+.project-details {
+  padding: 0 18px 18px;
+  border-top: 1px solid #e8eaf0;
+}
+.project-details__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+@media (max-width: 640px) {
+  .project-details__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.project-details__item {
+  background: #f7f9fc;
+  border-radius: 8px;
+  padding: 12px;
+}
+.project-details__label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7a879a;
+}
+.project-details__item p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: #4e5968;
+}
+.project-details__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  margin-top: 14px;
 }
 </style>
 
@@ -267,33 +369,135 @@ header:
 <p class="projects-heading">Projects &amp; Collaborations</p>
 <div class="project-list">
 
-  <div class="project-card">
-    <span class="project-card__tag tag--collab">Industry Collaboration · Intel Labs</span>
-    <h3>Collaborative Problem Solving in AI-Mediated Environments</h3>
-    <p>Partnered with Intel Labs to investigate how learners engage in collaborative problem-solving when working alongside conversational AI. The study examines instructional design decisions, interaction patterns, and learning outcomes in controlled AI-mediated settings.</p>
-    <a class="proj-link" href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" rel="noopener">View publication →</a>
-  </div>
+  <details class="project-card">
+    <summary class="project-card__summary">
+      <span class="project-card__tag tag--collab">Industry Collaboration · Intel Labs</span>
+      <span class="project-card__title">Collaborative Problem Solving in AI-Mediated Environments</span>
+      <span class="project-card__teaser">Partnered with Intel Labs to investigate how learners engage in collaborative problem-solving when working alongside conversational AI. The study examines instructional design decisions, interaction patterns, and learning outcomes in controlled AI-mediated settings.</span>
+      <span class="project-card__hint">Click to expand</span>
+    </summary>
+    <div class="project-details">
+      <div class="project-details__grid">
+        <div class="project-details__item">
+          <span class="project-details__label">Research Focus</span>
+          <p>How conversational AI changes the way learners coordinate ideas, distribute roles, and negotiate solutions during joint problem-solving tasks.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Study Design</span>
+          <p>Industry-academic collaboration combining controlled learning tasks, interaction trace analysis, and outcome comparisons across AI-mediated group conditions.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Contribution</span>
+          <p>Identifies design moves that support productive collaboration with AI instead of letting the system dominate peer interaction.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Current Output</span>
+          <p>Peer-reviewed publication in Computers and Education: Artificial Intelligence documenting the collaboration framework and observed learner behaviors.</p>
+        </div>
+      </div>
+      <div class="project-details__footer">
+        <a class="proj-link" href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" rel="noopener">View publication →</a>
+        <span class="proj-status">Industry collaboration with Intel Labs</span>
+      </div>
+    </div>
+  </details>
 
-  <div class="project-card">
-    <span class="project-card__tag tag--dbr">Design-Based Research</span>
-    <h3>TicApp — Mobile Learning App for Diverse Learners</h3>
-    <p>A full-cycle design-based research project producing TicApp, a mobile application built with empathy-driven UX for underrepresented learner populations. Applies cognitive load principles and identity-aware design across iterative prototyping and classroom evaluation cycles.</p>
-    <a class="proj-link" href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" rel="noopener">View Springer design case →</a>
-  </div>
+  <details class="project-card">
+    <summary class="project-card__summary">
+      <span class="project-card__tag tag--dbr">Design-Based Research</span>
+      <span class="project-card__title">TicApp - Mobile Learning App for Diverse Learners</span>
+      <span class="project-card__teaser">A full-cycle design-based research project producing TicApp, a mobile application built with empathy-driven UX for underrepresented learner populations. Applies cognitive load principles and identity-aware design across iterative prototyping and classroom evaluation cycles.</span>
+      <span class="project-card__hint">Click to expand</span>
+    </summary>
+    <div class="project-details">
+      <div class="project-details__grid">
+        <div class="project-details__item">
+          <span class="project-details__label">Design Goal</span>
+          <p>Create a mobile learning experience that reduces friction for learners who are often underserved by mainstream educational interfaces.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Methods</span>
+          <p>Iterative prototyping, learner feedback cycles, classroom implementation, and design revision grounded in design-based research methodology.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Design Principles</span>
+          <p>Uses empathy-driven UX, cognitive load management, and identity-conscious interface decisions to support sustained use and accessibility.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Outcome</span>
+          <p>Resulted in a documented design case that connects app features, learner needs, and implementation decisions across multiple development cycles.</p>
+        </div>
+      </div>
+      <div class="project-details__footer">
+        <a class="proj-link" href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" rel="noopener">View Springer design case →</a>
+        <span class="proj-status">Completed DBR cycle</span>
+      </div>
+    </div>
+  </details>
 
-  <div class="project-card">
-    <span class="project-card__tag tag--design">AI System Design</span>
-    <h3>PeteChat — Guardrailed AI Tutoring Assistant</h3>
-    <p>A design-based research project developing PeteChat, an LLM-powered AI tutor built around a "Tutor, Not Solver" philosophy. The system uses guardrails and iterative classroom refinement to promote higher-order thinking while safeguarding academic integrity and data privacy.</p>
-    <span class="proj-status">Design case in preparation · 2025</span>
-  </div>
+  <details class="project-card">
+    <summary class="project-card__summary">
+      <span class="project-card__tag tag--design">AI System Design</span>
+      <span class="project-card__title">PeteChat - Guardrailed AI Tutoring Assistant</span>
+      <span class="project-card__teaser">A design-based research project developing PeteChat, an LLM-powered AI tutor built around a "Tutor, Not Solver" philosophy. The system uses guardrails and iterative classroom refinement to promote higher-order thinking while safeguarding academic integrity and data privacy.</span>
+      <span class="project-card__hint">Click to expand</span>
+    </summary>
+    <div class="project-details">
+      <div class="project-details__grid">
+        <div class="project-details__item">
+          <span class="project-details__label">System Philosophy</span>
+          <p>PeteChat is designed to scaffold reasoning and reflection rather than provide direct answers, preserving the learner's role in the problem-solving process.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Guardrails</span>
+          <p>Prompt and interaction constraints are used to discourage answer-giving, support academic integrity, and keep learner data handling within classroom-safe boundaries.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Implementation Cycle</span>
+          <p>Developed through iterative classroom pilots, instructor feedback, and refinements to align system behavior with real pedagogical needs.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Status</span>
+          <p>Design case and formal write-up are in preparation, with 2025 focused on documenting the tutoring logic, classroom deployment, and learner response patterns.</p>
+        </div>
+      </div>
+      <div class="project-details__footer">
+        <span class="proj-status">Design case in preparation · 2025</span>
+      </div>
+    </div>
+  </details>
 
-  <div class="project-card">
-    <span class="project-card__tag tag--diss">Dissertation · In Progress</span>
-    <h3>Global Learners &amp; GenAI: A Longitudinal Mixed-Methods Study</h3>
-    <p>My dissertation tracks how learners from diverse national and socioeconomic backgrounds engage with generative AI over time — integrating survey, interview, interaction log, and performance data to understand how AI-mediated learning evolves and diverges across populations.</p>
-    <span class="proj-status">Expected completion: 2026 · Advisors: Lowell &amp; Exter</span>
-  </div>
+  <details class="project-card">
+    <summary class="project-card__summary">
+      <span class="project-card__tag tag--diss">Dissertation · In Progress</span>
+      <span class="project-card__title">Global Learners &amp; GenAI: A Longitudinal Mixed-Methods Study</span>
+      <span class="project-card__teaser">My dissertation tracks how learners from diverse national and socioeconomic backgrounds engage with generative AI over time - integrating survey, interview, interaction log, and performance data to understand how AI-mediated learning evolves and diverges across populations.</span>
+      <span class="project-card__hint">Click to expand</span>
+    </summary>
+    <div class="project-details">
+      <div class="project-details__grid">
+        <div class="project-details__item">
+          <span class="project-details__label">Core Question</span>
+          <p>How learners from different linguistic, cultural, and socioeconomic backgrounds adopt generative AI over time, and where those trajectories meaningfully diverge.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Data Sources</span>
+          <p>Combines surveys, interviews, interaction traces, and learning performance data to capture both measurable change and lived learner experience.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Analytical Value</span>
+          <p>Designed to connect short-term tool use with longer-term patterns of motivation, self-direction, and educational opportunity across global learner populations.</p>
+        </div>
+        <div class="project-details__item">
+          <span class="project-details__label">Timeline</span>
+          <p>Expected completion in 2026 under the advising support of Lowell and Exter, with dissertation chapters centered on equity, process, and learner adaptation.</p>
+        </div>
+      </div>
+      <div class="project-details__footer">
+        <span class="proj-status">Expected completion: 2026 · Advisors: Lowell &amp; Exter</span>
+      </div>
+    </div>
+  </details>
 
 </div>
 </section>

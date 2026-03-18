@@ -3,7 +3,7 @@ permalink: /learning/
 title: "Design & Development"
 ---
 
-Learning and development work is where I build, test, and refine inclusive learning ecosystems. Below is a curated portfolio of recent design, facilitation, and evaluation projects. Every artifact is drawn from multi-phase initiatives described in my CV and grant proposals. For the full interactive portfolio, visit **[beeeeeeelle.github.io/portfolio/projects.html](https://beeeeeeelle.github.io/portfolio/projects.html){:target="_blank"}**.
+Learning and development work is where I build, test, and refine inclusive learning ecosystems. Below is a curated portfolio of recent design, facilitation, and evaluation projects. Every artifact is drawn from multi-phase initiatives described in my CV and grant proposals.
 
 ---
 
