@@ -97,23 +97,28 @@ title: "Publications"
   background: #fafafa;
 }
 .bl-pcard__body { flex: 1; min-width: 0; }
+/* div (not p) — avoids Minimal Mistakes .page__content p overrides */
 .bl-pcard__title {
-  font-size: 14.5px !important;
-  font-weight: 700 !important;
-  color: #111 !important;
-  margin: 0 0 5px !important;
-  line-height: 1.45 !important;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 6px;
+  line-height: 1.45;
 }
 .bl-pcard__authors {
-  font-size: 13.5px;
-  color: #555;
-  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #444;
+  margin: 0 0 3px;
+  line-height: 1.5;
 }
 .bl-pcard__venue {
-  font-size: 13px;
-  color: #777;
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
   font-style: italic;
   margin: 0 0 10px;
+  line-height: 1.4;
 }
 .bl-pcard__me {
   font-weight: 700;
@@ -413,17 +418,17 @@ title: "Publications"
 <!-- ══════════════════════════════════════════════════════════ -->
 <section class="pub-section">
 <h2>Peer-Reviewed Journal Articles</h2>
-<p class="pub-first-note"><span></span> First / corresponding author</p>
+<div class="pub-first-note"><span></span> First / corresponding author</div>
 
-<p class="pub-year">2025</p>
+<div class="pub-year">2025</div>
 
 <!-- PA-SDA Scale — with thumbnail -->
 <div class="bl-pcard">
   <img class="bl-pcard__thumb" src="/assets/images/publications/PA-SDA Scale.png" alt="PA-SDA Scale validation figure">
   <div class="bl-pcard__body">
-    <p class="bl-pcard__title">Development and Validation of the PA-SDA Scale: Measuring Personal Attributes in AI-Integrated Self-Directed Learning</p>
-    <p class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Zhang, Z., Lowell, V., Wang, C., &amp; Bonk, C. J.</p>
-    <p class="bl-pcard__venue">System, 133, 103793 · 2025</p>
+    <div class="bl-pcard__title">Development and Validation of the PA-SDA Scale: Measuring Personal Attributes in AI-Integrated Self-Directed Learning</div>
+    <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Zhang, Z., Lowell, V., Wang, C., &amp; Bonk, C. J.</div>
+    <div class="bl-pcard__venue">System, 133, 103793 · 2025</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" rel="noopener">DOI</a>
     </div>
@@ -434,9 +439,9 @@ title: "Publications"
 <div class="bl-pcard">
   <img class="bl-pcard__thumb" src="/assets/images/publications/CAEAI 2025_1.png" alt="Two years of generative AI research systematic review">
   <div class="bl-pcard__body">
-    <p class="bl-pcard__title">Two Years of Innovation: A Systematic Review of Empirical Generative AI Research in Education</p>
-    <p class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Tan, L. Y., Wang, C., &amp; Lowell, V.</p>
-    <p class="bl-pcard__venue">Computers &amp; Education: Artificial Intelligence, 9, 100445 · 2025</p>
+    <div class="bl-pcard__title">Two Years of Innovation: A Systematic Review of Empirical Generative AI Research in Education</div>
+    <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Tan, L. Y., Wang, C., &amp; Lowell, V.</div>
+    <div class="bl-pcard__venue">Computers &amp; Education: Artificial Intelligence, 9, 100445 · 2025</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" rel="noopener">DOI</a>
     </div>
@@ -447,9 +452,9 @@ title: "Publications"
 <div class="bl-pcard">
   <img class="bl-pcard__thumb" src="/assets/images/publications/cps-intel_1.jpg" alt="Collaborative problem solving in AI-mediated environments">
   <div class="bl-pcard__body">
-    <p class="bl-pcard__title">An Early Investigation of Collaborative Problem Solving in Conversational AI-Mediated Learning Environments</p>
-    <p class="bl-pcard__authors">Aslan, S., Alyuz, N., <span class="bl-pcard__me">Li, B.</span>, Durham, L. M., Shi, M., Sharma, S., &amp; Nachman, L.</p>
-    <p class="bl-pcard__venue">Computers &amp; Education: Artificial Intelligence, 100, 100393 · 2025</p>
+    <div class="bl-pcard__title">An Early Investigation of Collaborative Problem Solving in Conversational AI-Mediated Learning Environments</div>
+    <div class="bl-pcard__authors">Aslan, S., Alyuz, N., <span class="bl-pcard__me">Li, B.</span>, Durham, L. M., Shi, M., Sharma, S., &amp; Nachman, L.</div>
+    <div class="bl-pcard__venue">Computers &amp; Education: Artificial Intelligence, 100, 100393 · 2025</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" rel="noopener">DOI</a>
     </div>
@@ -460,9 +465,9 @@ title: "Publications"
 <div class="bl-pcard">
   <img class="bl-pcard__thumb" src="/assets/images/publications/BJET 2025_1.png" alt="Nontraditional students ChatGPT BJET 2025">
   <div class="bl-pcard__body">
-    <p class="bl-pcard__title">Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy, and Performance: A Mixed-Methods Approach</p>
-    <p class="bl-pcard__authors">Yang, M., Jiang, S., <span class="bl-pcard__me">Li, B.</span>, Herman, K., Luo, T., Moots, S. C., &amp; Lovett, N.</p>
-    <p class="bl-pcard__venue">British Journal of Educational Technology · Advance online publication · 2025</p>
+    <div class="bl-pcard__title">Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy, and Performance: A Mixed-Methods Approach</div>
+    <div class="bl-pcard__authors">Yang, M., Jiang, S., <span class="bl-pcard__me">Li, B.</span>, Herman, K., Luo, T., Moots, S. C., &amp; Lovett, N.</div>
+    <div class="bl-pcard__venue">British Journal of Educational Technology · Advance online publication · 2025</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1111/bjet.13588" target="_blank" rel="noopener">DOI</a>
     </div>
@@ -527,15 +532,15 @@ title: "Publications"
   </div>
 </div>
 
-<p class="pub-year">2024</p>
+<div class="pub-year">2024</div>
 
 <!-- IEEE TLT 2024 — with thumbnail -->
 <div class="bl-pcard">
   <img class="bl-pcard__thumb" src="/assets/images/publications/IEEE TLT 2024.png" alt="AI-Integrated SDL Framework (IEEE TLT 2024)">
   <div class="bl-pcard__body">
-    <p class="bl-pcard__title">Reconceptualizing Self-Directed Learning in the Era of Generative AI: An Exploratory Analysis</p>
-    <p class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Bonk, C. J., Wang, C., &amp; Kou, X.</p>
-    <p class="bl-pcard__venue">IEEE Transactions on Learning Technologies, 17(3), 1515–1529 · 2024</p>
+    <div class="bl-pcard__title">Reconceptualizing Self-Directed Learning in the Era of Generative AI: An Exploratory Analysis</div>
+    <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Bonk, C. J., Wang, C., &amp; Kou, X.</div>
+    <div class="bl-pcard__venue">IEEE Transactions on Learning Technologies, 17(3), 1515–1529 · 2024</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" rel="noopener">DOI</a>
     </div>
@@ -562,7 +567,7 @@ title: "Publications"
   </div>
 </div>
 
-<p class="pub-year">2023</p>
+<div class="pub-year">2023</div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
@@ -653,9 +658,9 @@ title: "Publications"
 <div class="bl-pcard">
   <img class="bl-pcard__thumb bl-pcard__thumb--gif" src="/assets/images/publications/ticapp.gif" alt="TicApp mobile app demo">
   <div class="bl-pcard__body">
-    <p class="bl-pcard__title">Implementing Design Thinking: A Mobile Application for Diverse Learners to Overcome Challenges in Character Learning</p>
-    <p class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, &amp; Lowell, V. L.</p>
-    <p class="bl-pcard__venue">In M. Schmidt et al. (Eds.), <em>Transdisciplinary Learning Experience Design</em>. Springer · 2024</p>
+    <div class="bl-pcard__title">Implementing Design Thinking: A Mobile Application for Diverse Learners to Overcome Challenges in Character Learning</div>
+    <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, &amp; Lowell, V. L.</div>
+    <div class="bl-pcard__venue">In M. Schmidt et al. (Eds.), <em>Transdisciplinary Learning Experience Design</em>. Springer · 2024</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" rel="noopener">DOI</a>
       <a class="pub-tag pub-tag--web" href="/blog/APP/" rel="noopener">Project page</a>
