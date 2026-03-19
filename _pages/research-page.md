@@ -30,64 +30,66 @@ header:
   .rn-grid { grid-template-columns: 1fr; }
 }
 
-/* ── Strand card — dark premium + gradient blob ── */
+/* ── Strand card — unified dark + top accent glow ── */
 .rn-card {
   position: relative;
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 30px 28px 24px;
   overflow: hidden;
+  background: #151c2c;
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.28);
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .rn-card:hover {
-  box-shadow: 0 16px 48px rgba(0,0,0,0.38);
-  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.40);
+  transform: translateY(-3px);
 }
 
-/* Dark + radial blob gradient per strand */
+/* Subtle top-edge accent glow per strand */
 .rn-card--1 {
   background:
-    radial-gradient(ellipse at 15% 25%, rgba(123,156,200,0.60) 0%, transparent 52%),
-    radial-gradient(ellipse at 80% 75%, rgba(61,108,181,0.28) 0%, transparent 48%),
-    #0c1b3a;
+    radial-gradient(ellipse at 50% -20%, rgba(99,149,255,0.30) 0%, transparent 58%),
+    #151c2c;
 }
 .rn-card--2 {
   background:
-    radial-gradient(ellipse at 15% 25%, rgba(200,134,142,0.60) 0%, transparent 52%),
-    radial-gradient(ellipse at 80% 75%, rgba(176,68,104,0.28) 0%, transparent 48%),
-    #280c18;
+    radial-gradient(ellipse at 50% -20%, rgba(236,110,148,0.28) 0%, transparent 58%),
+    #151c2c;
 }
 .rn-card--3 {
   background:
-    radial-gradient(ellipse at 15% 25%, rgba(130,184,150,0.60) 0%, transparent 52%),
-    radial-gradient(ellipse at 80% 75%, rgba(46,122,90,0.28) 0%, transparent 48%),
-    #091b0e;
+    radial-gradient(ellipse at 50% -20%, rgba(72,192,158,0.26) 0%, transparent 58%),
+    #151c2c;
 }
 .rn-card--4 {
   background:
-    radial-gradient(ellipse at 15% 25%, rgba(220,178,90,0.55) 0%, transparent 52%),
-    radial-gradient(ellipse at 80% 75%, rgba(138,96,32,0.28) 0%, transparent 48%),
-    #1a0e04;
+    radial-gradient(ellipse at 50% -20%, rgba(255,185,80,0.26) 0%, transparent 58%),
+    #151c2c;
 }
 
-/* Circle accent — frosted glass */
+/* Circle accent — per-strand accent color */
 .rn-card__circle {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 52px;
-  height: 52px;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Lora, serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1;
-  background: rgba(255,255,255,0.10);
-  color: rgba(255,255,255,0.55);
-  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
 }
+.rn-card--1 .rn-card__circle { color: rgba(99,149,255,0.90); border-color: rgba(99,149,255,0.30); }
+.rn-card--2 .rn-card__circle { color: rgba(236,110,148,0.90); border-color: rgba(236,110,148,0.30); }
+.rn-card--3 .rn-card__circle { color: rgba(72,192,158,0.90); border-color: rgba(72,192,158,0.30); }
+.rn-card--4 .rn-card__circle { color: rgba(255,185,80,0.90);  border-color: rgba(255,185,80,0.30); }
 
 /* Large serif title — white */
 .rn-card h3 {
@@ -134,11 +136,15 @@ header:
   background: rgba(255,255,255,0.22);
   transform: translateY(-1px);
 }
-/* Override per-strand pill colors */
-.rn-card--1 .rn-pill, .rn-card--2 .rn-pill,
-.rn-card--3 .rn-pill, .rn-card--4 .rn-pill {
-  color: rgba(255,255,255,0.88);
-}
+/* Per-strand pill accent tints */
+.rn-card--1 .rn-pill { background: rgba(99,149,255,0.12);  border-color: rgba(99,149,255,0.25);  color: rgba(160,192,255,0.95); }
+.rn-card--2 .rn-pill { background: rgba(236,110,148,0.12); border-color: rgba(236,110,148,0.25); color: rgba(255,170,195,0.95); }
+.rn-card--3 .rn-pill { background: rgba(72,192,158,0.12);  border-color: rgba(72,192,158,0.25);  color: rgba(140,225,200,0.95); }
+.rn-card--4 .rn-pill { background: rgba(255,185,80,0.12);  border-color: rgba(255,185,80,0.25);  color: rgba(255,210,130,0.95); }
+.rn-card--1 .rn-pill:hover { background: rgba(99,149,255,0.22); }
+.rn-card--2 .rn-pill:hover { background: rgba(236,110,148,0.22); }
+.rn-card--3 .rn-pill:hover { background: rgba(72,192,158,0.22); }
+.rn-card--4 .rn-pill:hover { background: rgba(255,185,80,0.22); }
 
 /* ── Projects section ── */
 .projects-section {
