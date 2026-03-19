@@ -220,7 +220,40 @@ header:
 .tag--collab { background: #e8f0fe; color: #2a52a0; }
 .tag--dbr    { background: #fce8f0; color: #a02a52; }
 .tag--design { background: #e8f8ee; color: #2a7a4a; }
-.tag--diss   { background: #fdf3e8; color: #7a5a2a; }
+.tag--diss {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(200,140,40,0.10);
+  color: #9a6600;
+  border: 1px solid rgba(200,140,40,0.28);
+}
+.tag--diss::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e08a00;
+  animation: diss-pulse 1.8s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes diss-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.45; transform: scale(0.75); }
+}
+
+/* Dissertation card — warm premium treatment */
+.project-card--diss {
+  border-color: rgba(200,140,40,0.22);
+  background:
+    linear-gradient(160deg, rgba(255,243,210,0.55) 0%, #ffffff 80px),
+    #ffffff;
+  box-shadow: 0 2px 12px rgba(200,140,40,0.08);
+}
+.project-card--diss:hover {
+  box-shadow: 0 10px 28px rgba(200,140,40,0.14);
+}
 
 .project-card__title {
   display: block;
@@ -393,12 +426,12 @@ header:
     </div>
   </article>
 
-  <article class="project-card">
+  <article class="project-card project-card--diss">
     <a class="project-card__media" href="/projects/global-learners-genai/">
       <img src="/assets/images/Research%20Trajectory%20Mind-Map%20-%20Simply%20Remove%20Blank%20Box.png" alt="Global learners and GenAI dissertation visual map" />
     </a>
     <div class="project-card__body">
-      <span class="project-card__tag tag--diss">Dissertation · In Progress</span>
+      <span class="project-card__tag tag--diss">Dissertation in Progress</span>
       <p class="project-card__meta">Longitudinal mixed methods · global learners · equity</p>
       <span class="project-card__title">Global Learners &amp; GenAI: A Longitudinal Mixed-Methods Study</span>
       <p class="project-card__summary">An ongoing dissertation project now presented as a dedicated research case with visual artifacts, data sources, and the trajectory connecting multiple strands of AI-learning work.</p>
