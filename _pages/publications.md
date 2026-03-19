@@ -900,7 +900,7 @@ title: "Publications"
   }
   function closeLB() { lb.classList.remove('open'); lbImg.src = ''; }
   document.querySelectorAll('.bl-pcard__slide img, .bl-pcard__thumb').forEach(function (img) {
-    img.addEventListener('click', function () { openLB(img.src, img.alt); });
+    img.addEventListener('click', function (e) { e.stopPropagation(); openLB(img.src, img.alt); });
   });
   lbX  && lbX.addEventListener('click', closeLB);
   lb   && lb.addEventListener('click', function (e) { if (e.target === lb) closeLB(); });

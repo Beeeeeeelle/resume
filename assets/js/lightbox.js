@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   images.forEach((img) => {
     if (img.dataset.lightboxBound === 'true') return;
+    if (img.closest('.bl-pcard')) return;
 
     img.dataset.lightboxBound = 'true';
     img.classList.add('img-lightbox-target');
