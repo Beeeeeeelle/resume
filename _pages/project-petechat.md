@@ -11,7 +11,7 @@ author_profile: false
 <div class="project-case">
   <p class="project-case__back"><a href="/research/">&larr; Back to Research</a></p>
   <p class="project-case__eyebrow">AI System Design · Higher Education</p>
-  <p class="project-case__lede">PeteChat is an LLM-powered tutoring assistant designed around a tutor-not-solver philosophy. The project combines pedagogical guardrails, iterative design-based research, and classroom deployment to build a course-aligned AI tutor that scaffolds thinking without collapsing into answer delivery.</p>
+  <p class="project-case__lede">PeteChat is an LLM-powered tutoring assistant designed around a tutor-not-solver philosophy. This page is grounded in the project’s internal case materials and design documentation rather than a published journal article, so the emphasis here is on the actual system, DBR phases, and design decisions.</p>
 
   <div class="project-case__chips">
     <span class="project-case__chip">Guardrailed AI tutor</span>
@@ -26,31 +26,31 @@ author_profile: false
 
   <div class="project-case__stats">
     <div class="project-case__stat">
-      <span class="project-case__stat-value">Tutor, not solver</span>
-      <span class="project-case__stat-label">governing design principle</span>
+      <span class="project-case__stat-value">$84,787</span>
+      <span class="project-case__stat-label">Purdue Innovation Hub grant funding</span>
     </div>
     <div class="project-case__stat">
-      <span class="project-case__stat-value">Multiple DBR phases</span>
-      <span class="project-case__stat-label">iterative refinement across semesters</span>
+      <span class="project-case__stat-value">4 phases</span>
+      <span class="project-case__stat-label">DBR iterations across 2024 to 2026</span>
     </div>
     <div class="project-case__stat">
-      <span class="project-case__stat-value">Real classroom pilots</span>
-      <span class="project-case__stat-label">tested in authentic higher-ed contexts</span>
+      <span class="project-case__stat-value">8 decisions</span>
+      <span class="project-case__stat-label">major design decisions from evaluation</span>
     </div>
     <div class="project-case__stat">
-      <span class="project-case__stat-value">In preparation</span>
-      <span class="project-case__stat-label">design case and formal write-up underway</span>
+      <span class="project-case__stat-value">ECE 20875</span>
+      <span class="project-case__stat-label">initial live deployment context</span>
     </div>
   </div>
 
   <div class="project-case__detail-grid">
     <div class="project-case__panel">
-      <span class="project-case__panel-label">System Philosophy</span>
-      <p>PeteChat is designed to preserve the learner's cognitive work. Rather than solving homework or bypassing difficulty, it aims to support clarification, planning, debugging, and reflection in ways aligned with instructional intent.</p>
+      <span class="project-case__panel-label">Context</span>
+      <p>PeteChat emerged from a concrete classroom problem: generic AI tools were helping students complete work, but not necessarily learn. The design challenge was to build an AI assistant that stayed pedagogically useful without becoming an answer machine.</p>
     </div>
     <div class="project-case__panel">
-      <span class="project-case__panel-label">Why This Version Works Better</span>
-      <p>This case format makes the project legible as a real designed system, with interface evidence, process artifacts, and pedagogical structure visible up front.</p>
+      <span class="project-case__panel-label">My Role</span>
+      <p>The case materials position this work around design research, stakeholder evaluation, and pedagogical alignment, translating learning theory into concrete interaction and system decisions.</p>
     </div>
   </div>
 
@@ -68,25 +68,25 @@ author_profile: false
     <div class="project-case__gallery">
       <figure class="project-case__figure">
         <img src="/assets/images/projects-petechat-interface-v2.png" alt="PeteChat interface artifact" />
-        <figcaption>Interface view showing PeteChat as a deliberately designed tutoring environment rather than a generic chat box.</figcaption>
+        <figcaption>Redesigned interface showing PeteChat as a purpose-built tutoring environment rather than a generic chatbot.</figcaption>
       </figure>
       <figure class="project-case__figure">
         <img src="/assets/images/projects-petechat-dbr-cycle.png" alt="PeteChat DBR cycle" />
         <figcaption>The DBR cycle documenting how the system moved through enactment, analysis, redesign, and refinement.</figcaption>
       </figure>
       <figure class="project-case__figure">
-        <img src="/assets/images/projects-petechat-dialogue-flow.png" alt="PeteChat dialogue flow" />
-        <figcaption>Pedagogical dialogue flow clarifying how prompts are redirected toward hints, reflection, and structured thinking.</figcaption>
+        <img src="/assets/images/projects-petechat-timeline.png" alt="PeteChat project timeline" />
+        <figcaption>Timeline from the case materials showing the grant and DBR phases across 2024 to 2026.</figcaption>
       </figure>
       <figure class="project-case__figure">
-        <img src="/assets/images/publications/CAEAI 2025_1.png" alt="PeteChat-related publication artifact" />
-        <figcaption>Related research artifact illustrating the project’s connection to a broader AI-in-education publication stream.</figcaption>
+        <img src="/assets/images/projects-petechat-architecture.png" alt="PeteChat system architecture" />
+        <figcaption>Architecture diagram showing how course knowledge, retrieval, and the LLM were organized to support hint-first responses.</figcaption>
       </figure>
     </div>
   </section>
 
   <section class="project-case__section">
     <h2>Current Status</h2>
-    <p>PeteChat remains an active design-based research project. The current phase centers on documenting the tutoring logic, classroom use patterns, and the guardrails required to make an AI tutor pedagogically credible in higher education settings.</p>
+    <p>PeteChat remains an active design-based research project. A formal design case is still in preparation, so this page is intentionally grounded in internal case-study materials rather than being framed as a publication page.</p>
   </section>
 </div>

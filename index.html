@@ -21,6 +21,62 @@ classes: wide
   text-underline-offset: 3px;
   font-style: normal;
 }
+.home-methods {
+  margin: 24px 0 42px;
+  padding: 18px 20px 20px;
+  border: 1px solid #e8edf5;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+}
+.home-methods__eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8b95a7;
+}
+.home-methods__intro {
+  margin: 0 0 16px;
+  max-width: 760px;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: #5f6b7c;
+}
+.home-methods__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+@media (max-width: 900px) {
+  .home-methods__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .home-methods__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.home-methods__card {
+  padding: 14px 14px 13px;
+  border-radius: 14px;
+  border: 1px solid #e7ecf3;
+  background: #fff;
+}
+.home-methods__card-title {
+  margin: 0 0 5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #172033;
+}
+.home-methods__card-copy {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: #607084;
+}
 </style>
 <h1>
  Designing Learning for All
@@ -50,6 +106,27 @@ classes: wide
 </p>
 <p><em>My work spans three intersecting strands:</em></p>
 {% include research-venn.html %}
+<section class="home-methods">
+  <p class="home-methods__eyebrow">Methodology</p>
+  <p class="home-methods__intro">I study AI-mediated learning through a combination of synthesis, design, and empirical inquiry, moving between field-level reviews and real-world learning environments.</p>
+  <div class="home-methods__grid">
+    <div class="home-methods__card">
+      <p class="home-methods__card-title">Systematic Reviews</p>
+      <p class="home-methods__card-copy">Map patterns, gaps, and design implications across large bodies of GenAI and language learning research.</p>
+    </div>
+    <div class="home-methods__card">
+      <p class="home-methods__card-title">Design-Based Research</p>
+      <p class="home-methods__card-copy">Build and iteratively refine learning tools in authentic educational settings, including apps and AI-supported environments.</p>
+    </div>
+    <div class="home-methods__card">
+      <p class="home-methods__card-title">Mixed-Methods Studies</p>
+      <p class="home-methods__card-copy">Combine surveys, interviews, interaction traces, and performance data to understand how learning changes over time.</p>
+    </div>
+    <div class="home-methods__card">
+      <p class="home-methods__card-title">Measurement &amp; Validation</p>
+      <p class="home-methods__card-copy">Develop and validate instruments and frameworks for studying self-directed learning, motivation, and AI-integrated processes.</p>
+    </div>
+  </div>
+</section>
 {% include news-feed.html %}
 {% include beyond-cv.html %}
-

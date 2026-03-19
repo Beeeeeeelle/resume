@@ -863,7 +863,7 @@ title: "Publications"
 <!-- ── LIGHTBOX OVERLAY ── -->
 <div class="bl-lightbox" id="bl-lightbox">
   <span class="bl-lightbox__close" id="bl-lightbox-close">✕</span>
-  <img id="bl-lightbox-img" src="" alt="">
+  <img id="bl-lightbox-img" src="" alt="" data-lightbox-bound="true">
 </div>
 
 <script>
@@ -903,6 +903,7 @@ title: "Publications"
     img.addEventListener('click', function (e) { e.stopPropagation(); openLB(img.src, img.alt); });
   });
   lbX  && lbX.addEventListener('click', closeLB);
+  lbImg && lbImg.addEventListener('click', function (e) { e.stopPropagation(); closeLB(); });
   lb   && lb.addEventListener('click', function (e) { if (e.target === lb) closeLB(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLB(); });
 }());
