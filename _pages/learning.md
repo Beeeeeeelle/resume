@@ -100,6 +100,23 @@ Learning and development work is where I build, test, and refine inclusive learn
 <div class="learning-stack">
   <div class="learning-inline">
     <div class="learning-inline__media">
+      <video controls playsinline preload="metadata" poster="/assets/images/design/purdue-black-gold-campus-poster.png">
+        <source src="/assets/videos/purdue-black-gold-campus.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="learning-inline__body">
+      <h3>Purdue in Black &amp; Gold</h3>
+      <p>AI-assisted motion design study that turns real Purdue campus photos into a stylized cinematic sequence inspired by title design, using a single continuous camera path instead of scene-based editing.</p>
+      <ul>
+        <li>Developed a consistent black-and-gold visual system from original campus imagery using Nanobanana.</li>
+        <li>Planned the sequence as one flowing camera movement with morph-based transitions rather than hard cuts.</li>
+        <li>Animated the sequence in Dreamina (Seedance) as an exploration of campus identity, motion language, and generative visual storytelling.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="learning-inline">
+    <div class="learning-inline__media">
       <img src="/assets/learning/Screenshot_2025-06-03_at_8.09.46_PM.png" alt="Graphic design collage for instructional design student conference at Indiana University">
     </div>
     <div class="learning-inline__body">

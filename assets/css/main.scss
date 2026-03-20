@@ -958,6 +958,15 @@ html.mobile-nav-lock {
   box-shadow: 0 1.2rem 3rem rgba(15, 23, 42, 0.12);
 }
 
+.learning-inline__media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  box-shadow: 0 1.2rem 3rem rgba(15, 23, 42, 0.12);
+  background: #000;
+}
+
 .learning-inline--gallery .learning-inline__media {
   width: 100%;
 }
