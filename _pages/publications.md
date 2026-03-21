@@ -17,19 +17,26 @@ title: "Publications"
   margin-bottom: 10px;
 }
 .pub-first-note {
-  font-size: 12.5px;
-  color: #777;
-  margin: 0 0 22px;
-  font-style: italic;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 24px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #fff7f2;
+  border: 1px solid rgba(224, 90, 43, 0.16);
+  font-size: 12px;
+  font-weight: 600;
+  color: #8a5c44;
 }
 .pub-first-note span {
   display: inline-block;
-  width: 2.5px;
-  height: 13px;
-  background: rgba(224,90,43,0.52);
-  border-radius: 1px;
-  margin-right: 8px;
-  vertical-align: middle;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, rgba(224,90,43,0.95), rgba(236,153,116,0.9));
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(224,90,43,0.08);
+  flex-shrink: 0;
 }
 .pub-year {
   font-size: 13px;
@@ -46,6 +53,13 @@ title: "Publications"
   gap: 20px;
   margin-bottom: 28px;
   align-items: flex-start;
+}
+.bl-pcard--lead {
+  padding: 14px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fffaf7 0%, #ffffff 100%);
+  border: 1px solid rgba(224, 90, 43, 0.10);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.025);
 }
 @media (max-width: 600px) {
   .bl-pcard { flex-direction: column; }
@@ -69,7 +83,29 @@ title: "Publications"
   border: 1px solid #e8e8e8;
   background: #fafafa;
 }
+.bl-pcard--lead .bl-pcard__thumb,
+.bl-pcard--lead .bl-pcard__thumb--gif,
+.bl-pcard--lead .bl-pcard__slide img {
+  border-color: rgba(224, 90, 43, 0.18);
+}
 .bl-pcard__body { flex: 1; min-width: 0; }
+.bl-pcard--lead .bl-pcard__body::before,
+.pub-entry__dot + .pub-entry__body::before {
+  content: "First / corr.";
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fff7f2;
+  border: 1px solid rgba(224,90,43,0.16);
+  color: #a35734;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+}
 /* div (not p) — avoids Minimal Mistakes .page__content p overrides */
 .bl-pcard__title {
   font-size: 14.5px;
@@ -114,14 +150,16 @@ title: "Publications"
   width: 0;
   flex-shrink: 0;
 }
-/* First / corresponding author: subtle left accent line */
+/* First / corresponding author entries now use a badge */
 .pub-entry__dot + .pub-entry__body {
-  border-left: 2.5px solid rgba(224,90,43,0.42);
-  padding-left: 12px;
+  padding: 12px 14px 10px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fffaf7 0%, #ffffff 100%);
+  border: 1px solid rgba(224, 90, 43, 0.10);
 }
-/* Co-authored: matching indent, no border */
+/* Co-authored */
 .pub-entry__dot--empty + .pub-entry__body {
-  padding-left: 14.5px;
+  padding-left: 0;
 }
 .pub-entry__body {
   font-size: 14px;
@@ -473,7 +511,7 @@ title: "Publications"
 </div>
 
 <!-- PA-SDA Scale — with thumbnail -->
-<div class="bl-pcard">
+<div class="bl-pcard bl-pcard--lead">
   <img class="bl-pcard__thumb" src="/assets/images/publications/PA-SDA Scale.png" alt="PA-SDA Scale validation figure" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">Development and Validation of the PA-SDA Scale: Measuring Personal Attributes in AI-Integrated Self-Directed Learning</div>
@@ -486,7 +524,7 @@ title: "Publications"
 </div>
 
 <!-- Two years of innovation — carousel -->
-<div class="bl-pcard">
+<div class="bl-pcard bl-pcard--lead">
   <div class="bl-pcard__slides">
     <div class="bl-pcard__slide active"><img src="/assets/images/publications/CAEAI 2025_1.png" alt="Two Years – figure 1" data-lightbox-bound="true"></div>
     <div class="bl-pcard__slide"><img src="/assets/images/publications/CAEAI 2025_2.png" alt="Two Years – figure 2" data-lightbox-bound="true"></div>
@@ -559,7 +597,7 @@ title: "Publications"
 </div>
 
 <!-- GBLL Review — carousel -->
-<div class="bl-pcard">
+<div class="bl-pcard bl-pcard--lead">
   <div class="bl-pcard__slides">
     <div class="bl-pcard__slide active"><img src="/assets/images/publications/game-based_1.png" alt="GBLL Review – figure 1" data-lightbox-bound="true"></div>
     <div class="bl-pcard__slide"><img src="/assets/images/publications/game-based_2.png" alt="GBLL Review – figure 2" data-lightbox-bound="true"></div>
@@ -632,7 +670,7 @@ title: "Publications"
 <div class="pub-year">2024</div>
 
 <!-- IEEE TLT 2024 — with thumbnail -->
-<div class="bl-pcard">
+<div class="bl-pcard bl-pcard--lead">
   <img class="bl-pcard__thumb" src="/assets/images/publications/IEEE TLT 2024.png" alt="AI-Integrated SDL Framework (IEEE TLT 2024)" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">Reconceptualizing Self-Directed Learning in the Era of Generative AI: An Exploratory Analysis</div>
@@ -741,7 +779,7 @@ title: "Publications"
 <h2>Book Chapters</h2>
 
 <!-- AI-generation literacy — Palgrave 2026 — with thumbnail -->
-<div class="bl-pcard">
+<div class="bl-pcard bl-pcard--lead">
   <img class="bl-pcard__thumb" src="/assets/images/publications/AI-generation Literacy.png" alt="AI-Generation Literacy – Palgrave Encyclopedia" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">AI-Generation Literacy</div>
@@ -754,7 +792,7 @@ title: "Publications"
 </div>
 
 <!-- TicApp — with animated gif thumbnail + project page link -->
-<div class="bl-pcard">
+<div class="bl-pcard bl-pcard--lead">
   <img class="bl-pcard__thumb bl-pcard__thumb--gif" src="/assets/images/publications/ticapp.gif" alt="TicApp mobile app demo" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">Implementing Design Thinking: A Mobile Application for Diverse Learners to Overcome Challenges in Character Learning</div>
