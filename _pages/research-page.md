@@ -6,7 +6,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/ChatGPT-and-Generative-AI-as-a-New-Partner-in-Language-Teaching-and-Learning—2.png
-  excerpt: "My research examines how generative AI reshapes learning — from the design of AI systems to the cognitive and motivational processes they activate in learners, and the outcomes they produce across diverse populations."
+  excerpt: "My research examines how generative AI reshapes learner agency, authenticity, and equity in self-directed and assessed learning."
 ---
 
 <style>
@@ -220,6 +220,7 @@ header:
 .tag--collab { background: #e8f0fe; color: #2a52a0; }
 .tag--dbr    { background: #fce8f0; color: #a02a52; }
 .tag--design { background: #e8f8ee; color: #2a7a4a; }
+.tag--assessment { background: #fdf0f4; color: #9a3658; }
 .tag--diss {
   display: inline-flex;
   align-items: center;
@@ -306,62 +307,63 @@ header:
 
 <!-- ── RESEARCH STRANDS ── -->
 <p class="rn-heading">Research Strands</p>
-<p class="rn-intro">My research agenda is organized around four connected strands, moving from the design of generative AI systems to the learner processes and equity questions that emerge when those systems enter real educational settings.</p>
+<p class="rn-intro">My research agenda is organized around four connected strands: AI-mediated self-directed learning, learner heterogeneity and equity, authenticity and assessment, and the design principles that translate these findings into practice.</p>
 <div class="rn-grid">
 
   <div class="rn-card rn-card--1">
     <div class="rn-card__top">
-      <span class="rn-card__meta">Systems Reviews</span>
+      <span class="rn-card__meta">Agency &amp; SDL</span>
       <span class="rn-card__num">01</span>
     </div>
-    <h3>Generative AI Systems</h3>
-    <p>I map the landscape of AI tools in education through large-scale systematic reviews, tracking how ChatGPT and allied models have been studied from 2022 to the present. My reviews synthesize design implications, methodological gaps, and emerging pedagogical theories across more than 200 primary studies.</p>
+    <h3>AI-Mediated Self-Directed Learning</h3>
+    <p>I study how learners plan, prompt, verify, and make meaning with AI in self-directed learning environments. This strand brings together conceptual, measurement, and empirical work on how agency is distributed across personal attributes, learning processes, and contexts when AI becomes part of the workflow.</p>
     <div class="rn-pills">
-      <a class="rn-pill" href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" rel="noopener">ChatGPT Review · CAEAI '24</a>
-      <a class="rn-pill" href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" rel="noopener">2yr GenAI Review · CAEAI '25</a>
-      <a class="rn-pill" href="https://doi.org/10.1080/17501229.2025.2598587" target="_blank" rel="noopener">GBLL Review · ILLT '25</a>
+      <a class="rn-pill" href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" rel="noopener">PA-SDA Scale · System '25</a>
+      <a class="rn-pill" href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" rel="noopener">SDL × GenAI Era · TLT '24</a>
+      <a class="rn-pill" href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" rel="noopener">SDL with GenAI · TechTrends '24</a>
     </div>
   </div>
 
   <div class="rn-card rn-card--2">
     <div class="rn-card__top">
-      <span class="rn-card__meta">Interaction Studies</span>
+      <span class="rn-card__meta">Equity &amp; Heterogeneity</span>
       <span class="rn-card__num">02</span>
     </div>
-    <h3>Learner–AI Interaction</h3>
-    <p>I examine how learners actively engage with, adapt to, and make meaning from generative AI tools — through netnography of YouTube educators, collaborative problem-solving studies, and longitudinal interaction data. I pay particular attention to how social and motivational dynamics shift when an AI becomes a learning partner.</p>
+    <h3>Learner Heterogeneity &amp; Equity</h3>
+    <p>I examine how AI-mediated learning varies across multilingual, global, and nontraditional learners rather than assuming one uniform experience. These studies trace where language background, prior preparation, and institutional context shape who benefits from AI support, how, and at what cost.</p>
     <div class="rn-pills">
-      <a class="rn-pill" href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" rel="noopener">EduTubers · ILLT '25</a>
-      <a class="rn-pill" href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" rel="noopener">CPS in AI Env · CAEAI '25</a>
-      <a class="rn-pill" href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" rel="noopener">SDL with GenAI · TechTrends '24</a>
+      <a class="rn-pill" href="https://doi.org/10.1111/bjet.13588" target="_blank" rel="noopener">NonTrad × ChatGPT · BJET '25</a>
+      <a class="rn-pill" href="https://doi.org/10.3390/languages8040238" target="_blank" rel="noopener">Low-Income &amp; ChatGPT · Lang. '23</a>
+      <a class="rn-pill" href="/projects/global-learners-genai/">Global Learners Study →</a>
     </div>
   </div>
 
   <div class="rn-card rn-card--3">
     <div class="rn-card__top">
-      <span class="rn-card__meta">Measurement & Theory</span>
+      <span class="rn-card__meta">Authenticity &amp; Assessment</span>
       <span class="rn-card__num">03</span>
     </div>
-    <h3>Learning Processes</h3>
-    <p>My instrument development work operationalizes the cognitive and affective processes underlying AI-integrated self-directed learning. I developed and validated the PA-SDA scale — measuring personal attributes that predict effective SDL with AI — and proposed a reconceptualized SDL framework for the GenAI era.</p>
+    <h3>Authenticity, Assessment &amp; Judgment</h3>
+    <p>I investigate how AI changes what counts as authentic work, authorship, and good evaluative judgment in educational settings. This strand connects instructor-facing questions about assessment and writing with learner-side questions about ownership, reflection, and responsible AI-supported performance.</p>
     <div class="rn-pills">
-      <a class="rn-pill" href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" rel="noopener">PA-SDA Scale · System '25</a>
-      <a class="rn-pill" href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" rel="noopener">SDL × GenAI Era · TLT '24</a>
-      <a class="rn-pill" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" rel="noopener">AI-Gen Literacy · Palgrave '26</a>
+      <a class="rn-pill" href="/projects/authenticity-assessment/">Authenticity Project Case →</a>
+      <span class="rn-pill">Q-Method Authenticity · BJET</span>
+      <span class="rn-pill">AI Writing Assessment · JCHE</span>
+      <span class="rn-pill">Authenticity in Service Learning · E&amp;T</span>
     </div>
   </div>
 
   <div class="rn-card rn-card--4">
     <div class="rn-card__top">
-      <span class="rn-card__meta">Equity & Impact</span>
+      <span class="rn-card__meta">Literacy &amp; Design</span>
       <span class="rn-card__num">04</span>
     </div>
-    <h3>Outcomes &amp; Equity</h3>
-    <p>I investigate whether AI tools produce equitable learning outcomes — and for whom. Studies in this strand track academic writing gains for learners from low-income backgrounds, examine performance and self-efficacy for nontraditional college students, and evaluate culturally-responsive professional development designs.</p>
+    <h3>AI Literacy &amp; Learning Design</h3>
+    <p>I translate research on agency, authenticity, and equity into AI literacy concepts, design principles, and practical learning environments. This strand moves from explanation to action: how should courses, tutoring systems, and institutional supports be designed so AI strengthens reflection and participation rather than passive dependence?</p>
     <div class="rn-pills">
-      <a class="rn-pill" href="https://doi.org/10.1111/bjet.13588" target="_blank" rel="noopener">NonTrad × ChatGPT · BJET '25</a>
-      <a class="rn-pill" href="https://doi.org/10.3390/languages8040238" target="_blank" rel="noopener">Low-Income & ChatGPT · Lang. '23</a>
-      <a class="rn-pill" href="https://doi.org/10.24059/olj.v27i4.4003" target="_blank" rel="noopener">Teacher PD · OLJ '23</a>
+      <a class="rn-pill" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" rel="noopener">AI-Gen Literacy · Palgrave '26</a>
+      <a class="rn-pill" href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" rel="noopener">2yr GenAI Review · CAEAI '25</a>
+      <a class="rn-pill" href="/projects/petechat/">PeteChat Design Case →</a>
     </div>
   </div>
 
@@ -380,7 +382,7 @@ header:
       <span class="project-card__tag tag--collab">Industry Collaboration · Intel Labs</span>
       <p class="project-card__meta">Controlled study · interaction traces · learning outcomes</p>
       <span class="project-card__title">Collaborative Problem Solving in AI-Mediated Environments</span>
-      <p class="project-card__summary">A research collaboration examining how conversational AI reshapes peer coordination, instructional design, and learning performance in collaborative problem-solving settings.</p>
+      <p class="project-card__summary">A research collaboration examining how conversational AI reshapes peer coordination, feedback, and performance in collaborative problem-solving settings.</p>
       <div class="project-card__artifacts">
         <span class="project-card__artifact">Photo evidence</span>
         <span class="project-card__artifact">Study design</span>
@@ -416,7 +418,7 @@ header:
       <span class="project-card__tag tag--design">AI System Design</span>
       <p class="project-card__meta">Guardrailed tutor · DBR cycles · higher education</p>
       <span class="project-card__title">PeteChat - Guardrailed AI Tutoring Assistant</span>
-      <p class="project-card__summary">An LLM-powered tutoring system designed around a tutor-not-solver philosophy, now reframed as an image-led project page with design rationale, process, and artifacts.</p>
+      <p class="project-card__summary">An LLM-powered tutoring system designed around a tutor-not-solver philosophy to preserve student judgment, ownership, and meaningful help-seeking.</p>
       <div class="project-card__artifacts">
         <span class="project-card__artifact">Interface</span>
         <span class="project-card__artifact">Dialogue flow</span>
@@ -426,15 +428,37 @@ header:
     </div>
   </article>
 
+  <article class="project-card">
+    <a class="project-card__media" href="/projects/authenticity-assessment/" style="background: linear-gradient(145deg, #fff7f8 0%, #fff 42%, #fff7ea 100%);">
+      <div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:20px 22px;">
+        <span style="display:inline-flex;align-items:center;width:max-content;padding:5px 10px;border-radius:999px;background:#fbecef;color:#9a3658;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">Authenticity line</span>
+        <strong style="display:block;margin:14px 0 8px;font-family:Lora,serif;font-size:23px;line-height:1.2;color:#2c2030;">From student-AI writing to assessment judgment</strong>
+        <span style="display:block;font-size:12.5px;line-height:1.65;color:#6b5563;">A higher education research line on authorship, ownership, and what institutions should evaluate when AI enters student work.</span>
+      </div>
+    </a>
+    <div class="project-card__body">
+      <span class="project-card__tag tag--assessment">Authenticity &amp; Assessment</span>
+      <p class="project-card__meta">Instructor perspectives · writing assessment · higher education</p>
+      <span class="project-card__title">Authenticity &amp; Assessment in the Age of GenAI</span>
+      <p class="project-card__summary">A project cluster connecting instructor perspectives on student-AI collaborative writing, writing assessment design, and the broader question of how authentic work should be judged when AI participates in the process.</p>
+      <div class="project-card__artifacts">
+        <span class="project-card__artifact">Q-method study</span>
+        <span class="project-card__artifact">Assessment criteria</span>
+        <span class="project-card__artifact">Design framing</span>
+      </div>
+      <a class="proj-link" href="/projects/authenticity-assessment/">Open project details →</a>
+    </div>
+  </article>
+
   <article class="project-card project-card--diss">
     <a class="project-card__media" href="/projects/global-learners-genai/">
       <img src="/assets/images/Research%20Trajectory%20Mind-Map%20-%20Simply%20Remove%20Blank%20Box.png" alt="Global learners and GenAI dissertation visual map" />
     </a>
     <div class="project-card__body">
       <span class="project-card__tag tag--diss">Dissertation in Progress</span>
-      <p class="project-card__meta">Longitudinal mixed methods · global learners · equity</p>
+      <p class="project-card__meta">Longitudinal mixed methods · global learners · agency &amp; equity</p>
       <span class="project-card__title">Global Learners &amp; GenAI: A Longitudinal Mixed-Methods Study</span>
-      <p class="project-card__summary">An ongoing dissertation project now presented as a dedicated research case with visual artifacts, data sources, and the trajectory connecting multiple strands of AI-learning work.</p>
+      <p class="project-card__summary">An ongoing dissertation examining how global learners plan, verify, and make meaning with GenAI over time, extending the broader agenda on learner agency, heterogeneity, and equity.</p>
       <div class="project-card__artifacts">
         <span class="project-card__artifact">Trajectory map</span>
         <span class="project-card__artifact">Related artifacts</span>

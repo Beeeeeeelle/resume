@@ -4,14 +4,10 @@
 .rv-svg { width: 100%; height: auto; display: block; }
 
 /*
-  BLOB SCALING: intentionally NOT done with CSS transform/transition.
-  CSS transforms on SVG <g> elements promote compositor layers and break
-  mix-blend-mode between siblings. Blob scaling is handled entirely by
-  JS requestAnimationFrame writing the SVG 'transform' attribute directly,
-  which has no compositing side-effects.
+  Blob scaling is handled by writing SVG transform attributes directly.
+  This keeps the soft overlapping blend effect intact during hover.
 */
 
-/* ── Research questions (fade in on hover) ── */
 .zone-rq {
   opacity: 0;
   transition: opacity 0.28s ease 0.06s;
@@ -20,71 +16,56 @@
 [data-hover="a"] .zone-rq-a { opacity: 1; }
 [data-hover="b"] .zone-rq-b { opacity: 1; }
 [data-hover="c"] .zone-rq-c { opacity: 1; }
+[data-hover="d"] .zone-rq-d { opacity: 1; }
 
-/* ── Zone label dimming ── */
 .rv-label { transition: opacity 0.28s ease; }
 [data-hover="a"] .rv-label:not(.rv-label-a),
 [data-hover="b"] .rv-label:not(.rv-label-b),
-[data-hover="c"] .rv-label:not(.rv-label-c) { opacity: 0.30; }
+[data-hover="c"] .rv-label:not(.rv-label-c),
+[data-hover="d"] .rv-label:not(.rv-label-d) { opacity: 0.3; }
 
-/* ── Tag base ── */
 .paper-tag {
   cursor: pointer;
-  /* transform-box + transform-origin ensure translateY is relative to
-     each tag's own bounding box, not the SVG viewport */
   transform-box: fill-box;
   transform-origin: center;
   transition: transform 0.22s ease, filter 0.22s ease;
 }
-.tag-bg  { fill: rgba(255,255,255,0.82); stroke: rgba(180,180,180,0.40); stroke-width: 0.8; }
-.tag-text { font-family: system-ui,-apple-system,'Segoe UI',sans-serif; font-size: 12px; font-weight: 600; fill: #333; }
+.tag-bg {
+  fill: rgba(255,255,255,0.82);
+  stroke: rgba(180,180,180,0.4);
+  stroke-width: 0.8;
+}
+.tag-text {
+  font-family: system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  fill: #333;
+}
 
-/* Zone-tinted tags */
-.tag-a  .tag-bg  { fill: rgba(123,156,200,0.15); stroke: rgba(123,156,200,0.55); }
-.tag-a  .tag-text { fill: #2c4a6e; }
-.tag-a:hover  .tag-bg { fill: rgba(123,156,200,0.30); }
+.tag-a .tag-bg { fill: rgba(123,156,200,0.15); stroke: rgba(123,156,200,0.55); }
+.tag-a .tag-text { fill: #2c4a6e; }
+.tag-a:hover .tag-bg { fill: rgba(123,156,200,0.3); }
 
-.tag-b  .tag-bg  { fill: rgba(200,134,142,0.14); stroke: rgba(200,134,142,0.55); }
-.tag-b  .tag-text { fill: #6e2c38; }
-.tag-b:hover  .tag-bg { fill: rgba(200,134,142,0.30); }
+.tag-b .tag-bg { fill: rgba(200,134,142,0.14); stroke: rgba(200,134,142,0.55); }
+.tag-b .tag-text { fill: #6e2c38; }
+.tag-b:hover .tag-bg { fill: rgba(200,134,142,0.3); }
 
-.tag-c  .tag-bg  { fill: rgba(130,184,150,0.14); stroke: rgba(130,184,150,0.55); }
-.tag-c  .tag-text { fill: #2a5a3a; }
-.tag-c:hover  .tag-bg { fill: rgba(130,184,150,0.30); }
+.tag-c .tag-bg { fill: rgba(130,184,150,0.14); stroke: rgba(130,184,150,0.55); }
+.tag-c .tag-text { fill: #2a5a3a; }
+.tag-c:hover .tag-bg { fill: rgba(130,184,150,0.3); }
 
-.tag-ab .tag-bg  { fill: rgba(165,115,180,0.14); stroke: rgba(165,115,180,0.50); }
-.tag-ab .tag-text { fill: #522866; }
-.tag-ab:hover .tag-bg { fill: rgba(165,115,180,0.30); }
+.tag-d .tag-bg { fill: rgba(209,167,96,0.15); stroke: rgba(192,145,63,0.52); }
+.tag-d .tag-text { fill: #76511a; }
+.tag-d:hover .tag-bg { fill: rgba(209,167,96,0.3); }
 
-.tag-ac .tag-bg  { fill: rgba(105,165,160,0.14); stroke: rgba(105,165,160,0.50); }
-.tag-ac .tag-text { fill: #1e5050; }
-.tag-ac:hover .tag-bg { fill: rgba(105,165,160,0.30); }
-
-.tag-bc .tag-bg  { fill: rgba(185,150,90,0.14); stroke: rgba(185,150,90,0.50); }
-.tag-bc .tag-text { fill: #5a3a0a; }
-.tag-bc:hover .tag-bg { fill: rgba(185,150,90,0.30); }
-
-/* ── Tags float on zone hover ── */
 [data-hover="a"] .tag-a,
-[data-hover="a"] .tag-ab,
-[data-hover="a"] .tag-ac {
-  transform: translateY(-3px) scale(1.04);
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.13));
-}
 [data-hover="b"] .tag-b,
-[data-hover="b"] .tag-ab,
-[data-hover="b"] .tag-bc {
-  transform: translateY(-3px) scale(1.04);
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.13));
-}
 [data-hover="c"] .tag-c,
-[data-hover="c"] .tag-ac,
-[data-hover="c"] .tag-bc {
+[data-hover="d"] .tag-d {
   transform: translateY(-3px) scale(1.04);
   filter: drop-shadow(0 3px 8px rgba(0,0,0,0.13));
 }
 
-/* ── Tooltip ── */
 .rv-tooltip {
   position: absolute;
   background: #fff;
@@ -96,218 +77,227 @@
   line-height: 1.55;
   pointer-events: none;
   display: none;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   z-index: 20;
+}
+
+.rv-core-chip {
+  fill: rgba(255,255,255,0.78);
+  stroke: rgba(176,146,97,0.34);
+  stroke-width: 0.8;
+}
+
+.rv-core-chip-text {
+  font-family: system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  fill: #8b6b33;
 }
 </style>
 
 <section class="rv-section">
   <div class="rv-wrapper">
-    <svg class="rv-svg" viewBox="0 0 900 600" id="rv-svg" xmlns="http://www.w3.org/2000/svg">
+    <svg class="rv-svg" viewBox="0 0 900 650" id="rv-svg" xmlns="http://www.w3.org/2000/svg">
 
       <defs>
-        <!-- Dissertation card: drop shadow + warm gradient fill -->
         <filter id="diss-shadow" x="-30%" y="-30%" width="160%" height="160%">
           <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.18)"/>
         </filter>
         <linearGradient id="diss-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#faf7f2"/>
-          <stop offset="100%" stop-color="#ede7dc"/>
+          <stop offset="0%" stop-color="#faf7f2"/>
+          <stop offset="100%" stop-color="#efe6d8"/>
         </linearGradient>
+        <radialGradient id="diss-core" cx="50%" cy="42%" r="70%" gradientUnits="objectBoundingBox">
+          <stop offset="0%" stop-color="#fffaf2" stop-opacity="0.98"/>
+          <stop offset="100%" stop-color="#eadcc6" stop-opacity="0.92"/>
+        </radialGradient>
 
         <radialGradient id="rg-a" cx="42%" cy="40%" r="60%" gradientUnits="objectBoundingBox">
-          <stop offset="0%"   stop-color="#7B9CC8" stop-opacity="0.82"/>
+          <stop offset="0%" stop-color="#7B9CC8" stop-opacity="0.82"/>
           <stop offset="100%" stop-color="#7B9CC8" stop-opacity="0.08"/>
         </radialGradient>
         <radialGradient id="rg-b" cx="58%" cy="40%" r="60%" gradientUnits="objectBoundingBox">
-          <stop offset="0%"   stop-color="#C8868E" stop-opacity="0.80"/>
+          <stop offset="0%" stop-color="#C8868E" stop-opacity="0.8"/>
           <stop offset="100%" stop-color="#C8868E" stop-opacity="0.08"/>
         </radialGradient>
-        <radialGradient id="rg-c" cx="50%" cy="42%" r="60%" gradientUnits="objectBoundingBox">
-          <stop offset="0%"   stop-color="#82B896" stop-opacity="0.78"/>
+        <radialGradient id="rg-c" cx="45%" cy="50%" r="62%" gradientUnits="objectBoundingBox">
+          <stop offset="0%" stop-color="#82B896" stop-opacity="0.8"/>
           <stop offset="100%" stop-color="#82B896" stop-opacity="0.08"/>
+        </radialGradient>
+        <radialGradient id="rg-d" cx="56%" cy="48%" r="62%" gradientUnits="objectBoundingBox">
+          <stop offset="0%" stop-color="#D1A760" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#D1A760" stop-opacity="0.08"/>
         </radialGradient>
       </defs>
 
-      <!-- ══ 1. HIT ZONES — full blob-shaped paths, lowest z-order ══
-           Using fill="rgba(0,0,0,0.001)" (not "transparent" or "none")
-           guarantees the painted region is hit-testable in all browsers.
-           Order: C first, B second, A last — so in overlaps, A > B > C wins.
-      ══ -->
-      <path class="rv-hit" data-zone="c" cursor="default"
-            fill="rgba(0,0,0,0.001)" stroke="none"
-            d="M 426,246 C 562,237 670,285 668,402 C 666,503 562,565 426,565
-               C 290,565 184,503 182,402 C 180,294 290,254 426,246 Z"/>
-      <path class="rv-hit" data-zone="b" cursor="default"
-            fill="rgba(0,0,0,0.001)" stroke="none"
-            d="M 572,32 C 710,21 809,107 801,228 C 793,345 715,428 572,432
-               C 429,437 334,349 330,228 C 326,96 435,43 572,32 Z"/>
-      <path class="rv-hit" data-zone="a" cursor="default"
-            fill="rgba(0,0,0,0.001)" stroke="none"
-            d="M 280,32 C 418,21 517,107 509,228 C 501,345 423,428 280,432
-               C 137,437 42,349 38,228 C 34,96 143,43 280,32 Z"/>
+      <!-- hit zones -->
+      <path class="rv-hit" data-zone="a" cursor="default" fill="rgba(0,0,0,0.001)" stroke="none"
+            d="M 248,56 C 358,40 443,116 430,228 C 416,340 336,406 232,398 C 127,390 57,316 66,210 C 75,118 136,71 248,56 Z"/>
+      <path class="rv-hit" data-zone="b" cursor="default" fill="rgba(0,0,0,0.001)" stroke="none"
+            d="M 642,55 C 756,40 836,117 824,228 C 812,340 732,405 628,398 C 524,390 455,316 463,210 C 471,118 531,70 642,55 Z"/>
+      <path class="rv-hit" data-zone="c" cursor="default" fill="rgba(0,0,0,0.001)" stroke="none"
+            d="M 252,264 C 366,248 445,323 432,437 C 419,549 337,613 230,606 C 120,598 46,523 56,414 C 65,324 138,278 252,264 Z"/>
+      <path class="rv-hit" data-zone="d" cursor="default" fill="rgba(0,0,0,0.001)" stroke="none"
+            d="M 646,264 C 760,248 840,323 827,437 C 814,549 731,613 624,606 C 514,598 440,523 450,414 C 459,324 532,278 646,264 Z"/>
 
-      <!-- ══ 2. BLOBS — JS animates 'transform' attr; no CSS transform ══ -->
-      <!-- blob-a center (280,232) · blob-b center (572,232) · blob-c center (426,405) -->
+      <!-- connectors -->
+      <path d="M 450,330 C 360,290 317,252 275,212" fill="none" stroke="rgba(123,156,200,0.22)" stroke-width="2"/>
+      <path d="M 450,330 C 540,290 582,252 620,212" fill="none" stroke="rgba(200,134,142,0.22)" stroke-width="2"/>
+      <path d="M 450,350 C 362,388 318,430 280,472" fill="none" stroke="rgba(130,184,150,0.24)" stroke-width="2"/>
+      <path d="M 450,350 C 540,390 585,432 622,472" fill="none" stroke="rgba(209,167,96,0.26)" stroke-width="2"/>
+
+      <!-- blobs -->
       <g class="blob-a" pointer-events="none">
         <path style="mix-blend-mode:multiply" fill="url(#rg-a)"
-          d="M 280,32 C 418,21 517,107 509,228 C 501,345 423,428 280,432
-             C 137,437 42,349 38,228 C 34,96 143,43 280,32 Z"/>
+          d="M 248,56 C 358,40 443,116 430,228 C 416,340 336,406 232,398 C 127,390 57,316 66,210 C 75,118 136,71 248,56 Z"/>
       </g>
       <g class="blob-b" pointer-events="none">
         <path style="mix-blend-mode:multiply" fill="url(#rg-b)"
-          d="M 572,32 C 710,21 809,107 801,228 C 793,345 715,428 572,432
-             C 429,437 334,349 330,228 C 326,96 435,43 572,32 Z"/>
+          d="M 642,55 C 756,40 836,117 824,228 C 812,340 732,405 628,398 C 524,390 455,316 463,210 C 471,118 531,70 642,55 Z"/>
       </g>
       <g class="blob-c" pointer-events="none">
         <path style="mix-blend-mode:multiply" fill="url(#rg-c)"
-          d="M 426,246 C 562,237 670,285 668,402 C 666,503 562,565 426,565
-             C 290,565 184,503 182,402 C 180,294 290,254 426,246 Z"/>
+          d="M 252,264 C 366,248 445,323 432,437 C 419,549 337,613 230,606 C 120,598 46,523 56,414 C 65,324 138,278 252,264 Z"/>
+      </g>
+      <g class="blob-d" pointer-events="none">
+        <path style="mix-blend-mode:multiply" fill="url(#rg-d)"
+          d="M 646,264 C 760,248 840,323 827,437 C 814,549 731,613 624,606 C 514,598 440,523 450,414 C 459,324 532,278 646,264 Z"/>
       </g>
 
-      <!-- ══ 3. ZONE LABELS ══ -->
-      <text class="rv-label rv-label-a" x="148" y="86" text-anchor="middle"
+      <!-- labels -->
+      <text class="rv-label rv-label-a" x="170" y="100" text-anchor="middle"
+        font-family="Lora,serif" font-size="15" font-weight="700" fill="#2c4a6e">AI-Mediated</text>
+      <text class="rv-label rv-label-a" x="170" y="119" text-anchor="middle"
         font-family="Lora,serif" font-size="15" font-weight="700" fill="#2c4a6e">Self-Directed Learning</text>
-      <text class="rv-label rv-label-a" x="148" y="104" text-anchor="middle"
-        font-family="Lora,serif" font-size="15" font-weight="700" fill="#2c4a6e">&amp; AI Frameworks</text>
 
-      <text class="rv-label rv-label-b" x="706" y="86" text-anchor="middle"
-        font-family="Lora,serif" font-size="15" font-weight="700" fill="#6e2c38">GenAI in Education</text>
+      <text class="rv-label rv-label-b" x="706" y="100" text-anchor="middle"
+        font-family="Lora,serif" font-size="15" font-weight="700" fill="#6e2c38">Authenticity &amp;</text>
+      <text class="rv-label rv-label-b" x="706" y="119" text-anchor="middle"
+        font-family="Lora,serif" font-size="15" font-weight="700" fill="#6e2c38">Assessment</text>
 
-      <text class="rv-label rv-label-c" x="310" y="525" text-anchor="middle"
-        font-family="Lora,serif" font-size="14.5" font-weight="700" fill="#2a5a3a">Equity &amp;</text>
-      <text class="rv-label rv-label-c" x="310" y="543" text-anchor="middle"
-        font-family="Lora,serif" font-size="14.5" font-weight="700" fill="#2a5a3a">Learner-Centered Design</text>
+      <text class="rv-label rv-label-c" x="192" y="520" text-anchor="middle"
+        font-family="Lora,serif" font-size="15" font-weight="700" fill="#2a5a3a">Heterogeneity &amp;</text>
+      <text class="rv-label rv-label-c" x="192" y="539" text-anchor="middle"
+        font-family="Lora,serif" font-size="15" font-weight="700" fill="#2a5a3a">Equity</text>
 
-      <!-- ══ 4. RESEARCH QUESTIONS — opacity 0 → 1 via CSS on data-hover ══ -->
-      <!-- A: between label bottom (y≈104) and first tag (y=206) -->
-      <text class="zone-rq zone-rq-a" x="148" y="136" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2c4a6e">How do learners self-direct their</text>
-      <text class="zone-rq zone-rq-a" x="148" y="153" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2c4a6e">learning journeys with AI tools?</text>
+      <text class="rv-label rv-label-d" x="710" y="520" text-anchor="middle"
+        font-family="Lora,serif" font-size="15" font-weight="700" fill="#76511a">AI Literacy &amp;</text>
+      <text class="rv-label rv-label-d" x="710" y="539" text-anchor="middle"
+        font-family="Lora,serif" font-size="15" font-weight="700" fill="#76511a">Design Translation</text>
 
-      <!-- B: between label bottom (y≈86) and first tag (y=163) -->
-      <text class="zone-rq zone-rq-b" x="706" y="116" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#6e2c38">How is GenAI reshaping</text>
-      <text class="zone-rq zone-rq-b" x="706" y="133" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#6e2c38">teaching and learning?</text>
+      <!-- questions -->
+      <text class="zone-rq zone-rq-a" x="196" y="154" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2c4a6e">How do learners plan, prompt,</text>
+      <text class="zone-rq zone-rq-a" x="196" y="171" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2c4a6e">verify, and make meaning with AI?</text>
 
-      <!-- C: right side of C zone, below TicApp tag (y>484), above zone label (y=525) -->
-      <text class="zone-rq zone-rq-c" x="548" y="492" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2a5a3a">How do we design equitable</text>
-      <text class="zone-rq zone-rq-c" x="548" y="508" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2a5a3a">experiences for all learners?</text>
+      <text class="zone-rq zone-rq-b" x="683" y="154" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#6e2c38">How does AI change authenticity,</text>
+      <text class="zone-rq zone-rq-b" x="683" y="171" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#6e2c38">authorship, and evaluative judgment?</text>
 
-      <!-- ══ 5. PAPER TAGS — last in DOM = highest z-order, clicks work ══ -->
+      <text class="zone-rq zone-rq-c" x="214" y="564" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2a5a3a">For whom does AI support learning,</text>
+      <text class="zone-rq zone-rq-c" x="214" y="581" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2a5a3a">and where does it reproduce inequity?</text>
 
-      <!-- A only -->
+      <text class="zone-rq zone-rq-d" x="688" y="564" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#76511a">How should courses and tools build</text>
+      <text class="zone-rq zone-rq-d" x="688" y="581" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#76511a">AI literacy, reflection, and transfer?</text>
+
+      <!-- strand tags -->
+      <a href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" class="paper-tag tag-a"
+         data-title="Development and Validation of the PA-SDA Scale"
+         data-venue="System, 2025">
+        <rect x="144" y="192" width="200" height="22" rx="11" class="tag-bg"/>
+        <text x="244" y="207" text-anchor="middle" class="tag-text">PA-SDA Scale · System '25</text>
+      </a>
       <a href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" class="paper-tag tag-a"
          data-title="Reconceptualizing Self-Directed Learning in the Era of Generative AI"
          data-venue="IEEE Transactions on Learning Technologies, 2024">
-        <rect x="72" y="206" width="162" height="22" rx="11" class="tag-bg"/>
-        <text x="153" y="221" text-anchor="middle" class="tag-text">SDL × GenAI Era · TLT '24</text>
+        <rect x="76" y="224" width="162" height="22" rx="11" class="tag-bg"/>
+        <text x="157" y="239" text-anchor="middle" class="tag-text">SDL x GenAI Era · TLT '24</text>
+      </a>
+      <a href="/publications/" class="paper-tag tag-a"
+         data-title="Learning in the Loop: Moments, Mindsets, and Meaning with Generative AI"
+         data-venue="Computers &amp; Education, under review">
+        <rect x="108" y="256" width="214" height="22" rx="11" class="tag-bg"/>
+        <text x="215" y="271" text-anchor="middle" class="tag-text">Learning in the Loop · C&amp;E</text>
       </a>
 
-      <!-- A∩B -->
-      <a href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" class="paper-tag tag-ab"
-         data-title="Development and Validation of the PA-SDA Scale"
-         data-venue="System, 2025">
-        <rect x="320" y="108" width="200" height="22" rx="11" class="tag-bg"/>
-        <text x="420" y="123" text-anchor="middle" class="tag-text">PA-SDA Scale · System '25</text>
+      <a href="/projects/authenticity-assessment/" class="paper-tag tag-b"
+         data-title="What makes student-AI collaborative writing authentic? A Q methodology study of instructor perspectives"
+         data-venue="British Journal of Educational Technology, under review">
+        <rect x="548" y="192" width="224" height="22" rx="11" class="tag-bg"/>
+        <text x="660" y="207" text-anchor="middle" class="tag-text">Q-Method Authenticity · BJET</text>
       </a>
-      <a href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" class="paper-tag tag-ab"
-         data-title="Exploring Inventions in Self-Directed Learning with Generative AI"
-         data-venue="TechTrends, 2024">
-        <rect x="305" y="136" width="230" height="22" rx="11" class="tag-bg"/>
-        <text x="420" y="151" text-anchor="middle" class="tag-text">SDL with GenAI · TechTrends '24</text>
+      <a href="/projects/authenticity-assessment/" class="paper-tag tag-b"
+         data-title="Design precedents to design innovation: Developing an advanced AI monitoring system for writing assessment"
+         data-venue="Journal of Computing in Higher Education, proposal accepted">
+        <rect x="534" y="224" width="228" height="22" rx="11" class="tag-bg"/>
+        <text x="648" y="239" text-anchor="middle" class="tag-text">AI Writing Assessment · JCHE</text>
       </a>
-      <a href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" class="paper-tag tag-ab"
-         data-title="AI-Generation Literacy"
-         data-venue="Palgrave Encyclopedia of CALL, 2026">
-        <rect x="312" y="164" width="216" height="22" rx="11" class="tag-bg"/>
-        <text x="420" y="179" text-anchor="middle" class="tag-text">AI-Gen Literacy · Palgrave '26</text>
-      </a>
-
-      <!-- B only -->
-      <a href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" class="paper-tag tag-b"
-         data-title="A Systematic Review of the First Year of Publications on ChatGPT and Education"
-         data-venue="Computers and Education: AI, 2024">
-        <rect x="499" y="163" width="210" height="22" rx="11" class="tag-bg"/>
-        <text x="604" y="178" text-anchor="middle" class="tag-text">ChatGPT Review · CAEAI '24</text>
-      </a>
-      <a href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" class="paper-tag tag-b"
-         data-title="Two Years of Innovation: Systematic Review of GenAI in Language Learning and Teaching"
-         data-venue="Computers and Education: AI, 2025">
-        <rect x="502" y="191" width="204" height="22" rx="11" class="tag-bg"/>
-        <text x="604" y="206" text-anchor="middle" class="tag-text">2yr GenAI Review · CAEAI '25</text>
-      </a>
-      <a href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" class="paper-tag tag-b"
-         data-title="Getting Viral on Social Media: Exploring EduTubers' Perceptions and Practices"
-         data-venue="Innovation in Language Learning and Teaching, 2025">
-        <rect x="510" y="219" width="188" height="22" rx="11" class="tag-bg"/>
-        <text x="604" y="234" text-anchor="middle" class="tag-text">EduTubers · ILLT '25</text>
-      </a>
-      <a href="https://doi.org/10.1080/17501229.2025.2598587" target="_blank" class="paper-tag tag-b"
-         data-title="Beyond Scores: Systematic Review of Game-Based Language Learning (2010–2025)"
-         data-venue="Innovation in Language Learning and Teaching, 2025">
-        <rect x="510" y="247" width="188" height="22" rx="11" class="tag-bg"/>
-        <text x="604" y="262" text-anchor="middle" class="tag-text">GBLL Review · ILLT '25</text>
+      <a href="/projects/authenticity-assessment/" class="paper-tag tag-b"
+         data-title="Artificial authenticity and academic integrity in an age of generative AI"
+         data-venue="Current collaborative research line">
+        <rect x="564" y="256" width="186" height="22" rx="11" class="tag-bg"/>
+        <text x="657" y="271" text-anchor="middle" class="tag-text">Authenticity &amp; Integrity</text>
       </a>
 
-      <!-- A∩C -->
-      <a href="https://doi.org/10.24059/olj.v27i4.4003" target="_blank" class="paper-tag tag-ac"
-         data-title="Culturally- and Linguistically-Responsive Online Teacher Professional Development"
-         data-venue="Online Learning Journal, 2023">
-        <rect x="104" y="340" width="216" height="22" rx="11" class="tag-bg"/>
-        <text x="212" y="355" text-anchor="middle" class="tag-text">Teacher PD · OLJ '23</text>
-      </a>
-
-      <!-- B∩C -->
-      <a href="https://doi.org/10.1111/bjet.13588" target="_blank" class="paper-tag tag-bc"
+      <a href="https://doi.org/10.1111/bjet.13588" target="_blank" class="paper-tag tag-c"
          data-title="Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy and Performance"
          data-venue="British Journal of Educational Technology, 2025">
-        <rect x="487" y="293" width="196" height="22" rx="11" class="tag-bg"/>
-        <text x="585" y="308" text-anchor="middle" class="tag-text">NonTrad × ChatGPT · BJET '25</text>
+        <rect x="78" y="396" width="196" height="22" rx="11" class="tag-bg"/>
+        <text x="176" y="411" text-anchor="middle" class="tag-text">NonTrad x ChatGPT · BJET '25</text>
       </a>
-      <a href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" class="paper-tag tag-bc"
-         data-title="An Early Investigation of Collaborative Problem Solving in Conversational AI-Mediated Learning Environments"
-         data-venue="Computers and Education: AI, 2025">
-        <rect x="493" y="321" width="184" height="22" rx="11" class="tag-bg"/>
-        <text x="585" y="336" text-anchor="middle" class="tag-text">CPS in AI Env · CAEAI '25</text>
-      </a>
-      <a href="https://doi.org/10.3390/languages8040238" target="_blank" class="paper-tag tag-bc"
+      <a href="https://doi.org/10.3390/languages8040238" target="_blank" class="paper-tag tag-c"
          data-title="Empowering Students from Low-Income Families to Improve Writing with ChatGPT"
          data-venue="Languages, 2023">
-        <rect x="487" y="349" width="196" height="22" rx="11" class="tag-bg"/>
-        <text x="585" y="364" text-anchor="middle" class="tag-text">Low-Income &amp; ChatGPT · Lang. '23</text>
+        <rect x="94" y="428" width="196" height="22" rx="11" class="tag-bg"/>
+        <text x="192" y="443" text-anchor="middle" class="tag-text">Low-Income &amp; ChatGPT · Lang. '23</text>
+      </a>
+      <a href="/projects/global-learners-genai/" class="paper-tag tag-c"
+         data-title="Global Learners &amp; GenAI: Longitudinal mixed-methods dissertation project"
+         data-venue="Ongoing dissertation research">
+        <rect x="116" y="460" width="190" height="22" rx="11" class="tag-bg"/>
+        <text x="211" y="475" text-anchor="middle" class="tag-text">Global Learners Study -&gt;</text>
       </a>
 
-      <!-- C only -->
-      <a href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" class="paper-tag tag-c"
-         data-title="Implementing Design Thinking: A Mobile Application for Diverse Learners"
-         data-venue="Transdisciplinary Learning Experience Design, Springer 2024">
-        <rect x="208" y="462" width="214" height="22" rx="11" class="tag-bg"/>
-        <text x="315" y="477" text-anchor="middle" class="tag-text">TicApp Design Thinking · Springer '24</text>
+      <a href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" class="paper-tag tag-d"
+         data-title="AI-Generation Literacy"
+         data-venue="Palgrave Encyclopedia of CALL, 2026">
+        <rect x="532" y="396" width="216" height="22" rx="11" class="tag-bg"/>
+        <text x="640" y="411" text-anchor="middle" class="tag-text">AI-Gen Literacy · Palgrave '26</text>
+      </a>
+      <a href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" class="paper-tag tag-d"
+         data-title="Two Years of Innovation: Systematic Review of GenAI in Language Learning and Teaching"
+         data-venue="Computers and Education: AI, 2025">
+        <rect x="540" y="428" width="204" height="22" rx="11" class="tag-bg"/>
+        <text x="642" y="443" text-anchor="middle" class="tag-text">2yr GenAI Review · CAEAI '25</text>
+      </a>
+      <a href="/projects/petechat/" class="paper-tag tag-d"
+         data-title="PeteChat: Guardrailed AI tutoring assistant design case"
+         data-venue="Design-based research project">
+        <rect x="566" y="460" width="176" height="22" rx="11" class="tag-bg"/>
+        <text x="654" y="475" text-anchor="middle" class="tag-text">PeteChat Design Case -&gt;</text>
       </a>
 
-      <!-- Center: dissertation — polished card -->
-      <rect x="344" y="292" width="154" height="76" rx="14"
-        fill="url(#diss-bg)" filter="url(#diss-shadow)"/>
-      <rect x="344" y="292" width="154" height="76" rx="14"
-        fill="none" stroke="rgba(160,140,110,0.35)" stroke-width="1"/>
-      <!-- "In progress" dot + label -->
-      <circle cx="360" cy="308" r="3.5" fill="#c8a060" opacity="0.85"/>
-      <text x="368" y="311.5" text-anchor="start"
-        font-family="system-ui,sans-serif" font-size="8.5" fill="#a08050" letter-spacing="0.04em">IN PROGRESS</text>
-      <!-- Title -->
-      <text x="421" y="330" text-anchor="middle"
-        font-family="Lora,serif" font-size="12.5" font-weight="700" fill="#2a1e0a">Global Learners &amp; GenAI</text>
-      <!-- Subtitle -->
-      <text x="421" y="347" text-anchor="middle"
-        font-family="system-ui,sans-serif" font-size="9.5" fill="#7a6a50">Longitudinal Mixed-Methods</text>
-      <!-- Dissertation label -->
-      <text x="421" y="360" text-anchor="middle"
-        font-family="Lora,serif" font-size="9" font-style="italic" fill="#a08050">Dissertation · 2026</text>
+      <!-- central dissertation core -->
+      <a href="/projects/global-learners-genai/">
+        <ellipse cx="450" cy="336" rx="92" ry="60" fill="rgba(236,223,196,0.34)"/>
+        <ellipse cx="450" cy="336" rx="82" ry="52" fill="url(#diss-core)" filter="url(#diss-shadow)"/>
+        <ellipse cx="450" cy="336" rx="82" ry="52" fill="none" stroke="rgba(160,140,110,0.34)" stroke-width="1"/>
+        <rect x="407" y="292" width="86" height="18" rx="9" class="rv-core-chip"/>
+        <text x="450" y="304.5" text-anchor="middle" class="rv-core-chip-text">Dissertation</text>
+        <text x="450" y="329" text-anchor="middle"
+          font-family="Lora,serif" font-size="13" font-weight="700" fill="#2a1e0a">Global Learners &amp; GenAI</text>
+        <text x="450" y="347" text-anchor="middle"
+          font-family="system-ui,sans-serif" font-size="9.5" fill="#7a6a50">agency, heterogeneity, equity</text>
+        <text x="450" y="364" text-anchor="middle"
+          font-family="Lora,serif" font-size="9.5" font-style="italic" fill="#9e7b43">longitudinal mixed methods</text>
+      </a>
 
     </svg>
     <div class="rv-tooltip" id="rv-tooltip"></div>
@@ -316,98 +306,90 @@
 
 <script>
 (function () {
-  var svg  = document.getElementById('rv-svg');
-  var tip  = document.getElementById('rv-tooltip');
+  var svg = document.getElementById('rv-svg');
+  var tip = document.getElementById('rv-tooltip');
   var wrap = document.querySelector('.rv-wrapper');
   if (!svg) return;
 
-  /* ────────────────────────────────────────────────────────────────────
-     BLOB SCALE  —  SVG 'transform' attribute animation via rAF
-     Why not CSS transform/transition?
-       CSS transitions on SVG <g> promote compositor layers, which
-       isolates the compositing context and breaks mix-blend-mode between
-       sibling blob paths. Writing the SVG attribute directly avoids that.
-  ──────────────────────────────────────────────────────────────────── */
   var BLOBS = {
-    a: { g: svg.querySelector('.blob-a'), cx: 280, cy: 232 },
-    b: { g: svg.querySelector('.blob-b'), cx: 572, cy: 232 },
-    c: { g: svg.querySelector('.blob-c'), cx: 426, cy: 405 }
+    a: { g: svg.querySelector('.blob-a'), cx: 248, cy: 228 },
+    b: { g: svg.querySelector('.blob-b'), cx: 642, cy: 228 },
+    c: { g: svg.querySelector('.blob-c'), cx: 252, cy: 437 },
+    d: { g: svg.querySelector('.blob-d'), cx: 646, cy: 437 }
   };
-  var scales  = { a: 1.0, b: 1.0, c: 1.0 };
-  var targets = { a: 1.0, b: 1.0, c: 1.0 };
-  var rafs    = {};
+  var scales = { a: 1.0, b: 1.0, c: 1.0, d: 1.0 };
+  var rafs = {};
 
-  /* Ease out back — slight overshoot spring feel */
   function easeOutBack(t) {
-    var c1 = 1.5, c3 = c1 + 1;
+    var c1 = 1.5;
+    var c3 = c1 + 1;
     return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
   }
-  /* Ease in-out quad — smooth release */
+
   function easeInOutQuad(t) {
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
   }
 
   function applyScale(zone) {
-    var b = BLOBS[zone];
-    if (!b.g) return;
+    var blob = BLOBS[zone];
+    if (!blob || !blob.g) return;
     var s = scales[zone];
-    /* translate to center → scale → translate back */
-    b.g.setAttribute('transform',
-      'translate(' + b.cx + ',' + b.cy + ')' +
+    blob.g.setAttribute(
+      'transform',
+      'translate(' + blob.cx + ',' + blob.cy + ')' +
       ' scale(' + s.toFixed(5) + ')' +
-      ' translate(' + (-b.cx) + ',' + (-b.cy) + ')');
+      ' translate(' + (-blob.cx) + ',' + (-blob.cy) + ')'
+    );
   }
 
   function animateTo(zone, target) {
     if (rafs[zone]) cancelAnimationFrame(rafs[zone]);
-    var start0 = scales[zone];
-    var t0     = performance.now();
-    /* spring in = 480 ms, release = 320 ms */
-    var dur    = target > 1 ? 480 : 320;
-    var ease   = target > 1 ? easeOutBack : easeInOutQuad;
+    var start = scales[zone];
+    var t0 = performance.now();
+    var duration = target > 1 ? 480 : 320;
+    var ease = target > 1 ? easeOutBack : easeInOutQuad;
 
     function step(now) {
-      var t = Math.min((now - t0) / dur, 1);
-      scales[zone] = start0 + (target - start0) * ease(t);
+      var t = Math.min((now - t0) / duration, 1);
+      scales[zone] = start + (target - start) * ease(t);
       applyScale(zone);
       if (t < 1) rafs[zone] = requestAnimationFrame(step);
     }
+
     rafs[zone] = requestAnimationFrame(step);
   }
 
-  /* ── Zone hover: hit rects trigger scale + CSS data-hover ── */
   svg.querySelectorAll('.rv-hit').forEach(function (el) {
     el.addEventListener('mouseenter', function () {
-      var z = el.getAttribute('data-zone');
-      svg.setAttribute('data-hover', z);
-      animateTo(z, 1.07);
+      var zone = el.getAttribute('data-zone');
+      svg.setAttribute('data-hover', zone);
+      animateTo(zone, 1.06);
     });
     el.addEventListener('mouseleave', function () {
-      var z = el.getAttribute('data-zone');
+      var zone = el.getAttribute('data-zone');
       svg.removeAttribute('data-hover');
-      animateTo(z, 1.0);
+      animateTo(zone, 1.0);
     });
   });
 
-  /* ── Paper tag tooltip ── */
   if (!tip || !wrap) return;
   svg.querySelectorAll('.paper-tag').forEach(function (el) {
     el.addEventListener('mouseenter', function () {
-      var t = el.getAttribute('data-title');
-      var v = el.getAttribute('data-venue');
-      if (!t) return;
-      tip.innerHTML = '<strong>' + t + '</strong>' +
-        '<br><span style="color:#888;font-size:11.5px">' + v + '</span>';
+      var title = el.getAttribute('data-title');
+      var venue = el.getAttribute('data-venue');
+      if (!title) return;
+      tip.innerHTML = '<strong>' + title + '</strong>' +
+        '<br><span style="color:#888;font-size:11.5px">' + venue + '</span>';
       tip.style.display = 'block';
     });
     el.addEventListener('mousemove', function (e) {
-      var r = wrap.getBoundingClientRect();
-      var x = e.clientX - r.left + 14;
-      var y = e.clientY - r.top  + 14;
-      if (x + 315 > r.width)  x = e.clientX - r.left - 322;
-      if (y + 90  > r.height) y = e.clientY - r.top  - 98;
+      var rect = wrap.getBoundingClientRect();
+      var x = e.clientX - rect.left + 14;
+      var y = e.clientY - rect.top + 14;
+      if (x + 315 > rect.width) x = e.clientX - rect.left - 322;
+      if (y + 90 > rect.height) y = e.clientY - rect.top - 98;
       tip.style.left = x + 'px';
-      tip.style.top  = y + 'px';
+      tip.style.top = y + 'px';
     });
     el.addEventListener('mouseleave', function () {
       tip.style.display = 'none';
