@@ -1448,7 +1448,7 @@ html.mobile-nav-lock {
   min-width: 0;
 }
 
-@media (min-width: 96em) {
+@media (min-width: 80em) {
   .page-with-rail-nav .page-section-nav {
     position: fixed;
     right: clamp(0.8rem, 2vw, 1.6rem);
