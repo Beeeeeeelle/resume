@@ -438,6 +438,19 @@ title: "Publications"
 .ptl-pub:hover::after { opacity: 1; }
 </style>
 
+<div class="page-with-rail-nav">
+<nav class="page-section-nav" data-page-nav aria-label="Publications page sections">
+  <div class="page-section-nav__list">
+    <a class="page-section-nav__link" href="#pub-overview">Timeline</a>
+    <a class="page-section-nav__link" href="#pub-journals">Journal Articles</a>
+    <a class="page-section-nav__link" href="#pub-proceedings">Proceedings</a>
+    <a class="page-section-nav__link" href="#pub-chapters">Book Chapters</a>
+    <a class="page-section-nav__link" href="#pub-book">Book</a>
+    <a class="page-section-nav__link" href="#pub-under-review">Under Review</a>
+  </div>
+</nav>
+
+<div class="page-with-rail-nav__main">
 <div id="pub-overview" class="pub-timeline page-section-target supports-target-highlight" data-reveal>
   <h3>Publications at a glance</h3>
   <div class="ptl-wrap">
@@ -510,17 +523,6 @@ title: "Publications"
     <div class="ptl-legend-item"><div class="ptl-legend-dot v-ijaied"></div>IJAIED</div>
   </div>
 </div>
-
-<nav class="page-section-nav" data-page-nav data-reveal aria-label="Publications page sections">
-  <div class="page-section-nav__list">
-    <a class="page-section-nav__link" href="#pub-overview">Timeline</a>
-    <a class="page-section-nav__link" href="#pub-journals">Journal Articles</a>
-    <a class="page-section-nav__link" href="#pub-proceedings">Proceedings</a>
-    <a class="page-section-nav__link" href="#pub-chapters">Book Chapters</a>
-    <a class="page-section-nav__link" href="#pub-book">Book</a>
-    <a class="page-section-nav__link" href="#pub-under-review">Under Review</a>
-  </div>
-</nav>
 
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--  PEER-REVIEWED JOURNAL ARTICLES                          -->
@@ -926,6 +928,8 @@ title: "Publications"
   </div>
 </div>
 </section>
+</div>
+</div>
 
 <!-- ── LIGHTBOX OVERLAY ── -->
 <div class="bl-lightbox" id="bl-lightbox">

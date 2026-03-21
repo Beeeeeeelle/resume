@@ -126,6 +126,7 @@ function initPageNav(prefersReducedMotion) {
   if (!navs.length) return;
 
   navs.forEach((nav) => {
+    const wrapper = nav.closest('.page-with-rail-nav');
     const items = [...nav.querySelectorAll('.page-section-nav__link')]
       .map((link) => {
         const hash = link.getAttribute('href');
@@ -175,7 +176,18 @@ function initPageNav(prefersReducedMotion) {
       });
     });
 
-    let ticking = false;
+    let updateTimer = null;
+    const getRevealThreshold = () => {
+      const anchor = wrapper || items[0].target;
+      const anchorTop = window.scrollY + anchor.getBoundingClientRect().top;
+      return anchorTop + (window.innerWidth >= 1312 ? 120 : 72);
+    };
+
+    const updateVisibility = () => {
+      const shouldShow = Boolean(window.location.hash) || window.scrollY > getRevealThreshold();
+      nav.classList.toggle('is-nav-visible', shouldShow);
+    };
+
     const updateActive = () => {
       const offset = window.innerWidth < 769 ? 108 : 132;
       let active = items[0];
@@ -187,18 +199,24 @@ function initPageNav(prefersReducedMotion) {
       });
 
       setActive(active);
-      ticking = false;
+    };
+
+    const updateState = () => {
+      updateVisibility();
+      updateActive();
     };
 
     const requestUpdate = () => {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(updateActive);
+      if (updateTimer) return;
+      updateTimer = window.setTimeout(() => {
+        updateTimer = null;
+        updateState();
+      }, 16);
     };
 
     window.addEventListener('scroll', requestUpdate, { passive: true });
     window.addEventListener('resize', requestUpdate);
-    updateActive();
+    updateState();
   });
 }
 

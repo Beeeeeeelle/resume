@@ -325,13 +325,15 @@ header:
 </style>
 
 <!-- ── RESEARCH STRANDS ── -->
-<nav class="page-section-nav" data-page-nav data-reveal aria-label="Research page sections">
+<div class="page-with-rail-nav">
+<nav class="page-section-nav" data-page-nav aria-label="Research page sections">
   <div class="page-section-nav__list">
     <a class="page-section-nav__link" href="#research-strands">Research Strands</a>
     <a class="page-section-nav__link" href="#projects-overview">Projects &amp; Collaborations</a>
   </div>
 </nav>
 
+<div class="page-with-rail-nav__main">
 <section id="research-strands" class="page-section-target supports-target-highlight">
 <p class="rn-heading" data-reveal>Research Strands</p>
 <p class="rn-intro" data-reveal>My research agenda is organized around four connected strands: AI-mediated self-directed learning, learner heterogeneity and equity, authenticity and assessment, and the design principles that translate these findings into practice.</p>
@@ -396,8 +398,6 @@ header:
 
 </div>
 </section>
-
-<script src="/assets/js/site-interactions.js" defer></script>
 
 <!-- ── PROJECTS & COLLABORATIONS ── -->
 <section id="projects-overview" class="projects-section page-section-target supports-target-highlight">
@@ -500,3 +500,7 @@ header:
 
 </div>
 </section>
+</div>
+</div>
+
+<script src="/assets/js/site-interactions.js" defer></script>
