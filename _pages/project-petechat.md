@@ -76,7 +76,7 @@ author_profile: false
       </figure>
       <figure class="project-case__figure">
         <img src="/assets/images/projects-petechat-timeline.png" alt="PeteChat project timeline" />
-        <figcaption>Timeline from the case materials showing the grant and DBR phases across 2024 to 2026.</figcaption>
+        <figcaption>Project timeline showing grant support and DBR phases across 2024 to 2026.</figcaption>
       </figure>
       <figure class="project-case__figure">
         <img src="/assets/images/projects-petechat-architecture.png" alt="PeteChat system architecture" />

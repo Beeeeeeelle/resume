@@ -21,7 +21,7 @@ author_profile: false
 
   <figure class="project-case__hero">
     <img src="/assets/images/publications/ticapp.gif" alt="TicApp interface preview" />
-    <figcaption>TicApp interface preview showing the mobile application at the center of the chapter’s design argument.</figcaption>
+    <figcaption>TicApp interface preview showing the mobile application’s learning flow and interaction design.</figcaption>
   </figure>
 
   <div class="project-case__stats">
@@ -39,7 +39,7 @@ author_profile: false
     </div>
     <div class="project-case__stat">
       <span class="project-case__stat-value">Springer 2024</span>
-      <span class="project-case__stat-label">published chapter output</span>
+      <span class="project-case__stat-label">published design case</span>
     </div>
   </div>
 
@@ -76,7 +76,7 @@ author_profile: false
       </figure>
       <figure class="project-case__figure">
         <img src="/assets/images/projects-tic-how-it-works.png" alt="TicApp learning flow diagram" />
-        <figcaption>The chapter’s core learning loop: real-context input, typed retrieval, and progressive reduction of supports across practice cycles.</figcaption>
+        <figcaption>Core learning loop: real-context input, typed retrieval, and progressive reduction of supports across practice cycles.</figcaption>
       </figure>
       <figure class="project-case__figure">
         <img src="/assets/images/projects-tic-feedback-tracking.png" alt="TicApp feedback and tracking artifact" />

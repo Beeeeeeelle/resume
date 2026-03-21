@@ -21,7 +21,7 @@ author_profile: false
 
   <figure class="project-case__hero">
     <img src="/assets/images/publications/cps-intel_1.jpg" alt="Collaborative problem solving study visual" />
-    <figcaption>Snapshots from the paper showing children interacting with the Kid Space environment during collaborative problem-solving tasks.</figcaption>
+    <figcaption>Snapshots of children interacting with the Kid Space environment during collaborative problem-solving tasks.</figcaption>
   </figure>
 
   <div class="project-case__stats">
@@ -31,7 +31,7 @@ author_profile: false
     </div>
     <div class="project-case__stat">
       <span class="project-case__stat-value">CAEAI 2025</span>
-      <span class="project-case__stat-label">peer-reviewed publication output</span>
+      <span class="project-case__stat-label">peer-reviewed study</span>
     </div>
     <div class="project-case__stat">
       <span class="project-case__stat-value">Joint engagement</span>
@@ -81,11 +81,11 @@ author_profile: false
       </figure>
       <figure class="project-case__figure">
         <img src="/assets/images/publications/cps-intel_3.jpg" alt="Collaborative problem solving artifact 2" />
-        <figcaption>System architecture from the paper, connecting ASR, NLU, dialogue management, NLG, and the learner-facing interface.</figcaption>
+        <figcaption>System architecture connecting ASR, NLU, dialogue management, NLG, and the learner-facing interface.</figcaption>
       </figure>
       <figure class="project-case__figure">
         <img src="/assets/images/publications/cps-intel_4.jpg" alt="Collaborative problem solving artifact 3" />
-        <figcaption>Figure from the paper reporting distributions for CPS-social, CPS-cognitive, joint engagement, and instructional interventions.</figcaption>
+        <figcaption>Distribution of CPS-social, CPS-cognitive, joint engagement, and instructional interventions in the study.</figcaption>
       </figure>
     </div>
   </section>
