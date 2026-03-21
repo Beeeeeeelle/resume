@@ -1,7 +1,14 @@
 <style>
-/* ── Beyond the CV strip ── */
+/* ── Beyond the CV gallery ── */
 .bcv {
   margin: 2.5rem 0 1rem;
+}
+.bcv__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 14px;
 }
 .bcv__heading {
   font-size: 11px;
@@ -9,30 +16,82 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #bbb;
-  margin: 0 0 14px;
+  margin: 0;
+}
+.bcv__controls {
+  display: flex;
+  gap: 8px;
+}
+.bcv__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #dde5ef;
+  background: rgba(255, 255, 255, 0.96);
+  color: #5d6b7b;
+  font-size: 18px;
+  line-height: 1;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition: transform 0.18s ease, border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+}
+.bcv__btn:hover {
+  transform: translateY(-1px);
+  border-color: #c7d3e1;
+  color: #223044;
+  background: #fff;
+}
+.bcv__btn:disabled {
+  opacity: 0.42;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+  color: #a4b0bf;
 }
 .bcv__wrap {
-  overflow: hidden;
-  width: 100%;
-  border-radius: 12px;
+  position: relative;
 }
-.bcv__track {
+.bcv__wrap::before,
+.bcv__wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 42px;
+  pointer-events: none;
+  z-index: 1;
+}
+.bcv__wrap::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.96), rgba(255,255,255,0));
+}
+.bcv__wrap::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(255,255,255,0.96), rgba(255,255,255,0));
+}
+.bcv__viewport {
   display: flex;
-  gap: 10px;
-  width: max-content;
-  animation: bcv-scroll 50s linear infinite;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 4px 4px 14px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
 }
-.bcv__track:hover {
-  animation-play-state: paused;
+.bcv__viewport::-webkit-scrollbar {
+  display: none;
 }
-@keyframes bcv-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.bcv__viewport.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
 }
 .bcv__item {
-  flex-shrink: 0;
-  width: 200px;
+  flex: 0 0 212px;
   height: 170px;
+  scroll-snap-align: start;
   border-radius: 10px;
   overflow: hidden;
   margin: 0;
@@ -47,7 +106,8 @@
   border-radius: 10px;
   transition: transform 0.35s ease;
 }
-.bcv__item:hover img {
+.bcv__item:hover img,
+.bcv__item:focus-within img {
   transform: scale(1.05);
 }
 .bcv__cap {
@@ -65,17 +125,33 @@
   transition: opacity 0.25s ease;
   pointer-events: none;
 }
-.bcv__item:hover .bcv__cap {
+.bcv__item:hover .bcv__cap,
+.bcv__item:focus-within .bcv__cap {
   opacity: 1;
+}
+@media (max-width: 640px) {
+  .bcv__item {
+    flex-basis: 180px;
+    height: 154px;
+  }
+
+  .bcv__wrap::before,
+  .bcv__wrap::after {
+    width: 24px;
+  }
 }
 </style>
 
-<div class="bcv">
-  <p class="bcv__heading">Beyond the CV</p>
+<div class="bcv" data-bcv data-reveal>
+  <div class="bcv__top">
+    <p class="bcv__heading">Beyond the CV</p>
+    <div class="bcv__controls">
+      <button class="bcv__btn" type="button" data-bcv-prev aria-label="Scroll Beyond the CV gallery left">‹</button>
+      <button class="bcv__btn" type="button" data-bcv-next aria-label="Scroll Beyond the CV gallery right">›</button>
+    </div>
+  </div>
   <div class="bcv__wrap">
-    <div class="bcv__track">
-
-      <!-- ── Set 1 ── -->
+    <div class="bcv__viewport" data-bcv-viewport tabindex="0" aria-label="Beyond the CV image gallery">
       <figure class="bcv__item">
         <img src="/assets/images/personal/cat-1.jpeg" alt="Me and my cat">
         <figcaption class="bcv__cap">My cat ☁️</figcaption>
@@ -112,36 +188,6 @@
         <img src="/assets/images/personal/award.jpeg" alt="Award">
         <figcaption class="bcv__cap">DeBruicker Award 🏆</figcaption>
       </figure>
-
-      <!-- ── Set 2 (duplicate — seamless loop) ── -->
-      <figure class="bcv__item" aria-hidden="true">
-        <img src="/assets/images/personal/cat-1.jpeg" alt="">
-      </figure>
-      <figure class="bcv__item" aria-hidden="true">
-        <img src="/assets/images/personal/bouldering.jpeg" alt="">
-      </figure>
-      <figure class="bcv__item" aria-hidden="true">
-        <img src="/assets/images/personal/yoga-cert.jpeg" alt="">
-      </figure>
-      <figure class="bcv__item" aria-hidden="true">
-        <img src="/assets/images/personal/Yoga.png" alt="">
-      </figure>
-      <figure class="bcv__item" aria-hidden="true">
-        <img src="/assets/images/personal/talk.jpeg" alt="">
-      </figure>
-      <figure class="bcv__item" aria-hidden="true">
-        <img src="/assets/images/personal/lab-dinner.jpeg" alt="">
-      </figure>
-      <figure class="bcv__item" aria-hidden="true">
-        <img src="/assets/images/personal/cat-2.jpeg" alt="">
-      </figure>
-      <figure class="bcv__item" aria-hidden="true">
-        <img src="/assets/images/personal/badminton.jpeg" alt="">
-      </figure>
-      <figure class="bcv__item" aria-hidden="true">
-        <img src="/assets/images/personal/award.jpeg" alt="">
-      </figure>
-
     </div>
   </div>
 </div>

@@ -325,11 +325,19 @@ header:
 </style>
 
 <!-- ── RESEARCH STRANDS ── -->
-<p class="rn-heading">Research Strands</p>
-<p class="rn-intro">My research agenda is organized around four connected strands: AI-mediated self-directed learning, learner heterogeneity and equity, authenticity and assessment, and the design principles that translate these findings into practice.</p>
-<div class="rn-grid">
+<nav class="page-section-nav" data-page-nav data-reveal aria-label="Research page sections">
+  <div class="page-section-nav__list">
+    <a class="page-section-nav__link" href="#research-strands">Research Strands</a>
+    <a class="page-section-nav__link" href="#projects-overview">Projects &amp; Collaborations</a>
+  </div>
+</nav>
 
-  <div class="rn-card rn-card--1">
+<section id="research-strands" class="page-section-target supports-target-highlight">
+<p class="rn-heading" data-reveal>Research Strands</p>
+<p class="rn-intro" data-reveal>My research agenda is organized around four connected strands: AI-mediated self-directed learning, learner heterogeneity and equity, authenticity and assessment, and the design principles that translate these findings into practice.</p>
+<div class="rn-grid" data-reveal-group data-reveal-step="72">
+
+  <div id="strand-agency" class="rn-card rn-card--1 page-section-target supports-target-highlight" data-reveal>
     <div class="rn-card__top">
       <span class="rn-card__meta">Agency &amp; SDL</span>
       <span class="rn-card__num">01</span>
@@ -343,7 +351,7 @@ header:
     </div>
   </div>
 
-  <div class="rn-card rn-card--2">
+  <div id="strand-equity" class="rn-card rn-card--2 page-section-target supports-target-highlight" data-reveal>
     <div class="rn-card__top">
       <span class="rn-card__meta">Equity &amp; Heterogeneity</span>
       <span class="rn-card__num">02</span>
@@ -357,7 +365,7 @@ header:
     </div>
   </div>
 
-  <div class="rn-card rn-card--3">
+  <div id="strand-authenticity" class="rn-card rn-card--3 page-section-target supports-target-highlight" data-reveal>
     <div class="rn-card__top">
       <span class="rn-card__meta">Authenticity &amp; Assessment</span>
       <span class="rn-card__num">03</span>
@@ -372,7 +380,7 @@ header:
     </div>
   </div>
 
-  <div class="rn-card rn-card--4">
+  <div id="strand-design" class="rn-card rn-card--4 page-section-target supports-target-highlight" data-reveal>
     <div class="rn-card__top">
       <span class="rn-card__meta">Literacy &amp; Design</span>
       <span class="rn-card__num">04</span>
@@ -387,13 +395,16 @@ header:
   </div>
 
 </div>
+</section>
+
+<script src="/assets/js/site-interactions.js" defer></script>
 
 <!-- ── PROJECTS & COLLABORATIONS ── -->
-<section class="projects-section">
-<p class="projects-heading">Projects &amp; Collaborations</p>
-<div class="project-list">
+<section id="projects-overview" class="projects-section page-section-target supports-target-highlight">
+<p class="projects-heading" data-reveal>Projects &amp; Collaborations</p>
+<div class="project-list" data-reveal-group data-reveal-step="78">
 
-  <article class="project-card">
+  <article class="project-card" data-reveal>
     <a class="project-card__media" href="/projects/cps-ai-environments/">
       <img src="/assets/images/publications/cps-intel_1.jpg" alt="Collaborative Problem Solving project visual" />
     </a>
@@ -411,7 +422,7 @@ header:
     </div>
   </article>
 
-  <article class="project-card">
+  <article class="project-card" data-reveal>
     <a class="project-card__media" href="/projects/ticapp/">
       <img src="/assets/images/publications/ticapp.gif" alt="TicApp mobile learning app preview" />
     </a>
@@ -429,7 +440,7 @@ header:
     </div>
   </article>
 
-  <article class="project-card">
+  <article class="project-card" data-reveal>
     <a class="project-card__media" href="/projects/petechat/">
       <img src="/assets/images/projects-petechat-interface-v2.png" alt="PeteChat tutoring assistant interface" />
     </a>
@@ -447,7 +458,7 @@ header:
     </div>
   </article>
 
-  <article class="project-card">
+  <article class="project-card" data-reveal>
     <a class="project-card__media" href="/projects/authenticity-assessment/" style="background: linear-gradient(145deg, #fff7f8 0%, #fff 42%, #fff7ea 100%);">
       <div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:20px 22px;">
         <span style="display:inline-flex;align-items:center;width:max-content;padding:5px 10px;border-radius:999px;background:#fbecef;color:#9a3658;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">Authenticity line</span>
@@ -469,7 +480,7 @@ header:
     </div>
   </article>
 
-  <article class="project-card project-card--diss">
+  <article class="project-card project-card--diss" data-reveal>
     <a class="project-card__media" href="/projects/global-learners-genai/">
       <img src="/assets/images/Research%20Trajectory%20Mind-Map%20-%20Simply%20Remove%20Blank%20Box.png" alt="Global learners and GenAI dissertation visual map" />
     </a>

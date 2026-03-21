@@ -5,6 +5,9 @@
 layout: home
 author_profile: true
 classes: wide
+custom_js:
+  - /assets/js/lightbox.js
+  - /assets/js/mobile-nav.js
 ---
 <style>
 .bio-kw {
@@ -133,23 +136,23 @@ classes: wide
 </p>
 <p><em>My work moves across four connected strands:</em></p>
 {% include research-venn.html %}
-<section class="home-methods">
-  <p class="home-methods__eyebrow">Methodology</p>
-  <p class="home-methods__intro">I build this agenda through synthesis, measurement, empirical inquiry, and design translation, moving from field-level questions about AI-mediated learning to real educational settings where judgment, ownership, and fairness are at stake.</p>
-  <div class="home-methods__grid">
-    <div class="home-methods__card">
+<section class="home-methods" data-reveal>
+  <p class="home-methods__eyebrow" data-reveal>Methodology</p>
+  <p class="home-methods__intro" data-reveal>I build this agenda through synthesis, measurement, empirical inquiry, and design translation, moving from field-level questions about AI-mediated learning to real educational settings where judgment, ownership, and fairness are at stake.</p>
+  <div class="home-methods__grid" data-reveal-group data-reveal-step="68">
+    <div class="home-methods__card" data-reveal>
       <p class="home-methods__card-title">Systematic Reviews</p>
       <p class="home-methods__card-copy">Map patterns, gaps, and conceptual shifts across large bodies of GenAI, assessment, and learning research.</p>
     </div>
-    <div class="home-methods__card">
+    <div class="home-methods__card" data-reveal>
       <p class="home-methods__card-title">Design-Based Research</p>
       <p class="home-methods__card-copy">Build and iteratively refine learning tools in authentic educational settings, including apps, tutoring systems, and AI-supported environments.</p>
     </div>
-    <div class="home-methods__card">
+    <div class="home-methods__card" data-reveal>
       <p class="home-methods__card-title">Mixed-Methods Studies</p>
       <p class="home-methods__card-copy">Combine surveys, interviews, interaction traces, and performance data to understand how learners and instructors work with AI across contexts and over time.</p>
     </div>
-    <div class="home-methods__card">
+    <div class="home-methods__card" data-reveal>
       <p class="home-methods__card-title">Measurement &amp; Validation</p>
       <p class="home-methods__card-copy">Develop and validate frameworks and instruments for studying agency, self-directed learning, and AI-mediated educational processes.</p>
     </div>
@@ -192,5 +195,6 @@ classes: wide
   window.setTimeout(typeNext, 180);
 })();
 </script>
+<script src="/assets/js/site-interactions.js" defer></script>
 {% include news-feed.html %}
 {% include beyond-cv.html %}

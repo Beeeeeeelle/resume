@@ -169,6 +169,25 @@ title: "Publications"
 .pub-entry__body strong {
   color: #111;
 }
+.pub-focus-item {
+  transition: opacity 0.22s ease, filter 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+.pub-section.is-spotlight .pub-focus-item {
+  opacity: 0.44;
+  filter: saturate(0.78);
+}
+.pub-section.is-spotlight .pub-focus-item.is-active {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+.pub-focus-item.is-active .bl-pcard__title,
+.pub-focus-item.is-active .pub-entry__body {
+  color: #1a2233;
+}
+.pub-focus-item.is-active .pub-tag {
+  box-shadow: 0 6px 16px rgba(42, 122, 226, 0.12);
+}
 
 /* ── Resource buttons ── */
 .pub-tags {
@@ -419,7 +438,7 @@ title: "Publications"
 .ptl-pub:hover::after { opacity: 1; }
 </style>
 
-<div class="pub-timeline">
+<div id="pub-overview" class="pub-timeline page-section-target supports-target-highlight" data-reveal>
   <h3>Publications at a glance</h3>
   <div class="ptl-wrap">
   <div class="ptl-grid">
@@ -492,11 +511,21 @@ title: "Publications"
   </div>
 </div>
 
+<nav class="page-section-nav" data-page-nav data-reveal aria-label="Publications page sections">
+  <div class="page-section-nav__list">
+    <a class="page-section-nav__link" href="#pub-overview">Timeline</a>
+    <a class="page-section-nav__link" href="#pub-journals">Journal Articles</a>
+    <a class="page-section-nav__link" href="#pub-proceedings">Proceedings</a>
+    <a class="page-section-nav__link" href="#pub-chapters">Book Chapters</a>
+    <a class="page-section-nav__link" href="#pub-book">Book</a>
+    <a class="page-section-nav__link" href="#pub-under-review">Under Review</a>
+  </div>
+</nav>
 
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--  PEER-REVIEWED JOURNAL ARTICLES                          -->
 <!-- ══════════════════════════════════════════════════════════ -->
-<section class="pub-section">
+<section id="pub-journals" class="pub-section page-section-target supports-target-highlight" data-reveal>
 <h2>Peer-Reviewed Journal Articles</h2>
 <div class="pub-first-note"><span></span> First / corresponding author</div>
 
@@ -758,7 +787,7 @@ title: "Publications"
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--  REFEREED PROCEEDINGS                                    -->
 <!-- ══════════════════════════════════════════════════════════ -->
-<section class="pub-section">
+<section id="pub-proceedings" class="pub-section page-section-target supports-target-highlight" data-reveal>
 <h2>Refereed Proceedings</h2>
 
 <div class="pub-entry">
@@ -775,7 +804,7 @@ title: "Publications"
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--  BOOK CHAPTERS                                           -->
 <!-- ══════════════════════════════════════════════════════════ -->
-<section class="pub-section">
+<section id="pub-chapters" class="pub-section page-section-target supports-target-highlight" data-reveal>
 <h2>Book Chapters</h2>
 
 <!-- AI-generation literacy — Palgrave 2026 — with thumbnail -->
@@ -816,7 +845,7 @@ title: "Publications"
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--  BOOK                                                    -->
 <!-- ══════════════════════════════════════════════════════════ -->
-<section class="pub-section">
+<section id="pub-book" class="pub-section page-section-target supports-target-highlight" data-reveal>
 <h2>Book</h2>
 
 <div class="pub-entry">
@@ -830,7 +859,7 @@ title: "Publications"
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--  UNDER REVIEW & IN REVISION                              -->
 <!-- ══════════════════════════════════════════════════════════ -->
-<section class="pub-section">
+<section id="pub-under-review" class="pub-section page-section-target supports-target-highlight" data-reveal>
 <h2>Under Review &amp; In Revision</h2>
 
 <div class="pub-entry">
@@ -904,6 +933,7 @@ title: "Publications"
   <img id="bl-lightbox-img" src="" alt="" data-lightbox-bound="true">
 </div>
 
+<script src="/assets/js/site-interactions.js" defer></script>
 <script>
 (function () {
   /* ── Carousel ── */

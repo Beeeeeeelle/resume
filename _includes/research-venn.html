@@ -132,13 +132,13 @@
       </defs>
 
       <!-- hit zones -->
-      <path class="rv-hit" data-zone="a" cursor="default" fill="rgba(0,0,0,0.001)" stroke="none"
+      <path class="rv-hit" data-zone="a" data-target="/research/#strand-agency" tabindex="0" role="link" aria-label="Open AI-mediated self-directed learning strand on the research page" cursor="pointer" fill="rgba(0,0,0,0.001)" stroke="none"
             d="M 248,56 C 358,40 443,116 430,228 C 416,340 336,406 232,398 C 127,390 57,316 66,210 C 75,118 136,71 248,56 Z"/>
-      <path class="rv-hit" data-zone="b" cursor="default" fill="rgba(0,0,0,0.001)" stroke="none"
+      <path class="rv-hit" data-zone="b" data-target="/research/#strand-authenticity" tabindex="0" role="link" aria-label="Open authenticity and assessment strand on the research page" cursor="pointer" fill="rgba(0,0,0,0.001)" stroke="none"
             d="M 642,55 C 756,40 836,117 824,228 C 812,340 732,405 628,398 C 524,390 455,316 463,210 C 471,118 531,70 642,55 Z"/>
-      <path class="rv-hit" data-zone="c" cursor="default" fill="rgba(0,0,0,0.001)" stroke="none"
+      <path class="rv-hit" data-zone="c" data-target="/research/#strand-equity" tabindex="0" role="link" aria-label="Open learner heterogeneity and equity strand on the research page" cursor="pointer" fill="rgba(0,0,0,0.001)" stroke="none"
             d="M 252,264 C 366,248 445,323 432,437 C 419,549 337,613 230,606 C 120,598 46,523 56,414 C 65,324 138,278 252,264 Z"/>
-      <path class="rv-hit" data-zone="d" cursor="default" fill="rgba(0,0,0,0.001)" stroke="none"
+      <path class="rv-hit" data-zone="d" data-target="/research/#strand-design" tabindex="0" role="link" aria-label="Open AI literacy and design translation strand on the research page" cursor="pointer" fill="rgba(0,0,0,0.001)" stroke="none"
             d="M 646,264 C 760,248 840,323 827,437 C 814,549 731,613 624,606 C 514,598 440,523 450,414 C 459,324 532,278 646,264 Z"/>
 
       <!-- connectors -->
@@ -369,6 +369,16 @@
       var zone = el.getAttribute('data-zone');
       svg.removeAttribute('data-hover');
       animateTo(zone, 1.0);
+    });
+    el.addEventListener('click', function () {
+      var target = el.getAttribute('data-target');
+      if (target) window.location.href = target;
+    });
+    el.addEventListener('keydown', function (evt) {
+      if (evt.key !== 'Enter' && evt.key !== ' ') return;
+      evt.preventDefault();
+      var target = el.getAttribute('data-target');
+      if (target) window.location.href = target;
     });
   });
 
