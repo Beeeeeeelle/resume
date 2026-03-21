@@ -20,11 +20,11 @@ title: "Grants"
 
 ---
 
-## Proposals in Resubmission or Review
+## Recent Proposals & Resubmissions
 
-- **Spencer Vision Grant – Transforming Online Learning Through AI Presence** (2025–2026)  
+- **Spencer Vision Grant proposal – Transforming Online Learning Through AI Presence** (2025–2026)  
   $74,729 · Lead PI: Victoria Lowell (Purdue). I initiated the concept, led proposal authoring, instrument design, budget outline, and cross-campus coordination.  
-- **Spencer Small Grant – Global Language Learners Using GenAI Tools** (2025–2027)  
+- **Spencer Small Grant proposal – Global Language Learners Using GenAI Tools** (2025–2027)  
   $50,000 · Lead PI: Victoria Lowell (Purdue). Co-led study design and authored the qualitative/quantitative evaluation plan.  
 - **NSF Collaborative Research – IMPACT: Immersive, Personalized, and Accessible Cybersecurity Training** (Texas A&M led)  
   $3.2M · Rated “Competitive.” Designed AI-enabled instructional components and evaluation metrics for middle/high school cybersecurity pathways.  
@@ -37,7 +37,7 @@ title: "Grants"
 
 ## Competitive Submissions & Recognitions
 
-- **Spencer Small Grant – Exploring Inventions in Self-Directed Language Learning** (2023–2025)  
+- **Spencer Small Grant proposal – Exploring Inventions in Self-Directed Language Learning** (2023–2025)  
   Finalist · $50,000 · Team: Curt Bonk (Lead PI), Belle Li, Xiaojing Kou. I served as project lead and primary writer.  
 - **NSF IMPACT & SEED** proposals – invited to revise for resubmission based on strong panel feedback.  
 - **Unity for Humanity, NSF EDGE, and institutional seed grants** – participated in concept development, logic modeling, and evaluation design for AI-supported learning initiatives.

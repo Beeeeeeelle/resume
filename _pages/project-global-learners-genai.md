@@ -11,7 +11,7 @@ author_profile: false
 <div class="project-case">
   <p class="project-case__back"><a href="/research/">&larr; Back to Research</a></p>
   <p class="project-case__eyebrow">Dissertation · In Progress</p>
-  <p class="project-case__lede">This page is framed around an ongoing dissertation and related grant-supported study rather than a published paper. The project examines how global and multilingual learners use generative AI over time, with particular attention to personal attributes, learning processes, and equity across populations.</p>
+  <p class="project-case__lede">This page is framed around an ongoing dissertation rather than a published paper. The project examines how global and multilingual learners use generative AI over time, with particular attention to personal attributes, learning processes, and equity across populations.</p>
 
   <div class="project-case__chips">
     <span class="project-case__chip">Longitudinal mixed methods</span>
@@ -30,8 +30,8 @@ author_profile: false
       <span class="project-case__stat-label">expected completion timeline</span>
     </div>
     <div class="project-case__stat">
-      <span class="project-case__stat-value">Spencer Small Grant</span>
-      <span class="project-case__stat-label">related proposal support for global language learners using GenAI tools</span>
+      <span class="project-case__stat-value">Global &amp; multilingual</span>
+      <span class="project-case__stat-label">focus on linguistic, national, and socioeconomic variation across learner populations</span>
     </div>
     <div class="project-case__stat">
       <span class="project-case__stat-value">Mixed methods</span>
@@ -50,7 +50,7 @@ author_profile: false
     </div>
     <div class="project-case__panel">
       <span class="project-case__panel-label">Source Basis</span>
-      <p>Because this is still an in-progress dissertation rather than a finished publication, this page is grounded in the project framing from your current research agenda, dissertation description, and related grant language.</p>
+      <p>Because this is still an in-progress dissertation rather than a finished publication, this page is grounded in the project framing from your current research agenda, dissertation description, and study planning materials.</p>
     </div>
   </div>
 
