@@ -78,9 +78,35 @@ classes: wide
   line-height: 1.65;
   color: #607084;
 }
+.home-typewriter {
+  position: relative;
+  display: inline;
+}
+.home-typewriter--typing::after,
+.home-typewriter--done::after {
+  content: "";
+  display: inline-block;
+  width: 0.09em;
+  height: 0.88em;
+  margin-left: 0.12em;
+  border-radius: 999px;
+  background: rgba(224, 90, 43, 0.92);
+  vertical-align: -0.08em;
+}
+.home-typewriter--typing::after {
+  animation: home-caret-blink 0.82s steps(1, end) infinite;
+}
+.home-typewriter--done::after {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+@keyframes home-caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
 </style>
 <h1>
- AI in Learning, Humans in Charge.
+ <span class="home-typewriter" data-text="AI in Learning, Humans in Charge.">AI in Learning, Humans in Charge.</span>
 </h1>
 <p>
  I am a Ph.D. candidate in Purdue University’s
@@ -129,5 +155,42 @@ classes: wide
     </div>
   </div>
 </section>
+<script>
+(() => {
+  const headline = document.querySelector(".home-typewriter");
+  if (!headline) return;
+
+  const fullText = headline.dataset.text || headline.textContent.trim();
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reduceMotion) {
+    headline.textContent = fullText;
+    return;
+  }
+
+  headline.textContent = "";
+  headline.classList.add("home-typewriter--typing");
+
+  let index = 0;
+
+  const typeNext = () => {
+    index += 1;
+    headline.textContent = fullText.slice(0, index);
+
+    if (index < fullText.length) {
+      const nextDelay = fullText[index - 1] === " " ? 34 : 56;
+      window.setTimeout(typeNext, nextDelay);
+      return;
+    }
+
+    window.setTimeout(() => {
+      headline.classList.remove("home-typewriter--typing");
+      headline.classList.add("home-typewriter--done");
+    }, 420);
+  };
+
+  window.setTimeout(typeNext, 180);
+})();
+</script>
 {% include news-feed.html %}
 {% include beyond-cv.html %}
