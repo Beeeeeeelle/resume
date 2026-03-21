@@ -11,7 +11,7 @@ author_profile: false
 <div class="project-case">
   <p class="project-case__back"><a href="/research/">&larr; Back to Research</a></p>
   <p class="project-case__eyebrow">Springer Chapter · Design-Based Research</p>
-  <p class="project-case__lede">This page is grounded in the chapter <em>Implementing Design Thinking: A Mobile Application for Heritage Chinese Learners to Overcome Challenges in Learning Chinese Characters</em>. The project translates a concrete learning problem into a mobile design solution by combining design thinking, cognitive load considerations, and iterative evaluation.</p>
+  <p class="project-case__lede">TicApp is a mobile learning project for heritage Chinese learners that translates a concrete character-learning problem into a design solution through design thinking, cognitive load considerations, and iterative evaluation.</p>
 
   <div class="project-case__chips">
     <span class="project-case__chip">Heritage Chinese learners</span>
@@ -46,7 +46,7 @@ author_profile: false
   <div class="project-case__detail-grid">
     <div class="project-case__panel">
       <span class="project-case__panel-label">Problem Framing</span>
-      <p>The chapter starts from a specific learner problem: many heritage Chinese learners can speak Chinese but struggle to retrieve, recognize, and type characters efficiently. Traditional instruction does not directly address that gap.</p>
+      <p>The project starts from a specific learner problem: many heritage Chinese learners can speak Chinese but struggle to retrieve, recognize, and type characters efficiently. Traditional instruction does not directly address that gap.</p>
     </div>
     <div class="project-case__panel">
       <span class="project-case__panel-label">Design Contribution</span>
@@ -87,7 +87,7 @@ author_profile: false
 
   <section class="project-case__section">
     <h2>Outcome</h2>
-    <p>TicApp is best understood as a research-grounded design intervention: it identifies a precise learning bottleneck, proposes an app-based solution, and documents the reasoning and methodology clearly enough for others to inspect and build on.</p>
+    <p>TicApp demonstrates how a precise learning bottleneck can be translated into an app-based intervention with a clear methodological rationale, iterative design logic, and practical relevance for language learning.</p>
     <div class="project-case__links">
       <a class="project-case__link" href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" rel="noopener">View Springer design case</a>
     </div>

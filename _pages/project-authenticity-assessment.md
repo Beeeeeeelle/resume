@@ -251,7 +251,7 @@ author_profile: false
 <div class="project-case">
   <p class="project-case__back"><a href="/research/">&larr; Back to Research</a></p>
   <p class="project-case__eyebrow">Higher Education · Emerging Research Line</p>
-  <p class="project-case__lede">This page is grounded in a connected line of manuscripts and design proposals rather than a single finished publication. Across work on student-AI collaborative writing, an interview-based authenticity framework, and writing assessment design, the central question is how instructors should judge authorship, ownership, and legitimate performance when generative AI becomes part of student work.</p>
+  <p class="project-case__lede">Authenticity and assessment form a connected research line spanning student-AI collaborative writing, an interview-based authenticity framework, and writing assessment design. Across these studies, the central question is how instructors should judge authorship, ownership, and legitimate performance when generative AI becomes part of student work.</p>
 
   <div class="project-case__chips">
     <span class="project-case__chip">Instructor perspectives</span>
@@ -419,7 +419,7 @@ author_profile: false
 
   <section class="project-case__section">
     <h2>Current Position</h2>
-    <p>This is best understood as an emerging but now clearly articulated project cluster rather than a single completed study. It already includes Q-method work on subjective judgments, interview-based framework building, and a design-oriented assessment proposal; the next step is translating those insights into more portable assessment criteria and task design guidance.</p>
+    <p>This research line already includes Q-method work on subjective judgments, interview-based framework building, and a design-oriented assessment proposal. The next step is translating those insights into more portable assessment criteria and task design guidance.</p>
     <div class="project-case__links">
       <a class="project-case__link" href="/publications/">See publication statuses</a>
       <a class="project-case__link" href="/research/">Return to research agenda</a>

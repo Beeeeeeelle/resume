@@ -11,7 +11,7 @@ author_profile: false
 <div class="project-case">
   <p class="project-case__back"><a href="/research/">&larr; Back to Research</a></p>
   <p class="project-case__eyebrow">Dissertation · In Progress</p>
-  <p class="project-case__lede">This page is framed around an ongoing dissertation rather than a published paper. The project examines how global and multilingual learners use generative AI over time, with particular attention to personal attributes, learning processes, and equity across populations.</p>
+  <p class="project-case__lede">This dissertation examines how global and multilingual learners use generative AI over time, with particular attention to personal attributes, learning processes, and equity across populations.</p>
 
   <div class="project-case__chips">
     <span class="project-case__chip">Longitudinal mixed methods</span>
@@ -21,7 +21,7 @@ author_profile: false
 
   <figure class="project-case__hero">
     <img src="/assets/images/Research%20Trajectory%20Mind-Map%20-%20Simply%20Remove%20Blank%20Box.png" alt="Research trajectory map for global learners and GenAI" />
-    <figcaption>Research trajectory map used here as a visual anchor for the dissertation’s broader conceptual structure.</figcaption>
+    <figcaption>Research trajectory map showing the dissertation’s broader conceptual structure.</figcaption>
   </figure>
 
   <div class="project-case__stats">
@@ -49,8 +49,8 @@ author_profile: false
       <p>The dissertation asks how learners from different linguistic, national, and socioeconomic backgrounds adopt, adapt to, and make meaning from generative AI over time, and where those trajectories diverge in consequential ways.</p>
     </div>
     <div class="project-case__panel">
-      <span class="project-case__panel-label">Source Basis</span>
-      <p>Because this is still an in-progress dissertation rather than a finished publication, this page is grounded in the project framing from your current research agenda, dissertation description, and study planning materials.</p>
+      <span class="project-case__panel-label">Study Scope</span>
+      <p>The study brings together longitudinal design, learner heterogeneity, and AI-mediated self-directed learning to examine how adoption patterns diverge across populations in consequential ways.</p>
     </div>
   </div>
 
@@ -89,6 +89,6 @@ author_profile: false
 
   <section class="project-case__section">
     <h2>Current Direction</h2>
-    <p>The project is moving toward a clearer account of how global learners use GenAI tools across time, and for whom those tools are more or less empowering. The page is now intentionally framed as an ongoing study design rather than as if it already had a finished publication package.</p>
+    <p>The project is moving toward a clearer account of how global learners use GenAI tools across time, and for whom those tools are more or less empowering.</p>
   </section>
 </div>

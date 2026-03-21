@@ -11,7 +11,7 @@ author_profile: false
 <div class="project-case">
   <p class="project-case__back"><a href="/research/">&larr; Back to Research</a></p>
   <p class="project-case__eyebrow">AI System Design · Higher Education</p>
-  <p class="project-case__lede">PeteChat is an LLM-powered tutoring assistant designed around a tutor-not-solver philosophy. This page is grounded in the project’s internal case materials and design documentation rather than a published journal article, so the emphasis here is on the actual system, DBR phases, and design decisions.</p>
+  <p class="project-case__lede">PeteChat is an LLM-powered tutoring assistant designed around a tutor-not-solver philosophy. The project combines guardrails, retrieval, and dialogue design to support learning without turning the system into an answer machine.</p>
 
   <div class="project-case__chips">
     <span class="project-case__chip">Guardrailed AI tutor</span>
@@ -50,7 +50,7 @@ author_profile: false
     </div>
     <div class="project-case__panel">
       <span class="project-case__panel-label">My Role</span>
-      <p>The case materials position this work around design research, stakeholder evaluation, and pedagogical alignment, translating learning theory into concrete interaction and system decisions.</p>
+      <p>The project centers on design research, stakeholder evaluation, and pedagogical alignment, translating learning theory into concrete interaction and system decisions.</p>
     </div>
   </div>
 
@@ -87,6 +87,6 @@ author_profile: false
 
   <section class="project-case__section">
     <h2>Current Status</h2>
-    <p>PeteChat remains an active design-based research project. A formal design case is still in preparation, so this page is intentionally grounded in internal case-study materials rather than being framed as a publication page.</p>
+    <p>PeteChat remains an active design-based research project. Ongoing work focuses on refining the tutoring workflow, documenting the design case, and evaluating how the system supports judgment, help-seeking, and academic integrity.</p>
   </section>
 </div>

@@ -11,7 +11,7 @@ author_profile: false
 <div class="project-case">
   <p class="project-case__back"><a href="/research/">&larr; Back to Research</a></p>
   <p class="project-case__eyebrow">Intel Labs · CAEAI 2025</p>
-  <p class="project-case__lede">This page is grounded in the paper <em>An early investigation of collaborative problem solving in conversational AI-mediated learning environments</em>. The study examines how a multimodal conversational AI system, Kid Space, supports collaborative problem solving among young learners through projected interaction, spoken dialogue, and physical activity.</p>
+  <p class="project-case__lede">This study examines how a multimodal conversational AI system, Kid Space, supports collaborative problem solving among young learners through projected interaction, spoken dialogue, and physical activity.</p>
 
   <div class="project-case__chips">
     <span class="project-case__chip">Early childhood learning</span>
@@ -45,8 +45,8 @@ author_profile: false
 
   <div class="project-case__detail-grid">
     <div class="project-case__panel">
-      <span class="project-case__panel-label">What The Paper Studies</span>
-      <p>The paper investigates whether a projected 3D environment with an animated conversational agent can enrich collaborative problem solving for young learners while still adapting to developmental needs.</p>
+      <span class="project-case__panel-label">Research Focus</span>
+      <p>The study investigates whether a projected 3D environment with an animated conversational agent can enrich collaborative problem solving for young learners while still adapting to developmental needs.</p>
     </div>
     <div class="project-case__panel">
       <span class="project-case__panel-label">Why It Matters</span>
@@ -66,8 +66,8 @@ author_profile: false
   <section class="project-case__section">
     <h2>Key Findings</h2>
     <ul class="project-case__list">
-      <li>The paper reports significant correlations between CPS behaviors and the joint engagement of students working together.</li>
-      <li>It also finds meaningful relationships between CPS behaviors and pedagogical interventions provided by the instructional assistant.</li>
+      <li>Findings show significant correlations between CPS behaviors and the joint engagement of students working together.</li>
+      <li>The study also identifies meaningful relationships between CPS behaviors and pedagogical interventions provided by the instructional assistant.</li>
       <li>The takeaway is not that AI replaces collaboration, but that carefully designed AI environments can support CPS when they are developmentally and pedagogically tuned.</li>
     </ul>
   </section>
