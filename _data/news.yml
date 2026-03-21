@@ -1,6 +1,11 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- date: "2025"
+  type: media
+  text: "Launched <strong><a href=\"https://ai-education-library.vercel.app\" target=\"_blank\">AI for Education Resource Library</a></strong> — a curated open library of videos, tools, and practical resources spanning teaching, instructional design, AI literacy, and higher education."
+  url: https://ai-education-library.vercel.app
+
 - date: "Mar 2026"
   type: paper
   text: "Our chapter <strong>\"AI-Generation Literacy\"</strong> is now published in <em>The Palgrave Encyclopedia of Computer-Assisted Language Learning</em>. We introduce a 4I framework (Identify, Interact, Interpret, Integrate) for building AI-generation literacy competencies."
