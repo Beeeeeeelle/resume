@@ -502,5 +502,3 @@ header:
 </section>
 </div>
 </div>
-
-<script src="/assets/js/site-interactions.js" defer></script>

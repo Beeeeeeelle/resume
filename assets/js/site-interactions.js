@@ -1,4 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
+if (!window.__siteInteractionsInitialized) {
+  window.__siteInteractionsInitialized = true;
+
+  document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   initReveal(prefersReducedMotion);
@@ -9,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsFilters();
   initPublicationsSpotlight();
   initBeyondCvGallery(prefersReducedMotion);
-});
+  });
+}
 
 function animateNumericScroll(store, key, from, to, duration, apply) {
   if (store[key]) {

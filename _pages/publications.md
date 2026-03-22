@@ -1092,7 +1092,6 @@ title: "Publications"
   <img id="bl-lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" data-lightbox-bound="true">
 </div>
 
-<script src="/assets/js/site-interactions.js" defer></script>
 <script>
 (function () {
   /* ── Carousel ── */
