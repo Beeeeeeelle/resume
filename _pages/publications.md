@@ -209,7 +209,73 @@ title: "Publications"
 .pub-tag--pdf   { background: #fce8e8; color: #b02020; }
 .pub-tag--web   { background: #e8f6e8; color: #1e7a1e; }
 .pub-tag--preprint { background: #f5f0e8; color: #7a5a00; }
+.pub-tag--award { background: #fff4d9; color: #8a6700; }
 .pub-tag:hover  { opacity: 0.8; }
+
+.pub-recognition {
+  margin-top: 12px;
+  padding: 12px 13px;
+  border-radius: 16px;
+  border: 1px solid rgba(195, 160, 56, 0.22);
+  background: linear-gradient(180deg, #fffdf7 0%, #fffaf0 100%);
+  display: grid;
+  gap: 10px;
+}
+
+.pub-recognition--with-image {
+  align-items: start;
+}
+
+@media (min-width: 40em) {
+  .pub-recognition--with-image {
+    grid-template-columns: minmax(0, 1fr) 112px;
+  }
+}
+
+.pub-recognition__label {
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(195, 160, 56, 0.12);
+  color: #896400;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.pub-recognition__title {
+  margin: 6px 0 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2a2a2a;
+  line-height: 1.45;
+}
+
+.pub-recognition__body {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #5a6473;
+}
+
+.pub-recognition__media {
+  display: grid;
+  gap: 0.55rem;
+  align-content: start;
+}
+
+.pub-recognition__image {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(195, 160, 56, 0.18);
+  background: #fff;
+  display: block;
+  cursor: zoom-in;
+}
 
 /* ── Under review ── */
 .pub-status {
@@ -309,69 +375,101 @@ title: "Publications"
   color: #aaa;
   margin: 0 0 16px;
 }
-.ptl-wrap {
-  overflow-x: auto;
+.ptl-intro {
+  max-width: 42rem;
+  margin: 0 0 1.15rem;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #6b7280;
 }
-.ptl-grid {
+.ptl-cards {
   display: grid;
-  grid-template-columns: 110px repeat(4, 1fr);
-  gap: 0;
-  min-width: 420px;
-  border: 1px solid #e8e8e8;
-  border-radius: 6px;
-  overflow: hidden;
+  gap: 1rem;
 }
-.ptl-header {
-  background: #f5f6f8;
-  padding: 7px 10px;
-  font-size: 12px;
+@media (min-width: 56em) {
+  .ptl-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 40em) and (max-width: 55.99em) {
+  .ptl-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.ptl-card {
+  padding: 1rem 1rem 1.05rem;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(226, 232, 240, 0.92);
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.76) 0%, rgba(255, 255, 255, 0.98) 100%);
+  box-shadow: 0 1rem 2.8rem rgba(15, 23, 42, 0.06);
+  display: grid;
+  gap: 0.9rem;
+}
+.ptl-card__year {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1;
   font-weight: 700;
-  color: #666;
-  text-align: center;
-  border-bottom: 1px solid #e8e8e8;
+  color: #4b5563;
+  letter-spacing: -0.02em;
 }
-.ptl-header:not(:last-child) { border-right: 1px solid #e8e8e8; }
-.ptl-label {
-  padding: 10px 10px;
-  font-size: 11.5px;
+.ptl-card__rows {
+  display: grid;
+  gap: 0.75rem;
+}
+.ptl-row {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.9);
+}
+.ptl-row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.ptl-row__label {
+  font-size: 11px;
   font-weight: 700;
-  color: #555;
-  background: #f9fafb;
-  display: flex;
-  align-items: center;
-  border-right: 1px solid #e8e8e8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a8898;
 }
-.ptl-label--first { border-bottom: 1px solid #e8e8e8; }
-.ptl-cell {
-  padding: 8px 10px;
+.ptl-row__label--first {
+  color: #9a5d3d;
+}
+.ptl-row__items {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  align-items: center;
-  border-right: 1px solid #e8e8e8;
+  gap: 0.42rem;
+  min-height: 1.9rem;
 }
-.ptl-cell:last-child { border-right: none; }
-.ptl-cell--first { border-bottom: 1px solid #e8e8e8; }
+.ptl-row__empty {
+  font-size: 13px;
+  color: #a0aec0;
+}
 
 /* Publication squares */
 .ptl-pub {
-  width: 22px;
-  height: 22px;
-  border-radius: 4px;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 800;
   color: #fff;
   cursor: default;
   position: relative;
   text-decoration: none;
-  letter-spacing: 0;
+  letter-spacing: 0.01em;
   line-height: 1;
   text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.16);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
 }
-.ptl-pub:hover { transform: scale(1.15); z-index: 10; }
+.ptl-pub:hover { transform: translateY(-1px); z-index: 10; box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14); }
 
 /* Venue colours */
 .v-tlt     { background: #2a52a0; }
@@ -394,20 +492,20 @@ title: "Publications"
 .ptl-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
-  margin-top: 12px;
+  gap: 10px 16px;
+  margin-top: 14px;
 }
 .ptl-legend-item {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 11px;
-  color: #555;
+  gap: 6px;
+  font-size: 12px;
+  color: #667085;
 }
 .ptl-legend-dot {
   width: 12px;
   height: 12px;
-  border-radius: 2px;
+  border-radius: 4px;
   flex-shrink: 0;
 }
 
@@ -453,59 +551,95 @@ title: "Publications"
 <div class="page-with-rail-nav__main">
 <div id="pub-overview" class="pub-timeline page-section-target supports-target-highlight" data-reveal>
   <h3>Publications at a glance</h3>
-  <div class="ptl-wrap">
-  <div class="ptl-grid">
-    <!-- Header row: 2023–2026 -->
-    <div class="ptl-header" style="text-align:left"></div>
-    <div class="ptl-header">2023</div>
-    <div class="ptl-header">2024</div>
-    <div class="ptl-header">2025</div>
-    <div class="ptl-header">2026</div>
+  <p class="ptl-intro">Selected peer-reviewed outputs grouped by year and authorship role. Hover each venue chip for the full citation cue, or jump into the sections below for complete entries.</p>
+  <div class="ptl-cards">
+    <article class="ptl-card">
+      <h4 class="ptl-card__year">2023</h4>
+      <div class="ptl-card__rows">
+        <div class="ptl-row">
+          <div class="ptl-row__label ptl-row__label--first">First / corresponding</div>
+          <div class="ptl-row__items">
+            <span class="ptl-pub v-ijcallt" data-tip="Li et al. (2023) · ChatGPT affordances in YouTuber videos · IJCALLT">IJ</span>
+            <span class="ptl-pub v-lang" data-tip="Li et al. (2023) · YouTube content creation & ChatGPT · Languages">La</span>
+            <a class="ptl-pub v-olj" href="https://doi.org/10.24059/olj.v27i4.4003" target="_blank" data-tip="Pawan, Li et al. (2023) · Culturally responsive online teacher PD · Online Learning Journal">OL</a>
+          </div>
+        </div>
+        <div class="ptl-row">
+          <div class="ptl-row__label">Co-authored</div>
+          <div class="ptl-row__items">
+            <span class="ptl-pub v-ijcallt" data-tip="Bao & Li (2023) · Graduate instructors' use of ChatGPT · IJCALLT">IJ</span>
+            <span class="ptl-pub v-lang" data-tip="Li X., Li B., & Cho (2023) · Low-income learners & ChatGPT writing · Languages">La</span>
+          </div>
+        </div>
+      </div>
+    </article>
 
-    <!-- Row 1: First / corresponding author -->
-    <div class="ptl-label ptl-label--first">First / corresp.</div>
-    <div class="ptl-cell ptl-cell--first">
-      <span class="ptl-pub v-ijcallt" data-tip="Li et al. (2023) · ChatGPT affordances in YouTuber videos · IJCALLT">IJ</span>
-      <span class="ptl-pub v-lang"    data-tip="Li et al. (2023) · YouTube content creation & ChatGPT · Languages">La</span>
-      <a class="ptl-pub v-olj"    href="https://doi.org/10.24059/olj.v27i4.4003" target="_blank" data-tip="Pawan, Li et al. (2023) · Culturally responsive online teacher PD · Online Learning Journal">OL</a>
-    </div>
-    <div class="ptl-cell ptl-cell--first">
-      <a class="ptl-pub v-tlt"   href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" data-tip="Li et al. (2024) · Reconceptualizing SDL in the GenAI era · IEEE TLT">TL</a>
-      <a class="ptl-pub v-caeai" href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" data-tip="Li et al. (2024) · First year of ChatGPT in education · CAEAI">CA</a>
-      <a class="ptl-pub v-tech"  href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" data-tip="Li et al. (2024) · SDL with GenAI: YouTube creators · TechTrends">TT</a>
-      <a class="ptl-pub v-springer" href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" data-tip="Li & Lowell (2024) · TicApp: Design thinking for diverse learners · Springer">Sp</a>
-    </div>
-    <div class="ptl-cell ptl-cell--first">
-      <a class="ptl-pub v-system" href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" data-tip="Li et al. (2025) · PA-SDA Scale development & validation · System">Sy</a>
-      <a class="ptl-pub v-caeai"  href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" data-tip="Li et al. (2025) · Two years of GenAI in education: Systematic review · CAEAI">CA</a>
-      <a class="ptl-pub v-illt"   href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" data-tip="Li & Hikmatilla (2025) · EduTubers on social media · ILLT">IL</a>
-      <a class="ptl-pub v-illt"   href="https://doi.org/10.1080/17501229.2025.2598587" target="_blank" data-tip="Li, Luo, Bahari et al. (2025) · GBLL outcomes systematic review · ILLT">IL</a>
-      <span class="ptl-pub v-ijaied" data-tip="Li, Exter, Feng et al. (Accepted) · Language educators & GenAI: Systematic review · IJAIED">IJ</span>
-    </div>
-    <div class="ptl-cell ptl-cell--first">
-      <a class="ptl-pub v-book" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" data-tip="Li & Lowell (2026) · AI-generation literacy · Palgrave Encyclopedia of CALL">Pa</a>
-    </div>
+    <article class="ptl-card">
+      <h4 class="ptl-card__year">2024</h4>
+      <div class="ptl-card__rows">
+        <div class="ptl-row">
+          <div class="ptl-row__label ptl-row__label--first">First / corresponding</div>
+          <div class="ptl-row__items">
+            <a class="ptl-pub v-tlt" href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" data-tip="Li et al. (2024) · Reconceptualizing SDL in the GenAI era · IEEE TLT">TL</a>
+            <a class="ptl-pub v-caeai" href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" data-tip="Li et al. (2024) · First year of ChatGPT in education · CAEAI">CA</a>
+            <a class="ptl-pub v-tech" href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" data-tip="Li et al. (2024) · SDL with GenAI: YouTube creators · TechTrends">TT</a>
+            <a class="ptl-pub v-springer" href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" data-tip="Li & Lowell (2024) · TicApp: Design thinking for diverse learners · Springer">Sp</a>
+          </div>
+        </div>
+        <div class="ptl-row">
+          <div class="ptl-row__label">Co-authored</div>
+          <div class="ptl-row__items">
+            <span class="ptl-pub v-springer" data-tip="Crum, Li, & Kou (2024) · GenAI & vocabulary acquisition · HCI International / Springer">Sp</span>
+          </div>
+        </div>
+      </div>
+    </article>
 
-    <!-- Row 2: Co-authored -->
-    <div class="ptl-label">Co-authored</div>
-    <div class="ptl-cell">
-      <span class="ptl-pub v-ijcallt" data-tip="Bao & Li (2023) · Graduate instructors' use of ChatGPT · IJCALLT">IJ</span>
-      <span class="ptl-pub v-lang"    data-tip="Li X., Li B., & Cho (2023) · Low-income learners & ChatGPT writing · Languages">La</span>
-    </div>
-    <div class="ptl-cell">
-      <span class="ptl-pub v-springer" data-tip="Crum, Li, & Kou (2024) · GenAI & vocabulary acquisition · HCI International / Springer">Sp</span>
-    </div>
-    <div class="ptl-cell">
-      <a class="ptl-pub v-bjet"    href="https://doi.org/10.1111/bjet.13588" target="_blank" data-tip="Yang, Li et al. (2025) · Nontraditional students & ChatGPT · BJET">BJ</a>
-      <a class="ptl-pub v-caeai"   href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" data-tip="Aslan, Li et al. (2025) · Collaborative problem solving in AI environments · CAEAI">CA</a>
-      <span class="ptl-pub v-edusci"  data-tip="Yan, Li, & Lowell (2025) · AI & XR in education: SLR · Education Sciences">ES</span>
-      <span class="ptl-pub v-edusci"  data-tip="Yang, Lovett, Li, & Hou (2025) · AI agents & workplace performance · Education Sciences">ES</span>
-      <span class="ptl-pub v-jaid"    data-tip="Lovett, Li et al. (2025) · LLMs for learner personas · JAID">JA</span>
-      <span class="ptl-pub v-edusci"  data-tip="Li X., Li B., Li J., & Cho (2025) · Magic School AI review · Education Sciences">ES</span>
-      <span class="ptl-pub v-jche"    data-tip="Yang, Luo, Herman, Li et al. (in press) · Non-traditional learners & ChatGPT design · JCHE">JC</span>
-    </div>
-    <div class="ptl-cell"></div>
-  </div>
+    <article class="ptl-card">
+      <h4 class="ptl-card__year">2025</h4>
+      <div class="ptl-card__rows">
+        <div class="ptl-row">
+          <div class="ptl-row__label ptl-row__label--first">First / corresponding</div>
+          <div class="ptl-row__items">
+            <a class="ptl-pub v-system" href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" data-tip="Li et al. (2025) · PA-SDA Scale development & validation · System">Sy</a>
+            <a class="ptl-pub v-caeai" href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" data-tip="Li et al. (2025) · Two years of GenAI in education: Systematic review · CAEAI">CA</a>
+            <a class="ptl-pub v-illt" href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" data-tip="Li & Hikmatilla (2025) · EduTubers on social media · ILLT">IL</a>
+            <a class="ptl-pub v-illt" href="https://doi.org/10.1080/17501229.2025.2598587" target="_blank" data-tip="Li, Luo, Bahari et al. (2025) · GBLL outcomes systematic review · ILLT">IL</a>
+            <span class="ptl-pub v-ijaied" data-tip="Li, Exter, Feng et al. (Accepted) · Language educators & GenAI: Systematic review · IJAIED">IJ</span>
+          </div>
+        </div>
+        <div class="ptl-row">
+          <div class="ptl-row__label">Co-authored</div>
+          <div class="ptl-row__items">
+            <a class="ptl-pub v-bjet" href="https://doi.org/10.1111/bjet.13588" target="_blank" data-tip="Yang, Li et al. (2025) · Nontraditional students & ChatGPT · BJET">BJ</a>
+            <a class="ptl-pub v-caeai" href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" data-tip="Aslan, Li et al. (2025) · Collaborative problem solving in AI environments · CAEAI">CA</a>
+            <span class="ptl-pub v-edusci" data-tip="Yan, Li, & Lowell (2025) · AI & XR in education: SLR · Education Sciences">ES</span>
+            <span class="ptl-pub v-edusci" data-tip="Yang, Lovett, Li, & Hou (2025) · AI agents & workplace performance · Education Sciences">ES</span>
+            <span class="ptl-pub v-jaid" data-tip="Lovett, Li et al. (2025) · LLMs for learner personas · JAID">JA</span>
+            <span class="ptl-pub v-edusci" data-tip="Li X., Li B., Li J., & Cho (2025) · Magic School AI review · Education Sciences">ES</span>
+            <span class="ptl-pub v-jche" data-tip="Yang, Luo, Herman, Li et al. (in press) · Non-traditional learners & ChatGPT design · JCHE">JC</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="ptl-card">
+      <h4 class="ptl-card__year">2026</h4>
+      <div class="ptl-card__rows">
+        <div class="ptl-row">
+          <div class="ptl-row__label ptl-row__label--first">First / corresponding</div>
+          <div class="ptl-row__items">
+            <a class="ptl-pub v-book" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" data-tip="Li & Lowell (2026) · AI-generation literacy · Palgrave Encyclopedia of CALL">Pa</a>
+          </div>
+        </div>
+        <div class="ptl-row">
+          <div class="ptl-row__label">Co-authored</div>
+          <div class="ptl-row__items">
+            <span class="ptl-row__empty">No entries yet</span>
+          </div>
+        </div>
+      </div>
+    </article>
   </div>
 
   <div class="ptl-legend">
@@ -550,6 +684,18 @@ title: "Publications"
     <div class="bl-pcard__venue">System, 133, 103793 · 2025</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" rel="noopener">DOI</a>
+      <span class="pub-tag pub-tag--award">Research Award</span>
+    </div>
+    <div class="pub-recognition pub-recognition--with-image">
+      <div>
+        <div class="pub-recognition__label">Research Recognition</div>
+        <div class="pub-recognition__title">Global Smart Education Innovation Prize · Research Innovation Prize</div>
+        <div class="pub-recognition__body">Recognized in 2025 for the PA-SDA Scale paper at the Global Smart Education Conference at Beijing Normal University. Awarded with the research team for innovation in smart education research, and later featured by Purdue College of Education in a campus recognition display.</div>
+      </div>
+      <div class="pub-recognition__media">
+        <img class="pub-recognition__image" src="/assets/Award/Scale development.jpeg" alt="Global Smart Education Innovation Prize trophy and certificate for the PA-SDA Scale paper" data-lightbox-bound="true">
+        <img class="pub-recognition__image" src="/assets/images/personal/award.jpeg" alt="Purdue College of Education display recognizing the Global Smart Education Innovation Prize for the PA-SDA Scale paper" data-lightbox-bound="true">
+      </div>
     </div>
   </div>
 </div>
@@ -597,6 +743,15 @@ title: "Publications"
     <div class="bl-pcard__venue">Computers &amp; Education: Artificial Intelligence, 100, 100393 · 2025</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.caeai.2025.100393" target="_blank" rel="noopener">DOI</a>
+      <span class="pub-tag pub-tag--award">Research Award</span>
+    </div>
+    <div class="pub-recognition pub-recognition--with-image">
+      <div>
+        <div class="pub-recognition__label">Research Recognition</div>
+        <div class="pub-recognition__title">AECT Systems Thinking &amp; Change Outstanding Journal Article Award</div>
+        <div class="pub-recognition__body">Received at AECT 2025 in Las Vegas for this Intel Labs collaboration on collaborative problem solving in conversational AI-mediated learning environments.</div>
+      </div>
+      <img class="pub-recognition__image" src="/assets/Award/AECT CPS.jpeg" alt="AECT Systems Thinking and Change Outstanding Journal Article Award plaque for the collaborative problem solving paper" data-lightbox-bound="true">
     </div>
   </div>
 </div>
@@ -934,7 +1089,7 @@ title: "Publications"
 <!-- ── LIGHTBOX OVERLAY ── -->
 <div class="bl-lightbox" id="bl-lightbox">
   <span class="bl-lightbox__close" id="bl-lightbox-close">✕</span>
-  <img id="bl-lightbox-img" src="" alt="" data-lightbox-bound="true">
+  <img id="bl-lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" data-lightbox-bound="true">
 </div>
 
 <script src="/assets/js/site-interactions.js" defer></script>
@@ -970,7 +1125,7 @@ title: "Publications"
     lbImg.src = src; lbImg.alt = alt || '';
     lb.classList.add('open');
   }
-  function closeLB() { lb.classList.remove('open'); lbImg.src = ''; }
+  function closeLB() { lb.classList.remove('open'); lbImg.removeAttribute('src'); }
   document.querySelectorAll('.bl-pcard__slide img, .bl-pcard__thumb').forEach(function (img) {
     img.addEventListener('click', function (e) { e.stopPropagation(); openLB(img.src, img.alt); });
   });

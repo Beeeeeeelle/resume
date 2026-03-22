@@ -4,43 +4,83 @@ title: "Teaching & Mentoring"
 ---
 ## Teaching Philosophy
 
-My teaching centers on helping students build agency, judgment, and confidence in technology-rich learning environments. Whether I am working with doctoral students in instructional design or learners from diverse linguistic and cultural backgrounds, I design courses that make expectations visible, invite reflection, and connect theory to authentic intellectual work. I integrate artificial intelligence, extended reality (XR), and learning analytics in ways that strengthen transparency, inclusivity, and formative feedback rather than turning technology into a shortcut. Across settings, my goal is to help students become more self-directed, critical, and equitable participants in learning.
-
-## Courses & Instructional Leadership
-
-### Purdue University · Department of Curriculum and Instruction *(2024–present)*
-<div class="teaching-highlight">
-  <div class="teaching-highlight__content">
-    <ul class="teaching-highlight__list">
-      <li><strong>EDCI 557 Strategic Assessment &amp; Evaluation (Graduate, asynchronous online)</strong> — Redesigned the fully online format with multimedia onboarding, weekly overview videos, and scaffolded Brightspace activities. Co-teach two sections of 16 working professionals each semester, mentoring them to deploy Kirkpatrick &amp; Kirkpatrick’s evaluation model across PK–12 and workforce settings.</li>
-      <li><strong>EDCI 676 Writing a Literature Review (Graduate, face-to-face)</strong> — Co-instructor for the spring seminar; guide doctoral students through synthesis mapping, citation management, and AI-supported search strategies while modeling ethical GenAI use.</li>
-      <li><strong>Graduate advising and mentoring</strong> — Provide formative feedback on dissertation proposals, systematic reviews, and AI-integrated design projects; facilitate peer-review routines to normalize scholarly critique.</li>
-    </ul>
-  </div>
-  <figure class="teaching-highlight__media">
-    <img src="/assets/images/teaching/edci-557-course.png" alt="Brightspace welcome message for Belle Li's EDCI 557 Strategic Assessment and Evaluation course">
-    <figcaption>EDCI 557 course welcome message.</figcaption>
-    <img src="/assets/images/teaching/edci-557-weekly-overview.png" alt="Weekly overview video playlist for EDCI 557">
-    <figcaption>EDCI 557 weekly overview videos that scaffold each module.</figcaption>
-  </figure>
+<div class="teaching-intro">
+  <p>My teaching centers on helping students build agency, judgment, and confidence in technology-rich learning environments. I design courses that make expectations visible, invite reflection, and connect theory to authentic intellectual work. I integrate artificial intelligence, extended reality (XR), and learning analytics in ways that strengthen transparency, inclusivity, and formative feedback rather than turning technology into a shortcut.</p>
 </div>
 
-### ConnectEd · Global Chinese Research Community *(2022–present)*
-- **MET 201 Meta-analysis (Synchronous online)**  
-  Associate instructor for a 250-learner cohort; demonstrate NVivo, R, and JASP workflows, and host bilingual troubleshooting labs tailored to early-career researchers.
-- **Scholarly mentoring**  
-  Lead monthly clinics on Ph.D. application strategy, English-language publishing, and data visualization for scholars across China, Singapore, and the U.S.
+<div class="teaching-overview" data-reveal-group data-reveal-step="72">
+  <article class="teaching-overview__card" data-reveal>
+    <h3>Graduate Teaching</h3>
+    <p>Teach and co-teach graduate courses in assessment, literature review, and research methods across Purdue and ConnectEd contexts.</p>
+  </article>
+  <article class="teaching-overview__card" data-reveal>
+    <h3>Course Design</h3>
+    <p>Redesign online and hybrid learning experiences with clear onboarding, scaffolded practice, and transparent feedback routines.</p>
+  </article>
+  <article class="teaching-overview__card" data-reveal>
+    <h3>Mentoring</h3>
+    <p>Mentor doctoral students, tutors, and early-career scholars on research design, academic writing, and ethical AI use.</p>
+  </article>
+</div>
 
-### Beijing Normal University · College of Education *(May–June 2022)*
-- Co-taught *English Language Teacher Professionalism* (hybrid) for pre- and in-service teachers, emphasizing reflective practice and culturally responsive digital pedagogy.
-- Designed practicum protocols that helped participants integrate AI-enabled feedback tools into their lesson study projects.
+## Current Teaching
 
-### Indiana University Bloomington · Hamilton Lugar School *(2020–2023)*
-- Full-time visiting faculty and assessment coordinator for the **Chinese Flagship Program**.  
-  - Led courses from elementary to capstone levels, including *Advanced Academic Chinese Writing (SGIS-S 300)*, *Chinese in Humanities (EALC-C 457)*, and *Fourth-Year Chinese (EALC-C 101)*.  
-  - Developed immersive community-based projects and genre-driven writing workshops that raised oral proficiency interview (OPI) pass rates.  
-  - Recruited, trained, and supervised 200+ tutors; co-designed a blended “double-loop” tutoring model that sustained post-pandemic retention gains.
-- Mentored capstone cohorts through internship preparation, needs assessment, and intercultural reflection sessions in partnership with overseas host institutions.
+<article class="teaching-panel teaching-panel--feature" data-reveal>
+  <div class="teaching-panel__media">
+    <figure class="teaching-panel__hero">
+      <img src="/assets/images/teaching/edci-557-course.png" alt="Brightspace welcome message for Belle Li's EDCI 557 Strategic Assessment and Evaluation course" loading="lazy">
+      <figcaption>EDCI 557 course welcome and module structure.</figcaption>
+    </figure>
+    <div class="teaching-panel__thumbs">
+      <figure class="teaching-panel__thumb">
+        <img class="teaching-panel__img" src="/assets/images/teaching/edci-557-weekly-overview.png" alt="Weekly overview video playlist for EDCI 557" loading="lazy">
+        <figcaption>Weekly overview videos that scaffold each module.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="teaching-panel__body">
+    <p class="teaching-panel__eyebrow">Purdue University · Department of Curriculum and Instruction</p>
+    <h3>Course Design, Facilitation, and Graduate Mentoring</h3>
+    <p>At Purdue, I teach and co-teach graduate courses that help learners connect instructional design theory with authentic evaluation, writing, and research practice.</p>
+    <ul>
+      <li><strong>EDCI 557 Strategic Assessment &amp; Evaluation:</strong> redesigned the fully online format with multimedia onboarding, weekly overview videos, and scaffolded Brightspace activities for working professionals.</li>
+      <li><strong>EDCI 676 Writing a Literature Review:</strong> co-instruct the graduate seminar and guide doctoral students through synthesis mapping, citation management, and ethical AI-supported search strategies.</li>
+      <li><strong>Graduate advising and mentoring:</strong> provide formative feedback on dissertation proposals, systematic reviews, and AI-integrated design projects while modeling peer-review routines and scholarly critique.</li>
+    </ul>
+  </div>
+</article>
+
+## Teaching & Instructional Leadership Across Contexts
+
+<div class="teaching-panels teaching-panels--two" data-reveal-group data-reveal-step="84">
+  <article class="teaching-panel" data-reveal>
+    <div class="teaching-panel__body">
+      <p class="teaching-panel__eyebrow">ConnectEd · Global Chinese Research Community / Beijing Normal University</p>
+      <h3>Research Methods and Teacher Professionalism</h3>
+      <p>Across synchronous online and hybrid settings, I have taught graduate research methods and teacher professionalism with an emphasis on multilingual support, reflective practice, and practical research workflows.</p>
+      <ul>
+        <li><strong>MET 201 Meta-analysis:</strong> associate instructor for a 250-learner cohort, demonstrating NVivo, R, and JASP workflows and hosting bilingual troubleshooting labs for early-career researchers.</li>
+        <li><strong>Scholarly mentoring:</strong> lead monthly clinics on Ph.D. application strategy, English-language publishing, and data visualization for scholars across China, Singapore, and the U.S.</li>
+        <li><strong>English Language Teacher Professionalism:</strong> co-taught a hybrid course for pre- and in-service teachers, emphasizing reflective practice and culturally responsive digital pedagogy.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="teaching-panel" data-reveal>
+    <div class="teaching-panel__body">
+      <p class="teaching-panel__eyebrow">Indiana University Bloomington · Hamilton Lugar School</p>
+      <h3>Chinese Flagship Instruction and Program Leadership</h3>
+      <p>As full-time visiting faculty and assessment coordinator in the Chinese Flagship Program, I taught across the curriculum while helping sustain advanced language learning, tutoring, and capstone preparation.</p>
+      <ul>
+        <li><strong>Courses taught:</strong> led courses from elementary to capstone levels, including <em>Advanced Academic Chinese Writing</em>, <em>Chinese in Humanities</em>, and <em>Fourth-Year Chinese</em>.</li>
+        <li><strong>Program design:</strong> developed immersive community-based projects and genre-driven writing workshops that supported advanced proficiency and capstone preparation.</li>
+        <li><strong>Tutor leadership:</strong> recruited, trained, and supervised 200+ tutors and co-designed a blended tutoring model that supported retention and instructional continuity.</li>
+      </ul>
+    </div>
+  </article>
+</div>
+
+## Teaching in Practice
 
 <div class="teaching-photo-grid teaching-photo-grid--triple">
   <figure class="teaching-photo">
@@ -72,17 +112,32 @@ My teaching centers on helping students build agency, judgment, and confidence i
   </figure>
 </div>
 
-## Mentoring & Community Building
+## Mentoring & Recognition
 
-- **AI & Learning Innovation Studios.** Facilitate design charrettes for Purdue graduate students exploring GenAI for assessment, accessibility, and workforce upskilling.  
-- **ConnectEd Community of Practice.** Curate open-access resource banks, moderate cross-institutional reading groups, and coach emerging scholars on IRB, grant writing, and conference proposals.  
-- **Tutor Leadership Pipeline.** At Indiana University, built competency-based workshops, observation rubrics, and feedback loops that prepared tutors to become course instructors and graduate students in LDT and Applied Linguistics programs.  
-- **Equity-focused teacher PD.** Co-led online institutes examining culturally and linguistically responsive professional development; findings inform the design of statewide PD ecosystems and now serve as case studies in my graduate courses.
+<div class="teaching-panels teaching-panels--two" data-reveal-group data-reveal-step="84">
+  <article class="teaching-panel" data-reveal>
+    <div class="teaching-panel__body">
+      <p class="teaching-panel__eyebrow">Mentoring &amp; Community Building</p>
+      <h3>Supporting Emerging Scholars and Tutor Leaders</h3>
+      <p>My mentoring extends beyond the classroom into design studios, communities of practice, and tutoring pipelines that help students and early-career scholars participate more fully in research and teaching.</p>
+      <ul>
+        <li><strong>AI &amp; Learning Innovation Studios:</strong> facilitate design charrettes for Purdue graduate students exploring GenAI for assessment, accessibility, and workforce upskilling.</li>
+        <li><strong>ConnectEd Community of Practice:</strong> curate open-access resource banks, moderate cross-institutional reading groups, and coach emerging scholars on IRB, grant writing, and conference proposals.</li>
+        <li><strong>Tutor leadership pipeline:</strong> built competency-based workshops, observation rubrics, and feedback loops that prepared tutors to become instructors and graduate students in LDT and Applied Linguistics.</li>
+      </ul>
+    </div>
+  </article>
 
-## Highlights & Recognitions
-
-- **Course design impact**: Strategic Assessment & Evaluation redesign cited in departmental evaluations for clarity, accessibility, and learner satisfaction.  
-- **Community leadership**: Invited speaker for instructional design seminars at Old Dominion University, Boise State University, and Purdue’s P-12 Conference.  
-- **Award-winning collaborations**: Intel Labs partnership on collaborative problem solving in conversational AI earned the AECT Outstanding Publication Award and informs K–12 teacher preparation modules.
-
-*Interested in visuals from recent workshops or community events? Let me know which stories resonate and I can add the corresponding photo essays to this page.*
+  <article class="teaching-panel" data-reveal>
+    <div class="teaching-panel__body">
+      <p class="teaching-panel__eyebrow">Highlights &amp; Recognitions</p>
+      <h3>Teaching-Related Impact</h3>
+      <p>My teaching work is closely connected to course design, faculty development, and collaborative research on learning technologies.</p>
+      <ul>
+        <li><strong>Course design impact:</strong> the Strategic Assessment &amp; Evaluation redesign has been cited in departmental feedback for clarity, accessibility, and learner satisfaction.</li>
+        <li><strong>Community leadership:</strong> invited speaker for instructional design seminars at Old Dominion University, Boise State University, and Purdue’s P-12 Conference.</li>
+        <li><strong>Research-to-teaching translation:</strong> award-winning collaboration with Intel Labs on collaborative problem solving in conversational AI informs teacher preparation and design discussions in my courses.</li>
+      </ul>
+    </div>
+  </article>
+</div>

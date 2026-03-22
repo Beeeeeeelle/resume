@@ -180,7 +180,7 @@ function initPageNav(prefersReducedMotion) {
     const getRevealThreshold = () => {
       const anchor = wrapper || items[0].target;
       const anchorTop = window.scrollY + anchor.getBoundingClientRect().top;
-      return anchorTop + (window.innerWidth >= 1312 ? 120 : 72);
+      return anchorTop + (window.innerWidth >= 1152 ? 120 : 72);
     };
 
     const updateVisibility = () => {
