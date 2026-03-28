@@ -262,7 +262,7 @@
   position: fixed;
   right: clamp(1rem, 2vw, 1.5rem);
   bottom: clamp(1rem, 2vw, 1.5rem);
-  z-index: 50;
+  z-index: 2147483600;
   display: grid;
   justify-items: end;
   gap: 0.85rem;
