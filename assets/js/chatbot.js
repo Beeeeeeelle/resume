@@ -518,7 +518,10 @@ function scrollTurnIntoView(container, anchorNode) {
   const alignTurnStart = () => {
     const containerStyle = window.getComputedStyle(container);
     const paddingTop = Number.parseFloat(containerStyle.paddingTop) || 0;
-    const top = Math.max(anchorNode.offsetTop - paddingTop - 12, 0);
+    const containerBox = container.getBoundingClientRect();
+    const anchorBox = anchorNode.getBoundingClientRect();
+    const anchorTop = anchorBox.top - containerBox.top + container.scrollTop;
+    const top = Math.max(anchorTop - paddingTop - 12, 0);
     container.scrollTop = top;
   };
 
