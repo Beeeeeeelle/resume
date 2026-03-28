@@ -3,6 +3,8 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+Belle Li is a Ph.D. candidate in Purdue University's Learning Design and Technology program. Her research examines how generative AI reshapes learner agency, authenticity, and equity in self-directed and assessed learning, with work spanning higher education, assessment, self-directed learning, and AI-mediated learning environments.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Across systematic reviews, mixed-methods inquiry, design-based research, and measurement work, she studies how learners and educators work with AI without giving up judgment, ownership, or fairness. Her research is closely connected to design practice, including educational tools, project-based learning environments, course design, and public-facing academic communication.
+
+This site brings together her research agenda, publications, teaching and mentoring experience, service, and selected design and development work. For collaboration, invited talks, or related questions, visitors can use the contact links on the site or the Ask Belle assistant.

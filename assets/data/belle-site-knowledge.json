@@ -1,0 +1,102 @@
+{
+  "updatedAt": "2026-03-28",
+  "siteTitle": "Belle Li",
+  "documents": [
+    {
+      "id": "home-overview",
+      "title": "Home Overview",
+      "url": "https://www.beeelle.com/",
+      "summary": "Belle Li is a Purdue Ph.D. candidate studying how generative AI reshapes learner agency, authenticity, and equity in self-directed and assessed learning.",
+      "tags": ["home", "bio", "overview", "research agenda", "ai", "learning"],
+      "content": "Belle Li is a Ph.D. candidate in Purdue University's Learning Design and Technology program. Her research examines how generative AI reshapes learner agency, authenticity, and equity in self-directed and assessed learning. Her agenda spans systematic reviews, design-based research, mixed-methods studies, and measurement and validation. She combines empirical research with design practice and develops educational tools, learning designs, and public-facing resources."
+    },
+    {
+      "id": "contact-profiles",
+      "title": "Contact & Profiles",
+      "url": "https://www.beeelle.com/",
+      "summary": "Public contact and profile links available on the site, including email, CV, Google Scholar, and LinkedIn.",
+      "tags": ["contact", "email", "cv", "google scholar", "linkedin", "collaboration", "invited talks"],
+      "content": "Belle's public contact and profile links on the site include email at li4808@purdue.edu, a CV link, Google Scholar, and LinkedIn. Visitors interested in collaboration, invited talks, academic communication, or learning more about publications and current work can use those public links."
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "url": "https://www.beeelle.com/research/",
+      "summary": "Research page covering Belle's four connected strands and broader agenda around AI-mediated learning, assessment, fairness, and design translation.",
+      "tags": ["research", "agenda", "authenticity", "assessment", "equity", "genai"],
+      "content": "Belle's research page presents a multi-strand agenda focused on generative AI, learner agency, authenticity, equity, self-directed learning, and assessed learning. The page frames the agenda as a connected set of strands rather than isolated papers. It links theory, empirical work, design-based research, and project storytelling. The research section also serves as the gateway to project pages such as PeteChat, TicApp, authenticity and assessment, collaborative problem solving in AI-mediated environments, and global learners and GenAI."
+    },
+    {
+      "id": "publications",
+      "title": "Publications",
+      "url": "https://www.beeelle.com/publications/",
+      "summary": "Publications page with peer-reviewed journal articles, book chapters, and works in progress, including first-author work on self-directed learning, GenAI, assessment, and language learning.",
+      "tags": ["publications", "papers", "journal articles", "book chapters", "works in progress"],
+      "content": "Belle's publications page highlights first-author and collaborative work in AI-integrated self-directed learning, generative AI in language learning, collaborative problem solving in AI-mediated environments, design-based research, and assessment. Featured works include Development and Validation of the PA-SDA Scale, Two Years of Innovation: A Systematic Review of Empirical Generative AI Research in Language Learning and Teaching, An Early Investigation of Collaborative Problem Solving in Conversational AI-Mediated Learning Environments, and Reconceptualizing Self-Directed Learning in the Era of Generative AI. The page also includes accepted, under review, in press, and proposal-accepted work."
+    },
+    {
+      "id": "teaching",
+      "title": "Teaching & Mentoring",
+      "url": "https://www.beeelle.com/teaching/",
+      "summary": "Teaching page covering graduate instruction, course design, mentoring, Purdue teaching, ConnectEd work, and Chinese Flagship leadership.",
+      "tags": ["teaching", "mentoring", "graduate teaching", "course design", "purdue", "connected", "flagship"],
+      "content": "Belle's teaching centers on learner agency, judgment, confidence, and transparent expectations in technology-rich learning environments. At Purdue she teaches and co-teaches graduate courses such as EDCI 557 Strategic Assessment and Evaluation and EDCI 676 Writing a Literature Review. She has designed online and hybrid learning experiences, mentored doctoral students and tutors, and taught research methods and teacher professionalism across Purdue, ConnectEd, Beijing Normal University contexts, and Indiana University Bloomington's Chinese Flagship Program."
+    },
+    {
+      "id": "service",
+      "title": "Service",
+      "url": "https://www.beeelle.com/service/",
+      "summary": "Service page covering invited talks, workshops, scholarly review, editorial service, institutional leadership, and mentoring/community work.",
+      "tags": ["service", "invited talks", "reviewing", "leadership", "community"],
+      "content": "Belle treats service as field-building work. Her service page covers invited talks and workshops, scholarly and editorial review, proposal and award review, institutional leadership, and community engagement. It documents invited sessions across Purdue, Indiana University Bloomington, Old Dominion University, Boise State, and community-facing venues. It also summarizes reviewer service for journals such as Computers and Education, IEEE Transactions on Learning Technologies, Learning and Instruction, BMC Psychology, and other venues, along with PALDT communications leadership and mentoring work."
+    },
+    {
+      "id": "design-development",
+      "title": "Design & Development",
+      "url": "https://www.beeelle.com/learning/",
+      "summary": "Design and development page covering website design, learning products, media systems, and evaluation projects.",
+      "tags": ["design", "development", "websites", "learning products", "evaluation", "portfolio"],
+      "content": "The Design and Development page shows how Belle translates research questions into usable learning tools, websites, course systems, communication artifacts, and evaluation outputs. It features the AI for Education Resource Library, academic site concept work, PALDT newsletters, TicApp, online course design, media and visual storytelling, podcast production, and retention-focused needs assessment projects. The page emphasizes clarity, accessibility, and usable educational design."
+    },
+    {
+      "id": "petechat",
+      "title": "PeteChat",
+      "url": "https://www.beeelle.com/projects/petechat/",
+      "summary": "LLM-powered tutoring assistant designed around a tutor-not-solver philosophy with guardrails, retrieval, and dialogue design.",
+      "tags": ["petechat", "llm tutor", "guardrails", "higher education", "dbr"],
+      "content": "PeteChat is an LLM-powered tutoring assistant designed around a tutor-not-solver philosophy. The project addresses a classroom problem where generic AI tools may help students complete work without learning. PeteChat uses guardrails, dialogue structure, and retrieval to support academic integrity and higher-order thinking. It has grant funding from Purdue Innovation Hub, follows multiple DBR phases from 2024 to 2026, and is deployed in higher education contexts such as ECE 20875."
+    },
+    {
+      "id": "ticapp",
+      "title": "TicApp",
+      "url": "https://www.beeelle.com/projects/ticapp/",
+      "summary": "Mobile learning design project for heritage Chinese learners built through design thinking, DBR, and the sound-form-meaning learning logic.",
+      "tags": ["ticapp", "heritage chinese", "mobile learning", "dbr", "springer"],
+      "content": "TicApp is a mobile learning design project for heritage Chinese learners who can speak Chinese but struggle to retrieve, recognize, and type characters efficiently. The project reframes character learning around typing as a meaningful learning action linking sound, form, and meaning. It uses design thinking, cognitive load considerations, Pinyin-based typing, and design-based research with iterative feedback. The published design case appears in a 2024 Springer volume."
+    },
+    {
+      "id": "global-learners-genai",
+      "title": "Global Learners & GenAI",
+      "url": "https://www.beeelle.com/projects/global-learners-genai/",
+      "summary": "Dissertation project examining how global and multilingual learners use generative AI over time, with attention to equity and learner differences.",
+      "tags": ["dissertation", "global learners", "multilingual learners", "longitudinal", "equity"],
+      "content": "This dissertation examines how global and multilingual learners use generative AI over time, with attention to personal attributes, learning processes, and equity across populations. It uses longitudinal mixed methods and compares learners across linguistic, national, and socioeconomic backgrounds. The project asks how adoption, adaptation, and meaning-making with generative AI diverge in consequential ways. The expected completion timeline is 2026."
+    },
+    {
+      "id": "cps-ai-environments",
+      "title": "Collaborative Problem Solving in AI-Mediated Environments",
+      "url": "https://www.beeelle.com/projects/cps-ai-environments/",
+      "summary": "Study of Kid Space, a multimodal conversational AI learning environment supporting collaborative problem solving among young learners.",
+      "tags": ["kid space", "collaborative problem solving", "multimodal ai", "early childhood", "caeai"],
+      "content": "This study examines how Kid Space, a multimodal conversational AI learning environment, supports collaborative problem solving among young learners through projected interaction, spoken dialogue, and physical activity. The project uses an exploratory case study and analyzes CPS-social, CPS-cognitive, joint engagement, and instructional interventions. It argues that well-designed AI environments can support collaboration when they are developmentally and pedagogically tuned. The project produced a peer-reviewed 2025 CAEAI paper."
+    },
+    {
+      "id": "authenticity-assessment",
+      "title": "Authenticity & Assessment",
+      "url": "https://www.beeelle.com/projects/authenticity-assessment/",
+      "summary": "Project page on authenticity and assessment in AI-mediated learning, connecting assessment design, judgment, and acceptable versus contested AI use.",
+      "tags": ["authenticity", "assessment", "ai use", "judgment", "integrity"],
+      "content": "The authenticity and assessment project focuses on how AI use changes what counts as authentic academic work and how assessment design should respond. It connects assessment design, human judgment, and the distinction between accepted, contested, and rejected AI use. The page presents a framework-oriented view of authenticity rather than a simple ban-versus-allow debate."
+    }
+  ]
+}

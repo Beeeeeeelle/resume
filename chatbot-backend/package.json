@@ -1,0 +1,14 @@
+{
+  "name": "ask-belle-backend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Minimal Vercel backend for the Ask Belle chatbot.",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  }
+}

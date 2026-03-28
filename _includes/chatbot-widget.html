@@ -1,0 +1,113 @@
+{% if site.chatbot and site.chatbot.enabled %}
+  <div class="site-chatbot" data-site-chatbot>
+    <button class="site-chatbot__backdrop" type="button" data-chatbot-backdrop hidden tabindex="-1" aria-hidden="true"></button>
+    <button
+      class="site-chatbot__launcher"
+      type="button"
+      data-chatbot-toggle
+      aria-expanded="false"
+      aria-controls="site-chatbot-panel"
+    >
+      <span class="site-chatbot__launcher-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+          <path d="M12 3c-4.97 0-9 3.58-9 8 0 2.46 1.26 4.66 3.24 6.13L5.2 21l4.25-2.25c.81.16 1.67.25 2.55.25 4.97 0 9-3.58 9-8s-4.03-8-9-8Zm-3.5 8.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm3.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm3.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"></path>
+        </svg>
+      </span>
+      <span class="site-chatbot__launcher-text">{{ site.chatbot.button_label | default: "Ask Belle" }}</span>
+    </button>
+
+    <section
+      class="site-chatbot__panel"
+      id="site-chatbot-panel"
+      data-chatbot-panel
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="site-chatbot-title"
+      aria-hidden="true"
+      aria-label="{{ site.chatbot.title | default: 'Ask Belle' }}"
+    >
+      <header class="site-chatbot__header">
+        <div class="site-chatbot__title-wrap">
+          <div class="site-chatbot__header-top">
+            <p class="site-chatbot__eyebrow">Belle Li Portfolio</p>
+            <span class="site-chatbot__mode" data-chatbot-mode>
+              {% if site.chatbot.api_url and site.chatbot.api_url != "" %}
+                Live AI
+              {% else %}
+                Site guide mode
+              {% endif %}
+            </span>
+          </div>
+          <h2 class="site-chatbot__title" id="site-chatbot-title">{{ site.chatbot.title | default: "Ask Belle" }}</h2>
+          <p class="site-chatbot__subtitle">{{ site.chatbot.subtitle | default: "Research, teaching, publications, and projects" }}</p>
+        </div>
+        <button class="site-chatbot__close" type="button" data-chatbot-close aria-label="Close chat">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </header>
+
+      <div class="site-chatbot__contacts" data-chatbot-contacts>
+        {% assign chatbot_contact_labels = "Email|CV|Google Scholar|LinkedIn" | split: "|" %}
+        {% for chatbot_contact_label in chatbot_contact_labels %}
+          {% assign chatbot_contact_link = site.author.links | where: "label", chatbot_contact_label | first %}
+          {% if chatbot_contact_link %}
+            <a class="site-chatbot__contact-chip" href="{{ chatbot_contact_link.url }}" target="{% if chatbot_contact_link.url contains 'mailto:' %}_self{% else %}_blank{% endif %}" {% unless chatbot_contact_link.url contains 'mailto:' %}rel="noopener noreferrer"{% endunless %}>
+              {{ chatbot_contact_link.label }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="site-chatbot__messages" data-chatbot-messages>
+        <article class="site-chatbot__message site-chatbot__message--assistant">
+          <div class="site-chatbot__bubble">
+            <p>{{ site.chatbot.intro | default: "Ask about Belle's research agenda, publications, teaching experience, or design projects." }}</p>
+          </div>
+        </article>
+      </div>
+
+      {% if site.chatbot.suggested_prompts %}
+        <div class="site-chatbot__suggestions" data-chatbot-suggestions>
+          {% for prompt in site.chatbot.suggested_prompts %}
+            <button class="site-chatbot__suggestion" type="button" data-chatbot-suggestion="{{ prompt | escape }}">
+              {{ prompt }}
+            </button>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <form class="site-chatbot__composer" data-chatbot-form>
+        <label class="visually-hidden" for="site-chatbot-input">Ask Belle</label>
+        <textarea
+          id="site-chatbot-input"
+          class="site-chatbot__input"
+          data-chatbot-input
+          rows="1"
+          placeholder="{{ site.chatbot.placeholder | default: 'Ask about research, publications, teaching, projects, or collaboration...' }}"
+        ></textarea>
+        <button class="site-chatbot__send" type="submit" data-chatbot-submit>
+          Send
+        </button>
+      </form>
+
+      <p class="site-chatbot__fine-print">
+        {{ site.chatbot.disclaimer | default: "Answers should stay grounded in the published website content." }}
+      </p>
+    </section>
+
+    <script id="site-chatbot-config" type="application/json">
+      {
+        "title": {{ site.chatbot.title | jsonify }},
+        "subtitle": {{ site.chatbot.subtitle | jsonify }},
+        "placeholder": {{ site.chatbot.placeholder | jsonify }},
+        "intro": {{ site.chatbot.intro | jsonify }},
+        "apiUrl": {{ site.chatbot.api_url | jsonify }},
+        "knowledgeBaseUrl": {{ site.chatbot.knowledge_base_url | jsonify }},
+        "buttonLabel": {{ site.chatbot.button_label | jsonify }},
+        "suggestedPrompts": {{ site.chatbot.suggested_prompts | jsonify }},
+        "disclaimer": {{ site.chatbot.disclaimer | jsonify }}
+      }
+    </script>
+  </div>
+{% endif %}
