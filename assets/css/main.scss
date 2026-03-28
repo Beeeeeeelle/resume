@@ -268,6 +268,10 @@
   gap: 0.85rem;
 }
 
+.site-chatbot [hidden] {
+  display: none !important;
+}
+
 .site-chatbot__backdrop {
   position: fixed;
   inset: 0;
@@ -321,6 +325,9 @@
 }
 
 .site-chatbot__panel {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.85rem);
   width: min(25rem, calc(100vw - 2rem));
   max-height: min(43rem, calc(100vh - 6.5rem));
   display: grid;
@@ -774,6 +781,8 @@
   }
 
   .site-chatbot__panel {
+    right: 0;
+    bottom: calc(100% + 0.75rem);
     width: 100%;
     max-height: min(40rem, calc(100vh - 7rem));
   }
