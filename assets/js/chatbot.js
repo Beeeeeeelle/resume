@@ -146,7 +146,7 @@ async function initChatbot(root, config) {
       emphasizeContacts(3600);
     }
 
-    appendMessage(messages, 'user', text);
+    const userMessageNode = appendMessage(messages, 'user', text);
     state.conversation.push({ role: 'user', content: text });
     input.value = '';
     input.style.height = 'auto';
@@ -171,7 +171,8 @@ async function initChatbot(root, config) {
       }
 
       typingNode.remove();
-      appendMessage(messages, 'assistant', responsePayload.message, responsePayload.citations || []);
+      appendMessage(messages, 'assistant', responsePayload.message, responsePayload.citations || [], { scroll: 'none' });
+      scrollTurnIntoView(messages, userMessageNode);
       state.conversation.push({ role: 'assistant', content: responsePayload.message });
     } catch (error) {
       if (!error || !error.isExpectedChatbotFailure) {
@@ -179,7 +180,8 @@ async function initChatbot(root, config) {
       }
       typingNode.remove();
       const fallback = await buildFallbackResponse(config, state, text, { degradedMode: true });
-      appendMessage(messages, 'assistant', fallback.message, fallback.citations || []);
+      appendMessage(messages, 'assistant', fallback.message, fallback.citations || [], { scroll: 'none' });
+      scrollTurnIntoView(messages, userMessageNode);
       state.conversation.push({ role: 'assistant', content: fallback.message });
       syncModeBadge(config.apiUrl ? 'degraded' : 'guide');
     } finally {
@@ -380,7 +382,7 @@ async function loadKnowledgeBase(config, state) {
   }
 }
 
-function appendMessage(container, role, text, citations) {
+function appendMessage(container, role, text, citations, options) {
   const article = document.createElement('article');
   article.className = `site-chatbot__message site-chatbot__message--${role}`;
 
@@ -425,7 +427,7 @@ function appendMessage(container, role, text, citations) {
 
   article.appendChild(bubble);
   container.appendChild(article);
-  container.scrollTop = container.scrollHeight;
+  scrollMessages(container, options);
   return article;
 }
 
@@ -494,8 +496,27 @@ function appendTyping(container) {
 
   article.appendChild(bubble);
   container.appendChild(article);
-  container.scrollTop = container.scrollHeight;
+  scrollMessages(container, { scroll: 'end' });
   return article;
+}
+
+function scrollMessages(container, options) {
+  const scrollMode = options && options.scroll ? options.scroll : 'end';
+  if (scrollMode === 'none') return;
+
+  container.scrollTop = container.scrollHeight;
+}
+
+function scrollTurnIntoView(container, anchorNode) {
+  if (!container || !anchorNode) return;
+
+  window.requestAnimationFrame(() => {
+    const top = Math.max(anchorNode.offsetTop - 12, 0);
+    container.scrollTo({
+      top,
+      behavior: 'smooth',
+    });
+  });
 }
 
 function getKnowledgeMatches(documents, query) {
