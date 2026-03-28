@@ -63,12 +63,6 @@ async function initChatbot(root, config) {
     setOpenState(!state.isOpen);
   });
 
-  if (backdrop) {
-    backdrop.addEventListener('click', () => {
-      setOpenState(false);
-    });
-  }
-
   if (closeButton) {
     closeButton.addEventListener('click', () => {
       setOpenState(false);
@@ -81,11 +75,12 @@ async function initChatbot(root, config) {
     });
   }
 
-  document.addEventListener('mousedown', (event) => {
+  document.addEventListener('pointerdown', (event) => {
     if (!state.isOpen) return;
-    if (root.contains(event.target)) return;
+    const target = event.target;
+    if (panel.contains(target) || toggle.contains(target)) return;
     setOpenState(false);
-  });
+  }, true);
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && state.isOpen) {
