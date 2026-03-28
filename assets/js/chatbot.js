@@ -150,6 +150,7 @@ async function initChatbot(root, config) {
     state.conversation.push({ role: 'user', content: text });
     input.value = '';
     input.style.height = 'auto';
+    input.blur();
     setSendingState(true);
     setOpenState(true);
 
@@ -190,6 +191,7 @@ async function initChatbot(root, config) {
   }
 
   function setOpenState(nextState) {
+    const wasOpen = state.isOpen;
     state.isOpen = nextState;
     toggle.setAttribute('aria-expanded', String(nextState));
     if (nextState) {
@@ -203,7 +205,9 @@ async function initChatbot(root, config) {
       state.previouslyFocused = document.activeElement && document.activeElement !== document.body
         ? document.activeElement
         : toggle;
-      window.setTimeout(() => input.focus(), 80);
+      if (!wasOpen) {
+        window.setTimeout(() => input.focus(), 80);
+      }
     } else {
       html.classList.remove('chatbot-lock');
       const returnFocusTarget = state.previouslyFocused
@@ -288,6 +292,7 @@ async function initChatbot(root, config) {
     syncModeBadge(config.apiUrl ? 'live' : 'guide');
     setSendingState(false);
     setOpenState(true);
+    window.setTimeout(() => input.focus(), 80);
   }
 }
 
@@ -510,13 +515,17 @@ function scrollMessages(container, options) {
 function scrollTurnIntoView(container, anchorNode) {
   if (!container || !anchorNode) return;
 
-  window.requestAnimationFrame(() => {
-    const top = Math.max(anchorNode.offsetTop - 12, 0);
-    container.scrollTo({
-      top,
-      behavior: 'smooth',
-    });
-  });
+  const alignTurnStart = () => {
+    const containerStyle = window.getComputedStyle(container);
+    const paddingTop = Number.parseFloat(containerStyle.paddingTop) || 0;
+    const top = Math.max(anchorNode.offsetTop - paddingTop - 12, 0);
+    container.scrollTop = top;
+  };
+
+  alignTurnStart();
+  window.requestAnimationFrame(alignTurnStart);
+  window.setTimeout(alignTurnStart, 120);
+  window.setTimeout(alignTurnStart, 280);
 }
 
 function getKnowledgeMatches(documents, query) {
