@@ -24,6 +24,7 @@ async function initChatbot(root, config) {
   const panel = root.querySelector('[data-chatbot-panel]');
   const backdrop = root.querySelector('[data-chatbot-backdrop]');
   const toggle = root.querySelector('[data-chatbot-toggle]');
+  const resetButton = root.querySelector('[data-chatbot-reset]');
   const closeButton = root.querySelector('[data-chatbot-close]');
   const modeBadge = root.querySelector('[data-chatbot-mode]');
   const contacts = root.querySelector('[data-chatbot-contacts]');
@@ -35,6 +36,9 @@ async function initChatbot(root, config) {
   const suggestionButtons = [...root.querySelectorAll('[data-chatbot-suggestion]')];
 
   if (!panel || !toggle || !form || !input || !submit || !messages) return;
+
+  const initialIntro = String(config.intro || 'Ask about Belle\'s research agenda, publications, teaching experience, or design projects.');
+  panel.inert = true;
 
   const state = {
     isOpen: false,
@@ -68,6 +72,12 @@ async function initChatbot(root, config) {
   if (closeButton) {
     closeButton.addEventListener('click', () => {
       setOpenState(false);
+    });
+  }
+
+  if (resetButton) {
+    resetButton.addEventListener('click', () => {
+      resetConversation();
     });
   }
 
@@ -138,7 +148,7 @@ async function initChatbot(root, config) {
     }
 
     if (isContactQuery(text)) {
-      emphasizeContacts();
+      emphasizeContacts(3600);
     }
 
     appendMessage(messages, 'user', text);
@@ -188,10 +198,9 @@ async function initChatbot(root, config) {
     if (nextState) {
       root.classList.add('is-open');
       panel.hidden = false;
-      panel.setAttribute('aria-hidden', 'false');
+      panel.inert = false;
       if (backdrop) {
         backdrop.hidden = false;
-        backdrop.setAttribute('aria-hidden', 'false');
       }
       html.classList.toggle('chatbot-lock', window.innerWidth < 769);
       state.previouslyFocused = document.activeElement && document.activeElement !== document.body
@@ -213,11 +222,10 @@ async function initChatbot(root, config) {
       }
 
       root.classList.remove('is-open');
+      panel.inert = true;
       panel.hidden = true;
-      panel.setAttribute('aria-hidden', 'true');
       if (backdrop) {
         backdrop.hidden = true;
-        backdrop.setAttribute('aria-hidden', 'true');
       }
     }
   }
@@ -226,7 +234,11 @@ async function initChatbot(root, config) {
     state.isSending = isSending;
     submit.disabled = isSending;
     input.disabled = isSending;
+    if (resetButton) {
+      resetButton.disabled = isSending;
+    }
     root.classList.toggle('is-sending', isSending);
+    messages.setAttribute('aria-busy', String(isSending));
   }
 
   function syncModeBadge(mode) {
@@ -249,7 +261,7 @@ async function initChatbot(root, config) {
     modeBadge.textContent = 'Site guide mode';
   }
 
-  function emphasizeContacts() {
+  function emphasizeContacts(durationMs) {
     if (!contacts) return;
 
     contacts.classList.add('is-emphasized');
@@ -259,7 +271,26 @@ async function initChatbot(root, config) {
 
     state.contactHighlightTimer = window.setTimeout(() => {
       contacts.classList.remove('is-emphasized');
-    }, 2400);
+    }, durationMs || 2400);
+  }
+
+  function resetConversation() {
+    state.conversation = [];
+    state.hasUserMessage = false;
+    messages.innerHTML = '';
+    appendMessage(messages, 'assistant', initialIntro);
+    if (suggestions) {
+      suggestions.hidden = false;
+      suggestions.classList.remove('is-condensed');
+    }
+    if (contacts) {
+      contacts.classList.remove('is-emphasized');
+    }
+    input.value = '';
+    input.style.height = 'auto';
+    syncModeBadge(config.apiUrl ? 'live' : 'guide');
+    setSendingState(false);
+    setOpenState(true);
   }
 }
 
@@ -360,23 +391,7 @@ function appendMessage(container, role, text, citations) {
 
   const bubble = document.createElement('div');
   bubble.className = 'site-chatbot__bubble';
-
-  const paragraphs = String(text)
-    .split(/\n{2,}/)
-    .map((segment) => segment.trim())
-    .filter(Boolean);
-
-  if (!paragraphs.length) {
-    const paragraph = document.createElement('p');
-    paragraph.textContent = text;
-    bubble.appendChild(paragraph);
-  } else {
-    paragraphs.forEach((segment) => {
-      const paragraph = document.createElement('p');
-      paragraph.textContent = segment;
-      bubble.appendChild(paragraph);
-    });
-  }
+  renderMessageBody(bubble, text);
 
   if (Array.isArray(citations) && citations.length) {
     const sources = document.createElement('div');
@@ -389,6 +404,11 @@ function appendMessage(container, role, text, citations) {
       link.href = citation.url;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
+
+      const kind = document.createElement('span');
+      kind.className = 'site-chatbot__source-kind';
+      kind.textContent = getCitationKind(citation);
+      link.appendChild(kind);
 
       const title = document.createElement('strong');
       title.textContent = citation.title;
@@ -414,6 +434,61 @@ function appendMessage(container, role, text, citations) {
   return article;
 }
 
+function renderMessageBody(container, text) {
+  const blocks = String(text)
+    .split(/\n{2,}/)
+    .map((segment) => segment.trim())
+    .filter(Boolean);
+
+  if (!blocks.length) {
+    appendParagraph(container, text);
+    return;
+  }
+
+  blocks.forEach((block) => {
+    const lines = block
+      .split('\n')
+      .map((line) => line.trim())
+      .filter(Boolean);
+
+    if (!lines.length) return;
+
+    const bulletLines = lines.filter((line) => /^[-*•]\s+/.test(line));
+
+    if (bulletLines.length === lines.length) {
+      appendBulletList(container, bulletLines);
+      return;
+    }
+
+    if (bulletLines.length === lines.length - 1 && /[:：]$/.test(lines[0])) {
+      appendParagraph(container, lines[0]);
+      appendBulletList(container, bulletLines);
+      return;
+    }
+
+    appendParagraph(container, lines.join(' '));
+  });
+}
+
+function appendParagraph(container, text) {
+  const paragraph = document.createElement('p');
+  paragraph.textContent = text;
+  container.appendChild(paragraph);
+}
+
+function appendBulletList(container, lines) {
+  const list = document.createElement('ul');
+  list.className = 'site-chatbot__list';
+
+  lines.forEach((line) => {
+    const item = document.createElement('li');
+    item.textContent = line.replace(/^[-*•]\s+/, '');
+    list.appendChild(item);
+  });
+
+  container.appendChild(list);
+}
+
 function appendTyping(container) {
   const article = document.createElement('article');
   article.className = 'site-chatbot__message site-chatbot__message--assistant';
@@ -430,24 +505,25 @@ function appendTyping(container) {
 
 function getKnowledgeMatches(documents, query) {
   const queryTokens = tokenize(query);
-  if (!queryTokens.length) return documents.slice(0, 3);
+  const intent = detectQueryIntent(query);
+  if (!queryTokens.length && !intent) return documents.slice(0, 3);
 
   return documents
     .map((doc) => ({
       ...doc,
-      _score: scoreDocument(doc, queryTokens),
+      _score: scoreDocument(doc, queryTokens, intent),
     }))
     .filter((doc) => doc._score > 0)
     .sort((left, right) => right._score - left._score);
 }
 
-function scoreDocument(doc, queryTokens) {
+function scoreDocument(doc, queryTokens, intent) {
   const titleTokens = tokenize(doc.title || '');
   const summaryTokens = tokenize(doc.summary || '');
   const bodyTokens = tokenize(doc.content || '');
   const tagTokens = tokenize(Array.isArray(doc.tags) ? doc.tags.join(' ') : '');
 
-  let score = 0;
+  let score = getIntentBoost(doc, intent);
   queryTokens.forEach((token) => {
     if (titleTokens.includes(token)) score += 6;
     if (tagTokens.includes(token)) score += 5;
@@ -486,6 +562,61 @@ function defaultGuideLinks() {
   ];
 }
 
+function detectQueryIntent(text) {
+  const query = String(text);
+  if (isContactQuery(query)) return 'contact';
+  if (/publication|paper|article|journal|chapter|citation|论文|文章|发表/i.test(query)) return 'publications';
+  if (/teach|course|mentor|class|instruction|教学|课程|指导/i.test(query)) return 'teaching';
+  if (/project|build|tool|design|develop|app|prototype|产品|项目|作品/i.test(query)) return 'projects';
+  if (/service|review|editorial|workshop|talk|speaker|serve|审稿|服务|讲座|分享/i.test(query)) return 'service';
+  if (/research|agenda|strand|focus|study|interests|研究|方向|议题/i.test(query)) return 'research';
+  return '';
+}
+
+function getIntentBoost(doc, intent) {
+  if (!intent || !doc || !doc.id) return 0;
+
+  const boosts = {
+    contact: {
+      'contact-profiles': 18,
+      service: 8,
+      'home-overview': 5,
+    },
+    publications: {
+      publications: 18,
+      research: 7,
+      'home-overview': 4,
+    },
+    teaching: {
+      teaching: 18,
+      service: 5,
+      'home-overview': 4,
+    },
+    projects: {
+      'design-development': 10,
+      petechat: 12,
+      ticapp: 12,
+      'global-learners-genai': 9,
+      'cps-ai-environments': 9,
+      'authenticity-assessment': 9,
+    },
+    service: {
+      service: 18,
+      'contact-profiles': 6,
+      teaching: 4,
+    },
+    research: {
+      research: 18,
+      'home-overview': 8,
+      publications: 6,
+      'authenticity-assessment': 4,
+      'global-learners-genai': 4,
+    },
+  };
+
+  return boosts[intent] && boosts[intent][doc.id] ? boosts[intent][doc.id] : 0;
+}
+
 function detectFallbackLocale(text) {
   return /[\u3400-\u9fff]/.test(String(text)) ? 'zh' : 'en';
 }
@@ -496,4 +627,17 @@ function localizeFallbackCopy(locale, englishText, chineseText) {
 
 function isContactQuery(text) {
   return /contact|email|collaborat|invite|invited talk|lecture|speaking|reach|linkedin|scholar|cv|合作|联系|邀请|讲座|演讲|邮箱|邮件|简历/i.test(String(text));
+}
+
+function getCitationKind(citation) {
+  const value = `${citation.title || ''} ${citation.url || ''}`.toLowerCase();
+  if (value.includes('home overview')) return 'Overview';
+  if (value.includes('contact') || value.includes('linkedin') || value.includes('scholar')) return 'Profiles';
+  if (value.includes('publication')) return 'Publications';
+  if (value.includes('teaching')) return 'Teaching';
+  if (value.includes('service')) return 'Service';
+  if (value.includes('/projects/')) return 'Project';
+  if (value.includes('research')) return 'Research';
+  if (value.includes('design') || value.includes('development')) return 'Design';
+  return 'Site';
 }

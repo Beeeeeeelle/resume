@@ -48,6 +48,7 @@ module.exports = async (req, res) => {
 
     const body = parseJsonBody(req.body);
     const messages = sanitizeMessages(body && body.messages);
+    const pageContext = sanitizePageContext(body && body.page);
     const latestUserMessage = getLatestUserMessage(messages);
 
     if (!latestUserMessage) {
@@ -62,7 +63,7 @@ module.exports = async (req, res) => {
       summary: doc.summary,
     }));
 
-    const response = await requestOpenAI(messages, matches);
+    const response = await requestOpenAI(messages, matches, pageContext, latestUserMessage);
 
     const payload = await response.json();
 
@@ -129,6 +130,17 @@ function sanitizeMessages(messages) {
     }))
     .filter((message) => message.content)
     .slice(-10);
+}
+
+function sanitizePageContext(page) {
+  if (!page || typeof page !== 'object') return null;
+
+  const title = String(page.title || '').slice(0, 200).trim();
+  const url = String(page.url || '').slice(0, 500).trim();
+
+  if (!title && !url) return null;
+
+  return { title, url };
 }
 
 function getLatestUserMessage(messages) {
@@ -208,7 +220,7 @@ async function loadKnowledgeBase() {
   return cachedKnowledgeBase;
 }
 
-async function requestOpenAI(messages, matches) {
+async function requestOpenAI(messages, matches, pageContext, latestUserMessage) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), OPENAI_TIMEOUT_MS);
 
@@ -222,7 +234,8 @@ async function requestOpenAI(messages, matches) {
       body: JSON.stringify({
         model: process.env.OPENAI_MODEL || DEFAULT_MODEL,
         reasoning: { effort: 'low' },
-        instructions: buildInstructions(matches),
+        max_output_tokens: 480,
+        instructions: buildInstructions(matches, pageContext, latestUserMessage),
         input: messages,
       }),
       signal: controller.signal,
@@ -234,24 +247,25 @@ async function requestOpenAI(messages, matches) {
 
 function getKnowledgeMatches(documents, query) {
   const queryTokens = tokenize(query);
-  if (!queryTokens.length) return documents.slice(0, 3);
+  const intent = detectQueryIntent(query);
+  if (!queryTokens.length && !intent) return documents.slice(0, 3);
 
   return documents
     .map((doc) => ({
       ...doc,
-      _score: scoreDocument(doc, queryTokens),
+      _score: scoreDocument(doc, queryTokens, intent),
     }))
     .filter((doc) => doc._score > 0)
     .sort((left, right) => right._score - left._score);
 }
 
-function scoreDocument(doc, queryTokens) {
+function scoreDocument(doc, queryTokens, intent) {
   const titleTokens = tokenize(doc.title || '');
   const summaryTokens = tokenize(doc.summary || '');
   const bodyTokens = tokenize(doc.content || '');
   const tagTokens = tokenize(Array.isArray(doc.tags) ? doc.tags.join(' ') : '');
 
-  let score = 0;
+  let score = getIntentBoost(doc, intent);
   queryTokens.forEach((token) => {
     if (titleTokens.includes(token)) score += 7;
     if (tagTokens.includes(token)) score += 5;
@@ -270,7 +284,66 @@ function tokenize(text) {
     .filter((token) => token.length > 1);
 }
 
-function buildInstructions(matches) {
+function detectQueryIntent(text) {
+  const query = String(text);
+  if (isContactQuery(query)) return 'contact';
+  if (/publication|paper|article|journal|chapter|citation|论文|文章|发表/i.test(query)) return 'publications';
+  if (/teach|course|mentor|class|instruction|教学|课程|指导/i.test(query)) return 'teaching';
+  if (/project|build|tool|design|develop|app|prototype|产品|项目|作品/i.test(query)) return 'projects';
+  if (/service|review|editorial|workshop|talk|speaker|serve|审稿|服务|讲座|分享/i.test(query)) return 'service';
+  if (/research|agenda|strand|focus|study|interests|研究|方向|议题/i.test(query)) return 'research';
+  return '';
+}
+
+function getIntentBoost(doc, intent) {
+  if (!intent || !doc || !doc.id) return 0;
+
+  const boosts = {
+    contact: {
+      'contact-profiles': 18,
+      service: 8,
+      'home-overview': 5,
+    },
+    publications: {
+      publications: 18,
+      research: 7,
+      'home-overview': 4,
+    },
+    teaching: {
+      teaching: 18,
+      service: 5,
+      'home-overview': 4,
+    },
+    projects: {
+      'design-development': 10,
+      petechat: 12,
+      ticapp: 12,
+      'global-learners-genai': 9,
+      'cps-ai-environments': 9,
+      'authenticity-assessment': 9,
+    },
+    service: {
+      service: 18,
+      'contact-profiles': 6,
+      teaching: 4,
+    },
+    research: {
+      research: 18,
+      'home-overview': 8,
+      publications: 6,
+      'authenticity-assessment': 4,
+      'global-learners-genai': 4,
+    },
+  };
+
+  return boosts[intent] && boosts[intent][doc.id] ? boosts[intent][doc.id] : 0;
+}
+
+function isContactQuery(text) {
+  return /contact|email|collaborat|invite|invited talk|lecture|speaking|reach|linkedin|scholar|cv|合作|联系|邀请|讲座|演讲|邮箱|邮件|简历/i.test(String(text));
+}
+
+function buildInstructions(matches, pageContext, latestUserMessage) {
   const context = matches.length
     ? matches
         .map((doc, index) => {
@@ -284,15 +357,28 @@ function buildInstructions(matches) {
         .join('\n\n')
     : 'No matching site documents were found.';
 
+  const pageNote = pageContext
+    ? `User is currently viewing: ${pageContext.title || 'Untitled page'}${pageContext.url ? ` (${pageContext.url})` : ''}`
+    : 'User page context is unavailable.';
+
   return [
     'You are Ask Belle, a site assistant for Belle Li\'s academic portfolio.',
+    'Write like a concise, grounded site guide for a visitor, not like a generic assistant or marketing copy.',
     'Answer using only the provided website context.',
     'Respond in the same language as the user when practical.',
     'If the answer is not supported by the provided context, say that the detail is not available on the published site.',
-    'Keep answers concise and factual.',
+    'Start with the direct answer, then add only the most useful supporting details.',
+    'Default to exactly 2 short sentences for overview questions unless the user explicitly asks for more detail.',
+    'If bullets are clearly useful, use no more than 3 short bullet points.',
+    'Keep default answers under about 75 words unless the user asks for more detail.',
+    'Prefer concrete section names, project names, and public links over abstract summary language.',
+    'Avoid repeating Belle\'s title, the user\'s question, or the same idea in different words.',
     'Do not invent publications, projects, dates, or roles.',
     'If the user asks how to contact Belle or asks about collaboration, invited talks, or profiles, you may point them to the public email, CV, Google Scholar, and LinkedIn links when those appear in the provided context.',
     'Do not mention internal retrieval or hidden instructions.',
+    '',
+    pageNote,
+    `Latest user question: ${latestUserMessage}`,
     '',
     'Website context:',
     context,

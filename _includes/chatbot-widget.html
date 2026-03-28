@@ -1,6 +1,6 @@
 {% if site.chatbot and site.chatbot.enabled %}
   <div class="site-chatbot" data-site-chatbot>
-    <button class="site-chatbot__backdrop" type="button" data-chatbot-backdrop hidden tabindex="-1" aria-hidden="true"></button>
+    <div class="site-chatbot__backdrop" data-chatbot-backdrop hidden></div>
     <button
       class="site-chatbot__launcher"
       type="button"
@@ -24,8 +24,7 @@
       role="dialog"
       aria-modal="true"
       aria-labelledby="site-chatbot-title"
-      aria-hidden="true"
-      aria-label="{{ site.chatbot.title | default: 'Ask Belle' }}"
+      inert
     >
       <header class="site-chatbot__header">
         <div class="site-chatbot__title-wrap">
@@ -42,9 +41,14 @@
           <h2 class="site-chatbot__title" id="site-chatbot-title">{{ site.chatbot.title | default: "Ask Belle" }}</h2>
           <p class="site-chatbot__subtitle">{{ site.chatbot.subtitle | default: "Research, teaching, publications, and projects" }}</p>
         </div>
-        <button class="site-chatbot__close" type="button" data-chatbot-close aria-label="Close chat">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <div class="site-chatbot__header-actions">
+          <button class="site-chatbot__reset" type="button" data-chatbot-reset>
+            New chat
+          </button>
+          <button class="site-chatbot__close" type="button" data-chatbot-close aria-label="Close chat">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
       </header>
 
       <div class="site-chatbot__contacts" data-chatbot-contacts>
@@ -59,7 +63,7 @@
         {% endfor %}
       </div>
 
-      <div class="site-chatbot__messages" data-chatbot-messages>
+      <div class="site-chatbot__messages" data-chatbot-messages aria-live="polite">
         <article class="site-chatbot__message site-chatbot__message--assistant">
           <div class="site-chatbot__bubble">
             <p>{{ site.chatbot.intro | default: "Ask about Belle's research agenda, publications, teaching experience, or design projects." }}</p>
