@@ -416,10 +416,20 @@
       }
 
       .module-grid,
+      .build-grid,
+      .checklist-grid,
       .bug-grid,
       .lab-grid {
         display: grid;
         gap: 16px;
+      }
+
+      .build-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+      }
+
+      .checklist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .module-grid {
@@ -435,6 +445,8 @@
       }
 
       .module-card,
+      .build-card,
+      .checklist-card,
       .bug-card,
       .lab-card {
         padding: 22px;
@@ -444,6 +456,8 @@
       }
 
       .module-card h3,
+      .build-card h3,
+      .checklist-card h3,
       .bug-card h3,
       .lab-card h3 {
         margin: 0 0 10px;
@@ -451,6 +465,8 @@
       }
 
       .module-card p,
+      .build-card p,
+      .checklist-card p,
       .bug-card p,
       .lab-card p {
         margin: 0 0 12px;
@@ -479,6 +495,78 @@
       .lesson-points li {
         margin: 8px 0;
         line-height: 1.65;
+      }
+
+      .build-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .build-step {
+        display: grid;
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 16px;
+        align-items: start;
+        padding: 18px;
+        border-radius: 18px;
+        background: rgba(250, 246, 241, 0.94);
+        border: 1px solid rgba(24, 33, 50, 0.08);
+      }
+
+      .build-step-number {
+        display: grid;
+        place-items: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, var(--rust), #ec8a56);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+
+      .build-step h3 {
+        margin: 0 0 8px;
+      }
+
+      .build-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
+      }
+
+      .label {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        padding: 0 10px;
+        border-radius: 999px;
+        background: rgba(29, 54, 94, 0.08);
+        color: var(--navy);
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      .build-card pre,
+      .checklist-card pre {
+        padding: 16px;
+        border-radius: 16px;
+        background: #13233d;
+        color: #f2f7ff;
+        overflow: auto;
+      }
+
+      .todo-list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      .todo-list li {
+        margin: 8px 0;
+        line-height: 1.68;
       }
 
       .closing {
@@ -521,6 +609,8 @@
         .hero-grid,
         .page-grid,
         .flow-grid,
+        .build-grid,
+        .checklist-grid,
         .closing {
           grid-template-columns: 1fr;
         }
@@ -560,6 +650,10 @@
         }
 
         .step {
+          grid-template-columns: 1fr;
+        }
+
+        .build-step {
           grid-template-columns: 1fr;
         }
       }
@@ -614,9 +708,11 @@
           <ul class="rail-list">
             <li><a href="#architecture">Architecture Split</a></li>
             <li><a href="#flow">Implementation Flow</a></li>
+            <li><a href="#build">Build Your Own Version</a></li>
             <li><a href="#modules">Teaching Modules</a></li>
             <li><a href="#bugs">Bug Fixes That Matter</a></li>
             <li><a href="#labs">Hands-On Labs</a></li>
+            <li><a href="#checklist">Launch Checklist</a></li>
             <li><a href="#capstone">Capstone Deliverable</a></li>
           </ul>
         </div>
@@ -763,6 +859,216 @@
           </div>
         </section>
 
+        <section class="section" id="build">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker">Module 1.5</div>
+              <h2>Build Your Own Version</h2>
+              <p>
+                如果你不是来“看 Belle 做了什么”，而是想照着做一个自己的版本，这一节就是操作说明。默认假设你已经有一个静态站，
+                想加一个只回答站内公开内容的 AI assistant。
+              </p>
+            </div>
+          </div>
+
+          <div class="build-grid">
+            <div class="build-list">
+              <article class="build-step">
+                <div class="build-step-number">1</div>
+                <div>
+                  <h3>先写清楚它能回答什么</h3>
+                  <p>
+                    不要先接模型。先写 4 个允许回答的主题，1 句超出范围时的收口语。对个人网站来说，最稳的范围通常是
+                    bio、projects、publications、teaching、contact pathways。
+                  </p>
+                  <div class="build-meta">
+                    <span class="label">Output: scope statement</span>
+                    <span class="label">Files: notes or config draft</span>
+                  </div>
+                  <ul class="todo-list">
+                    <li>列出允许回答的栏目。</li>
+                    <li>列出禁止臆测的信息，如未公开经历、私人联系方式、未发布项目。</li>
+                    <li>写一句 fallback 文案，明确“我只能根据站内内容回答”。</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="build-step">
+                <div class="build-step-number">2</div>
+                <div>
+                  <h3>先做一个小知识库，而不是直接把整站扔给模型</h3>
+                  <p>
+                    准备一个轻量 JSON 文件，里面只放你希望 assistant 优先检索的页面摘要。这样更容易控制回答边界，也方便 fallback mode 复用。
+                  </p>
+                  <div class="build-meta">
+                    <span class="label">Output: curated JSON</span>
+                    <span class="label">Files: /assets/data/site-knowledge.json</span>
+                  </div>
+                  <ul class="todo-list">
+                    <li>每条记录至少有 title、url、summary。</li>
+                    <li>可选加 keywords，便于前端或后端做轻量匹配。</li>
+                    <li>只收录你愿意被引用的公开页面。</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="build-step">
+                <div class="build-step-number">3</div>
+                <div>
+                  <h3>给站点加一层显式配置</h3>
+                  <p>
+                    不要把按钮文案、API 地址、suggested prompts 写死在脚本里。把这些放进站点配置，让内容边界和 UI 策略能单独调整。
+                  </p>
+                  <div class="build-meta">
+                    <span class="label">Output: chatbot config block</span>
+                    <span class="label">Files: _config.yml or site settings</span>
+                  </div>
+                  <ul class="todo-list">
+                    <li>至少配置 title、subtitle、button label、api_url、knowledge_base_url。</li>
+                    <li>加 3 到 4 个 suggested prompts，直接暗示使用范围。</li>
+                    <li>把 feature toggle 也放进去，方便先本地试跑。</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="build-step">
+                <div class="build-step-number">4</div>
+                <div>
+                  <h3>把 chat UI 当成站内组件，而不是单独起一个 app</h3>
+                  <p>
+                    用 include、partial 或组件方式插进现有网站。结构上至少要有 launcher、panel、messages、suggestions 和 composer。
+                  </p>
+                  <div class="build-meta">
+                    <span class="label">Output: injected widget</span>
+                    <span class="label">Files: include + CSS + JS entry</span>
+                  </div>
+                  <ul class="todo-list">
+                    <li>先让它能打开和关闭，再考虑模型接入。</li>
+                    <li>先把 fallback 模式的静态回复跑通。</li>
+                    <li>确保 widget 不会和 masthead、search、footer 冲突。</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="build-step">
+                <div class="build-step-number">5</div>
+                <div>
+                  <h3>前端优先做“行为”，不是先追求答案质量</h3>
+                  <p>
+                    一开始最容易忽略的是交互：Esc、click-outside、focus、loading、错误态、scroll anchor、mobile layout。
+                    这些会直接决定它像不像一个产品组件。
+                  </p>
+                  <div class="build-meta">
+                    <span class="label">Output: usable interaction loop</span>
+                    <span class="label">Files: main chat script</span>
+                  </div>
+                  <ul class="todo-list">
+                    <li>先支持 open / close / send / reset。</li>
+                    <li>Live AI 出错时自动退回 knowledge-base fallback。</li>
+                    <li>回答生成后，滚到用户能看到自己问题的位置。</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="build-step">
+                <div class="build-step-number">6</div>
+                <div>
+                  <h3>把模型调用放到独立后端</h3>
+                  <p>
+                    静态站里不能放密钥。最小后端要处理：来源限制、消息清洗、轻量检索、模型调用、错误收口、限流。
+                  </p>
+                  <div class="build-meta">
+                    <span class="label">Output: /api/chat</span>
+                    <span class="label">Files: serverless function + README</span>
+                  </div>
+                  <ul class="todo-list">
+                    <li>只允许你的站点 origin。</li>
+                    <li>限制 payload 大小、消息条数、请求频率。</li>
+                    <li>把知识库结果和当前页面上下文一并传给模型。</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="build-step">
+                <div class="build-step-number">7</div>
+                <div>
+                  <h3>最后才做部署连接和 smoke test</h3>
+                  <p>
+                    部署不是结束，而是验证阶段。你要同时确认前端缓存、后端环境变量、计费额度、CORS 和真实页面布局。
+                  </p>
+                  <div class="build-meta">
+                    <span class="label">Output: live feature</span>
+                    <span class="label">Files: deployment config + env vars</span>
+                  </div>
+                  <ul class="todo-list">
+                    <li>先本地 build，再上线 backend，再回填 api_url。</li>
+                    <li>测一遍 live AI、fallback、移动端、缩小窗口和刷新缓存。</li>
+                    <li>准备一个 launch checklist，避免“接口通了但体验坏了”。</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <div class="build-list">
+              <article class="build-card">
+                <h3>Minimal knowledge file</h3>
+                <p>别人要做自己的版本时，最先需要的是一个受控知识文件，而不是一整套 RAG 基础设施。</p>
+                <pre><code>[
+  {
+    "title": "Research",
+    "url": "/research/",
+    "summary": "What I study, who I work with, and the themes that organize my work.",
+    "keywords": ["research", "agenda", "topics"]
+  },
+  {
+    "title": "Projects",
+    "url": "/projects/",
+    "summary": "Selected tools, designs, prototypes, and collaborations.",
+    "keywords": ["projects", "portfolio", "builds"]
+  }
+]</code></pre>
+              </article>
+
+              <article class="build-card">
+                <h3>Starter config</h3>
+                <p>把站内 assistant 的边界、入口和后端地址显式写出来，后面换内容和换环境都更容易。</p>
+                <pre><code>chatbot:
+  enabled: true
+  title: Ask [Your Name]
+  subtitle: Research, projects, writing, and teaching
+  button_label: Ask [Your Name]
+  api_url: https://your-chat-backend.vercel.app/api/chat
+  knowledge_base_url: /assets/data/site-knowledge.json
+  suggested_prompts:
+    - What should I start with?
+    - What projects are most relevant?
+    - What does [Your Name] work on?</code></pre>
+              </article>
+
+              <article class="build-card">
+                <h3>Backend env vars</h3>
+                <p>如果别人要照着做自己版本，这组变量就是最小上线面。</p>
+                <pre><code>OPENAI_API_KEY=...
+OPENAI_MODEL=gpt-5-mini
+ALLOWED_ORIGIN=https://your-domain.com
+KNOWLEDGE_BASE_URL=https://your-domain.com/assets/data/site-knowledge.json</code></pre>
+              </article>
+
+              <article class="build-card">
+                <h3>Done means</h3>
+                <p>别人真正做完，不是“有个聊天框”，而是下面这几条都成立：</p>
+                <ul class="todo-list">
+                  <li>能从主站打开和关闭。</li>
+                  <li>Live AI 失败时不会整块坏掉。</li>
+                  <li>回答不超出站内公开内容。</li>
+                  <li>每次回答后，用户能看到自己刚问的问题和答案开头。</li>
+                  <li>窄视口下不遮导航，不挤爆布局。</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section class="section reveal" id="modules">
           <div class="section-head">
             <div>
@@ -886,27 +1192,81 @@
           <div class="lab-grid">
             <article class="lab-card">
               <h3>Lab 1</h3>
-              <p>Define a bounded assistant for a static portfolio and write a safe config contract.</p>
+              <p>Write your own scope contract: what your assistant can answer, what it should refuse, and what links it may safely surface.</p>
             </article>
             <article class="lab-card">
               <h3>Lab 2</h3>
-              <p>Build the site widget and wire up send, loading, suggestions, citations, and reset behavior.</p>
+              <p>Create a tiny knowledge JSON with 5 entries and wire a fallback mode that can answer without touching the model.</p>
             </article>
             <article class="lab-card">
               <h3>Lab 3</h3>
-              <p>Deploy a serverless chat endpoint with grounding, CORS, limits, and environment variables.</p>
+              <p>Add the widget shell to your own static site and make open, close, send, reset, and click-outside work first.</p>
             </article>
             <article class="lab-card">
               <h3>Lab 4</h3>
-              <p>Fix one layout bug, one scroll bug, and one responsive bug using the real UI as the debugging surface.</p>
+              <p>Deploy a serverless /api/chat endpoint with grounding, CORS, payload limits, and environment variables.</p>
             </article>
             <article class="lab-card">
               <h3>Lab 5</h3>
-              <p>Design a fallback mode that still helps visitors when live AI is unavailable.</p>
+              <p>Fix one layout bug, one scroll bug, and one responsive bug in your own widget before calling it “done.”</p>
             </article>
             <article class="lab-card">
               <h3>Lab 6</h3>
-              <p>Write a launch checklist covering deployment, billing, cache, and smoke tests across frontend and backend.</p>
+              <p>Run a launch checklist that covers billing, cache invalidation, origin checks, and both live and fallback paths.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="checklist">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker">Module 4.5</div>
+              <h2>Launch Checklist</h2>
+              <p>
+                这一节是为了避免“看懂了，但还是不知道怎么收尾上线”。如果你在做自己的版本，按这个 checklist 走，基本不会漏关键点。
+              </p>
+            </div>
+          </div>
+
+          <div class="checklist-grid">
+            <article class="checklist-card">
+              <h3>Before backend</h3>
+              <ul class="todo-list">
+                <li>主站里已经有清晰的知识来源页面，而不是空白 landing page。</li>
+                <li>你已经准备了一个轻量知识 JSON。</li>
+                <li>widget 在没有模型的情况下也能打开、关闭、发送和 reset。</li>
+                <li>suggested prompts 已经反映出真实边界。</li>
+              </ul>
+            </article>
+
+            <article class="checklist-card">
+              <h3>Before production</h3>
+              <ul class="todo-list">
+                <li>后端已设置 OPENAI_API_KEY、ALLOWED_ORIGIN、knowledge base 地址。</li>
+                <li>确认 OpenAI billing / credits 可用。</li>
+                <li>确认 CORS 拒绝了非本站 origin。</li>
+                <li>确认超长消息和高频请求会被后端收住。</li>
+              </ul>
+            </article>
+
+            <article class="checklist-card">
+              <h3>UX smoke test</h3>
+              <ul class="todo-list">
+                <li>点击 launcher 能打开，点击页面别处会收起。</li>
+                <li>Esc 可关闭，焦点不会乱跳。</li>
+                <li>回答生成后，视图会回到用户问题附近。</li>
+                <li>面板不会被导航栏压住，也不会把页面其他按钮挡死。</li>
+              </ul>
+            </article>
+
+            <article class="checklist-card">
+              <h3>What to document</h3>
+              <ul class="todo-list">
+                <li>assistant 的回答范围和 fallback 策略。</li>
+                <li>后端部署位置和最小环境变量。</li>
+                <li>知识库文件如何更新。</li>
+                <li>你为这个项目修过的三个真实 bug。</li>
+              </ul>
             </article>
           </div>
         </section>
