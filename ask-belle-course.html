@@ -916,7 +916,7 @@
       <div class="course-nav__inner">
         <div class="course-nav__brand">
           <span class="course-nav__eyebrow">Codebase to Course / Ask Belle</span>
-          <strong class="course-nav__title">从真实代码到可上线 AI 助手</strong>
+          <strong class="course-nav__title">From Real Code to a Shippable AI Assistant</strong>
         </div>
         <nav class="course-nav__links" aria-label="Course sections">
           <a class="course-nav__link" href="#module-1">1. Click</a>
@@ -936,19 +936,19 @@
             <div>
               <div class="module__number">01</div>
               <span class="module__label">Start with the user action</span>
-              <h1 class="module__title">当访客点击 Ask Belle 时，真正发生了什么？</h1>
+              <h1 class="module__title">What actually happens when a visitor clicks Ask Belle?</h1>
               <p class="module__lede">
-                这门课从用户动作开始，不从架构图开始。你点开聊天框，输入问题，页面先读配置，再决定是走
-                <button class="term" type="button" data-definition="静态网站是已经生成好的 HTML、CSS、JS 文件。它很快、很稳，但不能安全地藏密钥或在服务器上动态运行私密逻辑。">静态站</button>
-                里的前端逻辑，还是去找
-                <button class="term" type="button" data-definition="Serverless 是“按请求运行一小段后端代码”的方式。你不用长期管理整台服务器，但仍然可以安全地处理密钥、限制来源、调用模型。">serverless</button>
-                后端拿 grounded answer。
+                This course starts with the user action, not the architecture diagram. You open the chat, type a question, and the page first reads config, then decides whether to stay in
+                <button class="term" type="button" data-definition="A static site is made of prebuilt HTML, CSS, and JavaScript files. It is fast and reliable, but it cannot safely hide secrets or run private server-side logic.">a static site</button>
+                frontend logic or call a
+                <button class="term" type="button" data-definition="Serverless means running a small piece of backend code only when a request arrives. You do not manage a whole server, but you still get a safe place for keys, origin checks, and model calls.">serverless</button>
+                backend for a grounded answer.
               </p>
             </div>
 
             <aside class="meta-card animate-in">
               <h2>Why should a vibe coder care?</h2>
-              <p>因为这决定了你应该让 AI 往哪里加逻辑。会影响安全的、要用密钥的、要限制来源的，必须在后端。纯 UI 和状态行为，留在前端。</p>
+              <p>This determines where you should ask AI to add logic. Anything involving security, keys, or origin checks belongs in the backend. Pure UI and state behavior should stay in the frontend.</p>
               <div class="badge-list">
                 <span class="badge">Static Jekyll site</span>
                 <span class="badge">Serverless backend</span>
@@ -961,17 +961,17 @@
           <div class="screen-grid">
             <div class="visual-card animate-in">
               <h3>One click, five actors</h3>
-              <p>把 Ask Belle 想成舞台上的一次 cue。访客按下按钮后，消息会依次经过 widget、后端、知识库和模型，然后再回到页面。</p>
+              <p>Think of Ask Belle as a cue in a live performance. After the visitor presses the button, the message moves through the widget, backend, knowledge source, and model, then comes back to the page.</p>
               <div class="message-flow">
                 <div class="message-flow__packet" aria-hidden="true"></div>
                 <div class="message-flow__rail">
                   <div class="message-flow__actor">
                     <div class="actor-dot actor-dot--1">Visitor</div>
-                    <div class="message-flow__label">提问的人</div>
+                    <div class="message-flow__label">person asking</div>
                   </div>
                   <div class="message-flow__actor">
                     <div class="actor-dot actor-dot--2">Widget</div>
-                    <div class="message-flow__label">站内 UI</div>
+                    <div class="message-flow__label">site UI</div>
                   </div>
                   <div class="message-flow__actor">
                     <div class="actor-dot actor-dot--3">API</div>
@@ -979,7 +979,7 @@
                   </div>
                   <div class="message-flow__actor">
                     <div class="actor-dot actor-dot--4">KB</div>
-                    <div class="message-flow__label">知识摘要</div>
+                    <div class="message-flow__label">curated knowledge</div>
                   </div>
                   <div class="message-flow__actor">
                     <div class="actor-dot actor-dot--5">Model</div>
@@ -1021,25 +1021,25 @@
               <span class="aha">Aha</span>
               <h3>Static site does not mean “no AI.” It means “split the job.”</h3>
               <p>
-                最重要的架构判断只有一句话：聊天 UI 可以在静态站里，模型调用不行。你把这句话想清楚，后面 80% 的实现决策都会顺。
+                The most important architecture decision fits in one sentence: the chat UI can live in the static site, but the model call cannot. Once that is clear, most of the later implementation choices become straightforward.
               </p>
             </div>
 
             <div class="quiz-shell animate-in" id="quiz-module-1">
-              <h3 class="quiz-question">Quiz 1: 如果你把 `OPENAI_API_KEY` 直接写进前端脚本，会发生什么？</h3>
-              <p>选那个最符合 Ask Belle 架构的答案。</p>
+              <h3 class="quiz-question">Quiz 1: What happens if you put `OPENAI_API_KEY` directly in the frontend script?</h3>
+              <p>Pick the answer that best matches the Ask Belle architecture.</p>
               <div class="quiz-options">
                 <button class="quiz-option" type="button" data-value="a" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>没关系，因为这是个人网站，不是产品。</span>
+                  <span>It is fine, because this is a personal site, not a product.</span>
                 </button>
                 <button class="quiz-option" type="button" data-value="b" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>访客能在浏览器里拿到你的 key，所以必须把模型调用挪到后端。</span>
+                  <span>Visitors can read the key in the browser, so the model call has to move to the backend.</span>
                 </button>
                 <button class="quiz-option" type="button" data-value="c" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>只有本地开发会有风险，部署后就安全了。</span>
+                  <span>Only local development is risky; deployment makes it safe.</span>
                 </button>
               </div>
               <div class="quiz-actions">
@@ -1054,27 +1054,27 @@
                 <span class="handout-label">Checklist</span>
                 <h3>Before you code</h3>
                 <ul class="checklist">
-                  <li>写一句 assistant 的范围定义，而不是一上来就接模型。</li>
-                  <li>决定哪些信息必须留在前端，哪些必须挪到后端。</li>
-                  <li>准备一个最小配置块，至少包含按钮名、API 地址、知识库地址。</li>
+                  <li>Write a one-sentence scope definition for the assistant before connecting a model.</li>
+                  <li>Decide which information must stay in the frontend and which responsibilities must move to the backend.</li>
+                  <li>Prepare a minimal config block with at least a button label, API URL, and knowledge base URL.</li>
                 </ul>
               </div>
               <div class="card handout-card animate-in">
                 <span class="handout-label">Exercise</span>
                 <h3>Do this in your repo</h3>
                 <ol class="mini-steps">
-                  <li>写下你的网站 assistant 允许回答的 4 个主题。</li>
-                  <li>写一条 “站内没有这个信息” 的收口语。</li>
-                  <li>决定一个 fallback 模式名称，比如 site guide mode。</li>
+                  <li>Write down 4 topics your site assistant is allowed to answer.</li>
+                  <li>Write one fallback line for “that detail is not available on the published site.”</li>
+                  <li>Choose a fallback mode name such as site guide mode.</li>
                 </ol>
               </div>
               <div class="card handout-card animate-in">
                 <span class="handout-label">Common mistakes</span>
                 <h3>What usually goes wrong</h3>
                 <ul class="checklist">
-                  <li>把 assistant 目标写成 “answer anything about me”。</li>
-                  <li>先追求模型效果，完全不定义边界。</li>
-                  <li>把密钥和后端职责混进静态前端里。</li>
+                  <li>Defining the assistant goal as “answer anything about me.”</li>
+                  <li>Chasing model output quality before setting boundaries.</li>
+                  <li>Mixing secrets and backend responsibilities into a static frontend.</li>
                 </ul>
               </div>
             </div>
@@ -1088,14 +1088,14 @@
             <div>
               <div class="module__number">02</div>
               <span class="module__label">Meet the cast of characters</span>
-              <h2 class="module__title">谁在台上？Ask Belle 其实只有几位“演员”</h2>
+              <h2 class="module__title">Who is on stage? Ask Belle only has a handful of real “actors.”</h2>
               <p class="module__lede">
-                如果你想让 AI 帮你改这个功能，首先要能说清楚：哪一段属于模板，哪一段属于浏览器脚本，哪一段属于后端，哪一段只是内容文件。
+                If you want AI to help you change this feature, you first need to say clearly which part is template markup, which part is browser code, which part is backend logic, and which part is just content.
               </p>
             </div>
             <aside class="meta-card animate-in">
               <h2>Metaphor</h2>
-              <p>这一层更像一个剧组，不像一团代码。配置是 call sheet，widget markup 是舞台布景，JS 是 stage manager，后端是后台协调员。</p>
+              <p>This layer is more like a film crew than a blob of code. Config is the call sheet, widget markup is the stage set, JavaScript is the stage manager, and the backend is the coordinator backstage.</p>
             </aside>
           </div>
 
@@ -1104,11 +1104,11 @@
               <div class="visual-card animate-in">
                 <h3>The file cast</h3>
                 <div class="file-tree">
-                  <div class="file-tree__item"><code>_config.yml</code><span>告诉站点这个 assistant 存在、叫什么、连到哪里。</span></div>
-                  <div class="file-tree__item"><code>_includes/chatbot-widget.html</code><span>把 launcher、panel、messages、composer 放进页面。</span></div>
-                  <div class="file-tree__item"><code>assets/js/chatbot.js</code><span>管理打开、关闭、发送、fallback、scroll、citations。</span></div>
-                  <div class="file-tree__item"><code>assets/css/main.scss</code><span>决定面板如何固定、层级如何压过导航、移动端如何收住。</span></div>
-                  <div class="file-tree__item"><code>chatbot-backend/api/chat.js</code><span>限制来源、读取知识库、调用模型、返回 grounded answer。</span></div>
+                  <div class="file-tree__item"><code>_config.yml</code><span>Tells the site that this assistant exists, what it is called, and where it connects.</span></div>
+                  <div class="file-tree__item"><code>_includes/chatbot-widget.html</code><span>Injects the launcher, panel, messages, and composer into the page.</span></div>
+                  <div class="file-tree__item"><code>assets/js/chatbot.js</code><span>Controls open, close, send, fallback, scroll, and citations.</span></div>
+                  <div class="file-tree__item"><code>assets/css/main.scss</code><span>Defines panel positioning, layering above the nav, and mobile layout behavior.</span></div>
+                  <div class="file-tree__item"><code>chatbot-backend/api/chat.js</code><span>Restricts origins, loads the knowledge source, calls the model, and returns a grounded answer.</span></div>
                 </div>
               </div>
 
@@ -1151,23 +1151,23 @@
             <div class="callout animate-in">
               <span class="aha">Aha</span>
               <h3>Good AI work starts with file boundaries, not prompt poetry.</h3>
-              <p>如果你对 AI 说 “fix the chatbot,” 它很可能乱改。你要能说 “change the widget markup, but do not touch the backend,” 这就是模块边界给你的力量。</p>
+              <p>If you tell AI “fix the chatbot,” it will likely make a mess. You want to be able to say “change the widget markup, but do not touch the backend.” That precision comes from having clear module boundaries.</p>
             </div>
 
             <div class="quiz-shell animate-in" id="quiz-module-2">
-              <h3 class="quiz-question">Quiz 2: 你想改 “New chat” 按钮的文案，最可能先动哪一层？</h3>
+              <h3 class="quiz-question">Quiz 2: You want to change the “New chat” label. Which layer should you touch first?</h3>
               <div class="quiz-options">
                 <button class="quiz-option" type="button" data-value="a" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>后端 `/api/chat`，因为那是 AI 的入口。</span>
+                  <span>The backend `/api/chat`, because that is where AI starts.</span>
                 </button>
                 <button class="quiz-option" type="button" data-value="b" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>widget markup 或站点配置，因为这是前端展示文案。</span>
+                  <span>Widget markup or site config, because this is frontend display text.</span>
                 </button>
                 <button class="quiz-option" type="button" data-value="c" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>知识库 JSON，因为按钮也是内容的一部分。</span>
+                  <span>The knowledge JSON, because button labels are content too.</span>
                 </button>
               </div>
               <div class="quiz-actions">
@@ -1182,27 +1182,27 @@
                 <span class="handout-label">Checklist</span>
                 <h3>Map the cast</h3>
                 <ul class="checklist">
-                  <li>给每个相关文件写一句职责说明。</li>
-                  <li>标出哪个文件决定 UI，哪个文件决定行为，哪个文件决定模型约束。</li>
-                  <li>确认你能用一句话告诉 AI “改哪一层，不要动哪一层”。</li>
+                  <li>Write a one-line responsibility statement for each relevant file.</li>
+                  <li>Mark which file controls UI, which controls behavior, and which controls model boundaries.</li>
+                  <li>Make sure you can tell AI in one sentence which layer to change and which layer to leave alone.</li>
                 </ul>
               </div>
               <div class="card handout-card animate-in">
                 <span class="handout-label">Exercise</span>
                 <h3>Do this in your repo</h3>
                 <ol class="mini-steps">
-                  <li>挑 5 个相关文件，给每个文件写一句 plain-English summary。</li>
-                  <li>把其中两个文件配成 “visible shell” 和 “behavior layer”。</li>
-                  <li>试着写一条精准修改指令给 AI，例如 “change only the widget markup.”</li>
+                  <li>Pick 5 relevant files and write a plain-English summary for each.</li>
+                  <li>Pair two of them as “visible shell” and “behavior layer.”</li>
+                  <li>Write one precise AI instruction such as “change only the widget markup.”</li>
                 </ol>
               </div>
               <div class="card handout-card animate-in">
                 <span class="handout-label">Common mistakes</span>
                 <h3>What usually goes wrong</h3>
                 <ul class="checklist">
-                  <li>把所有变化都丢给一个“fix chatbot”大指令。</li>
-                  <li>不知道配置、模板、脚本和后端分别负责什么。</li>
-                  <li>遇到 bug 时只能全局搜索，不能按层定位。</li>
+                  <li>Throwing every change into one giant “fix chatbot” instruction.</li>
+                  <li>Not knowing what config, markup, script, and backend each own.</li>
+                  <li>Debugging only with global search instead of by layer.</li>
                 </ul>
               </div>
             </div>
@@ -1216,18 +1216,17 @@
             <div>
               <div class="module__number">03</div>
               <span class="module__label">Front-end behavior is the hard part</span>
-              <h2 class="module__title">真正费时间的，不是“发送消息”，而是浏览器怎么表现得像个成熟组件</h2>
+              <h2 class="module__title">The time sink is not “sending a message.” It is making the browser behave like a mature component.</h2>
               <p class="module__lede">
-                Ask Belle 最难的前端点不是 API request，而是
-                <button class="term" type="button" data-definition="Fallback 是“主路径失败时的备用路径”。这里指的是 live AI 出错时，聊天仍然根据站内知识文件给出导览式回答，而不是整个功能挂掉。">fallback</button>
-                、
-                <button class="term" type="button" data-definition="Scroll anchor 是“滚动时你希望对齐的那块内容”。这里的关键不是滚到最底部，而是让用户还能看到自己刚问的问题。">scroll anchor</button>
-                、焦点管理、点击外部关闭、以及各种真实视口下的边角问题。
+                The hardest frontend part of Ask Belle is not the API request. It is
+                <button class="term" type="button" data-definition="Fallback means having a backup path when the main path fails. Here it means the chat can still answer from the site knowledge file even when live AI is unavailable.">fallback</button>,
+                <button class="term" type="button" data-definition="A scroll anchor is the piece of content you want the viewport to align to after a scroll. Here the goal is not the bottom of the chat, but the user’s question plus the start of the answer.">scroll anchor</button>
+                , focus management, click-outside behavior, and all the edge cases that show up in real viewport sizes.
               </p>
             </div>
             <aside class="meta-card animate-in">
               <h2>Practical payoff</h2>
-              <p>当 AI 帮你做一个聊天组件时，你要知道该检查的不是“有没有回内容”，而是“它像不像一个可以真的放进页面的组件”。</p>
+              <p>When AI helps you build a chat component, the real question is not “did it return text?” but “does it behave like something you can actually ship inside a page?”</p>
             </aside>
           </div>
 
@@ -1320,19 +1319,19 @@
             </div>
 
             <div class="quiz-shell animate-in" id="quiz-module-3">
-              <h3 class="quiz-question">Quiz 3: 为什么 Ask Belle 不该在回答后永远滚到最底部？</h3>
+              <h3 class="quiz-question">Quiz 3: Why should Ask Belle not always scroll to the very bottom after answering?</h3>
               <div class="quiz-options">
                 <button class="quiz-option" type="button" data-value="a" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>因为底部滚动在移动端性能更差。</span>
+                  <span>Because bottom scrolling is slower on mobile.</span>
                 </button>
                 <button class="quiz-option" type="button" data-value="b" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>因为用户首先需要重新看见自己刚问了什么，然后再读答案开头。</span>
+                  <span>Because users first need to re-see what they asked, then read the beginning of the answer.</span>
                 </button>
                 <button class="quiz-option" type="button" data-value="c" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>因为 citations 一定要在最上面出现。</span>
+                  <span>Because citations always need to appear at the top.</span>
                 </button>
               </div>
               <div class="quiz-actions">
@@ -1347,27 +1346,27 @@
                 <span class="handout-label">Checklist</span>
                 <h3>Browser behavior checklist</h3>
                 <ul class="checklist">
-                  <li>支持 open、close、Esc、click-outside 和 reset。</li>
-                  <li>live AI 失败时能自动退回 fallback。</li>
-                  <li>回答完成后会回到用户问题附近，而不是消息底部。</li>
+                  <li>Support open, close, Esc, click-outside, and reset.</li>
+                  <li>Automatically fall back when live AI fails.</li>
+                  <li>Return to the user’s question area after the answer, not the bottom of the message list.</li>
                 </ul>
               </div>
               <div class="card handout-card animate-in">
                 <span class="handout-label">Exercise</span>
                 <h3>Do this in your repo</h3>
                 <ol class="mini-steps">
-                  <li>故意让 API 请求失败一次，确认 UI 不会死掉。</li>
-                  <li>在窄视口下测试 launcher、panel 和页面其他按钮是否冲突。</li>
-                  <li>录一段 20 秒屏幕视频，检查回答后的滚动位置是否合理。</li>
+                  <li>Intentionally fail the API request once and confirm the UI does not die.</li>
+                  <li>Test whether the launcher, panel, and other page controls conflict in a narrow viewport.</li>
+                  <li>Record a 20-second screen capture and verify the post-answer scroll position feels right.</li>
                 </ol>
               </div>
               <div class="card handout-card animate-in">
                 <span class="handout-label">Common mistakes</span>
                 <h3>What usually goes wrong</h3>
                 <ul class="checklist">
-                  <li>只测“能不能回消息”，不测滚动和焦点。</li>
-                  <li>把 fallback 做成一个报错提示，而不是继续帮助用户。</li>
-                  <li>默认滚到最底部，破坏阅读起点。</li>
+                  <li>Testing only “does it return text?” instead of scroll and focus behavior.</li>
+                  <li>Turning fallback into an error banner instead of a continued helping path.</li>
+                  <li>Defaulting to the bottom of the thread and breaking the reading starting point.</li>
                 </ul>
               </div>
             </div>
@@ -1381,16 +1380,16 @@
             <div>
               <div class="module__number">04</div>
               <span class="module__label">Grounding and safety</span>
-              <h2 class="module__title">后端不只是“帮你转发给模型”</h2>
+              <h2 class="module__title">The backend is not just a model relay</h2>
               <p class="module__lede">
-                Ask Belle 的后端做三件关键事：只允许正确来源进来、只拿站内
-                <button class="term" type="button" data-definition="Knowledge base 在这里不是大型向量数据库，而是一个手工整理过的网站内容摘要文件。它是 assistant 的受控记忆层。">knowledge base</button>
-                说话、并且用明确的 instruction 限制模型不要编。
+                Ask Belle’s backend does three critical jobs: it only accepts the right origins, it speaks only from the site’s
+                <button class="term" type="button" data-definition="A knowledge base here is not a giant vector database. It is a hand-curated summary file of published website content. It acts as the assistant’s controlled memory layer.">knowledge base</button>
+                , and it gives the model explicit instructions not to invent details.
               </p>
             </div>
             <aside class="meta-card animate-in">
               <h2>Metaphor</h2>
-              <p>这一层更像博物馆安保和导览台的结合体：先验票，再只用馆内资料回答问题，不让讲解员自己瞎编展品历史。</p>
+              <p>This layer is like museum security combined with an information desk: first check who is allowed in, then answer only from the official exhibits, without letting the guide make up new history.</p>
             </aside>
           </div>
 
@@ -1428,11 +1427,11 @@ async function loadKnowledgeBase() {
                   <pre><code>function detectQueryIntent(text) {
   const query = String(text);
   if (isContactQuery(query)) return 'contact';
-  if (/publication|paper|article|journal|chapter|citation|论文|文章|发表/i.test(query)) return 'publications';
-  if (/teach|course|mentor|class|instruction|教学|课程|指导/i.test(query)) return 'teaching';
-  if (/project|build|tool|design|develop|app|prototype|产品|项目|作品/i.test(query)) return 'projects';
-  if (/service|review|editorial|workshop|talk|speaker|serve|审稿|服务|讲座|分享/i.test(query)) return 'service';
-  if (/research|agenda|strand|focus|study|interests|研究|方向|议题/i.test(query)) return 'research';
+  if (/publication|paper|article|journal|chapter|citation/i.test(query)) return 'publications';
+  if (/teach|course|mentor|class|instruction/i.test(query)) return 'teaching';
+  if (/project|build|tool|design|develop|app|prototype/i.test(query)) return 'projects';
+  if (/service|review|editorial|workshop|talk|speaker|serve/i.test(query)) return 'service';
+  if (/research|agenda|strand|focus|study|interests/i.test(query)) return 'research';
   return '';
 }</code></pre>
                 </div>
@@ -1441,7 +1440,7 @@ async function loadKnowledgeBase() {
                   <div class="translation-lines">
                     <p><strong>This is a cheap, practical intent guesser.</strong> It is not a full classifier; it just asks which bucket the question sounds like.</p>
                     <p><strong>The important part is not elegance. It is control.</strong> Once the backend knows a question smells like research or contact, it can boost the matching pages from the knowledge file.</p>
-                    <p><strong>Notice the bilingual patterns.</strong> Ask Belle recognizes both English and Chinese keywords, so a Chinese visitor can still get a grounded answer.</p>
+                    <p><strong>Notice how specific the keyword buckets are.</strong> Each bucket is tuned to the site itself, so the assistant stays narrow instead of pretending it knows everything.</p>
                   </div>
                 </div>
               </div>
@@ -1472,23 +1471,23 @@ async function loadKnowledgeBase() {
             <div class="callout animate-in">
               <span class="aha">Aha</span>
               <h3>Grounded AI is not just a prompt. It is a pipeline.</h3>
-              <p>来源限制、知识匹配、instruction shaping、错误收口，这四件事缺任何一个，都会让 “个人网站 assistant” 从可信导览变成随机聊天框。</p>
+              <p>Origin limits, knowledge matching, instruction shaping, and controlled error handling all matter. Remove any one of them, and a trustworthy site assistant turns into a random chat box.</p>
             </div>
 
             <div class="quiz-shell animate-in" id="quiz-module-4">
-              <h3 class="quiz-question">Quiz 4: 如果用户问了站内没有写过的 detail，最健康的行为是什么？</h3>
+              <h3 class="quiz-question">Quiz 4: If a user asks for a detail that is not published on the site, what is the healthiest behavior?</h3>
               <div class="quiz-options">
                 <button class="quiz-option" type="button" data-value="a" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>让模型尽量猜一个大概答案，避免显得冷场。</span>
+                  <span>Let the model guess a likely answer so the conversation does not feel awkward.</span>
                 </button>
                 <button class="quiz-option" type="button" data-value="b" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>明确说 published site 上没有这个信息，然后把用户引回可用的公开页面。</span>
+                  <span>Say clearly that the published site does not include that detail, then guide the user back to relevant public pages.</span>
                 </button>
                 <button class="quiz-option" type="button" data-value="c" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>直接把整段 knowledge base JSON 原文返回给用户。</span>
+                  <span>Return the raw knowledge base JSON directly to the user.</span>
                 </button>
               </div>
               <div class="quiz-actions">
@@ -1503,27 +1502,27 @@ async function loadKnowledgeBase() {
                 <span class="handout-label">Checklist</span>
                 <h3>Backend safety checklist</h3>
                 <ul class="checklist">
-                  <li>只允许你自己的站点 origin。</li>
-                  <li>知识源来自受控文件，不是自由联网搜索。</li>
-                  <li>模型被明确告知只能根据 provided context 回答。</li>
+                  <li>Only allow your own site origin.</li>
+                  <li>Use a controlled knowledge file rather than open web search.</li>
+                  <li>Explicitly tell the model to answer only from the provided context.</li>
                 </ul>
               </div>
               <div class="card handout-card animate-in">
                 <span class="handout-label">Exercise</span>
                 <h3>Do this in your repo</h3>
                 <ol class="mini-steps">
-                  <li>给后端补一条 “站内没写就不要编” 的 instruction。</li>
-                  <li>人为造一个不在知识库里的问题，测试收口语是否诚实。</li>
-                  <li>检查至少 3 个 env vars 是否真的是从后端读入，而不是写死。</li>
+                  <li>Add one backend instruction that says “if the site does not state it, do not invent it.”</li>
+                  <li>Create a question that is not in the knowledge base and test whether the answer stays honest.</li>
+                  <li>Check that at least 3 environment variables are truly read from the backend rather than hardcoded.</li>
                 </ol>
               </div>
               <div class="card handout-card animate-in">
                 <span class="handout-label">Common mistakes</span>
                 <h3>What usually goes wrong</h3>
                 <ul class="checklist">
-                  <li>把 grounded assistant 做成自由发挥聊天框。</li>
-                  <li>没有 origin check，导致任何页面都能打到你的接口。</li>
-                  <li>只写 prompt，不做知识匹配和错误收口。</li>
+                  <li>Turning a grounded assistant into an open-ended improv chatbot.</li>
+                  <li>Skipping origin checks so any page can hit your endpoint.</li>
+                  <li>Writing only a prompt, with no knowledge matching or controlled failure path.</li>
                 </ul>
               </div>
             </div>
@@ -1537,14 +1536,14 @@ async function loadKnowledgeBase() {
             <div>
               <div class="module__number">05</div>
               <span class="module__label">Build your own version</span>
-              <h2 class="module__title">如果你要做自己的版本，按这个顺序做</h2>
+              <h2 class="module__title">If you want to build your own version, follow this order</h2>
               <p class="module__lede">
-                这一节不是 Belle 的复盘，而是你的 playbook。假设你已经有一个静态网站，现在想加一个只回答站内公开内容的 AI assistant。
+                This section is not Belle’s retrospective. It is your playbook. Assume you already have a static site and now want to add an AI assistant that answers only from published site content.
               </p>
             </div>
             <aside class="meta-card animate-in">
               <h2>What “done” really means</h2>
-              <p>不是“有个聊天框”。而是：它不泄密、不乱编、出错时不死掉、窄视口不打架、并且回答后用户还能看见自己刚问的问题。</p>
+              <p>It does not just mean “there is a chat box.” It means the feature does not leak secrets, does not hallucinate, does not die on failure, does not fight the layout in narrow viewports, and still lets users see the question they just asked.</p>
             </aside>
           </div>
 
@@ -1557,7 +1556,7 @@ async function loadKnowledgeBase() {
                     <div class="step-card__num">1</div>
                     <div class="step-card__body">
                       <h3>Write the scope first</h3>
-                      <p>列出它能回答的栏目，和一条站外 detail 的收口语。</p>
+                      <p>List the sections it is allowed to answer about, plus one fallback line for out-of-scope details.</p>
                       <div class="meta-row">
                         <span class="meta-pill">output: scope note</span>
                         <span class="meta-pill">helps AI stay honest</span>
@@ -1568,28 +1567,28 @@ async function loadKnowledgeBase() {
                     <div class="step-card__num">2</div>
                     <div class="step-card__body">
                       <h3>Curate a tiny knowledge file</h3>
-                      <p>准备 title、url、summary、keywords 这几个字段即可，不必一开始就做大而全 RAG。</p>
+                      <p>Start with title, url, summary, and keywords. You do not need a giant RAG system on day one.</p>
                     </div>
                   </div>
                   <div class="step-card">
                     <div class="step-card__num">3</div>
                     <div class="step-card__body">
                       <h3>Build the widget before live AI</h3>
-                      <p>先把 open、close、send、reset 和 fallback 跑通，再接模型。</p>
+                      <p>Make open, close, send, reset, and fallback work before connecting the model.</p>
                     </div>
                   </div>
                   <div class="step-card">
                     <div class="step-card__num">4</div>
                     <div class="step-card__body">
                       <h3>Deploy backend separately</h3>
-                      <p>模型 key、origin check、payload limits、timeout 都在后端收住。</p>
+                      <p>Keep the model key, origin checks, payload limits, and timeout behavior contained in the backend.</p>
                     </div>
                   </div>
                   <div class="step-card">
                     <div class="step-card__num">5</div>
                     <div class="step-card__body">
                       <h3>Run the polish checklist</h3>
-                      <p>测试 live path、fallback path、mobile layout、cache invalidation 和 focus behavior。</p>
+                      <p>Test the live path, fallback path, mobile layout, cache invalidation, and focus behavior.</p>
                     </div>
                   </div>
                 </div>
@@ -1630,9 +1629,9 @@ async function loadKnowledgeBase() {
                 <h3>Starter config</h3>
                 <ul class="checklist">
                   <li><code>title</code>, <code>subtitle</code>, <code>button_label</code></li>
-                  <li><code>api_url</code> 指向独立后端</li>
-                  <li><code>knowledge_base_url</code> 指向受控 JSON</li>
-                  <li>3-4 个 suggested prompts 暗示边界</li>
+                  <li><code>api_url</code> points to a separate backend</li>
+                  <li><code>knowledge_base_url</code> points to a controlled JSON file</li>
+                  <li>3–4 suggested prompts hint at the allowed scope</li>
                 </ul>
               </div>
               <div class="card animate-in">
@@ -1656,19 +1655,19 @@ async function loadKnowledgeBase() {
             </div>
 
             <div class="quiz-shell animate-in" id="quiz-module-5">
-              <h3 class="quiz-question">Quiz 5: 你要给自己的 portfolio 做这个功能，最健康的开发顺序是什么？</h3>
+              <h3 class="quiz-question">Quiz 5: You want this feature on your own portfolio. What is the healthiest build order?</h3>
               <div class="quiz-options">
                 <button class="quiz-option" type="button" data-value="a" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>先调模型回答质量，再考虑 fallback、layout 和 origin checks。</span>
+                  <span>Start by tuning the model’s answer quality, then think about fallback, layout, and origin checks.</span>
                 </button>
                 <button class="quiz-option" type="button" data-value="b" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>先定边界和知识源，再做 widget 行为，再单独部署后端，最后做 polish 和 smoke test。</span>
+                  <span>Define boundaries and a knowledge source first, then build widget behavior, then deploy a separate backend, and finish with polish and smoke tests.</span>
                 </button>
                 <button class="quiz-option" type="button" data-value="c" onclick="window.selectOption(this)">
                   <span class="quiz-option__dot" aria-hidden="true"></span>
-                  <span>先把整个站内容全部塞给模型，等以后再考虑配置和前端结构。</span>
+                  <span>Feed the whole site into the model first, then worry about config and frontend structure later.</span>
                 </button>
               </div>
               <div class="quiz-actions">
@@ -1682,7 +1681,7 @@ async function loadKnowledgeBase() {
               <span class="aha">Big takeaway</span>
               <h3>Ask Belle works because it is narrow on purpose.</h3>
               <p>
-                这不是一个什么都想答的 chatbot。它是一个 bounded assistant：只围绕 Belle 的公开站点内容工作，所以它才有机会既实用又可信。你做自己的版本时，也应该先变窄，再变强。
+                This is not a chatbot that tries to answer everything. It is a bounded assistant built around Belle’s published site content, which is exactly why it has a chance to be both useful and trustworthy. When you build your own version, start narrow before you try to make it powerful.
               </p>
             </div>
 
@@ -1691,27 +1690,27 @@ async function loadKnowledgeBase() {
                 <span class="handout-label">Checklist</span>
                 <h3>Launch readiness</h3>
                 <ul class="checklist">
-                  <li>前端配置、后端 env vars、知识库文件三者已经串起来。</li>
-                  <li>live path 和 fallback path 都测过。</li>
-                  <li>移动端、缩小窗口、刷新缓存后的页面都检查过。</li>
+                  <li>Frontend config, backend env vars, and the knowledge file are all wired together.</li>
+                  <li>Both the live path and the fallback path have been tested.</li>
+                  <li>Mobile layout, narrow viewport behavior, and hard-refresh behavior have all been checked.</li>
                 </ul>
               </div>
               <div class="card handout-card animate-in">
                 <span class="handout-label">Exercise</span>
                 <h3>Do this in your repo</h3>
                 <ol class="mini-steps">
-                  <li>写一个 launch checklist，分 frontend、backend、billing、UX 四栏。</li>
-                  <li>找一个朋友试用，只观察他们第一次怎么问问题。</li>
-                  <li>把试用里最困惑的一处，改成更明确的 prompt 或 UI cue。</li>
+                  <li>Write a launch checklist with frontend, backend, billing, and UX columns.</li>
+                  <li>Ask one friend to test it and observe only how they ask their first question.</li>
+                  <li>Take the most confusing moment from that test and turn it into a clearer prompt or UI cue.</li>
                 </ol>
               </div>
               <div class="card handout-card animate-in">
                 <span class="handout-label">Common mistakes</span>
                 <h3>What usually goes wrong</h3>
                 <ul class="checklist">
-                  <li>功能一通就上线，没有测缓存、额度、CORS 和窄视口。</li>
-                  <li>没有观察真实用户会不会问出超范围问题。</li>
-                  <li>把“做完”定义成 demo 可用，而不是 production behavior 可接受。</li>
+                  <li>Shipping as soon as the feature “works” without testing cache, credits, CORS, and narrow viewports.</li>
+                  <li>Never observing whether real users ask out-of-scope questions.</li>
+                  <li>Defining “done” as demo-capable instead of production-acceptable behavior.</li>
                 </ul>
               </div>
             </div>
