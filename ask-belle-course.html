@@ -3,28 +3,88 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Build Ask Belle | Codebase to Course</title>
+    <title>Ask Belle Under the Hood | Codebase to Course</title>
     <meta
       name="description"
-      content="A standalone teaching page that turns the Ask Belle implementation into a practical mini-course: architecture, frontend widget, backend grounding, deployment, and real UI bug fixes."
+      content="A self-contained interactive course that teaches how Ask Belle works and how to build your own grounded assistant for a static website."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
     />
     <style>
       :root {
-        --bg: #f5efe7;
-        --bg-2: #fffaf5;
-        --ink: #182132;
-        --muted: #5c697a;
-        --line: rgba(24, 33, 50, 0.12);
-        --navy: #1d365e;
-        --navy-2: #2d4f84;
-        --rust: #d96534;
-        --rust-soft: rgba(217, 101, 52, 0.1);
-        --mint: #2e6a55;
-        --shadow: 0 24px 60px rgba(24, 33, 50, 0.12);
-        --radius-xl: 28px;
+        --color-bg: #faf7f2;
+        --color-bg-warm: #f5f0e8;
+        --color-bg-code: #1e1e2e;
+        --color-text: #2c2a28;
+        --color-text-secondary: #6b6560;
+        --color-text-muted: #9e9790;
+        --color-border: #e5dfd6;
+        --color-border-light: #eeebe5;
+        --color-surface: #ffffff;
+        --color-surface-warm: #fdf9f3;
+        --color-accent: #d94f30;
+        --color-accent-hover: #c4432a;
+        --color-accent-light: #fdeee9;
+        --color-accent-muted: #e8836c;
+        --color-success: #2d8b55;
+        --color-success-light: #e8f5ee;
+        --color-error: #c93b3b;
+        --color-error-light: #fde8e8;
+        --color-info: #2a7b9b;
+        --color-info-light: #e4f2f7;
+        --color-actor-1: #d94f30;
+        --color-actor-2: #2a7b9b;
+        --color-actor-3: #7b6daa;
+        --color-actor-4: #d4a843;
+        --color-actor-5: #2d8b55;
+        --font-display: "Bricolage Grotesque", Georgia, serif;
+        --font-body: "DM Sans", -apple-system, sans-serif;
+        --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+        --text-xs: 0.75rem;
+        --text-sm: 0.875rem;
+        --text-base: 1rem;
+        --text-lg: 1.125rem;
+        --text-xl: 1.25rem;
+        --text-2xl: 1.5rem;
+        --text-3xl: 1.875rem;
+        --text-4xl: 2.25rem;
+        --text-5xl: 3rem;
+        --leading-tight: 1.15;
+        --leading-snug: 1.3;
+        --leading-normal: 1.6;
+        --leading-loose: 1.8;
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --space-10: 2.5rem;
+        --space-12: 3rem;
+        --space-16: 4rem;
+        --space-20: 5rem;
+        --content-width: 780px;
+        --content-width-wide: 1120px;
+        --nav-height: 58px;
+        --radius-sm: 8px;
+        --radius-md: 12px;
         --radius-lg: 20px;
-        --radius-md: 14px;
-        --max: 1240px;
+        --radius-xl: 28px;
+        --radius-full: 9999px;
+        --shadow-sm: 0 1px 2px rgba(44, 42, 40, 0.05);
+        --shadow-md: 0 4px 12px rgba(44, 42, 40, 0.08);
+        --shadow-lg: 0 8px 24px rgba(44, 42, 40, 0.1);
+        --shadow-xl: 0 16px 48px rgba(44, 42, 40, 0.12);
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+        --duration-fast: 150ms;
+        --duration-normal: 300ms;
+        --duration-slow: 500ms;
       }
 
       * {
@@ -33,1279 +93,1644 @@
 
       html {
         scroll-behavior: smooth;
+        scroll-snap-type: y proximity;
       }
 
       body {
         margin: 0;
-        font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
-        color: var(--ink);
+        font-family: var(--font-body);
+        color: var(--color-text);
         background:
-          radial-gradient(circle at top left, rgba(29, 54, 94, 0.08), transparent 28%),
-          radial-gradient(circle at top right, rgba(217, 101, 52, 0.12), transparent 24%),
-          linear-gradient(180deg, #f7f1ea 0%, #f8f3ee 38%, #fcf8f4 100%);
+          radial-gradient(circle at top left, rgba(217, 79, 48, 0.08), transparent 30%),
+          radial-gradient(circle at top right, rgba(42, 123, 155, 0.08), transparent 28%),
+          var(--color-bg);
       }
 
       a {
         color: inherit;
       }
 
-      .shell {
-        width: min(var(--max), calc(100vw - 40px));
-        margin: 0 auto;
+      button {
+        font: inherit;
       }
 
-      .hero {
-        padding: 56px 0 28px;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 14px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.72);
-        border: 1px solid rgba(24, 33, 50, 0.08);
-        color: var(--navy);
-        font-size: 12px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        font-weight: 800;
-      }
-
-      .hero-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.6fr) minmax(290px, 0.9fr);
-        gap: 28px;
-        align-items: end;
-        margin-top: 22px;
-      }
-
-      .hero-copy h1 {
-        margin: 18px 0 16px;
-        max-width: 10ch;
-        font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-        font-size: clamp(3rem, 7vw, 5.8rem);
-        line-height: 0.94;
-        letter-spacing: -0.04em;
-      }
-
-      .hero-copy p {
-        margin: 0;
-        max-width: 720px;
-        font-size: 1.08rem;
-        line-height: 1.75;
-        color: var(--muted);
-      }
-
-      .hero-metrics {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 24px;
-      }
-
-      .metric {
-        padding: 11px 14px;
-        border-radius: 999px;
-        border: 1px solid rgba(24, 33, 50, 0.08);
-        background: rgba(255, 255, 255, 0.75);
-        font-size: 0.84rem;
-        color: var(--muted);
-      }
-
-      .metric strong {
-        color: var(--ink);
-      }
-
-      .overview-panel {
-        position: relative;
-        overflow: hidden;
-        padding: 24px;
-        min-height: 100%;
-        border-radius: var(--radius-xl);
-        background:
-          radial-gradient(circle at top right, rgba(217, 101, 52, 0.16), transparent 30%),
-          linear-gradient(160deg, rgba(29, 54, 94, 0.98), rgba(24, 33, 50, 0.98));
-        color: #eef3fb;
-        box-shadow: var(--shadow);
-      }
-
-      .overview-panel::after {
-        content: "";
-        position: absolute;
-        inset: auto -70px -70px auto;
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.05);
-      }
-
-      .overview-panel h2 {
-        margin: 0 0 10px;
-        font-size: 1.28rem;
-      }
-
-      .overview-panel p {
-        margin: 0;
-        color: rgba(238, 243, 251, 0.78);
-        line-height: 1.7;
-      }
-
-      .stack {
-        display: grid;
-        gap: 12px;
-        margin-top: 22px;
-      }
-
-      .stack-row {
-        display: grid;
-        grid-template-columns: 82px 1fr;
-        gap: 12px;
-        align-items: start;
-        padding-top: 12px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .stack-row strong {
-        font-size: 0.76rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.56);
-      }
-
-      .stack-row span {
-        color: #f8fbff;
-        font-size: 0.93rem;
-        line-height: 1.6;
-      }
-
-      .page-grid {
-        display: grid;
-        grid-template-columns: 280px minmax(0, 1fr);
-        gap: 28px;
-        align-items: start;
-        padding: 18px 0 80px;
-      }
-
-      .side-rail {
-        position: sticky;
-        top: 28px;
-        display: grid;
-        gap: 18px;
-      }
-
-      .rail-card {
-        padding: 18px;
-        border-radius: var(--radius-lg);
-        background: rgba(255, 255, 255, 0.78);
-        border: 1px solid var(--line);
-        box-shadow: 0 14px 34px rgba(24, 33, 50, 0.06);
-        backdrop-filter: blur(12px);
-      }
-
-      .rail-card h3 {
-        margin: 0 0 12px;
-        font-size: 0.95rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--navy);
-      }
-
-      .rail-list,
-      .mini-list {
-        display: grid;
-        gap: 10px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .rail-list a {
-        display: block;
-        padding: 10px 12px;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.6);
-        text-decoration: none;
-        color: var(--muted);
-        transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
-      }
-
-      .rail-list a:hover {
-        transform: translateX(4px);
-        background: rgba(29, 54, 94, 0.08);
-        color: var(--ink);
-      }
-
-      .mini-list li {
-        color: var(--muted);
-        font-size: 0.92rem;
-        line-height: 1.55;
-      }
-
-      .content {
-        display: grid;
-        gap: 22px;
-      }
-
-      .section {
-        position: relative;
-        overflow: hidden;
-        padding: 30px;
-        border-radius: var(--radius-xl);
-        background: rgba(255, 255, 255, 0.72);
-        border: 1px solid rgba(24, 33, 50, 0.08);
-        box-shadow: 0 16px 36px rgba(24, 33, 50, 0.06);
+      .course-nav {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 50;
         backdrop-filter: blur(16px);
+        background: rgba(250, 247, 242, 0.88);
+        border-bottom: 1px solid var(--color-border);
       }
 
-      .section::before {
-        content: "";
-        position: absolute;
-        inset: 0 auto 0 0;
-        width: 6px;
-        background: linear-gradient(180deg, var(--rust), rgba(45, 79, 132, 0.75));
-      }
-
-      .section-head {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        align-items: start;
-        margin-bottom: 22px;
-      }
-
-      .section-kicker {
-        display: inline-flex;
+      .course-nav__inner {
+        display: grid;
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: var(--space-4);
         align-items: center;
-        min-height: 34px;
-        padding: 0 12px;
-        border-radius: 999px;
-        background: var(--rust-soft);
-        color: var(--rust);
-        font-size: 0.78rem;
-        font-weight: 800;
-        letter-spacing: 0.08em;
+        max-width: calc(var(--content-width-wide) + var(--space-12));
+        margin: 0 auto;
+        padding: var(--space-3) var(--space-6);
+      }
+
+      .course-nav__brand {
+        display: grid;
+        gap: 2px;
+      }
+
+      .course-nav__eyebrow {
+        font-size: var(--text-xs);
+        letter-spacing: 0.12em;
         text-transform: uppercase;
+        color: var(--color-text-muted);
       }
 
-      .section-head h2 {
-        margin: 10px 0 8px;
-        font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-        font-size: clamp(1.9rem, 3vw, 2.8rem);
-        line-height: 1.04;
-        letter-spacing: -0.03em;
+      .course-nav__title {
+        font-family: var(--font-display);
+        font-size: var(--text-lg);
+        font-weight: 700;
       }
 
-      .section-head p {
-        margin: 0;
-        max-width: 62ch;
-        color: var(--muted);
-        line-height: 1.75;
-      }
-
-      .tag-cloud {
+      .course-nav__links {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: var(--space-2);
         justify-content: flex-end;
       }
 
-      .tag {
-        padding: 9px 12px;
-        border-radius: 999px;
-        background: rgba(29, 54, 94, 0.08);
-        color: var(--navy);
-        font-size: 0.78rem;
-        font-weight: 700;
+      .course-nav__link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+        padding: 0 var(--space-4);
+        border-radius: var(--radius-full);
+        border: 1px solid transparent;
+        text-decoration: none;
+        color: var(--color-text-secondary);
+        transition:
+          color var(--duration-fast) var(--ease-out),
+          background var(--duration-fast) var(--ease-out),
+          border-color var(--duration-fast) var(--ease-out);
       }
 
-      .diagram {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 14px;
+      .course-nav__link:hover,
+      .course-nav__link.is-active {
+        color: var(--color-text);
+        background: var(--color-surface);
+        border-color: var(--color-border);
       }
 
-      .diagram-card {
-        padding: 20px;
-        border-radius: 18px;
-        border: 1px solid rgba(24, 33, 50, 0.08);
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(249, 245, 240, 0.92));
+      .course-progress {
+        height: 4px;
+        background: rgba(44, 42, 40, 0.06);
       }
 
-      .diagram-card strong {
-        display: block;
-        margin-bottom: 8px;
-        color: var(--navy);
-        font-size: 1rem;
+      .course-progress__bar {
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, var(--color-accent), var(--color-actor-2));
+        transition: width var(--duration-normal) var(--ease-out);
       }
 
-      .diagram-card p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.65;
-        font-size: 0.95rem;
+      .module {
+        position: relative;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: calc(var(--nav-height) + var(--space-12)) var(--space-6) var(--space-16);
+        scroll-snap-align: start;
       }
 
-      .flow-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 20px;
+      .module:nth-of-type(odd) {
+        background: var(--color-bg);
       }
 
-      .step-list {
-        display: grid;
-        gap: 14px;
+      .module:nth-of-type(even) {
+        background: var(--color-bg-warm);
       }
 
-      .step {
-        display: grid;
-        grid-template-columns: 56px minmax(0, 1fr);
-        gap: 16px;
-        align-items: start;
-        padding: 18px;
-        border-radius: 18px;
-        background: rgba(250, 246, 241, 0.9);
-        border: 1px solid rgba(24, 33, 50, 0.08);
+      .module__content {
+        max-width: var(--content-width-wide);
+        margin: 0 auto;
       }
 
-      .step-number {
-        display: grid;
-        place-items: center;
-        width: 56px;
-        height: 56px;
-        border-radius: 18px;
-        background: linear-gradient(135deg, var(--navy), var(--navy-2));
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: 800;
-      }
-
-      .step h3 {
-        margin: 0 0 8px;
-        font-size: 1.08rem;
-      }
-
-      .step p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-
-      .code-panel {
-        padding: 18px;
-        border-radius: 18px;
-        background: #13233d;
-        color: #f2f7ff;
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-      }
-
-      .code-panel h3 {
-        margin: 0 0 10px;
-        font-size: 0.9rem;
+      .module__label {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        min-height: 34px;
+        padding: 0 var(--space-4);
+        border-radius: var(--radius-full);
+        background: var(--color-accent-light);
+        color: var(--color-accent);
+        font-family: var(--font-mono);
+        font-size: var(--text-xs);
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.66);
       }
 
-      pre {
+      .module__hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(290px, 0.8fr);
+        gap: var(--space-8);
+        align-items: end;
+        margin-bottom: var(--space-10);
+      }
+
+      .module__number {
+        margin: 0 0 var(--space-3);
+        font-family: var(--font-display);
+        font-size: clamp(3.25rem, 8vw, 6rem);
+        line-height: 0.9;
+        color: rgba(217, 79, 48, 0.18);
+      }
+
+      .module__title {
+        margin: 0 0 var(--space-4);
+        font-family: var(--font-display);
+        font-size: clamp(2.5rem, 6vw, 4.4rem);
+        line-height: var(--leading-tight);
+        letter-spacing: -0.03em;
+      }
+
+      .module__lede {
+        max-width: 58ch;
+        margin: 0;
+        font-size: var(--text-lg);
+        line-height: var(--leading-loose);
+        color: var(--color-text-secondary);
+      }
+
+      .meta-card,
+      .card,
+      .callout,
+      .quiz-shell,
+      .translation-block,
+      .visual-card {
+        border-radius: var(--radius-lg);
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid var(--color-border);
+        box-shadow: var(--shadow-md);
+      }
+
+      .meta-card {
+        padding: var(--space-6);
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .meta-card h2 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: var(--text-2xl);
+      }
+
+      .meta-card p {
+        margin: 0;
+        color: var(--color-text-secondary);
+        line-height: var(--leading-loose);
+      }
+
+      .badge-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 0 var(--space-3);
+        border-radius: var(--radius-full);
+        background: var(--color-surface-warm);
+        border: 1px solid var(--color-border);
+        font-size: var(--text-sm);
+        color: var(--color-text-secondary);
+      }
+
+      .screen-grid {
+        display: grid;
+        gap: var(--space-6);
+      }
+
+      .two-up {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: var(--space-6);
+      }
+
+      .three-up {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-4);
+      }
+
+      .card,
+      .visual-card,
+      .quiz-shell,
+      .callout {
+        padding: var(--space-6);
+      }
+
+      .card h3,
+      .visual-card h3,
+      .quiz-shell h3,
+      .callout h3 {
+        margin: 0 0 var(--space-3);
+        font-family: var(--font-display);
+        font-size: var(--text-xl);
+      }
+
+      .card p,
+      .visual-card p,
+      .quiz-shell p,
+      .callout p {
+        margin: 0;
+        color: var(--color-text-secondary);
+        line-height: var(--leading-loose);
+      }
+
+      .message-flow {
+        position: relative;
+        padding-top: var(--space-8);
+      }
+
+      .message-flow__rail {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: var(--space-3);
+        align-items: start;
+      }
+
+      .message-flow__actor {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        gap: var(--space-2);
+        text-align: center;
+      }
+
+      .message-flow__actor::before {
+        content: "";
+        position: absolute;
+        top: 16px;
+        left: calc(50% + 40px);
+        width: calc(100% - 16px);
+        height: 2px;
+        background: linear-gradient(90deg, rgba(44, 42, 40, 0.14), rgba(44, 42, 40, 0.02));
+      }
+
+      .message-flow__actor:last-child::before {
+        display: none;
+      }
+
+      .actor-dot {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-family: var(--font-display);
+        font-size: var(--text-sm);
+        font-weight: 700;
+        color: white;
+      }
+
+      .actor-dot--1 {
+        background: var(--color-actor-1);
+      }
+
+      .actor-dot--2 {
+        background: var(--color-actor-2);
+      }
+
+      .actor-dot--3 {
+        background: var(--color-actor-3);
+      }
+
+      .actor-dot--4 {
+        background: var(--color-actor-4);
+      }
+
+      .actor-dot--5 {
+        background: var(--color-actor-5);
+      }
+
+      .message-flow__label {
+        font-size: var(--text-sm);
+        color: var(--color-text-secondary);
+      }
+
+      .message-flow__packet {
+        position: absolute;
+        left: 4%;
+        top: 38px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--color-accent);
+        box-shadow: 0 0 0 8px rgba(217, 79, 48, 0.12);
+        animation: packet-trip 7s infinite var(--ease-in-out);
+      }
+
+      @keyframes packet-trip {
+        0%,
+        12% {
+          transform: translateX(0);
+          opacity: 0;
+        }
+        20%,
+        80% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(840px);
+          opacity: 0;
+        }
+      }
+
+      .translation-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+      }
+
+      .translation-code {
+        position: relative;
+        padding: var(--space-6);
+        background: var(--color-bg-code);
+        color: #cdd6f4;
+        font-family: var(--font-mono);
+        font-size: var(--text-sm);
+        line-height: 1.75;
+        overflow-x: hidden;
+      }
+
+      .translation-code pre,
+      .translation-code code {
         margin: 0;
         white-space: pre-wrap;
         word-break: break-word;
-        font: 0.84rem/1.65 "SFMono-Regular", "JetBrains Mono", Consolas, monospace;
+        overflow-x: hidden;
       }
 
-      .module-grid,
-      .build-grid,
-      .checklist-grid,
-      .bug-grid,
-      .lab-grid {
+      .translation-english {
+        position: relative;
+        padding: var(--space-6);
+        background: var(--color-surface-warm);
+        border-left: 3px solid var(--color-accent);
+      }
+
+      .translation-label {
+        position: absolute;
+        top: var(--space-3);
+        right: var(--space-4);
+        font-size: var(--text-xs);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.55);
+      }
+
+      .translation-english .translation-label {
+        color: var(--color-text-muted);
+      }
+
+      .translation-lines {
         display: grid;
-        gap: 16px;
+        gap: var(--space-3);
       }
 
-      .build-grid {
-        grid-template-columns: 1.05fr 0.95fr;
+      .translation-lines p {
+        margin: 0;
+        color: var(--color-text-secondary);
+        line-height: var(--leading-loose);
       }
 
-      .checklist-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .translation-lines strong {
+        color: var(--color-text);
       }
 
-      .module-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .group-chat {
+        display: grid;
+        gap: var(--space-3);
       }
 
-      .bug-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .lab-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .module-card,
-      .build-card,
-      .checklist-card,
-      .bug-card,
-      .lab-card {
-        padding: 22px;
+      .chat-message {
+        max-width: 80%;
+        padding: var(--space-4) var(--space-5);
         border-radius: 18px;
-        border: 1px solid rgba(24, 33, 50, 0.08);
-        background: rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow-sm);
+        font-size: var(--text-sm);
+        line-height: var(--leading-loose);
+        animation: float-in var(--duration-slow) var(--ease-out) both;
       }
 
-      .module-card h3,
-      .build-card h3,
-      .checklist-card h3,
-      .bug-card h3,
-      .lab-card h3 {
-        margin: 0 0 10px;
-        font-size: 1.06rem;
+      .chat-message strong {
+        display: block;
+        margin-bottom: var(--space-1);
       }
 
-      .module-card p,
-      .build-card p,
-      .checklist-card p,
-      .bug-card p,
-      .lab-card p {
-        margin: 0 0 12px;
-        color: var(--muted);
-        line-height: 1.7;
+      .chat-message:nth-child(1) {
+        background: rgba(217, 79, 48, 0.12);
+        justify-self: start;
       }
 
-      .inline-path {
+      .chat-message:nth-child(2) {
+        background: rgba(42, 123, 155, 0.14);
+        justify-self: end;
+        animation-delay: 0.15s;
+      }
+
+      .chat-message:nth-child(3) {
+        background: rgba(123, 109, 170, 0.14);
+        justify-self: start;
+        animation-delay: 0.3s;
+      }
+
+      .chat-message:nth-child(4) {
+        background: rgba(212, 168, 67, 0.16);
+        justify-self: end;
+        animation-delay: 0.45s;
+      }
+
+      @keyframes float-in {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .file-tree {
+        display: grid;
+        gap: var(--space-2);
+        font-family: var(--font-mono);
+        font-size: var(--text-sm);
+      }
+
+      .file-tree__item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: var(--space-3);
+        padding: var(--space-3) var(--space-4);
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--color-border-light);
+      }
+
+      .file-tree__item span:last-child {
+        color: var(--color-text-secondary);
+        font-family: var(--font-body);
+      }
+
+      .callout {
+        background: linear-gradient(135deg, rgba(42, 123, 155, 0.11), rgba(217, 79, 48, 0.08));
+      }
+
+      .callout h3 {
+        color: var(--color-text);
+      }
+
+      .term {
+        display: inline;
+        border: 0;
+        padding: 0;
+        background: none;
+        color: inherit;
+        font: inherit;
+        border-bottom: 1px dashed var(--color-accent-muted);
+        cursor: pointer;
+      }
+
+      .tooltip-layer {
+        position: fixed;
+        z-index: 80;
+        max-width: 280px;
+        padding: var(--space-3) var(--space-4);
+        border-radius: var(--radius-md);
+        background: rgba(30, 30, 46, 0.96);
+        color: #f8f7ff;
+        font-size: var(--text-sm);
+        line-height: var(--leading-loose);
+        box-shadow: var(--shadow-lg);
+        pointer-events: none;
+      }
+
+      .step-cards {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .step-card {
+        display: grid;
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: var(--space-4);
+        padding: var(--space-5);
+        border-radius: var(--radius-lg);
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid var(--color-border);
+      }
+
+      .step-card__num {
+        width: 64px;
+        height: 64px;
+        display: grid;
+        place-items: center;
+        border-radius: 20px;
+        background: var(--color-accent);
+        color: white;
+        font-family: var(--font-display);
+        font-size: var(--text-xl);
+      }
+
+      .step-card__body {
+        display: grid;
+        gap: var(--space-2);
+      }
+
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+      }
+
+      .meta-pill {
         display: inline-flex;
         align-items: center;
         min-height: 30px;
-        padding: 0 10px;
-        border-radius: 999px;
-        background: rgba(29, 54, 94, 0.07);
-        color: var(--navy);
-        font: 0.76rem/1.2 "SFMono-Regular", Consolas, monospace;
-        margin: 0 8px 8px 0;
+        padding: 0 var(--space-3);
+        border-radius: var(--radius-full);
+        background: rgba(42, 123, 155, 0.1);
+        color: var(--color-info);
+        font-size: var(--text-xs);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
       }
 
-      .lesson-points {
+      .quiz-shell {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .quiz-question {
         margin: 0;
-        padding-left: 18px;
-        color: var(--muted);
+        font-family: var(--font-display);
+        font-size: var(--text-xl);
       }
 
-      .lesson-points li {
-        margin: 8px 0;
-        line-height: 1.65;
-      }
-
-      .build-list {
+      .quiz-options {
         display: grid;
-        gap: 14px;
+        gap: var(--space-3);
       }
 
-      .build-step {
-        display: grid;
-        grid-template-columns: 64px minmax(0, 1fr);
-        gap: 16px;
-        align-items: start;
-        padding: 18px;
-        border-radius: 18px;
-        background: rgba(250, 246, 241, 0.94);
-        border: 1px solid rgba(24, 33, 50, 0.08);
-      }
-
-      .build-step-number {
-        display: grid;
-        place-items: center;
-        width: 64px;
-        height: 64px;
-        border-radius: 20px;
-        background: linear-gradient(135deg, var(--rust), #ec8a56);
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 800;
-        letter-spacing: 0.04em;
-      }
-
-      .build-step h3 {
-        margin: 0 0 8px;
-      }
-
-      .build-meta {
+      .quiz-option {
         display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin: 12px 0;
+        align-items: center;
+        gap: var(--space-3);
+        width: 100%;
+        padding: var(--space-4);
+        border: 2px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: var(--color-surface);
+        cursor: pointer;
+        text-align: left;
+        transition:
+          border-color var(--duration-fast) var(--ease-out),
+          background var(--duration-fast) var(--ease-out);
       }
 
-      .label {
+      .quiz-option:hover {
+        border-color: var(--color-accent-muted);
+      }
+
+      .quiz-option.selected {
+        border-color: var(--color-accent);
+        background: var(--color-accent-light);
+      }
+
+      .quiz-option.correct {
+        border-color: var(--color-success);
+        background: var(--color-success-light);
+      }
+
+      .quiz-option.incorrect {
+        border-color: var(--color-error);
+        background: var(--color-error-light);
+      }
+
+      .quiz-option__dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 2px solid var(--color-border);
+        flex: 0 0 auto;
+      }
+
+      .quiz-option.selected .quiz-option__dot {
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+        box-shadow: inset 0 0 0 3px white;
+      }
+
+      .quiz-feedback {
+        display: none;
+        padding: var(--space-4);
+        border-radius: var(--radius-md);
+        line-height: var(--leading-loose);
+      }
+
+      .quiz-feedback.is-visible {
+        display: block;
+      }
+
+      .quiz-feedback.success {
+        background: var(--color-success-light);
+        color: var(--color-success);
+      }
+
+      .quiz-feedback.error {
+        background: var(--color-error-light);
+        color: var(--color-error);
+      }
+
+      .quiz-actions {
+        display: flex;
+        gap: var(--space-3);
+        flex-wrap: wrap;
+      }
+
+      .quiz-btn {
+        border: 0;
+        min-height: 42px;
+        padding: 0 var(--space-5);
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        transition:
+          transform var(--duration-fast) var(--ease-out),
+          background var(--duration-fast) var(--ease-out);
+      }
+
+      .quiz-btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .quiz-btn--primary {
+        background: var(--color-accent);
+        color: white;
+      }
+
+      .quiz-btn--secondary {
+        background: var(--color-surface);
+        color: var(--color-text-secondary);
+        border: 1px solid var(--color-border);
+      }
+
+      .checklist {
+        display: grid;
+        gap: var(--space-3);
+        padding-left: var(--space-5);
+        color: var(--color-text-secondary);
+      }
+
+      .checklist li {
+        line-height: var(--leading-loose);
+      }
+
+      .aha {
         display: inline-flex;
         align-items: center;
-        min-height: 28px;
-        padding: 0 10px;
-        border-radius: 999px;
-        background: rgba(29, 54, 94, 0.08);
-        color: var(--navy);
-        font-size: 0.76rem;
-        font-weight: 700;
+        min-height: 32px;
+        padding: 0 var(--space-3);
+        border-radius: var(--radius-full);
+        background: rgba(212, 168, 67, 0.18);
+        color: #8a6415;
+        font-size: var(--text-xs);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
       }
 
-      .build-card pre,
-      .checklist-card pre {
-        padding: 16px;
-        border-radius: 16px;
-        background: #13233d;
-        color: #f2f7ff;
-        overflow: auto;
+      .animate-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity var(--duration-slow) var(--ease-out),
+          transform var(--duration-slow) var(--ease-out);
       }
 
-      .todo-list {
-        margin: 0;
-        padding-left: 18px;
-        color: var(--muted);
+      .animate-in.visible {
+        opacity: 1;
+        transform: translateY(0);
       }
 
-      .todo-list li {
-        margin: 8px 0;
-        line-height: 1.68;
+      .stagger > .animate-in {
+        transition-delay: calc(var(--stagger-index, 0) * 110ms);
       }
 
-      .closing {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 18px;
-        align-items: stretch;
-      }
+      @media (max-width: 1120px) {
+        .course-nav__inner,
+        .module__content {
+          max-width: calc(100vw - 32px);
+        }
 
-      .closing-note {
-        padding: 24px;
-        border-radius: 20px;
-        background: linear-gradient(135deg, rgba(29, 54, 94, 0.98), rgba(44, 78, 132, 0.96));
-        color: #f6fbff;
-      }
-
-      .closing-note h3 {
-        margin: 0 0 12px;
-        font-size: 1.2rem;
-      }
-
-      .closing-note p {
-        margin: 0;
-        color: rgba(246, 251, 255, 0.8);
-        line-height: 1.75;
-      }
-
-      .capstone {
-        padding: 24px;
-        border-radius: 20px;
-        background: linear-gradient(180deg, rgba(255, 249, 243, 0.98), rgba(255, 255, 255, 0.96));
-        border: 1px solid rgba(24, 33, 50, 0.08);
-      }
-
-      .capstone h3 {
-        margin: 0 0 12px;
-      }
-
-      @media (max-width: 1080px) {
-        .hero-grid,
-        .page-grid,
-        .flow-grid,
-        .build-grid,
-        .checklist-grid,
-        .closing {
+        .course-nav__inner,
+        .module__hero,
+        .two-up,
+        .three-up {
           grid-template-columns: 1fr;
         }
 
-        .side-rail {
-          position: static;
-        }
-
-        .module-grid,
-        .bug-grid,
-        .lab-grid,
-        .diagram {
-          grid-template-columns: 1fr;
-        }
-
-        .tag-cloud {
+        .course-nav__links {
           justify-content: flex-start;
         }
+
+        .message-flow__actor::before {
+          display: none;
+        }
       }
 
-      @media (max-width: 720px) {
-        .shell {
-          width: min(var(--max), calc(100vw - 24px));
+      @media (max-width: 768px) {
+        .module {
+          padding-left: var(--space-4);
+          padding-right: var(--space-4);
         }
 
-        .hero {
-          padding-top: 28px;
-        }
-
-        .section,
-        .overview-panel {
-          padding: 22px;
-        }
-
-        .section-head {
-          flex-direction: column;
-        }
-
-        .step {
+        .translation-block,
+        .step-card {
           grid-template-columns: 1fr;
         }
 
-        .build-step {
-          grid-template-columns: 1fr;
+        .translation-english {
+          border-left: 0;
+          border-top: 3px solid var(--color-accent);
+        }
+
+        .message-flow__rail {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .message-flow__packet {
+          display: none;
+        }
+
+        .chat-message {
+          max-width: 100%;
         }
       }
     </style>
   </head>
   <body>
-    <header class="hero">
-      <div class="shell">
-        <div class="eyebrow">Codebase to Course / Ask Belle</div>
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <h1>把静态个人网站做成一个有边界的 AI 助手</h1>
-            <p>
-              这不是“接个模型 API”那么简单，而是一套完整的产品化实现流程：先定义 assistant 的边界，再拆前后端，
-              再把 grounding、fallback、部署、安全、缓存、滚动、层级和响应式问题逐层收住。
-            </p>
-            <div class="hero-metrics">
-              <div class="metric"><strong>Format</strong> 90-minute build lab</div>
-              <div class="metric"><strong>Audience</strong> intermediate web builders</div>
-              <div class="metric"><strong>Artifact</strong> grounded site assistant</div>
-            </div>
-          </div>
-          <aside class="overview-panel">
-            <h2>What learners build</h2>
-            <p>
-              一个真正能挂在静态个人网站上的 chatbot：前端 widget 在站内运行，后端单独部署，回答范围受控，
-              还能在 live AI 不可用时退回 site guide。
-            </p>
-            <div class="stack">
-              <div class="stack-row">
-                <strong>Frontend</strong>
-                <span>Jekyll include + CSS layout + chat state + focus and scroll management</span>
-              </div>
-              <div class="stack-row">
-                <strong>Backend</strong>
-                <span>Serverless API + OpenAI Responses API + lightweight retrieval + CORS guardrails</span>
-              </div>
-              <div class="stack-row">
-                <strong>Ops</strong>
-                <span>GitHub Pages + Vercel + environment variables + fallback and cache control</span>
-              </div>
-            </div>
-          </aside>
+    <header class="course-nav">
+      <div class="course-nav__inner">
+        <div class="course-nav__brand">
+          <span class="course-nav__eyebrow">Codebase to Course / Ask Belle</span>
+          <strong class="course-nav__title">从真实代码到可上线 AI 助手</strong>
         </div>
+        <nav class="course-nav__links" aria-label="Course sections">
+          <a class="course-nav__link" href="#module-1">1. Click</a>
+          <a class="course-nav__link" href="#module-2">2. Actors</a>
+          <a class="course-nav__link" href="#module-3">3. Browser</a>
+          <a class="course-nav__link" href="#module-4">4. Backend</a>
+          <a class="course-nav__link" href="#module-5">5. Build Yours</a>
+        </nav>
       </div>
+      <div class="course-progress"><div class="course-progress__bar" data-progress-bar></div></div>
     </header>
 
-    <main class="shell page-grid">
-      <aside class="side-rail">
-        <div class="rail-card">
-          <h3>Course Map</h3>
-          <ul class="rail-list">
-            <li><a href="#architecture">Architecture Split</a></li>
-            <li><a href="#flow">Implementation Flow</a></li>
-            <li><a href="#build">Build Your Own Version</a></li>
-            <li><a href="#modules">Teaching Modules</a></li>
-            <li><a href="#bugs">Bug Fixes That Matter</a></li>
-            <li><a href="#labs">Hands-On Labs</a></li>
-            <li><a href="#checklist">Launch Checklist</a></li>
-            <li><a href="#capstone">Capstone Deliverable</a></li>
-          </ul>
-        </div>
-        <div class="rail-card">
-          <h3>Inspected Files</h3>
-          <ul class="mini-list">
-            <li><code>_config.yml</code></li>
-            <li><code>_includes/chatbot-widget.html</code></li>
-            <li><code>assets/js/chatbot.js</code></li>
-            <li><code>assets/css/main.scss</code></li>
-            <li><code>chatbot-backend/api/chat.js</code></li>
-            <li><code>chatbot-backend/README.md</code></li>
-          </ul>
-        </div>
-      </aside>
-
-      <div class="content">
-        <section class="section reveal" id="architecture">
-          <div class="section-head">
+    <main>
+      <section class="module" id="module-1" data-title="When you click Ask Belle">
+        <div class="module__content">
+          <div class="module__hero">
             <div>
-              <div class="section-kicker">Module 0</div>
-              <h2>Architecture Split</h2>
-              <p>
-                `Ask Belle` 的第一课不是界面，而是边界。因为主站是静态 Jekyll 站，前端 widget 可以直接放站内，
-                但模型调用必须放到独立后端。这个架构决定了后面所有实现细节。
+              <div class="module__number">01</div>
+              <span class="module__label">Start with the user action</span>
+              <h1 class="module__title">当访客点击 Ask Belle 时，真正发生了什么？</h1>
+              <p class="module__lede">
+                这门课从用户动作开始，不从架构图开始。你点开聊天框，输入问题，页面先读配置，再决定是走
+                <button class="term" type="button" data-definition="静态网站是已经生成好的 HTML、CSS、JS 文件。它很快、很稳，但不能安全地藏密钥或在服务器上动态运行私密逻辑。">静态站</button>
+                里的前端逻辑，还是去找
+                <button class="term" type="button" data-definition="Serverless 是“按请求运行一小段后端代码”的方式。你不用长期管理整台服务器，但仍然可以安全地处理密钥、限制来源、调用模型。">serverless</button>
+                后端拿 grounded answer。
               </p>
             </div>
-            <div class="tag-cloud">
-              <span class="tag">Jekyll</span>
-              <span class="tag">Static Site</span>
-              <span class="tag">Serverless API</span>
-              <span class="tag">Grounding</span>
-            </div>
+
+            <aside class="meta-card animate-in">
+              <h2>Why should a vibe coder care?</h2>
+              <p>因为这决定了你应该让 AI 往哪里加逻辑。会影响安全的、要用密钥的、要限制来源的，必须在后端。纯 UI 和状态行为，留在前端。</p>
+              <div class="badge-list">
+                <span class="badge">Static Jekyll site</span>
+                <span class="badge">Serverless backend</span>
+                <span class="badge">Grounded answers</span>
+                <span class="badge">Fallback mode</span>
+              </div>
+            </aside>
           </div>
 
-          <div class="diagram">
-            <div class="diagram-card">
-              <strong>1. Site Config</strong>
-              <p>
-                在 <code>_config.yml</code> 里定义 chatbot 的 title、button label、suggested prompts、
-                API 地址和 knowledge base 地址。
-              </p>
-            </div>
-            <div class="diagram-card">
-              <strong>2. Widget Markup</strong>
-              <p>
-                用 <code>_includes/chatbot-widget.html</code> 把 launcher、panel、messages、suggestions、
-                composer 作为站内 UI 结构注入。
-              </p>
-            </div>
-            <div class="diagram-card">
-              <strong>3. Behavior Layer</strong>
-              <p>
-                <code>assets/js/chatbot.js</code> 负责 open/close、focus、send、typing、fallback、scroll anchor
-                和 citations 渲染。
-              </p>
-            </div>
-            <div class="diagram-card">
-              <strong>4. Serverless Backend</strong>
-              <p>
-                <code>chatbot-backend/api/chat.js</code> 做 CORS、限流、知识匹配、OpenAI 请求和 grounded instructions。
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section reveal" id="flow">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Module 1</div>
-              <h2>Implementation Flow</h2>
-              <p>
-                这一部分把 Ask Belle 的真实 build sequence 拆成五步。重点不是“写了哪些文件”，而是每一步为什么必须这样做。
-              </p>
-            </div>
-          </div>
-
-          <div class="flow-grid">
-            <div class="step-list">
-              <article class="step">
-                <div class="step-number">01</div>
-                <div>
-                  <h3>先定 assistant 的边界</h3>
-                  <p>
-                    不是做开放式 chatbot，而是做一个 bounded site assistant。它只回答 Belle 网站上已经公开的 research、
-                    publications、teaching、projects 相关问题，并允许把联系类问题引导到公开链接。
-                  </p>
+          <div class="screen-grid">
+            <div class="visual-card animate-in">
+              <h3>One click, five actors</h3>
+              <p>把 Ask Belle 想成舞台上的一次 cue。访客按下按钮后，消息会依次经过 widget、后端、知识库和模型，然后再回到页面。</p>
+              <div class="message-flow">
+                <div class="message-flow__packet" aria-hidden="true"></div>
+                <div class="message-flow__rail">
+                  <div class="message-flow__actor">
+                    <div class="actor-dot actor-dot--1">Visitor</div>
+                    <div class="message-flow__label">提问的人</div>
+                  </div>
+                  <div class="message-flow__actor">
+                    <div class="actor-dot actor-dot--2">Widget</div>
+                    <div class="message-flow__label">站内 UI</div>
+                  </div>
+                  <div class="message-flow__actor">
+                    <div class="actor-dot actor-dot--3">API</div>
+                    <div class="message-flow__label">Serverless</div>
+                  </div>
+                  <div class="message-flow__actor">
+                    <div class="actor-dot actor-dot--4">KB</div>
+                    <div class="message-flow__label">知识摘要</div>
+                  </div>
+                  <div class="message-flow__actor">
+                    <div class="actor-dot actor-dot--5">Model</div>
+                    <div class="message-flow__label">OpenAI</div>
+                  </div>
                 </div>
-              </article>
-              <article class="step">
-                <div class="step-number">02</div>
-                <div>
-                  <h3>把 UI 作为站内组件注入</h3>
-                  <p>
-                    用 include 模式把 launcher、panel、messages 和 composer 放进站点 footer 区域，避免重构现有导航和页面模板。
-                  </p>
-                </div>
-              </article>
-              <article class="step">
-                <div class="step-number">03</div>
-                <div>
-                  <h3>前端做出“产品级行为”</h3>
-                  <p>
-                    真正费时间的不是发送文本，而是焦点管理、点击外部关闭、Esc、loading state、fallback mode、滚动锚点和移动端布局。
-                  </p>
-                </div>
-              </article>
-              <article class="step">
-                <div class="step-number">04</div>
-                <div>
-                  <h3>后端单独部署并加安全边界</h3>
-                  <p>
-                    模型调用不能放前端。后端需要处理 ALLOWED_ORIGIN、rate limiting、body size、timeout、knowledge matching、
-                    concise instructions 和环境变量。
-                  </p>
-                </div>
-              </article>
-              <article class="step">
-                <div class="step-number">05</div>
-                <div>
-                  <h3>上线后继续修真实 UI bug</h3>
-                  <p>
-                    缓存、遮挡、z-index、错误的 scroll target、被拉伸的 contact chips，这些问题都只有在真实页面和真实视口里才会暴露。
-                  </p>
-                </div>
-              </article>
+              </div>
             </div>
 
-            <aside class="code-panel">
-              <h3>Config Snapshot</h3>
-              <pre><code>chatbot:
+            <div class="translation-block animate-in">
+              <div class="translation-code">
+                <span class="translation-label">Code</span>
+                <pre><code>chatbot:
   enabled: true
   title: Ask Belle
   subtitle: Research, teaching, publications, and projects
   button_label: Ask Belle
+  intro: Ask about Belle's research agenda, publications, teaching experience, or design projects.
+  placeholder: Ask about research, publications, teaching, projects, or collaboration...
   api_url: https://chatbot-backend-omega-lilac.vercel.app/api/chat
   knowledge_base_url: /assets/data/belle-site-knowledge.json
   suggested_prompts:
-    - What is Belle's research agenda?
-    - Which publications should I start with?
-    - What teaching experience does Belle have?
-    - What projects has Belle built?</code></pre>
+  - What is Belle's research agenda?
+  - Which publications should I start with?</code></pre>
+              </div>
+              <div class="translation-english">
+                <span class="translation-label">Plain English</span>
+                <div class="translation-lines">
+                  <p><strong>This block tells the site the assistant exists.</strong> If `enabled` were false, the widget would disappear entirely.</p>
+                  <p><strong>The next few lines define the visitor-facing surface.</strong> Title, subtitle, button label, intro, and placeholder all shape how the assistant feels before it says anything.</p>
+                  <p><strong>`api_url` is the bridge to the private part.</strong> This is the address of the backend that can safely call the model.</p>
+                  <p><strong>`knowledge_base_url` points to the controlled memory.</strong> Instead of searching the whole web, Ask Belle starts from a curated file of Belle's own site content.</p>
+                  <p><strong>The suggested prompts act like guardrails.</strong> They teach visitors what kinds of questions are on-topic.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="callout animate-in">
+              <span class="aha">Aha</span>
+              <h3>Static site does not mean “no AI.” It means “split the job.”</h3>
+              <p>
+                最重要的架构判断只有一句话：聊天 UI 可以在静态站里，模型调用不行。你把这句话想清楚，后面 80% 的实现决策都会顺。
+              </p>
+            </div>
+
+            <div class="quiz-shell animate-in" id="quiz-module-1">
+              <h3 class="quiz-question">Quiz 1: 如果你把 `OPENAI_API_KEY` 直接写进前端脚本，会发生什么？</h3>
+              <p>选那个最符合 Ask Belle 架构的答案。</p>
+              <div class="quiz-options">
+                <button class="quiz-option" type="button" data-value="a" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>没关系，因为这是个人网站，不是产品。</span>
+                </button>
+                <button class="quiz-option" type="button" data-value="b" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>访客能在浏览器里拿到你的 key，所以必须把模型调用挪到后端。</span>
+                </button>
+                <button class="quiz-option" type="button" data-value="c" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>只有本地开发会有风险，部署后就安全了。</span>
+                </button>
+              </div>
+              <div class="quiz-actions">
+                <button class="quiz-btn quiz-btn--primary" type="button" onclick="window.checkQuiz('quiz-module-1', 'b', 'Exactly. A static site can show UI, but any secret in shipped frontend code is visible to visitors.', 'Not quite. The risk is not the site size — it is that browser-delivered code is public.')">Check answer</button>
+                <button class="quiz-btn quiz-btn--secondary" type="button" onclick="window.resetQuiz('quiz-module-1')">Try again</button>
+              </div>
+              <div class="quiz-feedback" data-feedback></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="module" id="module-2" data-title="Meet the actors">
+        <div class="module__content">
+          <div class="module__hero">
+            <div>
+              <div class="module__number">02</div>
+              <span class="module__label">Meet the cast of characters</span>
+              <h2 class="module__title">谁在台上？Ask Belle 其实只有几位“演员”</h2>
+              <p class="module__lede">
+                如果你想让 AI 帮你改这个功能，首先要能说清楚：哪一段属于模板，哪一段属于浏览器脚本，哪一段属于后端，哪一段只是内容文件。
+              </p>
+            </div>
+            <aside class="meta-card animate-in">
+              <h2>Metaphor</h2>
+              <p>这一层更像一个剧组，不像一团代码。配置是 call sheet，widget markup 是舞台布景，JS 是 stage manager，后端是后台协调员。</p>
             </aside>
           </div>
-        </section>
 
-        <section class="section" id="build">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Module 1.5</div>
-              <h2>Build Your Own Version</h2>
-              <p>
-                如果你不是来“看 Belle 做了什么”，而是想照着做一个自己的版本，这一节就是操作说明。默认假设你已经有一个静态站，
-                想加一个只回答站内公开内容的 AI assistant。
-              </p>
+          <div class="screen-grid">
+            <div class="two-up">
+              <div class="visual-card animate-in">
+                <h3>The file cast</h3>
+                <div class="file-tree">
+                  <div class="file-tree__item"><code>_config.yml</code><span>告诉站点这个 assistant 存在、叫什么、连到哪里。</span></div>
+                  <div class="file-tree__item"><code>_includes/chatbot-widget.html</code><span>把 launcher、panel、messages、composer 放进页面。</span></div>
+                  <div class="file-tree__item"><code>assets/js/chatbot.js</code><span>管理打开、关闭、发送、fallback、scroll、citations。</span></div>
+                  <div class="file-tree__item"><code>assets/css/main.scss</code><span>决定面板如何固定、层级如何压过导航、移动端如何收住。</span></div>
+                  <div class="file-tree__item"><code>chatbot-backend/api/chat.js</code><span>限制来源、读取知识库、调用模型、返回 grounded answer。</span></div>
+                </div>
+              </div>
+
+              <div class="visual-card animate-in">
+                <h3>Group chat between components</h3>
+                <div class="group-chat">
+                  <div class="chat-message"><strong>_config.yml</strong>I decide the name, prompts, and URLs. I'm the contract.</div>
+                  <div class="chat-message"><strong>chatbot-widget.html</strong>I render the visible shell: launcher, panel, messages, suggestions.</div>
+                  <div class="chat-message"><strong>chatbot.js</strong>I make the shell behave like a product, not just a static box.</div>
+                  <div class="chat-message"><strong>api/chat.js</strong>I am the only place allowed to hold the key and ask the model for help.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="translation-block animate-in">
+              <div class="translation-code">
+                <span class="translation-label">Code</span>
+                <pre><code>&lt;section
+  class="site-chatbot__panel"
+  id="site-chatbot-panel"
+  data-chatbot-panel
+  hidden
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="site-chatbot-title"
+  inert
+&gt;</code></pre>
+              </div>
+              <div class="translation-english">
+                <span class="translation-label">Plain English</span>
+                <div class="translation-lines">
+                  <p><strong>This is the chat panel itself.</strong> It starts hidden, because the site loads normally before the visitor opens the assistant.</p>
+                  <p><strong>`role="dialog"` tells assistive technology what kind of thing this is.</strong> It is not just a random `&lt;div&gt;` floating on the page.</p>
+                  <p><strong>`aria-modal="true"` says “when open, treat this like the active conversation surface.”</strong> That matters for accessibility and focus management.</p>
+                  <p><strong>`inert` means the panel should not behave as interactive content until it is truly opened.</strong> This prevents phantom focus and click bugs.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="callout animate-in">
+              <span class="aha">Aha</span>
+              <h3>Good AI work starts with file boundaries, not prompt poetry.</h3>
+              <p>如果你对 AI 说 “fix the chatbot,” 它很可能乱改。你要能说 “change the widget markup, but do not touch the backend,” 这就是模块边界给你的力量。</p>
+            </div>
+
+            <div class="quiz-shell animate-in" id="quiz-module-2">
+              <h3 class="quiz-question">Quiz 2: 你想改 “New chat” 按钮的文案，最可能先动哪一层？</h3>
+              <div class="quiz-options">
+                <button class="quiz-option" type="button" data-value="a" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>后端 `/api/chat`，因为那是 AI 的入口。</span>
+                </button>
+                <button class="quiz-option" type="button" data-value="b" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>widget markup 或站点配置，因为这是前端展示文案。</span>
+                </button>
+                <button class="quiz-option" type="button" data-value="c" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>知识库 JSON，因为按钮也是内容的一部分。</span>
+                </button>
+              </div>
+              <div class="quiz-actions">
+                <button class="quiz-btn quiz-btn--primary" type="button" onclick="window.checkQuiz('quiz-module-2', 'b', 'Exactly. A label shown in the browser belongs to the frontend contract, not the model backend.', 'Not quite. This question is about visible UI text, so you start with config or markup, not retrieval or backend logic.')">Check answer</button>
+                <button class="quiz-btn quiz-btn--secondary" type="button" onclick="window.resetQuiz('quiz-module-2')">Try again</button>
+              </div>
+              <div class="quiz-feedback" data-feedback></div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="build-grid">
-            <div class="build-list">
-              <article class="build-step">
-                <div class="build-step-number">1</div>
-                <div>
-                  <h3>先写清楚它能回答什么</h3>
-                  <p>
-                    不要先接模型。先写 4 个允许回答的主题，1 句超出范围时的收口语。对个人网站来说，最稳的范围通常是
-                    bio、projects、publications、teaching、contact pathways。
-                  </p>
-                  <div class="build-meta">
-                    <span class="label">Output: scope statement</span>
-                    <span class="label">Files: notes or config draft</span>
-                  </div>
-                  <ul class="todo-list">
-                    <li>列出允许回答的栏目。</li>
-                    <li>列出禁止臆测的信息，如未公开经历、私人联系方式、未发布项目。</li>
-                    <li>写一句 fallback 文案，明确“我只能根据站内内容回答”。</li>
-                  </ul>
-                </div>
-              </article>
+      <section class="module" id="module-3" data-title="Browser behavior">
+        <div class="module__content">
+          <div class="module__hero">
+            <div>
+              <div class="module__number">03</div>
+              <span class="module__label">Front-end behavior is the hard part</span>
+              <h2 class="module__title">真正费时间的，不是“发送消息”，而是浏览器怎么表现得像个成熟组件</h2>
+              <p class="module__lede">
+                Ask Belle 最难的前端点不是 API request，而是
+                <button class="term" type="button" data-definition="Fallback 是“主路径失败时的备用路径”。这里指的是 live AI 出错时，聊天仍然根据站内知识文件给出导览式回答，而不是整个功能挂掉。">fallback</button>
+                、
+                <button class="term" type="button" data-definition="Scroll anchor 是“滚动时你希望对齐的那块内容”。这里的关键不是滚到最底部，而是让用户还能看到自己刚问的问题。">scroll anchor</button>
+                、焦点管理、点击外部关闭、以及各种真实视口下的边角问题。
+              </p>
+            </div>
+            <aside class="meta-card animate-in">
+              <h2>Practical payoff</h2>
+              <p>当 AI 帮你做一个聊天组件时，你要知道该检查的不是“有没有回内容”，而是“它像不像一个可以真的放进页面的组件”。</p>
+            </aside>
+          </div>
 
-              <article class="build-step">
-                <div class="build-step-number">2</div>
-                <div>
-                  <h3>先做一个小知识库，而不是直接把整站扔给模型</h3>
-                  <p>
-                    准备一个轻量 JSON 文件，里面只放你希望 assistant 优先检索的页面摘要。这样更容易控制回答边界，也方便 fallback mode 复用。
-                  </p>
-                  <div class="build-meta">
-                    <span class="label">Output: curated JSON</span>
-                    <span class="label">Files: /assets/data/site-knowledge.json</span>
-                  </div>
-                  <ul class="todo-list">
-                    <li>每条记录至少有 title、url、summary。</li>
-                    <li>可选加 keywords，便于前端或后端做轻量匹配。</li>
-                    <li>只收录你愿意被引用的公开页面。</li>
-                  </ul>
-                </div>
-              </article>
+          <div class="screen-grid">
+            <div class="translation-block animate-in">
+              <div class="translation-code">
+                <span class="translation-label">Code</span>
+                <pre><code>      if (!responsePayload || !responsePayload.message) {
+        responsePayload = await buildFallbackResponse(config, state, text, { setupMode: !config.apiUrl });
+      }
 
-              <article class="build-step">
-                <div class="build-step-number">3</div>
-                <div>
-                  <h3>给站点加一层显式配置</h3>
-                  <p>
-                    不要把按钮文案、API 地址、suggested prompts 写死在脚本里。把这些放进站点配置，让内容边界和 UI 策略能单独调整。
-                  </p>
-                  <div class="build-meta">
-                    <span class="label">Output: chatbot config block</span>
-                    <span class="label">Files: _config.yml or site settings</span>
-                  </div>
-                  <ul class="todo-list">
-                    <li>至少配置 title、subtitle、button label、api_url、knowledge_base_url。</li>
-                    <li>加 3 到 4 个 suggested prompts，直接暗示使用范围。</li>
-                    <li>把 feature toggle 也放进去，方便先本地试跑。</li>
-                  </ul>
+      typingNode.remove();
+      appendMessage(messages, 'assistant', responsePayload.message, responsePayload.citations || [], { scroll: 'none' });
+      scrollTurnIntoView(messages, userMessageNode);
+      state.conversation.push({ role: 'assistant', content: responsePayload.message });
+    } catch (error) {
+      if (!error || !error.isExpectedChatbotFailure) {
+        console.error('Chatbot request failed.', error);
+      }
+      typingNode.remove();
+      const fallback = await buildFallbackResponse(config, state, text, { degradedMode: true });
+      appendMessage(messages, 'assistant', fallback.message, fallback.citations || [], { scroll: 'none' });
+      scrollTurnIntoView(messages, userMessageNode);</code></pre>
+              </div>
+              <div class="translation-english">
+                <span class="translation-label">Plain English</span>
+                <div class="translation-lines">
+                  <p><strong>If the live response is missing, the browser does not panic.</strong> It switches to a fallback answer built from the local knowledge source.</p>
+                  <p><strong>The typing indicator gets removed before the answer is inserted.</strong> That keeps the conversation visually clean.</p>
+                  <p><strong>The message is appended with `scroll: 'none'` on purpose.</strong> The code does not blindly jump to the bottom.</p>
+                  <p><strong>`scrollTurnIntoView(messages, userMessageNode)` is the real UX trick.</strong> It repositions the message area so the visitor can still see the question they just asked.</p>
+                  <p><strong>Even inside the error path, the user still gets help.</strong> This is what makes Ask Belle resilient instead of brittle.</p>
                 </div>
-              </article>
-
-              <article class="build-step">
-                <div class="build-step-number">4</div>
-                <div>
-                  <h3>把 chat UI 当成站内组件，而不是单独起一个 app</h3>
-                  <p>
-                    用 include、partial 或组件方式插进现有网站。结构上至少要有 launcher、panel、messages、suggestions 和 composer。
-                  </p>
-                  <div class="build-meta">
-                    <span class="label">Output: injected widget</span>
-                    <span class="label">Files: include + CSS + JS entry</span>
-                  </div>
-                  <ul class="todo-list">
-                    <li>先让它能打开和关闭，再考虑模型接入。</li>
-                    <li>先把 fallback 模式的静态回复跑通。</li>
-                    <li>确保 widget 不会和 masthead、search、footer 冲突。</li>
-                  </ul>
-                </div>
-              </article>
-
-              <article class="build-step">
-                <div class="build-step-number">5</div>
-                <div>
-                  <h3>前端优先做“行为”，不是先追求答案质量</h3>
-                  <p>
-                    一开始最容易忽略的是交互：Esc、click-outside、focus、loading、错误态、scroll anchor、mobile layout。
-                    这些会直接决定它像不像一个产品组件。
-                  </p>
-                  <div class="build-meta">
-                    <span class="label">Output: usable interaction loop</span>
-                    <span class="label">Files: main chat script</span>
-                  </div>
-                  <ul class="todo-list">
-                    <li>先支持 open / close / send / reset。</li>
-                    <li>Live AI 出错时自动退回 knowledge-base fallback。</li>
-                    <li>回答生成后，滚到用户能看到自己问题的位置。</li>
-                  </ul>
-                </div>
-              </article>
-
-              <article class="build-step">
-                <div class="build-step-number">6</div>
-                <div>
-                  <h3>把模型调用放到独立后端</h3>
-                  <p>
-                    静态站里不能放密钥。最小后端要处理：来源限制、消息清洗、轻量检索、模型调用、错误收口、限流。
-                  </p>
-                  <div class="build-meta">
-                    <span class="label">Output: /api/chat</span>
-                    <span class="label">Files: serverless function + README</span>
-                  </div>
-                  <ul class="todo-list">
-                    <li>只允许你的站点 origin。</li>
-                    <li>限制 payload 大小、消息条数、请求频率。</li>
-                    <li>把知识库结果和当前页面上下文一并传给模型。</li>
-                  </ul>
-                </div>
-              </article>
-
-              <article class="build-step">
-                <div class="build-step-number">7</div>
-                <div>
-                  <h3>最后才做部署连接和 smoke test</h3>
-                  <p>
-                    部署不是结束，而是验证阶段。你要同时确认前端缓存、后端环境变量、计费额度、CORS 和真实页面布局。
-                  </p>
-                  <div class="build-meta">
-                    <span class="label">Output: live feature</span>
-                    <span class="label">Files: deployment config + env vars</span>
-                  </div>
-                  <ul class="todo-list">
-                    <li>先本地 build，再上线 backend，再回填 api_url。</li>
-                    <li>测一遍 live AI、fallback、移动端、缩小窗口和刷新缓存。</li>
-                    <li>准备一个 launch checklist，避免“接口通了但体验坏了”。</li>
-                  </ul>
-                </div>
-              </article>
+              </div>
             </div>
 
-            <div class="build-list">
-              <article class="build-card">
-                <h3>Minimal knowledge file</h3>
-                <p>别人要做自己的版本时，最先需要的是一个受控知识文件，而不是一整套 RAG 基础设施。</p>
-                <pre><code>[
-  {
-    "title": "Research",
-    "url": "/research/",
-    "summary": "What I study, who I work with, and the themes that organize my work.",
-    "keywords": ["research", "agenda", "topics"]
-  },
-  {
-    "title": "Projects",
-    "url": "/projects/",
-    "summary": "Selected tools, designs, prototypes, and collaborations.",
-    "keywords": ["projects", "portfolio", "builds"]
+            <div class="two-up">
+              <div class="visual-card animate-in">
+                <h3>Where the browser earns its keep</h3>
+                <div class="step-cards">
+                  <div class="step-card">
+                    <div class="step-card__num">A</div>
+                    <div class="step-card__body">
+                      <h3>Open cleanly</h3>
+                      <p>Launcher opens panel, locks focus, and does not block the rest of the site when closed.</p>
+                    </div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-card__num">B</div>
+                    <div class="step-card__body">
+                      <h3>Fail softly</h3>
+                      <p>If the backend is down, the assistant becomes a site guide instead of a dead button.</p>
+                    </div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-card__num">C</div>
+                    <div class="step-card__body">
+                      <h3>Scroll intentionally</h3>
+                      <p>The user should see “what I asked” and “how it starts answering,” not just the bottom edge of a bubble.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="translation-block animate-in">
+                <div class="translation-code">
+                  <span class="translation-label">Code</span>
+                  <pre><code>function scrollTurnIntoView(container, anchorNode) {
+  if (!container || !anchorNode) return;
+
+  const alignTurnStart = () => {
+    const containerStyle = window.getComputedStyle(container);
+    const paddingTop = Number.parseFloat(containerStyle.paddingTop) || 0;
+    const containerBox = container.getBoundingClientRect();
+    const anchorBox = anchorNode.getBoundingClientRect();
+    const anchorTop = anchorBox.top - containerBox.top + container.scrollTop;
+    const top = Math.max(anchorTop - paddingTop - 12, 0);
+    container.scrollTop = top;
+  };</code></pre>
+                </div>
+                <div class="translation-english">
+                  <span class="translation-label">Plain English</span>
+                  <div class="translation-lines">
+                    <p><strong>This function asks one simple question:</strong> “Where should the message area move so the current turn starts in view?”</p>
+                    <p><strong>It measures both the container and the user’s message box.</strong> That avoids the classic mistake of calculating against the wrong frame of reference.</p>
+                    <p><strong>The final line sets the scroll position on purpose, not by accident.</strong> That tiny `- 12` creates breathing room so the question is not glued to the top edge.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="quiz-shell animate-in" id="quiz-module-3">
+              <h3 class="quiz-question">Quiz 3: 为什么 Ask Belle 不该在回答后永远滚到最底部？</h3>
+              <div class="quiz-options">
+                <button class="quiz-option" type="button" data-value="a" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>因为底部滚动在移动端性能更差。</span>
+                </button>
+                <button class="quiz-option" type="button" data-value="b" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>因为用户首先需要重新看见自己刚问了什么，然后再读答案开头。</span>
+                </button>
+                <button class="quiz-option" type="button" data-value="c" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>因为 citations 一定要在最上面出现。</span>
+                </button>
+              </div>
+              <div class="quiz-actions">
+                <button class="quiz-btn quiz-btn--primary" type="button" onclick="window.checkQuiz('quiz-module-3', 'b', 'Exactly. The right anchor is the user’s turn, not the bottom edge of the conversation.', 'Not quite. The main issue is reading flow: users orient from their own question into the answer.')">Check answer</button>
+                <button class="quiz-btn quiz-btn--secondary" type="button" onclick="window.resetQuiz('quiz-module-3')">Try again</button>
+              </div>
+              <div class="quiz-feedback" data-feedback></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="module" id="module-4" data-title="Grounded backend">
+        <div class="module__content">
+          <div class="module__hero">
+            <div>
+              <div class="module__number">04</div>
+              <span class="module__label">Grounding and safety</span>
+              <h2 class="module__title">后端不只是“帮你转发给模型”</h2>
+              <p class="module__lede">
+                Ask Belle 的后端做三件关键事：只允许正确来源进来、只拿站内
+                <button class="term" type="button" data-definition="Knowledge base 在这里不是大型向量数据库，而是一个手工整理过的网站内容摘要文件。它是 assistant 的受控记忆层。">knowledge base</button>
+                说话、并且用明确的 instruction 限制模型不要编。
+              </p>
+            </div>
+            <aside class="meta-card animate-in">
+              <h2>Metaphor</h2>
+              <p>这一层更像博物馆安保和导览台的结合体：先验票，再只用馆内资料回答问题，不让讲解员自己瞎编展品历史。</p>
+            </aside>
+          </div>
+
+          <div class="screen-grid">
+            <div class="translation-block animate-in">
+              <div class="translation-code">
+                <span class="translation-label">Code</span>
+                <pre><code>  const configuredOrigin = String(process.env.ALLOWED_ORIGIN || '').trim();
+  const allowedOrigins = new Set([...DEV_ORIGINS]);
+
+  if (configuredOrigin) {
+    allowedOrigins.add(configuredOrigin);
   }
-]</code></pre>
-              </article>
 
-              <article class="build-card">
+  return origin && allowedOrigins.has(origin) ? origin : '';
+}
+
+async function loadKnowledgeBase() {
+  if (cachedKnowledgeBase) return cachedKnowledgeBase;</code></pre>
+              </div>
+              <div class="translation-english">
+                <span class="translation-label">Plain English</span>
+                <div class="translation-lines">
+                  <p><strong>The backend first decides who is allowed to talk to it.</strong> It starts from local dev origins, then adds the production site domain.</p>
+                  <p><strong>If the incoming origin is not on the list, it gets no friendly pass.</strong> The function returns an empty string instead of pretending the request is trusted.</p>
+                  <p><strong>Then the backend loads the knowledge file once and caches it.</strong> That keeps replies grounded without re-downloading the same content every single time.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="two-up">
+              <div class="translation-block animate-in">
+                <div class="translation-code">
+                  <span class="translation-label">Code</span>
+                  <pre><code>function detectQueryIntent(text) {
+  const query = String(text);
+  if (isContactQuery(query)) return 'contact';
+  if (/publication|paper|article|journal|chapter|citation|论文|文章|发表/i.test(query)) return 'publications';
+  if (/teach|course|mentor|class|instruction|教学|课程|指导/i.test(query)) return 'teaching';
+  if (/project|build|tool|design|develop|app|prototype|产品|项目|作品/i.test(query)) return 'projects';
+  if (/service|review|editorial|workshop|talk|speaker|serve|审稿|服务|讲座|分享/i.test(query)) return 'service';
+  if (/research|agenda|strand|focus|study|interests|研究|方向|议题/i.test(query)) return 'research';
+  return '';
+}</code></pre>
+                </div>
+                <div class="translation-english">
+                  <span class="translation-label">Plain English</span>
+                  <div class="translation-lines">
+                    <p><strong>This is a cheap, practical intent guesser.</strong> It is not a full classifier; it just asks which bucket the question sounds like.</p>
+                    <p><strong>The important part is not elegance. It is control.</strong> Once the backend knows a question smells like research or contact, it can boost the matching pages from the knowledge file.</p>
+                    <p><strong>Notice the bilingual patterns.</strong> Ask Belle recognizes both English and Chinese keywords, so a Chinese visitor can still get a grounded answer.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="translation-block animate-in">
+                <div class="translation-code">
+                  <span class="translation-label">Code</span>
+                  <pre><code>    'You are Ask Belle, a site assistant for Belle Li\'s academic portfolio.',
+    'Write like a concise, grounded site guide for a visitor, not like a generic assistant or marketing copy.',
+    'Answer using only the provided website context.',
+    'Respond in the same language as the user when practical.',
+    'If the answer is not supported by the provided context, say that the detail is not available on the published site.',
+    'Start with the direct answer, then add only the most useful supporting details.',
+    'Default to exactly 2 short sentences for overview questions unless the user explicitly asks for more detail.',
+    'Do not invent publications, projects, dates, or roles.',</code></pre>
+                </div>
+                <div class="translation-english">
+                  <span class="translation-label">Plain English</span>
+                  <div class="translation-lines">
+                    <p><strong>The model is explicitly told what personality to avoid.</strong> Not generic, not marketing, not “helpful assistant voice.”</p>
+                    <p><strong>It is also told what truth source to obey.</strong> Only the provided website context counts.</p>
+                    <p><strong>The last lines are anti-hallucination guardrails.</strong> If the site does not say it, the answer should not invent it.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="callout animate-in">
+              <span class="aha">Aha</span>
+              <h3>Grounded AI is not just a prompt. It is a pipeline.</h3>
+              <p>来源限制、知识匹配、instruction shaping、错误收口，这四件事缺任何一个，都会让 “个人网站 assistant” 从可信导览变成随机聊天框。</p>
+            </div>
+
+            <div class="quiz-shell animate-in" id="quiz-module-4">
+              <h3 class="quiz-question">Quiz 4: 如果用户问了站内没有写过的 detail，最健康的行为是什么？</h3>
+              <div class="quiz-options">
+                <button class="quiz-option" type="button" data-value="a" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>让模型尽量猜一个大概答案，避免显得冷场。</span>
+                </button>
+                <button class="quiz-option" type="button" data-value="b" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>明确说 published site 上没有这个信息，然后把用户引回可用的公开页面。</span>
+                </button>
+                <button class="quiz-option" type="button" data-value="c" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>直接把整段 knowledge base JSON 原文返回给用户。</span>
+                </button>
+              </div>
+              <div class="quiz-actions">
+                <button class="quiz-btn quiz-btn--primary" type="button" onclick="window.checkQuiz('quiz-module-4', 'b', 'Exactly. The assistant should stay honest about what the published site does and does not contain.', 'Not quite. A grounded assistant earns trust by refusing to fabricate unsupported details.')">Check answer</button>
+                <button class="quiz-btn quiz-btn--secondary" type="button" onclick="window.resetQuiz('quiz-module-4')">Try again</button>
+              </div>
+              <div class="quiz-feedback" data-feedback></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="module" id="module-5" data-title="Build your own">
+        <div class="module__content">
+          <div class="module__hero">
+            <div>
+              <div class="module__number">05</div>
+              <span class="module__label">Build your own version</span>
+              <h2 class="module__title">如果你要做自己的版本，按这个顺序做</h2>
+              <p class="module__lede">
+                这一节不是 Belle 的复盘，而是你的 playbook。假设你已经有一个静态网站，现在想加一个只回答站内公开内容的 AI assistant。
+              </p>
+            </div>
+            <aside class="meta-card animate-in">
+              <h2>What “done” really means</h2>
+              <p>不是“有个聊天框”。而是：它不泄密、不乱编、出错时不死掉、窄视口不打架、并且回答后用户还能看见自己刚问的问题。</p>
+            </aside>
+          </div>
+
+          <div class="screen-grid">
+            <div class="two-up">
+              <div class="visual-card animate-in">
+                <h3>Your build order</h3>
+                <div class="step-cards">
+                  <div class="step-card">
+                    <div class="step-card__num">1</div>
+                    <div class="step-card__body">
+                      <h3>Write the scope first</h3>
+                      <p>列出它能回答的栏目，和一条站外 detail 的收口语。</p>
+                      <div class="meta-row">
+                        <span class="meta-pill">output: scope note</span>
+                        <span class="meta-pill">helps AI stay honest</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-card__num">2</div>
+                    <div class="step-card__body">
+                      <h3>Curate a tiny knowledge file</h3>
+                      <p>准备 title、url、summary、keywords 这几个字段即可，不必一开始就做大而全 RAG。</p>
+                    </div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-card__num">3</div>
+                    <div class="step-card__body">
+                      <h3>Build the widget before live AI</h3>
+                      <p>先把 open、close、send、reset 和 fallback 跑通，再接模型。</p>
+                    </div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-card__num">4</div>
+                    <div class="step-card__body">
+                      <h3>Deploy backend separately</h3>
+                      <p>模型 key、origin check、payload limits、timeout 都在后端收住。</p>
+                    </div>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-card__num">5</div>
+                    <div class="step-card__body">
+                      <h3>Run the polish checklist</h3>
+                      <p>测试 live path、fallback path、mobile layout、cache invalidation 和 focus behavior。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="translation-block animate-in">
+                <div class="translation-code">
+                  <span class="translation-label">Code</span>
+                  <pre><code>.site-chatbot__panel {
+  position: fixed;
+  right: var(--chatbot-edge-gap);
+  bottom: var(--chatbot-edge-gap);
+  top: var(--chatbot-safe-top);
+  width: min(25rem, calc(100vw - (2 * var(--chatbot-edge-gap))));
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+  overflow: hidden;
+  border: 1px solid var(--chatbot-border);
+  border-radius: 1.35rem;
+  background:
+    radial-gradient(circle at top right, rgba(224, 90, 43, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(255, 250, 247, 0.98) 0%, rgba(255, 255, 255, 0.98) 100%);</code></pre>
+                </div>
+                <div class="translation-english">
+                  <span class="translation-label">Plain English</span>
+                  <div class="translation-lines">
+                    <p><strong>This CSS is why the panel behaves like an overlay, not a broken card in the document flow.</strong> `position: fixed` pins it to the viewport.</p>
+                    <p><strong>`top: var(--chatbot-safe-top)` is the anti-masthead move.</strong> It reserves space so the panel does not slide under the site navigation.</p>
+                    <p><strong>The grid rows define the internal anatomy.</strong> Header, contacts, scrolling messages, composer, and footer each get their own lane.</p>
+                    <p><strong>This is a reminder that shipping AI features still means shipping layout engineering.</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="three-up">
+              <div class="card animate-in">
                 <h3>Starter config</h3>
-                <p>把站内 assistant 的边界、入口和后端地址显式写出来，后面换内容和换环境都更容易。</p>
-                <pre><code>chatbot:
-  enabled: true
-  title: Ask [Your Name]
-  subtitle: Research, projects, writing, and teaching
-  button_label: Ask [Your Name]
-  api_url: https://your-chat-backend.vercel.app/api/chat
-  knowledge_base_url: /assets/data/site-knowledge.json
-  suggested_prompts:
-    - What should I start with?
-    - What projects are most relevant?
-    - What does [Your Name] work on?</code></pre>
-              </article>
-
-              <article class="build-card">
-                <h3>Backend env vars</h3>
-                <p>如果别人要照着做自己版本，这组变量就是最小上线面。</p>
-                <pre><code>OPENAI_API_KEY=...
-OPENAI_MODEL=gpt-5-mini
-ALLOWED_ORIGIN=https://your-domain.com
-KNOWLEDGE_BASE_URL=https://your-domain.com/assets/data/site-knowledge.json</code></pre>
-              </article>
-
-              <article class="build-card">
-                <h3>Done means</h3>
-                <p>别人真正做完，不是“有个聊天框”，而是下面这几条都成立：</p>
-                <ul class="todo-list">
-                  <li>能从主站打开和关闭。</li>
-                  <li>Live AI 失败时不会整块坏掉。</li>
-                  <li>回答不超出站内公开内容。</li>
-                  <li>每次回答后，用户能看到自己刚问的问题和答案开头。</li>
-                  <li>窄视口下不遮导航，不挤爆布局。</li>
+                <ul class="checklist">
+                  <li><code>title</code>, <code>subtitle</code>, <code>button_label</code></li>
+                  <li><code>api_url</code> 指向独立后端</li>
+                  <li><code>knowledge_base_url</code> 指向受控 JSON</li>
+                  <li>3-4 个 suggested prompts 暗示边界</li>
                 </ul>
-              </article>
+              </div>
+              <div class="card animate-in">
+                <h3>Backend env vars</h3>
+                <ul class="checklist">
+                  <li><code>OPENAI_API_KEY</code></li>
+                  <li><code>OPENAI_MODEL</code></li>
+                  <li><code>ALLOWED_ORIGIN</code></li>
+                  <li><code>KNOWLEDGE_BASE_URL</code></li>
+                </ul>
+              </div>
+              <div class="card animate-in">
+                <h3>Smoke test</h3>
+                <ul class="checklist">
+                  <li>click outside closes</li>
+                  <li>Esc closes</li>
+                  <li>fallback still answers</li>
+                  <li>scroll returns to the user question</li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </section>
 
-        <section class="section reveal" id="modules">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Module 2</div>
-              <h2>Teaching Modules</h2>
-              <p>
-                这是一套更像 workshop / mini-course 的课程结构。每个模块都对应 repo 里的真实实现面，而不是抽象空谈。
-              </p>
+            <div class="quiz-shell animate-in" id="quiz-module-5">
+              <h3 class="quiz-question">Quiz 5: 你要给自己的 portfolio 做这个功能，最健康的开发顺序是什么？</h3>
+              <div class="quiz-options">
+                <button class="quiz-option" type="button" data-value="a" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>先调模型回答质量，再考虑 fallback、layout 和 origin checks。</span>
+                </button>
+                <button class="quiz-option" type="button" data-value="b" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>先定边界和知识源，再做 widget 行为，再单独部署后端，最后做 polish 和 smoke test。</span>
+                </button>
+                <button class="quiz-option" type="button" data-value="c" onclick="window.selectOption(this)">
+                  <span class="quiz-option__dot" aria-hidden="true"></span>
+                  <span>先把整个站内容全部塞给模型，等以后再考虑配置和前端结构。</span>
+                </button>
+              </div>
+              <div class="quiz-actions">
+                <button class="quiz-btn quiz-btn--primary" type="button" onclick="window.checkQuiz('quiz-module-5', 'b', 'Exactly. Boundaries, content source, UI behavior, backend safety, then polish — that order prevents most avoidable mistakes.', 'Not quite. The safe and teachable path is to establish scope and control first, not to chase model output before the product shell is stable.')">Check answer</button>
+                <button class="quiz-btn quiz-btn--secondary" type="button" onclick="window.resetQuiz('quiz-module-5')">Try again</button>
+              </div>
+              <div class="quiz-feedback" data-feedback></div>
             </div>
-          </div>
 
-          <div class="module-grid">
-            <article class="module-card">
-              <h3>Module A — Scope the Assistant</h3>
+            <div class="callout animate-in">
+              <span class="aha">Big takeaway</span>
+              <h3>Ask Belle works because it is narrow on purpose.</h3>
               <p>
-                先决定 assistant 回答什么、不回答什么，以及为什么 fallback 比“全挂掉”更适合个人网站。
-              </p>
-              <span class="inline-path">_config.yml</span>
-              <span class="inline-path">assets/data/belle-site-knowledge.json</span>
-              <ul class="lesson-points">
-                <li>bounded assistant vs. open-ended chat</li>
-                <li>suggested prompts as scope cues</li>
-                <li>public links as safe contact surface</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Module B — Build the Widget</h3>
-              <p>
-                把聊天入口作为现有网站的一部分，而不是新起一个 app shell。组件结构越清楚，后面交互修起来越快。
-              </p>
-              <span class="inline-path">_includes/chatbot-widget.html</span>
-              <span class="inline-path">assets/css/main.scss</span>
-              <ul class="lesson-points">
-                <li>launcher / panel / messages / composer decomposition</li>
-                <li>contacts and suggestions as UX accelerators</li>
-                <li>layout choices that avoid fighting the masthead</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Module C — Make the Frontend Behave</h3>
-              <p>
-                这里是“接模型之外”的大头工程：状态管理、焦点控制、关闭逻辑、typing state、citations 和 scroll anchoring。
-              </p>
-              <span class="inline-path">assets/js/chatbot.js</span>
-              <ul class="lesson-points">
-                <li>click-outside and Esc behavior</li>
-                <li>fallback mode when live AI fails</li>
-                <li>why scroll bugs are easy to get subtly wrong</li>
-              </ul>
-            </article>
-
-            <article class="module-card">
-              <h3>Module D — Deploy a Safe Backend</h3>
-              <p>
-                静态站接 AI 的真正边界在后端。这里不是只会发请求，而是要做 prompt shaping、retrieval、timeouts 和 origin controls。
-              </p>
-              <span class="inline-path">chatbot-backend/api/chat.js</span>
-              <span class="inline-path">chatbot-backend/README.md</span>
-              <ul class="lesson-points">
-                <li>ALLOWED_ORIGIN + dev origins</li>
-                <li>rate limit / body limit / timeout</li>
-                <li>grounded instructions + same-language replies</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal" id="bugs">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Module 3</div>
-              <h2>Bug Fixes That Actually Teach Something</h2>
-              <p>
-                Ask Belle 最有教学价值的一部分，反而是这些真实 bug。它们把“功能做出来”和“产品能用”之间的差距暴露得很清楚。
+                这不是一个什么都想答的 chatbot。它是一个 bounded assistant：只围绕 Belle 的公开站点内容工作，所以它才有机会既实用又可信。你做自己的版本时，也应该先变窄，再变强。
               </p>
             </div>
           </div>
-
-          <div class="bug-grid">
-            <article class="bug-card">
-              <h3>Hidden panel still occupied layout</h3>
-              <p>
-                面板虽然带了 <code>hidden</code>，但 CSS 把它重新拉回了布局里，导致 launcher 跑位。修法是显式收紧
-                <code>[hidden]</code> 和 panel 定位方式。
-              </p>
-            </article>
-            <article class="bug-card">
-              <h3>Chat panel slipped under the masthead</h3>
-              <p>
-                面板从 launcher 往上长，视口一矮就会钻到导航条下面。后来改成固定定位，并给它留出导航下方的安全顶部。
-              </p>
-            </article>
-            <article class="bug-card">
-              <h3>Answer scroll anchored to the wrong place</h3>
-              <p>
-                用 <code>offsetTop</code> 算滚动时，锚点相对于整个面板而不是消息容器，结果回答后用户看不到自己刚问的问题。
-              </p>
-            </article>
-            <article class="bug-card">
-              <h3>Contact chips were stretched by the wrong grid row</h3>
-              <p>
-                这不是“按钮太大”那么简单，而是 contacts 被放进了会拉伸的 <code>1fr</code> 行里，导致整排被撑大并挤压消息区。
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal" id="labs">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Module 4</div>
-              <h2>Hands-On Labs</h2>
-              <p>
-                如果把这个页面当成 workshop，下面就是最合理的 lab sequence。每个 lab 都围绕 Ask Belle 的真实实现切一刀。
-              </p>
-            </div>
-          </div>
-
-          <div class="lab-grid">
-            <article class="lab-card">
-              <h3>Lab 1</h3>
-              <p>Write your own scope contract: what your assistant can answer, what it should refuse, and what links it may safely surface.</p>
-            </article>
-            <article class="lab-card">
-              <h3>Lab 2</h3>
-              <p>Create a tiny knowledge JSON with 5 entries and wire a fallback mode that can answer without touching the model.</p>
-            </article>
-            <article class="lab-card">
-              <h3>Lab 3</h3>
-              <p>Add the widget shell to your own static site and make open, close, send, reset, and click-outside work first.</p>
-            </article>
-            <article class="lab-card">
-              <h3>Lab 4</h3>
-              <p>Deploy a serverless /api/chat endpoint with grounding, CORS, payload limits, and environment variables.</p>
-            </article>
-            <article class="lab-card">
-              <h3>Lab 5</h3>
-              <p>Fix one layout bug, one scroll bug, and one responsive bug in your own widget before calling it “done.”</p>
-            </article>
-            <article class="lab-card">
-              <h3>Lab 6</h3>
-              <p>Run a launch checklist that covers billing, cache invalidation, origin checks, and both live and fallback paths.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="checklist">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Module 4.5</div>
-              <h2>Launch Checklist</h2>
-              <p>
-                这一节是为了避免“看懂了，但还是不知道怎么收尾上线”。如果你在做自己的版本，按这个 checklist 走，基本不会漏关键点。
-              </p>
-            </div>
-          </div>
-
-          <div class="checklist-grid">
-            <article class="checklist-card">
-              <h3>Before backend</h3>
-              <ul class="todo-list">
-                <li>主站里已经有清晰的知识来源页面，而不是空白 landing page。</li>
-                <li>你已经准备了一个轻量知识 JSON。</li>
-                <li>widget 在没有模型的情况下也能打开、关闭、发送和 reset。</li>
-                <li>suggested prompts 已经反映出真实边界。</li>
-              </ul>
-            </article>
-
-            <article class="checklist-card">
-              <h3>Before production</h3>
-              <ul class="todo-list">
-                <li>后端已设置 OPENAI_API_KEY、ALLOWED_ORIGIN、knowledge base 地址。</li>
-                <li>确认 OpenAI billing / credits 可用。</li>
-                <li>确认 CORS 拒绝了非本站 origin。</li>
-                <li>确认超长消息和高频请求会被后端收住。</li>
-              </ul>
-            </article>
-
-            <article class="checklist-card">
-              <h3>UX smoke test</h3>
-              <ul class="todo-list">
-                <li>点击 launcher 能打开，点击页面别处会收起。</li>
-                <li>Esc 可关闭，焦点不会乱跳。</li>
-                <li>回答生成后，视图会回到用户问题附近。</li>
-                <li>面板不会被导航栏压住，也不会把页面其他按钮挡死。</li>
-              </ul>
-            </article>
-
-            <article class="checklist-card">
-              <h3>What to document</h3>
-              <ul class="todo-list">
-                <li>assistant 的回答范围和 fallback 策略。</li>
-                <li>后端部署位置和最小环境变量。</li>
-                <li>知识库文件如何更新。</li>
-                <li>你为这个项目修过的三个真实 bug。</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal" id="capstone">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Capstone</div>
-              <h2>Build Your Own Grounded Site Assistant</h2>
-              <p>
-                最终作业不是“做一个聊天框”，而是做一个可以上线的 bounded assistant。它应该有清晰范围、真实知识源、稳定 fallback、
-                以及能经受真实视口和真实部署环境的前端行为。
-              </p>
-            </div>
-          </div>
-
-          <div class="closing">
-            <div class="closing-note">
-              <h3>Big takeaway</h3>
-              <p>
-                在这个代码库里，真正有教学价值的不是单独一段 API 调用，而是完整链路：静态站约束、组件注入、行为设计、后端边界、上线后的 bug
-                处理，以及如何把一个“能跑”的 AI feature 收成一个“可用”的产品组件。
-              </p>
-            </div>
-            <div class="capstone">
-              <h3>Deliverable checklist</h3>
-              <ul class="lesson-points">
-                <li>bounded question scope</li>
-                <li>frontend widget integrated into an existing site</li>
-                <li>separate serverless backend</li>
-                <li>grounded retrieval or curated context</li>
-                <li>fallback mode</li>
-                <li>at least 3 real UI bug fixes</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
+    <script>
+      (() => {
+        const modules = Array.from(document.querySelectorAll('.module'));
+        const progressBar = document.querySelector('[data-progress-bar]');
+        const navLinks = Array.from(document.querySelectorAll('.course-nav__link'));
+        const interactiveTags = new Set(['BUTTON', 'A', 'INPUT', 'TEXTAREA', 'SELECT']);
+
+        document.querySelectorAll('.stagger').forEach((parent) => {
+          Array.from(parent.children).forEach((child, index) => {
+            child.style.setProperty('--stagger-index', index);
+          });
+        });
+
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+              }
+            });
+          },
+          { threshold: 0.14 }
+        );
+
+        document.querySelectorAll('.animate-in').forEach((node) => revealObserver.observe(node));
+
+        function updateProgress() {
+          const scrollTop = window.scrollY;
+          const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+          const ratio = scrollable > 0 ? Math.min(scrollTop / scrollable, 1) : 0;
+          progressBar.style.width = `${ratio * 100}%`;
+
+          let activeId = modules[0] ? modules[0].id : '';
+          const midpoint = window.innerHeight * 0.45;
+          modules.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= midpoint && rect.bottom >= midpoint) {
+              activeId = section.id;
+            }
+          });
+
+          navLinks.forEach((link) => {
+            const isActive = link.getAttribute('href') === `#${activeId}`;
+            link.classList.toggle('is-active', isActive);
+          });
+        }
+
+        let ticking = false;
+        window.addEventListener(
+          'scroll',
+          () => {
+            if (!ticking) {
+              window.requestAnimationFrame(() => {
+                updateProgress();
+                ticking = false;
+              });
+              ticking = true;
+            }
+          },
+          { passive: true }
+        );
+
+        updateProgress();
+
+        document.addEventListener('keydown', (event) => {
+          if (interactiveTags.has(document.activeElement && document.activeElement.tagName)) return;
+          const currentIndex = modules.findIndex((section) => {
+            const rect = section.getBoundingClientRect();
+            return rect.top <= window.innerHeight * 0.45 && rect.bottom >= window.innerHeight * 0.45;
+          });
+          if (currentIndex === -1) return;
+
+          if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+            const next = modules[Math.min(currentIndex + 1, modules.length - 1)];
+            if (next) {
+              next.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              event.preventDefault();
+            }
+          }
+
+          if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+            const prev = modules[Math.max(currentIndex - 1, 0)];
+            if (prev) {
+              prev.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              event.preventDefault();
+            }
+          }
+        });
+
+        let tooltipNode = null;
+
+        function hideTooltip() {
+          if (tooltipNode) {
+            tooltipNode.remove();
+            tooltipNode = null;
+          }
+        }
+
+        function showTooltip(target) {
+          hideTooltip();
+          const definition = target.getAttribute('data-definition');
+          if (!definition) return;
+
+          tooltipNode = document.createElement('div');
+          tooltipNode.className = 'tooltip-layer';
+          tooltipNode.textContent = definition;
+          document.body.appendChild(tooltipNode);
+
+          const rect = target.getBoundingClientRect();
+          const tooltipRect = tooltipNode.getBoundingClientRect();
+          const top = Math.max(rect.top - tooltipRect.height - 12, 12);
+          const left = Math.min(
+            Math.max(rect.left + rect.width / 2 - tooltipRect.width / 2, 12),
+            window.innerWidth - tooltipRect.width - 12
+          );
+
+          tooltipNode.style.top = `${top}px`;
+          tooltipNode.style.left = `${left}px`;
+        }
+
+        document.querySelectorAll('.term').forEach((term) => {
+          term.addEventListener('mouseenter', () => showTooltip(term));
+          term.addEventListener('focus', () => showTooltip(term));
+          term.addEventListener('mouseleave', hideTooltip);
+          term.addEventListener('blur', hideTooltip);
+          term.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (tooltipNode) {
+              hideTooltip();
+            } else {
+              showTooltip(term);
+            }
+          });
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!event.target.closest('.term')) {
+            hideTooltip();
+          }
+        });
+
+        window.selectOption = function selectOption(button) {
+          const shell = button.closest('.quiz-shell');
+          shell.querySelectorAll('.quiz-option').forEach((node) => {
+            node.classList.remove('selected');
+          });
+          button.classList.add('selected');
+        };
+
+        window.checkQuiz = function checkQuiz(shellId, correctValue, correctText, wrongText) {
+          const shell = document.getElementById(shellId);
+          if (!shell) return;
+          const selected = shell.querySelector('.quiz-option.selected');
+          const feedback = shell.querySelector('[data-feedback]');
+
+          if (!selected) {
+            feedback.className = 'quiz-feedback is-visible error';
+            feedback.textContent = 'Pick an answer first.';
+            return;
+          }
+
+          shell.querySelectorAll('.quiz-option').forEach((node) => {
+            node.disabled = true;
+            if (node.dataset.value === correctValue) {
+              node.classList.add('correct');
+            }
+          });
+
+          if (selected.dataset.value === correctValue) {
+            feedback.className = 'quiz-feedback is-visible success';
+            feedback.textContent = correctText;
+          } else {
+            selected.classList.add('incorrect');
+            feedback.className = 'quiz-feedback is-visible error';
+            feedback.textContent = wrongText;
+          }
+        };
+
+        window.resetQuiz = function resetQuiz(shellId) {
+          const shell = document.getElementById(shellId);
+          if (!shell) return;
+          shell.querySelectorAll('.quiz-option').forEach((node) => {
+            node.disabled = false;
+            node.classList.remove('selected', 'correct', 'incorrect');
+          });
+          const feedback = shell.querySelector('[data-feedback]');
+          feedback.className = 'quiz-feedback';
+          feedback.textContent = '';
+        };
+      })();
+    </script>
   </body>
 </html>
