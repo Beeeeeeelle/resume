@@ -800,6 +800,35 @@
         line-height: var(--leading-loose);
       }
 
+      .handout-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(253, 249, 243, 0.96));
+      }
+
+      .handout-label {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        padding: 0 var(--space-3);
+        border-radius: var(--radius-full);
+        background: rgba(217, 79, 48, 0.1);
+        color: var(--color-accent);
+        font-size: var(--text-xs);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: var(--space-3);
+      }
+
+      .mini-steps {
+        margin: 0;
+        padding-left: var(--space-5);
+        color: var(--color-text-secondary);
+      }
+
+      .mini-steps li {
+        margin: var(--space-2) 0;
+        line-height: var(--leading-loose);
+      }
+
       .aha {
         display: inline-flex;
         align-items: center;
@@ -1019,6 +1048,36 @@
               </div>
               <div class="quiz-feedback" data-feedback></div>
             </div>
+
+            <div class="three-up">
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Checklist</span>
+                <h3>Before you code</h3>
+                <ul class="checklist">
+                  <li>写一句 assistant 的范围定义，而不是一上来就接模型。</li>
+                  <li>决定哪些信息必须留在前端，哪些必须挪到后端。</li>
+                  <li>准备一个最小配置块，至少包含按钮名、API 地址、知识库地址。</li>
+                </ul>
+              </div>
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Exercise</span>
+                <h3>Do this in your repo</h3>
+                <ol class="mini-steps">
+                  <li>写下你的网站 assistant 允许回答的 4 个主题。</li>
+                  <li>写一条 “站内没有这个信息” 的收口语。</li>
+                  <li>决定一个 fallback 模式名称，比如 site guide mode。</li>
+                </ol>
+              </div>
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Common mistakes</span>
+                <h3>What usually goes wrong</h3>
+                <ul class="checklist">
+                  <li>把 assistant 目标写成 “answer anything about me”。</li>
+                  <li>先追求模型效果，完全不定义边界。</li>
+                  <li>把密钥和后端职责混进静态前端里。</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1116,6 +1175,36 @@
                 <button class="quiz-btn quiz-btn--secondary" type="button" onclick="window.resetQuiz('quiz-module-2')">Try again</button>
               </div>
               <div class="quiz-feedback" data-feedback></div>
+            </div>
+
+            <div class="three-up">
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Checklist</span>
+                <h3>Map the cast</h3>
+                <ul class="checklist">
+                  <li>给每个相关文件写一句职责说明。</li>
+                  <li>标出哪个文件决定 UI，哪个文件决定行为，哪个文件决定模型约束。</li>
+                  <li>确认你能用一句话告诉 AI “改哪一层，不要动哪一层”。</li>
+                </ul>
+              </div>
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Exercise</span>
+                <h3>Do this in your repo</h3>
+                <ol class="mini-steps">
+                  <li>挑 5 个相关文件，给每个文件写一句 plain-English summary。</li>
+                  <li>把其中两个文件配成 “visible shell” 和 “behavior layer”。</li>
+                  <li>试着写一条精准修改指令给 AI，例如 “change only the widget markup.”</li>
+                </ol>
+              </div>
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Common mistakes</span>
+                <h3>What usually goes wrong</h3>
+                <ul class="checklist">
+                  <li>把所有变化都丢给一个“fix chatbot”大指令。</li>
+                  <li>不知道配置、模板、脚本和后端分别负责什么。</li>
+                  <li>遇到 bug 时只能全局搜索，不能按层定位。</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -1252,6 +1341,36 @@
               </div>
               <div class="quiz-feedback" data-feedback></div>
             </div>
+
+            <div class="three-up">
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Checklist</span>
+                <h3>Browser behavior checklist</h3>
+                <ul class="checklist">
+                  <li>支持 open、close、Esc、click-outside 和 reset。</li>
+                  <li>live AI 失败时能自动退回 fallback。</li>
+                  <li>回答完成后会回到用户问题附近，而不是消息底部。</li>
+                </ul>
+              </div>
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Exercise</span>
+                <h3>Do this in your repo</h3>
+                <ol class="mini-steps">
+                  <li>故意让 API 请求失败一次，确认 UI 不会死掉。</li>
+                  <li>在窄视口下测试 launcher、panel 和页面其他按钮是否冲突。</li>
+                  <li>录一段 20 秒屏幕视频，检查回答后的滚动位置是否合理。</li>
+                </ol>
+              </div>
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Common mistakes</span>
+                <h3>What usually goes wrong</h3>
+                <ul class="checklist">
+                  <li>只测“能不能回消息”，不测滚动和焦点。</li>
+                  <li>把 fallback 做成一个报错提示，而不是继续帮助用户。</li>
+                  <li>默认滚到最底部，破坏阅读起点。</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1377,6 +1496,36 @@ async function loadKnowledgeBase() {
                 <button class="quiz-btn quiz-btn--secondary" type="button" onclick="window.resetQuiz('quiz-module-4')">Try again</button>
               </div>
               <div class="quiz-feedback" data-feedback></div>
+            </div>
+
+            <div class="three-up">
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Checklist</span>
+                <h3>Backend safety checklist</h3>
+                <ul class="checklist">
+                  <li>只允许你自己的站点 origin。</li>
+                  <li>知识源来自受控文件，不是自由联网搜索。</li>
+                  <li>模型被明确告知只能根据 provided context 回答。</li>
+                </ul>
+              </div>
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Exercise</span>
+                <h3>Do this in your repo</h3>
+                <ol class="mini-steps">
+                  <li>给后端补一条 “站内没写就不要编” 的 instruction。</li>
+                  <li>人为造一个不在知识库里的问题，测试收口语是否诚实。</li>
+                  <li>检查至少 3 个 env vars 是否真的是从后端读入，而不是写死。</li>
+                </ol>
+              </div>
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Common mistakes</span>
+                <h3>What usually goes wrong</h3>
+                <ul class="checklist">
+                  <li>把 grounded assistant 做成自由发挥聊天框。</li>
+                  <li>没有 origin check，导致任何页面都能打到你的接口。</li>
+                  <li>只写 prompt，不做知识匹配和错误收口。</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -1535,6 +1684,36 @@ async function loadKnowledgeBase() {
               <p>
                 这不是一个什么都想答的 chatbot。它是一个 bounded assistant：只围绕 Belle 的公开站点内容工作，所以它才有机会既实用又可信。你做自己的版本时，也应该先变窄，再变强。
               </p>
+            </div>
+
+            <div class="three-up">
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Checklist</span>
+                <h3>Launch readiness</h3>
+                <ul class="checklist">
+                  <li>前端配置、后端 env vars、知识库文件三者已经串起来。</li>
+                  <li>live path 和 fallback path 都测过。</li>
+                  <li>移动端、缩小窗口、刷新缓存后的页面都检查过。</li>
+                </ul>
+              </div>
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Exercise</span>
+                <h3>Do this in your repo</h3>
+                <ol class="mini-steps">
+                  <li>写一个 launch checklist，分 frontend、backend、billing、UX 四栏。</li>
+                  <li>找一个朋友试用，只观察他们第一次怎么问问题。</li>
+                  <li>把试用里最困惑的一处，改成更明确的 prompt 或 UI cue。</li>
+                </ol>
+              </div>
+              <div class="card handout-card animate-in">
+                <span class="handout-label">Common mistakes</span>
+                <h3>What usually goes wrong</h3>
+                <ul class="checklist">
+                  <li>功能一通就上线，没有测缓存、额度、CORS 和窄视口。</li>
+                  <li>没有观察真实用户会不会问出超范围问题。</li>
+                  <li>把“做完”定义成 demo 可用，而不是 production behavior 可接受。</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
