@@ -12,6 +12,7 @@ if (!window.__siteInteractionsInitialized) {
   initNewsFilters();
   initPublicationsSpotlight();
   initBeyondCvGallery(prefersReducedMotion);
+  initCursor(prefersReducedMotion);
   });
 }
 
@@ -108,6 +109,16 @@ function initReveal(prefersReducedMotion) {
     return;
   }
 
+  // Immediately reveal items already in the initial viewport (prevents flash on page load)
+  const vh = window.innerHeight;
+  items.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < vh && rect.bottom > 0) {
+      item.style.setProperty('--reveal-delay', '0ms');
+      item.classList.add('is-visible');
+    }
+  });
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -122,7 +133,9 @@ function initReveal(prefersReducedMotion) {
     }
   );
 
-  items.forEach((item) => observer.observe(item));
+  items.forEach((item) => {
+    if (!item.classList.contains('is-visible')) observer.observe(item);
+  });
 }
 
 function initPageNav(prefersReducedMotion) {
@@ -361,6 +374,61 @@ function initPublicationsSpotlight() {
       }, 0);
     });
   });
+}
+
+function initCursor(prefersReducedMotion) {
+  if (prefersReducedMotion) return;
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  const dot = document.createElement('div');
+  dot.className = 'cursor-dot';
+  const ring = document.createElement('div');
+  ring.className = 'cursor-ring';
+  document.body.appendChild(dot);
+  document.body.appendChild(ring);
+  document.body.classList.add('has-custom-cursor');
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let ringX = mouseX;
+  let ringY = mouseY;
+
+  dot.style.left = mouseX + 'px';
+  dot.style.top  = mouseY + 'px';
+  ring.style.left = ringX + 'px';
+  ring.style.top  = ringY + 'px';
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.left = mouseX + 'px';
+    dot.style.top  = mouseY + 'px';
+  });
+
+  document.addEventListener('mouseleave', () => {
+    dot.style.opacity  = '0';
+    ring.style.opacity = '0';
+  });
+  document.addEventListener('mouseenter', () => {
+    dot.style.opacity  = '1';
+    ring.style.opacity = '1';
+  });
+
+  document.addEventListener('mouseover', (e) => {
+    const hoverable = e.target.closest(
+      'a, button, [role="button"], label, input, select, textarea, ' +
+      '.paper-tag, .rv-hit, .news-filter, .bcv__btn, [tabindex="0"]'
+    );
+    ring.classList.toggle('is-hovering', Boolean(hoverable));
+  });
+
+  (function animateCursor() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    ring.style.left = ringX + 'px';
+    ring.style.top  = ringY + 'px';
+    requestAnimationFrame(animateCursor);
+  })();
 }
 
 function initBeyondCvGallery(prefersReducedMotion) {

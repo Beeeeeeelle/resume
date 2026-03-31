@@ -10,6 +10,12 @@
           <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}">
+          <svg class="site-butterfly" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <circle cx="10" cy="10" r="9" fill="#7b9cc8" opacity="0.88"/>
+            <circle cx="22" cy="10" r="9" fill="#c8868e" opacity="0.88" style="mix-blend-mode:multiply"/>
+            <circle cx="10" cy="22" r="9" fill="#82b896" opacity="0.88" style="mix-blend-mode:multiply"/>
+            <circle cx="22" cy="22" r="9" fill="#d1a760" opacity="0.88" style="mix-blend-mode:multiply"/>
+          </svg>
           {{ site.masthead_title | default: site.title | escape_once | strip }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle | escape_once | strip }}</span>{% endif %}
         </a>

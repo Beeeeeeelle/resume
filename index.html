@@ -50,25 +50,27 @@ custom_js:
 }
 .home-methods__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
-@media (max-width: 900px) {
-  .home-methods__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 @media (max-width: 560px) {
-  .home-methods__grid {
-    grid-template-columns: 1fr;
-  }
+  .home-methods__grid { grid-template-columns: 1fr; }
 }
 .home-methods__card {
-  padding: 14px 14px 13px;
+  padding: 14px 16px 14px 14px;
   border-radius: 14px;
   border: 1px solid #e7ecf3;
   background: #fff;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+.home-methods__card:hover {
+  border-color: #d0d8ea;
+  box-shadow: 0 4px 14px rgba(15,23,42,0.06);
+}
+.home-methods__card-main { flex: 1; min-width: 0; }
 .home-methods__card-title {
   margin: 0 0 5px;
   font-size: 13px;
@@ -81,6 +83,99 @@ custom_js:
   line-height: 1.65;
   color: #607084;
 }
+@keyframes mth-badge-bounce {
+  0%   { transform: scale(1); }
+  38%  { transform: scale(1.32); }
+  65%  { transform: scale(0.88); }
+  82%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.home-methods__badge {
+  flex-shrink: 0;
+  margin-top: 1px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #f0f4fc;
+  border: 1.5px solid #d4ddf5;
+  color: #4a6db5;
+  font-size: 11.5px;
+  font-weight: 700;
+  font-family: system-ui,-apple-system,'Segoe UI',sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, transform 0.18s, box-shadow 0.18s;
+  user-select: none;
+}
+/* Plan 1: bounce once on scroll-in */
+.home-methods__card.is-visible .home-methods__badge {
+  animation: mth-badge-bounce 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation-delay: 0.28s;
+}
+.home-methods__card.is-visible:nth-child(2) .home-methods__badge { animation-delay: 0.40s; }
+.home-methods__card.is-visible:nth-child(3) .home-methods__badge { animation-delay: 0.52s; }
+.home-methods__card.is-visible:nth-child(4) .home-methods__badge { animation-delay: 0.64s; }
+@media (prefers-reduced-motion: reduce) {
+  .home-methods__card.is-visible .home-methods__badge { animation: none; }
+}
+/* Plan 2: card hover lifts the badge */
+.home-methods__card:hover .home-methods__badge {
+  background: #dce6f8;
+  border-color: #7b9cc8;
+  transform: translateY(-2px) scale(1.18);
+  box-shadow: 0 3px 8px rgba(123,156,200,0.28);
+}
+.home-methods__badge:hover {
+  background: #dce6f8;
+  border-color: #7b9cc8;
+  transform: translateY(-2px) scale(1.22);
+  box-shadow: 0 3px 8px rgba(123,156,200,0.28);
+}
+/* Method papers popover */
+#mth-popover {
+  position: fixed;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px 14px 12px;
+  width: 310px;
+  font-size: 13px;
+  line-height: 1.5;
+  pointer-events: auto;
+  display: none;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+  z-index: 998;
+  font-family: system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+.mth-pop-head {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8b95a7;
+  margin-bottom: 8px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.mth-pop-item {
+  padding: 7px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.mth-pop-item:last-child { border-bottom: none; padding-bottom: 0; }
+.mth-pop-title { font-weight: 600; font-size: 12px; color: #1a1a1a; line-height: 1.4; margin-bottom: 3px; }
+.mth-pop-venue { font-style: italic; color: #888; font-size: 11px; }
+.mth-pop-meta { margin-top: 4px; display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+.mth-pop-badge { font-size: 10px; font-weight: 600; padding: 1px 7px; border-radius: 10px; }
+.mth-pop-year { background: #f0f0f0; color: #555; }
+.mth-pop-s-published { background: #e8f5e9; color: #2e7d32; }
+.mth-pop-s-accepted  { background: #e3f2fd; color: #1565c0; }
+.mth-pop-s-in-press  { background: #e0f7fa; color: #006064; }
+.mth-pop-s-review    { background: #fff3e0; color: #e65100; }
+.mth-pop-s-progress  { background: #f3e5f5; color: #6a1b9a; }
+.mth-pop-link { font-size: 11px; color: #5a7fc0; font-weight: 600; text-decoration: none; margin-left: auto; white-space: nowrap; }
+.mth-pop-link:hover { text-decoration: underline; }
 .home-typewriter {
   position: relative;
   display: inline;
@@ -141,23 +236,36 @@ custom_js:
   <p class="home-methods__intro" data-reveal>I build this agenda through synthesis, measurement, empirical inquiry, and design translation, moving from field-level questions about AI-mediated learning to real educational settings where judgment, ownership, and fairness are at stake.</p>
   <div class="home-methods__grid" data-reveal-group data-reveal-step="68">
     <div class="home-methods__card" data-reveal>
-      <p class="home-methods__card-title">Systematic Reviews</p>
-      <p class="home-methods__card-copy">Map patterns, gaps, and conceptual shifts across large bodies of GenAI, assessment, and learning research.</p>
+      <div class="home-methods__card-main">
+        <p class="home-methods__card-title">Systematic Reviews</p>
+        <p class="home-methods__card-copy">Map patterns, gaps, and conceptual shifts across large bodies of GenAI, assessment, and learning research.</p>
+      </div>
+      <div class="home-methods__badge" data-method="sr" tabindex="0" aria-label="3 papers using systematic review">3</div>
     </div>
     <div class="home-methods__card" data-reveal>
-      <p class="home-methods__card-title">Design-Based Research</p>
-      <p class="home-methods__card-copy">Build and iteratively refine learning tools in authentic educational settings, including apps, tutoring systems, and AI-supported environments.</p>
+      <div class="home-methods__card-main">
+        <p class="home-methods__card-title">Design-Based Research</p>
+        <p class="home-methods__card-copy">Build and iteratively refine learning tools in authentic educational settings, including apps, tutoring systems, and AI-supported environments.</p>
+      </div>
+      <div class="home-methods__badge" data-method="dbr" tabindex="0" aria-label="4 papers using design-based research">4</div>
     </div>
     <div class="home-methods__card" data-reveal>
-      <p class="home-methods__card-title">Mixed-Methods Studies</p>
-      <p class="home-methods__card-copy">Combine surveys, interviews, interaction traces, and performance data to understand how learners and instructors work with AI across contexts and over time.</p>
+      <div class="home-methods__card-main">
+        <p class="home-methods__card-title">Mixed-Methods Studies</p>
+        <p class="home-methods__card-copy">Combine surveys, interviews, interaction traces, and performance data to understand how learners and instructors work with AI across contexts and over time.</p>
+      </div>
+      <div class="home-methods__badge" data-method="mm" tabindex="0" aria-label="6 papers using mixed methods">6</div>
     </div>
     <div class="home-methods__card" data-reveal>
-      <p class="home-methods__card-title">Measurement &amp; Validation</p>
-      <p class="home-methods__card-copy">Develop and validate frameworks and instruments for studying agency, self-directed learning, and AI-mediated educational processes.</p>
+      <div class="home-methods__card-main">
+        <p class="home-methods__card-title">Measurement &amp; Validation</p>
+        <p class="home-methods__card-copy">Develop and validate frameworks and instruments for studying agency, self-directed learning, and AI-mediated educational processes.</p>
+      </div>
+      <div class="home-methods__badge" data-method="mv" tabindex="0" aria-label="3 papers on measurement and validation">3</div>
     </div>
   </div>
 </section>
+<div id="mth-popover" role="tooltip" aria-live="polite"></div>
 <script>
 (() => {
   const headline = document.querySelector(".home-typewriter");
@@ -194,6 +302,124 @@ custom_js:
 
   window.setTimeout(typeNext, 180);
 })();
+</script>
+<script>
+(function () {
+  var MTH_PAPERS = {
+    sr: {
+      label: 'Systematic Reviews',
+      papers: [
+        { title: 'Two Years of Innovation: Systematic Review of GenAI in Language Learning', venue: 'Computers and Education: AI', year: '2025', status: 'published', href: 'https://doi.org/10.1016/j.caeai.2025.100445' },
+        { title: 'Language Educators × Generative AI: A Systematic Review', venue: 'Int. Journal of AI in Education', year: '', status: 'accepted', href: null },
+        { title: 'The First Year of ChatGPT in Education: A Comprehensive Review', venue: 'Computers and Education: AI', year: '2024', status: 'published', href: 'https://doi.org/10.1016/j.caeai.2024.100266' }
+      ]
+    },
+    dbr: {
+      label: 'Design-Based Research',
+      papers: [
+        { title: 'Collaborative Problem Solving with Generative AI', venue: 'Computers & Education: AI', year: '2025', status: 'published', href: 'https://doi.org/10.1016/j.caeai.2025.100393' },
+        { title: 'TicApp: A Language Learning Design Case', venue: 'Springer', year: '2024', status: 'published', href: 'https://doi.org/10.1007/978-3-031-76293-2_12' },
+        { title: 'PeteChat: A Guardrailed AI Tutoring Assistant', venue: 'Innovation Hub', year: '', status: 'progress', href: '/projects/petechat/' },
+        { title: 'Design Precedents Informing an AI Monitoring System for Writing Assessment', venue: 'In progress', year: '', status: 'progress', href: null }
+      ]
+    },
+    mm: {
+      label: 'Mixed-Methods Studies',
+      papers: [
+        { title: 'Reconceptualizing Self-Directed Learning in the Era of Generative AI', venue: 'IEEE Transactions on Learning Technologies', year: '2024', status: 'published', href: 'https://doi.org/10.1109/TLT.2024.3386098' },
+        { title: 'SDL with GenAI: Insights from YouTube Creators', venue: 'TechTrends', year: '2024', status: 'published', href: 'https://doi.org/10.1007/s11528-024-00960-3' },
+        { title: "Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy and Performance", venue: 'British Journal of Educational Technology', year: '2025', status: 'published', href: 'https://doi.org/10.1111/bjet.13588' },
+        { title: "Nontraditional Learners' Ownership and Agency with AI Writing Tools", venue: 'Journal of Computing in Higher Education', year: '2025', status: 'published', href: 'https://doi.org/10.1007/s12528-025-09476-y' },
+        { title: 'Empowering Students from Low-Income Families to Improve Writing with ChatGPT', venue: 'Languages', year: '2023', status: 'published', href: 'https://doi.org/10.3390/languages8040238' },
+        { title: 'Culturally and Linguistically Responsive Professional Development for AI Integration', venue: 'Online Learning', year: '2023', status: 'published', href: 'https://doi.org/10.24059/olj.v27i4.4003' }
+      ]
+    },
+    mv: {
+      label: 'Measurement & Validation',
+      papers: [
+        { title: 'Development and Validation of the PA-SDA Scale', venue: 'System', year: '2025', status: 'published', href: 'https://doi.org/10.1016/j.system.2025.103793' },
+        { title: 'Dynamic Learner State Modeling via MCP', venue: 'Education Sciences', year: '2025', status: 'published', href: 'https://doi.org/10.3390/educsci15081004' },
+        { title: 'Pathways to Proficiency: Global Validation of the PA-SDA Scale', venue: 'Under review', year: '', status: 'review', href: null }
+      ]
+    }
+  };
+
+  var STATUS_LABELS = {
+    'published': 'Published', 'accepted': 'Accepted', 'in-press': 'In Press',
+    'review': 'Under Review', 'progress': 'In Progress'
+  };
+
+  var pop = document.getElementById('mth-popover');
+  if (!pop) return;
+
+  var popTimer = null;
+  var activeBadge = null;
+
+  function buildPopover(key) {
+    var data = MTH_PAPERS[key];
+    if (!data) return '';
+    var html = '<div class="mth-pop-head">' + data.label + ' &middot; ' + data.papers.length + ' papers</div>';
+    data.papers.forEach(function (p) {
+      var scls = 'mth-pop-s-' + p.status;
+      var slbl = STATUS_LABELS[p.status] || p.status;
+      html += '<div class="mth-pop-item">';
+      html += '<div class="mth-pop-title">' + p.title + '</div>';
+      html += '<div style="display:flex;align-items:center;gap:6px;margin-top:3px;">';
+      html += '<span class="mth-pop-venue">' + p.venue + '</span>';
+      html += '</div>';
+      html += '<div class="mth-pop-meta">';
+      if (p.year) html += '<span class="mth-pop-badge mth-pop-year">' + p.year + '</span>';
+      html += '<span class="mth-pop-badge ' + scls + '">' + slbl + '</span>';
+      if (p.href) {
+        var ext = p.href.indexOf('http') === 0;
+        var isPublished = p.status === 'published' || p.status === 'accepted' || p.status === 'in-press';
+        var lbl = isPublished ? '→ Read paper' : '→ Learn more';
+        var tgt = ext ? ' target="_blank" rel="noopener"' : '';
+        html += '<a class="mth-pop-link" href="' + p.href + '"' + tgt + '>' + lbl + '</a>';
+      }
+      html += '</div></div>';
+    });
+    return html;
+  }
+
+  function showPop(badge, e) {
+    clearTimeout(popTimer);
+    var key = badge.getAttribute('data-method');
+    pop.innerHTML = buildPopover(key);
+    pop.style.display = 'block';
+    // Position: above the badge, within viewport
+    var rect = badge.getBoundingClientRect();
+    var pw = 310, ph = pop.offsetHeight || 280;
+    var x = rect.left + rect.width / 2 - pw / 2;
+    var y = rect.top - ph - 10;
+    if (x + pw > window.innerWidth - 10) x = window.innerWidth - pw - 10;
+    if (x < 10) x = 10;
+    if (y < 10) y = rect.bottom + 10;
+    pop.style.left = x + 'px';
+    pop.style.top  = y + 'px';
+  }
+
+  function schedulePopHide() {
+    clearTimeout(popTimer);
+    popTimer = setTimeout(function () {
+      pop.style.display = 'none';
+      activeBadge = null;
+    }, 180);
+  }
+
+  document.querySelectorAll('.home-methods__badge').forEach(function (badge) {
+    badge.addEventListener('mouseenter', function (e) {
+      activeBadge = badge;
+      showPop(badge, e);
+    });
+    badge.addEventListener('mouseleave', schedulePopHide);
+    badge.addEventListener('focus', function (e) { activeBadge = badge; showPop(badge, e); });
+    badge.addEventListener('blur', schedulePopHide);
+  });
+
+  pop.addEventListener('mouseenter', function () { clearTimeout(popTimer); });
+  pop.addEventListener('mouseleave', schedulePopHide);
+}());
 </script>
 {% include news-feed.html %}
 {% include beyond-cv.html %}
