@@ -323,8 +323,59 @@
       </a>
 
     </svg>
+    <div class="rv-footer">
+      <span class="rv-hint">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Hover over dots to explore papers
+      </span>
+      <span class="rv-legend">
+        <span class="rv-legend-item">
+          <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#7b9cc8" fill-opacity="0.88"/></svg>
+          Published
+        </span>
+        <span class="rv-legend-item">
+          <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5.2" fill="#7b9cc8" fill-opacity="0.18" stroke="#7b9cc8" stroke-opacity="0.9" stroke-width="1.6"/></svg>
+          Under Review
+        </span>
+        <span class="rv-legend-item">
+          <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5.2" fill="#7b9cc8" fill-opacity="0.12" stroke="#7b9cc8" stroke-opacity="0.8" stroke-width="1.6" stroke-dasharray="2.5 2.5"/></svg>
+          In Progress
+        </span>
+      </span>
+    </div>
   </div>
 </section>
+
+<style>
+.rv-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 0 4px;
+}
+.rv-hint {
+  font-size: 11.5px;
+  color: #999;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+.rv-legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.rv-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  color: #777;
+}
+</style>
 
 <div id="vb-popover" role="tooltip" aria-live="polite"></div>
 
