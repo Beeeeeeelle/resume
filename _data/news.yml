@@ -2,6 +2,10 @@
 # Types: award | paper | talk | event | grant | media
 
 - date: "Apr 2026"
+  type: media
+  text: "Launched <strong><a href=\"/ask-belle-course.html\" target=\"_blank\">Ask Belle: Codebase to Course</a></strong> — a five-module mini course on building a bounded AI chatbot assistant, from real code to a shippable product. Also released the <a href=\"https://github.com/Beeeeeeelle/ask-belle-site-chatbot\" target=\"_blank\">Ask Belle Site Chatbot skill</a> as an open-source Codex skill for planning grounded chatbots on personal websites."
+
+- date: "Apr 2026"
   type: paper
   text: "New paper in <em>International Journal of Artificial Intelligence in Education</em>: <strong>A Systematic Review of Language Educators' Practices and Development with GenAI</strong> — synthesizing how language teachers adopt, integrate, and develop professionally with generative AI."
   url: https://doi.org/10.1016/j.ijaied.2026.100010

@@ -80,6 +80,27 @@ title: "Design & Development"
   <article class="learning-panel" data-reveal>
     <div class="learning-panel__media">
       <figure class="learning-panel__hero">
+        <img src="/assets/learning/ask-belle-site-chatbot-preview.png" alt="Ask Belle site chatbot Codex skill — repo layout and SKILL.md structure" loading="lazy">
+        <figcaption>Ask Belle Site Chatbot: a reusable Codex skill for planning grounded chatbots.</figcaption>
+      </figure>
+    </div>
+    <div class="learning-panel__body">
+      <p class="learning-panel__eyebrow">Developer tool · Codex skill · Open source</p>
+      <h3>Ask Belle Site Chatbot Skill</h3>
+      <p>A reusable Codex skill that automates the planning phase for adding a grounded chatbot to any personal website, portfolio, or academic homepage.</p>
+      <ul>
+        <li><strong>Auto-discovery:</strong> inspects a public site or repo, discovers scope, sections, links, and deployment details without manual setup.</li>
+        <li><strong>Plan-first:</strong> returns an implementation-ready plan before writing any code; switches to upgrade mode when chatbot code already exists.</li>
+      </ul>
+      <div class="learning-panel__actions">
+        <a class="learning-panel__link learning-panel__link--ghost" href="https://github.com/Beeeeeeelle/ask-belle-site-chatbot" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="learning-panel" data-reveal>
+    <div class="learning-panel__media">
+      <figure class="learning-panel__hero">
         <img src="/assets/learning/Screenshot_2025-06-03_at_8.06.54_PM.png" alt="PALDT weekly newsletter layout with event announcements and resource highlights" loading="lazy">
         <figcaption>Branded newsletter layout for PALDT communications.</figcaption>
       </figure>
@@ -97,6 +118,30 @@ title: "Design & Development"
 </div>
 
 ## Learning Products & Course Design
+
+<div class="learning-panels">
+  <article class="learning-panel learning-panel--feature" data-reveal>
+    <div class="learning-panel__media">
+      <figure class="learning-panel__hero">
+        <img src="/assets/learning/ask-belle-course-preview.png" alt="Ask Belle course interface showing five modules on building a bounded AI chatbot" loading="lazy">
+        <figcaption>Ask Belle: Codebase to Course — five-module mini course on shipping a grounded AI assistant.</figcaption>
+      </figure>
+    </div>
+    <div class="learning-panel__body">
+      <p class="learning-panel__eyebrow">Mini course · AI architecture · Live site</p>
+      <h3>Ask Belle: Codebase to Course</h3>
+      <p>A five-module mini course that deconstructs how a bounded AI chatbot assistant works — from a real codebase to a shippable product. Built for developers and vibe coders who want to understand where AI logic belongs in a static-site architecture.</p>
+      <ul>
+        <li><strong>Scope-first design:</strong> taught that the chat UI lives in the static site but the model call cannot — and why that boundary matters.</li>
+        <li><strong>Grounding over hallucination:</strong> origin checks, controlled knowledge files, and explicit model instructions prevent invention.</li>
+        <li><strong>Narrow by design:</strong> the feature works because it stays bounded to published site content, not because it tries to answer everything.</li>
+      </ul>
+      <div class="learning-panel__actions">
+        <a class="learning-panel__link" href="/ask-belle-course.html" target="_blank" rel="noopener">Take the course</a>
+      </div>
+    </div>
+  </article>
+</div>
 
 <div class="learning-panels">
   <article class="learning-panel learning-panel--feature" data-reveal>
