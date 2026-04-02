@@ -605,7 +605,6 @@ title: "Publications"
             <a class="ptl-pub v-caeai" href="https://doi.org/10.1016/j.caeai.2025.100445" target="_blank" data-tip="Li et al. (2025) · Two years of GenAI in education: Systematic review · CAEAI">CA</a>
             <a class="ptl-pub v-illt" href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" data-tip="Li & Hikmatilla (2025) · EduTubers on social media · ILLT">IL</a>
             <a class="ptl-pub v-illt" href="https://doi.org/10.1080/17501229.2025.2598587" target="_blank" data-tip="Li, Luo, Bahari et al. (2025) · GBLL outcomes systematic review · ILLT">IL</a>
-            <span class="ptl-pub v-ijaied" data-tip="Li, Exter, Feng et al. (Accepted) · Language educators & GenAI: Systematic review · IJAIED">IJ</span>
           </div>
         </div>
         <div class="ptl-row">
@@ -629,6 +628,7 @@ title: "Publications"
         <div class="ptl-row">
           <div class="ptl-row__label ptl-row__label--first">First / corresponding</div>
           <div class="ptl-row__items">
+            <a class="ptl-pub v-ijaied" href="https://doi.org/10.1016/j.ijaied.2026.100010" target="_blank" data-tip="Li, Exter, Feng et al. (2026) · Language educators & GenAI: Systematic review · IJAIED">IJ</a>
             <a class="ptl-pub v-book" href="https://doi.org/10.1007/978-3-031-51447-0_260-1" target="_blank" data-tip="Li & Lowell (2026) · AI-generation literacy · Palgrave Encyclopedia of CALL">Pa</a>
           </div>
         </div>
@@ -665,15 +665,17 @@ title: "Publications"
 <h2>Peer-Reviewed Journal Articles</h2>
 <div class="pub-first-note"><span></span> First / corresponding author</div>
 
-<div class="pub-year">2025</div>
+<div class="pub-year">2026</div>
 
-<!-- IJAIED Accepted — plain list -->
+<!-- IJAIED 2026 — plain list -->
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Exter, M., Feng, W., Tang, G., &amp; Xu, K. (Accepted). A systematic review of language educators' practices and development with GenAI. <em>International Journal of Artificial Intelligence in Education</em>. <span class="pub-status">Accepted</span>
+    <strong>Li, B.</strong>, Exter, M., Feng, W., Tang, G., &amp; Xu, K. (2026). A systematic review of language educators' practices and development with GenAI. <em>International Journal of Artificial Intelligence in Education</em>, 100010. <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.ijaied.2026.100010" target="_blank" rel="noopener">DOI</a>
   </div>
 </div>
+
+<div class="pub-year">2025</div>
 
 <!-- PA-SDA Scale — with thumbnail -->
 <div class="bl-pcard bl-pcard--lead">

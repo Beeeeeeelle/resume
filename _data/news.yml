@@ -1,6 +1,11 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- date: "Apr 2026"
+  type: paper
+  text: "New paper in <em>International Journal of Artificial Intelligence in Education</em>: <strong>A Systematic Review of Language Educators' Practices and Development with GenAI</strong> — synthesizing how language teachers adopt, integrate, and develop professionally with generative AI."
+  url: https://doi.org/10.1016/j.ijaied.2026.100010
+
 - date: "2025"
   type: media
   text: "Launched <strong><a href=\"https://ai-education-library.vercel.app\" target=\"_blank\">AI for Education Resource Library</a></strong> — a curated open library of videos, tools, and practical resources spanning teaching, instructional design, AI literacy, and higher education."
@@ -32,6 +37,18 @@
   text: "Presented 3 papers at <strong>AECT 2025</strong> in Las Vegas: AI authenticity and academic integrity; AI-integrated XR in language learning; and nontraditional students' ChatGPT engagement."
 
 - date: "2025"
+  type: grant
+  text: "Submitted <strong>Spencer Vision Grant</strong> — <em>Transforming Online Learning Through AI Presence: Equitable Support of Non-Traditional Students</em> ($74,729, 2025–2026). Lead PI: Victoria Lowell (Purdue). I initiated the concept and served as lead writer."
+
+- date: "2025"
+  type: grant
+  text: "Submitted <strong>Spencer Small Grant</strong> — <em>Global Language Learners Using GenAI Tools</em> ($50,000, 2025–2027). Lead PI: Victoria Lowell (Purdue). Co-led study design and evaluation plan as lead writer."
+
+- date: "2025"
+  type: grant
+  text: "Received <strong>Purdue travel grants</strong> supporting conference presentations at AERA, AECT, and other venues: Graduate Student Hackney Travel Award, Graduate Student Travel Award, LDT Travel Support Program, and PGSG Grant (Purdue Graduate Student Government)."
+
+- date: "2025"
   type: award
   text: "<strong>Global Smart Education Innovation — Research Innovation Prize</strong> for the PA-SDA Scale paper, presented at the Global Smart Education Conference at Beijing Normal University. Cash prize: RMB 20,000 (awarded with research team)."
 
@@ -59,6 +76,14 @@
   text: "Paper in <em>IEEE Transactions on Learning Technologies</em>: <strong>Reconceptualizing SDL in the Era of Generative AI</strong>."
   url: https://doi.org/10.1109/TLT.2024.3386098
 
+- date: "2024"
+  type: grant
+  text: "Contributed to two competitive NSF proposals as co-author: <strong>NSF IMPACT</strong> — Immersive, Personalized, and Accessible Cybersecurity Training ($3,200,000, Texas A&M led); and <strong>NSF SEED</strong> — Securing the Future of Agriculture Through Cybersecurity Education ($1,000,000, UNO &amp; Texas A&M led). Both rated competitive and invited for revision."
+
+- date: "2024"
+  type: grant
+  text: "Received <strong>Purdue travel grants</strong> supporting conference presentations: Graduate Student Hackney Travel Award, Graduate Student Travel Award, LDT Travel Support Program, and Graduate School Travel Grant."
+
 - date: "2023"
   type: grant
   text: "<strong>NSF T3-CIDERS Collaborative Research Grant</strong> ($1,000,000 total, 2023–2027). Awarded to research team on cyberinfrastructure training and workforce development."
@@ -66,3 +91,11 @@
 - date: "2023"
   type: grant
   text: "<strong>Dean's Doctoral Fellowship</strong> ($61,463, 2023–2027) — Purdue University College of Education."
+
+- date: "2023"
+  type: grant
+  text: "<strong>Spencer Small Grant finalist</strong> — <em>Exploring Inventions in Self-Directed Language Learning</em> ($50,000). Team: Curtis Bonk (Lead PI), Belle Li, Xiaojing Kou (Indiana University). I served as project lead and primary writer."
+
+- date: "2023"
+  type: grant
+  text: "Received <strong>Purdue travel grants</strong> for conference presentations: Graduate Student Travel Award and LDT Travel Support Program."
