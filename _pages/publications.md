@@ -1084,6 +1084,13 @@ title: "Publications"
     <strong>Li, B.</strong>, Lowell, V., &amp; Hou, Z. Design precedents to design innovation: Developing an advanced AI monitoring system for writing assessment. <em>Journal of Computing in Higher Education</em>. <span class="pub-status">Proposal accepted</span>
   </div>
 </div>
+
+<div class="pub-entry">
+  <div class="pub-entry__dot--empty"></div>
+  <div class="pub-entry__body">
+    Zhang, Z., <strong>Li, B.</strong>, Xu, Q., Cheng, Z., &amp; West, R. E. A meta-analysis of AI-assisted self-regulated learning. <em>Online Learning</em>. <span class="pub-status">Under review</span>
+  </div>
+</div>
 </section>
 </div>
 </div>
