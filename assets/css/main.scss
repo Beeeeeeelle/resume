@@ -4,6 +4,10 @@
 
 @import "minimal-mistakes";
 
+/* Hide RSS feed link from footer */
+.page__footer-follow .fa-rss-square,
+.page__footer-follow a[href$="feed.xml"] { display: none !important; }
+
 .research-map {
   margin: clamp(2rem, 4vw, 3.25rem) 0;
   display: grid;

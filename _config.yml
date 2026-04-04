@@ -19,7 +19,6 @@ plugins:
 - jekyll-paginate
 - jekyll-sitemap
 - jekyll-gist
-- jekyll-feed
 - jemoji
 - jekyll-include-cache
 author:
@@ -43,22 +42,7 @@ author:
     icon: far fa-fw fa-file-alt
     url: https://app.box.com/s/ao2hzfhxe97p9vgzv6lvahm6794xd0vx
 footer:
-  links:
-  - label: West Lafayette, IN
-    icon: fas fa-fw fa-map-marker-alt
-    url: https://www.google.com/maps/place/Purdue+University/@40.4237094,-86.9260655,17z/data=!3m1!4b1!4m6!3m5!1s0x8812fd37423e0507:0x8eccb2cf8b1a7c8e!8m2!3d40.4237054!4d-86.9211946!16zL20vMDV4XzU?entry=ttu
-  - label: Email
-    icon: fas fa-fw fa-envelope-square
-    url: mailto:li4808@purdue.edu
-  - label: Google Scholar
-    icon: fa fa-graduation-cap
-    url: https://scholar.google.com/citations?user=82kWgvMAAAAJ&hl=en&authuser=1
-  - label: LinkedIn
-    icon: fab fa-fw fa-linkedin
-    url: https://www.linkedin.com/in/belle-li-198a72180/
-  - label: CV
-    icon: far fa-fw fa-file-alt
-    url: https://app.box.com/s/ao2hzfhxe97p9vgzv6lvahm6794xd0vx
+  links: []
 chatbot:
   enabled: true
   title: Ask Belle
