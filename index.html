@@ -198,6 +198,39 @@ custom_js:
   opacity: 0;
   transition: opacity 0.35s ease;
 }
+/* ── Inline award badge ── */
+.bio-award {
+  position: relative;
+  display: inline-block;
+  font-size: 11px;
+  margin-left: 2px;
+  cursor: default;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+  vertical-align: middle;
+  line-height: 1;
+}
+.bio-award:hover { opacity: 1; }
+.bio-award::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c1a10;
+  color: #fff8e8;
+  font-size: 11px;
+  font-weight: 600;
+  font-style: normal;
+  white-space: nowrap;
+  padding: 5px 11px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 10;
+}
+.bio-award:hover::after { opacity: 1; }
 @keyframes home-caret-blink {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }
@@ -227,8 +260,9 @@ custom_js:
  <a href="https://scholar.google.com/citations?user=dsdG3ewAAAAJ&amp;hl=en">
   Dr. Curtis J. Bonk
  </a>
- . My research examines how <span class="bio-kw">generative AI</span> reshapes <span class="bio-kw">learner agency</span>, <span class="bio-kw">authenticity</span>, and <span class="bio-kw">equity</span> in self-directed and assessed learning. I build this agenda through learning analytics, mixed-methods inquiry, measurement, and design-based research, drawing on behavioral data and person-centered methods to understand how learners differ in their engagement with AI. My work combines <span class="bio-em">empirical research with design practice</span>: I develop educational tools, translate theory into usable learning designs, and draw on three years of teaching and program experience at Indiana University Bloomington.
+ . My research examines how <span class="bio-kw">generative AI</span> reshapes <span class="bio-kw">learner agency</span>, <span class="bio-kw">authenticity</span>, and <span class="bio-kw">equity</span> across learning contexts. I build this agenda through learning analytics, mixed-methods inquiry, measurement, and design-based research, drawing on behavioral data and person-centered methods to understand how learners differ in their engagement with AI. My work combines <span class="bio-em">empirical research with design practice</span>: I develop educational tools, translate theory into usable learning designs, and draw on three years of teaching and program experience at Indiana University Bloomington. Recent work has been recognized with the Global Smart Education Innovation Prize for the PA-SDA Scale<span class="bio-award" data-tip="Global Smart Education Innovation Prize · Beijing Normal University 2025">🏆</span> (2025) and the AECT Outstanding Journal Article Award for <a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Labs-Kid-Space-Conversational-AI-Facilitates-Collaborative/post/1697865" target="_blank" rel="noopener">a collaborative study with Intel Labs</a> on AI-mediated learning<span class="bio-award" data-tip="AECT Outstanding Journal Article Award · 2025">🏆</span> (2025).
 </p>
+
 <p class="rq-block" data-reveal>A question runs through all of it: how can AI-mediated learning environments <span class="rq-block__highlight">preserve and even amplify</span> <span class="rq-block__tag">human agency</span>, <span class="rq-block__tag">authentic learning</span>, and <span class="rq-block__tag">instructional quality</span>? My work addresses this across four connected strands:</p>
 <style>
 .rq-block {
