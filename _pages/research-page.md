@@ -9,7 +9,6 @@ classes: wide
 <style>
 .rp-venn-wrap { margin: 0 0 20px; }
 .rp-intro { font-size: 14px; line-height: 1.75; color: #666; margin: 0 0 20px; }
-
 /* ── Tabs: pill with dot, matches homepage card style ── */
 .rp-tabs {
   display: flex;
