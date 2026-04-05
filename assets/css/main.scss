@@ -4,6 +4,10 @@
 
 @import "minimal-mistakes";
 
+/* Hide posts feed on home layout */
+.home .list__item,
+.home .pagination { display: none !important; }
+
 /* Hide RSS feed link from footer */
 .page__footer-follow .fa-rss-square,
 .page__footer-follow a[href$="feed.xml"] { display: none !important; }
