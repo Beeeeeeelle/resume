@@ -9,6 +9,17 @@
   margin-bottom: 20px;
   padding-bottom: 12px;
   border-bottom: 1px solid #eee;
+  position: relative;
+}
+.news-section__yay {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  pointer-events: none;
 }
 .news-list {
   list-style: none;
@@ -139,7 +150,7 @@
 
 
 <section class="news-section">
-  <h2 class="news-section__heading" data-reveal>News &amp; Activity</h2>
+  <h2 class="news-section__heading" data-reveal>News &amp; Activity<img class="news-section__yay" src="/assets/images/yay.gif" alt=""></h2>
   <div class="news-filters" data-news-filters data-reveal>
     <div class="news-filters__group" data-news-type-group></div>
     <div class="news-filters__group" data-news-year-group></div>
