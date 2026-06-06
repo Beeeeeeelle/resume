@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     img.dataset.lightboxBound = 'true';
     img.classList.add('img-lightbox-target');
 
-    img.addEventListener('click', () => {
+    img.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
       const overlay = document.createElement('div');
       overlay.className = 'img-lightbox-overlay';
 

@@ -25,6 +25,120 @@ custom_js:
   color: #5b4432;
   font-style: normal;
 }
+.home-hero {
+  position: relative;
+  display: inline-block;
+  max-width: max-content;
+  padding: 4px 0 16px;
+}
+.home-intro {
+  position: relative;
+}
+.home-hero__headline {
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+}
+.home-hero__proof {
+  position: absolute;
+  left: calc(100% + 18px);
+  top: -26px;
+  width: 430px;
+  height: 112px;
+  pointer-events: none;
+  z-index: 1;
+}
+.home-hero__tag {
+  --proof-accent: #7b9cc8;
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(220, 227, 237, 0.95);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.07);
+  color: #172033;
+  font-size: 10.75px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(0, 12px, 0) scale(0.96) rotate(var(--r, 0deg));
+  transition:
+    opacity 0.22s ease,
+    transform 0.28s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+  transition-delay: var(--delay, 0ms);
+}
+.home-hero__tag::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--proof-accent);
+  flex-shrink: 0;
+}
+.home-hero__tag:hover,
+.home-hero__tag:focus-visible {
+  border-color: rgba(197, 208, 223, 0.95);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.1);
+}
+.home-hero__tag--blue { --proof-accent: #7b9cc8; }
+.home-hero__tag--gold { --proof-accent: #d1a760; }
+.home-hero__tag--rose { --proof-accent: #c8868e; }
+.home-hero__tag--green { --proof-accent: #82b896; }
+.home-intro:hover .home-hero__tag,
+.home-intro:focus-within .home-hero__tag {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1) rotate(var(--r, 0deg));
+}
+@media (max-width: 1180px) {
+  .home-hero__proof {
+    left: calc(100% + 12px);
+    width: 360px;
+  }
+}
+@media (max-width: 860px), (hover: none), (pointer: coarse) {
+  .home-hero {
+    display: block;
+    padding-bottom: 10px;
+  }
+  .home-hero__proof {
+    position: static;
+    inset: auto;
+    min-height: 0;
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    pointer-events: auto;
+  }
+  .home-hero__tag {
+    position: static;
+    pointer-events: auto;
+    opacity: 1;
+    transform: none;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: #fff;
+    padding: 8px 11px;
+  }
+}
 .home-methods {
   margin: 24px 0 42px;
   padding: 18px 20px 20px;
@@ -198,53 +312,43 @@ custom_js:
   opacity: 0;
   transition: opacity 0.35s ease;
 }
-/* ── Inline award badge ── */
-.bio-award {
-  position: relative;
-  display: inline-block;
-  font-size: 11px;
-  margin-left: 2px;
-  cursor: default;
-  opacity: 0.5;
-  transition: opacity 0.15s;
-  vertical-align: middle;
-  line-height: 1;
-}
-.bio-award:hover { opacity: 1; }
-.bio-award::after {
-  content: attr(data-tip);
-  position: absolute;
-  bottom: calc(100% + 7px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1c1a10;
-  color: #fff8e8;
-  font-size: 11px;
-  font-weight: 600;
-  font-style: normal;
-  white-space: nowrap;
-  padding: 5px 11px;
-  border-radius: 6px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.15s;
-  z-index: 10;
-}
-.bio-award:hover::after { opacity: 1; }
 @keyframes home-caret-blink {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }
 }
 </style>
-<h1>
- <span class="home-typewriter" data-text="AI in Learning, Humans in Charge.">AI in Learning, Humans in Charge.</span>
-</h1>
-<p>
- I am a Ph.D. candidate in Purdue University’s
+<div class="home-intro" data-reveal>
+<div class="home-hero">
+  <h1 class="home-hero__headline">
+   <span class="home-typewriter" data-text="AI in Learning, Humans in Charge.">AI in Learning, Humans in Charge.</span>
+  </h1>
+  <div class="home-hero__proof" aria-label="Selected research themes, affiliations, and recognition">
+    <a class="home-hero__tag home-hero__tag--green" href="/research/" style="--x: 0%; --y: 0px; --r: 3deg; --delay: 0ms;">
+      <span class="lang-en">Generative AI</span><span class="lang-zh" hidden>生成式 AI</span>
+    </a>
+    <a class="home-hero__tag home-hero__tag--rose" href="/projects/cps-ai-environments/" style="--x: 58%; --y: 4px; --r: 7deg; --delay: 35ms;">
+      <span class="lang-en">Intel Labs</span><span class="lang-zh" hidden>英特尔实验室</span>
+    </a>
+    <a class="home-hero__tag home-hero__tag--blue" href="/research/" style="--x: 8%; --y: 34px; --r: -6deg; --delay: 70ms;">
+      <span class="lang-en">Learner Agency</span><span class="lang-zh" hidden>学习者能动性</span>
+    </a>
+    <a class="home-hero__tag home-hero__tag--green" href="/publications/" style="--x: 58%; --y: 36px; --r: -3deg; --delay: 105ms;">
+      <span class="lang-en">AECT Award</span><span class="lang-zh" hidden>AECT 奖项</span>
+    </a>
+    <a class="home-hero__tag home-hero__tag--rose" href="/publications/" style="--x: 0%; --y: 68px; --r: 4deg; --delay: 140ms;">
+      <span class="lang-en">PA-SDA Scale</span><span class="lang-zh" hidden>PA-SDA 量表</span>
+    </a>
+    <a class="home-hero__tag home-hero__tag--blue" href="/projects/petechat/" style="--x: 46%; --y: 68px; --r: -4deg; --delay: 175ms;">
+      <span class="lang-en">PeteGPT / WDEA</span><span class="lang-zh" hidden>PeteGPT / WDEA</span>
+    </a>
+  </div>
+</div>
+<p class="lang-en">
+ I earned my Ph.D. in
  <a href="https://education.purdue.edu/graduate-students/prospective-students/graduate-programs/learning-design-technology/">
   Learning Design and Technology
  </a>
- program, co-advised by
+ from Purdue University, where I was co-advised by
  <a href="https://scholar.google.com/citations?user=xSX2cwkAAAAJ&amp;hl=en&amp;oi=ao">
   Dr. Victoria Lynn Lowell (Walker)
  </a>
@@ -260,10 +364,21 @@ custom_js:
  <a href="https://scholar.google.com/citations?user=dsdG3ewAAAAJ&amp;hl=en">
   Dr. Curtis J. Bonk
  </a>
- . My research examines how <span class="bio-kw">generative AI</span> reshapes <span class="bio-kw">learner agency</span>, <span class="bio-kw">authenticity</span>, and <span class="bio-kw">equity</span> across learning contexts. I build this agenda through learning analytics, mixed-methods inquiry, measurement, and design-based research, drawing on behavioral data and person-centered methods to understand how learners differ in their engagement with AI. My work combines <span class="bio-em">empirical research with design practice</span>: I develop educational tools, translate theory into usable learning designs, and draw on three years of teaching and program experience at Indiana University Bloomington. Recent work has been recognized with the Global Smart Education Innovation Prize for the PA-SDA Scale<span class="bio-award" data-tip="Global Smart Education Innovation Prize · Beijing Normal University 2025">🏆</span> (2025) and the AECT Outstanding Journal Article Award for <a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Labs-Kid-Space-Conversational-AI-Facilitates-Collaborative/post/1697865" target="_blank" rel="noopener">a collaborative study with Intel Labs</a> on AI-mediated learning<span class="bio-award" data-tip="AECT Outstanding Journal Article Award · 2025">🏆</span> (2025).
+ . My research examines how <span class="bio-kw">generative AI</span> reshapes <span class="bio-kw">learner agency</span>, <span class="bio-kw">authenticity</span>, and <span class="bio-kw">equity</span> across learning contexts. I build this agenda through learning analytics, mixed-methods inquiry, measurement, and design-based research, drawing on behavioral data and person-centered methods to understand how learners differ in their engagement with AI. My work combines <span class="bio-em">empirical research with design practice</span>: I develop educational tools, translate theory into usable learning designs, and draw on three years of teaching and program experience at Indiana University Bloomington. Recent work has been recognized with the Global Smart Education Innovation Prize for the PA-SDA Scale (2025), the AECT Outstanding Journal Article Award for <a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Labs-Kid-Space-Conversational-AI-Facilitates-Collaborative/post/1697865" target="_blank" rel="noopener">a collaborative study with Intel Labs</a> on AI-mediated learning (2025), and a World Digital Education Alliance (WDEA) Certificate of Recognition for the PeteGPT AI tutoring project (2026).
 </p>
+<p class="lang-zh" hidden>
+我于<a href="https://education.purdue.edu/graduate-students/prospective-students/graduate-programs/learning-design-technology/">普渡大学</a>获得学习设计与技术方向博士学位，师从<a href="https://scholar.google.com/citations?user=xSX2cwkAAAAJ&amp;hl=en&amp;oi=ao">Victoria L. Lowell博士</a>和<a href="https://scholar.google.com/citations?hl=en&amp;user=f8J04qAAAAAJ">Marisa Exter博士</a>；此前于<a href="https://education.indiana.edu/programs/instructional-systems-technology.html">印第安纳大学伯明顿分校</a>获得教学系统技术硕士学位，师从<a href="https://scholar.google.com/citations?user=dsdG3ewAAAAJ&amp;hl=en">Curtis J. Bonk博士</a>。
+</p>
+<p class="lang-zh" hidden>
+我的研究关注<span class="bio-kw">生成式人工智能</span>如何重塑不同学习情境中的<span class="bio-kw">学习者能动性</span>、<span class="bio-kw">真实学习体验</span>与<span class="bio-kw">教育公平</span>。我综合运用学习分析、混合研究方法、测量研究与基于设计的研究方法，探究学习者在与AI互动过程中的个体差异、学习路径与支持机制。我的工作连接<span class="bio-em">实证研究与设计实践</span>，既关注理论建构与机制解释，也致力于开发教育技术工具，并将研究发现转化为可实施的学习设计方案。这一研究取向也受到我在印第安纳大学三年教学与项目实践经验的持续影响。
+</p>
+<p class="lang-zh" hidden>
+近期，我的研究成果获得多项认可：PA-SDA量表荣获全球智慧教育创新奖（2025）；与英特尔实验室合作开展的<a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Labs-Kid-Space-Conversational-AI-Facilitates-Collaborative/post/1697865" target="_blank" rel="noopener">AI辅助协作学习研究</a>获得AECT杰出期刊论文奖（2025）；PeteGPT人工智能辅导项目获得世界数字教育联盟（WDEA）表彰证书（2026）。
+</p>
+</div>
 
-<p class="rq-block" data-reveal>A question runs through all of it: how can AI-mediated learning environments <span class="rq-block__highlight">preserve and even amplify</span> <span class="rq-block__tag">human agency</span>, <span class="rq-block__tag">authentic learning</span>, and <span class="rq-block__tag">instructional quality</span>? My work addresses this across four connected strands:</p>
+<p class="rq-block lang-en" data-reveal>A question runs through all of it: how can AI-mediated learning environments <span class="rq-block__highlight">preserve and even amplify</span> <span class="rq-block__tag">human agency</span>, <span class="rq-block__tag">authentic learning</span>, and <span class="rq-block__tag">instructional quality</span>? My work addresses this across four connected strands:</p>
+<p class="rq-block lang-zh" data-reveal hidden>贯穿这些工作的核心问题是：在AI介入的学习环境中，如何<span class="rq-block__highlight">保护并进一步强化</span><span class="rq-block__tag">学习者的主体能动性</span>、<span class="rq-block__tag">真实学习体验</span>与<span class="rq-block__tag">学习质量</span>？围绕这一问题，我的研究主要从以下四个相互关联的方向展开：</p>
 <style>
 .rq-block {
   margin: 36px 0 28px;
@@ -287,34 +402,34 @@ custom_js:
 </style>
 {% include research-venn.html %}
 <section class="home-methods" data-reveal>
-  <p class="home-methods__eyebrow" data-reveal>Methodology</p>
-  <p class="home-methods__intro" data-reveal>I build this agenda through synthesis, measurement, empirical inquiry, and design translation, moving from field-level questions about AI-mediated learning to real educational settings where judgment, ownership, and fairness are at stake.</p>
+  <p class="home-methods__eyebrow" data-reveal><span class="lang-en">Methodology</span><span class="lang-zh" hidden>研究方法</span></p>
+  <p class="home-methods__intro" data-reveal><span class="lang-en">I build this agenda through synthesis, measurement, empirical inquiry, and design translation, moving from field-level questions about AI-mediated learning to real educational settings where judgment, ownership, and fairness are at stake.</span><span class="lang-zh" hidden>我通过文献综合、测量研究、实证分析与设计转化推进这一研究议程：从AI辅助学习的宏观问题出发，进入真实教育场景，考察判断力、主体性与公平性如何在具体学习活动中被重新定义。</span></p>
   <div class="home-methods__grid" data-reveal-group data-reveal-step="68">
     <div class="home-methods__card" data-reveal>
       <div class="home-methods__card-main">
-        <p class="home-methods__card-title">Systematic Reviews</p>
-        <p class="home-methods__card-copy">Map patterns, gaps, and conceptual shifts across large bodies of GenAI, assessment, and learning research.</p>
+        <p class="home-methods__card-title"><span class="lang-en">Systematic Reviews</span><span class="lang-zh" hidden>系统综述</span></p>
+        <p class="home-methods__card-copy"><span class="lang-en">Map patterns, gaps, and conceptual shifts across large bodies of GenAI, assessment, and learning research.</span><span class="lang-zh" hidden>梳理生成式AI、学习评估与教育技术研究中的主要趋势、研究空白与概念变化。</span></p>
       </div>
       <div class="home-methods__badge" data-method="sr" tabindex="0" aria-label="3 papers using systematic review">3</div>
     </div>
     <div class="home-methods__card" data-reveal>
       <div class="home-methods__card-main">
-        <p class="home-methods__card-title">Design-Based Research</p>
-        <p class="home-methods__card-copy">Build and iteratively refine learning tools in authentic educational settings, including apps, tutoring systems, and AI-supported environments.</p>
+        <p class="home-methods__card-title"><span class="lang-en">Design-Based Research</span><span class="lang-zh" hidden>设计研究</span></p>
+        <p class="home-methods__card-copy"><span class="lang-en">Build and iteratively refine learning tools in authentic educational settings, including apps, tutoring systems, and AI-supported environments.</span><span class="lang-zh" hidden>在真实教学场景中设计并迭代学习工具，包括应用程序、智能辅导系统和AI支持的学习环境。</span></p>
       </div>
       <div class="home-methods__badge" data-method="dbr" tabindex="0" aria-label="4 papers using design-based research">4</div>
     </div>
     <div class="home-methods__card" data-reveal>
       <div class="home-methods__card-main">
-        <p class="home-methods__card-title">Mixed-Methods Studies</p>
-        <p class="home-methods__card-copy">Combine surveys, interviews, interaction traces, and performance data, applying learning analytics and person-centered profiling to understand how learners and instructors work with AI across contexts and over time.</p>
+        <p class="home-methods__card-title"><span class="lang-en">Mixed-Methods Studies</span><span class="lang-zh" hidden>混合研究</span></p>
+        <p class="home-methods__card-copy"><span class="lang-en">Combine surveys, interviews, interaction traces, and performance data, applying learning analytics and person-centered profiling to understand how learners and instructors work with AI across contexts and over time.</span><span class="lang-zh" hidden>结合问卷、访谈、交互记录与学习表现数据，运用学习分析和个体中心方法理解不同学习者如何与AI协作。</span></p>
       </div>
       <div class="home-methods__badge" data-method="mm" tabindex="0" aria-label="6 papers using mixed methods">6</div>
     </div>
     <div class="home-methods__card" data-reveal>
       <div class="home-methods__card-main">
-        <p class="home-methods__card-title">Measurement &amp; Validation</p>
-        <p class="home-methods__card-copy">Develop and validate frameworks and instruments for studying agency, self-directed learning, and AI-mediated educational processes.</p>
+        <p class="home-methods__card-title"><span class="lang-en">Measurement &amp; Validation</span><span class="lang-zh" hidden>测量与验证</span></p>
+        <p class="home-methods__card-copy"><span class="lang-en">Develop and validate frameworks and instruments for studying agency, self-directed learning, and AI-mediated educational processes.</span><span class="lang-zh" hidden>开发并验证用于研究学习者能动性、自主学习和AI中介学习过程的理论框架与测量工具。</span></p>
       </div>
       <div class="home-methods__badge" data-method="mv" tabindex="0" aria-label="3 papers on measurement and validation">3</div>
     </div>

@@ -16,6 +16,11 @@ title: "Publications"
   border-bottom: 2px solid #eee;
   margin-bottom: 10px;
 }
+.pub-section {
+  --pub-panel-border: rgba(226, 232, 240, 0.92);
+  --pub-panel-bg: linear-gradient(180deg, rgba(248, 250, 252, 0.74) 0%, rgba(255, 255, 255, 0.98) 100%);
+  --pub-panel-shadow: 0 1rem 2.8rem rgba(15, 23, 42, 0.06);
+}
 .pub-first-note {
   display: inline-flex;
   align-items: center;
@@ -23,19 +28,19 @@ title: "Publications"
   margin: 0 0 24px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: #fff7f2;
-  border: 1px solid rgba(224, 90, 43, 0.16);
+  background: #f5f8fc;
+  border: 1px solid rgba(123, 156, 200, 0.22);
   font-size: 12px;
   font-weight: 600;
-  color: #8a5c44;
+  color: #49647f;
 }
 .pub-first-note span {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background: linear-gradient(135deg, rgba(224,90,43,0.95), rgba(236,153,116,0.9));
+  background: linear-gradient(135deg, #7b9cc8, #82b896);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(224,90,43,0.08);
+  box-shadow: 0 0 0 4px rgba(123, 156, 200, 0.12);
   flex-shrink: 0;
 }
 .pub-year {
@@ -53,13 +58,14 @@ title: "Publications"
   gap: 20px;
   margin-bottom: 28px;
   align-items: flex-start;
+  padding: clamp(1rem, 2.6vw, 1.35rem);
+  border-radius: 1.1rem;
+  background: var(--pub-panel-bg);
+  border: 1px solid var(--pub-panel-border);
+  box-shadow: var(--pub-panel-shadow);
 }
 .bl-pcard--lead {
-  padding: 14px;
-  border-radius: 18px;
-  background: linear-gradient(180deg, #fffaf7 0%, #ffffff 100%);
-  border: 1px solid rgba(224, 90, 43, 0.10);
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.025);
+  border-color: rgba(203, 213, 225, 0.95);
 }
 @media (max-width: 600px) {
   .bl-pcard { flex-direction: column; }
@@ -86,7 +92,7 @@ title: "Publications"
 .bl-pcard--lead .bl-pcard__thumb,
 .bl-pcard--lead .bl-pcard__thumb--gif,
 .bl-pcard--lead .bl-pcard__slide img {
-  border-color: rgba(224, 90, 43, 0.18);
+  border-color: rgba(226, 232, 240, 0.92);
 }
 .bl-pcard__body { flex: 1; min-width: 0; }
 .bl-pcard--lead .bl-pcard__body::before,
@@ -97,9 +103,9 @@ title: "Publications"
   margin: 0 0 10px;
   padding: 4px 10px;
   border-radius: 999px;
-  background: #fff7f2;
-  border: 1px solid rgba(224,90,43,0.16);
-  color: #a35734;
+  background: #f5f8fc;
+  border: 1px solid rgba(123, 156, 200, 0.24);
+  color: #3f6387;
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -138,7 +144,7 @@ title: "Publications"
 .pub-entry {
   display: flex;
   gap: 0;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   align-items: flex-start;
 }
 /* Dot element is now invisible — just used as CSS hook for sibling selector */
@@ -150,18 +156,13 @@ title: "Publications"
   width: 0;
   flex-shrink: 0;
 }
-/* First / corresponding author entries now use a badge */
-.pub-entry__dot + .pub-entry__body {
-  padding: 12px 14px 10px;
-  border-radius: 16px;
-  background: linear-gradient(180deg, #fffaf7 0%, #ffffff 100%);
-  border: 1px solid rgba(224, 90, 43, 0.10);
-}
-/* Co-authored */
-.pub-entry__dot--empty + .pub-entry__body {
-  padding-left: 0;
-}
 .pub-entry__body {
+  width: 100%;
+  padding: 1rem 1.15rem;
+  border-radius: 1.1rem;
+  border: 1px solid var(--pub-panel-border);
+  background: var(--pub-panel-bg);
+  box-shadow: var(--pub-panel-shadow);
   font-size: 14px;
   line-height: 1.7;
   color: #333;
@@ -487,6 +488,7 @@ title: "Publications"
 .v-jche    { background: #905050; }
 .v-book    { background: #4a3a20; }
 .v-ijaied  { background: #3a7a60; }
+.v-ijiet   { background: #4f6f98; }
 
 /* Legend */
 .ptl-legend {
@@ -635,7 +637,7 @@ title: "Publications"
         <div class="ptl-row">
           <div class="ptl-row__label">Co-authored</div>
           <div class="ptl-row__items">
-            <span class="ptl-row__empty">No entries yet</span>
+            <a class="ptl-pub v-ijiet" href="https://doi.org/10.18178/ijiet.2026.16.4.2557" target="_blank" data-tip="Ye, Yang, Li et al. (2026) · AI-assisted learning acceptance among vocational students · IJIET">IT</a>
           </div>
         </div>
       </div>
@@ -672,6 +674,16 @@ title: "Publications"
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
     <strong>Li, B.</strong>, Exter, M., Feng, W., Tang, G., &amp; Xu, K. (2026). A systematic review of language educators' practices and development with GenAI. <em>International Journal of Artificial Intelligence in Education</em>, 100010. <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.ijaied.2026.100010" target="_blank" rel="noopener">DOI</a>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-entry__dot--empty"></div>
+  <div class="pub-entry__body">
+    Ye, J.-H., Yang, X., <strong>Li, B.</strong>, Nong, W., Hong, J.-C., &amp; Wang, L. (2026). Understanding AI-assisted learning acceptance among vocational students: An AIDUA model approach. <em>International Journal of Information and Education Technology, 16</em>(4), 853-863.
+    <div class="pub-tags">
+      <a class="pub-tag pub-tag--doi" href="https://doi.org/10.18178/ijiet.2026.16.4.2557" target="_blank" rel="noopener">DOI</a>
+    </div>
   </div>
 </div>
 
@@ -1063,13 +1075,6 @@ title: "Publications"
   </div>
 </div>
 
-
-<div class="pub-entry">
-  <div class="pub-entry__dot--empty"></div>
-  <div class="pub-entry__body">
-    Ye, J., Yang, X., <strong>Li, B.</strong>, Nong, W., &amp; Wang, L. Factors associated with AI-assisted learning satisfaction and acceptance among vocational college students. <em>International Journal of Information and Education Technology</em>. <span class="pub-status">In press</span>
-  </div>
-</div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>

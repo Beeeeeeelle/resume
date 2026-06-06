@@ -2994,6 +2994,30 @@ body.has-custom-cursor * {
               opacity 0.2s ease;
 }
 
+/* ── Language toggle button ── */
+.bl-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(123, 156, 200, 0.45);
+  background: transparent;
+  color: #4a6e9a;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+.bl-lang-toggle:hover {
+  background: rgba(123, 156, 200, 0.12);
+  border-color: rgba(123, 156, 200, 0.75);
+}
+
 .cursor-ring.is-hovering {
   width: 48px;
   height: 48px;

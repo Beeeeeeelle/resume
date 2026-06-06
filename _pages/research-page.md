@@ -231,26 +231,26 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
 <div class="page-with-rail-nav">
 <nav class="page-section-nav" data-page-nav aria-label="Research page sections">
   <div class="page-section-nav__list">
-    <a class="page-section-nav__link" href="#strand-a">Agency &amp; SDL</a>
-    <a class="page-section-nav__link" href="#strand-b">Authenticity &amp; Assessment</a>
-    <a class="page-section-nav__link" href="#strand-c">Equity &amp; Heterogeneity</a>
-    <a class="page-section-nav__link" href="#strand-d">Literacy &amp; Design</a>
+    <a class="page-section-nav__link" href="#strand-a"><span class="lang-en">Agency &amp; SDL</span><span class="lang-zh" hidden>能动性与自主学习</span></a>
+    <a class="page-section-nav__link" href="#strand-b"><span class="lang-en">Authenticity &amp; Assessment</span><span class="lang-zh" hidden>真实性与评估</span></a>
+    <a class="page-section-nav__link" href="#strand-c"><span class="lang-en">Equity &amp; Heterogeneity</span><span class="lang-zh" hidden>公平性与学习者异质性</span></a>
+    <a class="page-section-nav__link" href="#strand-d"><span class="lang-en">Literacy &amp; Design</span><span class="lang-zh" hidden>AI素养与学习设计</span></a>
   </div>
 </nav>
 
 <div class="page-with-rail-nav__main">
 
-<p class="rp-intro">My research is organized around four connected strands. Click any region of the map to explore the strand in depth.</p>
+<p class="rp-intro"><span class="lang-en">My research is organized around four connected strands. Click any region of the map to explore the strand in depth.</span><span class="lang-zh" hidden>我的研究围绕四个相互关联的方向展开。点击地图中的任意区域，深入了解对应方向。</span></p>
 
 <div class="rp-venn-wrap">
   {% include research-venn.html %}
 </div>
 
 <div class="rp-tabs">
-  <button id="strand-a" class="rp-tab" data-zone="a" onclick="showPanel('a')">Agency &amp; SDL</button>
-  <button id="strand-b" class="rp-tab" data-zone="b" onclick="showPanel('b')">Authenticity &amp; Assessment</button>
-  <button id="strand-c" class="rp-tab" data-zone="c" onclick="showPanel('c')">Equity &amp; Heterogeneity</button>
-  <button id="strand-d" class="rp-tab" data-zone="d" onclick="showPanel('d')">Literacy &amp; Design</button>
+  <button id="strand-a" class="rp-tab" data-zone="a" onclick="showPanel('a')"><span class="lang-en">Agency &amp; SDL</span><span class="lang-zh" hidden>能动性与自主学习</span></button>
+  <button id="strand-b" class="rp-tab" data-zone="b" onclick="showPanel('b')"><span class="lang-en">Authenticity &amp; Assessment</span><span class="lang-zh" hidden>真实性与评估</span></button>
+  <button id="strand-c" class="rp-tab" data-zone="c" onclick="showPanel('c')"><span class="lang-en">Equity &amp; Heterogeneity</span><span class="lang-zh" hidden>公平性与学习者异质性</span></button>
+  <button id="strand-d" class="rp-tab" data-zone="d" onclick="showPanel('d')"><span class="lang-en">Literacy &amp; Design</span><span class="lang-zh" hidden>AI素养与学习设计</span></button>
 </div>
 
 <div class="sp-wrap" id="strand-panel">
@@ -282,7 +282,9 @@ var COLORS = {
 var STRANDS = {
   a: {
     meta: 'Agency & SDL', title: 'AI-Mediated Self-Directed Learning',
+    meta_zh: '能动性与自主学习',
     desc: 'I study how learners plan, prompt, verify, and make meaning with AI in self-directed learning environments. This strand brings together conceptual, measurement, and empirical work on how agency is distributed across personal attributes, learning processes, and contexts when AI becomes part of the workflow.',
+    desc_zh: '我研究学习者在自主学习情境中如何规划、提示、验证，并借助AI建构意义。这一方向整合概念性、测量性与实证性研究，聚焦AI融入学习流程时能动性如何在个人特质、学习过程与情境之间分布。',
     papers: [
       { title: 'Development and Validation of the PA-SDA Scale', venue: 'System', year: '2025', href: 'https://doi.org/10.1016/j.system.2025.103793', status: 'published' },
       { title: 'Reconceptualizing Self-Directed Learning in the Era of Generative AI', venue: 'IEEE TLT', year: '2024', href: 'https://doi.org/10.1109/TLT.2024.3386098', status: 'published' },
@@ -299,7 +301,9 @@ var STRANDS = {
   },
   b: {
     meta: 'Authenticity & Assessment', title: 'Authenticity, Assessment & Judgment',
+    meta_zh: '真实性与评估',
     desc: 'I investigate how AI changes what counts as authentic work, authorship, and good evaluative judgment in educational settings. This strand connects instructor-facing questions about assessment and writing with learner-side questions about ownership, reflection, and responsible AI-supported performance.',
+    desc_zh: '我探究AI如何改变教育情境中对"真实作品"、"作者身份"与"良好评估判断"的认定，连接教师侧的评估与写作问题，以及学生侧的所有权与负责任使用AI的问题。',
     papers: [
       { title: "Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy and Performance", venue: 'British Journal of Educational Technology', year: '2025', href: 'https://doi.org/10.1111/bjet.13588', status: 'published' },
       { title: "Nontraditional Learners' Ownership and Agency with AI Writing Tools", venue: 'Journal of Computing in Higher Education', year: '2025', href: 'https://doi.org/10.1007/s12528-025-09476-y', status: 'published' },
@@ -311,19 +315,23 @@ var STRANDS = {
   },
   c: {
     meta: 'Equity & Heterogeneity', title: 'Learner Heterogeneity & Equity',
+    meta_zh: '公平性与学习者异质性',
     desc: 'I examine how AI-mediated learning varies across multilingual, global, and nontraditional learners rather than assuming one uniform experience. These studies trace where language background, prior preparation, and institutional context shape who benefits from AI support, how, and at what cost.',
+    desc_zh: '我考察AI辅助学习在多语言、全球化与非传统学习者群体中的差异性，而非预设一种统一的经验。这些研究追踪语言背景、前期准备与机构情境如何影响谁受益、如何受益。',
     papers: [
       { title: "Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy and Performance", venue: 'British Journal of Educational Technology', year: '2025', href: 'https://doi.org/10.1111/bjet.13588', status: 'published' },
       { title: "Nontraditional Learners' Ownership and Agency with AI Writing Tools", venue: 'Journal of Computing in Higher Education', year: '2025', href: 'https://doi.org/10.1007/s12528-025-09476-y', status: 'published' },
       { title: 'Empowering Students from Low-Income Families to Improve Writing with ChatGPT', venue: 'Languages', year: '2023', href: 'https://doi.org/10.3390/languages8040238', status: 'published' },
       { title: 'Culturally and Linguistically Responsive Professional Development for AI Integration', venue: 'Online Learning', year: '2023', href: 'https://doi.org/10.24059/olj.v27i4.4003', status: 'published' },
-      { title: 'Factors Associated with AI-Assisted Learning Satisfaction and Acceptance', venue: 'IJIET', year: '', href: null, status: 'in-press' }
+      { title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', year: '2026', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557', status: 'published' }
     ],
     projects: [{ title: 'Dissertation: Global Learners & GenAI', href: '/projects/global-learners-genai/' }]
   },
   d: {
     meta: 'Literacy & Design', title: 'AI Literacy & Learning Design',
+    meta_zh: 'AI素养与学习设计',
     desc: 'I translate research on agency, authenticity, and equity into AI literacy concepts, design principles, and practical learning environments. This strand moves from explanation to action: how should courses, tutoring systems, and institutional supports be designed so AI strengthens reflection and participation rather than passive dependence?',
+    desc_zh: '我将关于能动性、真实性与公平性的研究成果转化为AI素养概念、设计原则与可操作的学习环境。这一方向从解释走向行动：课程、辅导系统与机构支持应如何设计，才能让AI强化反思与参与，而非助长被动依赖？',
     papers: [
       { title: 'AI-Generated Content in Education: Literacy for the Age of Generative AI', venue: 'Palgrave Encyclopedia', year: '2026', href: 'https://doi.org/10.1007/978-3-031-51447-0_260-1', status: 'published' },
       { title: 'Two Years of Innovation: Systematic Review of GenAI in Language Learning', venue: 'Computers and Education: AI', year: '2025', href: 'https://doi.org/10.1016/j.caeai.2025.100445', status: 'published' },
@@ -338,7 +346,9 @@ var STRANDS = {
   },
   ab: {
     meta: 'SDL × Authenticity', title: 'Agency in Authentic Practice',
+    meta_zh: '自主学习 × 真实性',
     desc: 'Work at the intersection of self-directed agency and authentic learning — examining how learners navigate judgment, boundary-setting, and meaningful ownership when AI enters their personal learning workflows.',
+    desc_zh: '自主能动性与真实学习的交汇处——探究当AI进入个人学习流程时，学习者如何应对判断、边界设定与有意义的主体性构建。',
     papers: [
       { title: 'Learning in the Loop: Moments, Mindsets, and Meaning with Generative AI', venue: 'Computers & Education', year: '', href: null, status: 'review' },
       { title: 'Choosing the Future of Learning: Assessing Preferences for Educational GPTs', venue: 'Int. Journal of AI in Education', year: '', href: null, status: 'review' }
@@ -346,19 +356,25 @@ var STRANDS = {
   },
   ac: {
     meta: 'SDL × Equity', title: 'Agency Across Learner Populations',
+    meta_zh: '自主学习 × 公平性',
     desc: 'Work connecting self-directed AI-learning profiles to population-level variation — examining how PA-SDA attributes cluster and evolve across global and multilingual learner groups.',
+    desc_zh: '将自主AI学习画像与群体层面的差异相连接——研究PA-SDA特质如何在全球及多语言学习者中聚类与演变。',
     papers: [{ title: 'Pathways to Proficiency: Mapping Personal Attributes in AI-Integrated SDL', venue: 'Language Learning & Technology', year: '', href: null, status: 'review' }],
     projects: [{ title: 'Dissertation: Global Learners & GenAI', href: '/projects/global-learners-genai/', thumb: '/assets/images/dissertation/three-profiles.png' }]
   },
   bd: {
     meta: 'Authenticity × Design', title: 'Designing for Authentic Learning',
+    meta_zh: '真实性 × 学习设计',
     desc: 'Work translating findings about authentic learning and judgment into concrete system design — how to build AI-powered tools that preserve student ownership and critical thinking.',
+    desc_zh: '将真实学习与判断的研究发现转化为具体系统设计——构建能保护学生主体性与批判性思维的AI工具。',
     papers: [], projects: [{ title: 'PeteChat — Guardrailed AI Tutoring Assistant', href: '/projects/petechat/', thumb: '/assets/images/projects-petechat-interface-v2.png' }]
   },
   cd: {
     meta: 'Equity × Design', title: 'Equitable Learning Design',
+    meta_zh: '公平性 × 学习设计',
     desc: 'Work connecting learner heterogeneity research to design decisions — how to build AI-supported environments that work equitably across diverse learner populations.',
-    papers: [{ title: 'Factors Associated with AI-Assisted Learning Satisfaction and Acceptance', venue: 'IJIET', year: '', href: null, status: 'in-press' }],
+    desc_zh: '将学习者异质性研究与设计决策相连接，构建在多元学习者群体中实现公平效果的AI辅助学习环境。',
+    papers: [{ title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', year: '2026', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557', status: 'published' }],
     projects: []
   }
 };
@@ -367,11 +383,20 @@ var STATUS_LABELS = {
   published: 'Published', review: 'Under Review', revision: 'In Revision',
   'in-press': 'In Press', accepted: 'Accepted', progress: 'In Progress'
 };
+var STATUS_LABELS_ZH = {
+  published: '已发表', review: '审稿中', revision: '修改中',
+  'in-press': '即将出版', accepted: '已接受', progress: '进行中'
+};
+
+var currentZone = 'a';
 
 function showPanel(zone) {
   var data = STRANDS[zone];
   if (!data) return;
+  currentZone = zone;
   var col = COLORS[zone] || COLORS.a;
+  var isZh = window.blLang && window.blLang.get() === 'zh';
+  var sl = isZh ? STATUS_LABELS_ZH : STATUS_LABELS;
 
   document.querySelectorAll('.rv-hit').forEach(function (el) {
     el.classList.toggle('rv-hit--panel-active', el.getAttribute('data-zone') === zone);
@@ -391,16 +416,24 @@ function showPanel(zone) {
   panel.style.setProperty('--sp-badge-bg', col.bg);
 
   // Update header: eyebrow dot + label, description
+  var meta = (isZh && data.meta_zh) ? data.meta_zh : data.meta;
+  var desc = (isZh && data.desc_zh) ? data.desc_zh : data.desc;
   document.getElementById('sp-eyebrow').innerHTML =
-    data.meta + ' <span class="sp-head__dot"></span>';
-  document.getElementById('sp-desc').textContent = data.desc;
+    meta + ' <span class="sp-head__dot"></span>';
+  document.getElementById('sp-desc').textContent = desc;
 
   // Paper cards grid
   var html = '';
+  var papersLabel = isZh ? '论文' : 'Papers';
+  var projectsLabel = isZh ? '相关项目' : 'Related Projects';
+  var viewLabel = isZh ? '↗ 查看项目' : '↗ View project';
+  var readLabel = isZh ? '→ 阅读论文' : '→ Read paper';
+  var learnLabel = isZh ? '→ 了解更多' : '→ Learn more';
+
   if (data.papers && data.papers.length) {
-    html += '<p class="sp-section-label">Papers</p><div class="sp-papers">';
+    html += '<p class="sp-section-label">' + papersLabel + '</p><div class="sp-papers">';
     data.papers.forEach(function (p) {
-      var badge = p.year || STATUS_LABELS[p.status] || '';
+      var badge = p.year || sl[p.status] || '';
       html += '<div class="sp-paper">';
       html += '<div class="sp-paper__top">';
       html += p.href
@@ -409,14 +442,14 @@ function showPanel(zone) {
       if (badge) html += '<span class="sp-paper__badge">' + badge + '</span>';
       html += '</div>';
       if (p.venue) html += '<span class="sp-paper__venue">' + p.venue + '</span>';
-      if (!p.year) html += '<span class="sp-paper__status sp-status--' + p.status + '">' + (STATUS_LABELS[p.status] || p.status) + '</span>';
+      if (!p.year) html += '<span class="sp-paper__status sp-status--' + p.status + '">' + (sl[p.status] || p.status) + '</span>';
       html += '</div>';
     });
     html += '</div>';
   }
 
   if (data.projects && data.projects.length) {
-    html += '<p class="sp-section-label" style="margin-top:14px">Related Projects</p><div class="sp-projects">';
+    html += '<p class="sp-section-label" style="margin-top:14px">' + projectsLabel + '</p><div class="sp-projects">';
     data.projects.forEach(function (p) {
       html += '<a class="sp-project" href="' + p.href + '">';
       if (p.thumb) {
@@ -426,7 +459,7 @@ function showPanel(zone) {
       }
       html += '<div class="sp-project__body">';
       html += '<span class="sp-project__title">' + p.title + '</span>';
-      html += '<span class="sp-project__arrow">↗ View project</span>';
+      html += '<span class="sp-project__arrow">' + viewLabel + '</span>';
       html += '</div></a>';
     });
     html += '</div>';
@@ -440,6 +473,10 @@ function showPanel(zone) {
     contentEl.classList.remove('sp-fading');
   }, 160);
 }
+
+document.addEventListener('bl-lang-change', function () {
+  showPanel(currentZone);
+});
 
 window.showPanel = showPanel;
 

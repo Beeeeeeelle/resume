@@ -271,6 +271,9 @@ function initNewsFilters() {
 
   const typeGroup = root.querySelector('[data-news-type-group]');
   const yearGroup = root.querySelector('[data-news-year-group]');
+  const countEl = document.querySelector('[data-news-count]');
+  const toggleBtn = document.querySelector('[data-news-toggle]');
+  const moreWrap = document.querySelector('[data-news-more]');
   if (!typeGroup || !yearGroup) return;
 
   const typeLabels = {
@@ -291,7 +294,8 @@ function initNewsFilters() {
   });
   const uniqueYears = [...new Set(items.map((item) => item.dataset.newsYear).filter(Boolean))].sort((a, b) => Number(b) - Number(a));
 
-  const state = { type: 'all', year: 'all' };
+  const previewCount = 8;
+  const state = { type: 'all', year: 'all', expanded: false };
 
   const buildButtons = (group, kind, values) => {
     values.forEach((value) => {
@@ -309,6 +313,7 @@ function initNewsFilters() {
 
       button.addEventListener('click', () => {
         state[kind] = value;
+        state.expanded = false;
         render();
       });
 
@@ -320,11 +325,19 @@ function initNewsFilters() {
   buildButtons(yearGroup, 'year', ['all', ...uniqueYears]);
 
   const render = () => {
+    let matchIndex = 0;
+    let matchCount = 0;
+
     items.forEach((item) => {
       const matchesType = state.type === 'all' || item.dataset.newsType === state.type;
       const matchesYear = state.year === 'all' || item.dataset.newsYear === state.year;
-      const visible = matchesType && matchesYear;
+      const matches = matchesType && matchesYear;
+      const visible = matches && (state.expanded || matchIndex < previewCount);
 
+      if (matches) {
+        matchCount += 1;
+        matchIndex += 1;
+      }
       item.hidden = !visible;
       item.classList.toggle('is-hidden', !visible);
     });
@@ -333,7 +346,28 @@ function initNewsFilters() {
       const kind = button.dataset.filterKind;
       button.classList.toggle('is-active', state[kind] === button.dataset.filterValue);
     });
+
+    if (moreWrap) {
+      moreWrap.hidden = matchCount <= previewCount;
+    }
+    if (countEl) {
+      const shown = state.expanded ? matchCount : Math.min(matchCount, previewCount);
+      countEl.textContent = matchCount > previewCount
+        ? `Showing ${shown} of ${matchCount}`
+        : '';
+    }
+    if (toggleBtn) {
+      toggleBtn.hidden = matchCount <= previewCount;
+      toggleBtn.textContent = state.expanded ? 'Show less' : 'View more';
+    }
   };
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      state.expanded = !state.expanded;
+      render();
+    });
+  }
 
   render();
 }
