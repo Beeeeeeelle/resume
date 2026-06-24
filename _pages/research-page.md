@@ -7,26 +7,73 @@ classes: wide
 ---
 
 <style>
-.rp-venn-wrap { margin: 0 0 20px; }
+.rp-statement {
+  max-width: 980px;
+  margin: 0 0 24px;
+  color: #4f5964;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.rp-overview-art {
+  position: relative;
+  margin: 0 0 22px;
+}
+.rp-overview-map {
+  position: relative;
+}
+.rp-overview-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.rp-map-hit {
+  position: absolute;
+  border: 0;
+  border-radius: 22px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.16s ease;
+}
+.rp-map-hit span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.rp-map-hit:hover,
+.rp-map-hit:focus-visible,
+.rp-map-hit--active {
+  background: transparent;
+  outline: none;
+}
+.rp-map-hit--a { left: 10%; top: 7%; width: 32%; height: 43%; }
+.rp-map-hit--b { left: 65%; top: 8%; width: 28%; height: 40%; }
+.rp-map-hit--c { left: 8%; top: 53%; width: 35%; height: 39%; }
+.rp-map-hit--d { left: 63%; top: 53%; width: 30%; height: 38%; }
 .rp-intro { font-size: 14px; line-height: 1.75; color: #666; margin: 0 0 20px; }
 /* ── Tabs: pill with dot, matches homepage card style ── */
 .rp-tabs {
   display: flex;
-  gap: 6px;
-  margin-bottom: 12px;
+  gap: 8px;
+  margin: 0 0 14px;
   flex-wrap: wrap;
 }
 .rp-tab {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 7px 14px;
   border-radius: 99px;
-  border: 1.5px solid #e8e8e8;
+  border: 1.5px solid #dbe5f0;
   background: #fff;
   font-size: 11px;
   font-weight: 700;
-  color: #aaa;
+  color: #7b8794;
   cursor: pointer;
   letter-spacing: 0.03em;
   transition: background 0.15s, border-color 0.15s, color 0.15s;
@@ -54,11 +101,10 @@ classes: wide
 /* ── Outer panel ── */
 .sp-wrap {
   background: #fff;
-  border: 1px solid #e8e8e8;
-  border-top: 3px solid var(--sp-accent, #7b9cc8);
-  border-radius: 14px;
+  border: 1.5px dashed var(--sp-border, rgba(123, 156, 200, 0.42));
+  border-radius: 16px;
   padding: 20px;
-  transition: border-top-color 0.25s;
+  transition: border-color 0.25s;
 }
 
 /* Strand header inside container */
@@ -68,7 +114,7 @@ classes: wide
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #aaa;
+  color: var(--sp-accent, #7b9cc8);
   margin: 0 0 6px;
   display: flex;
   align-items: center;
@@ -83,9 +129,9 @@ classes: wide
   transition: background 0.25s;
 }
 .sp-head__desc {
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.72;
-  color: #444;
+  color: #4f5964;
   margin: 0;
 }
 
@@ -99,9 +145,9 @@ classes: wide
 @media (max-width: 640px) { .sp-papers { grid-template-columns: 1fr; } }
 
 .sp-paper {
-  background: #f7f8fb;
-  border: 1px solid #ebebeb;
-  border-radius: 10px;
+  background: #fbfdff;
+  border: 1px solid #e2ebf4;
+  border-radius: 8px;
   padding: 13px 14px;
   display: flex;
   flex-direction: column;
@@ -161,9 +207,9 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
   display: flex;
   align-items: stretch;
   text-decoration: none;
-  background: #f7f8fb;
-  border: 1px solid #ebebeb;
-  border-radius: 10px;
+  background: #fbfdff;
+  border: 1px solid #e2ebf4;
+  border-radius: 8px;
   overflow: hidden;
   transition: box-shadow 0.15s, transform 0.15s;
 }
@@ -224,8 +270,6 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
   transition: opacity 0.18s ease;
 }
 #sp-content.sp-fading { opacity: 0; }
-
-.rv-hit--panel-active { fill: rgba(0,0,0,0.05) !important; }
 </style>
 
 <div class="page-with-rail-nav">
@@ -240,11 +284,19 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
 
 <div class="page-with-rail-nav__main">
 
-<p class="rp-intro"><span class="lang-en">My research is organized around four connected strands. Click any region of the map to explore the strand in depth.</span><span class="lang-zh" hidden>我的研究围绕四个相互关联的方向展开。点击地图中的任意区域，深入了解对应方向。</span></p>
+<p class="rp-statement"><span class="lang-en">My research examines how generative AI can support learning without displacing human agency. I study learner differences, authentic assessment, equity, and AI literacy, translating empirical evidence into learning designs that help people remain in charge of their learning.</span><span class="lang-zh" hidden>我的研究关注生成式人工智能如何支持学习，而不削弱人的主体能动性。我研究学习者差异、真实评价、教育公平与AI素养，并将实证发现转化为帮助学习者持续掌握主动权的学习设计。</span></p>
 
-<div class="rp-venn-wrap">
-  {% include research-venn.html %}
-</div>
+<figure class="rp-overview-art" data-reveal>
+  <div class="rp-overview-map" aria-label="Clickable research strand map">
+    <img src="/assets/images/research/human-centered-ai-learning-strands.png" alt="Illustrated map of four human-centered AI learning research strands" data-no-lightbox="true">
+    <button class="rp-map-hit rp-map-hit--a" type="button" data-zone="a" onclick="showPanel('a', true)"><span>AI-mediated self-directed learning</span></button>
+    <button class="rp-map-hit rp-map-hit--b" type="button" data-zone="b" onclick="showPanel('b', true)"><span>Authenticity and assessment</span></button>
+    <button class="rp-map-hit rp-map-hit--c" type="button" data-zone="c" onclick="showPanel('c', true)"><span>Learner heterogeneity and equity</span></button>
+    <button class="rp-map-hit rp-map-hit--d" type="button" data-zone="d" onclick="showPanel('d', true)"><span>AI literacy and design translation</span></button>
+  </div>
+</figure>
+
+<p class="rp-intro"><span class="lang-en">Click any region of the map to explore the strand in depth.</span><span class="lang-zh" hidden>点击图中的任意区域，深入了解对应方向。</span></p>
 
 <div class="rp-tabs">
   <button id="strand-a" class="rp-tab" data-zone="a" onclick="showPanel('a')"><span class="lang-en">Agency &amp; SDL</span><span class="lang-zh" hidden>能动性与自主学习</span></button>
@@ -295,7 +347,7 @@ var STRANDS = {
       { title: 'A Meta-Analysis of AI-Assisted Self-Regulated Learning', venue: 'Online Learning', year: '', href: null, status: 'review' }
     ],
     projects: [
-      { title: 'Dissertation: Profiling SDL with Generative AI', href: '/projects/global-learners-genai/', thumb: '/assets/images/dissertation/three-profiles.png' },
+      { title: 'Dissertation: AI in Learning, Humans in Charge', href: '/projects/global-learners-genai/', thumb: '/assets/images/dissertation/progressive-narrowing-2026.png' },
       { title: 'Collaborative Problem Solving — Intel Labs', href: '/projects/cps-ai-environments/', thumb: '/assets/images/publications/cps-intel_1.jpg' }
     ]
   },
@@ -325,7 +377,7 @@ var STRANDS = {
       { title: 'Culturally and Linguistically Responsive Professional Development for AI Integration', venue: 'Online Learning', year: '2023', href: 'https://doi.org/10.24059/olj.v27i4.4003', status: 'published' },
       { title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', year: '2026', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557', status: 'published' }
     ],
-    projects: [{ title: 'Dissertation: Global Learners & GenAI', href: '/projects/global-learners-genai/' }]
+    projects: [{ title: 'Dissertation: AI in Learning, Humans in Charge', href: '/projects/global-learners-genai/' }]
   },
   d: {
     meta: 'Literacy & Design', title: 'AI Literacy & Learning Design',
@@ -360,7 +412,7 @@ var STRANDS = {
     desc: 'Work connecting self-directed AI-learning profiles to population-level variation — examining how PA-SDA attributes cluster and evolve across global and multilingual learner groups.',
     desc_zh: '将自主AI学习画像与群体层面的差异相连接——研究PA-SDA特质如何在全球及多语言学习者中聚类与演变。',
     papers: [{ title: 'Pathways to Proficiency: Mapping Personal Attributes in AI-Integrated SDL', venue: 'Language Learning & Technology', year: '', href: null, status: 'review' }],
-    projects: [{ title: 'Dissertation: Global Learners & GenAI', href: '/projects/global-learners-genai/', thumb: '/assets/images/dissertation/three-profiles.png' }]
+    projects: [{ title: 'Dissertation: AI in Learning, Humans in Charge', href: '/projects/global-learners-genai/', thumb: '/assets/images/dissertation/wave1-profile-structure-2026.png' }]
   },
   bd: {
     meta: 'Authenticity × Design', title: 'Designing for Authentic Learning',
@@ -390,7 +442,7 @@ var STATUS_LABELS_ZH = {
 
 var currentZone = 'a';
 
-function showPanel(zone) {
+function showPanel(zone, shouldScroll) {
   var data = STRANDS[zone];
   if (!data) return;
   currentZone = zone;
@@ -398,8 +450,8 @@ function showPanel(zone) {
   var isZh = window.blLang && window.blLang.get() === 'zh';
   var sl = isZh ? STATUS_LABELS_ZH : STATUS_LABELS;
 
-  document.querySelectorAll('.rv-hit').forEach(function (el) {
-    el.classList.toggle('rv-hit--panel-active', el.getAttribute('data-zone') === zone);
+  document.querySelectorAll('.rp-map-hit').forEach(function (el) {
+    el.classList.toggle('rp-map-hit--active', el.getAttribute('data-zone') === zone);
   });
 
   var mainZone = zone.length === 1 ? zone : null;
@@ -414,6 +466,7 @@ function showPanel(zone) {
   var panel = document.getElementById('strand-panel');
   panel.style.setProperty('--sp-accent', col.accent);
   panel.style.setProperty('--sp-badge-bg', col.bg);
+  panel.style.setProperty('--sp-border', col.accent);
 
   // Update header: eyebrow dot + label, description
   var meta = (isZh && data.meta_zh) ? data.meta_zh : data.meta;
@@ -472,6 +525,12 @@ function showPanel(zone) {
     contentEl.innerHTML = html;
     contentEl.classList.remove('sp-fading');
   }, 160);
+
+  if (shouldScroll) {
+    setTimeout(function () {
+      document.getElementById('strand-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 90);
+  }
 }
 
 document.addEventListener('bl-lang-change', function () {
@@ -479,18 +538,6 @@ document.addEventListener('bl-lang-change', function () {
 });
 
 window.showPanel = showPanel;
-
-document.addEventListener('click', function (e) {
-  if (!document.getElementById('strand-panel')) return;
-  var hit = e.target.closest('.rv-hit');
-  if (!hit) return;
-  e.stopPropagation();
-  showPanel(hit.getAttribute('data-zone'));
-  // B — scroll panel into view
-  setTimeout(function () {
-    document.getElementById('strand-panel').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }, 80);
-}, true);
 
 // Wire rail nav links to also call showPanel
 var NAV_ZONE_MAP = { '#strand-a': 'a', '#strand-b': 'b', '#strand-c': 'c', '#strand-d': 'd' };

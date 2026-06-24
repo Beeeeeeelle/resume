@@ -1,5 +1,5 @@
 ---
-title: "Profiling Self-Directed Learning with Generative AI"
+title: "AI in Learning, Humans in Charge"
 permalink: /projects/global-learners-genai/
 layout: single
 classes: wide
@@ -9,261 +9,507 @@ author_profile: false
 {% include project-case-styles.html %}
 
 <style>
-/* ── Research line ── */
-.rl-wrap {
-  margin: 32px 0 40px;
+.diss-page {
+  --ink: #2f3742;
+  --muted: #667280;
+  --line: #dfe7f0;
+  --soft: #f7fafc;
+  --blue: #2f7f97;
+  --orange: #e66f28;
+  --green: #5f9275;
+  color: var(--ink);
 }
-.rl-group-label {
-  font-size: 10px;
-  font-weight: 800;
+.diss-page p {
+  line-height: 1.68;
+}
+.diss-back {
+  margin: 0 0 18px;
+  font-size: 0.86rem;
+}
+.diss-back a {
+  color: #6d7885;
+  text-decoration: none;
+}
+.diss-kicker {
+  margin: 0 0 12px;
+  color: var(--blue);
+  font-size: 0.74rem;
+  font-weight: 850;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #aaa;
-  margin-bottom: 8px;
 }
-.rl-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+.diss-hero {
+  margin: 10px 0 42px;
 }
-.rl-step {
-  font-size: 12px;
-  font-weight: 600;
-  color: #999;
-  background: #f4f4f4;
-  border-radius: 5px;
-  padding: 5px 11px;
-  white-space: nowrap;
+.diss-hero__title {
+  max-width: 900px;
+  margin: 0 0 12px;
+  color: #222831;
+  font-size: clamp(2.5rem, 6vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: 0;
 }
-.rl-step--active {
-  color: #c0622a;
-  background: #fff3ee;
-  border: 1px solid rgba(192,98,42,0.18);
+.diss-hero__subtitle {
+  max-width: 820px;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.24rem);
 }
-.rl-arrow {
-  color: #ccc;
-  font-size: 12px;
-  flex-shrink: 0;
+.diss-hero__claim {
+  max-width: 980px;
+  margin: 22px 0 0;
+  padding-left: 22px;
+  border-left: 3px solid var(--orange);
+  color: #394551;
+  font-size: 1.02rem;
 }
-.rl-connector {
-  width: 2px;
-  height: 14px;
-  background: #e0e0e0;
-  margin-left: 20px;
+.diss-figure {
+  margin: 0;
 }
-
-/* ── Section label ── */
-.diss-section-label {
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #c0622a;
-  margin: 52px 0 14px;
-  padding-bottom: 7px;
-  border-bottom: 2px solid #f0e8e3;
-}
-
-/* ── Figures ── */
-.diss-fig {
-  margin: 20px 0 28px;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #e8e8e8;
-  background: #fff;
-}
-.diss-fig img {
-  width: 100%;
+.diss-figure img {
   display: block;
+  width: 100%;
+  height: auto;
 }
-.diss-fig figcaption {
-  font-size: 12px;
-  color: #888;
-  padding: 9px 14px;
-  background: #fafafa;
-  border-top: 1px solid #eee;
-  line-height: 1.5;
+.diss-figure figcaption {
+  margin-top: 8px;
+  color: #7a8592;
+  font-size: 0.78rem;
+  line-height: 1.48;
 }
-.diss-fig-half {
+.diss-figure--framed {
+  padding: 12px;
+  border: 1px solid rgba(223, 231, 240, 0.9);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(34, 47, 62, 0.055);
+}
+.diss-figure--flat {
+  padding: 0;
+}
+.diss-figure--wide {
+  margin-top: 24px;
+}
+.diss-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 28px 0 58px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.diss-stat {
+  padding: 18px 18px 16px 0;
+}
+.diss-stat + .diss-stat {
+  border-left: 1px solid var(--line);
+  padding-left: 18px;
+}
+.diss-stat strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #27313d;
+  font-size: 1.85rem;
+  line-height: 1;
+}
+.diss-stat span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.42;
+}
+.diss-section {
+  margin: 64px 0;
+}
+.diss-section--tight {
+  margin-top: 42px;
+}
+.diss-section__head {
+  display: grid;
+  grid-template-columns: 0.36fr 0.64fr;
+  gap: 34px;
+  align-items: start;
+  margin-bottom: 22px;
+}
+.diss-section__num {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--orange);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.diss-section h2 {
+  margin: 0;
+  color: #242b34;
+  font-size: clamp(1.5rem, 2.8vw, 2.7rem);
+  line-height: 1.08;
+}
+.diss-section__head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+.diss-foundation {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 18px;
+  align-items: start;
+}
+.diss-arc {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.diss-arc__item {
+  padding: 20px 20px 20px 0;
+}
+.diss-arc__item + .diss-arc__item {
+  border-left: 1px solid var(--line);
+  padding-left: 20px;
+}
+.diss-arc__item span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.diss-arc__item h3 {
+  margin: 0 0 7px;
+  color: #26313c;
+  font-size: 1.08rem;
+}
+.diss-arc__item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.diss-study3 {
+  margin: 78px calc(50% - 50vw);
+  padding: 58px max(32px, calc((100vw - 1180px) / 2));
+  background: linear-gradient(180deg, #fbfdff 0%, #fff 42%, #f8fbfb 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.diss-study3__intro {
+  display: grid;
+  grid-template-columns: 0.45fr 0.55fr;
+  gap: 34px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+.diss-study3__intro h2 {
+  margin: 0;
+  color: #222831;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+.diss-study3__intro p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+.diss-sequence {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 34px;
+}
+.diss-step {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.32fr) minmax(0, 0.68fr);
+  gap: 28px;
+  align-items: center;
+  padding-top: 26px;
+  border-top: 1px solid rgba(223, 231, 240, 0.92);
+}
+.diss-step--visual-first {
+  grid-template-columns: minmax(0, 0.64fr) minmax(260px, 0.36fr);
+}
+.diss-step__copy h3 {
+  margin: 0 0 10px;
+  color: #26313c;
+  font-size: clamp(1.26rem, 2vw, 1.9rem);
+  line-height: 1.12;
+}
+.diss-step__copy p {
+  margin: 0;
+  color: var(--muted);
+}
+.diss-step__copy .diss-mini {
+  margin-bottom: 8px;
+  color: var(--orange);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.diss-profile-counts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+.diss-profile-counts div {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+.diss-profile-counts strong {
+  display: block;
+  color: #26313c;
+  font-size: 1.38rem;
+  line-height: 1;
+}
+.diss-profile-counts span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.diss-two-up {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin: 20px 0 28px;
+  gap: 18px;
+}
+.diss-insight {
+  max-width: 980px;
+  margin: 34px auto 0;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--line);
+  color: #394551;
+  font-size: 1.02rem;
+}
+.diss-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.diss-link {
+  border: 1px solid #cfdceb;
+  border-radius: 999px;
+  padding: 9px 14px;
+  background: #fff;
+  color: #2f5e8f;
+  font-size: 0.86rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+.diss-link:hover {
+  background: #f3f8ff;
+  text-decoration: none;
+}
+@media (max-width: 980px) {
+  .diss-section__head,
+  .diss-foundation,
+  .diss-study3__intro,
+  .diss-step,
+  .diss-step--visual-first,
+  .diss-two-up {
+    grid-template-columns: 1fr;
+  }
+  .diss-strip,
+  .diss-arc {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .diss-stat,
+  .diss-stat + .diss-stat,
+  .diss-arc__item,
+  .diss-arc__item + .diss-arc__item {
+    border-left: 0;
+    padding-left: 0;
+  }
 }
 @media (max-width: 640px) {
-  .diss-fig-half { grid-template-columns: 1fr; }
-}
-.diss-fig-half .diss-fig { margin: 0; }
-
-/* ── Takeaway ── */
-.diss-takeaway {
-  background: linear-gradient(135deg, #fff8f5, #fff);
-  border: 1px solid rgba(192,98,42,0.15);
-  border-left: 4px solid #c0622a;
-  border-radius: 0 8px 8px 0;
-  padding: 16px 20px;
-  margin: 24px 0 36px;
-}
-.diss-takeaway__label {
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #c0622a;
-  margin-bottom: 6px;
-}
-.diss-takeaway__text {
-  font-size: 14px;
-  color: #222;
-  line-height: 1.65;
-  margin: 0;
+  .diss-hero__title {
+    font-size: clamp(2.1rem, 13vw, 3.35rem);
+    line-height: 1.03;
+  }
+  .diss-hero__subtitle {
+    font-size: 0.98rem;
+  }
+  .diss-strip,
+  .diss-arc,
+  .diss-profile-counts {
+    grid-template-columns: 1fr;
+  }
+  .diss-study3 {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 }
 </style>
 
-<div class="project-case">
-  <p class="project-case__back"><a href="/research/">&larr; Back to Research</a></p>
-  <p class="project-case__eyebrow">Dissertation · In Progress</p>
-  <p class="project-case__lede">A cross-sectional latent profile analysis with exploratory longitudinal validation examining how global language learners differ in their AI-mediated self-directed learning and how those patterns evolve over time.</p>
+<div class="project-case diss-page">
+  <p class="diss-back"><a href="/research/">&larr; Back to Research</a></p>
 
-  <div class="project-case__chips">
-    <span class="project-case__chip">Latent profile analysis</span>
-    <span class="project-case__chip">Person-centered analytics</span>
-    <span class="project-case__chip">Longitudinal mixed methods</span>
-    <span class="project-case__chip">N = 693</span>
-  </div>
+  <section class="diss-hero">
+    <p class="diss-kicker">Doctoral dissertation &middot; Purdue University &middot; Defended June 2, 2026</p>
+    <h1 class="diss-hero__title">AI in Learning, Humans in Charge</h1>
+    <p class="diss-hero__subtitle">Mapping, Measuring, and Modeling Self-Directed Language Learning with Generative AI</p>
 
-  <div class="rl-wrap">
-    <p class="rl-group-label">Foundation</p>
-    <div class="rl-row">
-      <span class="rl-step">YouTube studies</span>
-      <span class="rl-arrow">→</span>
-      <span class="rl-step">Interview studies</span>
-      <span class="rl-arrow">→</span>
-      <span class="rl-step">Systematic reviews</span>
-      <span class="rl-arrow">→</span>
-      <span class="rl-step">AI-SDL Framework</span>
-      <span class="rl-arrow">→</span>
-      <span class="rl-step">PA-SDA Scale</span>
-    </div>
-    <div class="rl-connector"></div>
-    <p class="rl-group-label">Dissertation</p>
-    <div class="rl-row">
-      <span class="rl-step rl-step--active">Core Study 1 — Learner Profiling & Longitudinal Tracking</span>
-      <span class="rl-arrow">→</span>
-      <span class="rl-step rl-step--active">Core Study 2 — Learning in the Loop</span>
-    </div>
-  </div>
-
-  <div class="project-case__stats">
-    <div class="project-case__stat">
-      <span class="project-case__stat-value">693</span>
-      <span class="project-case__stat-label">Wave 1 participants (global, multilingual)</span>
-    </div>
-    <div class="project-case__stat">
-      <span class="project-case__stat-value">29</span>
-      <span class="project-case__stat-label">Wave 2 follow-up with qualitative interviews</span>
-    </div>
-    <div class="project-case__stat">
-      <span class="project-case__stat-value">3</span>
-      <span class="project-case__stat-label">latent profiles identified at baseline</span>
-    </div>
-    <div class="project-case__stat">
-      <span class="project-case__stat-value">4</span>
-      <span class="project-case__stat-label">transition mechanisms from qualitative integration</span>
-    </div>
-  </div>
-
-  <p class="diss-section-label">Theoretical Foundation — AI-SDL Framework</p>
-
-  <p>Built on Song and Hill's (2007) SDL model, the AI-Integrated Self-Directed Learning Framework (Li et al., 2024) recast learner attributes as five AI-contextualized dimensions — self-efficacy, attitude, motivation, strategy use, and resource use — and recast the learning process as autonomous-adaptive rather than linear. The framework operates across local and global levels, situating learner–AI interaction within sociocultural, institutional, and design contexts.</p>
-
-  <div class="diss-fig-half">
-    <figure class="diss-fig">
-      <img src="/assets/images/dissertation/framework-global-local.png" alt="AI-SDL Framework: global and local levels" />
-      <figcaption>Global and local level structure of the AI-SDL Framework.</figcaption>
+    <figure class="diss-figure diss-figure--flat diss-figure--wide">
+      <img src="/assets/images/dissertation/progressive-narrowing-2026.png" alt="Progressive narrowing across the three-study dissertation" />
+      <figcaption>Figure 5.1. The dissertation narrows from field mapping, to measurement, to learner-profile modeling.</figcaption>
     </figure>
-    <figure class="diss-fig">
-      <img src="/assets/images/dissertation/framework-process.png" alt="Autonomous-adaptive process cycle" />
-      <figcaption>The autonomous-adaptive process: planning, monitoring, adapting, evaluating.</figcaption>
+
+    <p class="diss-hero__claim">The project asks how learners can use GenAI without giving up agency, authentic work, or learning quality. The answer is not simply "more AI use"; it is whether learners can regulate goals, verify outputs, and stay in charge of interpretation.</p>
+  </section>
+
+  <div class="diss-strip" aria-label="Dissertation summary">
+    <div class="diss-stat">
+      <strong>3</strong>
+      <span>connected studies</span>
+    </div>
+    <div class="diss-stat">
+      <strong>693</strong>
+      <span>complete Wave 1 cases</span>
+    </div>
+    <div class="diss-stat">
+      <strong>29</strong>
+      <span>matched follow-up learners</span>
+    </div>
+    <div class="diss-stat">
+      <strong>3</strong>
+      <span>PA-SDA learner profiles</span>
+    </div>
+  </div>
+
+  <section class="diss-section diss-section--tight">
+    <div class="diss-section__head">
+      <div>
+        <span class="diss-section__num">Foundation</span>
+        <h2>First, define what learner agency means in AI-mediated SDL.</h2>
+      </div>
+      <p>The dissertation builds from the AI-integrated self-directed learning framework and the PA-SDA personal-attribute structure. These figures set up the local learner-AI relationship before the empirical profile analysis begins.</p>
+    </div>
+
+    <div class="diss-foundation">
+      <figure class="diss-figure diss-figure--framed">
+        <img src="/assets/images/dissertation/ai-sdl-dimensions-2026.png" alt="AI-SDL Framework dimensions" />
+        <figcaption>Figure 4.1. AI-SDL framework dimensions.</figcaption>
+      </figure>
+      <figure class="diss-figure diss-figure--framed">
+        <img src="/assets/images/dissertation/ai-sdl-local-level-2026.png" alt="Local level of the AI-integrated SDL framework" />
+        <figcaption>Figure 4.2. Local level of the AI-integrated SDL framework.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="diss-section">
+    <div class="diss-section__head">
+      <div>
+        <span class="diss-section__num">Three-study arc</span>
+        <h2>The dissertation moves from landscape to scale to profiles.</h2>
+      </div>
+      <p>Rather than treating GenAI learning as one broad behavior, the project gradually narrows the unit of analysis: the field, the measurement model, and finally learner heterogeneity.</p>
+    </div>
+
+    <figure class="diss-figure diss-figure--flat">
+      <img src="/assets/images/dissertation/research-design-2026.png" alt="Research design for the final dissertation study" />
+      <figcaption>Figure 4.3. Research design connecting the three-study dissertation arc and the mixed-methods profile analysis.</figcaption>
     </figure>
-  </div>
 
-  <p class="diss-section-label">Core Study 1 — Learner Profiling & Longitudinal Tracking</p>
-
-  <figure class="diss-fig">
-    <img src="/assets/images/dissertation/study-design.png" alt="Research design: Wave 1 cross-sectional LPA, Wave 2 fixed-reference follow-up, mixed-methods integration" />
-    <figcaption>Study design: Wave 1 cross-sectional LPA (N = 693, late 2024) → Wave 2 fixed-reference longitudinal validation (n = 29, mid-2025) → convergent mixed-methods integration.</figcaption>
-  </figure>
-
-  <figure class="diss-fig">
-    <img src="/assets/images/dissertation/sample-flow.png" alt="Sample flow from 973 starts to three profiles and Wave 2 follow-up cohort" />
-    <figcaption>Sample flow: 973 starts → 693 complete cases retained → three profiles (Lower-standing 4.78%, Mid-range 71.43%, Higher-standing 22.81%) → 29 Wave 2 follow-up participants.</figcaption>
-  </figure>
-
-  <figure class="diss-fig">
-    <img src="/assets/images/dissertation/profile-comparison.png" alt="Profile comparison across five PA-SDA dimensions: Wave 1 and Wave 2 mean scores" />
-    <figcaption>Mean PA-SDA scores across five dimensions by profile, comparing Wave 1 baseline (solid lines) to Wave 2 follow-up (dashed lines) under the fixed reference model.</figcaption>
-  </figure>
-
-  <figure class="diss-fig">
-    <img src="/assets/images/dissertation/transitions.png" alt="Fixed-reference transitions across profiles from Wave 1 to Wave 2" />
-    <figcaption>Fixed-reference transition diagram. Four pathways observed: stable mid-range (48.3%), higher-to-mid recalibration (20.7%), mid-to-higher growth (13.8%), stable higher (17.2%). Zero movement into or out of the lower-standing profile.</figcaption>
-  </figure>
-
-  <div class="diss-takeaway">
-    <p class="diss-takeaway__label">Core Study 1 Finding</p>
-    <p class="diss-takeaway__text">AI-mediated self-directed learning is heterogeneous at baseline and largely stable over time. Apparent decline often reflects strategic recalibration — not regression. The GenAI learner landscape is dominated by a mid-range majority capable yet not yet fully strategically integrated.</p>
-  </div>
-
-  <figure class="diss-fig">
-    <img src="/assets/images/dissertation/mechanisms-table.png" alt="Four transition mechanisms: bounded augmentation, iterative refinement, depth-first recalibration, strategic partnership" />
-    <figcaption>Four qualitative mechanisms explain the human logic behind profile transitions, with quantitative signals and exemplar voices from interview data.</figcaption>
-  </figure>
-
-  <figure class="diss-fig">
-    <img src="/assets/images/dissertation/pca-movement.png" alt="PCA space showing observed movement across four transition pathways" />
-    <figcaption>Observed movement through the fixed-reference personal-attribute space. Panels share the same PCA coordinate system, showing only the four observed transition pathways.</figcaption>
-  </figure>
-
-  <p class="diss-section-label">Core Study 2 — Learning in the Loop</p>
-
-  <div class="project-case__detail-grid">
-    <div class="project-case__panel">
-      <span class="project-case__panel-label">Design</span>
-      <p>A phenomenologically informed qualitative study with the same Wave 2 cohort (n = 29). Semi-structured interviews captured learning moments, meaning-making, and boundary-setting as they occurred in lived AI-mediated self-directed learning practice.</p>
+    <div class="diss-arc" aria-label="Three dissertation studies">
+      <article class="diss-arc__item">
+        <span>Study 1</span>
+        <h3>Map the field</h3>
+        <p>What did early ChatGPT and language-education research make visible, and what did it miss?</p>
+      </article>
+      <article class="diss-arc__item">
+        <span>Study 2</span>
+        <h3>Build PA-SDA</h3>
+        <p>How can AI-mediated self-directed learning attributes be measured with a validated scale?</p>
+      </article>
+      <article class="diss-arc__item">
+        <span>Study 3</span>
+        <h3>Model learners</h3>
+        <p>How do learner attributes cluster, and what happens when learners are followed over time?</p>
+      </article>
     </div>
-    <div class="project-case__panel">
-      <span class="project-case__panel-label">Key Finding</span>
-      <p>AI entered the execution of self-directed learning through an iterative loop of prompting, evaluating, verifying, and adapting. Agency showed up through verification routines, attempt-first rules, and selective trust — not through frequency of use.</p>
-    </div>
-  </div>
+  </section>
 
-  <div class="project-case__detail-grid">
-    <div class="project-case__panel">
-      <span class="project-case__panel-label">Learning Moment Types</span>
-      <p>Conceptual moments (AI surfaced new frameworks), expressive moments (AI offered linguistic alternatives), reflective moments (AI prompted metacognitive awareness), and generative moments (AI co-produced new ideas). Moment types mapped onto learners' existing strategic profiles.</p>
+  <section class="diss-study3">
+    <div class="diss-study3__intro">
+      <h2>Study 3 is the core story.</h2>
+      <p>The final study uses PA-SDA to model learner heterogeneity. It starts with 693 Wave 1 learners, identifies three personal-attribute profiles, then follows 29 matched participants with a fixed-reference Wave 2 analysis and interview interpretation.</p>
     </div>
-    <div class="project-case__panel">
-      <span class="project-case__panel-label">Constraint Layer</span>
-      <p>Policy ambiguity, cost, ethical concerns, and authentic voice shaped what learners were willing to do with AI — functioning as a global-level layer that bounded local learner–AI interaction regardless of individual attributes.</p>
+
+    <div class="diss-sequence">
+      <div class="diss-step">
+        <div class="diss-step__copy">
+          <p class="diss-mini">Step 1</p>
+          <h3>Start with the analytic sample.</h3>
+          <p>The sample flow matters because the longitudinal layer is intentionally cautious: large baseline profile modeling, small matched follow-up, and qualitative interpretation rather than causal transition claims.</p>
+        </div>
+        <figure class="diss-figure diss-figure--framed">
+          <img src="/assets/images/dissertation/sample-flow-fixed-reference-2026.png" alt="Sample flow for the fixed-reference PA-SDA personal-attribute analysis" />
+          <figcaption>Figure 4.4. Sample flow and analytic subsets for the fixed-reference analysis.</figcaption>
+        </figure>
+      </div>
+
+      <div class="diss-step diss-step--visual-first">
+        <figure class="diss-figure diss-figure--framed">
+          <img src="/assets/images/dissertation/wave1-profile-structure-2026.png" alt="Wave 1 PA-SDA personal-attribute profile structure" />
+          <figcaption>Figure 4.5. Wave 1 PA-SDA personal-attribute profile structure.</figcaption>
+        </figure>
+        <div class="diss-step__copy">
+          <p class="diss-mini">Step 2</p>
+          <h3>Find the learner profiles.</h3>
+          <p>The main baseline finding is heterogeneity. Learners do not simply use AI more or less; their confidence, attitude, motivation, resource use, and strategy use cluster into distinct profiles.</p>
+          <div class="diss-profile-counts" aria-label="Profile counts">
+            <div><strong>33</strong><span>lower-standing</span></div>
+            <div><strong>495</strong><span>mid-range</span></div>
+            <div><strong>165</strong><span>higher-standing</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diss-step">
+        <div class="diss-step__copy">
+          <p class="diss-mini">Step 3</p>
+          <h3>Hold the reference model still.</h3>
+          <p>Wave 2 participants are classified against the retained Wave 1 reference model. That makes the follow-up descriptive and interpretable: it shows where learners land relative to the original profile structure.</p>
+        </div>
+        <figure class="diss-figure diss-figure--framed">
+          <img src="/assets/images/dissertation/fixed-reference-patterns-2026.png" alt="Fixed-reference PA-SDA profile patterns across waves" />
+          <figcaption>Figure 4.6. Fixed-reference profile patterns across waves.</figcaption>
+        </figure>
+      </div>
+
+      <div class="diss-step diss-step--visual-first">
+        <figure class="diss-figure diss-figure--framed">
+          <img src="/assets/images/dissertation/fixed-reference-movement-2026.png" alt="Fixed-reference movement across PA-SDA personal-attribute profiles" />
+          <figcaption>Figure 4.7. Fixed-reference movement across profiles.</figcaption>
+        </figure>
+        <div class="diss-step__copy">
+          <p class="diss-mini">Step 4</p>
+          <h3>Read movement as stability, growth, or recalibration.</h3>
+          <p>Most mid-range cases stayed mid-range, some moved upward, and no matched follow-up case originated from the lower-standing profile. The movement figure is therefore a descriptive map, not a causal transition model.</p>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="diss-takeaway">
-    <p class="diss-takeaway__label">Core Study 2 Finding</p>
-    <p class="diss-takeaway__text">AI in self-directed learning behaved less like a passive tool and more like a co-regulatory partner — entering the execution of learning rather than merely surrounding it. What mattered most was not how often learners used AI, but whether they retained interpretive authority over its outputs.</p>
-  </div>
+    <p class="diss-insight">The Study 3 contribution is the person-centered view: GenAI-supported learning is not one uniform experience. Learners differ in readiness, strategy, and capacity to maintain agency while working with AI.</p>
+  </section>
 
-  <section class="project-case__section">
-    <h2>Related Evidence Base</h2>
-    <p>This dissertation builds on a connected line of published work spanning early empirical studies, framework development, and scale validation.</p>
-    <div class="project-case__links">
-      <a class="project-case__link" href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" rel="noopener">Reconceptualizing SDL × GenAI</a>
-      <a class="project-case__link" href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" rel="noopener">PA-SDA Scale (System)</a>
-      <a class="project-case__link" href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" rel="noopener">SDL with GenAI: YouTube Creators</a>
-      <a class="project-case__link" href="https://doi.org/10.4018/IJCALLT.326135" target="_blank" rel="noopener">Multilingual ChatGPT Applications</a>
+  <section class="diss-section">
+    <div class="diss-section__head">
+      <div>
+        <span class="diss-section__num">Evidence base</span>
+        <h2>The dissertation connects framework, scale, and empirical modeling.</h2>
+      </div>
+      <p>This project builds on a connected line of published work on self-directed learning, GenAI-supported language learning, and PA-SDA measurement.</p>
+    </div>
+    <div class="diss-links">
+      <a class="diss-link" href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" rel="noopener">AI-SDL Framework</a>
+      <a class="diss-link" href="https://doi.org/10.1016/j.system.2025.103793" target="_blank" rel="noopener">PA-SDA Scale</a>
+      <a class="diss-link" href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" rel="noopener">SDL with GenAI</a>
+      <a class="diss-link" href="https://doi.org/10.4018/IJCALLT.326135" target="_blank" rel="noopener">Multilingual ChatGPT Applications</a>
     </div>
   </section>
 </div>

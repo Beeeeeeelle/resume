@@ -75,10 +75,13 @@
               {% if site.subtitle %}<span class="mobile-nav__brand-subtitle">{{ site.subtitle | escape_once | strip }}</span>{% endif %}
             </span>
           </a>
-          <button class="mobile-nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="dialog">
-            <span class="mobile-nav__toggle-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_toggle_label | default: "Toggle menu" }}</span>
-          </button>
+          <div class="mobile-nav__actions">
+            <button class="bl-lang-toggle mobile-nav__lang" type="button" aria-label="切换为中文">中</button>
+            <button class="mobile-nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="dialog">
+              <span class="mobile-nav__toggle-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_toggle_label | default: "Toggle menu" }}</span>
+            </button>
+          </div>
         </div>
         <div class="mobile-nav__overlay" data-mobile-nav-overlay hidden aria-hidden="true"></div>
         <div class="mobile-nav__panel" id="mobile-nav-panel" role="dialog" aria-modal="true" aria-hidden="true" hidden>

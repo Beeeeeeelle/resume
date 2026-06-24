@@ -137,17 +137,19 @@
     },
     {
       "id": "global-learners-genai",
-      "title": "Global Learners & GenAI",
+      "title": "AI in Learning, Humans in Charge",
       "url": "https://www.beeelle.com/projects/global-learners-genai/",
-      "summary": "Dissertation project examining how global and multilingual learners use generative AI over time, with attention to equity and learner differences.",
+      "summary": "Doctoral dissertation examining self-directed language learning with generative AI through three connected studies: field mapping, PA-SDA scale development, and learner-profile modeling.",
       "tags": [
         "dissertation",
         "global learners",
         "multilingual learners",
-        "longitudinal",
+        "PA-SDA Scale",
+        "learner profiles",
+        "fixed-reference follow-up",
         "equity"
       ],
-      "content": "This dissertation examines how global and multilingual learners use generative AI over time, with attention to personal attributes, learning processes, and equity across populations. It uses longitudinal mixed methods and compares learners across linguistic, national, and socioeconomic backgrounds. The project asks how adoption, adaptation, and meaning-making with generative AI diverge in consequential ways. The expected completion timeline is 2026."
+      "content": "Belle Li's 2026 dissertation, AI in Learning, Humans in Charge: Mapping, Measuring, and Modeling Self-Directed Language Learning with Generative AI, examines how language learners keep agency, authenticity, and learning quality in view when generative AI becomes part of self-directed learning. The dissertation includes three connected studies: a systematic review of early ChatGPT and language-education research, development and validation of the PA-SDA Scale, and a person-centered mixed-methods study of learner profiles. The final empirical study uses 693 complete Wave 1 cases, identifies three PA-SDA personal-attribute profiles, and follows 29 matched participants through a fixed-reference Wave 2 analysis with interview interpretation. The central argument is that productive GenAI learning is not simply more AI use; it depends on learners' ability to regulate goals, verify outputs, protect authentic work, and retain interpretive authority."
     },
     {
       "id": "cps-ai-environments",

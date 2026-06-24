@@ -1,8 +1,29 @@
 (function () {
   var LANG_KEY = 'bl-lang';
+  var MOBILE_LANG_TOUCHED_KEY = 'bl-lang-mobile-touched';
+
+  function isMobileViewport() {
+    try {
+      return !!(window.matchMedia && window.matchMedia('(max-width: 48em)').matches);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function getDefaultLang() {
+    if (isMobileViewport()) return 'zh';
+    return 'en';
+  }
 
   function getLang() {
-    try { return localStorage.getItem(LANG_KEY) || 'en'; } catch (e) { return 'en'; }
+    try {
+      var saved = localStorage.getItem(LANG_KEY);
+      var mobileTouched = localStorage.getItem(MOBILE_LANG_TOUCHED_KEY);
+      if (isMobileViewport() && !mobileTouched) return 'zh';
+      return saved || getDefaultLang();
+    } catch (e) {
+      return getDefaultLang();
+    }
   }
 
   function applyLang(lang) {
@@ -14,33 +35,45 @@
   }
 
   function updateBtn(lang) {
-    var btn = document.getElementById('bl-lang-toggle');
-    if (!btn) return;
+    var buttons = document.querySelectorAll('.bl-lang-toggle');
+    if (!buttons.length) return;
+    var label;
     if (lang === 'zh') {
-      btn.textContent = 'EN';
-      btn.setAttribute('aria-label', 'Switch to English');
+      label = 'EN';
+      buttons.forEach(function (btn) {
+        btn.textContent = label;
+        btn.setAttribute('aria-label', 'Switch to English');
+      });
     } else {
-      btn.textContent = '中';
-      btn.setAttribute('aria-label', '切换为中文');
+      label = '中';
+      buttons.forEach(function (btn) {
+        btn.textContent = label;
+        btn.setAttribute('aria-label', '切换为中文');
+      });
     }
   }
 
   function setLang(lang) {
-    try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+    try {
+      localStorage.setItem(LANG_KEY, lang);
+      if (isMobileViewport()) localStorage.setItem(MOBILE_LANG_TOUCHED_KEY, 'true');
+    } catch (e) {}
     applyLang(lang);
     updateBtn(lang);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    var btn = document.getElementById('bl-lang-toggle');
-    if (!btn) return;
+    var buttons = document.querySelectorAll('.bl-lang-toggle');
+    if (!buttons.length) return;
 
     var saved = getLang();
-    if (saved === 'zh') applyLang('zh');
+    applyLang(saved);
     updateBtn(saved);
 
-    btn.addEventListener('click', function () {
-      setLang(getLang() === 'zh' ? 'en' : 'zh');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setLang(getLang() === 'zh' ? 'en' : 'zh');
+      });
     });
   });
 
