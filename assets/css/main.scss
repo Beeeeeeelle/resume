@@ -2984,13 +2984,14 @@ html.chatbot-lock {
 
 /* ── Nav butterfly logo ── */
 .site-butterfly {
-  width: 22px;
-  height: 22px;
+  width: 34px;
+  height: 30px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 7px;
-  margin-top: -3px;
+  margin-right: 9px;
+  margin-top: -5px;
   flex-shrink: 0;
+  object-fit: contain;
   transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .site-title:hover .site-butterfly {
