@@ -1,6 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <circle cx="10" cy="10" r="9" fill="#7b9cc8" opacity="0.9"/>
-  <circle cx="22" cy="10" r="9" fill="#c8868e" opacity="0.9" style="mix-blend-mode:multiply"/>
-  <circle cx="10" cy="22" r="9" fill="#82b896" opacity="0.9" style="mix-blend-mode:multiply"/>
-  <circle cx="22" cy="22" r="9" fill="#d1a760" opacity="0.9" style="mix-blend-mode:multiply"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="36 48 168 144" role="img" aria-label="Belle Li butterfly mark">
+  <defs>
+    <filter id="ink-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0.25" result="blur"/>
+      <feOffset dx="0" dy="0" result="offset"/>
+      <feMerge>
+        <feMergeNode in="offset"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g opacity="0.9">
+    <path d="M78 63 C44 72 38 111 62 130 C83 146 108 130 113 109 C118 84 102 57 78 63 Z" fill="#8fb0d6" fill-opacity="0.34"/>
+    <path d="M162 63 C196 72 202 111 178 130 C157 146 132 130 127 109 C122 84 138 57 162 63 Z" fill="#ce858e" fill-opacity="0.34"/>
+    <path d="M79 177 C48 169 42 135 64 122 C85 109 109 126 112 146 C116 170 100 183 79 177 Z" fill="#86b994" fill-opacity="0.36"/>
+    <path d="M161 177 C192 169 198 135 176 122 C155 109 131 126 128 146 C124 170 140 183 161 177 Z" fill="#d4ad61" fill-opacity="0.36"/>
+  </g>
+  <g fill="none" stroke="#111111" stroke-width="4.7" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink-soft)">
+    <path d="M116 97 C111 83 102 69 87 63 C72 57 57 63 50 77 C41 95 49 119 66 129 C82 138 102 128 113 111"/>
+    <path d="M124 97 C129 83 138 69 153 63 C168 57 183 63 190 77 C199 95 191 119 174 129 C158 138 138 128 127 111"/>
+    <path d="M114 137 C104 122 83 113 66 123 C48 133 50 160 68 172 C84 183 106 176 114 151"/>
+    <path d="M126 137 C136 122 157 113 174 123 C192 133 190 160 172 172 C156 183 134 176 126 151"/>
+    <path d="M120 92 C115 105 115 138 120 158"/>
+    <path d="M120 92 C125 105 125 138 120 158"/>
+    <path d="M116 88 C107 75 96 69 86 67"/>
+    <path d="M124 88 C133 75 144 69 154 67"/>
+  </g>
+  <g>
+    <circle cx="120" cy="86" r="5.6" fill="#111111"/>
+    <circle cx="120" cy="118" r="6.6" fill="#111111"/>
+    <circle cx="120" cy="150" r="5.6" fill="#111111"/>
+  </g>
+  <g opacity="0.92">
+    <circle cx="107" cy="116" r="5.2" fill="#7b9cc8"/>
+    <circle cx="122" cy="108" r="5.2" fill="#c8868e"/>
+    <circle cx="124" cy="126" r="5.2" fill="#82b896"/>
+    <circle cx="136" cy="116" r="5.2" fill="#d1a760"/>
+  </g>
 </svg>

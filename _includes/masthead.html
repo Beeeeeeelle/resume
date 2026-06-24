@@ -60,15 +60,9 @@
       <nav class="mobile-nav" aria-label="Mobile navigation">
         <div class="mobile-nav__bar">
           <a class="mobile-nav__brand" href="{{ '/' | relative_url }}">
-            {% unless logo_path == empty %}
-              <span class="mobile-nav__brand-logo">
-                <img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}">
-              </span>
-            {% else %}
-              <span class="mobile-nav__brand-logo">
-                <img src="{{ '/assets/images/logo-option-3-handdrawn-butterfly.svg' | relative_url }}" alt="">
-              </span>
-            {% endunless %}
+            <span class="mobile-nav__brand-logo">
+              <img src="{{ '/assets/images/logo-option-3-handdrawn-butterfly.svg' | relative_url }}" alt="">
+            </span>
             <span class="mobile-nav__brand-text">
               {{ site.masthead_title | default: site.title | escape_once | strip }}
               {% if site.subtitle %}<span class="mobile-nav__brand-subtitle">{{ site.subtitle | escape_once | strip }}</span>{% endif %}
