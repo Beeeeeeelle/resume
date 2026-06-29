@@ -1,6 +1,10 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- date: "Jul 2026"
+  type: talk
+  text: "Upcoming workshop presentation at <strong>SEHET26</strong>: our co-authored work, <em>T3-CIDERS Train-the-Trainers: Strengthening CI Skills for Cybersecurity Research and Education through Iterative Improvements in Second Cohort</em>, is scheduled for Session II on <strong>July 27, 2026</strong>."
+
 - date: "Jun 2026"
   type: event
   text: "Passed my doctoral defense on <strong>June 2, 2026</strong>, officially earning my Ph.D. in Learning Design and Technology from Purdue University."
