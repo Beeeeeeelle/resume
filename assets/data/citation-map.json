@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-07-18T15:17:20Z",
-  "source_count": 23,
-  "citation_count": 353,
+  "generated_at": "2026-07-18T16:26:05Z",
+  "source_count": 25,
+  "citation_count": 354,
   "countries": [
     {
       "code": "US",
       "name": "United States",
-      "count": 95,
+      "count": 96,
       "latitude": 39.8,
       "longitude": -98.6
     },
     {
       "code": "CN",
       "name": "China",
-      "count": 88,
+      "count": 89,
       "latitude": 35.9,
       "longitude": 104.2
     },
@@ -60,18 +60,18 @@
       "longitude": -3.7
     },
     {
+      "code": "MY",
+      "name": "Malaysia",
+      "count": 12,
+      "latitude": 4.2,
+      "longitude": 101.9
+    },
+    {
       "code": "KR",
       "name": "South Korea",
       "count": 11,
       "latitude": 36.5,
       "longitude": 127.8
-    },
-    {
-      "code": "MY",
-      "name": "Malaysia",
-      "count": 11,
-      "latitude": 4.2,
-      "longitude": 101.9
     },
     {
       "code": "IT",
@@ -549,8 +549,8 @@
           "count": 3
         },
         {
-          "code": "SA",
-          "name": "Saudi Arabia",
+          "code": "IT",
+          "name": "Italy",
           "count": 3
         }
       ]
@@ -625,8 +625,8 @@
           "count": 1
         },
         {
-          "code": "IL",
-          "name": "Israel",
+          "code": "CL",
+          "name": "Chile",
           "count": 1
         }
       ]
@@ -643,13 +643,13 @@
           "count": 3
         },
         {
-          "code": "ES",
-          "name": "Spain",
+          "code": "MX",
+          "name": "Mexico",
           "count": 2
         },
         {
-          "code": "MX",
-          "name": "Mexico",
+          "code": "ES",
+          "name": "Spain",
           "count": 2
         },
         {
@@ -681,13 +681,13 @@
           "count": 2
         },
         {
-          "code": "CN",
-          "name": "China",
+          "code": "MY",
+          "name": "Malaysia",
           "count": 2
         },
         {
-          "code": "MY",
-          "name": "Malaysia",
+          "code": "CN",
+          "name": "China",
           "count": 2
         },
         {
@@ -821,13 +821,13 @@
       "citation_count": 4,
       "top_countries": [
         {
-          "code": "US",
-          "name": "United States",
+          "code": "HK",
+          "name": "Hong Kong",
           "count": 2
         },
         {
-          "code": "HK",
-          "name": "Hong Kong",
+          "code": "US",
+          "name": "United States",
           "count": 2
         },
         {
@@ -867,13 +867,13 @@
           "count": 1
         },
         {
-          "code": "US",
-          "name": "United States",
+          "code": "CA",
+          "name": "Canada",
           "count": 1
         },
         {
-          "code": "CA",
-          "name": "Canada",
+          "code": "US",
+          "name": "United States",
           "count": 1
         }
       ]
@@ -898,13 +898,36 @@
       "citation_count": 1,
       "top_countries": [
         {
+          "code": "MY",
+          "name": "Malaysia",
+          "count": 1
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.1177/15480518261439446",
+      "title": "Sparking Innovation Through Humor: A Meta-Analysis of Leader Humor, Creativity Versus Innovative Behavior, and Contextual Contingencies",
+      "publication_year": 2026,
+      "citation_count": 1,
+      "top_countries": [
+        {
+          "code": "MY",
+          "name": "Malaysia",
+          "count": 1
+        },
+        {
           "code": "CN",
           "name": "China",
           "count": 1
         },
         {
-          "code": "MY",
-          "name": "Malaysia",
+          "code": "US",
+          "name": "United States",
           "count": 1
         }
       ]
@@ -927,6 +950,13 @@
       "doi": "10.1007/978-3-031-76293-2_12",
       "title": "Implementing Design Thinking: A Mobile Application for Heritage Chinese Learners to Overcome Challenges in Learning Chinese Characters",
       "publication_year": 2024,
+      "citation_count": 0,
+      "top_countries": []
+    },
+    {
+      "doi": "10.1108/et-08-2025-0597",
+      "title": "Infusing authenticity into a service-learning program: examining long-term impacts on professional development",
+      "publication_year": 2026,
       "citation_count": 0,
       "top_countries": []
     },

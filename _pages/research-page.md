@@ -600,14 +600,12 @@ var STRANDS = {
       { title: 'Development and Validation of the PA-SDA Scale', venue: 'System', year: '2025', href: 'https://doi.org/10.1016/j.system.2025.103793', status: 'published' },
       { title: 'Reconceptualizing Self-Directed Learning in the Era of Generative AI', venue: 'IEEE TLT', year: '2024', href: 'https://doi.org/10.1109/TLT.2024.3386098', status: 'published' },
       { title: 'SDL with GenAI: Insights from YouTube Creators', venue: 'TechTrends', year: '2024', href: 'https://doi.org/10.1007/s11528-024-00960-3', status: 'published' },
-      { title: 'Collaborative Problem Solving with Generative AI', venue: 'Computers & Education: AI', year: '2025', href: 'https://doi.org/10.1016/j.caeai.2025.100393', status: 'published' },
       { title: 'Multilingual ChatGPT Applications in Language Learning', venue: 'IJCALLT', year: '2023', href: 'https://doi.org/10.4018/IJCALLT.326135', status: 'published' },
-      { title: 'Dynamic Learner State Modeling via MCP', venue: 'Education Sciences', year: '2025', href: 'https://doi.org/10.3390/educsci15081004', status: 'published' },
+      { title: 'Pathways to Proficiency: Mapping Personal Attributes in AI-Integrated SDL', venue: 'Language Learning & Technology', year: '', href: null, status: 'review' },
       { title: 'A Meta-Analysis of AI-Assisted Self-Regulated Learning', venue: 'Online Learning', year: '', href: null, status: 'review' }
     ],
     projects: [
-      { title: 'Dissertation: AI in Learning, Humans in Charge', href: '/projects/global-learners-genai/', thumb: '/assets/images/dissertation/progressive-narrowing-2026.png' },
-      { title: 'Collaborative Problem Solving — Intel Labs', href: '/projects/cps-ai-environments/', thumb: '/assets/images/publications/cps-intel_1.jpg' }
+      { title: 'Dissertation: AI in Learning, Humans in Charge', href: '/projects/global-learners-genai/', thumb: '/assets/images/dissertation/progressive-narrowing-2026.png' }
     ]
   },
   b: {
@@ -618,9 +616,12 @@ var STRANDS = {
     papers: [
       { title: "Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy and Performance", venue: 'British Journal of Educational Technology', year: '2025', href: 'https://doi.org/10.1111/bjet.13588', status: 'published' },
       { title: "Nontraditional Learners' Ownership and Agency with AI Writing Tools", venue: 'Journal of Computing in Higher Education', year: '2025', href: 'https://doi.org/10.1007/s12528-025-09476-y', status: 'published' },
+      { title: 'Tutor, Not Solver: Designing a Guardrailed AI Assistant for Learning', venue: 'IEEE TLT', year: '', href: null, status: 'review' },
+      { title: 'What Makes Student-AI Collaborative Writing Authentic?', venue: 'International Journal for Educational Integrity', year: '', href: null, status: 'review' },
+      { title: 'Prompt Literacy as AI-Mediated Feedback Literacy', venue: 'IJETHE', year: '', href: null, status: 'review' },
       { title: 'The Emotional Equation: Affective Factors Shaping AI-Assisted ESL Writing', venue: 'Education and Information Technologies', year: '', href: null, status: 'review' },
       { title: 'Design Precedents to Design Innovation: AI Monitoring System for Writing Assessment', venue: 'Journal of Computing in Higher Education', year: '', href: null, status: 'accepted' },
-      { title: 'Infusing Authenticity into a Service-Learning Program', venue: 'Education + Training', year: '', href: null, status: 'revision' }
+      { title: 'Infusing Authenticity into a Service-Learning Program', venue: 'Education + Training', year: '2026', href: 'https://doi.org/10.1108/ET-08-2025-0597', status: 'published' }
     ],
     projects: [{ title: 'Authenticity & Assessment in the Age of GenAI', href: '/projects/authenticity-assessment/', thumb: null }]
   },
@@ -634,7 +635,8 @@ var STRANDS = {
       { title: "Nontraditional Learners' Ownership and Agency with AI Writing Tools", venue: 'Journal of Computing in Higher Education', year: '2025', href: 'https://doi.org/10.1007/s12528-025-09476-y', status: 'published' },
       { title: 'Empowering Students from Low-Income Families to Improve Writing with ChatGPT', venue: 'Languages', year: '2023', href: 'https://doi.org/10.3390/languages8040238', status: 'published' },
       { title: 'Culturally and Linguistically Responsive Professional Development for AI Integration', venue: 'Online Learning', year: '2023', href: 'https://doi.org/10.24059/olj.v27i4.4003', status: 'published' },
-      { title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', year: '2026', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557', status: 'published' }
+      { title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', year: '2026', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557', status: 'published' },
+      { title: 'Technology Review of Magic School AI', venue: 'Education Sciences', year: '2025', href: 'https://doi.org/10.3390/educsci15080963', status: 'published' }
     ],
     projects: [{ title: 'Dissertation: AI in Learning, Humans in Charge', href: '/projects/global-learners-genai/' }]
   },
@@ -648,7 +650,9 @@ var STRANDS = {
       { title: 'Two Years of Innovation: Systematic Review of GenAI in Language Learning', venue: 'Computers and Education: AI', year: '2025', href: 'https://doi.org/10.1016/j.caeai.2025.100445', status: 'published' },
       { title: 'Language Educators × Generative AI: A Systematic Review', venue: 'Int. Journal of AI in Education', year: '2026', href: 'https://doi.org/10.1016/j.ijaied.2026.100010', status: 'published' },
       { title: 'The First Year of ChatGPT in Education: A Comprehensive Review', venue: 'Computers and Education: AI', year: '2024', href: 'https://doi.org/10.1016/j.caeai.2024.100266', status: 'published' },
-      { title: 'TicApp: A Language Learning Design Case', venue: 'Springer', year: '2024', href: 'https://doi.org/10.1007/978-3-031-76293-2_12', status: 'published' }
+      { title: 'Collaborative Problem Solving with Generative AI', venue: 'Computers & Education: AI', year: '2025', href: 'https://doi.org/10.1016/j.caeai.2025.100393', status: 'published' },
+      { title: 'TicApp: A Language Learning Design Case', venue: 'Springer', year: '2024', href: 'https://doi.org/10.1007/978-3-031-76293-2_12', status: 'published' },
+      { title: 'Dynamic Learner State Modeling via MCP', venue: 'Education Sciences', year: '2025', href: 'https://doi.org/10.3390/educsci15081004', status: 'published' }
     ],
     projects: [
       { title: 'PeteChat — Guardrailed AI Tutoring Assistant', href: '/projects/petechat/', thumb: '/assets/images/projects-petechat-interface-v2.png' },
@@ -661,8 +665,9 @@ var STRANDS = {
     desc: 'Work at the intersection of self-directed agency and authentic learning — examining how learners navigate judgment, boundary-setting, and meaningful ownership when AI enters their personal learning workflows.',
     desc_zh: '自主能动性与真实学习的交汇处——探究当AI进入个人学习流程时，学习者如何应对判断、边界设定与有意义的主体性构建。',
     papers: [
-      { title: 'Learning in the Loop: Moments, Mindsets, and Meaning with Generative AI', venue: 'Computers & Education', year: '', href: null, status: 'review' },
-      { title: 'Choosing the Future of Learning: Assessing Preferences for Educational GPTs', venue: 'Int. Journal of AI in Education', year: '', href: null, status: 'review' }
+      { title: 'Learning in the Loop: Moments, Mindsets, and Meaning with Generative AI', venue: 'Journal of Computer-Assisted Learning', year: '', href: null, status: 'review' },
+      { title: 'Choosing the Future of Learning: Assessing Preferences for Educational GPTs', venue: 'International Journal of Human-Computer Interaction', year: '', href: null, status: 'review' },
+      { title: 'Prompt Literacy as AI-Mediated Feedback Literacy', venue: 'IJETHE', year: '', href: null, status: 'review' }
     ], projects: []
   },
   ac: {
@@ -678,14 +683,21 @@ var STRANDS = {
     meta_zh: '真实性 × 学习设计',
     desc: 'Work translating findings about authentic learning and judgment into concrete system design — how to build AI-powered tools that preserve student ownership and critical thinking.',
     desc_zh: '将真实学习与判断的研究发现转化为具体系统设计——构建能保护学生主体性与批判性思维的AI工具。',
-    papers: [], projects: [{ title: 'PeteChat — Guardrailed AI Tutoring Assistant', href: '/projects/petechat/', thumb: '/assets/images/projects-petechat-interface-v2.png' }]
+    papers: [
+      { title: 'Tutor, Not Solver: Designing a Guardrailed AI Assistant for Learning', venue: 'IEEE TLT', year: '', href: null, status: 'review' },
+      { title: 'What Makes Student-AI Collaborative Writing Authentic?', venue: 'International Journal for Educational Integrity', year: '', href: null, status: 'review' },
+      { title: 'Design Precedents to Design Innovation: AI Monitoring System for Writing Assessment', venue: 'Journal of Computing in Higher Education', year: '', href: null, status: 'accepted' }
+    ], projects: [{ title: 'PeteChat — Guardrailed AI Tutoring Assistant', href: '/projects/petechat/', thumb: '/assets/images/projects-petechat-interface-v2.png' }]
   },
   cd: {
     meta: 'Equity × Design', title: 'Equitable Learning Design',
     meta_zh: '公平性 × 学习设计',
     desc: 'Work connecting learner heterogeneity research to design decisions — how to build AI-supported environments that work equitably across diverse learner populations.',
     desc_zh: '将学习者异质性研究与设计决策相连接，构建在多元学习者群体中实现公平效果的AI辅助学习环境。',
-    papers: [{ title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', year: '2026', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557', status: 'published' }],
+    papers: [
+      { title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', year: '2026', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557', status: 'published' },
+      { title: 'Technology Review of Magic School AI', venue: 'Education Sciences', year: '2025', href: 'https://doi.org/10.3390/educsci15080963', status: 'published' }
+    ],
     projects: []
   }
 };

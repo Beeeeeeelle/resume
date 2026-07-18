@@ -228,16 +228,15 @@
       <!-- Zone A: AI-Mediated SDL -->
       <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a1" data-zone="a" data-status="published" cx="185" cy="210" r="11" pointer-events="none"/>
       <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a2" data-zone="a" data-status="published" cx="148" cy="252" r="11" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a3" data-zone="a" data-status="published" cx="252" cy="228" r="9"  pointer-events="none"/>
+      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a3" data-zone="a" data-status="review" cx="252" cy="228" r="9"  pointer-events="none"/>
       <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a4" data-zone="a" data-status="published" cx="178" cy="292" r="9"  pointer-events="none"/>
       <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a5" data-zone="a" data-status="published" cx="308" cy="218" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a6" data-zone="a" data-status="published" cx="218" cy="334" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a7" data-zone="a" data-status="review"    cx="280" cy="270" r="9"  pointer-events="none"/>
+      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a6" data-zone="a" data-status="review" cx="218" cy="334" r="9"  pointer-events="none"/>
 
       <!-- Zone B: Authenticity & Assessment -->
       <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b1" data-zone="b" data-status="review"    cx="658" cy="210" r="10" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b2" data-zone="b" data-status="progress"  cx="712" cy="250" r="10" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b3" data-zone="b" data-status="revision"  cx="752" cy="292" r="9"  pointer-events="none"/>
+      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b2" data-zone="b" data-status="accepted"  cx="712" cy="250" r="10" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b3" data-zone="b" data-status="published"  cx="752" cy="292" r="9"  pointer-events="none"/>
       <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b4" data-zone="b" data-status="review"    cx="678" cy="288" r="9"  pointer-events="none"/>
 
       <!-- Cross A∩B -->
@@ -252,10 +251,10 @@
       <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c2" data-zone="c" data-status="published" cx="228" cy="458" r="9"  pointer-events="none"/>
       <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c3" data-zone="c" data-status="published" cx="152" cy="464" r="11" pointer-events="none"/>
       <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c4" data-zone="c" data-status="published" cx="294" cy="422" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c5" data-zone="c" data-status="review"    cx="206" cy="496" r="9"  pointer-events="none"/>
+      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c5" data-zone="c" data-status="published" cx="206" cy="496" r="9"  pointer-events="none"/>
 
       <!-- Cross B∩D -->
-      <circle class="vb-dot vb-dot-bd vb-dot-enter" data-paper-id="bd1" data-zone="bd" data-status="progress" cx="562" cy="350" r="9" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-bd vb-dot-enter" data-paper-id="bd1" data-zone="bd" data-status="review" cx="562" cy="350" r="9" pointer-events="none"/>
 
       <!-- Cross C∩D -->
       <circle class="vb-dot vb-dot-cd vb-dot-enter" data-paper-id="cd1" data-zone="cd" data-status="published" cx="456" cy="512" r="9" pointer-events="none"/>
@@ -266,7 +265,7 @@
       <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d3" data-zone="d" data-status="published" cx="753" cy="420" r="10" pointer-events="none"/>
       <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d4" data-zone="d" data-status="published" cx="660" cy="462" r="9"  pointer-events="none"/>
       <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d5" data-zone="d" data-status="published" cx="638" cy="418" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d6" data-zone="d" data-status="progress"  cx="722" cy="496" r="10" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d6" data-zone="d" data-status="published" cx="722" cy="496" r="10" pointer-events="none"/>
       <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d7" data-zone="d" data-status="published" cx="784" cy="464" r="9"  pointer-events="none"/>
       <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d8" data-zone="d" data-status="published" cx="660" cy="496" r="8"  pointer-events="none"/>
 
@@ -396,38 +395,37 @@
   var PAPERS = {
     a1:  { title: 'Development and Validation of the PA-SDA Scale', venue: 'System', year: '2025', status: 'published', href: 'https://doi.org/10.1016/j.system.2025.103793' },
     a2:  { title: 'Reconceptualizing Self-Directed Learning in the Era of Generative AI', venue: 'IEEE Transactions on Learning Technologies', year: '2024', status: 'published', href: 'https://doi.org/10.1109/TLT.2024.3386098' },
-    a3:  { title: 'Collaborative Problem Solving with Generative AI', venue: 'Computers & Education: AI', year: '2025', status: 'published', href: 'https://doi.org/10.1016/j.caeai.2025.100393' },
+    a3:  { title: 'Pathways to Proficiency: Mapping Personal Attributes in AI-Integrated SDL', venue: 'Language Learning & Technology', year: '', status: 'review', href: null },
     a4:  { title: 'SDL with GenAI: Insights from YouTube Creators', venue: 'TechTrends', year: '2024', status: 'published', href: 'https://doi.org/10.1007/s11528-024-00960-3' },
     a5:  { title: 'Multilingual ChatGPT Applications in Language Learning', venue: 'IJCALLT', year: '2023', status: 'published', href: 'https://doi.org/10.4018/IJCALLT.326135' },
-    a6:  { title: 'Dynamic Learner State Modeling via MCP', venue: 'Education Sciences', year: '2025', status: 'published', href: 'https://doi.org/10.3390/educsci15081004' },
-    a7:  { title: 'A Meta-Analysis of AI-Assisted Self-Regulated Learning', venue: 'Online Learning', year: '', status: 'review', href: null },
-    b1:  { title: 'What Makes Student–AI Collaborative Writing Authentic? A Q-Methodology Study', venue: 'British Journal of Educational Technology', year: '', status: 'review', href: null },
-    b2:  { title: 'Design Precedents to Design Innovation: An AI Writing Assessment System', venue: 'Journal of Computing in Higher Education', year: '', status: 'progress', href: null },
-    b3:  { title: 'Infusing Authenticity into Service-Learning in the Age of AI', venue: 'Education + Training', year: '', status: 'revision', href: null },
-    b4:  { title: 'Coding Their Choices: A Discrete Choice Experiment on AI Writing', venue: 'Journal of Educational Computing Research', year: '', status: 'review', href: null },
+    a6:  { title: 'A Meta-Analysis of AI-Assisted Self-Regulated Learning', venue: 'Online Learning', year: '', status: 'review', href: null },
+    b1:  { title: 'What Makes Student–AI Collaborative Writing Authentic? A Q-Methodology Study', venue: 'International Journal for Educational Integrity', year: '', status: 'review', href: null },
+    b2:  { title: 'Design Precedents Informing an AI Monitoring System for Writing Assessment', venue: 'Journal of Computing in Higher Education', year: '', status: 'accepted', href: null },
+    b3:  { title: 'Infusing Authenticity into Service-Learning in the Age of AI', venue: 'Education + Training', year: '2026', status: 'published', href: 'https://doi.org/10.1108/ET-08-2025-0597' },
+    b4:  { title: 'Prompt Literacy as AI-Mediated Feedback Literacy', venue: 'IJETHE', year: '', status: 'review', href: null },
     c1:  { title: "Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy and Performance", venue: 'British Journal of Educational Technology', year: '2025', status: 'published', href: 'https://doi.org/10.1111/bjet.13588' },
     c2:  { title: "Nontraditional Learners' Ownership and Agency with AI Writing Tools", venue: 'Journal of Computing in Higher Education', year: '2025', status: 'published', href: 'https://doi.org/10.1007/s12528-025-09476-y' },
     c3:  { title: 'Empowering Students from Low-Income Families to Improve Writing with ChatGPT', venue: 'Languages', year: '2023', status: 'published', href: 'https://doi.org/10.3390/languages8040238' },
     c4:  { title: 'Culturally and Linguistically Responsive Professional Development for AI Integration', venue: 'Online Learning', year: '2023', status: 'published', href: 'https://doi.org/10.24059/olj.v27i4.4003' },
-    c5:  { title: 'The Emotional Equation: Affective Dimensions of AI-Assisted Writing', venue: 'Education and Information Technologies', year: '', status: 'review', href: null },
+    c5:  { title: 'Technology Review of Magic School AI', venue: 'Education Sciences', year: '2025', status: 'published', href: 'https://doi.org/10.3390/educsci15080963' },
     d1:  { title: 'AI-Generation Literacy', venue: 'Palgrave Encyclopedia of CALL', year: '2026', status: 'published', href: 'https://doi.org/10.1007/978-3-031-51447-0_260-1' },
     d2:  { title: 'Two Years of Innovation: Systematic Review of GenAI in Language Learning', venue: 'Computers and Education: AI', year: '2025', status: 'published', href: 'https://doi.org/10.1016/j.caeai.2025.100445' },
     d3:  { title: 'Language Educators × Generative AI: A Systematic Review', venue: 'International Journal of AI in Education', year: '2026', status: 'published', href: 'https://doi.org/10.1016/j.ijaied.2026.100010' },
     d4:  { title: 'The First Year of ChatGPT in Education: A Comprehensive Review', venue: 'Computers and Education: AI', year: '2024', status: 'published', href: 'https://doi.org/10.1016/j.caeai.2024.100266' },
     d5:  { title: 'TicApp: A Language Learning Design Case', venue: 'Springer', year: '2024', status: 'published', href: 'https://doi.org/10.1007/978-3-031-76293-2_12' },
-    d6:  { title: 'PeteChat: A Guardrailed AI Tutoring Assistant', venue: 'Innovation Hub', year: '', status: 'progress', href: '/projects/petechat/' },
+    d6:  { title: 'Collaborative Problem Solving with Generative AI', venue: 'Computers & Education: AI', year: '2025', status: 'published', href: 'https://doi.org/10.1016/j.caeai.2025.100393' },
     d7:  { title: 'AI and Extended Reality in Language Education', venue: 'Education Sciences', year: '2025', status: 'published', href: 'https://doi.org/10.3390/educsci15081066' },
-    d8:  { title: 'Generating Learner Personas via Large Language Models', venue: 'Journal of AI in Education', year: '2025', status: 'published', href: 'https://jaid.edtechbooks.org/jaid_14_3/fkuqikevdr' },
-    ab1: { title: 'Learning in the Loop: Moments, Mindsets, and Meaning with Generative AI', venue: 'Under review', year: '', status: 'review', href: null },
-    ab2: { title: 'Choosing the Future of Learning: A Discrete Choice Experiment', venue: 'Under review', year: '', status: 'review', href: null },
+    d8:  { title: 'Dynamic Learner State Modeling via MCP', venue: 'Education Sciences', year: '2025', status: 'published', href: 'https://doi.org/10.3390/educsci15081004' },
+    ab1: { title: 'Learning in the Loop: Moments, Mindsets, and Meaning with Generative AI', venue: 'Journal of Computer-Assisted Learning', year: '', status: 'review', href: null },
+    ab2: { title: 'Choosing the Future of Learning: Assessing Preferences for Educational GPTs', venue: 'International Journal of Human-Computer Interaction', year: '', status: 'review', href: null },
     ac1: { title: 'Pathways to Proficiency: Global Validation of the PA-SDA Scale', venue: 'Under review', year: '', status: 'review', href: null },
-    bd1: { title: 'Design Precedents Informing an AI Monitoring System for Writing Assessment', venue: 'In progress', year: '', status: 'progress', href: null },
+    bd1: { title: 'Tutor, Not Solver: Designing a Guardrailed AI Assistant for Learning', venue: 'IEEE TLT', year: '', status: 'review', href: null },
     cd1: { title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', year: '2026', status: 'published', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557' }
   };
 
   var STATUS_LABELS = {
     'published': 'Published', 'accepted': 'Accepted', 'in-press': 'In Press',
-    'review': 'Under Review', 'revision': 'Major Revision', 'progress': 'In Progress'
+    'review': 'Under Review', 'revision': 'In Revision', 'progress': 'In Progress'
   };
 
   /* ── Blob animation ── */

@@ -489,6 +489,9 @@ title: "Publications"
 .v-book    { background: #4a3a20; }
 .v-ijaied  { background: #3a7a60; }
 .v-ijiet   { background: #4f6f98; }
+.v-ijhci   { background: #7a5d92; }
+.v-jlos    { background: #8a6a28; }
+.v-et      { background: #6f7f58; }
 
 /* Legend */
 .ptl-legend {
@@ -553,7 +556,8 @@ title: "Publications"
 <div class="page-with-rail-nav__main">
 <div id="pub-overview" class="pub-timeline page-section-target supports-target-highlight" data-reveal>
   <h3>Publications at a glance</h3>
-  <p class="ptl-intro">Selected peer-reviewed outputs grouped by year and authorship role. Hover each venue chip for the full citation cue, or jump into the sections below for complete entries.</p>
+  <p class="ptl-intro">Selected peer-reviewed outputs by year and authorship role. Full entries are organized below by publication type.</p>
+
   <div class="ptl-cards">
     <article class="ptl-card">
       <h4 class="ptl-card__year">2023</h4>
@@ -637,6 +641,9 @@ title: "Publications"
         <div class="ptl-row">
           <div class="ptl-row__label">Co-authored</div>
           <div class="ptl-row__items">
+            <span class="ptl-pub v-ijhci" data-tip="Mao, Li, & Qian (in press) · AI usage guideline preferences · IJHCI">HC</span>
+            <a class="ptl-pub v-jlos" href="https://doi.org/10.1177/15480518261439446" target="_blank" data-tip="Chi et al. (2026) · Leader humor, creativity, and innovation meta-analysis · JLOS">JL</a>
+            <a class="ptl-pub v-et" href="https://doi.org/10.1108/ET-08-2025-0597" target="_blank" data-tip="Yang, Harbor, Li, & Nikiema (2026) · Service-learning authenticity · Education + Training">ET</a>
             <a class="ptl-pub v-ijiet" href="https://doi.org/10.18178/ijiet.2026.16.4.2557" target="_blank" data-tip="Ye, Yang, Li et al. (2026) · AI-assisted learning acceptance among vocational students · IJIET">IT</a>
           </div>
         </div>
@@ -669,11 +676,38 @@ title: "Publications"
 
 <div class="pub-year">2026</div>
 
+<div class="pub-entry">
+  <div class="pub-entry__dot--empty"></div>
+  <div class="pub-entry__body">
+    Mao, Y., <strong>Li, B.</strong>, &amp; Qian, J. (in press). Between the lines: Understanding employee preferences for AI usage guidelines through discrete choice experiments. <em>International Journal of Human-Computer Interaction</em>. <span class="pub-status">In press</span>
+  </div>
+</div>
+
 <!-- IJAIED 2026 — plain list -->
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
     <strong>Li, B.</strong>, Exter, M., Feng, W., Tang, G., &amp; Xu, K. (2026). A systematic review of language educators' practices and development with GenAI. <em>International Journal of Artificial Intelligence in Education</em>, 100010. <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.ijaied.2026.100010" target="_blank" rel="noopener">DOI</a>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-entry__dot--empty"></div>
+  <div class="pub-entry__body">
+    Chi, Z., Yin, K., Cai, H., Li, C., Sun, M., <strong>Li, B.</strong>, Song, X., &amp; Qi, L. (2026). Sparking innovation through humor: A meta-analysis of leader humor, creativity versus innovative behavior, and contextual contingencies. <em>Journal of Leadership &amp; Organizational Studies</em>.
+    <div class="pub-tags">
+      <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1177/15480518261439446" target="_blank" rel="noopener">DOI</a>
+    </div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-entry__dot--empty"></div>
+  <div class="pub-entry__body">
+    Yang, M., Harbor, J., <strong>Li, B.</strong>, &amp; Nikiema, J. (2026). Infusing authenticity into a service-learning program. <em>Education + Training, 68</em>(10), 156-181.
+    <div class="pub-tags">
+      <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1108/ET-08-2025-0597" target="_blank" rel="noopener">DOI</a>
+    </div>
   </div>
 </div>
 
@@ -1036,21 +1070,35 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong> Learning in the loop: Moments, mindsets, and meaning with generative AI. <em>Computers &amp; Education</em>. <span class="pub-status">Under review</span>
-  </div>
-</div>
-
-<div class="pub-entry">
-  <div class="pub-entry__dot--empty"></div>
-  <div class="pub-entry__body">
-    Yang, M., Harbor, J., <strong>Li, B.</strong>, &amp; Nikiema, J. Infusing authenticity into a service-learning program. <em>Education + Training</em>. <span class="pub-status">Major revision</span>
+    <strong>Li, B.</strong>, Tan, L., Zakharov, W., Qiu, Q., &amp; Acton, C. B. Tutor, not solver: Designing a guardrailed AI assistant for learning in higher education: A design case of PeteChat. <em>IEEE Transactions on Learning Technologies</em>. <span class="pub-status">Under review</span>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    Mao, Y., &amp; <strong>Li, B.</strong> Choosing the future of learning: Assessing preferences for educational GPTs through a discrete choice experiment. <em>International Journal of Artificial Intelligence in Education</em>. <span class="pub-status">Under review</span>
+    <strong>Li, B.</strong>, Phan, T., Tang, G., &amp; Bonk, C. J. Prompt literacy as AI-mediated feedback literacy: A mixed-methods study of question formulation among preservice teachers. <em>International Journal of Educational Technology in Higher Education</em>. <span class="pub-status">Under review</span>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <span class="pub-entry__dot"></span>
+  <div class="pub-entry__body">
+    <strong>Li, B.</strong> Learning in the loop: Moments, mindsets, and meaning with generative AI. <em>Journal of Computer-Assisted Learning</em>. <span class="pub-status">Under review</span>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-entry__dot--empty"></div>
+  <div class="pub-entry__body">
+    Mao, Y., &amp; <strong>Li, B.</strong> What drives employees' choices in AI training: Modeling employees' preferences for artificial intelligence training via a discrete choice experiment. <em>Human Resource Development Quarterly</em>. <span class="pub-status">Major revision</span>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <span class="pub-entry__dot"></span>
+  <div class="pub-entry__body">
+    Mao, Y., &amp; <strong>Li, B.</strong> Choosing the future of learning: Assessing preferences for educational GPTs through a discrete choice experiment. <em>International Journal of Human-Computer Interaction</em>. <span class="pub-status">Under review</span>
   </div>
 </div>
 
@@ -1075,7 +1123,6 @@ title: "Publications"
   </div>
 </div>
 
-
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
@@ -1087,6 +1134,27 @@ title: "Publications"
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
     <strong>Li, B.</strong>, Lowell, V., &amp; Hou, Z. Design precedents to design innovation: Developing an advanced AI monitoring system for writing assessment. <em>Journal of Computing in Higher Education</em>. <span class="pub-status">Proposal accepted</span>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <span class="pub-entry__dot"></span>
+  <div class="pub-entry__body">
+    <strong>Li, B.</strong>, Wang, J., &amp; Wang, C. What makes student-AI collaborative writing "authentic"? A Q methodology study of instructor perspectives on authenticity. <em>International Journal for Educational Integrity</em>. <span class="pub-status">Under review</span>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-entry__dot--empty"></div>
+  <div class="pub-entry__body">
+    Lovett, N., Yang, M., &amp; <strong>Li, B.</strong> Is generative AI replacing instructional designers? Federal labor-market evidence on jobs, tasks, and the early-career pipeline. <em>Human Resource Development Quarterly</em>. <span class="pub-status">Under review</span>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <span class="pub-entry__dot"></span>
+  <div class="pub-entry__body">
+    <strong>Li, B.</strong>, Yang, M., Luo, T., &amp; Bahari, A. Cognitive and metacognitive support in technology-assisted language learning: A systematic review of affordances and challenges. <em>Review of Education</em>. <span class="pub-status">Major revision</span>
   </div>
 </div>
 

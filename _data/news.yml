@@ -1,9 +1,29 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- date: "Aug 2026"
+  type: event
+  text: "Beginning my role as <strong>Ross-Lynn Postdoctoral Research Scholar</strong> in AI in Education at Purdue University's College of Education, supporting the AI Working Group and college-wide AI initiatives."
+
+- date: "Jul 2026"
+  type: event
+  text: "Selected for the <strong>LearnLab Summer School</strong> at Carnegie Mellon University, Intelligent Tutoring Systems track, led by Dr. Vincent Aleven."
+
+- date: "Jul 2026"
+  type: grant
+  text: "Awarded a <strong>Texas A&amp;M CEHD Emerge AI Grant</strong> for <em>TRAIN-AI: A Cascading Train the Trainer Model for K-16 AI Competency and Tool Development</em> ($50,000, 2026-2027), serving as Co-PI."
+
 - date: "Jul 2026"
   type: talk
   text: "Upcoming workshop presentation at <strong>SEHET26</strong>: our co-authored work, <em>T3-CIDERS Train-the-Trainers: Strengthening CI Skills for Cybersecurity Research and Education through Iterative Improvements in Second Cohort</em>, is scheduled for Session II on <strong>July 27, 2026</strong>."
+
+- date: "Jun 2026"
+  type: grant
+  text: "Awarded <strong>Purdue VIP Seeding Solutions</strong> funding for <em>AI-Powered Personalized Support for Working Adult Online Learners</em> ($2,000), in partnership with Purdue Global."
+
+- date: "Jun 2026"
+  type: event
+  text: "Completed the <strong>Graduate Certificate in AI in Education</strong> at Purdue University."
 
 - date: "Jun 2026"
   type: event
