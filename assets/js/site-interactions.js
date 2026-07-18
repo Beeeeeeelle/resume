@@ -13,6 +13,7 @@ if (!window.__siteInteractionsInitialized) {
   initPublicationsSpotlight();
   initBeyondCvGallery(prefersReducedMotion);
   initCursor(prefersReducedMotion);
+  initTypewriters(prefersReducedMotion);
   });
 }
 
@@ -135,6 +136,46 @@ function initReveal(prefersReducedMotion) {
 
   items.forEach((item) => {
     if (!item.classList.contains('is-visible')) observer.observe(item);
+  });
+}
+
+function initTypewriters(prefersReducedMotion) {
+  const items = [...document.querySelectorAll('.js-typewriter')];
+  if (!items.length) return;
+
+  items.forEach((item) => {
+    const fullText = item.dataset.text || item.textContent.trim();
+    if (!fullText) return;
+
+    if (prefersReducedMotion) {
+      item.textContent = fullText;
+      item.classList.add('js-typewriter--done');
+      return;
+    }
+
+    item.textContent = '';
+    item.classList.add('js-typewriter--typing');
+
+    let index = 0;
+    const baseDelay = Number(item.dataset.typewriterDelay || 160);
+
+    const typeNext = () => {
+      index += 1;
+      item.textContent = fullText.slice(0, index);
+
+      if (index < fullText.length) {
+        const nextDelay = fullText[index - 1] === ' ' ? 22 : 36;
+        window.setTimeout(typeNext, nextDelay);
+        return;
+      }
+
+      window.setTimeout(() => {
+        item.classList.remove('js-typewriter--typing');
+        item.classList.add('js-typewriter--done');
+      }, 420);
+    };
+
+    window.setTimeout(typeNext, baseDelay);
   });
 }
 

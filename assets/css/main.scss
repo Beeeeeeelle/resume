@@ -1221,6 +1221,50 @@ html.chatbot-lock {
   }
 }
 
+.sidebar .author__bio .author-role {
+  display: inline-block;
+  max-width: 16.5rem;
+  margin-bottom: 0.04rem;
+  color: #50667b;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.sidebar .author__bio .author-tagline {
+  display: inline-block;
+  max-width: 16.5rem;
+  margin: 0.08rem 0 0.12rem;
+  color: #3f8795;
+  font-size: 0.9em;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.js-typewriter--typing::after,
+.js-typewriter--done::after {
+  content: "";
+  display: inline-block;
+  width: 0.08em;
+  height: 1em;
+  margin-left: 0.08em;
+  background: currentColor;
+  vertical-align: -0.12em;
+}
+
+.js-typewriter--typing::after {
+  animation: site-caret-blink 0.82s steps(1, end) infinite;
+}
+
+.js-typewriter--done::after {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+@keyframes site-caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
 
 .teaching-intro {
   max-width: 50rem;

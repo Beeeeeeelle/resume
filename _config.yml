@@ -7,6 +7,7 @@ twitter_username: username
 github_username: username
 minimal_mistakes_skin: default
 search: true
+cloudflare_analytics_token: ""
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
@@ -22,9 +23,9 @@ plugins:
 - jemoji
 - jekyll-include-cache
 author:
-  name: Belle Li
+  name: Belle Li, Ph.D.
   avatar: /assets/images/avatar.jpg
-  bio: 'Ph.D.<br> AI in Learning, Humans in Charge.<br> Purdue University'
+  bio: '<span class="author-role">Ross-Lynn Postdoctoral Research Scholar</span><br><span class="author-tagline js-typewriter" data-typewriter-delay="220" data-text="I study and build AI that keeps humans in charge of learning across the lifespan.">I study and build AI that keeps humans in charge of learning across the lifespan.</span><br>Purdue University'
   links:
   - label: West Lafayette, IN
     icon: fas fa-fw fa-map-marker-alt

@@ -1,0 +1,1281 @@
+{
+  "generated_at": "2026-07-18T15:17:20Z",
+  "source_count": 23,
+  "citation_count": 353,
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "count": 95,
+      "latitude": 39.8,
+      "longitude": -98.6
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "count": 88,
+      "latitude": 35.9,
+      "longitude": 104.2
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "count": 28,
+      "latitude": 55.4,
+      "longitude": -3.4
+    },
+    {
+      "code": "TR",
+      "name": "Turkey",
+      "count": 24,
+      "latitude": 39.0,
+      "longitude": 35.2
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong",
+      "count": 21,
+      "latitude": 22.3,
+      "longitude": 114.2
+    },
+    {
+      "code": "ID",
+      "name": "Indonesia",
+      "count": 19,
+      "latitude": -0.8,
+      "longitude": 113.9
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "count": 14,
+      "latitude": 23.9,
+      "longitude": 45.1
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "count": 12,
+      "latitude": 40.5,
+      "longitude": -3.7
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "count": 11,
+      "latitude": 36.5,
+      "longitude": 127.8
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia",
+      "count": 11,
+      "latitude": 4.2,
+      "longitude": 101.9
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "count": 10,
+      "latitude": 41.9,
+      "longitude": 12.6
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "count": 9,
+      "latitude": 20.6,
+      "longitude": 78.9
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "count": 9,
+      "latitude": 36.2,
+      "longitude": 138.3
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan",
+      "count": 9,
+      "latitude": 23.7,
+      "longitude": 121.0
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "count": 8,
+      "latitude": -25.3,
+      "longitude": 133.8
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "count": 7,
+      "latitude": 51.2,
+      "longitude": 10.5
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "count": 6,
+      "latitude": 56.1,
+      "longitude": -106.3
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "count": 6,
+      "latitude": 61.9,
+      "longitude": 25.7
+    },
+    {
+      "code": "TH",
+      "name": "Thailand",
+      "count": 6,
+      "latitude": 15.9,
+      "longitude": 101.0
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam",
+      "count": 6,
+      "latitude": 14.1,
+      "longitude": 108.3
+    },
+    {
+      "code": "CL",
+      "name": "Chile",
+      "count": 4,
+      "latitude": -35.7,
+      "longitude": -71.5
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "count": 4,
+      "latitude": 39.1,
+      "longitude": 21.8
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "count": 4,
+      "latitude": 52.1,
+      "longitude": 5.3
+    },
+    {
+      "code": "PH",
+      "name": "Philippines",
+      "count": 4,
+      "latitude": 12.9,
+      "longitude": 121.8
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "count": 4,
+      "latitude": 39.4,
+      "longitude": -8.2
+    },
+    {
+      "code": "RU",
+      "name": "Russia",
+      "count": 4,
+      "latitude": 61.5,
+      "longitude": 105.3
+    },
+    {
+      "code": "CZ",
+      "name": "Czechia",
+      "count": 3,
+      "latitude": 49.8,
+      "longitude": 15.5
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "count": 3,
+      "latitude": 53.1,
+      "longitude": -8.2
+    },
+    {
+      "code": "MX",
+      "name": "Mexico",
+      "count": 3,
+      "latitude": 23.6,
+      "longitude": -102.6
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "count": 2,
+      "latitude": 23.4,
+      "longitude": 53.8
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "count": 2,
+      "latitude": -14.2,
+      "longitude": -51.9
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "count": 2,
+      "latitude": 46.8,
+      "longitude": 8.2
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "count": 2,
+      "latitude": 46.2,
+      "longitude": 2.2
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "count": 2,
+      "latitude": 31.0,
+      "longitude": 35.0
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand",
+      "count": 2,
+      "latitude": -40.9,
+      "longitude": 174.9
+    },
+    {
+      "code": "QA",
+      "name": "Qatar",
+      "count": 2,
+      "latitude": 25.4,
+      "longitude": 51.2
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "count": 2,
+      "latitude": 1.4,
+      "longitude": 103.8
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "count": 1,
+      "latitude": -38.4,
+      "longitude": -63.6
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "count": 1,
+      "latitude": 47.5,
+      "longitude": 14.6
+    },
+    {
+      "code": "EG",
+      "name": "Egypt",
+      "count": 1,
+      "latitude": 26.8,
+      "longitude": 30.8
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "count": 1,
+      "latitude": 47.2,
+      "longitude": 19.5
+    },
+    {
+      "code": "KE",
+      "name": "Kenya",
+      "count": 1,
+      "latitude": -0.0,
+      "longitude": 37.9
+    },
+    {
+      "code": "PE",
+      "name": "Peru",
+      "count": 1,
+      "latitude": -9.2,
+      "longitude": -75.0
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "count": 1,
+      "latitude": 51.9,
+      "longitude": 19.1
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "count": 1,
+      "latitude": 45.9,
+      "longitude": 24.9
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "count": 1,
+      "latitude": 60.1,
+      "longitude": 18.6
+    }
+  ],
+  "papers": [
+    {
+      "doi": "10.1016/j.caeai.2024.100266",
+      "title": "A systematic review of the first year of publications on ChatGPT and language education: Examining research on ChatGPT’s use in language learning and teaching",
+      "publication_year": 2024,
+      "citation_count": 60,
+      "top_countries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 17
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 6
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 5
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 4
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
+          "count": 4
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "doi": "10.1109/tlt.2024.3386098",
+      "title": "Reconceptualizing Self-Directed Learning in the Era of Generative AI: An Exploratory Analysis of Language Learning",
+      "publication_year": 2024,
+      "citation_count": 60,
+      "top_countries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 17
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 16
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 6
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 4
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 4
+        },
+        {
+          "code": "MY",
+          "name": "Malaysia",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "doi": "10.3390/languages8030197",
+      "title": "Embracing the Disrupted Language Teaching and Learning Field: Analyzing YouTube Content Creation Related to ChatGPT",
+      "publication_year": 2023,
+      "citation_count": 50,
+      "top_countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 15
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 5
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 5
+        },
+        {
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "count": 5
+        },
+        {
+          "code": "IT",
+          "name": "Italy",
+          "count": 3
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "doi": "10.3390/languages8040238",
+      "title": "Empowering Chinese Language Learners from Low-Income Families to Improve Their Chinese Writing with ChatGPT’s Assistance Afterschool",
+      "publication_year": 2023,
+      "citation_count": 46,
+      "top_countries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 14
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 13
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 4
+        },
+        {
+          "code": "TW",
+          "name": "Taiwan",
+          "count": 4
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 4
+        },
+        {
+          "code": "KR",
+          "name": "South Korea",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "doi": "10.1016/j.caeai.2025.100445",
+      "title": "Two years of innovation: A systematic review of empirical generative AI research in language learning and teaching",
+      "publication_year": 2025,
+      "citation_count": 44,
+      "top_countries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 10
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 4
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 2
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 2
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "count": 2
+        },
+        {
+          "code": "AE",
+          "name": "United Arab Emirates",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "doi": "10.4018/ijcallt.326135",
+      "title": "Exploring the Multilingual Applications of ChatGPT",
+      "publication_year": 2023,
+      "citation_count": 37,
+      "top_countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 11
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 5
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 5
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 4
+        },
+        {
+          "code": "KR",
+          "name": "South Korea",
+          "count": 3
+        },
+        {
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "doi": "10.4018/ijcallt.332873",
+      "title": "A Preliminary Study on Graduate Student Instructors' Exploration, Perception, and Use of ChatGPT",
+      "publication_year": 2023,
+      "citation_count": 26,
+      "top_countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 8
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 4
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 4
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 3
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 3
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "doi": "10.1007/s11528-024-00960-3",
+      "title": "Exploring Inventions in Self-Directed Language Learning with Generative AI: Implementations and Perspectives of YouTube Content Creators",
+      "publication_year": 2024,
+      "citation_count": 17,
+      "top_countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 8
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 2
+        },
+        {
+          "code": "FI",
+          "name": "Finland",
+          "count": 2
+        },
+        {
+          "code": "GR",
+          "name": "Greece",
+          "count": 1
+        },
+        {
+          "code": "IT",
+          "name": "Italy",
+          "count": 1
+        },
+        {
+          "code": "IL",
+          "name": "Israel",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.3390/educsci15081066",
+      "title": "Integrating Artificial Intelligence and Extended Reality in Language Education: A Systematic Literature Review (2017–2024)",
+      "publication_year": 2025,
+      "citation_count": 16,
+      "top_countries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 3
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "count": 2
+        },
+        {
+          "code": "MX",
+          "name": "Mexico",
+          "count": 2
+        },
+        {
+          "code": "PT",
+          "name": "Portugal",
+          "count": 2
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
+        },
+        {
+          "code": "VN",
+          "name": "Vietnam",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.1016/j.caeai.2025.100393",
+      "title": "An early investigation of collaborative problem solving in conversational AI-mediated learning environments",
+      "publication_year": 2025,
+      "citation_count": 12,
+      "top_countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 2
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 2
+        },
+        {
+          "code": "MY",
+          "name": "Malaysia",
+          "count": 2
+        },
+        {
+          "code": "GR",
+          "name": "Greece",
+          "count": 1
+        },
+        {
+          "code": "TH",
+          "name": "Thailand",
+          "count": 1
+        },
+        {
+          "code": "IT",
+          "name": "Italy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.1111/bjet.13588",
+      "title": "Analysing nontraditional students' <scp>ChatGPT</scp> interaction, engagement, self‐efficacy and performance: A mixed‐methods approach",
+      "publication_year": 2025,
+      "citation_count": 10,
+      "top_countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 4
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "count": 3
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 2
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "count": 2
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
+          "count": 1
+        },
+        {
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.1007/978-3-031-61953-3_6",
+      "title": "Generative Artificial Intelligence and Interactive Learning Platforms: Second Language Vocabulary Acquisition",
+      "publication_year": 2024,
+      "citation_count": 7,
+      "top_countries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 4
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 1
+        },
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.24059/olj.v27i4.4003",
+      "title": "Culturally- and Linguistically-Responsive Online Teacher Learning Professional Development",
+      "publication_year": 2023,
+      "citation_count": 4,
+      "top_countries": [
+        {
+          "code": "IL",
+          "name": "Israel",
+          "count": 1
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.1016/j.system.2025.103793",
+      "title": "Development and validation of the PA-SDA Scale: Measuring personal attributes in AI-integrated self-directed language learning",
+      "publication_year": 2025,
+      "citation_count": 4,
+      "top_countries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 3
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.3390/educsci15080963",
+      "title": "Technology Review of Magic School AI: An Intelligent Way for Education Inclusivity and Teacher Workload Reduction",
+      "publication_year": 2025,
+      "citation_count": 4,
+      "top_countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 2
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 2
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.1080/17501229.2025.2505700",
+      "title": "Getting viral on social media: exploring Chinese language EduTubers’ perceptions and practices",
+      "publication_year": 2025,
+      "citation_count": 2,
+      "top_countries": [
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "count": 2
+        },
+        {
+          "code": "PH",
+          "name": "Philippines",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.3390/educsci15081004",
+      "title": "Towards Dynamic Learner State: Orchestrating AI Agents and Workplace Performance via the Model Context Protocol",
+      "publication_year": 2025,
+      "citation_count": 2,
+      "top_countries": [
+        {
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.1016/j.ijaied.2026.100010",
+      "title": "A systematic review of language educators’ practices and development with GenAI",
+      "publication_year": 2026,
+      "citation_count": 1,
+      "top_countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.1080/17501229.2025.2598587",
+      "title": "Beyond scores: a systematic review of learning and psychological outcomes of digital game-based language learning (2010–2025)",
+      "publication_year": 2025,
+      "citation_count": 1,
+      "top_countries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 1
+        },
+        {
+          "code": "MY",
+          "name": "Malaysia",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "doi": "10.1007/978-3-031-51447-0_260-1",
+      "title": "AI-Generation Literacy",
+      "publication_year": 2026,
+      "citation_count": 0,
+      "top_countries": []
+    },
+    {
+      "doi": "10.1007/s12528-025-09476-y",
+      "title": "Examining non-traditional online learners’ ownership of learning in the context of ChatGPT-facilitated design",
+      "publication_year": 2025,
+      "citation_count": 0,
+      "top_countries": []
+    },
+    {
+      "doi": "10.1007/978-3-031-76293-2_12",
+      "title": "Implementing Design Thinking: A Mobile Application for Heritage Chinese Learners to Overcome Challenges in Learning Chinese Characters",
+      "publication_year": 2024,
+      "citation_count": 0,
+      "top_countries": []
+    },
+    {
+      "doi": "10.18178/ijiet.2026.16.4.2557",
+      "title": "Understanding AI-Assisted Learning Acceptance Among Vocational Students: An AIDUA Model Approach",
+      "publication_year": 2026,
+      "citation_count": 0,
+      "top_countries": []
+    }
+  ],
+  "selected_citing_works": [
+    {
+      "title": "Revolutionizing English Language Learning Through Social Robots and Artificial Intelligence: Towards Inclusive and Personalized Education",
+      "year": 2025,
+      "doi": "https://doi.org/10.1007/978-3-032-03977-4_4",
+      "openalex_url": "https://openalex.org/W7117990899",
+      "citing_country_codes": [
+        "IL"
+      ]
+    },
+    {
+      "title": "Developing Professionally in a Third Space: The Case of Indonesian English Teacher Educators Engaging in an Online Professional Development Community",
+      "year": 2025,
+      "doi": "https://doi.org/10.1002/tesj.70013",
+      "openalex_url": "https://openalex.org/W4407228553",
+      "citing_country_codes": [
+        "ID"
+      ]
+    },
+    {
+      "title": "“You Can Continue in Spanish—I Understand”: Intentionality and Equity Tensions in a Translanguaging Classroom",
+      "year": 2026,
+      "doi": "https://doi.org/10.29333/ajqr/18001",
+      "openalex_url": "https://openalex.org/W7153004318",
+      "citing_country_codes": [
+        "US"
+      ]
+    },
+    {
+      "title": "A systematic review of the first year of publications on ChatGPT and language education: Examining research on ChatGPT’s use in language learning and teaching",
+      "year": 2024,
+      "doi": "https://doi.org/10.1016/j.caeai.2024.100266",
+      "openalex_url": "https://openalex.org/W4400742516",
+      "citing_country_codes": [
+        "GB",
+        "US"
+      ]
+    },
+    {
+      "title": "Investigating L2 writers' critical AI literacy in AI-assisted writing: An APSE model",
+      "year": 2025,
+      "doi": "https://doi.org/10.1016/j.jslw.2025.101187",
+      "openalex_url": "https://openalex.org/W4407441485",
+      "citing_country_codes": [
+        "CA",
+        "US"
+      ]
+    },
+    {
+      "title": "The Impact of AI Usage on University Students’ Willingness for Autonomous Learning",
+      "year": 2024,
+      "doi": "https://doi.org/10.3390/bs14100956",
+      "openalex_url": "https://openalex.org/W4403493263",
+      "citing_country_codes": [
+        "CN"
+      ]
+    },
+    {
+      "title": "Unlocking Potential: Key Factors Shaping Undergraduate Self-Directed Learning in AI-Enhanced Educational Environments",
+      "year": 2024,
+      "doi": "https://doi.org/10.3390/systems12090332",
+      "openalex_url": "https://openalex.org/W4401996044",
+      "citing_country_codes": [
+        "AU",
+        "CN"
+      ]
+    },
+    {
+      "title": "Understanding self-directed learning in AI-Assisted writing: A mixed methods study of postsecondary learners",
+      "year": 2024,
+      "doi": "https://doi.org/10.1016/j.caeai.2024.100247",
+      "openalex_url": "https://openalex.org/W4399368432",
+      "citing_country_codes": [
+        "US"
+      ]
+    },
+    {
+      "title": "Investigating the Effect of Role-Play Activity With GenAI Agent on EFL Students’ Speaking Performance",
+      "year": 2024,
+      "doi": "https://doi.org/10.1177/07356331241299058",
+      "openalex_url": "https://openalex.org/W4404186313",
+      "citing_country_codes": [
+        "CN"
+      ]
+    },
+    {
+      "title": "In GenAI we trust: An investigation of university students’ reliance on and resistance to generative AI in language learning",
+      "year": 2025,
+      "doi": "https://doi.org/10.1186/s41239-025-00547-9",
+      "openalex_url": "https://openalex.org/W4413317945",
+      "citing_country_codes": [
+        "HK"
+      ]
+    },
+    {
+      "title": "Exploring the Utility of ChatGPT for Self-directed Online Language Learning",
+      "year": 2024,
+      "doi": "https://doi.org/10.24059/olj.v28i3.4497",
+      "openalex_url": "https://openalex.org/W4402118348",
+      "citing_country_codes": [
+        "US"
+      ]
+    },
+    {
+      "title": "Self-directed writing development across computer/AI-based tasks: Unraveling the traces on L2 writing outcomes, growth mindfulness, and grammatical knowledge",
+      "year": 2024,
+      "doi": "https://doi.org/10.1016/j.chbr.2024.100566",
+      "openalex_url": "https://openalex.org/W4405353790",
+      "citing_country_codes": [
+        "SA"
+      ]
+    },
+    {
+      "title": "The human touch in AI: optimizing language learning through self-determination theory and teacher scaffolding",
+      "year": 2025,
+      "doi": "https://doi.org/10.3389/fpsyg.2025.1568239",
+      "openalex_url": "https://openalex.org/W4411974494",
+      "citing_country_codes": [
+        "CN",
+        "GB"
+      ]
+    },
+    {
+      "title": "Diffusion-Based Reinforcement Learning for Cooperative Offloading and Resource Allocation in Multi-UAV Assisted Edge-Enabled Metaverse",
+      "year": 2025,
+      "doi": "https://doi.org/10.1109/tvt.2025.3544879",
+      "openalex_url": "https://openalex.org/W4407901494",
+      "citing_country_codes": [
+        "CN"
+      ]
+    },
+    {
+      "title": "Integrating Artificial Intelligence and Extended Reality in Language Education: A Systematic Literature Review (2017–2024)",
+      "year": 2025,
+      "doi": "https://doi.org/10.3390/educsci15081066",
+      "openalex_url": "https://openalex.org/W4413326065",
+      "citing_country_codes": [
+        "US"
+      ]
+    },
+    {
+      "title": "Advanced multi-lingual writers’ self-directed use of generative AI in academic writing: Rethinking writing, authorship, and learning",
+      "year": 2025,
+      "doi": "https://doi.org/10.1093/applin/amaf057",
+      "openalex_url": "https://openalex.org/W4414346188",
+      "citing_country_codes": [
+        "US"
+      ]
+    },
+    {
+      "title": "Principals Leading AI in Schools for Instructional Leadership: A Conceptual Model for Principal AI Use",
+      "year": 2025,
+      "doi": "https://doi.org/10.1080/15700763.2024.2428297",
+      "openalex_url": "https://openalex.org/W7128160333",
+      "citing_country_codes": [
+        "US"
+      ]
+    },
+    {
+      "title": "A skill-specific perspective on AI-mediated informal digital learning of English (AI-IDLE): Examining the contributing roles of L2 writing motivation and enjoyment",
+      "year": 2025,
+      "doi": "https://doi.org/10.1177/13621688251375547",
+      "openalex_url": "https://openalex.org/W4415168359",
+      "citing_country_codes": [
+        "CN",
+        "GB",
+        "HK"
+      ]
+    },
+    {
+      "title": "Analysing nontraditional students' <scp>ChatGPT</scp> interaction, engagement, self‐efficacy and performance: A mixed‐methods approach",
+      "year": 2025,
+      "doi": "https://doi.org/10.1111/bjet.13588",
+      "openalex_url": "https://openalex.org/W4409297005",
+      "citing_country_codes": [
+        "US"
+      ]
+    },
+    {
+      "title": "The associations between students' attitudes toward AI and learning engagement: serial mediating roles of perceived autonomy and learning enjoyment",
+      "year": 2025,
+      "doi": "https://doi.org/10.3389/fpsyg.2025.1681635",
+      "openalex_url": "https://openalex.org/W4417181903",
+      "citing_country_codes": [
+        "CN",
+        "GB"
+      ]
+    },
+    {
+      "title": "Application of artificial intelligence in English learning: The interactive effects of teacher support, learning motivation, and autonomous learning ability",
+      "year": 2025,
+      "doi": "https://doi.org/10.1016/j.actpsy.2025.105960",
+      "openalex_url": "https://openalex.org/W4416513643",
+      "citing_country_codes": [
+        "CN"
+      ]
+    },
+    {
+      "title": "Generative AI in Self-Directed Learning: a thematic scoping review",
+      "year": 2025,
+      "doi": "https://doi.org/10.1080/10494820.2025.2603431",
+      "openalex_url": "https://openalex.org/W7117371607",
+      "citing_country_codes": [
+        "GB",
+        "VN"
+      ]
+    },
+    {
+      "title": "Exploring Inventions in Self-Directed Language Learning with Generative AI: Implementations and Perspectives of YouTube Content Creators",
+      "year": 2024,
+      "doi": "https://doi.org/10.1007/s11528-024-00960-3",
+      "openalex_url": "https://openalex.org/W4396867450",
+      "citing_country_codes": [
+        "US"
+      ]
+    },
+    {
+      "title": "Exploring YouTube content creators’ perspectives on generative AI in language learning: Insights through opinion mining and sentiment analysis",
+      "year": 2024,
+      "doi": "https://doi.org/10.1371/journal.pone.0308096",
+      "openalex_url": "https://openalex.org/W4402897552",
+      "citing_country_codes": [
+        "TR"
+      ]
+    },
+    {
+      "title": "From assistance to integrity: exploring the role of AI in academic communication across Russian and Turkish campuses",
+      "year": 2025,
+      "doi": "https://doi.org/10.3389/fcomm.2025.1479813",
+      "openalex_url": "https://openalex.org/W4410729293",
+      "citing_country_codes": [
+        "RU",
+        "TR"
+      ]
+    },
+    {
+      "title": "Exploring interaction process, L2 motivation and intended effort in chatbot-mediated interactions: evidence from Latent Dirichlet Allocation (LDA) topic modeling",
+      "year": 2025,
+      "doi": "https://doi.org/10.1080/09588221.2025.2552116",
+      "openalex_url": "https://openalex.org/W4414269787",
+      "citing_country_codes": [
+        "CN"
+      ]
+    },
+    {
+      "title": "Development and validation of the PA-SDA Scale: Measuring personal attributes in AI-integrated self-directed language learning",
+      "year": 2025,
+      "doi": "https://doi.org/10.1016/j.system.2025.103793",
+      "openalex_url": "https://openalex.org/W4412819211",
+      "citing_country_codes": [
+        "US"
+      ]
+    },
+    {
+      "title": "“It Becomes Very Intelligent”: <scp>ChatGPT</scp> as an Academic Reading Tool for Postgraduates",
+      "year": 2025,
+      "doi": "https://doi.org/10.1002/rrq.70058",
+      "openalex_url": "https://openalex.org/W4413737853",
+      "citing_country_codes": [
+        "CN",
+        "ID",
+        "MY"
+      ]
+    },
+    {
+      "title": "Spanish language learning in the AI era: AI as a scaffolding tool",
+      "year": 2025,
+      "doi": "https://doi.org/10.1515/jccall-2024-0026",
+      "openalex_url": "https://openalex.org/W4409241101",
+      "citing_country_codes": [
+        "ES"
+      ]
+    },
+    {
+      "title": "Examining the moderating role of generative AI in advancing teachers’ professional competencies through self-directed learning: evidence from Ghana",
+      "year": 2025,
+      "doi": "https://doi.org/10.1080/10494820.2025.2556811",
+      "openalex_url": "https://openalex.org/W4414592817",
+      "citing_country_codes": [
+        "CN",
+        "GB",
+        "JP",
+        "US"
+      ]
+    },
+    {
+      "title": "The Synergistic Power of AIoT in Enhancing EFL Student CCT Skills in Higher Education",
+      "year": 2025,
+      "doi": "https://doi.org/10.4018/979-8-3373-1399-3.ch012",
+      "openalex_url": "https://openalex.org/W4407873432",
+      "citing_country_codes": [
+        "ID"
+      ]
+    },
+    {
+      "title": "A Systematic Scoping Review of Self‐Regulated Learning With AI in Language Education",
+      "year": 2025,
+      "doi": "https://doi.org/10.1111/ijal.70030",
+      "openalex_url": "https://openalex.org/W4415620529",
+      "citing_country_codes": [
+        "HK"
+      ]
+    },
+    {
+      "title": "Self-directed lifelong learning of university English teachers in the information age: An empirical review",
+      "year": 2025,
+      "doi": "https://doi.org/10.1016/j.ssaho.2025.101640",
+      "openalex_url": "https://openalex.org/W4411124015",
+      "citing_country_codes": [
+        "CN"
+      ]
+    },
+    {
+      "title": "Navigating GenAI: A participatory narrative inquiry into a teenager's experiences with ChatGPT in informal learning environments",
+      "year": 2025,
+      "doi": "https://doi.org/10.1080/10494820.2025.2606836",
+      "openalex_url": "https://openalex.org/W7117593708",
+      "citing_country_codes": [
+        "US"
+      ]
+    },
+    {
+      "title": "Exploring self-learning efficacy: a comparative analysis of ChatGPT and Gemini",
+      "year": 2025,
+      "doi": "https://doi.org/10.1108/itse-12-2023-0251",
+      "openalex_url": "https://openalex.org/W4408273110",
+      "citing_country_codes": [
+        "IN"
+      ]
+    },
+    {
+      "title": "From sporadic to sustained: facilitating AI-mediated informal digital learning of English (AI-IDLE) speaking practice through a teacher support framework",
+      "year": 2026,
+      "doi": "https://doi.org/10.1080/17501229.2026.2642395",
+      "openalex_url": "https://openalex.org/W7135215621",
+      "citing_country_codes": [
+        "HK"
+      ]
+    }
+  ]
+}

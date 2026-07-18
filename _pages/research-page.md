@@ -270,6 +270,216 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
   transition: opacity 0.18s ease;
 }
 #sp-content.sp-fading { opacity: 0; }
+
+.citation-reach {
+  margin: 46px 0 0;
+  padding: 28px 0 0;
+  border-top: 1px solid #e8edf3;
+}
+.citation-reach__head {
+  max-width: 760px;
+  margin-bottom: 14px;
+}
+.citation-reach__eyebrow {
+  margin: 0 0 6px;
+  color: #9aa3ad;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.citation-reach__eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7b9cc8;
+}
+.citation-reach__title {
+  margin: 0 0 8px;
+  color: #1f2933;
+  font-size: clamp(21px, 2.4vw, 28px);
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+.citation-reach__copy {
+  max-width: 620px;
+  margin: 0;
+  color: #68717c;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+.citation-reach__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+.citation-stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1.5px solid #dbe5f0;
+  color: #4a6e9a;
+}
+.citation-stat:nth-child(2) {
+  color: #8a6a28;
+}
+.citation-stat__num {
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 800;
+}
+.citation-stat__label {
+  color: #6f7b87;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.citation-reach__grid {
+  display: block;
+}
+.citation-map {
+  min-height: 280px;
+  background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+  border-top: 1px solid #edf2f7;
+  border-bottom: 1px solid #edf2f7;
+  overflow: hidden;
+  position: relative;
+}
+.citation-map svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.citation-map__empty {
+  padding: 34px;
+  color: #788391;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.citation-graticule {
+  stroke: #edf2f7;
+  stroke-width: 1;
+}
+.citation-land-dot {
+  fill: #dfe8f2;
+  opacity: 0.62;
+}
+.citation-land-dot--warm {
+  fill: #eadfcd;
+  opacity: 0.48;
+}
+.citation-dot {
+  fill: #7b9cc8;
+  stroke: rgba(255, 255, 255, 0.98);
+  stroke-width: 2;
+  filter: drop-shadow(0 2px 5px rgba(42, 62, 82, 0.2));
+}
+.citation-dot--gold { fill: #d1a760; }
+.citation-dot--green { fill: #82b896; }
+.citation-country-label {
+  fill: #5c6672;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.citation-side {
+  margin-top: 10px;
+}
+.citation-side .citation-list {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+.citation-side .citation-list ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+  padding: 0;
+}
+.citation-side .citation-list li {
+  margin: 0;
+  padding: 5px 10px;
+  border: 1px solid #dbe5f0;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 11px;
+}
+.citation-list {
+  padding: 14px 15px;
+  border-radius: 8px;
+  background: #fbfdff;
+  border: 1px solid #e2ebf4;
+}
+.citation-list h3 {
+  margin: 0 0 9px;
+  color: #1a1a1a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.citation-list ol,
+.citation-list ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.citation-list li {
+  margin: 0 0 7px;
+  color: #4f5964;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.citation-list a {
+  color: #3f6387;
+  text-decoration: none;
+  font-weight: 700;
+}
+.citation-list a:hover {
+  text-decoration: underline;
+}
+.citation-reach__footer {
+  margin: 14px 0 0;
+  color: #9aa3ad;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+}
+.citation-wide-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+@media (max-width: 760px) {
+  .citation-reach__head,
+  .citation-reach__grid {
+    display: block;
+  }
+  .citation-reach__copy {
+    margin-top: 10px;
+  }
+  .citation-side {
+    margin-top: 14px;
+  }
+  .citation-map {
+    min-height: 260px;
+  }
+  .citation-wide-lists {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 
 <div class="page-with-rail-nav">
@@ -279,6 +489,7 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
     <a class="page-section-nav__link" href="#strand-b"><span class="lang-en">Authenticity &amp; Assessment</span><span class="lang-zh" hidden>真实性与评估</span></a>
     <a class="page-section-nav__link" href="#strand-c"><span class="lang-en">Equity &amp; Heterogeneity</span><span class="lang-zh" hidden>公平性与学习者异质性</span></a>
     <a class="page-section-nav__link" href="#strand-d"><span class="lang-en">Literacy &amp; Design</span><span class="lang-zh" hidden>AI素养与学习设计</span></a>
+    <a class="page-section-nav__link" href="#citation-reach"><span class="lang-en">Citation Reach</span><span class="lang-zh" hidden>引用地图</span></a>
   </div>
 </nav>
 
@@ -313,8 +524,56 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
   <div id="sp-content"></div>
 </div>
 
+<section class="citation-reach" id="citation-reach" data-citation-map data-reveal>
+  <div class="citation-reach__head">
+    <div class="citation-reach__eyebrow">Research Reach</div>
+    <h2 class="citation-reach__title">Where My Work Travels</h2>
+    <div class="citation-reach__copy">A geography view of citations that can be matched through DOI-indexed publications in OpenAlex.</div>
+  </div>
+  <div class="citation-reach__stats" aria-label="Citation reach summary">
+    <div class="citation-stat">
+      <span class="citation-stat__num" data-citation-source-count>...</span>
+      <span class="citation-stat__label">DOI-indexed source works</span>
+    </div>
+    <div class="citation-stat">
+      <span class="citation-stat__num" data-citation-count>...</span>
+      <span class="citation-stat__label">Mapped OpenAlex citing works</span>
+    </div>
+  </div>
+  <div class="citation-reach__grid">
+    <div class="citation-map" data-citation-map-canvas>
+      <div class="citation-map__empty">Citation geography data will appear here after the OpenAlex update script runs.</div>
+    </div>
+    <div class="citation-side">
+      <div class="citation-list">
+        <h3>Top Citing Regions</h3>
+        <ol data-citation-countries>
+          <li>Waiting for citation data.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="citation-wide-lists">
+    <div class="citation-list">
+      <h3>Most-Cited Source Papers</h3>
+      <ul data-citation-papers>
+        <li>Waiting for citation data.</li>
+      </ul>
+    </div>
+    <div class="citation-list">
+      <h3>Selected Citing Works</h3>
+      <ul data-citation-works>
+        <li>Waiting for citation data.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="citation-reach__footer" data-citation-generated>Source: OpenAlex. This map is based on DOI-linked records and does not represent total Google Scholar citations. Country counts use citing authors' institutional country metadata and exclude works without usable country information.</div>
+</section>
+
 </div>
 </div>
+
+<script type="application/json" id="citation-map-data">{{ site.data.citation_map | jsonify }}</script>
 
 <script>
 (function () {
@@ -553,5 +812,178 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+})();
+</script>
+
+<script>
+(function () {
+  var root = document.querySelector('[data-citation-map]');
+  if (!root) return;
+
+  function escapeHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function project(lon, lat) {
+    return {
+      x: ((Number(lon) + 180) / 360) * 920,
+      y: ((75 - Number(lat)) / 130) * 290 + 20
+    };
+  }
+
+  function insideBlob(lon, lat, blob) {
+    var dx = (lon - blob.lon) / blob.rx;
+    var dy = (lat - blob.lat) / blob.ry;
+    return dx * dx + dy * dy <= 1;
+  }
+
+  function renderLandDots() {
+    var blobs = [
+      { lon: -108, lat: 48, rx: 55, ry: 25, tone: 'cool' },
+      { lon: -86, lat: 18, rx: 24, ry: 8, tone: 'cool' },
+      { lon: -60, lat: -18, rx: 24, ry: 36, tone: 'cool' },
+      { lon: 14, lat: 52, rx: 28, ry: 15, tone: 'cool' },
+      { lon: 86, lat: 43, rx: 78, ry: 27, tone: 'cool' },
+      { lon: 20, lat: 5, rx: 31, ry: 38, tone: 'warm' },
+      { lon: 79, lat: 20, rx: 19, ry: 14, tone: 'warm' },
+      { lon: 110, lat: 4, rx: 28, ry: 16, tone: 'warm' },
+      { lon: 135, lat: -25, rx: 26, ry: 14, tone: 'warm' },
+      { lon: -42, lat: 73, rx: 22, ry: 8, tone: 'cool' }
+    ];
+    var dots = [];
+    for (var lon = -170; lon <= 180; lon += 7) {
+      for (var lat = -48; lat <= 72; lat += 6) {
+        var blob = blobs.find(function (candidate) { return insideBlob(lon, lat, candidate); });
+        if (!blob) continue;
+        var point = project(lon, lat);
+        var cls = blob.tone === 'warm' ? 'citation-land-dot citation-land-dot--warm' : 'citation-land-dot';
+        dots.push('<circle class="' + cls + '" cx="' + point.x.toFixed(1) + '" cy="' + point.y.toFixed(1) + '" r="1.8"/>');
+      }
+    }
+    return dots.join('');
+  }
+
+  function dotClass(index) {
+    if (index % 3 === 1) return 'citation-dot citation-dot--gold';
+    if (index % 3 === 2) return 'citation-dot citation-dot--green';
+    return 'citation-dot';
+  }
+
+  function renderMap(data) {
+    var canvas = root.querySelector('[data-citation-map-canvas]');
+    var countries = Array.isArray(data.countries) ? data.countries : [];
+    if (!countries.length) {
+      canvas.innerHTML = '<div class="citation-map__empty">Citation geography data will appear here after the OpenAlex update script runs.</div>';
+      return;
+    }
+
+    var maxCount = countries.reduce(function (max, country) {
+      return Math.max(max, Number(country.count) || 0);
+    }, 1);
+
+    var dots = countries.map(function (country, index) {
+      var point = project(country.longitude, country.latitude);
+      var radius = 4 + Math.sqrt((Number(country.count) || 1) / maxCount) * 12;
+      return '<circle class="' + dotClass(index) + '" cx="' + point.x.toFixed(1) + '" cy="' + point.y.toFixed(1) + '" r="' + radius.toFixed(1) + '">' +
+        '<title>' + escapeHtml(country.name + ': ' + country.count) + '</title></circle>';
+    }).join('');
+    var labels = countries.slice(0, 6).map(function (country) {
+      var point = project(country.longitude, country.latitude);
+      var dx = point.x > 760 ? -72 : 12;
+      var anchor = point.x > 760 ? 'end' : 'start';
+      return '<text class="citation-country-label" x="' + (point.x + dx).toFixed(1) + '" y="' + (point.y - 10).toFixed(1) + '" text-anchor="' + anchor + '">' +
+        escapeHtml(country.code + ' · ' + country.count) + '</text>';
+    }).join('');
+
+    canvas.innerHTML =
+      '<svg viewBox="0 0 920 330" role="img" aria-label="Citation geography map">' +
+      '<rect width="920" height="330" fill="transparent"/>' +
+      '<g opacity="0.55" class="citation-graticule"><path d="M0 165 H920"/><path d="M230 0 V330"/><path d="M460 0 V330"/><path d="M690 0 V330"/><path d="M0 78 H920"/><path d="M0 252 H920"/></g>' +
+      '<g>' + renderLandDots() + '</g>' +
+      '<g>' + dots + labels + '</g></svg>';
+  }
+
+  function renderList(selector, items, formatter, emptyText) {
+    var el = root.querySelector(selector);
+    if (!el) return;
+    if (!items || !items.length) {
+      el.innerHTML = '<li>' + escapeHtml(emptyText) + '</li>';
+      return;
+    }
+    el.innerHTML = items.map(function (item) {
+      return '<li>' + formatter(item) + '</li>';
+    }).join('');
+  }
+
+  function formatDate(value) {
+    var date = new Date(value);
+    if (Number.isNaN(date.getTime())) return value;
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  }
+
+  function render(data) {
+    root.querySelector('[data-citation-source-count]').textContent = data.source_count || 0;
+    root.querySelector('[data-citation-count]').textContent = data.citation_count || 0;
+    renderMap(data);
+
+    renderList('[data-citation-countries]', (data.countries || []).slice(0, 8), function (country) {
+      return '<strong>' + escapeHtml(country.name) + '</strong> · ' + escapeHtml(country.count) + ' citing works';
+    }, 'Waiting for citation data.');
+
+    renderList('[data-citation-papers]', (data.papers || []).slice(0, 6), function (paper) {
+      var title = escapeHtml(paper.title || paper.doi);
+      var doiUrl = 'https://doi.org/' + encodeURIComponent(paper.doi || '').replace(/%2F/g, '/');
+      return '<a href="' + doiUrl + '" target="_blank" rel="noopener">' + title + '</a> · ' +
+        escapeHtml(paper.publication_year || '') + ' · ' + escapeHtml(paper.citation_count || 0) + ' citing works';
+    }, 'Waiting for citation data.');
+
+    renderList('[data-citation-works]', (data.selected_citing_works || []).slice(0, 8), function (work) {
+      var url = work.doi || work.openalex_url || '#';
+      var countries = (work.citing_country_codes || []).join(', ');
+      return '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + escapeHtml(work.title || 'Citing work') + '</a> · ' +
+        escapeHtml(work.year || '') + (countries ? ' · ' + escapeHtml(countries) : '');
+    }, 'Waiting for citation data.');
+
+    var generated = root.querySelector('[data-citation-generated]');
+    if (generated && data.generated_at) {
+      generated.textContent = 'Source: OpenAlex. Last updated ' + formatDate(data.generated_at) +
+        '. This map is based on DOI-linked records and does not represent total Google Scholar citations. Country counts use citing author institutional country metadata and exclude works without usable country information.';
+    }
+  }
+
+  function inlineData() {
+    var el = document.getElementById('citation-map-data');
+    if (!el || !el.textContent.trim()) return null;
+    try {
+      return JSON.parse(el.textContent);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  var embedded = inlineData();
+  if (embedded && embedded.countries && embedded.countries.length) {
+    render(embedded);
+    return;
+  }
+
+  fetch('/assets/data/citation-map.json', { cache: 'no-store' })
+    .then(function (response) {
+      if (!response.ok) throw new Error('Citation data not available');
+      return response.json();
+    })
+    .then(render)
+    .catch(function () {
+      render({ source_count: 0, citation_count: 0, countries: [], papers: [], selected_citing_works: [] });
+    });
 })();
 </script>
