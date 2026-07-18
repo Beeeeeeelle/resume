@@ -11,7 +11,7 @@
 <link rel="shortcut icon" href="{{ '/favicon.ico?v=6' | relative_url }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png?v=6' | relative_url }}">
 {% if site.cloudflare_analytics_token and site.cloudflare_analytics_token != "" %}
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"{{ site.cloudflare_analytics_token }}"}'></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"{{ site.cloudflare_analytics_token }}"}'></script>
 {% endif %}
 <script defer src="{{ '/assets/js/site-reach.js' | relative_url }}"></script>
 <script>

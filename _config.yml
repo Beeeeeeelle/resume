@@ -7,7 +7,7 @@ twitter_username: username
 github_username: username
 minimal_mistakes_skin: default
 search: true
-cloudflare_analytics_token: ""
+cloudflare_analytics_token: "abcfbefa132140f8acb72846cd81986a"
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/

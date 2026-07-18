@@ -456,12 +456,6 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
   font-size: 11px !important;
   line-height: 1.45 !important;
 }
-.citation-wide-lists {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 10px;
-}
 @media (max-width: 760px) {
   .citation-reach__head,
   .citation-reach__grid {
@@ -475,9 +469,6 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
   }
   .citation-map {
     min-height: 260px;
-  }
-  .citation-wide-lists {
-    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -551,20 +542,6 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
           <li>Waiting for citation data.</li>
         </ol>
       </div>
-    </div>
-  </div>
-  <div class="citation-wide-lists">
-    <div class="citation-list">
-      <h3>Most-Cited Source Papers</h3>
-      <ul data-citation-papers>
-        <li>Waiting for citation data.</li>
-      </ul>
-    </div>
-    <div class="citation-list">
-      <h3>Selected Citing Works</h3>
-      <ul data-citation-works>
-        <li>Waiting for citation data.</li>
-      </ul>
     </div>
   </div>
   <div class="citation-reach__footer" data-citation-generated>Source: OpenAlex. This map is based on DOI-linked records and does not represent total Google Scholar citations. Country counts use citing authors' institutional country metadata and exclude works without usable country information.</div>
@@ -949,20 +926,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderList('[data-citation-countries]', (data.countries || []).slice(0, 8), function (country) {
       return '<strong>' + escapeHtml(country.name) + '</strong> · ' + escapeHtml(country.count) + ' citing works';
-    }, 'Waiting for citation data.');
-
-    renderList('[data-citation-papers]', (data.papers || []).slice(0, 6), function (paper) {
-      var title = escapeHtml(paper.title || paper.doi);
-      var doiUrl = 'https://doi.org/' + encodeURIComponent(paper.doi || '').replace(/%2F/g, '/');
-      return '<a href="' + doiUrl + '" target="_blank" rel="noopener">' + title + '</a> · ' +
-        escapeHtml(paper.publication_year || '') + ' · ' + escapeHtml(paper.citation_count || 0) + ' citing works';
-    }, 'Waiting for citation data.');
-
-    renderList('[data-citation-works]', (data.selected_citing_works || []).slice(0, 8), function (work) {
-      var url = work.doi || work.openalex_url || '#';
-      var countries = (work.citing_country_codes || []).join(', ');
-      return '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + escapeHtml(work.title || 'Citing work') + '</a> · ' +
-        escapeHtml(work.year || '') + (countries ? ' · ' + escapeHtml(countries) : '');
     }, 'Waiting for citation data.');
 
     var generated = root.querySelector('[data-citation-generated]');
