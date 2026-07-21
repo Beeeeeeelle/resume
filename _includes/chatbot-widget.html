@@ -9,9 +9,7 @@
       aria-controls="site-chatbot-panel"
     >
       <span class="site-chatbot__launcher-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-          <path d="M12 3c-4.97 0-9 3.58-9 8 0 2.46 1.26 4.66 3.24 6.13L5.2 21l4.25-2.25c.81.16 1.67.25 2.55.25 4.97 0 9-3.58 9-8s-4.03-8-9-8Zm-3.5 8.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm3.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm3.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"></path>
-        </svg>
+        <img src="{{ '/assets/images/ask-belle-mascot.jpg' | relative_url }}" alt="" loading="lazy">
       </span>
       <span class="site-chatbot__launcher-text">{{ site.chatbot.button_label | default: "Ask Belle" }}</span>
     </button>
@@ -38,7 +36,12 @@
               {% endif %}
             </span>
           </div>
-          <h2 class="site-chatbot__title" id="site-chatbot-title">{{ site.chatbot.title | default: "Ask Belle" }}</h2>
+          <h2 class="site-chatbot__title" id="site-chatbot-title">
+            {{ site.chatbot.title | default: "Ask Belle" }}
+            <span class="site-chatbot__spark" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </span>
+          </h2>
           <p class="site-chatbot__subtitle">{{ site.chatbot.subtitle | default: "Research, teaching, publications, and projects" }}</p>
         </div>
         <div class="site-chatbot__header-actions">
