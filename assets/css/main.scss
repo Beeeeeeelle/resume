@@ -1294,10 +1294,26 @@ html.chatbot-lock {
   display: inline-block;
   max-width: 16.5rem;
   margin: 0.08rem 0 0.12rem;
-  color: #3f8795;
+  color: #667482;
   font-size: 0.9em;
   line-height: 1.45;
   font-weight: 500;
+}
+
+.sidebar .author__bio .author-tagline__keyword {
+  font-weight: 650;
+}
+
+.sidebar .author__bio .author-tagline__keyword--ai {
+  color: #3f8795;
+}
+
+.sidebar .author__bio .author-tagline__keyword--agency {
+  color: #587eaf;
+}
+
+.sidebar .author__bio .author-tagline__keyword--sdl {
+  color: #4f8a68;
 }
 
 .js-typewriter--typing::after,

@@ -1,25 +1,13 @@
 (function () {
   var LANG_KEY = 'bl-lang';
-  var MOBILE_LANG_TOUCHED_KEY = 'bl-lang-mobile-touched';
-
-  function isMobileViewport() {
-    try {
-      return !!(window.matchMedia && window.matchMedia('(max-width: 48em)').matches);
-    } catch (e) {
-      return false;
-    }
-  }
 
   function getDefaultLang() {
-    if (isMobileViewport()) return 'zh';
     return 'en';
   }
 
   function getLang() {
     try {
       var saved = localStorage.getItem(LANG_KEY);
-      var mobileTouched = localStorage.getItem(MOBILE_LANG_TOUCHED_KEY);
-      if (isMobileViewport() && !mobileTouched) return 'zh';
       return saved || getDefaultLang();
     } catch (e) {
       return getDefaultLang();
@@ -56,7 +44,6 @@
   function setLang(lang) {
     try {
       localStorage.setItem(LANG_KEY, lang);
-      if (isMobileViewport()) localStorage.setItem(MOBILE_LANG_TOUCHED_KEY, 'true');
     } catch (e) {}
     applyLang(lang);
     updateBtn(lang);

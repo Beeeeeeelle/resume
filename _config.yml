@@ -1,4 +1,5 @@
 title: Belle Li
+locale: en-US
 email: li4808@purdue.edu
 description: Belle Li is a Learning Design and Technology researcher studying how
   generative AI reshapes learner agency, authenticity, and equity in self-directed
@@ -25,7 +26,7 @@ plugins:
 author:
   name: Belle Li, Ph.D.
   avatar: /assets/images/avatar.jpg
-  bio: '<span class="author-role">Ross-Lynn Postdoctoral Research Scholar</span><br><span class="author-tagline js-typewriter" data-typewriter-delay="220" data-text="I study and build AI that keeps humans in charge of learning across the lifespan.">I study and build AI that keeps humans in charge of learning across the lifespan.</span><br>Purdue University'
+  bio: '<span class="author-role">Ross-Lynn Postdoctoral Fellow</span><br><span class="author-tagline">I design and study <span class="author-tagline__keyword author-tagline__keyword--ai">human-centered AI</span> that strengthens <span class="author-tagline__keyword author-tagline__keyword--agency">learner agency</span> and <span class="author-tagline__keyword author-tagline__keyword--sdl">self-directed learning</span> across the lifespan.</span><br>Purdue University'
   links:
   - label: West Lafayette, IN
     icon: fas fa-fw fa-map-marker-alt
