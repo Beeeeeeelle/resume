@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const images = document.querySelectorAll('.page__content img, .bcv__item img');
+  const images = document.querySelectorAll('.page__content img, .news-item__img, .bcv__item img');
 
   const openLightbox = (img, event) => {
     event.preventDefault();
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const enlarged = img.cloneNode(true);
     enlarged.removeAttribute('width');
     enlarged.removeAttribute('height');
-    enlarged.classList.add('img-lightbox-img');
+    enlarged.className = 'img-lightbox-img';
 
     figure.appendChild(enlarged);
 

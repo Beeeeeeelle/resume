@@ -119,6 +119,41 @@ title: "Design & Development"
 
 ## Learning Products & Course Design
 
+<section class="learnlab-project" data-reveal>
+  <article class="learning-inline learning-inline--feature">
+    <figure class="learning-inline__media learning-inline__media--feature">
+      <video controls playsinline preload="metadata" poster="/assets/images/design/database-normalization-tutor/interface.png">
+        <source src="/assets/videos/database-normalization-tutor-walkthrough.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption class="learning-inline__caption">A full walkthrough from the source table through 1NF and 2NF, with feedback at each step.</figcaption>
+    </figure>
+    <div class="learning-inline__body">
+      <h3>Database Normalization Tutor</h3>
+      <p>At Carnegie Mellon University's 2026 LearnLab Summer School, I co-designed an example-tracing tutor that helps learners apply database normalization rather than only recite its rules. The tutor checks each decision as learners build a first-normal-form table and decompose it into second normal form.</p>
+      <ul>
+        <li><strong>Step-level guidance:</strong> correct entries are verified and locked immediately, while errors receive targeted feedback before they propagate through the solution.</li>
+        <li><strong>Traceable learning model:</strong> a CTAT behavior graph represents multiple valid paths and labels the knowledge components behind each action.</li>
+        <li><strong>AI with boundaries:</strong> an optional Socratic assistant explains unanticipated mistakes, while CTAT remains the authority for grading.</li>
+      </ul>
+      <div class="learning-panel__actions learnlab-project__actions">
+        <a class="learning-panel__link" href="https://github.com/Umerfarooq1/database-normalization-tutor" target="_blank" rel="noopener">View project on GitHub</a>
+      </div>
+    </div>
+  </article>
+
+  <div class="learnlab-project__gallery" aria-label="Database Normalization Tutor design details">
+    <figure>
+      <img src="/assets/images/design/database-normalization-tutor/behavior-graph.png" alt="CTAT behavior graph excerpt showing correct paths, anticipated errors, hints, and knowledge-component labels" loading="lazy">
+      <figcaption>Inside the CTAT model: each link connects a learner action to feedback, hints, and a knowledge component.</figcaption>
+    </figure>
+    <figure>
+      <img src="/assets/images/design/database-normalization-tutor/design-overview.png" alt="Design overview explaining the database normalization learning challenge and the working tutor interface" loading="lazy">
+      <figcaption>The design starts with the gap between knowing a normalization rule and applying it to unfamiliar data.</figcaption>
+    </figure>
+  </div>
+</section>
+
 <div class="learning-panels">
   <article class="learning-panel learning-panel--feature" data-reveal>
     <div class="learning-panel__media">

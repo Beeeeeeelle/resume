@@ -7,7 +7,9 @@
 
 - date: "Jul 2026"
   type: event
-  text: "Selected for the <strong>LearnLab Summer School</strong> at Carnegie Mellon University, Intelligent Tutoring Systems track, led by Dr. Vincent Aleven."
+  text: "Completed the <strong>LearnLab Summer School</strong> Intelligent Tutoring Systems track at Carnegie Mellon University, where I co-designed and prototyped a <a href=\"https://github.com/Umerfarooq1/database-normalization-tutor\" target=\"_blank\" rel=\"noopener\">CTAT-based tutor for database normalization</a>."
+  image: /assets/images/news/learnlab-summer-school/learnlab-its-certificate-2026.png
+  image_alt: "Certificate of Completion awarded to Belle Li for the 2026 LearnLab Summer School Intelligent Tutoring System Track at Carnegie Mellon University"
 
 - date: "Jul 2026"
   type: grant
