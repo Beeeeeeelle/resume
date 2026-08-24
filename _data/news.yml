@@ -1,6 +1,15 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- id: ai-lunch-learn
+  date: "Aug 2026"
+  type: event
+  text: "Leading Purdue's <strong>AI Lunch &amp; Learn</strong> series, a set of practical, hands-on workshops on teaching and learning with AI. I welcome collaborators interested in contributing expertise or co-designing a session; Purdue affiliation is not required."
+  image: /assets/images/news/ai-lunch-learn/ai-lunch-learn-collaborators-wanted.png
+  image_alt: "Illustration inviting collaborators to co-design hands-on Purdue AI Lunch and Learn workshops"
+  cta_url: https://purdue.yul1.qualtrics.com/jfe/form/SV_9NvaqUBRjdm4pCK
+  cta_label: "Collaborate or co-design"
+
 - date: "Aug 2026"
   type: event
   text: "Beginning my role as <strong>Ross-Lynn Postdoctoral Fellow</strong> in AI in Education at Purdue University's College of Education, supporting the AI Working Group and college-wide AI initiatives."

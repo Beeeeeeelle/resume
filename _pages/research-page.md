@@ -490,7 +490,7 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
 
 <figure class="rp-overview-art" data-reveal>
   <div class="rp-overview-map" aria-label="Clickable research strand map">
-    <img src="/assets/images/research/human-centered-ai-learning-strands.png" alt="Illustrated map of four human-centered AI learning research strands" data-no-lightbox="true">
+    <img src="/assets/images/research/human-centered-ai-learning-strands.png?v=20260824" alt="Illustrated map of four human-centered AI learning research strands" data-no-lightbox="true">
     <button class="rp-map-hit rp-map-hit--a" type="button" data-zone="a" onclick="showPanel('a', true)"><span>AI-mediated self-directed learning</span></button>
     <button class="rp-map-hit rp-map-hit--b" type="button" data-zone="b" onclick="showPanel('b', true)"><span>Authenticity and assessment</span></button>
     <button class="rp-map-hit rp-map-hit--c" type="button" data-zone="c" onclick="showPanel('c', true)"><span>Learner heterogeneity and equity</span></button>

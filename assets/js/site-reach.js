@@ -6,6 +6,7 @@
     if (href.indexOf('mailto:') === 0) return 'email_click';
     if (href.indexOf('scholar.google.com') !== -1) return 'google_scholar_click';
     if (href.indexOf('linkedin.com') !== -1) return 'linkedin_click';
+    if (href.indexOf('qualtrics.com') !== -1) return 'collaboration_form_click';
     if (href.indexOf('app.box.com') !== -1 || text === 'cv') return 'cv_click';
     if (href.indexOf('doi.org/') !== -1) return 'doi_click';
     if (href.indexOf('/projects/') !== -1) return 'project_click';

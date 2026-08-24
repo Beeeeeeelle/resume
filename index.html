@@ -25,6 +25,156 @@ custom_js:
   color: #5b4432;
   font-style: normal;
 }
+.home-initiative {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 176px;
+  align-items: stretch;
+  gap: 12px;
+  margin: 22px 0 26px;
+  padding: 17px 0 15px;
+  border-top: 1px solid rgba(17, 24, 39, 0.82);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.3);
+  background: #fff;
+}
+.home-initiative::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 92px;
+  height: 2px;
+  background: #e05a2b;
+}
+.home-initiative[hidden] {
+  display: none;
+}
+.home-initiative__content {
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  min-width: 0;
+  padding-left: 2px;
+}
+.home-initiative__heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 7px 11px;
+  margin: 0 0 7px;
+  color: #181818;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.home-initiative__title {
+  padding: 0 2px;
+  background: linear-gradient(180deg, transparent 68%, rgba(224, 90, 43, 0.2) 68%);
+}
+.home-initiative__status {
+  color: #376cba;
+  font-family: "Segoe Print", "Bradley Hand", cursive;
+  font-size: 10.5px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.45;
+  transform: rotate(-1deg);
+}
+.home-initiative__copy {
+  margin: 0 0 9px;
+  max-width: 68ch;
+  color: #4e5865;
+  font-size: 13px;
+  line-height: 1.62;
+}
+.home-initiative__footer {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+}
+.home-initiative__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 1px 1px 2px;
+  color: #1f2937;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: underline;
+  text-decoration-color: rgba(224, 90, 43, 0.78);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+  transition: color 0.18s ease, text-decoration-color 0.18s ease;
+}
+.home-initiative__action::after {
+  content: "→";
+  color: #e05a2b;
+  font-size: 15px;
+  font-weight: 500;
+  transition: transform 0.18s ease;
+}
+.home-initiative__action:hover,
+.home-initiative__action:focus-visible {
+  color: #274f84;
+  text-decoration-color: #e05a2b;
+}
+.home-initiative__action:hover::after,
+.home-initiative__action:focus-visible::after {
+  transform: translateX(3px);
+}
+.home-initiative__note {
+  color: #376cba;
+  font-family: "Segoe Print", "Bradley Hand", cursive;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+  transform: rotate(-1deg);
+}
+.home-initiative__art {
+  position: relative;
+  min-height: 112px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.home-initiative__art img {
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  width: 205px;
+  max-width: none;
+  height: auto;
+  margin: 0;
+}
+@media (max-width: 620px) {
+  .home-initiative {
+    grid-template-columns: minmax(0, 1fr) 90px;
+    gap: 7px;
+    padding: 15px 0 14px;
+  }
+  .home-initiative__heading {
+    gap: 5px 8px;
+  }
+  .home-initiative__copy {
+    font-size: 12.5px;
+  }
+  .home-initiative__footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .home-initiative__art {
+    min-height: 154px;
+  }
+  .home-initiative__art img {
+    top: 4px;
+    right: -48px;
+    width: 210px;
+  }
+}
 .home-hero {
   position: relative;
   display: inline-block;
@@ -366,23 +516,59 @@ custom_js:
  and
  <a href="https://scholar.google.com/citations?hl=en&amp;user=f8J04qAAAAAJ">
   Dr. Marisa Exter
- </a>
- . I earned my master’s degree in Instructional Systems Technology at
+ </a>. I earned my master’s degree in Instructional Systems Technology at
  <a href="https://education.indiana.edu/programs/instructional-systems-technology.html">
   Indiana University Bloomington
- </a>
- , where I was advised by
+ </a>, where I was advised by
  <a href="https://scholar.google.com/citations?user=dsdG3ewAAAAJ&amp;hl=en">
   Dr. Curtis J. Bonk
- </a>
- . My research examines how <span class="bio-kw">generative AI</span> reshapes <span class="bio-kw">learner agency</span>, <span class="bio-kw">authenticity</span>, and <span class="bio-kw">equity</span> across learning contexts. I build this agenda through learning analytics, mixed-methods inquiry, measurement, and design-based research, drawing on behavioral data and person-centered methods to understand how learners differ in their engagement with AI. My work combines <span class="bio-em">empirical research with design practice</span>: I develop educational tools, translate theory into usable learning designs, and draw on three years of teaching and program experience at Indiana University Bloomington. Recent work has been recognized with the Global Smart Education Innovation Prize for the PA-SDA Scale (2025), the AECT Outstanding Journal Article Award for <a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Labs-Kid-Space-Conversational-AI-Facilitates-Collaborative/post/1697865" target="_blank" rel="noopener">a collaborative study with Intel Labs</a> on AI-mediated learning (2025), and a World Digital Education Alliance (WDEA) Certificate of Recognition for the PeteGPT AI tutoring project (2026).
+ </a>.
+</p>
+<p class="lang-en">
+My research focuses on how people learn with, through, and about artificial intelligence. I examine how learners decide which tasks to delegate to generative AI, how AI use influences <span class="bio-kw">reflection and self-regulation</span>, and how AI-enhanced learning environments can preserve <span class="bio-kw">meaningful human agency</span>.
+</p>
+<p class="lang-en">
+My work combines <span class="bio-em">empirical research with design practice</span>: I develop educational tools, translate theory into usable learning designs, and draw on seven years of teaching and program experience at Indiana University Bloomington and Purdue University.
+</p>
+{% assign ai_lunch_learn = site.data.news | where: "id", "ai-lunch-learn" | first %}
+<aside class="home-initiative lang-en" aria-labelledby="ai-lunch-learn-title">
+  <div class="home-initiative__content">
+    <h2 class="home-initiative__heading" id="ai-lunch-learn-title"><span class="home-initiative__title">Purdue AI Lunch &amp; Learn</span> <span class="home-initiative__status">now organizing</span></h2>
+    <p class="home-initiative__copy">I am currently leading a series of practical, hands-on workshops on teaching and learning with AI. I welcome collaborators who want to contribute expertise or co-design a session.</p>
+    <div class="home-initiative__footer">
+      <a class="home-initiative__action" href="{{ ai_lunch_learn.cta_url }}" target="_blank" rel="noopener">Collaborate or co-design</a>
+      <span class="home-initiative__note">Purdue affiliation not required</span>
+    </div>
+  </div>
+  <div class="home-initiative__art" aria-hidden="true">
+    <img src="/assets/images/design/belle-black-comet-current.jpg" alt="" data-no-lightbox="true">
+  </div>
+</aside>
+<p class="lang-en">
+Recent work has been recognized with the Global Smart Education Innovation Prize for the PA-SDA Scale (2025), the AECT Outstanding Journal Article Award for <a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Labs-Kid-Space-Conversational-AI-Facilitates-Collaborative/post/1697865" target="_blank" rel="noopener">a collaborative study with Intel Labs</a> on AI-mediated learning (2025), and a World Digital Education Alliance (WDEA) Certificate of Recognition for the PeteGPT AI tutoring project (2026).
 </p>
 <p class="lang-zh" hidden>
 我于<a href="https://education.purdue.edu/graduate-students/prospective-students/graduate-programs/learning-design-technology/">普渡大学</a>获得学习设计与技术方向博士学位，师从<a href="https://scholar.google.com/citations?user=xSX2cwkAAAAJ&amp;hl=en&amp;oi=ao">Victoria L. Lowell博士</a>和<a href="https://scholar.google.com/citations?hl=en&amp;user=f8J04qAAAAAJ">Marisa Exter博士</a>；此前于<a href="https://education.indiana.edu/programs/instructional-systems-technology.html">印第安纳大学伯明顿分校</a>获得教学系统技术硕士学位，师从<a href="https://scholar.google.com/citations?user=dsdG3ewAAAAJ&amp;hl=en">Curtis J. Bonk博士</a>。
 </p>
 <p class="lang-zh" hidden>
-我的研究关注<span class="bio-kw">生成式人工智能</span>如何重塑不同学习情境中的<span class="bio-kw">学习者能动性</span>、<span class="bio-kw">真实学习体验</span>与<span class="bio-kw">教育公平</span>。我综合运用学习分析、混合研究方法、测量研究与基于设计的研究方法，探究学习者在与AI互动过程中的个体差异、学习路径与支持机制。我的工作连接<span class="bio-em">实证研究与设计实践</span>，既关注理论建构与机制解释，也致力于开发教育技术工具，并将研究发现转化为可实施的学习设计方案。这一研究取向也受到我在印第安纳大学三年教学与项目实践经验的持续影响。
+我的研究聚焦于人们如何与人工智能共同学习、通过人工智能学习，以及学习关于人工智能的知识。我关注学习者如何决定将哪些任务交由生成式人工智能完成，人工智能的使用如何影响<span class="bio-kw">反思与自我调节</span>，以及如何设计能够保留<span class="bio-kw">有意义的人类能动性</span>的人工智能增强学习环境。
 </p>
+<p class="lang-zh" hidden>
+我的工作连接<span class="bio-em">实证研究与设计实践</span>：我开发教育工具，将理论转化为可实施的学习设计，并将自己在印第安纳大学伯明顿分校和普渡大学七年的教学与项目经验融入研究与设计之中。
+</p>
+<aside class="home-initiative lang-zh" aria-labelledby="ai-lunch-learn-title-zh" hidden>
+  <div class="home-initiative__content">
+    <h2 class="home-initiative__heading" id="ai-lunch-learn-title-zh"><span class="home-initiative__title">普渡大学 AI Lunch &amp; Learn</span> <span class="home-initiative__status">筹备中</span></h2>
+    <p class="home-initiative__copy">我近期正在负责一系列聚焦人工智能与教学实践的动手型工作坊。欢迎分享专长或共同设计活动。</p>
+    <div class="home-initiative__footer">
+      <a class="home-initiative__action" href="{{ ai_lunch_learn.cta_url }}" target="_blank" rel="noopener">提交合作构想</a>
+      <span class="home-initiative__note">无需隶属于普渡大学</span>
+    </div>
+  </div>
+  <div class="home-initiative__art" aria-hidden="true">
+    <img src="/assets/images/design/belle-black-comet-current.jpg" alt="" data-no-lightbox="true">
+  </div>
+</aside>
 <p class="lang-zh" hidden>
 近期，我的研究成果获得多项认可：PA-SDA量表荣获全球智慧教育创新奖（2025）；与英特尔实验室合作开展的<a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Labs-Kid-Space-Conversational-AI-Facilitates-Collaborative/post/1697865" target="_blank" rel="noopener">AI辅助协作学习研究</a>获得AECT杰出期刊论文奖（2025）；PeteGPT人工智能辅导项目获得世界数字教育联盟（WDEA）表彰证书（2026）。
 </p>
@@ -413,7 +599,7 @@ custom_js:
 </style>
 <figure class="home-mobile-map" data-reveal>
   <a class="home-mobile-map__link" href="/research/" aria-label="Open Research page">
-    <img src="/assets/images/research/human-centered-ai-learning-strands.png" alt="Illustrated map of four human-centered AI learning research strands" data-no-lightbox="true">
+    <img src="/assets/images/research/human-centered-ai-learning-strands.png?v=20260824" alt="Illustrated map of four human-centered AI learning research strands" data-no-lightbox="true">
   </a>
   <figcaption><span class="lang-en">A visual map of my four research strands.</span><span class="lang-zh" hidden>我的四个研究方向图谱。</span></figcaption>
 </figure>

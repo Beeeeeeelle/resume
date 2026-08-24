@@ -122,6 +122,28 @@
 .news-item__text a:hover {
   text-decoration: underline;
 }
+.news-item__action {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border: 1px solid #d7e2ee;
+  border-radius: 999px;
+  background: #fff;
+  color: #3d628f;
+  font-size: 10.75px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+.news-item__action:hover,
+.news-item__action:focus-visible {
+  border-color: #b8cadc;
+  background: #f8fbff;
+  color: #254f82;
+  text-decoration: none;
+}
 .news-item__img {
   width: 80px;
   height: 60px;
@@ -231,9 +253,12 @@
       </div>
       <div class="news-item__body">
         <p class="news-item__text">{{ item.text }}</p>
+        {% if item.cta_url %}
+        <a class="news-item__action" href="{{ item.cta_url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ item.cta_label | default: "Learn more" }}</a>
+        {% endif %}
       </div>
       {% if item.image %}
-      <img class="news-item__img" src="{{ item.image }}" alt="{{ item.image_alt | default: item.type }}">
+      <img class="news-item__img" src="{{ item.image }}" alt="{{ item.image_alt | default: item.type }}" loading="lazy" decoding="async">
       {% endif %}
     </li>
     {% endfor %}
