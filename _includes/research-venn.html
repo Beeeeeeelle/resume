@@ -1,7 +1,7 @@
 <style>
 .rv-section { margin: 40px 0 0; }
 .rv-wrapper { position: relative; width: 100%; max-width: 920px; margin: 0 auto; }
-.rv-svg { width: 100%; height: auto; display: block; }
+.rv-svg { width: 100%; height: auto; display: block; overflow: visible; }
 
 /*
   Blob scaling is handled by writing SVG transform attributes directly.
@@ -12,67 +12,151 @@
   opacity: 0;
   transition: opacity 0.28s ease 0.06s;
   pointer-events: none;
+  fill: #1d1d1d;
+  font-family: "Segoe Print", "Bradley Hand", cursive;
+  font-size: 11.5px;
 }
 [data-hover="a"] .zone-rq-a { opacity: 1; }
 [data-hover="b"] .zone-rq-b { opacity: 1; }
 [data-hover="c"] .zone-rq-c { opacity: 1; }
 [data-hover="d"] .zone-rq-d { opacity: 1; }
 
-.rv-label { transition: opacity 0.28s ease; }
+.rv-label {
+  fill: #20242a;
+  transition: opacity 0.28s ease;
+}
+.rv-label-line {
+  fill: none;
+  stroke: #e05a2b;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-opacity: 0.62;
+  transition: opacity 0.28s ease, stroke-opacity 0.28s ease, stroke-width 0.28s ease;
+}
 [data-hover="a"] .rv-label:not(.rv-label-a),
 [data-hover="b"] .rv-label:not(.rv-label-b),
 [data-hover="c"] .rv-label:not(.rv-label-c),
-[data-hover="d"] .rv-label:not(.rv-label-d) { opacity: 0.3; }
+[data-hover="d"] .rv-label:not(.rv-label-d) { opacity: 0.22; }
+[data-hover="a"] .rv-label-line:not(.rv-label-line-a),
+[data-hover="b"] .rv-label-line:not(.rv-label-line-b),
+[data-hover="c"] .rv-label-line:not(.rv-label-line-c),
+[data-hover="d"] .rv-label-line:not(.rv-label-line-d) { opacity: 0.12; }
+[data-hover="a"] .rv-label-line-a,
+[data-hover="b"] .rv-label-line-b,
+[data-hover="c"] .rv-label-line-c,
+[data-hover="d"] .rv-label-line-d { stroke-opacity: 0.92; stroke-width: 2.4; }
 
-.rv-core-chip {
-  fill: rgba(255,255,255,0.78);
-  stroke: rgba(176,146,97,0.34);
-  stroke-width: 0.8;
+.rv-wing {
+  stroke: rgba(24,24,24,0.22);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: fill-opacity 0.26s ease, stroke 0.26s ease, stroke-width 0.26s ease, opacity 0.26s ease;
 }
-.rv-core-chip-text {
-  font-family: system-ui,-apple-system,'Segoe UI',sans-serif;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  fill: #8b6b33;
+.rv-wing-a { fill: #7b9cc8; fill-opacity: 0.13; }
+.rv-wing-b { fill: #c8868e; fill-opacity: 0.12; }
+.rv-wing-c { fill: #82b896; fill-opacity: 0.13; }
+.rv-wing-d { fill: #d1a760; fill-opacity: 0.14; }
+[data-hover] .rv-wing { fill-opacity: 0.045; stroke-opacity: 0.2; }
+[data-hover="a"] .rv-wing-a,
+[data-hover="b"] .rv-wing-b,
+[data-hover="c"] .rv-wing-c,
+[data-hover="d"] .rv-wing-d {
+  fill-opacity: 0.23;
+  stroke: #1d1d1d;
+  stroke-opacity: 0.88;
+  stroke-width: 1.65;
+}
+.rv-wing-sketch {
+  fill: none;
+  stroke: #1d1d1d;
+  stroke-width: 0.7;
+  stroke-opacity: 0.14;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translate(0.7px, -0.45px);
+  transition: stroke-opacity 0.26s ease, stroke-width 0.26s ease, transform 0.26s ease;
+}
+[data-hover] .rv-wing-sketch { stroke-opacity: 0.06; }
+[data-hover="a"] .rv-wing-sketch-a,
+[data-hover="b"] .rv-wing-sketch-b,
+[data-hover="c"] .rv-wing-sketch-c,
+[data-hover="d"] .rv-wing-sketch-d {
+  stroke-opacity: 0.62;
+  stroke-width: 1.05;
+  transform: translate(1.25px, -0.8px);
+}
+
+/* ── Subtle butterfly wing motion ── */
+.rv-flap {
+  transform-box: view-box;
+  will-change: transform;
+}
+.rv-flap-a { transform-origin: 438px 325px; }
+.rv-flap-b { transform-origin: 462px 325px; }
+.rv-flap-c { transform-origin: 437px 346px; }
+.rv-flap-d { transform-origin: 463px 346px; }
+@keyframes rv-flap-left {
+  0%, 100% { transform: scaleX(1) rotate(0deg); }
+  46% { transform: scaleX(0.985) rotate(0.55deg); }
+  56% { transform: scaleX(0.965) rotate(1.25deg); }
+  70% { transform: scaleX(0.993) rotate(0.18deg); }
+}
+@keyframes rv-flap-right {
+  0%, 100% { transform: scaleX(1) rotate(0deg); }
+  46% { transform: scaleX(0.985) rotate(-0.55deg); }
+  56% { transform: scaleX(0.965) rotate(-1.25deg); }
+  70% { transform: scaleX(0.993) rotate(-0.18deg); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rv-flap-a,
+  .rv-flap-c { animation: rv-flap-left 3.8s ease-in-out infinite; }
+  .rv-flap-b,
+  .rv-flap-d { animation: rv-flap-right 3.8s ease-in-out infinite; }
+  .rv-flap-c,
+  .rv-flap-d { animation-delay: 0.08s; }
+  [data-hover="a"] .rv-flap-a,
+  [data-hover="b"] .rv-flap-b,
+  [data-hover="c"] .rv-flap-c,
+  [data-hover="d"] .rv-flap-d { animation-duration: 2.15s; }
 }
 
 /* ── Connector flow ── */
 .rv-connector {
+  stroke: #e05a2b;
+  stroke-opacity: 0.08;
+  stroke-width: 1.4;
   stroke-dasharray: 5 10;
   stroke-linecap: round;
   transition: stroke-opacity 0.28s ease, stroke-width 0.28s ease;
 }
-.rv-connector-a { stroke: #7b9cc8; stroke-opacity: 0.22; stroke-width: 2; }
-.rv-connector-b { stroke: #c8868e; stroke-opacity: 0.22; stroke-width: 2; }
-.rv-connector-c { stroke: #82b896; stroke-opacity: 0.24; stroke-width: 2; }
-.rv-connector-d { stroke: #d1a760; stroke-opacity: 0.26; stroke-width: 2; }
-@media (prefers-reduced-motion: no-preference) {
-  .rv-connector-a { animation: rv-flow 2.2s linear infinite; }
-  .rv-connector-b { animation: rv-flow 2.2s linear infinite 0.55s; }
-  .rv-connector-c { animation: rv-flow 2.2s linear infinite 1.1s; }
-  .rv-connector-d { animation: rv-flow 2.2s linear infinite 1.65s; }
+.rv-connector-c,
+.rv-connector-d {
+  stroke-dasharray: 3 8 6 11;
 }
 @keyframes rv-flow {
   from { stroke-dashoffset: 15; }
   to   { stroke-dashoffset: 0; }
 }
-[data-hover] .rv-connector                { stroke-opacity: 0.08; stroke-width: 1.5; }
-[data-hover="a"] .rv-connector-a          { stroke-opacity: 0.65; stroke-width: 3; }
-[data-hover="b"] .rv-connector-b          { stroke-opacity: 0.65; stroke-width: 3; }
-[data-hover="c"] .rv-connector-c          { stroke-opacity: 0.65; stroke-width: 3; }
-[data-hover="d"] .rv-connector-d          { stroke-opacity: 0.65; stroke-width: 3; }
-
-/* ── Color shimmer ── */
-@media (prefers-reduced-motion: no-preference) {
-  .blob-a path { animation: rv-shimmer 9s ease-in-out infinite; }
-  .blob-b path { animation: rv-shimmer 9s ease-in-out infinite 2.25s; }
-  .blob-c path { animation: rv-shimmer 9s ease-in-out infinite 4.5s; }
-  .blob-d path { animation: rv-shimmer 9s ease-in-out infinite 6.75s; }
+@keyframes rv-flow-lower {
+  from { stroke-dashoffset: 28; }
+  to   { stroke-dashoffset: 0; }
 }
-@keyframes rv-shimmer {
-  0%, 100% { fill-opacity: 1; }
-  50%       { fill-opacity: 0.68; }
+[data-hover] .rv-connector                { stroke-opacity: 0.08; stroke-width: 1.5; }
+[data-hover="a"] .rv-connector-a,
+[data-hover="b"] .rv-connector-b,
+[data-hover="c"] .rv-connector-c,
+[data-hover="d"] .rv-connector-d {
+  stroke-opacity: 0.78;
+  stroke-width: 2.2;
+}
+@media (prefers-reduced-motion: no-preference) {
+  [data-hover="a"] .rv-connector-a,
+  [data-hover="b"] .rv-connector-b,
+  [data-hover="c"] .rv-connector-c,
+  [data-hover="d"] .rv-connector-d { animation: rv-flow 1.25s linear infinite; }
+  [data-hover="c"] .rv-connector-c,
+  [data-hover="d"] .rv-connector-d { animation: rv-flow-lower 1.55s linear infinite; }
 }
 
 /* ── Remove focus outline on hit zones ── */
@@ -84,8 +168,7 @@
   transform-box: fill-box;
   transform-origin: center;
   transition: opacity 0.3s ease, transform 0.28s cubic-bezier(0.34,1.56,0.64,1), filter 0.2s ease;
-  /* White halo so dots stay visible against blended overlap backgrounds */
-  filter: drop-shadow(0 0 3px rgba(255,255,255,0.92)) drop-shadow(0 0 1px rgba(255,255,255,0.7));
+  filter: none;
 }
 
 /* Zone colors */
@@ -100,22 +183,56 @@
 
 /* Status variants */
 .vb-dot[data-status="published"],
-.vb-dot[data-status="accepted"] { fill-opacity: 0.88; stroke-width: 0; }
-.vb-dot[data-status="in-press"] { fill-opacity: 0.65; stroke-width: 0; }
+.vb-dot[data-status="accepted"] { fill-opacity: 0.88; stroke: #fff; stroke-width: 1.4; }
+.vb-dot[data-status="in-press"] { fill-opacity: 0.65; stroke: #fff; stroke-width: 1.4; }
 .vb-dot[data-status="review"],
 .vb-dot[data-status="revision"] { fill-opacity: 0.22; stroke-opacity: 0.9; stroke-width: 1.8; }
 .vb-dot[data-status="progress"] { fill-opacity: 0.15; stroke-opacity: 0.85; stroke-width: 1.8; stroke-dasharray: 3 3; }
 
 /* Blob-hover states */
 .vb-dot-dim    { opacity: 0.12 !important; animation: none !important; }
-.vb-dot-focus  { filter: drop-shadow(0 0 3px rgba(255,255,255,0.92)) brightness(1.35) drop-shadow(0 2px 6px rgba(0,0,0,0.28)); transform: scale(1.22); }
-
-@keyframes vb-pulse {
-  0%, 100% { transform: scale(1); }
-  50%       { transform: scale(1.2); }
+.vb-dot-focus  { filter: drop-shadow(0 2px 2px rgba(0,0,0,0.18)); transform: scale(1.22); }
+.vb-dot-active { transform: scale(1.1); }
+@keyframes vb-dot-breathe {
+  0%, 100% { transform: translateY(0) scale(1.08); }
+  50% { transform: translateY(-1.6px) scale(1.14); }
+}
+@keyframes vb-dot-float {
+  0%, 100% { transform: translateY(0) scale(1.22); }
+  50% { transform: translateY(-3.2px) scale(1.28); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .vb-dot-active { animation: vb-pulse 1.4s ease-in-out infinite; }
+  .vb-dot-active {
+    animation: vb-dot-breathe 1.65s ease-in-out infinite;
+    animation-delay: var(--vb-delay, 0s);
+  }
+  .vb-dot-focus {
+    animation: vb-dot-float 0.92s ease-in-out infinite;
+  }
+}
+.rv-core-link { cursor: pointer; }
+.rv-core-art {
+  isolation: isolate;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.22s ease;
+}
+.rv-core-title,
+.rv-core-underline,
+.rv-core-cta { transition: fill 0.22s ease, stroke 0.22s ease, stroke-width 0.22s ease; }
+.rv-core-link:hover .rv-core-art,
+.rv-core-link:focus .rv-core-art { transform: translateY(-3px); }
+.rv-core-link:hover .rv-core-title,
+.rv-core-link:focus .rv-core-title { fill: #274f84; }
+.rv-core-link:hover .rv-core-underline,
+.rv-core-link:focus .rv-core-underline { stroke: #e05a2b; stroke-width: 3; }
+.rv-core-link:hover .rv-core-cta,
+.rv-core-link:focus .rv-core-cta { fill: #245caa; }
+.rv-core-pin {
+  fill: #f0642c;
+  stroke: #1f1f1f;
+  stroke-width: 1.4;
+  pointer-events: none;
 }
 
 
@@ -123,31 +240,48 @@
 #vb-popover {
   position: fixed;
   background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 12px 15px;
+  border: 1px solid #262626;
+  border-radius: 3px;
+  padding: 15px 16px 13px;
   max-width: 288px;
   min-width: 196px;
   font-size: 13px;
   line-height: 1.5;
   pointer-events: auto;
   display: none;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+  box-shadow: 7px 7px 0 rgba(55,108,186,0.08);
   z-index: 999;
   font-family: system-ui,-apple-system,'Segoe UI',sans-serif;
 }
+#vb-popover::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 46px;
+  height: 2px;
+  background: #e05a2b;
+}
 .vb-pop-title  { font-weight: 700; font-size: 12.5px; color: #1a1a1a; line-height: 1.4; margin-bottom: 3px; }
 .vb-pop-venue  { font-style: italic; color: #777; font-size: 11.5px; }
+.vb-pop-connects {
+  margin-top: 5px;
+  color: #376cba;
+  font-family: "Segoe Print", "Bradley Hand", cursive;
+  font-size: 10.5px;
+  line-height: 1.35;
+}
 .vb-pop-meta   { margin-top: 7px; display: flex; gap: 5px; align-items: center; flex-wrap: wrap; }
-.vb-pop-badge  { font-size: 10.5px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
-.vb-pop-year        { background: #f0f0f0; color: #555; }
-.vb-pop-s-published { background: #e8f5e9; color: #2e7d32; }
-.vb-pop-s-accepted  { background: #e3f2fd; color: #1565c0; }
-.vb-pop-s-in-press  { background: #e0f7fa; color: #006064; }
-.vb-pop-s-review    { background: #fff3e0; color: #e65100; }
-.vb-pop-s-revision  { background: #fce4ec; color: #b71c1c; }
-.vb-pop-s-progress  { background: #f3e5f5; color: #6a1b9a; }
-.vb-pop-link { display: inline-block; margin-top: 7px; font-size: 11.5px; color: #5a7fc0; font-weight: 600; text-decoration: none; }
+.vb-pop-badge  { font-size: 10px; font-weight: 700; padding: 0; border-radius: 0; letter-spacing: 0.035em; text-transform: uppercase; }
+.vb-pop-badge + .vb-pop-badge::before { content: "·"; margin: 0 5px 0 1px; color: #aaa; }
+.vb-pop-year        { color: #777; }
+.vb-pop-s-published { color: #2f7149; }
+.vb-pop-s-accepted  { color: #376cba; }
+.vb-pop-s-in-press  { color: #3e7779; }
+.vb-pop-s-review    { color: #a15a28; }
+.vb-pop-s-revision  { color: #9f4654; }
+.vb-pop-s-progress  { color: #7a5b8d; }
+.vb-pop-link { display: inline-block; margin-top: 8px; color: #274f84; font-size: 11.5px; font-weight: 700; text-decoration: underline; text-decoration-color: #e05a2b; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
 .vb-pop-link:hover { text-decoration: underline; }
 </style>
 
@@ -155,184 +289,172 @@
   <div class="rv-wrapper">
     <svg class="rv-svg" viewBox="0 -65 900 715" id="rv-svg" xmlns="http://www.w3.org/2000/svg">
 
-      <defs>
-        <filter id="diss-shadow" x="-30%" y="-30%" width="160%" height="160%">
-          <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.18)"/>
-        </filter>
-        <linearGradient id="diss-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#faf7f2"/>
-          <stop offset="100%" stop-color="#efe6d8"/>
-        </linearGradient>
-        <radialGradient id="diss-core" cx="50%" cy="42%" r="70%" gradientUnits="objectBoundingBox">
-          <stop offset="0%" stop-color="#fffaf2" stop-opacity="0.98"/>
-          <stop offset="100%" stop-color="#eadcc6" stop-opacity="0.92"/>
-        </radialGradient>
-
-        <radialGradient id="rg-a" cx="42%" cy="40%" r="60%" gradientUnits="objectBoundingBox">
-          <stop offset="0%" stop-color="#7B9CC8" stop-opacity="0.82"/>
-          <stop offset="100%" stop-color="#7B9CC8" stop-opacity="0.08"/>
-        </radialGradient>
-        <radialGradient id="rg-b" cx="58%" cy="40%" r="60%" gradientUnits="objectBoundingBox">
-          <stop offset="0%" stop-color="#C8868E" stop-opacity="0.8"/>
-          <stop offset="100%" stop-color="#C8868E" stop-opacity="0.08"/>
-        </radialGradient>
-        <radialGradient id="rg-c" cx="45%" cy="50%" r="62%" gradientUnits="objectBoundingBox">
-          <stop offset="0%" stop-color="#82B896" stop-opacity="0.8"/>
-          <stop offset="100%" stop-color="#82B896" stop-opacity="0.08"/>
-        </radialGradient>
-        <radialGradient id="rg-d" cx="56%" cy="48%" r="62%" gradientUnits="objectBoundingBox">
-          <stop offset="0%" stop-color="#D1A760" stop-opacity="0.8"/>
-          <stop offset="100%" stop-color="#D1A760" stop-opacity="0.08"/>
-        </radialGradient>
-      </defs>
-
       <!-- transparent background so SVG mousemove fires everywhere -->
       <rect width="900" height="650" fill="transparent" pointer-events="all"/>
 
       <!-- hit zones -->
       <path class="rv-hit" data-zone="a" data-target="/research/#strand-a" tabindex="0" role="link" aria-label="Open AI-mediated self-directed learning strand on the research page" cursor="pointer" fill="transparent" pointer-events="all" stroke="none"
-            d="M 248,56 C 358,40 443,116 430,228 C 416,340 336,406 232,398 C 127,390 57,316 66,210 C 75,118 136,71 248,56 Z"/>
+            d="M 438,325 C 398,286 390,226 382,160 C 370,72 296,34 210,58 C 112,85 58,160 66,251 C 74,338 153,382 245,367 C 330,352 391,332 438,325 Z"/>
       <path class="rv-hit" data-zone="b" data-target="/research/#strand-b" tabindex="0" role="link" aria-label="Open authenticity and assessment strand on the research page" cursor="pointer" fill="transparent" pointer-events="all" stroke="none"
-            d="M 642,55 C 756,40 836,117 824,228 C 812,340 732,405 628,398 C 524,390 455,316 463,210 C 471,118 531,70 642,55 Z"/>
+            d="M 462,325 C 502,286 510,226 518,160 C 530,72 604,34 690,58 C 788,85 842,160 834,251 C 826,338 747,382 655,367 C 570,352 509,332 462,325 Z"/>
       <path class="rv-hit" data-zone="c" data-target="/research/#strand-c" tabindex="0" role="link" aria-label="Open learner heterogeneity and equity strand on the research page" cursor="pointer" fill="transparent" pointer-events="all" stroke="none"
-            d="M 252,264 C 366,248 445,323 432,437 C 419,549 337,613 230,606 C 120,598 46,523 56,414 C 65,324 138,278 252,264 Z"/>
+            d="M 438,350 C 377,338 314,337 256,345 C 182,355 123,387 101,432 C 77,481 91,529 132,552 C 173,575 228,560 277,523 C 329,484 367,409 438,350 Z"/>
       <path class="rv-hit" data-zone="d" data-target="/research/#strand-d" tabindex="0" role="link" aria-label="Open AI literacy and design translation strand on the research page" cursor="pointer" fill="transparent" pointer-events="all" stroke="none"
-            d="M 646,264 C 760,248 840,323 827,437 C 814,549 731,613 624,606 C 514,598 440,523 450,414 C 459,324 532,278 646,264 Z"/>
+            d="M 462,350 C 523,338 586,337 644,345 C 718,355 777,387 799,432 C 823,481 809,529 768,552 C 727,575 672,560 623,523 C 571,484 533,409 462,350 Z"/>
 
       <!-- connectors -->
-      <path class="rv-connector rv-connector-a" d="M 450,330 C 360,290 317,252 275,212" fill="none"/>
-      <path class="rv-connector rv-connector-b" d="M 450,330 C 540,290 582,252 620,212" fill="none"/>
-      <path class="rv-connector rv-connector-c" d="M 450,350 C 362,388 318,430 280,472" fill="none"/>
-      <path class="rv-connector rv-connector-d" d="M 450,350 C 540,390 585,432 622,472" fill="none"/>
+      <path class="rv-connector rv-connector-a" d="M 402,304 C 350,282 314,246 275,212" fill="none"/>
+      <path class="rv-connector rv-connector-b" d="M 497,305 C 546,283 584,248 620,212" fill="none"/>
+      <path class="rv-connector rv-connector-c" d="M 426,331 C 407,341 388,350 367,362 C 344,375 324,388 305,401" fill="none"/>
+      <path class="rv-connector rv-connector-d" d="M 474,331 C 493,341 512,350 533,362 C 556,375 576,388 595,401" fill="none"/>
 
       <!-- blobs -->
       <g class="blob-a" pointer-events="none">
-        <path style="mix-blend-mode:multiply" fill="url(#rg-a)"
-          d="M 248,56 C 358,40 443,116 430,228 C 416,340 336,406 232,398 C 127,390 57,316 66,210 C 75,118 136,71 248,56 Z"/>
+        <g class="rv-flap rv-flap-a">
+          <path class="rv-wing rv-wing-a"
+            d="M 438,325 C 398,286 390,226 382,160 C 370,72 296,34 210,58 C 112,85 58,160 66,251 C 74,338 153,382 245,367 C 330,352 391,332 438,325 Z"/>
+          <path class="rv-wing-sketch rv-wing-sketch-a"
+            d="M 438,325 C 398,286 390,226 382,160 C 370,72 296,34 210,58 C 112,85 58,160 66,251 C 74,338 153,382 245,367 C 330,352 391,332 438,325 Z"/>
+        </g>
       </g>
       <g class="blob-b" pointer-events="none">
-        <path style="mix-blend-mode:multiply" fill="url(#rg-b)"
-          d="M 642,55 C 756,40 836,117 824,228 C 812,340 732,405 628,398 C 524,390 455,316 463,210 C 471,118 531,70 642,55 Z"/>
+        <g class="rv-flap rv-flap-b">
+          <path class="rv-wing rv-wing-b"
+            d="M 462,325 C 502,286 510,226 518,160 C 530,72 604,34 690,58 C 788,85 842,160 834,251 C 826,338 747,382 655,367 C 570,352 509,332 462,325 Z"/>
+          <path class="rv-wing-sketch rv-wing-sketch-b"
+            d="M 462,325 C 502,286 510,226 518,160 C 530,72 604,34 690,58 C 788,85 842,160 834,251 C 826,338 747,382 655,367 C 570,352 509,332 462,325 Z"/>
+        </g>
       </g>
       <g class="blob-c" pointer-events="none">
-        <path style="mix-blend-mode:multiply" fill="url(#rg-c)"
-          d="M 252,264 C 366,248 445,323 432,437 C 419,549 337,613 230,606 C 120,598 46,523 56,414 C 65,324 138,278 252,264 Z"/>
+        <g class="rv-flap rv-flap-c">
+          <path class="rv-wing rv-wing-c"
+            d="M 438,350 C 377,338 314,337 256,345 C 182,355 123,387 101,432 C 77,481 91,529 132,552 C 173,575 228,560 277,523 C 329,484 367,409 438,350 Z"/>
+          <path class="rv-wing-sketch rv-wing-sketch-c"
+            d="M 438,350 C 377,338 314,337 256,345 C 182,355 123,387 101,432 C 77,481 91,529 132,552 C 173,575 228,560 277,523 C 329,484 367,409 438,350 Z"/>
+        </g>
       </g>
       <g class="blob-d" pointer-events="none">
-        <path style="mix-blend-mode:multiply" fill="url(#rg-d)"
-          d="M 646,264 C 760,248 840,323 827,437 C 814,549 731,613 624,606 C 514,598 440,523 450,414 C 459,324 532,278 646,264 Z"/>
+        <g class="rv-flap rv-flap-d">
+          <path class="rv-wing rv-wing-d"
+            d="M 462,350 C 523,338 586,337 644,345 C 718,355 777,387 799,432 C 823,481 809,529 768,552 C 727,575 672,560 623,523 C 571,484 533,409 462,350 Z"/>
+          <path class="rv-wing-sketch rv-wing-sketch-d"
+            d="M 462,350 C 523,338 586,337 644,345 C 718,355 777,387 799,432 C 823,481 809,529 768,552 C 727,575 672,560 623,523 C 571,484 533,409 462,350 Z"/>
+        </g>
       </g>
 
       <!-- paper dots (pointer-events="none" — hover handled via SVG mousemove) -->
 
       <!-- Zone A: AI-Mediated SDL -->
-      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a1" data-zone="a" data-status="published" cx="185" cy="210" r="11" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a2" data-zone="a" data-status="published" cx="148" cy="252" r="11" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a3" data-zone="a" data-status="review" cx="252" cy="228" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a4" data-zone="a" data-status="published" cx="178" cy="292" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a5" data-zone="a" data-status="published" cx="308" cy="218" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a6" data-zone="a" data-status="review" cx="218" cy="334" r="9"  pointer-events="none"/>
+      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a1" data-zone="a" data-status="published" data-priority="core" cx="185" cy="210" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a2" data-zone="a" data-status="published" data-priority="core" cx="148" cy="252" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a3" data-zone="a" data-status="review" cx="252" cy="228" r="7.5" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a4" data-zone="a" data-status="published" data-priority="core" cx="178" cy="292" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a5" data-zone="a" data-status="published" cx="308" cy="218" r="7.5" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-a vb-dot-enter" data-paper-id="a6" data-zone="a" data-status="review" cx="218" cy="334" r="7.5" pointer-events="none"/>
 
       <!-- Zone B: Authenticity & Assessment -->
-      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b1" data-zone="b" data-status="review"    cx="658" cy="210" r="10" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b2" data-zone="b" data-status="accepted"  cx="712" cy="250" r="10" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b3" data-zone="b" data-status="published"  cx="752" cy="292" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b4" data-zone="b" data-status="review"    cx="678" cy="288" r="9"  pointer-events="none"/>
+      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b1" data-zone="b" data-status="review" data-priority="core" cx="658" cy="210" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b2" data-zone="b" data-status="accepted" data-priority="core" cx="712" cy="250" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b3" data-zone="b" data-status="published" cx="752" cy="292" r="7.5" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-b vb-dot-enter" data-paper-id="b4" data-zone="b" data-status="review" cx="678" cy="288" r="7.5" pointer-events="none"/>
 
       <!-- Cross A∩B -->
-      <circle class="vb-dot vb-dot-ab vb-dot-enter" data-paper-id="ab1" data-zone="ab" data-status="review" cx="445" cy="212" r="10" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-ab vb-dot-enter" data-paper-id="ab2" data-zone="ab" data-status="review" cx="468" cy="190" r="9"  pointer-events="none"/>
+      <circle class="vb-dot vb-dot-ab vb-dot-enter" data-paper-id="ab1" data-zone="ab" data-status="review" cx="392" cy="246" r="7.5" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-ab vb-dot-enter" data-paper-id="ab2" data-zone="ab" data-status="review" cx="510" cy="232" r="7.5" pointer-events="none"/>
 
       <!-- Cross A∩C -->
-      <circle class="vb-dot vb-dot-ac vb-dot-enter" data-paper-id="ac1" data-zone="ac" data-status="review" cx="248" cy="350" r="10" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-ac vb-dot-enter" data-paper-id="ac1" data-zone="ac" data-status="review" cx="248" cy="350" r="7.5" pointer-events="none"/>
 
       <!-- Zone C: Heterogeneity & Equity -->
-      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c1" data-zone="c" data-status="published" cx="178" cy="418" r="11" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c2" data-zone="c" data-status="published" cx="228" cy="458" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c3" data-zone="c" data-status="published" cx="152" cy="464" r="11" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c4" data-zone="c" data-status="published" cx="294" cy="422" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c5" data-zone="c" data-status="published" cx="206" cy="496" r="9"  pointer-events="none"/>
+      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c1" data-zone="c" data-status="published" data-priority="core" cx="178" cy="418" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c2" data-zone="c" data-status="published" data-priority="core" cx="228" cy="458" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c3" data-zone="c" data-status="published" data-priority="core" cx="152" cy="464" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c4" data-zone="c" data-status="published" cx="294" cy="422" r="7.5" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-c vb-dot-enter" data-paper-id="c5" data-zone="c" data-status="published" cx="276" cy="478" r="7.5" pointer-events="none"/>
 
       <!-- Cross B∩D -->
-      <circle class="vb-dot vb-dot-bd vb-dot-enter" data-paper-id="bd1" data-zone="bd" data-status="review" cx="562" cy="350" r="9" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-bd vb-dot-enter" data-paper-id="bd1" data-zone="bd" data-status="review" cx="562" cy="350" r="7.5" pointer-events="none"/>
 
       <!-- Cross C∩D -->
-      <circle class="vb-dot vb-dot-cd vb-dot-enter" data-paper-id="cd1" data-zone="cd" data-status="published" cx="456" cy="512" r="9" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-cd vb-dot-enter" data-paper-id="cd1" data-zone="cd" data-status="published" cx="548" cy="402" r="7.5" pointer-events="none"/>
 
       <!-- Zone D: AI Literacy & Design Translation -->
-      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d1" data-zone="d" data-status="published" cx="680" cy="418" r="11" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d2" data-zone="d" data-status="published" cx="706" cy="460" r="11" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d3" data-zone="d" data-status="published" cx="753" cy="420" r="10" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d4" data-zone="d" data-status="published" cx="660" cy="462" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d5" data-zone="d" data-status="published" cx="638" cy="418" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d6" data-zone="d" data-status="published" cx="722" cy="496" r="10" pointer-events="none"/>
-      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d7" data-zone="d" data-status="published" cx="784" cy="464" r="9"  pointer-events="none"/>
-      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d8" data-zone="d" data-status="published" cx="660" cy="496" r="8"  pointer-events="none"/>
+      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d1" data-zone="d" data-status="published" cx="680" cy="418" r="7.5" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d2" data-zone="d" data-status="published" data-priority="core" cx="706" cy="460" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d3" data-zone="d" data-status="published" data-priority="core" cx="753" cy="420" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d4" data-zone="d" data-status="published" cx="660" cy="462" r="7.5" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d5" data-zone="d" data-status="published" cx="638" cy="418" r="7.5" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d6" data-zone="d" data-status="published" data-priority="core" cx="762" cy="478" r="12" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d7" data-zone="d" data-status="published" cx="784" cy="464" r="7.5" pointer-events="none"/>
+      <circle class="vb-dot vb-dot-d vb-dot-enter" data-paper-id="d8" data-zone="d" data-status="published" cx="632" cy="480" r="7.5" pointer-events="none"/>
 
       <!-- labels -->
-      <text class="rv-label rv-label-a" x="170" y="100" text-anchor="middle"
+      <text class="rv-label rv-label-a" x="158" y="108" text-anchor="middle"
         font-family="Lora,serif" font-size="15" font-weight="700" fill="#2c4a6e">AI-Mediated</text>
-      <text class="rv-label rv-label-a" x="170" y="119" text-anchor="middle"
+      <text class="rv-label rv-label-a" x="158" y="127" text-anchor="middle"
         font-family="Lora,serif" font-size="15" font-weight="700" fill="#2c4a6e">Self-Directed Learning</text>
+      <path class="rv-label-line rv-label-line-a" d="M 91,141 Q 157,146 224,140"/>
 
-      <text class="rv-label rv-label-b" x="706" y="100" text-anchor="middle"
+      <text class="rv-label rv-label-b" x="742" y="108" text-anchor="middle"
         font-family="Lora,serif" font-size="15" font-weight="700" fill="#6e2c38">Authenticity &amp;</text>
-      <text class="rv-label rv-label-b" x="706" y="119" text-anchor="middle"
+      <text class="rv-label rv-label-b" x="742" y="127" text-anchor="middle"
         font-family="Lora,serif" font-size="15" font-weight="700" fill="#6e2c38">Assessment</text>
+      <path class="rv-label-line rv-label-line-b" d="M 688,140 Q 742,146 796,141"/>
 
-      <text class="rv-label rv-label-c" x="192" y="520" text-anchor="middle"
+      <text class="rv-label rv-label-c" x="192" y="504" text-anchor="middle"
         font-family="Lora,serif" font-size="15" font-weight="700" fill="#2a5a3a">Heterogeneity &amp;</text>
-      <text class="rv-label rv-label-c" x="192" y="539" text-anchor="middle"
+      <text class="rv-label rv-label-c" x="192" y="523" text-anchor="middle"
         font-family="Lora,serif" font-size="15" font-weight="700" fill="#2a5a3a">Equity</text>
+      <path class="rv-label-line rv-label-line-c" d="M 128,534 Q 192,539 256,533"/>
 
-      <text class="rv-label rv-label-d" x="710" y="520" text-anchor="middle"
+      <text class="rv-label rv-label-d" x="710" y="504" text-anchor="middle"
         font-family="Lora,serif" font-size="15" font-weight="700" fill="#76511a">AI Literacy &amp;</text>
-      <text class="rv-label rv-label-d" x="710" y="539" text-anchor="middle"
+      <text class="rv-label rv-label-d" x="710" y="523" text-anchor="middle"
         font-family="Lora,serif" font-size="15" font-weight="700" fill="#76511a">Design Translation</text>
+      <path class="rv-label-line rv-label-line-d" d="M 646,533 Q 710,539 774,534"/>
 
       <!-- research questions -->
-      <text class="zone-rq zone-rq-a" x="196" y="154" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2c4a6e">How do learners plan, prompt,</text>
-      <text class="zone-rq zone-rq-a" x="196" y="171" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2c4a6e">verify, and make meaning with AI?</text>
+      <text class="zone-rq zone-rq-a" x="210" y="166" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#1d1d1d">How do learners plan, prompt,</text>
+      <text class="zone-rq zone-rq-a" x="210" y="183" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#1d1d1d">verify, and make meaning with AI?</text>
 
-      <text class="zone-rq zone-rq-b" x="683" y="154" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#6e2c38">How does AI change authenticity,</text>
-      <text class="zone-rq zone-rq-b" x="683" y="171" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#6e2c38">authorship, and evaluative judgment?</text>
+      <text class="zone-rq zone-rq-b" x="690" y="166" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#1d1d1d">How does AI change authenticity,</text>
+      <text class="zone-rq zone-rq-b" x="690" y="183" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#1d1d1d">authorship, and evaluative judgment?</text>
 
-      <text class="zone-rq zone-rq-c" x="214" y="564" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2a5a3a">For whom does AI support learning,</text>
-      <text class="zone-rq zone-rq-c" x="214" y="581" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#2a5a3a">and where does it reproduce inequity?</text>
+      <text class="zone-rq zone-rq-c" x="192" y="585" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#1d1d1d">For whom does AI support learning,</text>
+      <text class="zone-rq zone-rq-c" x="192" y="602" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#1d1d1d">and where does it reproduce inequity?</text>
 
-      <text class="zone-rq zone-rq-d" x="688" y="564" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#76511a">How should courses and tools build</text>
-      <text class="zone-rq zone-rq-d" x="688" y="581" text-anchor="middle"
-        font-family="Lora,serif" font-size="12" font-style="italic" fill="#76511a">AI literacy, reflection, and transfer?</text>
+      <text class="zone-rq zone-rq-d" x="710" y="585" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#1d1d1d">How should courses and tools build</text>
+      <text class="zone-rq zone-rq-d" x="710" y="602" text-anchor="middle"
+        font-family="Lora,serif" font-size="12" font-style="italic" fill="#1d1d1d">AI literacy, reflection, and transfer?</text>
 
-      <!-- central dissertation core -->
-      <a href="/projects/global-learners-genai/">
-        <ellipse cx="450" cy="336" rx="92" ry="60" fill="rgba(236,223,196,0.34)"/>
-        <ellipse cx="450" cy="336" rx="82" ry="52" fill="url(#diss-core)" filter="url(#diss-shadow)"/>
-        <ellipse cx="450" cy="336" rx="82" ry="52" fill="none" stroke="rgba(160,140,110,0.34)" stroke-width="1"/>
-        <rect x="407" y="292" width="86" height="18" rx="9" class="rv-core-chip"/>
-        <text x="450" y="304.5" text-anchor="middle" class="rv-core-chip-text">Dissertation</text>
-        <text x="450" y="329" text-anchor="middle"
-          font-family="Lora,serif" font-size="13" font-weight="700" fill="#2a1e0a">Global Learners &amp; GenAI</text>
-        <text x="450" y="347" text-anchor="middle"
-          font-family="system-ui,sans-serif" font-size="9.5" fill="#7a6a50">agency, heterogeneity, equity</text>
-        <text x="450" y="364" text-anchor="middle"
-          font-family="Lora,serif" font-size="9.5" font-style="italic" fill="#9e7b43">longitudinal mixed methods</text>
+      <!-- Belle navigates the human-centered research core -->
+      <a class="rv-core-link" href="/projects/global-learners-genai/" aria-label="Open the Global Learners and Generative AI dissertation project">
+        <rect x="350" y="72" width="200" height="338" fill="transparent" pointer-events="all"/>
+        <image class="rv-core-art" href="/assets/images/research/belle-research-map-navigator.png" x="306" y="80" width="260" height="260" preserveAspectRatio="xMidYMid meet" pointer-events="none"/>
+        <circle cx="450" cy="336" r="6" fill="#fff" pointer-events="none"/>
+        <circle class="rv-core-pin" cx="402" cy="304" r="5"/>
+        <circle class="rv-core-pin" cx="497" cy="305" r="5"/>
+        <circle class="rv-core-pin" cx="426" cy="331" r="5"/>
+        <circle class="rv-core-pin" cx="474" cy="331" r="5"/>
+        <text class="rv-core-title" x="450" y="360" text-anchor="middle"
+          font-family="Lora,serif" font-size="14" font-weight="700" fill="#20242a">human-centered AI learning</text>
+        <line class="rv-core-underline" x1="389" y1="369" x2="511" y2="369" stroke="#e05a2b" stroke-width="2" stroke-linecap="round"/>
+        <text class="rv-core-cta" x="450" y="392" text-anchor="middle"
+          font-family="Segoe Print, Bradley Hand, cursive" font-size="12" font-style="italic" fill="#376cba">Explore the dissertation ↗</text>
       </a>
-
-      <image href="/assets/images/time_alone.png" x="640" y="-58" width="140" height="139" pointer-events="none"/>
 
     </svg>
     <div class="rv-footer">
       <span class="rv-hint">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        Hover over dots to explore papers
+        Larger pins mark core work · hover to explore
       </span>
       <span class="rv-legend">
         <span class="rv-legend-item">
@@ -416,11 +538,11 @@
     d6:  { title: 'Collaborative Problem Solving with Generative AI', venue: 'Computers & Education: AI', year: '2025', status: 'published', href: 'https://doi.org/10.1016/j.caeai.2025.100393' },
     d7:  { title: 'AI and Extended Reality in Language Education', venue: 'Education Sciences', year: '2025', status: 'published', href: 'https://doi.org/10.3390/educsci15081066' },
     d8:  { title: 'Dynamic Learner State Modeling via MCP', venue: 'Education Sciences', year: '2025', status: 'published', href: 'https://doi.org/10.3390/educsci15081004' },
-    ab1: { title: 'Learning in the Loop: Moments, Mindsets, and Meaning with Generative AI', venue: 'Journal of Computer-Assisted Learning', year: '', status: 'review', href: null },
-    ab2: { title: 'Choosing the Future of Learning: Assessing Preferences for Educational GPTs', venue: 'International Journal of Human-Computer Interaction', year: '', status: 'review', href: null },
-    ac1: { title: 'Pathways to Proficiency: Global Validation of the PA-SDA Scale', venue: 'Under review', year: '', status: 'review', href: null },
-    bd1: { title: 'Tutor, Not Solver: Designing a Guardrailed AI Assistant for Learning', venue: 'IEEE TLT', year: '', status: 'review', href: null },
-    cd1: { title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', year: '2026', status: 'published', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557' }
+    ab1: { title: 'Learning in the Loop: Moments, Mindsets, and Meaning with Generative AI', venue: 'Journal of Computer-Assisted Learning', connects: 'Agency + Assessment', year: '', status: 'review', href: null },
+    ab2: { title: 'Choosing the Future of Learning: Assessing Preferences for Educational GPTs', venue: 'International Journal of Human-Computer Interaction', connects: 'Agency + Assessment', year: '', status: 'review', href: null },
+    ac1: { title: 'Pathways to Proficiency: Global Validation of the PA-SDA Scale', venue: 'Under review', connects: 'Agency + Equity', year: '', status: 'review', href: null },
+    bd1: { title: 'Tutor, Not Solver: Designing a Guardrailed AI Assistant for Learning', venue: 'IEEE TLT', connects: 'Assessment + AI Literacy', year: '', status: 'review', href: null },
+    cd1: { title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', connects: 'Equity + AI Literacy', year: '2026', status: 'published', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557' }
   };
 
   var STATUS_LABELS = {
@@ -438,7 +560,6 @@
   var scales = { a: 1.0, b: 1.0, c: 1.0, d: 1.0 };
   var rafs = {};
   var hoverZone = null;
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function easeOutBack(t) {
     var c1 = 1.5, c3 = c1 + 1;
@@ -472,21 +593,6 @@
     rafs[zone] = requestAnimationFrame(step);
   }
 
-  /* ── Breathing ── */
-  if (!reduceMotion) {
-    var ZONES = ['a', 'b', 'c', 'd'];
-    var PHASES = [0, Math.PI * 0.5, Math.PI, Math.PI * 1.5];
-    requestAnimationFrame(function breathe(ts) {
-      for (var i = 0; i < ZONES.length; i++) {
-        var z = ZONES[i];
-        if (z === hoverZone || rafs[z]) continue;
-        scales[z] = 1 + 0.014 * Math.sin(ts / 827 + PHASES[i]);
-        applyScale(z);
-      }
-      requestAnimationFrame(breathe);
-    });
-  }
-
   /* ── Dot state on zone hover ── */
   function highlightDotsForZone(zone) {
     svg.querySelectorAll('.vb-dot').forEach(function (dot) {
@@ -505,21 +611,37 @@
     });
   }
 
+  function activateZone(zone) {
+    if (!zone || hoverZone === zone) return;
+    if (hoverZone) animateTo(hoverZone, 1.0);
+    hoverZone = zone;
+    svg.setAttribute('data-hover', zone);
+    animateTo(zone, 1.028);
+    highlightDotsForZone(zone);
+  }
+
+  function clearZone(zone) {
+    if (!hoverZone || (zone && hoverZone !== zone)) return;
+    var previous = hoverZone;
+    hoverZone = null;
+    svg.removeAttribute('data-hover');
+    animateTo(previous, 1.0);
+    resetDots();
+  }
+
   /* ── Hit zone events ── */
   svg.querySelectorAll('.rv-hit').forEach(function (el) {
-    el.addEventListener('mouseenter', function () {
-      var zone = el.getAttribute('data-zone');
-      hoverZone = zone;
-      svg.setAttribute('data-hover', zone);
-      animateTo(zone, 1.06);
-      highlightDotsForZone(zone);
+    el.addEventListener('mouseover', function () {
+      activateZone(el.getAttribute('data-zone'));
     });
-    el.addEventListener('mouseleave', function () {
-      var zone = el.getAttribute('data-zone');
-      hoverZone = null;
-      svg.removeAttribute('data-hover');
-      animateTo(zone, 1.0);
-      resetDots();
+    el.addEventListener('mouseout', function () {
+      clearZone(el.getAttribute('data-zone'));
+    });
+    el.addEventListener('focus', function () {
+      activateZone(el.getAttribute('data-zone'));
+    });
+    el.addEventListener('blur', function () {
+      clearZone(el.getAttribute('data-zone'));
     });
     el.addEventListener('click', function () {
       var target = el.getAttribute('data-target');
@@ -535,7 +657,8 @@
 
   /* ── Dot proximity hover via SVG mousemove ── */
   var dotData = [];
-  svg.querySelectorAll('.vb-dot').forEach(function (dot) {
+  svg.querySelectorAll('.vb-dot').forEach(function (dot, index) {
+    dot.style.setProperty('--vb-delay', (-0.12 * (index % 5)) + 's');
     dotData.push({
       el: dot,
       cx: parseFloat(dot.getAttribute('cx')),
@@ -559,6 +682,7 @@
     var statusLabel = STATUS_LABELS[paper.status] || paper.status;
     var html = '<div class="vb-pop-title">' + paper.title + '</div>';
     if (paper.venue) html += '<div class="vb-pop-venue">' + paper.venue + '</div>';
+    if (paper.connects) html += '<div class="vb-pop-connects">Connects · ' + paper.connects + '</div>';
     html += '<div class="vb-pop-meta">';
     if (paper.year) html += '<span class="vb-pop-badge vb-pop-year">' + paper.year + '</span>';
     html += '<span class="vb-pop-badge ' + statusCls + '">' + statusLabel + '</span>';
@@ -598,6 +722,10 @@
   }
 
   svg.addEventListener('mousemove', function (e) {
+    var zoneTarget = e.target && e.target.closest ? e.target.closest('.rv-hit') : null;
+    if (zoneTarget) activateZone(zoneTarget.getAttribute('data-zone'));
+    else clearZone();
+
     var pt = svgPoint(e);
     var closestDot = null, closestDist = Infinity;
     for (var i = 0; i < dotData.length; i++) {
@@ -630,7 +758,12 @@
 
   svg.addEventListener('mouseleave', function () {
     if (currentFocusDot) { currentFocusDot.classList.remove('vb-dot-focus'); currentFocusDot = null; }
+    clearZone();
     scheduleHide();
+  });
+
+  document.addEventListener('mousemove', function (e) {
+    if (e.target && !svg.contains(e.target)) clearZone();
   });
 
   // Keep popover alive when mouse moves onto it (to click the link)

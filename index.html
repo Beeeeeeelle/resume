@@ -28,10 +28,7 @@ custom_js:
 .home-initiative {
   position: relative;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 176px;
-  align-items: stretch;
-  gap: 12px;
+  display: block;
   margin: 22px 0 26px;
   padding: 17px 0 15px;
   border-top: 1px solid rgba(17, 24, 39, 0.82);
@@ -134,25 +131,8 @@ custom_js:
   line-height: 1.4;
   transform: rotate(-1deg);
 }
-.home-initiative__art {
-  position: relative;
-  min-height: 112px;
-  overflow: hidden;
-  pointer-events: none;
-}
-.home-initiative__art img {
-  position: absolute;
-  top: -6px;
-  right: -5px;
-  width: 205px;
-  max-width: none;
-  height: auto;
-  margin: 0;
-}
 @media (max-width: 620px) {
   .home-initiative {
-    grid-template-columns: minmax(0, 1fr) 90px;
-    gap: 7px;
     padding: 15px 0 14px;
   }
   .home-initiative__heading {
@@ -165,14 +145,6 @@ custom_js:
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
-  }
-  .home-initiative__art {
-    min-height: 154px;
-  }
-  .home-initiative__art img {
-    top: 4px;
-    right: -48px;
-    width: 210px;
   }
 }
 .home-hero {
@@ -213,9 +185,11 @@ custom_js:
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.07);
   color: #172033;
-  font-size: 10.75px;
-  font-weight: 600;
+  font-family: "Segoe Print", "Bradley Hand", "Kaiti SC", "STKaiti", cursive;
+  font-size: 11px;
+  font-weight: 500;
   line-height: 1;
+  letter-spacing: 0;
   text-decoration: none;
   white-space: nowrap;
   backdrop-filter: blur(10px);
@@ -537,9 +511,6 @@ My research focuses on how people learn with, through, and about artificial inte
       <span class="home-initiative__note">Purdue affiliation not required</span>
     </div>
   </div>
-  <div class="home-initiative__art" aria-hidden="true">
-    <img src="/assets/images/design/belle-black-comet-current.jpg" alt="" data-no-lightbox="true">
-  </div>
 </aside>
 <p class="lang-zh" hidden>
 我于<a href="https://education.purdue.edu/graduate-students/prospective-students/graduate-programs/learning-design-technology/">普渡大学</a>获得学习设计与技术方向博士学位，师从<a href="https://scholar.google.com/citations?user=xSX2cwkAAAAJ&amp;hl=en&amp;oi=ao">Victoria L. Lowell博士</a>和<a href="https://scholar.google.com/citations?hl=en&amp;user=f8J04qAAAAAJ">Marisa Exter博士</a>；此前于<a href="https://education.indiana.edu/programs/instructional-systems-technology.html">印第安纳大学伯明顿分校</a>获得教学系统技术硕士学位，师从<a href="https://scholar.google.com/citations?user=dsdG3ewAAAAJ&amp;hl=en">Curtis J. Bonk博士</a>。
@@ -555,9 +526,6 @@ My research focuses on how people learn with, through, and about artificial inte
       <a class="home-initiative__action" href="{{ ai_lunch_learn.cta_url }}" target="_blank" rel="noopener">提交合作构想</a>
       <span class="home-initiative__note">无需隶属于普渡大学</span>
     </div>
-  </div>
-  <div class="home-initiative__art" aria-hidden="true">
-    <img src="/assets/images/design/belle-black-comet-current.jpg" alt="" data-no-lightbox="true">
   </div>
 </aside>
 </div>
