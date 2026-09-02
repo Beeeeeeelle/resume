@@ -1,6 +1,15 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- id: ai-lunch-learn-session-01
+  date: "Sep 2026"
+  type: event
+  text: "Hosting the first session of Purdue's <strong>AI Lunch &amp; Learn</strong>: <em>Build Your First Personal Website with AI</em>, a 60-minute hands-on workshop on <strong>September 10, 2026</strong>, from 12:00-1:00 PM in BRNG 3213. Drop-ins are welcome, and no coding experience is required."
+  image: /assets/images/news/ai-lunch-learn/ai-lunch-learn-session-01-flyer.webp
+  image_alt: "Flyer for Purdue AI Lunch and Learn Session 01, Build Your First Personal Website with AI"
+  cta_url: https://purdue.ca1.qualtrics.com/jfe/form/SV_2cowKItzoHrDVK6
+  cta_label: "Register for Session 01"
+
 - id: ai-lunch-learn
   date: "Aug 2026"
   type: event
