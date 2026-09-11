@@ -135,7 +135,7 @@ title: "Teaching & Mentoring"
       <p>My teaching work is closely connected to course design, faculty development, and collaborative research on learning technologies.</p>
       <ul>
         <li><strong>Course design impact:</strong> the Strategic Assessment &amp; Evaluation redesign has been cited in departmental feedback for clarity, accessibility, and learner satisfaction.</li>
-        <li><strong>Community leadership:</strong> invited speaker for instructional design seminars at Old Dominion University, Boise State University, and Purdue’s P-12 Conference.</li>
+        <li><strong>Community leadership:</strong> invited speaker for instructional design seminars at Old Dominion University, Boise State University, and the AI P-12 Conference.</li>
         <li><strong>Research-to-teaching translation:</strong> award-winning collaboration with Intel Labs on collaborative problem solving in conversational AI informs teacher preparation and design discussions in my courses.</li>
       </ul>
     </div>

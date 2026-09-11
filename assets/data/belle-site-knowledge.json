@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-28",
+  "updatedAt": "2026-09-10",
   "siteTitle": "Belle Li",
   "documents": [
     {
@@ -106,6 +106,21 @@
         "portfolio"
       ],
       "content": "The Design and Development page shows how Belle translates research questions into usable learning tools, websites, course systems, communication artifacts, and evaluation outputs. It features the AI for Education Resource Library, academic site concept work, PALDT newsletters, TicApp, online course design, media and visual storytelling, podcast production, and retention-focused needs assessment projects. The page emphasizes clarity, accessibility, and usable educational design."
+    },
+    {
+      "id": "ai-in-practice",
+      "title": "AI in Practice",
+      "url": "https://www.beeelle.com/ai-in-practice/",
+      "summary": "Belle's AI-centered programs, workshops, conference service, and institutional digital initiatives, including Purdue AI Lunch & Learn.",
+      "tags": [
+        "ai in practice",
+        "ai lunch and learn",
+        "workshops",
+        "faculty development",
+        "ai in p-12",
+        "digital infrastructure"
+      ],
+      "content": "AI in Practice documents how Belle translates AI and learning research into shared educational practice. She leads Purdue AI Lunch & Learn, a recurring hands-on series for educators. Its inaugural session, Build Your First Personal Website with AI, took place on September 10, 2026 and helped participants practice directing, evaluating, and refining AI-generated work through website building. This practice also includes her contributions as a presenter and organizing committee member for the AI P-12 Conference in 2024 and 2025, updates to Purdue College of Education's AI and Data Science web presence, and faculty workshops and invited sessions. Educators and collaborators can propose or co-design future sessions through the public interest form linked on the page."
     },
     {
       "id": "petechat",

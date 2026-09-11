@@ -7,6 +7,7 @@ title: "Design & Development"
 
 <div class="learning-intro">
   <p>Design and development work is where I translate research questions into usable learning tools, websites, course systems, and communication artifacts. Across product design, instructional design, visual storytelling, and evaluation, I focus on clarity, accessibility, and designs that people can actually use in educational settings.</p>
+  <p>For ongoing institutional AI programs and public-facing implementation work, see <a href="/ai-in-practice/">AI in Practice</a>.</p>
 </div>
 
 <div class="learning-overview" data-reveal-group data-reveal-step="72">

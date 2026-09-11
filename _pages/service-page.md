@@ -7,6 +7,7 @@ permalink: /service/
 
 <div class="service-intro">
   <p>I treat service as field-building work. For me, service includes sharing research through invited talks and workshops, reviewing scholarship, supporting professional communities, and mentoring students and early-career scholars. Across these roles, I try to make the field of learning, design, and AI more rigorous, more connected, and more welcoming to new participants.</p>
+  <p>My current AI-centered programs, workshops, and institutional initiatives are documented in <a href="/ai-in-practice/">AI in Practice</a>.</p>
 </div>
 
 <div class="service-overview" data-reveal-group data-reveal-step="72">
@@ -20,7 +21,7 @@ permalink: /service/
   </article>
   <article class="service-overview__card" data-reveal>
     <h3>Leadership &amp; Community</h3>
-    <p>PALDT communications lead, AECT and AERA member, Purdue AI in P-12 conference contributor, and ConnectEd mentor.</p>
+    <p>PALDT communications lead, AECT and AERA member, AI P-12 Conference contributor, and ConnectEd mentor.</p>
   </article>
 </div>
 
@@ -99,7 +100,7 @@ permalink: /service/
     <p>I also contribute through the association and program structures that make scholarly exchange possible, including communication work, conference outreach, and representing Purdue's Learning Design and Technology community in field-facing spaces.</p>
     <ul>
       <li><strong>PALDT communications lead:</strong> supported newsletters, event visibility, and student-facing program communication in 2024 and 2025.</li>
-      <li><strong>Purdue AI in P-12 Education Conference:</strong> presenter and organizing committee contributor in 2024 and 2025.</li>
+      <li><strong>AI P-12 Conference:</strong> presenter and organizing committee contributor in 2024 and 2025.</li>
       <li><strong>Professional community:</strong> AERA and AECT member, with conference-based representation at reception and outreach events.</li>
     </ul>
   </div>
