@@ -10,6 +10,18 @@ permalink: /service/
   <p>My current AI-centered programs, workshops, and institutional initiatives are documented in <a href="/ai-in-practice/">AI in Practice</a>.</p>
 </div>
 
+<div class="service-current" data-reveal>
+  <a class="service-current__media" href="/assets/images/news/ai-lunch-learn/ai-lunch-learn-session-01-flyer.webp" target="_blank" rel="noopener" aria-label="Open the full Session 01 flyer">
+    <img src="/assets/images/news/ai-lunch-learn/ai-lunch-learn-session-01-flyer.webp" alt="Flyer for Purdue AI Lunch and Learn Session 01, Build Your First Personal Website with AI" loading="lazy">
+  </a>
+  <div class="service-current__body">
+    <p class="service-current__eyebrow">Current program / 2026</p>
+    <h3>Purdue AI Lunch &amp; Learn</h3>
+    <p>Session 01 invited educators to build a personal website while practicing how to direct, evaluate, and refine AI-generated work.</p>
+    <a class="service-current__link" href="/assets/images/news/ai-lunch-learn/ai-lunch-learn-session-01-flyer.webp" target="_blank" rel="noopener">View the session flyer</a>
+  </div>
+</div>
+
 <div class="service-overview" data-reveal-group data-reveal-step="72">
   <article class="service-overview__card" data-reveal>
     <h3>Invited Talks &amp; Workshops</h3>
