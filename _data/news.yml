@@ -1,6 +1,15 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- id: ai-lunch-learn-session-02
+  date: "Sep 2026"
+  type: event
+  text: "Invited <strong>Yi Wang</strong> as guest speaker for Session 02 of Purdue's <strong>AI Lunch &amp; Learn</strong>, <em>Beyond PowerPoint: Build Interactive Slides with AI</em>, on <strong>September 24, 2026</strong>."
+  image: /assets/images/ai-in-practice/lunch-learn/session-02/guest-session.jpg
+  image_alt: "Purdue AI Lunch and Learn Session 02 with a remote guest speaker and participants in the room"
+  cta_url: /ai-in-practice/#session-02
+  cta_label: "View session photos & materials"
+
 - id: ai-lunch-learn-session-01
   date: "Sep 2026"
   type: event

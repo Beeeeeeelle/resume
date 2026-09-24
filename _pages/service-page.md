@@ -17,8 +17,9 @@ permalink: /service/
   <div class="service-current__body">
     <p class="service-current__eyebrow">Current program / 2026</p>
     <h3>Purdue AI Lunch &amp; Learn</h3>
-    <p>Session 01 invited educators to build a personal website while practicing how to direct, evaluate, and refine AI-generated work.</p>
-    <a class="service-current__link" href="/assets/images/news/ai-lunch-learn/ai-lunch-learn-session-01-flyer.webp" target="_blank" rel="noopener">View the session flyer</a>
+    <p><strong>Session 01 · Sep 10:</strong> <a href="/assets/images/news/ai-lunch-learn/ai-lunch-learn-session-01-flyer.webp" target="_blank" rel="noopener">Build Your First Personal Website with AI</a>, facilitated by Belle Li.</p>
+    <p><strong>Session 02 · Sep 24:</strong> Beyond PowerPoint: Build Interactive Slides with AI. Organized by Belle Li, with invited guest speaker <strong>Yi Wang</strong>.</p>
+    <a class="service-current__link" href="https://claude.ai/artifact/Pd3yU11SAuT2sxBVAfJ3Nn" target="_blank" rel="noopener">Session 02 materials</a>
   </div>
 </div>
 

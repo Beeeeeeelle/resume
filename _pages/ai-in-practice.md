@@ -272,6 +272,62 @@ permalink: /ai-in-practice/
   color: var(--aip-blue);
 }
 
+.aip-session-note {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--aip-rule);
+  scroll-margin-top: 6rem;
+}
+
+.page__content .aip-session-note h2 {
+  margin: 0 0 0.7rem;
+  color: var(--aip-ink);
+  font-size: clamp(21px, 2.1vw, 27px);
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.aip-session-note__copy {
+  margin-bottom: 0.9rem;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.aip-session-note__photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.aip-session-note__photos figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.aip-session-note__photos a {
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.aip-session-note__photos a:focus-visible {
+  outline: 2px solid var(--aip-orange);
+  outline-offset: 4px;
+}
+
+.aip-session-note__photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .aip-course {
   margin-top: clamp(3.3rem, 7vw, 5.6rem);
   padding-top: 1.2rem;
@@ -560,6 +616,15 @@ permalink: /ai-in-practice/
 }
 
 @media (max-width: 900px) {
+  .aip-session-note {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .aip-session-note__photos {
+    max-width: 540px;
+  }
+
   .aip-properties {
     grid-template-columns: 1fr 1fr;
   }
@@ -804,6 +869,29 @@ permalink: /ai-in-practice/
       </figure>
     </div>
     <p class="aip-caption">Individual building moved into small-group feedback, shared examples, and live revision.</p>
+  </section>
+
+  <section class="aip-session-note" id="session-02" aria-labelledby="aip-session-02-title">
+    <div data-reveal>
+      <p class="aip-series-name">Session 02 &middot; Sep 24, 2026</p>
+      <h2 id="aip-session-02-title">Beyond PowerPoint: Build Interactive Slides with AI</h2>
+      <p class="aip-session-note__copy">Organized by Belle Li, with invited guest speaker <strong>Yi Wang</strong>.</p>
+      <a class="aip-link" href="https://claude.ai/artifact/Pd3yU11SAuT2sxBVAfJ3Nn" target="_blank" rel="noopener">View session materials</a>
+    </div>
+    <div class="aip-session-note__photos" aria-label="Session 02 photographs" data-reveal>
+      <figure>
+        <a href="/assets/images/ai-in-practice/lunch-learn/session-02/guest-session.jpg" target="_blank" rel="noopener" aria-label="Open full photo of Session 02 with the remote guest speaker">
+          <img src="/assets/images/ai-in-practice/lunch-learn/session-02/guest-session.jpg" alt="Purdue AI Lunch and Learn participants watching a projected presentation with a remote guest speaker" width="1707" height="1280" loading="lazy">
+        </a>
+        <figcaption class="aip-caption">Learning with a guest speaker.</figcaption>
+      </figure>
+      <figure>
+        <a href="/assets/images/ai-in-practice/lunch-learn/session-02/hands-on-workshop.jpg" target="_blank" rel="noopener" aria-label="Open full photo of Session 02 participants working on their laptops">
+          <img src="/assets/images/ai-in-practice/lunch-learn/session-02/hands-on-workshop.jpg" alt="Participants working on laptops during Beyond PowerPoint, the second Purdue AI Lunch and Learn session" width="1707" height="1280" loading="lazy">
+        </a>
+        <figcaption class="aip-caption">Trying it together.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <section class="aip-initiatives" aria-labelledby="aip-connected-title">
