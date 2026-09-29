@@ -247,6 +247,36 @@ title: "Design & Development"
   </article>
 </div>
 
+## Research Workflows & Open Skills
+
+<section class="learning-panels" id="research-skills" aria-label="Open research skills and video">
+  <article class="learning-panel learning-panel--feature" data-reveal>
+    <div class="learning-panel__media">
+      <figure class="learning-panel__hero">
+        <video controls playsinline preload="metadata" poster="/assets/images/design/from-papers-to-decisions-poster.jpg" aria-label="From papers to decisions, Belle Li's narrated walkthrough of two research skills">
+          <source src="/assets/videos/from-papers-to-decisions-belle-captioned.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>From papers to decisions — Belle's 8:31 walkthrough with English captions. <a href="/assets/videos/from-papers-to-decisions-belle-captioned.mp4" target="_blank" rel="noopener">Open the video directly</a>.</figcaption>
+      </figure>
+    </div>
+    <div class="learning-panel__body">
+      <p class="learning-panel__eyebrow">Open-source research tools · Agent skills · Video walkthrough</p>
+      <h3>From Papers to Decisions</h3>
+      <p>I released two connected skills for research teams carrying out literature reviews. The first prepares checked full texts; the second supports source-linked screening, appraisal, extraction, and reviewer coordination. People define the rules and make the scientific decisions.</p>
+      <ul>
+        <li><strong>Literature PDF Retrieval:</strong> locates full texts, checks article identity and version, and records unresolved access or source questions.</li>
+        <li><strong>Review Evidence Workflow:</strong> prepares evidence-linked AI proposals or independent reviewer packages, then organizes returned feedback for human resolution.</li>
+      </ul>
+      <div class="learning-panel__actions">
+        <a class="learning-panel__link" href="https://github.com/Beeeeeeelle/literature-pdf-retrieval" target="_blank" rel="noopener">PDF Retrieval Skill</a>
+        <a class="learning-panel__link" href="https://github.com/Beeeeeeelle/review-evidence-workflow" target="_blank" rel="noopener">Evidence Workflow Skill</a>
+        <a class="learning-panel__link learning-panel__link--ghost" href="https://github.com/Beeeeeeelle/review-evidence-workflow/blob/main/docs/demo/README.md" target="_blank" rel="noopener">View pilot demo</a>
+      </div>
+    </div>
+  </article>
+</section>
+
 ## Media & Visual Storytelling
 
 <div class="learning-panels">

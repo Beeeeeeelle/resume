@@ -1,6 +1,15 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- id: research-review-skills-2026
+  date: "Sep 2026"
+  type: media
+  text: "Released two open-source research skills, <strong>Literature PDF Retrieval</strong> and <strong>Review Evidence Workflow</strong>, with an 8:31 video narrated by Belle. Together they connect checked full texts to source-linked review packages while researchers make the decisions."
+  image: /assets/images/design/review-evidence-workflow-pilot.jpg
+  image_alt: "Actual pilot review workbench showing screening decisions beside a source PDF, with demonstration responses saved separately"
+  cta_url: /learning/#research-skills
+  cta_label: "Explore the skills & video"
+
 - id: ai-lunch-learn-session-02
   date: "Sep 2026"
   type: event
