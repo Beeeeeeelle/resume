@@ -452,58 +452,71 @@ function initPublicationsSpotlight() {
 }
 
 function initCursor(prefersReducedMotion) {
-  if (prefersReducedMotion) return;
-  if (window.matchMedia('(hover: none)').matches) return;
+  if (prefersReducedMotion || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
 
-  const dot = document.createElement('div');
-  dot.className = 'cursor-dot';
-  const ring = document.createElement('div');
-  ring.className = 'cursor-ring';
-  document.body.appendChild(dot);
-  document.body.appendChild(ring);
-  document.body.classList.add('has-custom-cursor');
+  // Inspired by Cursor Lab's MIT-licensed Eyes demo:
+  // https://github.com/oleksand4rux-del/cursor-lab
+  // Keep the native pointer everywhere except actionable elements.
+  const pill = document.createElement('div');
+  pill.className = 'cursor-eyes';
+  pill.setAttribute('aria-hidden', 'true');
+  pill.innerHTML = '<span class="cursor-eyes__pair"><span class="cursor-eyes__eye"><i></i></span><span class="cursor-eyes__eye"><i></i></span></span><span class="cursor-eyes__label">Explore</span>';
+  document.body.appendChild(pill);
+  document.body.classList.add('has-eyes-cursor');
 
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let ringX = mouseX;
-  let ringY = mouseY;
+  const pupils = [...pill.querySelectorAll('.cursor-eyes__eye i')];
+  const label = pill.querySelector('.cursor-eyes__label');
+  const targets = 'a[href], button, [role="button"], summary, .rv-hit, .news-filter, .bcv__btn';
+  let targetX = 0;
+  let targetY = 0;
+  let x = 0;
+  let y = 0;
+  let started = false;
+  let active = false;
+  let frame = 0;
 
-  dot.style.left = mouseX + 'px';
-  dot.style.top  = mouseY + 'px';
-  ring.style.left = ringX + 'px';
-  ring.style.top  = ringY + 'px';
+  const render = () => {
+    frame = 0;
+    x += (targetX - x) * 0.24;
+    y += (targetY - y) * 0.24;
+    pill.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
 
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
+    const dx = targetX - x;
+    const dy = targetY - y;
+    const distance = Math.hypot(dx, dy);
+    const reach = Math.min(distance / 20, 1) * 2.2;
+    const pupilX = distance ? (dx / distance) * reach : 0;
+    const pupilY = distance ? (dy / distance) * reach : 0;
+    pupils.forEach((pupil) => {
+      pupil.style.transform = `translate3d(${pupilX}px, ${pupilY}px, 0)`;
+    });
+
+    if (active && distance > 0.3) frame = requestAnimationFrame(render);
+  };
+
+  document.addEventListener('pointermove', (event) => {
+    if (event.pointerType !== 'mouse') return;
+    targetX = event.clientX;
+    targetY = event.clientY;
+    if (!started) {
+      x = targetX;
+      y = targetY;
+      started = true;
+    }
+
+    const target = event.target.closest(targets);
+    const isEditable = Boolean(event.target.closest('input, textarea, select, [contenteditable="true"]'));
+    active = Boolean(target) && !isEditable;
+    pill.classList.toggle('is-visible', active);
+    const isLink = target && (target.matches('a[href]') || target.closest('a[href]'));
+    label.textContent = isLink ? 'Explore' : 'Click';
+    if (!frame) frame = requestAnimationFrame(render);
+  }, { passive: true });
+
+  document.addEventListener('pointerleave', () => {
+    active = false;
+    pill.classList.remove('is-visible');
   });
-
-  document.addEventListener('mouseleave', () => {
-    dot.style.opacity  = '0';
-    ring.style.opacity = '0';
-  });
-  document.addEventListener('mouseenter', () => {
-    dot.style.opacity  = '1';
-    ring.style.opacity = '1';
-  });
-
-  document.addEventListener('mouseover', (e) => {
-    const hoverable = e.target.closest(
-      'a, button, [role="button"], label, input, select, textarea, ' +
-      '.paper-tag, .rv-hit, .news-filter, .bcv__btn, [tabindex="0"]'
-    );
-    ring.classList.toggle('is-hovering', Boolean(hoverable));
-  });
-
-  (function animateCursor() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
-    requestAnimationFrame(animateCursor);
-  })();
 }
 
 function initBeyondCvGallery(prefersReducedMotion) {

@@ -3250,38 +3250,74 @@ html.chatbot-lock {
   transform: rotate(12deg) scale(1.15);
 }
 
-/* ── Custom cursor ── */
-body.has-custom-cursor,
-body.has-custom-cursor * {
-  cursor: none !important;
+/* ── Eyes cursor for interactive elements ── */
+@media (hover: hover) and (pointer: fine) {
+  body.has-eyes-cursor a[href],
+  body.has-eyes-cursor button,
+  body.has-eyes-cursor [role="button"],
+  body.has-eyes-cursor summary,
+  body.has-eyes-cursor .rv-hit,
+  body.has-eyes-cursor .news-filter,
+  body.has-eyes-cursor .bcv__btn {
+    cursor: none !important;
+  }
 }
 
-.cursor-dot {
+.cursor-eyes {
   position: fixed;
-  width: 7px;
-  height: 7px;
-  background: #e05a2b;
-  border-radius: 50%;
-  pointer-events: none;
+  top: 0;
+  left: 0;
   z-index: 10000;
-  transform: translate(-50%, -50%);
-  will-change: left, top;
-  transition: opacity 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #1b1d20;
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(27, 29, 32, 0.16);
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 0.15s ease;
 }
 
-.cursor-ring {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  border: 1.5px solid rgba(224, 90, 43, 0.45);
+.cursor-eyes.is-visible { opacity: 1; }
+.cursor-eyes__pair { display: flex; gap: 2px; }
+.cursor-eyes__eye {
+  display: block;
+  position: relative;
+  width: 11px;
+  height: 11px;
+  overflow: hidden;
   border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  will-change: left, top;
-  transition: width 0.22s ease, height 0.22s ease,
-              border-color 0.22s ease, background 0.22s ease,
-              opacity 0.2s ease;
+  background: #fff;
+  animation: cursor-eyes-blink 4.2s infinite;
+}
+.cursor-eyes__eye:last-child { animation-delay: 0.06s; }
+.cursor-eyes__eye i {
+  position: absolute;
+  top: 3.5px;
+  left: 3.5px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #1b1d20;
+}
+.cursor-eyes__label {
+  font: 600 10px/1 system-ui, -apple-system, 'Segoe UI', sans-serif;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+@keyframes cursor-eyes-blink {
+  0%, 93%, 97%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.12); }
+}
+
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+  .cursor-eyes { display: none; }
 }
 
 /* ── Language toggle button ── */
@@ -3306,16 +3342,4 @@ body.has-custom-cursor * {
 .bl-lang-toggle:hover {
   background: rgba(123, 156, 200, 0.12);
   border-color: rgba(123, 156, 200, 0.75);
-}
-
-.cursor-ring.is-hovering {
-  width: 48px;
-  height: 48px;
-  border-color: rgba(224, 90, 43, 0.2);
-  background: rgba(224, 90, 43, 0.05);
-}
-
-@media (hover: none) {
-  .cursor-dot,
-  .cursor-ring { display: none; }
 }
