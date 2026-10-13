@@ -155,6 +155,15 @@
   display: block;
   cursor: zoom-in;
 }
+.news-item__gallery {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+.news-item__gallery .news-item__img { margin-left: 0; }
+.news-item__img--wide { width: 100px; }
 .news-item--linked {
   cursor: pointer;
   transition: background 0.15s;
@@ -214,6 +223,21 @@
     height: 52px;
     margin-left: 4px;
   }
+  .news-item--gallery {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    column-gap: 10px;
+  }
+  .news-item--gallery .news-item__left { grid-column: 1; grid-row: 1 / span 2; }
+  .news-item--gallery .news-item__body { grid-column: 2; }
+  .news-item--gallery .news-item__gallery {
+    grid-column: 2;
+    flex-direction: row;
+    gap: 6px;
+    margin: 9px 0 0;
+  }
+  .news-item__gallery .news-item__img { margin-left: 0; }
+  .news-item__gallery .news-item__img--wide { width: 88px; }
 }
 </style>
 
@@ -226,7 +250,7 @@
   </div>
   <ul class="news-list" data-reveal-group data-reveal-step="62">
     {% for item in site.data.news %}
-    <li class="news-item{% if item.url %} news-item--linked{% endif %}"
+    <li class="news-item{% if item.url %} news-item--linked{% endif %}{% if item.image_secondary %} news-item--gallery{% endif %}"
       data-news-type="{{ item.type }}"
       data-news-year="{{ item.date | slice: -4, 4 }}"
       data-reveal
@@ -258,7 +282,12 @@
         {% endif %}
       </div>
       {% if item.image %}
-      <img class="news-item__img" src="{{ item.image }}" alt="{{ item.image_alt | default: item.type }}" loading="lazy" decoding="async">
+        {% if item.image_secondary %}<div class="news-item__gallery" aria-label="Workshop photos">{% endif %}
+        <img class="news-item__img" src="{{ item.image }}" alt="{{ item.image_alt | default: item.type }}" loading="lazy" decoding="async">
+        {% if item.image_secondary %}
+        <img class="news-item__img news-item__img--wide" src="{{ item.image_secondary }}" alt="{{ item.image_secondary_alt | default: 'Workshop group photo' }}" loading="lazy" decoding="async">
+        </div>
+        {% endif %}
       {% endif %}
     </li>
     {% endfor %}

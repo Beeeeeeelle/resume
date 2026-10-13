@@ -1,6 +1,17 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- id: cscw-2026-family-ai-workshop
+  date: "Oct 2026"
+  type: talk
+  text: "Joined <strong>CSCW 2026</strong>'s <em>Growing Up (and Old) with AI</em> workshop in Salt Lake City on <strong>October 11, 2026</strong> and shared our accepted paper, <em>Beyond Individual AI Literacy: Family AI Literacy as Cooperative Accomplishment</em>, co-authored with <strong>Mohan Yang</strong>. The work frames family AI literacy through joint interpretation, shared governance, and coordinated action."
+  image: /assets/images/news/cscw-2026-family-ai/workshop-presentation.jpg
+  image_alt: "CSCW 2026 family-centered AI workshop presentation, with a slide on Beyond Individual AI Literacy"
+  image_secondary: /assets/images/news/cscw-2026-family-ai/workshop-group.jpg
+  image_secondary_alt: "Participants posing together at the CSCW 2026 Growing Up (and Old) with AI workshop"
+  cta_url: https://extendedhorizon.com/cscw2026ws-family-ai/files/accepted-papers/01-beyond-individual-ai-literacy.pdf
+  cta_label: "Read accepted paper"
+
 - id: research-review-skills-2026
   date: "Sep 2026"
   type: media
