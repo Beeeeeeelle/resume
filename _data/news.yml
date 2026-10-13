@@ -12,6 +12,18 @@
   cta_url: https://extendedhorizon.com/cscw2026ws-family-ai/files/accepted-papers/01-beyond-individual-ai-literacy.pdf
   cta_label: "Read accepted paper"
 
+- id: edweek-english-learners-2026
+  date: "Oct 2026"
+  type: talk
+  text: "Spoke as a panelist at <strong>Education Week</strong>'s K-12 Essentials Forum, <em>Rethinking Instruction for English Learners</em>, on <strong>October 1, 2026</strong>. Our session, <em>Lost in AI Translation: Navigating Equity, Accuracy, and Privacy</em>, explored AI translation for school-family communication. More than <strong>400 people</strong> attended the virtual forum."
+  image: /assets/images/news/edweek-english-learners-2026/forum-banner.jpg
+  image_alt: "Education Week K-12 Essentials Forum: Rethinking Instruction for English Learners, October 1, 2026"
+  image_secondary: /assets/images/news/edweek-english-learners-2026/belle-speaker-profile.jpg
+  image_secondary_alt: "Education Week speaker profile for Belle Li, Ross-Lynn Postdoctoral Research Scholar at Purdue University"
+  image_gallery_label: "Education Week forum images"
+  cta_url: https://www.edweek.org/events/k-12-essentials-forum/rethinking-instruction-for-english-learners
+  cta_label: "View forum program"
+
 - id: research-review-skills-2026
   date: "Sep 2026"
   type: media

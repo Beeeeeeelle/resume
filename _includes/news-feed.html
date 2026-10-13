@@ -282,7 +282,7 @@
         {% endif %}
       </div>
       {% if item.image %}
-        {% if item.image_secondary %}<div class="news-item__gallery" aria-label="Workshop photos">{% endif %}
+        {% if item.image_secondary %}<div class="news-item__gallery" aria-label="{{ item.image_gallery_label | default: 'News photos' }}">{% endif %}
         <img class="news-item__img" src="{{ item.image }}" alt="{{ item.image_alt | default: item.type }}" loading="lazy" decoding="async">
         {% if item.image_secondary %}
         <img class="news-item__img news-item__img--wide" src="{{ item.image_secondary }}" alt="{{ item.image_secondary_alt | default: 'Workshop group photo' }}" loading="lazy" decoding="async">
