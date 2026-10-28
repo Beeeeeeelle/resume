@@ -1,6 +1,16 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- id: aect-2026-chicago-schedule
+  date: "Nov 2026"
+  type: event
+  text: "Heading to <strong>AECT 2026</strong> at Chicago's Palmer House. Find me November 3–5 at sessions on <strong>PeteChat</strong>, AI writing authenticity, the instructional design workforce, cybersecurity, and learning with generative AI. I'll present the PeteChat design case on November 3 and <em>Learning in the Loop</em> on November 5."
+  image: /assets/images/news/aect-2026/00-all-days.png
+  image_alt: "Belle Li at AECT 2026 in Chicago: November 3–5 session schedule"
+  image_poster: true
+  cta_url: /aect-2026/
+  cta_label: "View my AECT schedule"
+
 - id: cscw-2026-family-ai-workshop
   date: "Oct 2026"
   type: talk

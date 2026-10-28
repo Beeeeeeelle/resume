@@ -155,6 +155,7 @@
   display: block;
   cursor: zoom-in;
 }
+.news-item__img--poster { object-position: center top; }
 .news-item__gallery {
   display: flex;
   align-items: flex-start;
@@ -283,7 +284,7 @@
       </div>
       {% if item.image %}
         {% if item.image_secondary %}<div class="news-item__gallery" aria-label="{{ item.image_gallery_label | default: 'News photos' }}">{% endif %}
-        <img class="news-item__img" src="{{ item.image }}" alt="{{ item.image_alt | default: item.type }}" loading="lazy" decoding="async">
+        <img class="news-item__img{% if item.image_poster %} news-item__img--poster{% endif %}" src="{{ item.image }}" alt="{{ item.image_alt | default: item.type }}" loading="lazy" decoding="async">
         {% if item.image_secondary %}
         <img class="news-item__img news-item__img--wide" src="{{ item.image_secondary }}" alt="{{ item.image_secondary_alt | default: 'Workshop group photo' }}" loading="lazy" decoding="async">
         </div>
