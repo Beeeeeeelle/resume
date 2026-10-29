@@ -11,6 +11,15 @@
   cta_url: /aect-2026/
   cta_label: "View my AECT schedule"
 
+- id: purdue-ai-p12-conference-2026
+  date: "Nov 2026"
+  type: event
+  text: "Co-organizing the <strong>third annual Purdue AI in P–12 Education Conference</strong> on <strong>November 2, 2026</strong>, themed <em>Make AI in Education Coherent</em>. I designed and built the conference website and helped coordinate presenter communications, program details, and sponsor materials."
+  image: /assets/images/news/purdue-ai-p12-conference-2026/conference-logo.png
+  image_alt: "Purdue AI in P-12 Education Conference logo"
+  cta_url: https://beeeeeeelle.github.io/purdue-ai-p12-conference/
+  cta_label: "Explore the conference website"
+
 - id: cscw-2026-family-ai-workshop
   date: "Oct 2026"
   type: talk

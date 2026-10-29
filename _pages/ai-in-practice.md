@@ -540,6 +540,12 @@ permalink: /ai-in-practice/
   line-height: 1.65;
 }
 
+.aip-initiative__detail .aip-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 13px;
+}
+
 .aip-initiative__role {
   color: var(--aip-quiet) !important;
   font-size: 9px !important;
@@ -742,6 +748,7 @@ permalink: /ai-in-practice/
   }
 
   .aip-initiative > p,
+  .aip-initiative__detail,
   .aip-initiative__role {
     grid-column: 2;
   }
@@ -783,8 +790,8 @@ permalink: /ai-in-practice/
 
       <dl class="aip-properties" aria-label="AI in Practice overview">
         <div class="aip-property">
-          <dt>Current program</dt>
-          <dd>Purdue AI Lunch &amp; Learn</dd>
+          <dt>Current programs</dt>
+          <dd>AI Lunch &amp; Learn &middot; AI in P–12 Conference</dd>
         </div>
         <div class="aip-property">
           <dt>Formats</dt>
@@ -901,11 +908,14 @@ permalink: /ai-in-practice/
     </div>
     <p class="aip-initiatives__intro">The workshop series is one part of a broader practice connecting research, educator learning, public programs, and institutional resources.</p>
 
-    <article class="aip-initiative" data-reveal>
+    <article class="aip-initiative" id="p12-conference" data-reveal>
       <span class="aip-initiative__index">02</span>
-      <h3>AI P-12 Conference</h3>
-      <p>Connecting educators, researchers, and practitioners around responsible uses of AI in P-12 learning.</p>
-      <p class="aip-initiative__role">Presenter + organizing committee contributor &middot; 2024-2025</p>
+      <h3>Purdue AI in P–12 Education Conference</h3>
+      <div class="aip-initiative__detail">
+        <p>Co-organizing the third annual conference on November 2, 2026. I designed and built its public website and helped coordinate presenter communications, program details, and sponsor materials.</p>
+        <a class="aip-link" href="https://beeeeeeelle.github.io/purdue-ai-p12-conference/" target="_blank" rel="noopener">Explore the conference website</a>
+      </div>
+      <p class="aip-initiative__role">2024–25 · Presenter + organizing committee<br>2026 · Conference organization + website design &amp; development</p>
     </article>
 
     <article class="aip-initiative" data-reveal>
