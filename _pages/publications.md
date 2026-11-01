@@ -541,6 +541,87 @@ title: "Publications"
 .ptl-pub:hover::after { opacity: 1; }
 </style>
 
+<style>
+/* Keep the original citation layout; remove persistent card frames. */
+.pub-section.supports-target-highlight:target,
+.pub-section.supports-target-highlight.section-targeted { box-shadow: none !important; }
+.pub-section[data-reveal] { opacity: 1; transform: none; }
+.pub-section .pub-entry,
+.pub-section .bl-pcard {
+  position: relative;
+  border: 0;
+  border-radius: 1rem;
+  background: transparent;
+  box-shadow: none;
+  transition: opacity .42s ease, filter .42s ease, background-color .3s ease;
+}
+.pub-section .pub-entry { padding: .8rem 1.15rem; margin-bottom: .35rem; }
+.pub-section .pub-entry__title {
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111;
+  margin-bottom: 2px;
+}
+.pub-section .pub-entry__citation {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #4a4a4a;
+}
+.pub-section .pub-entry__citation strong { color: #252525; }
+.pub-section .pub-entry__venue { color: #666; }
+.pub-section .pub-entry__citation .pub-tags {
+  display: inline-flex;
+  margin: 0 0 0 .35rem;
+  vertical-align: baseline;
+}
+.pub-section .bl-pcard { padding: clamp(1rem, 2.6vw, 1.35rem); }
+.pub-section .pub-entry__body {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.pub-section .bl-pcard--lead { border: 0; }
+.pub-section .pub-recognition {
+  padding: .8rem 0 0;
+  border: 0;
+  border-top: 1px solid #e7e7e7;
+  border-radius: 0;
+  background: transparent;
+}
+@media (hover: hover) and (pointer: fine) {
+  .pub-section.is-spotlight .pub-focus-item:not(.is-active) {
+    opacity: .46;
+    filter: blur(1px);
+  }
+}
+.pub-section .pub-focus-item.is-active,
+.pub-section .pub-focus-item:focus-within {
+  opacity: 1;
+  filter: none;
+  transform: none;
+  background: #f7f7f7;
+  box-shadow: none;
+}
+.pub-section .pub-focus-item.is-active .pub-entry__body { color: inherit; }
+.pub-section .pub-focus-item.is-active .pub-tag { box-shadow: none; }
+@media (max-width: 71.99em) {
+  .page-with-rail-nav .page-section-nav { top: 0; }
+}
+@media (max-width: 600px) {
+  .pub-section .pub-entry { padding: .85rem .7rem; }
+  .pub-section .bl-pcard { padding: 1rem .7rem; }
+  .pub-section.is-spotlight .pub-focus-item:not(.is-active) { opacity: 1; filter: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pub-section .pub-entry,
+  .pub-section .bl-pcard { transition: none; }
+  .pub-section.is-spotlight .pub-focus-item:not(.is-active) { filter: none; }
+}
+</style>
+
 <div class="page-with-rail-nav">
 <nav class="page-section-nav" data-page-nav aria-label="Publications page sections">
   <div class="page-section-nav__list">
@@ -679,7 +760,8 @@ title: "Publications"
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Mao, Y., <strong>Li, B.</strong>, &amp; Qian, J. (in press). Between the lines: Understanding employee preferences for AI usage guidelines through discrete choice experiments. <em>International Journal of Human-Computer Interaction</em>. <span class="pub-status">In press</span>
+    <div class="pub-entry__title">Between the lines: Understanding employee preferences for AI usage guidelines through discrete choice experiments</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Mao, Y., <strong>Li, B.</strong>, &amp; Qian, J. (in press).</span> <span class="pub-entry__venue"><em>International Journal of Human-Computer Interaction</em>. <span class="pub-status">In press</span></span></div>
   </div>
 </div>
 
@@ -687,37 +769,41 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Exter, M., Feng, W., Tang, G., &amp; Xu, K. (2026). A systematic review of language educators' practices and development with GenAI. <em>International Journal of Artificial Intelligence in Education</em>, 100010. <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.ijaied.2026.100010" target="_blank" rel="noopener">DOI</a>
+    <div class="pub-entry__title">A systematic review of language educators' practices and development with GenAI</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Exter, M., Feng, W., Tang, G., &amp; Xu, K. (2026).</span> <span class="pub-entry__venue"><em>International Journal of Artificial Intelligence in Education</em>, 100010. <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.ijaied.2026.100010" target="_blank" rel="noopener">DOI</a></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Chi, Z., Yin, K., Cai, H., Li, C., Sun, M., <strong>Li, B.</strong>, Song, X., &amp; Qi, L. (2026). Sparking innovation through humor: A meta-analysis of leader humor, creativity versus innovative behavior, and contextual contingencies. <em>Journal of Leadership &amp; Organizational Studies</em>.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Sparking innovation through humor: A meta-analysis of leader humor, creativity versus innovative behavior, and contextual contingencies</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Chi, Z., Yin, K., Cai, H., Li, C., Sun, M., <strong>Li, B.</strong>, Song, X., &amp; Qi, L. (2026).</span> <span class="pub-entry__venue"><em>Journal of Leadership &amp; Organizational Studies</em>.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1177/15480518261439446" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Yang, M., Harbor, J., <strong>Li, B.</strong>, &amp; Nikiema, J. (2026). Infusing authenticity into a service-learning program. <em>Education + Training, 68</em>(10), 156-181.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Infusing authenticity into a service-learning program</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Yang, M., Harbor, J., <strong>Li, B.</strong>, &amp; Nikiema, J. (2026).</span> <span class="pub-entry__venue"><em>Education + Training, 68</em>(10), 156-181.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1108/ET-08-2025-0597" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Ye, J.-H., Yang, X., <strong>Li, B.</strong>, Nong, W., Hong, J.-C., &amp; Wang, L. (2026). Understanding AI-assisted learning acceptance among vocational students: An AIDUA model approach. <em>International Journal of Information and Education Technology, 16</em>(4), 853-863.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Understanding AI-assisted learning acceptance among vocational students: An AIDUA model approach</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Ye, J.-H., Yang, X., <strong>Li, B.</strong>, Nong, W., Hong, J.-C., &amp; Wang, L. (2026).</span> <span class="pub-entry__venue"><em>International Journal of Information and Education Technology, 16</em>(4), 853-863.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.18178/ijiet.2026.16.4.2557" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
@@ -854,50 +940,55 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, &amp; Hikmatilla, U. (2025). Getting viral on social media: Exploring EduTubers' perceptions and practices. <em>Innovation in Language Learning and Teaching, 19</em>, 1–25.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Getting viral on social media: Exploring EduTubers' perceptions and practices</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, &amp; Hikmatilla, U. (2025).</span> <span class="pub-entry__venue"><em>Innovation in Language Learning and Teaching, 19</em>, 1–25.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Yan, W., <strong>Li, B.</strong>, &amp; Lowell, V. L. (2025). Integrating artificial intelligence and extended reality in language education: A systematic literature review (2017–2024). <em>Education Sciences, 15</em>(8), 1066.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Integrating artificial intelligence and extended reality in language education: A systematic literature review (2017–2024)</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Yan, W., <strong>Li, B.</strong>, &amp; Lowell, V. L. (2025).</span> <span class="pub-entry__venue"><em>Education Sciences, 15</em>(8), 1066.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.3390/educsci15081066" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Yang, M., Lovett, N., <strong>Li, B.</strong>, &amp; Hou, Z. (2025). Towards dynamic learner state: Orchestrating AI agents and workplace performance via the Model Context Protocol. <em>Education Sciences, 15</em>(8), 1004.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Towards dynamic learner state: Orchestrating AI agents and workplace performance via the Model Context Protocol</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Yang, M., Lovett, N., <strong>Li, B.</strong>, &amp; Hou, Z. (2025).</span> <span class="pub-entry__venue"><em>Education Sciences, 15</em>(8), 1004.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.3390/educsci15081004" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Lovett, N., Yang, M., Herman, K., <strong>Li, B.</strong>, Sosonkina, M., Purwanto, W., Jiang, P., &amp; Wu, M. H. (2025). Leveraging large language models to create learner personas for training design. <em>Journal of Applied Instructional Design, 14</em>(3).
-    <div class="pub-tags">
+    <div class="pub-entry__title">Leveraging large language models to create learner personas for training design</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Lovett, N., Yang, M., Herman, K., <strong>Li, B.</strong>, Sosonkina, M., Purwanto, W., Jiang, P., &amp; Wu, M. H. (2025).</span> <span class="pub-entry__venue"><em>Journal of Applied Instructional Design, 14</em>(3).</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--web" href="https://jaid.edtechbooks.org/jaid_14_3/fkuqikevdr" target="_blank" rel="noopener">Web</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Li, X., <strong>Li, B.</strong>, Li, J., &amp; Cho, S.-J. (2025). Technology review of Magic School AI: An intelligent way for education inclusivity and teacher workload reduction. <em>Education Sciences, 15</em>(8), 963.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Technology review of Magic School AI: An intelligent way for education inclusivity and teacher workload reduction</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Li, X., <strong>Li, B.</strong>, Li, J., &amp; Cho, S.-J. (2025).</span> <span class="pub-entry__venue"><em>Education Sciences, 15</em>(8), 963.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.3390/educsci15080963" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
@@ -919,20 +1010,22 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Lowell, V., Watson, C., &amp; Wang, C. (2024). A systematic review of the first year of publications on ChatGPT and language education. <em>Computers &amp; Education: Artificial Intelligence, 100</em>, 100266.
-    <div class="pub-tags">
+    <div class="pub-entry__title">A systematic review of the first year of publications on ChatGPT and language education</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Lowell, V., Watson, C., &amp; Wang, C. (2024).</span> <span class="pub-entry__venue"><em>Computers &amp; Education: Artificial Intelligence, 100</em>, 100266.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Wang, C., Bonk, C. J., &amp; Kou, X. (2024). Exploring inventions in self-directed learning with generative AI: Implementations and perspectives of YouTube content creators. <em>TechTrends</em>.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Exploring inventions in self-directed learning with generative AI: Implementations and perspectives of YouTube content creators</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Wang, C., Bonk, C. J., &amp; Kou, X. (2024).</span> <span class="pub-entry__venue"><em>TechTrends</em>.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
@@ -941,50 +1034,55 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Bonk, C. J., &amp; Kou, X. (2023). Exploring the multilingual applications of ChatGPT: Uncovering language learning affordances in YouTuber videos. <em>International Journal of Computer-Assisted Language Learning and Teaching, 13</em>(1), 1–22.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Exploring the multilingual applications of ChatGPT: Uncovering language learning affordances in YouTuber videos</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Bonk, C. J., &amp; Kou, X. (2023).</span> <span class="pub-entry__venue"><em>International Journal of Computer-Assisted Language Learning and Teaching, 13</em>(1), 1–22.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.4018/IJCALLT.326135" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Bao, Y., &amp; <strong>Li, B.</strong> (2023). A preliminary study on graduate student instructors' exploration, perception, and use of ChatGPT. <em>International Journal of Computer-Assisted Language Learning and Teaching, 13</em>(1), 1–23.
-    <div class="pub-tags">
+    <div class="pub-entry__title">A preliminary study on graduate student instructors' exploration, perception, and use of ChatGPT</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Bao, Y., &amp; <strong>Li, B.</strong> (2023).</span> <span class="pub-entry__venue"><em>International Journal of Computer-Assisted Language Learning and Teaching, 13</em>(1), 1–23.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.4018/IJCALLT.332873" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Kou, X., &amp; Bonk, C. J. (2023). Embracing the disrupted language teaching and learning field: Analyzing YouTube content creation related to ChatGPT. <em>Languages, 8</em>, 197.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Embracing the disrupted language teaching and learning field: Analyzing YouTube content creation related to ChatGPT</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Kou, X., &amp; Bonk, C. J. (2023).</span> <span class="pub-entry__venue"><em>Languages, 8</em>, 197.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.3390/languages8030197" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Li, X., <strong>Li, B.</strong>, &amp; Cho, S. (2023). Empowering learners from low-income families to improve their writing with ChatGPT's assistance. <em>Languages, 8</em>, 238.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Empowering learners from low-income families to improve their writing with ChatGPT's assistance</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Li, X., <strong>Li, B.</strong>, &amp; Cho, S. (2023).</span> <span class="pub-entry__venue"><em>Languages, 8</em>, 238.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.3390/languages8040238" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    Pawan, F., <strong>Li, B.</strong>, Nijiati, S., Dopwell, B. M., Harris, A., &amp; Iruoje, T. (2023). Culturally- and linguistically-responsive online teacher professional development. <em>Online Learning, 27</em>(4).
-    <div class="pub-tags">
+    <div class="pub-entry__title">Culturally- and linguistically-responsive online teacher professional development</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Pawan, F., <strong>Li, B.</strong>, Nijiati, S., Dopwell, B. M., Harris, A., &amp; Iruoje, T. (2023).</span> <span class="pub-entry__venue"><em>Online Learning, 27</em>(4).</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.24059/olj.v27i4.4003" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 </section>
@@ -998,10 +1096,11 @@ title: "Publications"
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Crum, S., <strong>Li, B.</strong>, &amp; Kou, X. (2024). Generative artificial intelligence and interactive learning platforms: Second language vocabulary acquisition. In C. Stephanidis et al. (Eds.), <em>HCI International 2024 Posters</em> (CCIS Vol. 2117). Springer.
-    <div class="pub-tags">
+    <div class="pub-entry__title">Generative artificial intelligence and interactive learning platforms: Second language vocabulary acquisition</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Crum, S., <strong>Li, B.</strong>, &amp; Kou, X. (2024).</span> <span class="pub-entry__venue">In C. Stephanidis et al. (Eds.), <em>HCI International 2024 Posters</em> (CCIS Vol. 2117). Springer.</span>
+      <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/978-3-031-61953-3_6" target="_blank" rel="noopener">DOI</a>
-    </div>
+    </div></div>
   </div>
 </div>
 </section>
@@ -1042,7 +1141,8 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Ma, Y., &amp; Lyu, X. (2023). Bring together native speakers around the world: A foreign language flagship program's online experience during COVID. In R. Chen (Ed.), <em>The Future of Remote and Hybrid Work in Global Higher Education</em>. Palgrave Macmillan.
+    <div class="pub-entry__title">Bring together native speakers around the world: A foreign language flagship program's online experience during COVID</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Ma, Y., &amp; Lyu, X. (2023).</span> <span class="pub-entry__venue">In R. Chen (Ed.), <em>The Future of Remote and Hybrid Work in Global Higher Education</em>. Palgrave Macmillan.</span></div>
   </div>
 </div>
 </section>
@@ -1056,7 +1156,8 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, &amp; Li, H. (2021). <em>Techniques of Teaching English</em>. Zhejiang University Press. (Print run: 1,000; adopted by Zhejiang Ocean University.)
+    <div class="pub-entry__title"><em>Techniques of Teaching English</em></div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, &amp; Li, H. (2021).</span> <span class="pub-entry__venue">Zhejiang University Press. (Print run: 1,000; adopted by Zhejiang Ocean University.)</span></div>
   </div>
 </div>
 </section>
@@ -1070,98 +1171,112 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Tan, L., Zakharov, W., Qiu, Q., &amp; Acton, C. B. Tutor, not solver: Designing a guardrailed AI assistant for learning in higher education: A design case of PeteChat. <em>IEEE Transactions on Learning Technologies</em>. <span class="pub-status">Under review</span>
+    <div class="pub-entry__title">Tutor, not solver: Designing a guardrailed AI assistant for learning in higher education: A design case of PeteChat</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Tan, L., Zakharov, W., Qiu, Q., &amp; Acton, C. B.</span> <span class="pub-entry__venue"><em>IEEE Transactions on Learning Technologies</em>. <span class="pub-status">Under review</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Phan, T., Tang, G., &amp; Bonk, C. J. Prompt literacy as AI-mediated feedback literacy: A mixed-methods study of question formulation among preservice teachers. <em>International Journal of Educational Technology in Higher Education</em>. <span class="pub-status">Under review</span>
+    <div class="pub-entry__title">Prompt literacy as AI-mediated feedback literacy: A mixed-methods study of question formulation among preservice teachers</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Phan, T., Tang, G., &amp; Bonk, C. J.</span> <span class="pub-entry__venue"><em>International Journal of Educational Technology in Higher Education</em>. <span class="pub-status">Under review</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong> Learning in the loop: Moments, mindsets, and meaning with generative AI. <em>Journal of Computer-Assisted Learning</em>. <span class="pub-status">Under review</span>
+    <div class="pub-entry__title">Learning in the loop: Moments, mindsets, and meaning with generative AI</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong></span> <span class="pub-entry__venue"><em>Journal of Computer-Assisted Learning</em>. <span class="pub-status">Under review</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Mao, Y., &amp; <strong>Li, B.</strong> What drives employees' choices in AI training: Modeling employees' preferences for artificial intelligence training via a discrete choice experiment. <em>Human Resource Development Quarterly</em>. <span class="pub-status">Major revision</span>
+    <div class="pub-entry__title">What drives employees' choices in AI training: Modeling employees' preferences for artificial intelligence training via a discrete choice experiment</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Mao, Y., &amp; <strong>Li, B.</strong></span> <span class="pub-entry__venue"><em>Human Resource Development Quarterly</em>. <span class="pub-status">Major revision</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    Mao, Y., &amp; <strong>Li, B.</strong> Choosing the future of learning: Assessing preferences for educational GPTs through a discrete choice experiment. <em>International Journal of Human-Computer Interaction</em>. <span class="pub-status">Under review</span>
+    <div class="pub-entry__title">Choosing the future of learning: Assessing preferences for educational GPTs through a discrete choice experiment</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Mao, Y., &amp; <strong>Li, B.</strong></span> <span class="pub-entry__venue"><em>International Journal of Human-Computer Interaction</em>. <span class="pub-status">Under review</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    Li, X., Zhang, Y., &amp; <strong>Li, B.</strong> The emotional equation: Affective factors shaping AI-assisted ESL writing. <em>Education and Information Technologies</em>. <span class="pub-status">Under review</span>
+    <div class="pub-entry__title">The emotional equation: Affective factors shaping AI-assisted ESL writing</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Li, X., Zhang, Y., &amp; <strong>Li, B.</strong></span> <span class="pub-entry__venue"><em>Education and Information Technologies</em>. <span class="pub-status">Under review</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Mao, Y., Zhang, Y., Niu, W., &amp; Qian, J. Coding their choices: Assessing student preferences for statistical software through a discrete choice experiment. <em>Journal of Educational Computing Research</em>. <span class="pub-status">Under review</span>
+    <div class="pub-entry__title">Coding their choices: Assessing student preferences for statistical software through a discrete choice experiment</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Mao, Y., Zhang, Y., Niu, W., &amp; Qian, J.</span> <span class="pub-entry__venue"><em>Journal of Educational Computing Research</em>. <span class="pub-status">Under review</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Zhang, Z., &amp; Lowell, V. Pathways to proficiency: Mapping personal attributes in AI-integrated self-directed learning. <em>Language Learning &amp; Technology</em>. <span class="pub-status">Under review</span>
+    <div class="pub-entry__title">Pathways to proficiency: Mapping personal attributes in AI-integrated self-directed learning</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Zhang, Z., &amp; Lowell, V.</span> <span class="pub-entry__venue"><em>Language Learning &amp; Technology</em>. <span class="pub-status">Under review</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Li, X., Cho, S., &amp; <strong>Li, B.</strong> Impact of AI on language teaching pedagogy: A participatory action research study. In S. Wyatt (Ed.), <em>Emerging Technologies in Second Language Teaching and Learning</em>. Vernon Press. <span class="pub-status">Minor revision</span>
+    <div class="pub-entry__title">Impact of AI on language teaching pedagogy: A participatory action research study</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Li, X., Cho, S., &amp; <strong>Li, B.</strong></span> <span class="pub-entry__venue">In S. Wyatt (Ed.), <em>Emerging Technologies in Second Language Teaching and Learning</em>. Vernon Press. <span class="pub-status">Minor revision</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Lowell, V., &amp; Hou, Z. Design precedents to design innovation: Developing an advanced AI monitoring system for writing assessment. <em>Journal of Computing in Higher Education</em>. <span class="pub-status">Proposal accepted</span>
+    <div class="pub-entry__title">Design precedents to design innovation: Developing an advanced AI monitoring system for writing assessment</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Lowell, V., &amp; Hou, Z.</span> <span class="pub-entry__venue"><em>Journal of Computing in Higher Education</em>. <span class="pub-status">Proposal accepted</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Wang, J., &amp; Wang, C. What makes student-AI collaborative writing "authentic"? A Q methodology study of instructor perspectives on authenticity. <em>International Journal for Educational Integrity</em>. <span class="pub-status">Under review</span>
+    <div class="pub-entry__title">What makes student-AI collaborative writing "authentic"? A Q methodology study of instructor perspectives on authenticity</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Wang, J., &amp; Wang, C.</span> <span class="pub-entry__venue"><em>International Journal for Educational Integrity</em>. <span class="pub-status">Under review</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Lovett, N., Yang, M., &amp; <strong>Li, B.</strong> Is generative AI replacing instructional designers? Federal labor-market evidence on jobs, tasks, and the early-career pipeline. <em>Human Resource Development Quarterly</em>. <span class="pub-status">Under review</span>
+    <div class="pub-entry__title">Is generative AI replacing instructional designers? Federal labor-market evidence on jobs, tasks, and the early-career pipeline</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Lovett, N., Yang, M., &amp; <strong>Li, B.</strong></span> <span class="pub-entry__venue"><em>Human Resource Development Quarterly</em>. <span class="pub-status">Under review</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <strong>Li, B.</strong>, Yang, M., Luo, T., &amp; Bahari, A. Cognitive and metacognitive support in technology-assisted language learning: A systematic review of affordances and challenges. <em>Review of Education</em>. <span class="pub-status">Major revision</span>
+    <div class="pub-entry__title">Cognitive and metacognitive support in technology-assisted language learning: A systematic review of affordances and challenges</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Yang, M., Luo, T., &amp; Bahari, A.</span> <span class="pub-entry__venue"><em>Review of Education</em>. <span class="pub-status">Major revision</span></span></div>
   </div>
 </div>
 
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    Zhang, Z., <strong>Li, B.</strong>, Xu, Q., Cheng, Z., &amp; West, R. E. A meta-analysis of AI-assisted self-regulated learning. <em>Online Learning</em>. <span class="pub-status">Under review</span>
+    <div class="pub-entry__title">A meta-analysis of AI-assisted self-regulated learning</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Zhang, Z., <strong>Li, B.</strong>, Xu, Q., Cheng, Z., &amp; West, R. E.</span> <span class="pub-entry__venue"><em>Online Learning</em>. <span class="pub-status">Under review</span></span></div>
   </div>
 </div>
 </section>
