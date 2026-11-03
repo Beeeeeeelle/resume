@@ -552,6 +552,35 @@ permalink: /ai-in-practice/
   line-height: 1.65 !important;
 }
 
+.aip-initiative__aside {
+  min-width: 0;
+}
+
+.aip-initiative__moment {
+  max-width: 180px;
+  margin: 0.8rem 0 0;
+}
+
+.aip-initiative__moment a {
+  display: block;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.aip-initiative__moment img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.aip-initiative__moment figcaption {
+  margin-top: 0.45rem;
+  color: #69717a;
+  font-size: 10.5px;
+  line-height: 1.4;
+}
+
+
 .aip-collaborate {
   position: relative;
   display: grid;
@@ -644,11 +673,8 @@ permalink: /ai-in-practice/
   }
 
   .aip-initiative {
-    grid-template-columns: 36px minmax(150px, 0.78fr) minmax(0, 1.22fr);
-  }
-
-  .aip-initiative__role {
-    grid-column: 2 / 4;
+    grid-template-columns: 36px minmax(145px, 0.8fr) minmax(0, 1.35fr) minmax(135px, 0.7fr);
+    gap: clamp(0.6rem, 1.4vw, 1rem);
   }
 }
 
@@ -749,8 +775,18 @@ permalink: /ai-in-practice/
 
   .aip-initiative > p,
   .aip-initiative__detail,
-  .aip-initiative__role {
+  .aip-initiative__role,
+  .aip-initiative__aside {
     grid-column: 2;
+  }
+
+  .aip-initiative__aside {
+    display: block;
+  }
+
+  .aip-initiative__aside .aip-initiative__moment {
+    max-width: 170px;
+    margin-top: 0.75rem;
   }
 
   .aip-collaborate {
@@ -912,10 +948,18 @@ permalink: /ai-in-practice/
       <span class="aip-initiative__index">02</span>
       <h3>Purdue AI in P–12 Education Conference</h3>
       <div class="aip-initiative__detail">
-        <p>Co-organizing the third annual conference on November 2, 2026. I designed and built its public website and helped coordinate presenter communications, program details, and sponsor materials.</p>
+        <p>Co-organized the third annual conference on November 2, 2026. I designed and built its public website and helped coordinate presenter communications, program details, and sponsor materials.</p>
         <a class="aip-link" href="https://beeeeeeelle.github.io/purdue-ai-p12-conference/" target="_blank" rel="noopener">Explore the conference website</a>
       </div>
-      <p class="aip-initiative__role">2024–25 · Presenter + organizing committee<br>2026 · Conference organization + website design &amp; development</p>
+      <div class="aip-initiative__aside">
+        <p class="aip-initiative__role">2024–25 · Presenter + organizing committee<br>2026 · Conference organization + website design &amp; development</p>
+        <figure class="aip-initiative__moment">
+          <a href="/assets/images/ai-in-practice/p12-conference/keynote-dinner.webp" target="_blank" rel="noopener" aria-label="Open the full pre-conference dinner photo">
+            <img src="/assets/images/ai-in-practice/p12-conference/keynote-dinner.webp" alt="Belle Li with the keynote speaker and colleagues at dinner before the Purdue AI in P–12 Education Conference" width="1600" height="1200" loading="lazy">
+          </a>
+          <figcaption>Before the conference · dinner with the keynote speaker and colleagues.</figcaption>
+        </figure>
+      </div>
     </article>
 
     <article class="aip-initiative" data-reveal>
