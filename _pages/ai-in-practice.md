@@ -328,6 +328,12 @@ permalink: /ai-in-practice/
   object-fit: cover;
 }
 
+.aip-session-note--vibe .aip-session-note__photos img,
+.aip-session-note--worksheet .aip-session-note__photos img {
+  aspect-ratio: 16 / 9;
+  object-position: center 68%;
+}
+
 .aip-course {
   margin-top: clamp(3.3rem, 7vw, 5.6rem);
   padding-top: 1.2rem;
@@ -660,6 +666,11 @@ permalink: /ai-in-practice/
     max-width: 540px;
   }
 
+  .aip-session-note--vibe .aip-session-note__photos,
+  .aip-session-note--worksheet .aip-session-note__photos {
+    max-width: none;
+  }
+
   .aip-properties {
     grid-template-columns: 1fr 1fr;
   }
@@ -933,6 +944,51 @@ permalink: /ai-in-practice/
           <img src="/assets/images/ai-in-practice/lunch-learn/session-02/hands-on-workshop.jpg" alt="Participants working on laptops during Beyond PowerPoint, the second Purdue AI Lunch and Learn session" width="1707" height="1280" loading="lazy">
         </a>
         <figcaption class="aip-caption">Trying it together.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="aip-session-note aip-session-note--vibe" id="session-03" aria-labelledby="aip-session-03-title">
+    <div data-reveal>
+      <p class="aip-series-name">Session 03 &middot; Oct 8, 2026</p>
+      <h2 id="aip-session-03-title">Vibe Coding: Create Digital Tools for Your Specific Needs</h2>
+      <p class="aip-session-note__copy">Organized by Belle Li and led by <strong>Dr. Isaiah Kent-Schneider</strong>. Participants used Gemini in Google AI Studio to prototype tools for real classroom or everyday needs, then discussed the choices built into what they made.</p>
+      <a class="aip-link" href="/assets/images/ai-in-practice/lunch-learn/session-03/session-linkedin.png" target="_blank" rel="noopener">View the LinkedIn graphic</a>
+    </div>
+    <div class="aip-session-note__photos" aria-label="Session 03 photographs" data-reveal>
+      <figure>
+        <a href="/assets/images/ai-in-practice/lunch-learn/session-03/collaborative-prototyping.webp" target="_blank" rel="noopener" aria-label="Open full photo of Session 03 participants working together">
+          <img src="/assets/images/ai-in-practice/lunch-learn/session-03/collaborative-prototyping.webp" alt="Participants collaborating around laptops at the Purdue AI Lunch and Learn vibe coding workshop" width="1600" height="1201" loading="lazy">
+        </a>
+        <figcaption class="aip-caption">Building a first prototype.</figcaption>
+      </figure>
+      <figure>
+        <a href="/assets/images/ai-in-practice/lunch-learn/session-03/group-discussion.webp" target="_blank" rel="noopener" aria-label="Open full photo of the Session 03 group discussion">
+          <img src="/assets/images/ai-in-practice/lunch-learn/session-03/group-discussion.webp" alt="Workshop participants discussing digital tool ideas around a conference table" width="1600" height="1201" loading="lazy">
+        </a>
+        <figcaption class="aip-caption">Discussing ideas together.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="aip-session-note aip-session-note--worksheet" id="session-04" aria-labelledby="aip-session-04-title">
+    <div data-reveal>
+      <p class="aip-series-name">Session 04 &middot; Oct 22, 2026</p>
+      <h2 id="aip-session-04-title">From Teaching Idea to Interactive Assignment: Build a Worksheet with AI</h2>
+      <p class="aip-session-note__copy">Organized by Belle Li, with invited guest speaker <strong>Dr. Wei Xu</strong>. Participants translated a teaching goal into an interactive student-facing worksheet, tested its teaching logic, and made a focused revision.</p>
+    </div>
+    <div class="aip-session-note__photos" aria-label="Session 04 photographs" data-reveal>
+      <figure>
+        <a href="/assets/images/ai-in-practice/lunch-learn/session-04/workshop-presentation.webp" target="_blank" rel="noopener" aria-label="Open full photo of Session 04 workshop presentation">
+          <img src="/assets/images/ai-in-practice/lunch-learn/session-04/workshop-presentation.webp" alt="AI Lunch and Learn Session 04 presenter and participants reviewing a projected worksheet design" width="1600" height="1200" loading="lazy">
+        </a>
+        <figcaption class="aip-caption">Working through the design.</figcaption>
+      </figure>
+      <figure>
+        <a href="/assets/images/ai-in-practice/lunch-learn/session-04/workshop-room.webp" target="_blank" rel="noopener" aria-label="Open full photo of Session 04 workshop room">
+          <img src="/assets/images/ai-in-practice/lunch-learn/session-04/workshop-room.webp" alt="Participants gathered around laptops during the worksheet-building workshop" width="1206" height="894" loading="lazy">
+        </a>
+        <figcaption class="aip-caption">Testing ideas together.</figcaption>
       </figure>
     </div>
   </section>

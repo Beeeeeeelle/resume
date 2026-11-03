@@ -20,6 +20,15 @@
   cta_url: /ai-in-practice/#p12-conference
   cta_label: "View conference recap"
 
+- id: ai-lunch-learn-session-04
+  date: "Oct 2026"
+  type: event
+  text: "Organized Session 04 of Purdue's <strong>AI Lunch &amp; Learn</strong>, <em>From Teaching Idea to Interactive Assignment: Build a Worksheet with AI</em>, on <strong>October 22, 2026</strong>, with invited guest speaker <strong>Dr. Wei Xu</strong>. Participants created a student-facing worksheet from a teaching goal, tested its teaching logic, and revised it."
+  image: /assets/images/ai-in-practice/lunch-learn/session-04/workshop-presentation.webp
+  image_alt: "Presenter and participants at Purdue AI Lunch and Learn Session 04, Build a Worksheet with AI"
+  cta_url: /ai-in-practice/#session-04
+  cta_label: "View session photos"
+
 - id: cscw-2026-family-ai-workshop
   date: "Oct 2026"
   type: talk
@@ -30,6 +39,15 @@
   image_secondary_alt: "Participants posing together at the CSCW 2026 Growing Up (and Old) with AI workshop"
   cta_url: https://extendedhorizon.com/cscw2026ws-family-ai/files/accepted-papers/01-beyond-individual-ai-literacy.pdf
   cta_label: "Read accepted paper"
+
+- id: ai-lunch-learn-session-03
+  date: "Oct 2026"
+  type: event
+  text: "Organized Session 03 of Purdue's <strong>AI Lunch &amp; Learn</strong>, <em>Vibe Coding: Create Digital Tools for Your Specific Needs</em>, on <strong>October 8, 2026</strong>, led by <strong>Dr. Isaiah Kent-Schneider</strong>. Participants built first prototypes in Gemini in Google AI Studio and discussed the decisions built into their tools."
+  image: /assets/images/ai-in-practice/lunch-learn/session-03/collaborative-prototyping.webp
+  image_alt: "Participants collaborating around laptops during Purdue AI Lunch and Learn Session 03"
+  cta_url: /ai-in-practice/#session-03
+  cta_label: "View session photos"
 
 - id: edweek-english-learners-2026
   date: "Oct 2026"
