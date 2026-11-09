@@ -15,11 +15,10 @@ permalink: /service/
     <img src="/assets/images/news/ai-lunch-learn/ai-lunch-learn-session-01-flyer.webp" alt="Flyer for Purdue AI Lunch and Learn Session 01, Build Your First Personal Website with AI" loading="lazy">
   </a>
   <div class="service-current__body">
-    <p class="service-current__eyebrow">Current program / 2026</p>
+    <p class="service-current__eyebrow">2026 series / four sessions</p>
     <h3>Purdue AI Lunch &amp; Learn</h3>
-    <p><strong>Session 01 · Sep 10:</strong> <a href="/assets/images/news/ai-lunch-learn/ai-lunch-learn-session-01-flyer.webp" target="_blank" rel="noopener">Build Your First Personal Website with AI</a>, facilitated by Belle Li.</p>
-    <p><strong>Session 02 · Sep 24:</strong> Beyond PowerPoint: Build Interactive Slides with AI. Organized by Belle Li, with invited guest speaker <strong>Yi Wang</strong>.</p>
-    <a class="service-current__link" href="https://claude.ai/artifact/Pd3yU11SAuT2sxBVAfJ3Nn" target="_blank" rel="noopener">Session 02 materials</a>
+    <p>I organized four hands-on sessions from September to October 2026. I facilitated the opening workshop on building a personal website with AI and invited guest speakers for sessions on interactive slides, digital-tool prototyping, and AI-built assignments.</p>
+    <a class="service-current__link" href="/ai-in-practice/#lunch-learn">Explore the four sessions</a>
   </div>
 </div>
 
@@ -34,7 +33,7 @@ permalink: /service/
   </article>
   <article class="service-overview__card" data-reveal>
     <h3>Leadership &amp; Community</h3>
-    <p>PALDT communications lead, AECT and AERA member, AI P-12 Conference contributor, and ConnectEd mentor.</p>
+    <p>Co-organizer of Purdue's 2026 AI in P–12 Education Conference, organizer of the four-session AI Lunch &amp; Learn series, and former PALDT communications lead.</p>
   </article>
 </div>
 
@@ -109,12 +108,12 @@ permalink: /service/
   </div>
   <div class="service-panel__body">
     <p class="service-panel__eyebrow">Association &amp; Program Work</p>
-    <h3>Conference, Program, &amp; Field Visibility</h3>
-    <p>I also contribute through the association and program structures that make scholarly exchange possible, including communication work, conference outreach, and representing Purdue's Learning Design and Technology community in field-facing spaces.</p>
+    <h3>Program &amp; Conference Leadership</h3>
+    <p>I help turn institutional ideas into public programs, from hands-on educator workshops to the Purdue AI in P–12 Education Conference. This work brings together program planning, speaker and presenter coordination, communication, and web design.</p>
     <ul>
+      <li><strong>Purdue AI in P–12 Education Conference:</strong> presenter and organizing committee contributor in 2024–25; co-organized the 2026 conference, designed and built its public website, and helped coordinate presenter communications, program details, and sponsor materials. <a href="/ai-in-practice/#p12-conference">Conference recap</a>.</li>
+      <li><strong>Purdue AI Lunch &amp; Learn:</strong> organized four hands-on sessions in fall 2026, facilitated the inaugural workshop, and invited guest speakers for subsequent sessions. <a href="/ai-in-practice/#lunch-learn">Session archive</a>.</li>
       <li><strong>PALDT communications lead:</strong> supported newsletters, event visibility, and student-facing program communication in 2024 and 2025.</li>
-      <li><strong>AI P-12 Conference:</strong> presenter and organizing committee contributor in 2024 and 2025.</li>
-      <li><strong>Professional community:</strong> AERA and AECT member, with conference-based representation at reception and outreach events.</li>
     </ul>
   </div>
 </article>
