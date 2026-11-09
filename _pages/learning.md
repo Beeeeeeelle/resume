@@ -208,12 +208,12 @@ title: "Design & Development"
     <div class="learning-panel__media">
       <figure class="learning-panel__hero">
         <img src="/assets/learning/Screenshot_2025-06-03_at_8.23.16_PM.png" alt="Brightspace course map for Strategic Assessment and Evaluation" loading="lazy">
-        <figcaption>Course structure and onboarding for EDCI 557.</figcaption>
+        <figcaption>Course structure and onboarding for EDCI 577.</figcaption>
       </figure>
     </div>
     <div class="learning-panel__body">
       <p class="learning-panel__eyebrow">Graduate course design · Purdue University</p>
-      <h3>EDCI 557 Strategic Assessment &amp; Evaluation</h3>
+      <h3>EDCI 577 Strategic Assessment &amp; Evaluation</h3>
       <p>Designed a clearer online course experience for working professionals in a fully asynchronous graduate course.</p>
       <ul>
         <li><strong>Onboarding flow:</strong> built a getting-started hub with weekly overview videos, resource checklists, and orientation cues.</li>

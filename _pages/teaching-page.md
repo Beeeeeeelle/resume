@@ -28,12 +28,12 @@ title: "Teaching & Mentoring"
 <article class="teaching-panel teaching-panel--feature" data-reveal>
   <div class="teaching-panel__media">
     <figure class="teaching-panel__hero">
-      <img src="/assets/images/teaching/edci-557-course.png" alt="Brightspace welcome message for Belle Li's EDCI 557 Strategic Assessment and Evaluation course" loading="lazy">
-      <figcaption>EDCI 557 course welcome and module structure.</figcaption>
+      <img src="/assets/images/teaching/edci-557-course.png" alt="Brightspace welcome message for Belle Li's EDCI 577 Strategic Assessment and Evaluation course" loading="lazy">
+      <figcaption>EDCI 577 course welcome and module structure.</figcaption>
     </figure>
     <div class="teaching-panel__thumbs">
       <figure class="teaching-panel__thumb">
-        <img class="teaching-panel__img" src="/assets/images/teaching/edci-557-weekly-overview.png" alt="Weekly overview video playlist for EDCI 557" loading="lazy">
+        <img class="teaching-panel__img" src="/assets/images/teaching/edci-557-weekly-overview.png" alt="Weekly overview video playlist for EDCI 577" loading="lazy">
         <figcaption>Weekly overview videos that scaffold each module.</figcaption>
       </figure>
     </div>
@@ -43,7 +43,7 @@ title: "Teaching & Mentoring"
     <h3>Course Design, Facilitation, and Graduate Mentoring</h3>
     <p>At Purdue, I teach and co-teach graduate courses that help learners connect instructional design theory with authentic evaluation, writing, and research practice.</p>
     <ul>
-      <li><strong>EDCI 557 Strategic Assessment &amp; Evaluation:</strong> redesigned the fully online format with multimedia onboarding, weekly overview videos, and scaffolded Brightspace activities for working professionals.</li>
+      <li><strong>EDCI 577 Strategic Assessment &amp; Evaluation:</strong> redesigned the fully online format with multimedia onboarding, weekly overview videos, and scaffolded Brightspace activities for working professionals.</li>
       <li><strong>EDCI 676 Writing a Literature Review:</strong> co-instruct the graduate seminar and guide doctoral students through synthesis mapping, citation management, and ethical AI-supported search strategies.</li>
       <li><strong>Graduate advising and mentoring:</strong> provide formative feedback on dissertation proposals, systematic reviews, and AI-integrated design projects while modeling peer-review routines and scholarly critique.</li>
     </ul>
