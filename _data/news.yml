@@ -4,12 +4,12 @@
 - id: aect-2026-chicago-schedule
   date: "Nov 2026"
   type: event
-  text: "Heading to <strong>AECT 2026</strong> at Chicago's Palmer House. Find me November 3–5 at sessions on <strong>PeteChat</strong>, AI writing authenticity, the instructional design workforce, cybersecurity, and learning with generative AI. I'll present the PeteChat design case on November 3 and <em>Learning in the Loop</em> on November 5."
-  image: /assets/images/news/aect-2026/00-all-days.png
-  image_alt: "Belle Li at AECT 2026 in Chicago: November 3–5 session schedule"
+  text: "At <strong>AECT 2026</strong> in Chicago, I presented three talks on <strong>PeteChat</strong>, student–AI writing authenticity, and <em>Learning in the Loop</em>. I also joined collaborative sessions on the instructional design workforce and cybersecurity, and participated in the Early Career Symposium."
+  image: /assets/images/news/aect-2026/00-all-days-presenting.png
+  image_alt: "Belle Li's three presentations and collaborative sessions at AECT 2026 in Chicago"
   image_poster: true
   cta_url: /aect-2026/
-  cta_label: "View my AECT schedule"
+  cta_label: "View my AECT talks"
 
 - id: purdue-ai-p12-conference-2026
   date: "Nov 2026"
