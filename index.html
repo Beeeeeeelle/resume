@@ -274,7 +274,11 @@ custom_js:
 @media (max-width: 860px), (hover: none), (pointer: coarse) {
   .home-hero {
     display: block;
+    max-width: 100%;
     padding-bottom: 10px;
+  }
+  .home-hero__headline {
+    font-size: clamp(15px, 4.9vw, 28px);
   }
   .home-hero__proof {
     display: none;

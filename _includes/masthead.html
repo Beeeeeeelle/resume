@@ -72,18 +72,20 @@
             <button class="bl-lang-toggle mobile-nav__lang" type="button" aria-label="切换为中文">中</button>
             <button class="mobile-nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="dialog">
               <span class="mobile-nav__toggle-icon" aria-hidden="true"></span>
+              <span class="mobile-nav__toggle-label lang-en" aria-hidden="true">Menu</span><span class="mobile-nav__toggle-label lang-zh" aria-hidden="true" hidden>菜单</span>
               <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_toggle_label | default: "Toggle menu" }}</span>
             </button>
           </div>
         </div>
         <div class="mobile-nav__overlay" data-mobile-nav-overlay hidden aria-hidden="true"></div>
-        <div class="mobile-nav__panel" id="mobile-nav-panel" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+        <div class="mobile-nav__panel" id="mobile-nav-panel" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1" hidden>
           <div class="mobile-nav__panel-header">
-            <span class="mobile-nav__panel-title">{{ menu_label | strip }}</span>
+            <a class="mobile-nav__panel-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title | escape_once | strip }}</a>
             <button class="mobile-nav__close" type="button">
               <span class="visually-hidden">{{ close_menu_label | strip }}</span>
             </button>
           </div>
+          <p class="mobile-nav__eyebrow"><span class="lang-en">Explore</span><span class="lang-zh" hidden>网站导航</span></p>
           <ul class="mobile-nav__list">
             {%- for link in site.data.navigation.main -%}
               {%- assign has_children = link.children and link.children.size > 0 -%}
@@ -97,7 +99,7 @@
                   {% endif %}
                   {% if link.description %} title="{{ link.description }}"{% endif %}
                   {% if link.target %} target="{{ link.target }}"{% endif %}
-                >{{ link.title }}</a>
+                ><span class="mobile-nav__index" aria-hidden="true">0{{ forloop.index }}</span><span class="mobile-nav__link-title">{{ link.title }}</span></a>
                 {% if has_children %}
                   <ul class="mobile-nav__sublist">
                     {%- for child in link.children -%}

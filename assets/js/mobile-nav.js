@@ -22,15 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     html.classList.toggle('mobile-nav-lock', isLocked);
   };
 
-  const focusFirstItem = () => {
-    const focusableItems = panel.querySelectorAll(focusableSelector);
-    if (focusableItems.length > 0) {
-      focusableItems[0].focus();
-    }
+  const focusPanel = () => {
+    panel.focus({ preventScroll: true });
   };
 
   const returnFocus = () => {
-    if (previouslyFocused && typeof previouslyFocused.focus === 'function') {
+    if (previouslyFocused && previouslyFocused !== document.body && previouslyFocused !== document.documentElement && typeof previouslyFocused.focus === 'function') {
       previouslyFocused.focus();
     } else {
       toggleButton.focus();
@@ -47,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     panel.setAttribute('aria-hidden', 'false');
     setScrollLock(true);
     window.requestAnimationFrame(() => {
-      focusFirstItem();
+      focusPanel();
     });
   };
 
@@ -90,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const first = focusableItems[0];
       const last = focusableItems[focusableItems.length - 1];
 
-      if (event.shiftKey && document.activeElement === first) {
+      if (event.shiftKey && (document.activeElement === first || document.activeElement === panel)) {
         event.preventDefault();
         last.focus();
       } else if (!event.shiftKey && document.activeElement === last) {
