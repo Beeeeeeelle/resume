@@ -8,6 +8,9 @@
   image: /assets/images/news/aect-2026/00-all-days-presenting.png
   image_alt: "Belle Li's three presentations and collaborative sessions at AECT 2026 in Chicago"
   image_poster: true
+  image_secondary: /assets/images/news/aect-2026/aect-group-photo.webp
+  image_secondary_alt: "Belle Li with fellow participants at AECT 2026 in Chicago"
+  image_gallery_label: "AECT 2026 poster and group photo"
   cta_url: /aect-2026/
   cta_label: "View my AECT talks"
 
