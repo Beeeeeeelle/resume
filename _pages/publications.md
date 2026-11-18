@@ -608,6 +608,9 @@ title: "Publications"
 }
 .pub-section .pub-focus-item.is-active .pub-entry__body { color: inherit; }
 .pub-section .pub-focus-item.is-active .pub-tag { box-shadow: none; }
+@media (min-width: 72em) {
+  .pub-section { margin-right: 9.4rem; }
+}
 @media (max-width: 71.99em) {
   .page-with-rail-nav .page-section-nav { top: 0; }
 }

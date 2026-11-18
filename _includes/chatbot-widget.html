@@ -1,4 +1,39 @@
 {% if site.chatbot and site.chatbot.enabled %}
+  <style>
+    /* Compact launcher: avatar only until hover or focus, so it does not cover page content. */
+    .site-chatbot__launcher {
+      padding: 0.28rem;
+      gap: 0;
+    }
+    .site-chatbot__launcher-icon {
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+    .site-chatbot__launcher-text {
+      max-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      opacity: 0;
+      transition: max-width 0.22s ease, opacity 0.18s ease, margin 0.22s ease;
+    }
+    .site-chatbot__launcher:hover .site-chatbot__launcher-text,
+    .site-chatbot__launcher:focus-visible .site-chatbot__launcher-text {
+      max-width: 8rem;
+      opacity: 1;
+      margin: 0 0.6rem 0 0.55rem;
+    }
+    @media (max-width: 768px) {
+      .site-chatbot {
+        left: auto;
+        justify-items: end;
+      }
+      .site-chatbot__launcher {
+        width: auto;
+        justify-self: end;
+      }
+    }
+    .page__footer { padding-bottom: 4.5rem; }
+  </style>
   <div class="site-chatbot" data-site-chatbot>
     <div class="site-chatbot__backdrop" data-chatbot-backdrop hidden></div>
     <button
@@ -7,6 +42,7 @@
       data-chatbot-toggle
       aria-expanded="false"
       aria-controls="site-chatbot-panel"
+      aria-label="{{ site.chatbot.button_label | default: 'Ask Belle' }}"
     >
       <span class="site-chatbot__launcher-icon" aria-hidden="true">
         <img src="{{ '/assets/images/ask-belle-mascot.jpg' | relative_url }}" alt="" loading="lazy">
