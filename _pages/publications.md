@@ -492,6 +492,7 @@ title: "Publications"
 .v-ijhci   { background: #7a5d92; }
 .v-jlos    { background: #8a6a28; }
 .v-et      { background: #6f7f58; }
+.v-jocse   { background: #446b72; }
 
 /* Legend */
 .ptl-legend {
@@ -628,6 +629,7 @@ title: "Publications"
     <a class="page-section-nav__link" href="#pub-overview">Timeline</a>
     <a class="page-section-nav__link" href="#pub-journals">Journal Articles</a>
     <a class="page-section-nav__link" href="#pub-proceedings">Proceedings</a>
+    <a class="page-section-nav__link" href="#pub-workshops">Workshop Papers</a>
     <a class="page-section-nav__link" href="#pub-chapters">Book Chapters</a>
     <a class="page-section-nav__link" href="#pub-book">Book</a>
     <a class="page-section-nav__link" href="#pub-under-review">Under Review</a>
@@ -668,9 +670,9 @@ title: "Publications"
           <div class="ptl-row__label ptl-row__label--first">First / corresponding</div>
           <div class="ptl-row__items">
             <a class="ptl-pub v-tlt" href="https://doi.org/10.1109/TLT.2024.3386098" target="_blank" data-tip="Li et al. (2024) · Reconceptualizing SDL in the GenAI era · IEEE TLT">TL</a>
-            <a class="ptl-pub v-caeai" href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" data-tip="Li et al. (2024) · First year of ChatGPT in education · CAEAI">CA</a>
+            <a class="ptl-pub v-caeai" href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" data-tip="Li et al. (2024) · First year of ChatGPT in language education · CAEAI">CA</a>
             <a class="ptl-pub v-tech" href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" data-tip="Li et al. (2024) · SDL with GenAI: YouTube creators · TechTrends">TT</a>
-            <a class="ptl-pub v-springer" href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" data-tip="Li & Lowell (2024) · TicApp: Design thinking for diverse learners · Springer">Sp</a>
+            <a class="ptl-pub v-springer" href="https://doi.org/10.1007/978-3-031-76293-2_12" target="_blank" data-tip="Li & Lowell (2024) · TicApp: Design thinking for heritage Chinese learners · Springer">Sp</a>
           </div>
         </div>
         <div class="ptl-row">
@@ -703,7 +705,7 @@ title: "Publications"
             <span class="ptl-pub v-edusci" data-tip="Yang, Lovett, Li, & Hou (2025) · AI agents & workplace performance · Education Sciences">ES</span>
             <span class="ptl-pub v-jaid" data-tip="Lovett, Li et al. (2025) · LLMs for learner personas · JAID">JA</span>
             <span class="ptl-pub v-edusci" data-tip="Li X., Li B., Li J., & Cho (2025) · Magic School AI review · Education Sciences">ES</span>
-            <span class="ptl-pub v-jche" data-tip="Yang, Luo, Herman, Li et al. (in press) · Non-traditional learners & ChatGPT design · JCHE">JC</span>
+            <a class="ptl-pub v-jche" href="https://doi.org/10.1007/s12528-025-09476-y" target="_blank" rel="noopener" data-tip="Yang, Luo, Herman, Li et al. (2025) · Non-traditional learners & ChatGPT design · JCHE">JC</a>
           </div>
         </div>
       </div>
@@ -722,7 +724,9 @@ title: "Publications"
         <div class="ptl-row">
           <div class="ptl-row__label">Co-authored</div>
           <div class="ptl-row__items">
-            <span class="ptl-pub v-ijhci" data-tip="Mao, Li, & Qian (in press) · AI usage guideline preferences · IJHCI">HC</span>
+            <a class="ptl-pub v-ijhci" href="https://doi.org/10.1080/10447318.2026.2705085" target="_blank" rel="noopener" data-tip="Mao, Li, Gan, & Qian (2026) · AI usage guideline preferences · IJHCI">HC</a>
+            <a class="ptl-pub v-olj" href="https://doi.org/10.24059/olj.v30iSI2.5691" target="_blank" rel="noopener" data-tip="Zhang, Li et al. (2026) · Meta-analysis of AI-assisted self-regulated learning · Online Learning">OL</a>
+            <a class="ptl-pub v-jocse" href="https://doi.org/10.22369/issn.2153-4136/17/2/5" target="_blank" rel="noopener" data-tip="Purwanto, Yang, Jiang et al. (2026) · T3-CIDERS training redesign · JOCSE">JS</a>
             <a class="ptl-pub v-jlos" href="https://doi.org/10.1177/15480518261439446" target="_blank" data-tip="Chi et al. (2026) · Leader humor, creativity, and innovation meta-analysis · JLOS">JL</a>
             <a class="ptl-pub v-et" href="https://doi.org/10.1108/ET-08-2025-0597" target="_blank" data-tip="Yang, Harbor, Li, & Nikiema (2026) · Service-learning authenticity · Education + Training">ET</a>
             <a class="ptl-pub v-ijiet" href="https://doi.org/10.18178/ijiet.2026.16.4.2557" target="_blank" data-tip="Ye, Yang, Li et al. (2026) · AI-assisted learning acceptance among vocational students · IJIET">IT</a>
@@ -745,6 +749,7 @@ title: "Publications"
     <div class="ptl-legend-item"><div class="ptl-legend-dot v-edusci"></div>Edu. Sciences</div>
     <div class="ptl-legend-item"><div class="ptl-legend-dot v-book"></div>Book / Chapter</div>
     <div class="ptl-legend-item"><div class="ptl-legend-dot v-ijaied"></div>IJAIED</div>
+    <div class="ptl-legend-item"><div class="ptl-legend-dot v-jocse"></div>JOCSE</div>
   </div>
 </div>
 
@@ -761,7 +766,23 @@ title: "Publications"
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
     <div class="pub-entry__title">Between the lines: Understanding employee preferences for AI usage guidelines through discrete choice experiments</div>
-    <div class="pub-entry__citation"><span class="pub-entry__authors">Mao, Y., <strong>Li, B.</strong>, &amp; Qian, J. (in press).</span> <span class="pub-entry__venue"><em>International Journal of Human-Computer Interaction</em>. <span class="pub-status">In press</span></span></div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Mao, Y., <strong>Li, B.</strong>, Gan, M., &amp; Qian, J. (2026).</span> <span class="pub-entry__venue"><em>International Journal of Human-Computer Interaction</em>. Advance online publication. <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1080/10447318.2026.2705085" target="_blank" rel="noopener">DOI</a></span></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-entry__dot--empty"></div>
+  <div class="pub-entry__body">
+    <div class="pub-entry__title">A meta-analysis of AI-assisted self-regulated learning</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Zhang, Z., <strong>Li, B.</strong>, Xu, Q., Cheng, Z., &amp; West, R. E. (2026).</span> <span class="pub-entry__venue"><em>Online Learning, 30</em>(SI2), Article 5691. <a class="pub-tag pub-tag--doi" href="https://doi.org/10.24059/olj.v30iSI2.5691" target="_blank" rel="noopener">DOI</a></span></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-entry__dot--empty"></div>
+  <div class="pub-entry__body">
+    <div class="pub-entry__title">T3-CIDERS Train-the-Trainers: Strengthening CI Skills for Cybersecurity Research and Education through Iterative Improvements in Second Cohort</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors">Purwanto, W., Yang, M., Jiang, P., Parry, D. X., <strong>Li, B.</strong>, Herman, K., Lovett, N., Moots, S. C., Sosonkina, M., &amp; Wu, H. (2026).</span> <span class="pub-entry__venue"><em>Journal of Computational Science Education, 17</em>(2), 26–33. <a class="pub-tag pub-tag--doi" href="https://doi.org/10.22369/issn.2153-4136/17/2/5" target="_blank" rel="noopener">DOI</a></span></div>
   </div>
 </div>
 
@@ -788,7 +809,7 @@ title: "Publications"
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    <div class="pub-entry__title">Infusing authenticity into a service-learning program</div>
+    <div class="pub-entry__title">Infusing authenticity into a service-learning program: Examining long-term impacts on professional development</div>
     <div class="pub-entry__citation"><span class="pub-entry__authors">Yang, M., Harbor, J., <strong>Li, B.</strong>, &amp; Nikiema, J. (2026).</span> <span class="pub-entry__venue"><em>Education + Training, 68</em>(10), 156-181.</span>
       <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1108/ET-08-2025-0597" target="_blank" rel="noopener">DOI</a>
@@ -813,7 +834,7 @@ title: "Publications"
 <div class="bl-pcard bl-pcard--lead">
   <img class="bl-pcard__thumb" src="/assets/images/publications/PA-SDA Scale.png" alt="PA-SDA Scale validation figure" data-lightbox-bound="true">
   <div class="bl-pcard__body">
-    <div class="bl-pcard__title">Development and Validation of the PA-SDA Scale: Measuring Personal Attributes in AI-Integrated Self-Directed Learning</div>
+    <div class="bl-pcard__title">Development and Validation of the PA-SDA Scale: Measuring Personal Attributes in AI-Integrated Self-Directed Language Learning</div>
     <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Zhang, Z., Lowell, V., Wang, C., &amp; Bonk, C. J.</div>
     <div class="bl-pcard__venue">System, 133, 103793 · 2025</div>
     <div class="pub-tags">
@@ -908,8 +929,8 @@ title: "Publications"
   <img class="bl-pcard__thumb" src="/assets/images/publications/Non-tradition_JCHE.png" alt="Non-traditional learners ChatGPT JCHE 2025" data-lightbox-bound="true">
   <div class="bl-pcard__body">
     <div class="bl-pcard__title">Examining Non-Traditional Online Learners' Ownership of Learning in the Context of ChatGPT-Facilitated Design</div>
-    <div class="bl-pcard__authors">Yang, M., Luo, T., Herman, K., <span class="bl-pcard__me">Li, B.</span>, Jiang, S., &amp; Kim, J.</div>
-    <div class="bl-pcard__venue">Journal of Computing in Higher Education · 2025</div>
+    <div class="bl-pcard__authors">Yang, M., Luo, T., Herman, K., <span class="bl-pcard__me">Li, B.</span>, Moots, S. C., Glaser, N., &amp; Jiang, S.</div>
+    <div class="bl-pcard__venue">Journal of Computing in Higher Education, 37, 1531–1563 · 2025</div>
     <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/s12528-025-09476-y" target="_blank" rel="noopener">DOI</a>
     </div>
@@ -940,7 +961,7 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <div class="pub-entry__title">Getting viral on social media: Exploring EduTubers' perceptions and practices</div>
+    <div class="pub-entry__title">Getting viral on social media: Exploring Chinese language EduTubers' perceptions and practices</div>
     <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, &amp; Hikmatilla, U. (2025).</span> <span class="pub-entry__venue"><em>Innovation in Language Learning and Teaching, 19</em>, 1–25.</span>
       <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1080/17501229.2025.2505700" target="_blank" rel="noopener">DOI</a>
@@ -998,7 +1019,7 @@ title: "Publications"
 <div class="bl-pcard bl-pcard--lead">
   <img class="bl-pcard__thumb" src="/assets/images/publications/IEEE TLT 2024.png" alt="AI-Integrated SDL Framework (IEEE TLT 2024)" data-lightbox-bound="true">
   <div class="bl-pcard__body">
-    <div class="bl-pcard__title">Reconceptualizing Self-Directed Learning in the Era of Generative AI: An Exploratory Analysis</div>
+    <div class="bl-pcard__title">Reconceptualizing Self-Directed Learning in the Era of Generative AI: An Exploratory Analysis of Language Learning</div>
     <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, Bonk, C. J., Wang, C., &amp; Kou, X.</div>
     <div class="bl-pcard__venue">IEEE Transactions on Learning Technologies, 17(3), 1515–1529 · 2024</div>
     <div class="pub-tags">
@@ -1010,8 +1031,8 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <div class="pub-entry__title">A systematic review of the first year of publications on ChatGPT and language education</div>
-    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Lowell, V., Watson, C., &amp; Wang, C. (2024).</span> <span class="pub-entry__venue"><em>Computers &amp; Education: Artificial Intelligence, 100</em>, 100266.</span>
+    <div class="pub-entry__title">A systematic review of the first year of publications on ChatGPT and language education: Examining research on ChatGPT's use in language learning and teaching</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Lowell, V. L., Wang, C., &amp; Li, X. (2024).</span> <span class="pub-entry__venue"><em>Computers &amp; Education: Artificial Intelligence, 7</em>, 100266.</span>
       <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1016/j.caeai.2024.100266" target="_blank" rel="noopener">DOI</a>
     </div></div>
@@ -1021,7 +1042,7 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <div class="pub-entry__title">Exploring inventions in self-directed learning with generative AI: Implementations and perspectives of YouTube content creators</div>
+    <div class="pub-entry__title">Exploring inventions in self-directed language learning with generative AI: Implementations and perspectives of YouTube content creators</div>
     <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Wang, C., Bonk, C. J., &amp; Kou, X. (2024).</span> <span class="pub-entry__venue"><em>TechTrends</em>.</span>
       <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/s11528-024-00960-3" target="_blank" rel="noopener">DOI</a>
@@ -1067,7 +1088,7 @@ title: "Publications"
 <div class="pub-entry">
   <div class="pub-entry__dot--empty"></div>
   <div class="pub-entry__body">
-    <div class="pub-entry__title">Empowering learners from low-income families to improve their writing with ChatGPT's assistance</div>
+    <div class="pub-entry__title">Empowering Chinese language learners from low-income families to improve their Chinese writing with ChatGPT's assistance afterschool</div>
     <div class="pub-entry__citation"><span class="pub-entry__authors">Li, X., <strong>Li, B.</strong>, &amp; Cho, S. (2023).</span> <span class="pub-entry__venue"><em>Languages, 8</em>, 238.</span>
       <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.3390/languages8040238" target="_blank" rel="noopener">DOI</a>
@@ -1078,7 +1099,7 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <div class="pub-entry__title">Culturally- and linguistically-responsive online teacher professional development</div>
+    <div class="pub-entry__title">Culturally and Linguistically Responsive Online Teacher Learning and Professional Development</div>
     <div class="pub-entry__citation"><span class="pub-entry__authors">Pawan, F., <strong>Li, B.</strong>, Nijiati, S., Dopwell, B. M., Harris, A., &amp; Iruoje, T. (2023).</span> <span class="pub-entry__venue"><em>Online Learning, 27</em>(4).</span>
       <div class="pub-tags">
       <a class="pub-tag pub-tag--doi" href="https://doi.org/10.24059/olj.v27i4.4003" target="_blank" rel="noopener">DOI</a>
@@ -1106,6 +1127,21 @@ title: "Publications"
 </section>
 
 <!-- ══════════════════════════════════════════════════════════ -->
+<!--  WORKSHOP PAPERS                                         -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="pub-workshops" class="pub-section page-section-target supports-target-highlight" data-reveal>
+<h2>Workshop Papers</h2>
+
+<div class="pub-entry">
+  <span class="pub-entry__dot"></span>
+  <div class="pub-entry__body">
+    <div class="pub-entry__title">Beyond individual AI literacy: Family AI literacy as cooperative accomplishment</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, &amp; Yang, M. (2026).</span> <span class="pub-entry__venue">Accepted paper, <em>Growing Up (and Old) with AI</em> workshop, CSCW 2026. <a class="pub-tag pub-tag--web" href="https://extendedhorizon.com/cscw2026ws-family-ai/files/accepted-papers/01-beyond-individual-ai-literacy.pdf" target="_blank" rel="noopener">Paper</a></span></div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
 <!--  BOOK CHAPTERS                                           -->
 <!-- ══════════════════════════════════════════════════════════ -->
 <section id="pub-chapters" class="pub-section page-section-target supports-target-highlight" data-reveal>
@@ -1128,7 +1164,7 @@ title: "Publications"
 <div class="bl-pcard bl-pcard--lead">
   <img class="bl-pcard__thumb bl-pcard__thumb--gif" src="/assets/images/publications/ticapp.gif" alt="TicApp mobile app demo" data-lightbox-bound="true">
   <div class="bl-pcard__body">
-    <div class="bl-pcard__title">Implementing Design Thinking: A Mobile Application for Diverse Learners to Overcome Challenges in Character Learning</div>
+    <div class="bl-pcard__title">Implementing Design Thinking: A Mobile Application for Heritage Chinese Learners to Overcome Challenges in Learning Chinese Characters</div>
     <div class="bl-pcard__authors"><span class="bl-pcard__me">Li, B.</span>, &amp; Lowell, V. L.</div>
     <div class="bl-pcard__venue">In M. Schmidt et al. (Eds.), <em>Transdisciplinary Learning Experience Design</em>. Springer · 2024</div>
     <div class="pub-tags">
@@ -1141,8 +1177,8 @@ title: "Publications"
 <div class="pub-entry">
   <span class="pub-entry__dot"></span>
   <div class="pub-entry__body">
-    <div class="pub-entry__title">Bring together native speakers around the world: A foreign language flagship program's online experience during COVID</div>
-    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Ma, Y., &amp; Lyu, X. (2023).</span> <span class="pub-entry__venue">In R. Chen (Ed.), <em>The Future of Remote and Hybrid Work in Global Higher Education</em>. Palgrave Macmillan.</span></div>
+    <div class="pub-entry__title">Building, Bonding, and Growing During the COVID-19 Pandemic: A Case Study of Indiana University's Chinese Flagship Program</div>
+    <div class="pub-entry__citation"><span class="pub-entry__authors"><strong>Li, B.</strong>, Patterson, Y., &amp; Lyu, X. (2023).</span> <span class="pub-entry__venue">In <em>Rethinking Hybrid and Remote Work in Higher Education</em> (pp. 127–152). Palgrave Macmillan. <a class="pub-tag pub-tag--doi" href="https://doi.org/10.1007/978-3-031-36632-1_7" target="_blank" rel="noopener">DOI</a></span></div>
   </div>
 </div>
 </section>
@@ -1272,13 +1308,6 @@ title: "Publications"
   </div>
 </div>
 
-<div class="pub-entry">
-  <div class="pub-entry__dot--empty"></div>
-  <div class="pub-entry__body">
-    <div class="pub-entry__title">A meta-analysis of AI-assisted self-regulated learning</div>
-    <div class="pub-entry__citation"><span class="pub-entry__authors">Zhang, Z., <strong>Li, B.</strong>, Xu, Q., Cheng, Z., &amp; West, R. E.</span> <span class="pub-entry__venue"><em>Online Learning</em>. <span class="pub-status">Under review</span></span></div>
-  </div>
-</div>
 </section>
 </div>
 </div>

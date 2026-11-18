@@ -178,6 +178,7 @@ def main() -> int:
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
         "source_count": len(paper_rows),
         "citation_count": len(citation_ids),
+        "max_citing_per_source": args.max_citing_per_source,
         "countries": countries,
         "papers": sorted(paper_rows, key=lambda paper: (-paper["citation_count"], paper["title"] or "")),
         "selected_citing_works": selected,

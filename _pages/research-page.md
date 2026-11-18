@@ -544,7 +544,7 @@ a.sp-paper__title:hover { color: var(--sp-accent, #4a6e9a); }
       </div>
     </div>
   </div>
-  <div class="citation-reach__footer" data-citation-generated>Source: OpenAlex. This map is based on DOI-linked records and does not represent total Google Scholar citations. Country counts use citing authors' institutional country metadata and exclude works without usable country information.</div>
+  <div class="citation-reach__footer" data-citation-generated>Source: OpenAlex. This map is based on DOI-linked records and does not represent total Google Scholar citations. Up to 200 citing works are sampled per source publication. Country counts use citing authors' institutional country metadata and exclude works without usable country information.</div>
 </section>
 
 </div>
@@ -574,12 +574,12 @@ var STRANDS = {
     desc: 'I study how learners plan, prompt, verify, and make meaning with AI in self-directed learning environments. This strand brings together conceptual, measurement, and empirical work on how agency is distributed across personal attributes, learning processes, and contexts when AI becomes part of the workflow.',
     desc_zh: '我研究学习者在自主学习情境中如何规划、提示、验证，并借助AI建构意义。这一方向整合概念性、测量性与实证性研究，聚焦AI融入学习流程时能动性如何在个人特质、学习过程与情境之间分布。',
     papers: [
+      { title: 'A Meta-Analysis of AI-Assisted Self-Regulated Learning', venue: 'Online Learning', year: '2026', href: 'https://doi.org/10.24059/olj.v30iSI2.5691', status: 'published' },
       { title: 'Development and Validation of the PA-SDA Scale', venue: 'System', year: '2025', href: 'https://doi.org/10.1016/j.system.2025.103793', status: 'published' },
       { title: 'Reconceptualizing Self-Directed Learning in the Era of Generative AI', venue: 'IEEE TLT', year: '2024', href: 'https://doi.org/10.1109/TLT.2024.3386098', status: 'published' },
       { title: 'SDL with GenAI: Insights from YouTube Creators', venue: 'TechTrends', year: '2024', href: 'https://doi.org/10.1007/s11528-024-00960-3', status: 'published' },
       { title: 'Multilingual ChatGPT Applications in Language Learning', venue: 'IJCALLT', year: '2023', href: 'https://doi.org/10.4018/IJCALLT.326135', status: 'published' },
-      { title: 'Pathways to Proficiency: Mapping Personal Attributes in AI-Integrated SDL', venue: 'Language Learning & Technology', year: '', href: null, status: 'review' },
-      { title: 'A Meta-Analysis of AI-Assisted Self-Regulated Learning', venue: 'Online Learning', year: '', href: null, status: 'review' }
+      { title: 'Pathways to Proficiency: Mapping Personal Attributes in AI-Integrated SDL', venue: 'Language Learning & Technology', year: '', href: null, status: 'review' }
     ],
     projects: [
       { title: 'Dissertation: AI in Learning, Humans in Charge', href: '/projects/global-learners-genai/', thumb: '/assets/images/dissertation/progressive-narrowing-2026.png' }
@@ -592,7 +592,7 @@ var STRANDS = {
     desc_zh: '我探究AI如何改变教育情境中对"真实作品"、"作者身份"与"良好评估判断"的认定，连接教师侧的评估与写作问题，以及学生侧的所有权与负责任使用AI的问题。',
     papers: [
       { title: "Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy and Performance", venue: 'British Journal of Educational Technology', year: '2025', href: 'https://doi.org/10.1111/bjet.13588', status: 'published' },
-      { title: "Nontraditional Learners' Ownership and Agency with AI Writing Tools", venue: 'Journal of Computing in Higher Education', year: '2025', href: 'https://doi.org/10.1007/s12528-025-09476-y', status: 'published' },
+      { title: "Non-Traditional Online Learners' Ownership in ChatGPT-Facilitated Design", venue: 'Journal of Computing in Higher Education', year: '2025', href: 'https://doi.org/10.1007/s12528-025-09476-y', status: 'published' },
       { title: 'Tutor, Not Solver: Designing a Guardrailed AI Assistant for Learning', venue: 'IEEE TLT', year: '', href: null, status: 'review' },
       { title: 'What Makes Student-AI Collaborative Writing Authentic?', venue: 'International Journal for Educational Integrity', year: '', href: null, status: 'review' },
       { title: 'Prompt Literacy as AI-Mediated Feedback Literacy', venue: 'IJETHE', year: '', href: null, status: 'review' },
@@ -609,9 +609,9 @@ var STRANDS = {
     desc_zh: '我考察AI辅助学习在多语言、全球化与非传统学习者群体中的差异性，而非预设一种统一的经验。这些研究追踪语言背景、前期准备与机构情境如何影响谁受益、如何受益。',
     papers: [
       { title: "Analysing Nontraditional Students' ChatGPT Interaction, Engagement, Self-Efficacy and Performance", venue: 'British Journal of Educational Technology', year: '2025', href: 'https://doi.org/10.1111/bjet.13588', status: 'published' },
-      { title: "Nontraditional Learners' Ownership and Agency with AI Writing Tools", venue: 'Journal of Computing in Higher Education', year: '2025', href: 'https://doi.org/10.1007/s12528-025-09476-y', status: 'published' },
-      { title: 'Empowering Students from Low-Income Families to Improve Writing with ChatGPT', venue: 'Languages', year: '2023', href: 'https://doi.org/10.3390/languages8040238', status: 'published' },
-      { title: 'Culturally and Linguistically Responsive Professional Development for AI Integration', venue: 'Online Learning', year: '2023', href: 'https://doi.org/10.24059/olj.v27i4.4003', status: 'published' },
+      { title: "Non-Traditional Online Learners' Ownership in ChatGPT-Facilitated Design", venue: 'Journal of Computing in Higher Education', year: '2025', href: 'https://doi.org/10.1007/s12528-025-09476-y', status: 'published' },
+      { title: 'ChatGPT-Supported Chinese Writing for Learners from Low-Income Families', venue: 'Languages', year: '2023', href: 'https://doi.org/10.3390/languages8040238', status: 'published' },
+      { title: 'Culturally and Linguistically Responsive Online Teacher Professional Development', venue: 'Online Learning', year: '2023', href: 'https://doi.org/10.24059/olj.v27i4.4003', status: 'published' },
       { title: 'Understanding AI-Assisted Learning Acceptance among Vocational Students: An AIDUA Model Approach', venue: 'IJIET', year: '2026', href: 'https://doi.org/10.18178/ijiet.2026.16.4.2557', status: 'published' },
       { title: 'Technology Review of Magic School AI', venue: 'Education Sciences', year: '2025', href: 'https://doi.org/10.3390/educsci15080963', status: 'published' }
     ],
@@ -623,11 +623,12 @@ var STRANDS = {
     desc: 'I translate research on agency, authenticity, and equity into AI literacy concepts, design principles, and practical learning environments. This strand moves from explanation to action: how should courses, tutoring systems, and institutional supports be designed so AI strengthens reflection and participation rather than passive dependence?',
     desc_zh: '我将关于能动性、真实性与公平性的研究成果转化为AI素养概念、设计原则与可操作的学习环境。这一方向从解释走向行动：课程、辅导系统与机构支持应如何设计，才能让AI强化反思与参与，而非助长被动依赖？',
     papers: [
-      { title: 'AI-Generated Content in Education: Literacy for the Age of Generative AI', venue: 'Palgrave Encyclopedia', year: '2026', href: 'https://doi.org/10.1007/978-3-031-51447-0_260-1', status: 'published' },
+      { title: 'AI-Generation Literacy', venue: 'Palgrave Encyclopedia', year: '2026', href: 'https://doi.org/10.1007/978-3-031-51447-0_260-1', status: 'published' },
+      { title: 'Beyond Individual AI Literacy: Family AI Literacy as Cooperative Accomplishment', venue: 'CSCW 2026 Workshop', year: '2026', href: 'https://extendedhorizon.com/cscw2026ws-family-ai/files/accepted-papers/01-beyond-individual-ai-literacy.pdf', status: 'accepted' },
       { title: 'Two Years of Innovation: Systematic Review of GenAI in Language Learning', venue: 'Computers and Education: AI', year: '2025', href: 'https://doi.org/10.1016/j.caeai.2025.100445', status: 'published' },
       { title: 'Language Educators × Generative AI: A Systematic Review', venue: 'Int. Journal of AI in Education', year: '2026', href: 'https://doi.org/10.1016/j.ijaied.2026.100010', status: 'published' },
-      { title: 'The First Year of ChatGPT in Education: A Comprehensive Review', venue: 'Computers and Education: AI', year: '2024', href: 'https://doi.org/10.1016/j.caeai.2024.100266', status: 'published' },
-      { title: 'Collaborative Problem Solving with Generative AI', venue: 'Computers & Education: AI', year: '2025', href: 'https://doi.org/10.1016/j.caeai.2025.100393', status: 'published' },
+      { title: 'First-Year Research on ChatGPT and Language Education', venue: 'Computers and Education: AI', year: '2024', href: 'https://doi.org/10.1016/j.caeai.2024.100266', status: 'published' },
+      { title: 'Collaborative Problem Solving in Conversational AI-Mediated Learning', venue: 'Computers & Education: AI', year: '2025', href: 'https://doi.org/10.1016/j.caeai.2025.100393', status: 'published' },
       { title: 'TicApp: A Language Learning Design Case', venue: 'Springer', year: '2024', href: 'https://doi.org/10.1007/978-3-031-76293-2_12', status: 'published' },
       { title: 'Dynamic Learner State Modeling via MCP', venue: 'Education Sciences', year: '2025', href: 'https://doi.org/10.3390/educsci15081004', status: 'published' }
     ],
@@ -743,7 +744,7 @@ function showPanel(zone, shouldScroll) {
       if (badge) html += '<span class="sp-paper__badge">' + badge + '</span>';
       html += '</div>';
       if (p.venue) html += '<span class="sp-paper__venue">' + p.venue + '</span>';
-      if (!p.year) html += '<span class="sp-paper__status sp-status--' + p.status + '">' + (sl[p.status] || p.status) + '</span>';
+      if (p.status && p.status !== 'published') html += '<span class="sp-paper__status sp-status--' + p.status + '">' + (sl[p.status] || p.status) + '</span>';
       html += '</div>';
     });
     html += '</div>';
@@ -930,8 +931,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var generated = root.querySelector('[data-citation-generated]');
     if (generated && data.generated_at) {
+      var sampleLimit = Number(data.max_citing_per_source);
+      var sampleNote = sampleLimit > 0 ? ' Up to ' + sampleLimit + ' citing works are sampled per source publication.' : '';
       generated.textContent = 'Source: OpenAlex. Last updated ' + formatDate(data.generated_at) +
-        '. This map is based on DOI-linked records and does not represent total Google Scholar citations. Country counts use citing author institutional country metadata and exclude works without usable country information.';
+        '. This map is based on DOI-linked records and does not represent total Google Scholar citations.' + sampleNote + ' Country counts use citing author institutional country metadata and exclude works without usable country information.';
     }
   }
 
