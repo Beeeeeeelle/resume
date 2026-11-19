@@ -15,10 +15,10 @@ permalink: /service/
     <img src="/assets/images/news/ai-lunch-learn/ai-lunch-learn-session-01-flyer.webp" alt="Flyer for Purdue AI Lunch and Learn Session 01, Build Your First Personal Website with AI" loading="lazy">
   </a>
   <div class="service-current__body">
-    <p class="service-current__eyebrow">2026 series / four sessions</p>
+    <p class="service-current__eyebrow">2026 series / five sessions</p>
     <h3>Purdue AI Lunch &amp; Learn</h3>
-    <p>I organized four hands-on sessions from September to October 2026. I facilitated the opening workshop on building a personal website with AI and invited guest speakers for sessions on interactive slides, digital-tool prototyping, and AI-built assignments.</p>
-    <a class="service-current__link" href="/ai-in-practice/#lunch-learn">Explore the four sessions</a>
+    <p>I organized five hands-on sessions from September to November 2026. I facilitated the opening workshop on building a personal website with AI and invited guest speakers for sessions on interactive slides, digital-tool prototyping, AI-built assignments, and game-based learning.</p>
+    <a class="service-current__link" href="/ai-in-practice/#lunch-learn">Explore the five sessions</a>
   </div>
 </div>
 
@@ -112,7 +112,7 @@ permalink: /service/
     <p>I help turn institutional ideas into public programs, from hands-on educator workshops to the Purdue AI in P–12 Education Conference. This work brings together program planning, speaker and presenter coordination, communication, and web design.</p>
     <ul>
       <li><strong>Purdue AI in P–12 Education Conference:</strong> presenter and organizing committee contributor in 2024–25; co-organized the 2026 conference, designed and built its public website, and helped coordinate presenter communications, program details, and sponsor materials. <a href="/ai-in-practice/#p12-conference">Conference recap</a>.</li>
-      <li><strong>Purdue AI Lunch &amp; Learn:</strong> organized four hands-on sessions in fall 2026, facilitated the inaugural workshop, and invited guest speakers for subsequent sessions. <a href="/ai-in-practice/#lunch-learn">Session archive</a>.</li>
+      <li><strong>Purdue AI Lunch &amp; Learn:</strong> organized five hands-on sessions in fall 2026, facilitated the inaugural workshop, and invited guest speakers for subsequent sessions. <a href="/ai-in-practice/#lunch-learn">Session archive</a>.</li>
       <li><strong>PALDT communications lead:</strong> supported newsletters, event visibility, and student-facing program communication in 2024 and 2025.</li>
     </ul>
   </div>

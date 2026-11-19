@@ -329,7 +329,8 @@ permalink: /ai-in-practice/
 }
 
 .aip-session-note--vibe .aip-session-note__photos img,
-.aip-session-note--worksheet .aip-session-note__photos img {
+.aip-session-note--worksheet .aip-session-note__photos img,
+.aip-session-note--game .aip-session-note__photos img {
   aspect-ratio: 16 / 9;
   object-position: center 68%;
 }
@@ -667,7 +668,8 @@ permalink: /ai-in-practice/
   }
 
   .aip-session-note--vibe .aip-session-note__photos,
-  .aip-session-note--worksheet .aip-session-note__photos {
+  .aip-session-note--worksheet .aip-session-note__photos,
+  .aip-session-note--game .aip-session-note__photos {
     max-width: none;
   }
 
@@ -989,6 +991,29 @@ permalink: /ai-in-practice/
           <img src="/assets/images/ai-in-practice/lunch-learn/session-04/workshop-room.webp" alt="Participants gathered around laptops during the worksheet-building workshop" width="1206" height="894" loading="lazy">
         </a>
         <figcaption class="aip-caption">Testing ideas together.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="aip-session-note aip-session-note--game" id="session-05" aria-labelledby="aip-session-05-title">
+    <div data-reveal>
+      <p class="aip-series-name">Session 05 &middot; Nov 19, 2026</p>
+      <h2 id="aip-session-05-title">AI-Assisted Game Based Learning</h2>
+      <p class="aip-session-note__copy">Organized by Belle Li and led by invited guest speaker <strong>Luis Gaitan</strong>. Participants brought a learning goal, prototyped a game with AI, and talked through how to make it playable and useful for learning.</p>
+      <a class="aip-link" href="/assets/images/ai-in-practice/lunch-learn/session-05/session-linkedin.png" target="_blank" rel="noopener">View the LinkedIn graphic</a>
+    </div>
+    <div class="aip-session-note__photos" aria-label="Session 05 photographs" data-reveal>
+      <figure>
+        <a href="/assets/images/ai-in-practice/lunch-learn/session-05/workshop-discussion.webp" target="_blank" rel="noopener" aria-label="Open full photo of Luis Gaitan speaking with workshop participants">
+          <img src="/assets/images/ai-in-practice/lunch-learn/session-05/workshop-discussion.webp" alt="Luis Gaitan speaking with participants during Purdue AI Lunch and Learn Session 05" width="1600" height="1200" loading="lazy">
+        </a>
+        <figcaption class="aip-caption">Talking through game ideas.</figcaption>
+      </figure>
+      <figure>
+        <a href="/assets/images/ai-in-practice/lunch-learn/session-05/table-conversation.webp" target="_blank" rel="noopener" aria-label="Open full photo of Session 05 participants in discussion">
+          <img src="/assets/images/ai-in-practice/lunch-learn/session-05/table-conversation.webp" alt="Luis Gaitan and participants discussing AI-assisted game ideas around a table" width="1600" height="1200" loading="lazy">
+        </a>
+        <figcaption class="aip-caption">Comparing ideas around the table.</figcaption>
       </figure>
     </div>
   </section>
