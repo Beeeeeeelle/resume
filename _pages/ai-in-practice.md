@@ -274,13 +274,16 @@ permalink: /ai-in-practice/
 
 .aip-session-note {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  gap: clamp(1.25rem, 3vw, 2rem);
-  align-items: start;
-  margin-top: clamp(2rem, 5vw, 3.5rem);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.15rem;
+  margin-top: clamp(2rem, 4vw, 2.75rem);
   padding-top: 1.25rem;
   border-top: 1px solid var(--aip-rule);
   scroll-margin-top: 6rem;
+}
+
+.aip-session-note > div:first-child {
+  max-width: 42rem;
 }
 
 .page__content .aip-session-note h2 {
