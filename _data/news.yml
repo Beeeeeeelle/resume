@@ -1,6 +1,13 @@
 # News & Activity feed — newest first
 # Types: award | paper | talk | event | grant | media
 
+- id: aect-2026-rtd-accepted-proposal-award
+  date: "Nov 2026"
+  type: award
+  text: "My AECT 2026 presentation, <em>Learning in the Loop: Moments, Mindsets, and Meaning with Generative AI</em>, received the <strong>Outstanding Research &amp; Theory Division Accepted Proposal Award</strong>."
+  image: /assets/images/news/aect-2026/rtd-awards-2026.png
+  image_alt: "RTD Awards 2026 announcement naming Belle Li for the Outstanding Research and Theory Division Accepted Proposal Award"
+
 - id: aect-2026-chicago-schedule
   date: "Nov 2026"
   type: event
